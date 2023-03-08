@@ -1,0 +1,421 @@
+/* 
+Satoshi Weights 
+300 - 900 | Variable 
+
+Monument Weights 
+100, 200, 450, 675, 800 | Not Variable 
+*/
+
+@font-face {
+  font-family: "satoshi";
+  src: url(../fonts/Satoshi-Variable.woff2);
+}
+@font-face {
+  font-family: "monument";
+  src: url(../fonts/PPMonumentExtended-Black.woff2);
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "monument";
+  src: url(../fonts/PPMonumentExtended-Bold.woff2);
+  font-weight: 675;
+  font-style: normal;
+}
+@font-face {
+  font-family: "monument";
+  src: url(../fonts/PPMonumentExtended-Regular.woff2);
+  font-weight: 450;
+  font-style: normal;
+}
+@font-face {
+  font-family: "monument";
+  src: url(../fonts/PPMonumentExtended-Light.woff2);
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "monument";
+  src: url(../fonts/PPMonumentExtended-Thin.woff2);
+  font-weight: 100;
+  font-style: normal;
+}
+
+$satoshi: "satoshi", sans-serif;
+$monument: "monument", sans-serif;
+
+$sunderSnow: #f7f7f7;
+$sunderIce: #C6D3D8;
+$sunderRoyalLight: #0c5ff2;
+$sunderRoyal: #074895;
+$sunderNavy: #061A2A;
+$sunderMidnight: #000014;
+
+$XXL-Text: calc(0.4rem + 2.8vw);
+$XL-Text: calc(1.4rem + 1.4vw);
+$L-Text: calc(1rem + 1.2vw);
+$M-Text: calc(0.8rem + 1vw);
+$S-Text: calc(0.8rem + 0.4vw);
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::selection {
+  color: $sunderIce;
+  background: $sunderNavy;
+}
+body {
+  background: $sunderSnow;
+  color: $sunderMidnight;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  font-family: $monument;
+  font-weight: 200;
+}
+h3 {
+  font-weight: 500;
+}
+h4 {
+  font-weight: 300;
+}
+p,
+blockquote,
+a,
+button {
+  font-family: $satoshi;
+}
+
+#boldTitle {
+  font-weight: 675;
+}
+.hide {
+  display: none;
+}
+.a11y {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Logos (Main & Nav Logo) */
+.logo {
+  /* position: see individual page style sheet */
+  top: 2.4rem;
+  left: 2.4rem;
+  width: calc(8rem + 2vw);
+  z-index: 3;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  animation: appear 0.6s ease 2.4s forwards;
+  .logoImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.2s;
+  }
+  .logoLink {
+    cursor: pointer;
+  }
+
+  &Active {
+    border: none;
+    pointer-events: none;
+    user-select: none;
+    cursor: default;
+    // .logoLink {
+    //   @extend .logoActive;
+    // }
+    .logoImg {
+      transform: translate(0, -112%);
+    }
+  }
+}
+@keyframes appear {
+  to {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.navLogo {
+  @extend .logo;
+  position: fixed;
+  top: auto;
+  // bottom: 2.4rem;
+  bottom: 3rem;
+  opacity: 1;
+  animation: none;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(0, 120%);
+    transition: 0.6s cubic-bezier(.75,.15,.25,.85);
+  }
+  &Active {
+    pointer-events: all;
+    img {
+      transform: translate(0, 0);
+      transition: 0.6s cubic-bezier(.75,.15,.25,.85) 0.3s;
+    }
+  }
+}
+/* logo */
+
+/* burger */
+.burgerContainer {
+  position: fixed;
+  bottom: 2.4rem;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  opacity: 0;
+  animation: burgerAppear 0.6s ease 2.6s forwards;
+}
+@keyframes burgerAppear {
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+.burger {
+  background: $sunderMidnight;
+  position: relative;
+  width: calc(3.2rem + 0.8vw);
+  height: calc(3.2rem + 0.8vw);
+  border-radius: calc(1.4rem + 0.4vw);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease 0.2s, transform 0.3s ease !important;
+  &:hover {
+    transform: scale(1.12);
+    box-shadow: 0px 2px 8px #31313155;
+  }
+  .line {
+    background: $sunderSnow;
+    width: 40%;
+    height: 2px;
+    border-radius: 2rem;
+    transition: 0.4s cubic-bezier(.75,.15,.25,.85) 0.4s;
+    &:nth-of-type(2) {
+      margin: 4px 0 4px 0;
+      transition-delay: 0.46s;
+    }
+    &:nth-of-type(3) {
+      transition-delay: 0.52s;
+    }
+  }
+  .lineCross {
+    @extend .line;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 0;
+    transition-delay: 0s;
+  }
+  .line5 {
+    @extend .lineCross;
+    transform: translate(-50%, -50%) rotate(-45deg) !important;
+  }
+  &Active {
+    background: $sunderRoyalLight;
+    .line {
+      width: 0;
+      &:nth-of-type(1){
+        transition-delay: 0s;
+      }
+      &:nth-of-type(2){
+        transition-delay: 0.06s;
+      }
+      &:nth-of-type(3){
+        transition-delay: 0.12s;
+      }
+    }
+    .lineCross {
+      width: 40%;
+      transition-delay: 0.4s;
+    }
+  }
+}
+/* burger */
+
+/* Nav */
+
+.nav {
+  background: $sunderNavy;
+  position: fixed;
+  bottom: 0;
+  transform: translate(0, 100%);
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
+  .navSlider {
+    width: 280%;
+    height: 60%;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translate(calc(10rem + 8vw), -4vw) scale(0.9);
+    transition: transform 0.5s cubic-bezier(.75,.15,.25,.85), opacity 0.4s ease;
+    // display: none;
+  }
+  .navLink {
+    margin: 0 2rem 0 0;
+    transform: translate(2rem, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navLink:hover .linkImg {
+    transform: scale(0.96);
+  }
+  .linkTitle {
+    text-transform: capitalize;
+    margin-bottom: 0.6vw;
+    color: $sunderSnow;
+    display: inline-block;
+    flex: none;
+    font-family: $satoshi;
+    font-size: $S-Text;
+    font-weight: 300;
+    // transform: translate(0.2vw, 0);
+  }
+  .linkTitleActive {
+    background: $sunderRoyalLight;
+    border-radius: 1rem;
+    padding: 0.2rem 0.6rem;
+  }
+  .linkImg {
+    background: $sunderSnow;
+    width: 20vw;
+    height: calc(7rem + 4vw);
+    border-radius: calc(0.4rem + 0.2vw);
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  //.navActive
+  &Active {
+    transform: translate(0, 0);
+    .navSlider {
+      opacity: 1;
+      transform: translate(calc(10rem + 8vw), 2vw) scale(1);
+      transition: 0.7s cubic-bezier(.75,.15,.25,.85) 0.1s;
+    }
+  }
+  .navSwiper {
+    display: none;
+  }
+}
+
+/* Nav */
+
+@media (max-width: 1024px) {
+
+  /* logo */
+  .logo {
+    /* position: see individual page style sheet */
+    width: calc(6.4rem + 2vw);
+  }
+  .navLogo {
+    position: fixed !important;
+  }
+  /* logo */
+
+  /* Nav */ 
+  .nav {
+    height: 62vh;
+    .navSwiper {
+      display: block;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 68%;
+      padding: 0 4rem 0 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      opacity: 0;
+      overflow: scroll;
+      transform: translate(0, -4vw) scale(0.9);
+      transition: transform 0.6s cubic-bezier(.75,.15,.25,.85), opacity 0.6s ease;
+      z-index: -1;
+    }
+    .navSlider {
+      height: 68%;
+      transform: translate(calc(10rem + 4vw), -6vw) scale(0.8);
+    }
+    .navLink {
+      margin: 0 0 0 4vw;
+    }
+    .linkImg {
+      width: calc(6rem + 12vw);
+      height: calc(12rem + 4vw);
+    }
+    &Active {
+      .navSlider {
+        transform: translate(calc(14rem + 4vw), 2vw) scale(1);
+      }
+      .navSwiper {
+        opacity: 1;
+        transform: translate(0, 2vw) scale(1);
+        transition: 0.6s cubic-bezier(.75,.15,.25,.85) 0.1s;
+      }
+    }
+  }
+}
+
+@media (hover: none) {
+  .nav {
+    .navSlider,
+    .navSliderNavOpen {
+      display: none;
+    }
+    .navSwiper,
+    .navSwiperNavOpen {
+      display: flex;
+    }
+    .navLink:hover .linkImg {
+      transform: scale(1);
+    }
+  }
+}
+@media (hover: hover) {
+  .nav {
+    .navSlider {
+      display: flex;
+      &Active {
+        display: flex;
+      }
+    }
+    .navSwiper {
+      display: none;
+      &Active {
+        display: none;
+      }
+    }
+  }
+}
+
+@import "home";
+@import "opportunity";
