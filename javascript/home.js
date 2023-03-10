@@ -157,3 +157,7 @@ gsap.to("#col1", {
     end: "bottom 90%",
   },
 });
+
+window.onbeforeunload = () => {
+  window.scrollTo(0, 0);
+};

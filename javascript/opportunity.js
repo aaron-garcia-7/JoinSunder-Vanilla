@@ -1,7 +1,3 @@
-// window.onbeforeunload = () => {
-//   window.scrollTo(0, 0);
-// };
-
 //
 // Handling Navigation Logic
 //
@@ -65,20 +61,6 @@ mainContent.addEventListener("click", closeNav);
 //
 //
 
-let pgWidth = window.innerWidth;
-const checkWidth = () => {
-  if (pgWidth <= 768) {
-    location.reload();
-    pgWidth = window.innerWidth;
-  }
-  if (pgWidth > 768) {
-    location.reload();
-    pgWidth = window.innerWidth;
-  }
-};
-
-window.addEventListener("resize", checkWidth);
-
 gsap.registerPlugin(ScrollTrigger);
 
 let backgroundTL = gsap.timeline({
@@ -86,7 +68,7 @@ let backgroundTL = gsap.timeline({
     trigger: "#mainContent",
     scrub: 1,
     start: "30% 40%",
-    end: "156% 60%",
+    end: "146% 60%",
   },
 });
 backgroundTL
@@ -150,7 +132,7 @@ gsap.to("#growth", {
     pin: true,
     scrub: true,
     start: "top top",
-    end: "200% 6%",
+    end: "480% 6%",
     // markers: {
     //   indent: 124,
     //   startColor: "coral",
@@ -199,8 +181,8 @@ gsap.to("#timelineBorder", {
   },
 });
 
-let timelineLinks = gsap.utils.toArray("#timelineLinks");
-gsap.to(timelineLinks, {
+let timelineLinksAppear = gsap.utils.toArray("#timelineLinks");
+gsap.to(timelineLinksAppear, {
   opacity: 1,
   stagger: 0.1,
   scrollTrigger: {
@@ -211,12 +193,12 @@ gsap.to(timelineLinks, {
   },
 });
 
-let link1TL = gsap.timeline({
+let linkHilightTL = gsap.timeline({
   scrollTrigger: {
     trigger: "#numberArea",
     scrub: true,
-    start: "0% 15%",
-    end: "580% 15%",
+    start: "-60% 15%",
+    end: "1200% 15%",
     // markers: {
     //   indent: 124,
     //   startColor: "lightblue",
@@ -224,81 +206,37 @@ let link1TL = gsap.timeline({
     // },
   },
 });
-link1TL
-  .to(".link1", {
-    background: "#0c5ff2",
-  })
-  .to(".link1", {
-    background: "#0c5ff2",
-  })
-  .to(".link1", {
-    background: "#0c5ff2",
-  })
-  .to(".link1", {
-    background: "#0c5ff2",
-  })
-  .to(".link1", {
-    background: "transparent",
-  });
-link1TL
-  .to(".link2", {
-    background: "#0c5ff2",
-  })
-  .to(".link2", {
-    background: "#0c5ff2",
-  })
-  .to(".link2", {
-    background: "#0c5ff2",
-  })
-  .to(".link2", {
-    background: "#0c5ff2",
-  })
-  .to(".link2", {
-    background: "transparent",
-  });
-link1TL
-  .to(".link3", {
-    background: "#0c5ff2",
-  })
-  .to(".link3", {
-    background: "#0c5ff2",
-  })
-  .to(".link3", {
-    background: "#0c5ff2",
-  })
-  .to(".link3", {
-    background: "#0c5ff2",
-  })
-  .to(".link3", {
-    background: "transparent",
-  });
-link1TL
-  .to(".link4", {
-    background: "#0c5ff2",
-  })
-  .to(".link4", {
-    background: "#0c5ff2",
-  })
-  .to(".link4", {
-    background: "#0c5ff2",
-  })
-  .to(".link4", {
-    background: "#0c5ff2",
-  })
-  .to(".link4", {
-    background: "transparent",
-  });
+linkHilightTL
+  .to(".link1", { background: "#0c5ff2" })
+  .to(".link1", { background: "#0c5ff2" })
+  .to(".link1", { background: "#0c5ff2" })
+  .to(".link1", { background: "#0c5ff2" })
+  .to(".link1", { background: "transparent" })
+  .to(".link2", { background: "#0c5ff2" })
+  .to(".link2", { background: "#0c5ff2" })
+  .to(".link2", { background: "#0c5ff2" })
+  .to(".link2", { background: "#0c5ff2" })
+  .to(".link2", { background: "transparent" })
+  .to(".link3", { background: "#0c5ff2" })
+  .to(".link3", { background: "#0c5ff2" })
+  .to(".link3", { background: "#0c5ff2" })
+  .to(".link3", { background: "#0c5ff2" })
+  .to(".link3", { background: "transparent" })
+  .to(".link4", { background: "#0c5ff2" })
+  .to(".link4", { background: "#0c5ff2" })
+  .to(".link4", { background: "#0c5ff2" })
+  .to(".link4", { background: "#0c5ff2" })
+  // .to(".link4", { background: "transparent" }); // Activate to toggle last link background
+  .to(".link4", { background: "0c5ff2" }); // Activate to toggle last link background
 
 let states2019 = gsap.utils.toArray(".state2019");
-
 gsap.to(states2019, {
   fill: "#4693D4",
   scrollTrigger: {
     trigger: "#numberArea",
     scrub: true,
-    start: "0% 15%",
-    end: "20% 15%",
-    // markers: true,
+    start: "-60% 15%",
+    end: "0% 15%",
   },
 });
 
@@ -307,8 +245,8 @@ let pending2019TL = gsap.timeline({
   scrollTrigger: {
     trigger: "#numberArea",
     scrub: true,
-    start: "0% 15%",
-    end: "160% 15%",
+    start: "-60% 15%",
+    end: "380% 15%", // 440% difference
   },
 });
 pending2019TL
@@ -330,8 +268,8 @@ let pending2020TL = gsap.timeline({
   scrollTrigger: {
     trigger: "#numberArea",
     scrub: true,
-    start: "160% 15%",
-    end: "320% 15%",
+    start: "250% 15%", // 130% smaller from previous END
+    end: "690% 15%",
   },
 });
 pending2020TL
@@ -353,8 +291,8 @@ let pending2021TL = gsap.timeline({
   scrollTrigger: {
     trigger: "#numberArea",
     scrub: true,
-    start: "320% 15%",
-    end: "480% 15%",
+    start: "560% 15%",
+    end: "1000% 15%",
   },
 });
 pending2021TL
@@ -376,8 +314,8 @@ let pending2022TL = gsap.timeline({
   scrollTrigger: {
     trigger: "#numberArea",
     scrub: true,
-    start: "480% 15%",
-    end: "640% 15%",
+    start: "870% 15%",
+    end: "1310% 15%",
   },
 });
 pending2022TL
@@ -389,7 +327,11 @@ pending2022TL
   })
   .to(pending2022, {
     fill: "#BCD0D7",
-  })
-  .to(pending2022, {
-    fill: "#4693D4",
   });
+// .to(pending2022, {
+//   fill: "#4693D4", // Add this IF the state becomes active
+// });
+
+// window.onbeforeunload = () => {
+//   window.scrollTo(0, 0);
+// };

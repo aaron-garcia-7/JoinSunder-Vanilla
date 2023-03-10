@@ -16,6 +16,7 @@ $pending: #BCD0D7;
     // GLOBAL COMPONENTS
 
     .mainContent {
+        position: relative;
         background: $sunderSnow;
         // background: $sunderRoyal;
         transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
@@ -289,14 +290,50 @@ $pending: #BCD0D7;
                             // font-size: $XXL-Text;
                             font-size: calc(2rem + 2vw);
                             font-weight: 450;
+                            &::selection {
+                                background: $sunderRoyalLight;
+                                color: $sunderSnow;
+                            }
                         }
                         .title {
                             font-family: $satoshi;
                             font-size: $XL-Text;
                             font-weight: 400;
+                            &::selection {
+                                background: $sunderRoyalLight;
+                                color: $sunderSnow;
+                            }
                         }
                     }
                 }
+            }
+        }
+
+        .growthAnchors {
+            // border: 2px dashed coral;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            height: calc(100vh + 36%);
+            z-index: -1;
+            #anchor2019 {
+                // background: coral;
+                position: absolute;
+                top: 12%;
+                width: 12rem;
+                height: 1rem;
+            }
+            #anchor2020 {
+                @extend #anchor2019;
+                top: 28%;
+            }
+            #anchor2021 {
+                @extend #anchor2019;
+                top: 42%;
+            }
+            #anchor2022 {
+                @extend #anchor2019;
+                top: 60%;
             }
         }
 

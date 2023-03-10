@@ -51,6 +51,7 @@ $sunderRoyal: #074895;
 $sunderNavy: #061A2A;
 $sunderMidnight: #000014;
 
+$Hero-Text: calc(1.6rem + 2.4vw);
 $XXL-Text: calc(0.4rem + 2.8vw);
 $XL-Text: calc(1.4rem + 1.4vw);
 $L-Text: calc(1rem + 1.2vw);
@@ -116,7 +117,7 @@ button {
   overflow: hidden;
   opacity: 0;
   pointer-events: none;
-  animation: appear 0.6s ease 2.4s forwards;
+  animation: appear 0.6s ease 1.6s forwards;
   .logoImg {
     width: 100%;
     height: 100%;
@@ -192,11 +193,12 @@ button {
   }
 }
 .burger {
-  background: $sunderMidnight;
+  background: $sunderRoyalLight;
   position: relative;
   width: calc(3.2rem + 0.8vw);
   height: calc(3.2rem + 0.8vw);
-  border-radius: calc(1.4rem + 0.4vw);
+  // border-radius: calc(1.4rem + 0.4vw);
+  border-radius: 50%;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -235,7 +237,7 @@ button {
     transform: translate(-50%, -50%) rotate(-45deg) !important;
   }
   &Active {
-    background: $sunderRoyalLight;
+    background: $sunderNavy;
     .line {
       width: 0;
       &:nth-of-type(1){
@@ -259,7 +261,7 @@ button {
 /* Nav */
 
 .nav {
-  background: $sunderNavy;
+  background: $sunderIce;
   position: fixed;
   bottom: 0;
   transform: translate(0, 100%);
@@ -277,43 +279,45 @@ button {
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transform: translate(calc(10rem + 8vw), -4vw) scale(0.9);
+    // transform: translate(calc(10rem + 8vw), -4vw) scale(0.9);
+    transform: translate(calc(10rem + 8vw), 2vw) scale(0.9);
     transition: transform 0.5s cubic-bezier(.75,.15,.25,.85), opacity 0.4s ease;
-    // display: none;
-  }
-  .navLink {
-    margin: 0 2rem 0 0;
-    transform: translate(2rem, 0);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .navLink:hover .linkImg {
-    transform: scale(0.96);
-  }
-  .linkTitle {
-    text-transform: capitalize;
-    margin-bottom: 0.6vw;
-    color: $sunderSnow;
-    display: inline-block;
-    flex: none;
-    font-family: $satoshi;
-    font-size: $S-Text;
-    font-weight: 300;
-    // transform: translate(0.2vw, 0);
-  }
-  .linkTitleActive {
-    background: $sunderRoyalLight;
-    border-radius: 1rem;
-    padding: 0.2rem 0.6rem;
-  }
-  .linkImg {
-    background: $sunderSnow;
-    width: 20vw;
-    height: calc(7rem + 4vw);
-    border-radius: calc(0.4rem + 0.2vw);
-    object-fit: cover;
-    transition: transform 0.4s ease;
+
+    .navLink {
+      margin: 0 2rem 0 0;
+      transform: translate(2rem, 0);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .navLink:hover .linkImg {
+      transform: scale(0.96);
+    }
+    .linkTitle {
+      text-transform: capitalize;
+      margin-bottom: 0.6vw;
+      color: $sunderMidnight;
+      display: inline-block;
+      flex: none;
+      font-family: $satoshi;
+      font-size: $S-Text;
+      font-weight: 400;
+      // transform: translate(0.2vw, 0);
+    }
+    .linkTitleActive {
+      // background: $sunderRoyalLight;
+      // border-radius: 1rem;
+      // padding: 0.2rem 0.6rem;
+      font-weight: 600;
+    }
+    .linkImg {
+      background: $sunderSnow;
+      width: 20vw;
+      height: calc(7rem + 4vw);
+      border-radius: calc(0.8rem + 0.4vw);
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
   }
 
   //.navActive
