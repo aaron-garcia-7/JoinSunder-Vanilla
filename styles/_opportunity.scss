@@ -1,15 +1,323 @@
+$active: #4693D4;
+$pending: #BCD0D7;
+
 .opportunity {
     // GLOBAL COMPONENTS
     .logo {
         position: absolute;
+        animation-delay: 0.4s;
+    }
+    .navLogo {
+        position: fixed;
+    }
+    .burgerContainer {
+        animation-delay: 0.6s;
     }
     // GLOBAL COMPONENTS
 
     .mainContent {
-
+        background: $sunderSnow;
+        // background: $sunderRoyal;
         transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
+
+        .header {
+            // border: 2px dashed grey;
+            height: clamp(16rem, 68vh, 48rem);
+            padding: 2.4rem;
+            display: flex;
+            align-items: center;
+            h1 {
+                font-size: $XXL-Text;
+                font-weight: 450;
+            }
+        }
+
+        .videos {
+            // border: 2px dashed grey;
+            padding: 2.4rem;
+            width: 100vw;
+            height: clamp(24rem, 100vh, 64rem);
+            display: flex;
+            gap: 1.2rem;
+            .mainVideo {
+                // border: 2px dashed grey;
+                background: linear-gradient(-45deg,
+                white,
+                grey);
+                width: 80%;
+                height: 100%;
+                border-radius: 1.6rem;
+                padding: 2.4rem;
+                h2 {
+                    font-family: $monument;
+                    font-size: $XXL-Text;
+                    font-weight: 675;
+                    color: white;
+                }
+            }
+            .videoReel {
+                // border: 2px dashed grey;
+                width: 20%;
+                height: 100%;
+                border-radius: 1.6rem;
+                display: flex;
+                flex-direction: column;
+                overflow: scroll;
+                gap: 1.2rem;
+                .smallVideo {
+                    flex: 0 0 auto;
+                    background: #D9D9D9;
+                    width: 100%;
+                    height: 25%;
+                    border-radius: 1.6rem;
+                }
+            }
+        }
+
+        .quoteSection {
+            // border: 2px dashed grey;
+            // background: $sunderSnow;
+            height: clamp(24rem, 100vh, 64rem);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .quoteWrapper {
+                opacity: 0;
+                transform: translate(0, -50%);
+
+                .quote {
+                    font-size: $M-Text;
+                    font-weight: 500;
+                    color: #555555;
+                    // text-align: center;
+                    margin-bottom: 2rem;
+                }
+                .quoteCaption {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .quoteImg {
+                        width: 28%;
+                        margin-right: 2rem;
+                    }
+                    p {
+                        @extend .quote;
+                        text-align: left;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            // &Active {
+            //     border: 2px dashed coral;
+            //     position: absolute !important;
+            //     top: 0 !important;
+            // }
+        }
+
+        .reel {
+            // background: #C6D3D880;
+            // background: $sunderIce;
+            width: 100%;
+            height: 100vh;
+            padding: 2.4rem;
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+            gap: calc(1rem + 1vw);
+            overflow: hidden;
+            z-index: 2;
+            & > * {
+                flex: 0 0 auto;
+            }
+            .repCard {
+                background: $sunderSnow;
+                width: 36%;
+                height: 92%;
+                border: 1px solid #bbb;
+                // border-radius: 1.6rem;
+                border-radius: calc(2.8rem + 2vw);
+                // padding: 1.2rem;
+                padding: calc(1.2rem + 2.8vw);
+
+                .cardHeader {
+                    margin-bottom: calc(1.6rem + 1.6vw);
+                    display: flex;
+                    align-items: center;
+                    img {
+                        width: 32%;
+                        margin-right: calc(0.6rem + 1vw);
+                    }
+                    .cardTitle {
+                        .name {
+                            font-size: calc(0.4rem + 1.6vw);
+                        }
+                        .position {
+                            font-size: calc(0.4rem + 1vw);
+                        }
+                    }
+                }
+                .cardBody {
+                    // background: green;
+                    height: 56%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    .block {
+                        border-bottom: 1px solid $sunderIce;
+                        padding-bottom: 0.6rem;
+                        display: flex;
+                        align-items: center;
+                        gap: calc(1rem + 2vw);
+                        .year {
+                            font-size: calc(0.6rem + 1.2vw);
+                            // margin-bottom: 0.6rem;
+                        }
+                        .stats {
+                            font-size: calc(0.6rem + 0.8vw);
+                        }
+                    }
+                }
+            }
+        }
+
+        .growth {
+            // border: 2px dashed coral;
+            // background: $sunderMidnight;
+            // background: $sunderIce;
+            height: 100vh;
+            .mapArea {
+                // border: 1px solid yellow;
+                height: 56%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 2rem;
+                .map {
+                    // border: 2px dashed yellow;
+                    transform: translate(0, -50%);
+                    opacity: 0;
+                    width: 60%;
+                    height: 80%;
+                    padding-top: 2rem;
+                    .USA {
+                        width: 100%;
+                        height: 86%;
+                        .state {
+                            fill: transparent;
+                            stroke: $sunderIce;
+                            transition: 0.2s ease;
+                            // &:hover {
+                            //     fill: lightgoldenrodyellow;
+                            // }
+                        }
+                        // .UT {
+                        //     fill: $pending;
+                        //     fill: $active;
+                        // }
+                    }
+                }
+                .compass {
+                    // border: 2px solid green;
+                    width: calc(10rem + 6vw);
+                    display: flex;
+                    justify-content: space-between;
+                    opacity: 0;
+                    h5 {
+                        font-family: $satoshi;
+                        font-size: $S-Text;
+                        font-weight: 400;
+                        color: $sunderSnow;
+                        display: flex;
+                        align-items: center;
+                        .circle {
+                            width: 0.8rem;
+                            height: 0.8rem;
+                            border-radius: 50%;
+                            margin-right: 0.4rem;
+                        }
+                    }
+                    .active {
+                        .circle {
+                            background: $active;
+                        }
+                    }
+                    .pending {
+                        .circle {
+                            background: $pending;
+                        }
+                    }
+                }
+            }
+            .numberArea {
+                // border: 2px dashed coral;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .timeline {
+                    position: relative;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 46%;
+                    padding-bottom: 1rem;
+                    margin-bottom: 2.8rem;
+                    &Border {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        background: $sunderIce;
+                        width: 0%;
+                        height: 1px;
+                    }
+                    &Links {
+                        color: $sunderSnow;
+                        font-size: $S-Text;
+                        opacity: 0;
+                        border-radius: 2rem;
+                        padding: 0.2rem 0.6rem;
+                    }
+                }
+                .stats {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 46%;
+                    .card {
+                        color: $sunderSnow;
+                        .number {
+                            font-family: $monument;
+                            // font-size: $XXL-Text;
+                            font-size: calc(2rem + 2vw);
+                            font-weight: 450;
+                        }
+                        .title {
+                            font-family: $satoshi;
+                            font-size: $XL-Text;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+
+
         &Active {
             transform: translate(0, -50vh);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .opportunity {
+
+        .mainContent{
+            .header {
+                h1 {
+                    .smartBreak {
+                        display: none;
+                    }
+                }
+            }
         }
     }
 }

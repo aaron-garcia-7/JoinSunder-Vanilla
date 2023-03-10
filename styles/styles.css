@@ -78,10 +78,12 @@ h1 {
 
 h3 {
   font-weight: 500;
+  font-family: "satoshi", sans-serif;
 }
 
 h4 {
   font-weight: 300;
+  font-family: "satoshi", sans-serif;
 }
 
 p,
@@ -168,7 +170,6 @@ button {
 }
 
 .navLogo {
-  position: fixed;
   top: auto;
   bottom: 3rem;
   opacity: 1;
@@ -1305,17 +1306,390 @@ button {
 
 .opportunity .logo, .opportunity .navLogo {
   position: absolute;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.opportunity .navLogo {
+  position: fixed;
+}
+
+.opportunity .burgerContainer {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }
 
 .opportunity .mainContent {
+  background: #f7f7f7;
   -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
   transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
   transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
   transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
 }
 
+.opportunity .mainContent .header {
+  height: clamp(16rem, 68vh, 48rem);
+  padding: 2.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.opportunity .mainContent .header h1 {
+  font-size: calc(0.4rem + 2.8vw);
+  font-weight: 450;
+}
+
+.opportunity .mainContent .videos {
+  padding: 2.4rem;
+  width: 100vw;
+  height: clamp(24rem, 100vh, 64rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.opportunity .mainContent .videos .mainVideo {
+  background: linear-gradient(-45deg, white, grey);
+  width: 80%;
+  height: 100%;
+  border-radius: 1.6rem;
+  padding: 2.4rem;
+}
+
+.opportunity .mainContent .videos .mainVideo h2 {
+  font-family: "monument", sans-serif;
+  font-size: calc(0.4rem + 2.8vw);
+  font-weight: 675;
+  color: white;
+}
+
+.opportunity .mainContent .videos .videoReel {
+  width: 20%;
+  height: 100%;
+  border-radius: 1.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: scroll;
+  gap: 1.2rem;
+}
+
+.opportunity .mainContent .videos .videoReel .smallVideo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  background: #D9D9D9;
+  width: 100%;
+  height: 25%;
+  border-radius: 1.6rem;
+}
+
+.opportunity .mainContent .quoteSection {
+  height: clamp(24rem, 100vh, 64rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.opportunity .mainContent .quoteSection .quoteWrapper {
+  opacity: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.opportunity .mainContent .quoteSection .quoteWrapper .quote, .opportunity .mainContent .quoteSection .quoteWrapper .quoteCaption p {
+  font-size: calc(0.8rem + 1vw);
+  font-weight: 500;
+  color: #555555;
+  margin-bottom: 2rem;
+}
+
+.opportunity .mainContent .quoteSection .quoteWrapper .quoteCaption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.opportunity .mainContent .quoteSection .quoteWrapper .quoteCaption .quoteImg {
+  width: 28%;
+  margin-right: 2rem;
+}
+
+.opportunity .mainContent .quoteSection .quoteWrapper .quoteCaption p {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.opportunity .mainContent .reel {
+  width: 100%;
+  height: 100vh;
+  padding: 2.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: calc(1rem + 1vw);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.opportunity .mainContent .reel > * {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.opportunity .mainContent .reel .repCard {
+  background: #f7f7f7;
+  width: 36%;
+  height: 92%;
+  border: 1px solid #bbb;
+  border-radius: calc(2.8rem + 2vw);
+  padding: calc(1.2rem + 2.8vw);
+}
+
+.opportunity .mainContent .reel .repCard .cardHeader {
+  margin-bottom: calc(1.6rem + 1.6vw);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.opportunity .mainContent .reel .repCard .cardHeader img {
+  width: 32%;
+  margin-right: calc(0.6rem + 1vw);
+}
+
+.opportunity .mainContent .reel .repCard .cardHeader .cardTitle .name {
+  font-size: calc(0.4rem + 1.6vw);
+}
+
+.opportunity .mainContent .reel .repCard .cardHeader .cardTitle .position {
+  font-size: calc(0.4rem + 1vw);
+}
+
+.opportunity .mainContent .reel .repCard .cardBody {
+  height: 56%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.opportunity .mainContent .reel .repCard .cardBody .block {
+  border-bottom: 1px solid #C6D3D8;
+  padding-bottom: 0.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: calc(1rem + 2vw);
+}
+
+.opportunity .mainContent .reel .repCard .cardBody .block .year {
+  font-size: calc(0.6rem + 1.2vw);
+}
+
+.opportunity .mainContent .reel .repCard .cardBody .block .stats {
+  font-size: calc(0.6rem + 0.8vw);
+}
+
+.opportunity .mainContent .growth {
+  height: 100vh;
+}
+
+.opportunity .mainContent .growth .mapArea {
+  height: 56%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+}
+
+.opportunity .mainContent .growth .mapArea .map {
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  opacity: 0;
+  width: 60%;
+  height: 80%;
+  padding-top: 2rem;
+}
+
+.opportunity .mainContent .growth .mapArea .map .USA {
+  width: 100%;
+  height: 86%;
+}
+
+.opportunity .mainContent .growth .mapArea .map .USA .state {
+  fill: transparent;
+  stroke: #C6D3D8;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.opportunity .mainContent .growth .mapArea .compass {
+  width: calc(10rem + 6vw);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  opacity: 0;
+}
+
+.opportunity .mainContent .growth .mapArea .compass h5 {
+  font-family: "satoshi", sans-serif;
+  font-size: calc(0.8rem + 0.4vw);
+  font-weight: 400;
+  color: #f7f7f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.opportunity .mainContent .growth .mapArea .compass h5 .circle {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  margin-right: 0.4rem;
+}
+
+.opportunity .mainContent .growth .mapArea .compass .active .circle {
+  background: #4693D4;
+}
+
+.opportunity .mainContent .growth .mapArea .compass .pending .circle {
+  background: #BCD0D7;
+}
+
+.opportunity .mainContent .growth .numberArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.opportunity .mainContent .growth .numberArea .timeline {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 46%;
+  padding-bottom: 1rem;
+  margin-bottom: 2.8rem;
+}
+
+.opportunity .mainContent .growth .numberArea .timelineBorder {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #C6D3D8;
+  width: 0%;
+  height: 1px;
+}
+
+.opportunity .mainContent .growth .numberArea .timelineLinks {
+  color: #f7f7f7;
+  font-size: calc(0.8rem + 0.4vw);
+  opacity: 0;
+  border-radius: 2rem;
+  padding: 0.2rem 0.6rem;
+}
+
+.opportunity .mainContent .growth .numberArea .stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 46%;
+}
+
+.opportunity .mainContent .growth .numberArea .stats .card {
+  color: #f7f7f7;
+}
+
+.opportunity .mainContent .growth .numberArea .stats .card .number {
+  font-family: "monument", sans-serif;
+  font-size: calc(2rem + 2vw);
+  font-weight: 450;
+}
+
+.opportunity .mainContent .growth .numberArea .stats .card .title {
+  font-family: "satoshi", sans-serif;
+  font-size: calc(1.4rem + 1.4vw);
+  font-weight: 400;
+}
+
 .opportunity .mainContentActive {
   -webkit-transform: translate(0, -50vh);
           transform: translate(0, -50vh);
+}
+
+@media (max-width: 768px) {
+  .opportunity .mainContent .header h1 .smartBreak {
+    display: none;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

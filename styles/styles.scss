@@ -80,9 +80,11 @@ h1 {
 }
 h3 {
   font-weight: 500;
+  font-family: $satoshi;
 }
 h4 {
   font-weight: 300;
+  font-family: $satoshi;
 }
 p,
 blockquote,
@@ -147,7 +149,7 @@ button {
 
 .navLogo {
   @extend .logo;
-  position: fixed;
+  // position: fixed; // Wasn't working as global - added individually
   top: auto;
   // bottom: 2.4rem;
   bottom: 3rem;
