@@ -52,16 +52,6 @@ Monument Weights
           box-sizing: border-box;
 }
 
-*::-moz-selection {
-  color: #C6D3D8;
-  background: #061A2A;
-}
-
-*::selection {
-  color: #C6D3D8;
-  background: #061A2A;
-}
-
 body {
   background: #f7f7f7;
   color: #000014;
@@ -434,6 +424,10 @@ button {
   transition: transform 0.4s ease, -webkit-transform 0.4s ease;
 }
 
+.nav .navSlider .mobileImg {
+  display: none;
+}
+
 .navActive {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
@@ -492,17 +486,38 @@ button {
     transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85), opacity 0.6s ease, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85);
     z-index: -1;
   }
+  .nav .navSwiper .navLink {
+    margin: 0 0 0 4vw;
+  }
+  .nav .navSwiper .navLink .linkImg {
+    background: #f7f7f7;
+    border-radius: 1rem;
+    width: calc(6rem + 12vw);
+    height: calc(12rem + 4vw);
+  }
+  .nav .navSwiper .navLink .desktopImg {
+    display: none;
+  }
+  .nav .navSwiper .navLink .mobileImg {
+    display: block;
+  }
   .nav .navSlider {
     height: 68%;
     -webkit-transform: translate(calc(10rem + 4vw), -6vw) scale(0.8);
             transform: translate(calc(10rem + 4vw), -6vw) scale(0.8);
   }
-  .nav .navLink {
+  .nav .navSlider .navLink {
     margin: 0 0 0 4vw;
   }
-  .nav .linkImg {
+  .nav .navSlider .navLink .linkImg {
     width: calc(6rem + 12vw);
     height: calc(12rem + 4vw);
+  }
+  .nav .navSlider .navLink .desktopImg {
+    display: none;
+  }
+  .nav .navSlider .navLink .mobileImg {
+    display: block;
   }
   .navActive .navSlider {
     -webkit-transform: translate(calc(14rem + 4vw), 2vw) scale(1);
@@ -572,6 +587,7 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: none;
   opacity: 0;
   pointer-events: none;
   -webkit-transition: opacity 0.6s ease 0.64s;
@@ -580,6 +596,7 @@ button {
 }
 
 .home .videoContainerActive {
+  display: block;
   opacity: 1;
   pointer-events: all;
   -webkit-transition: opacity 0.6s ease;
@@ -612,7 +629,7 @@ button {
 }
 
 .home .videoContainer .closeVideoBurger {
-  background: #000014;
+  background: #0c5ff2;
   position: relative;
   width: calc(3.2rem + 0.8vw);
   height: calc(3.2rem + 0.8vw);
@@ -750,28 +767,28 @@ button {
 }
 
 .home .mainContent .heroText .line1 {
-  animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 0.6s forwards;
-  -webkit-animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 0.6s forwards;
+  animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 1s forwards;
+  -webkit-animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 1s forwards;
 }
 
 .home .mainContent .heroText .line2 {
-  animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 0.72s forwards;
-  -webkit-animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 0.72s forwards;
+  animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 1.12s forwards;
+  -webkit-animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 1.12s forwards;
 }
 
 .home .mainContent .heroText .line3 {
-  animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 0.84s forwards;
-  -webkit-animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 0.84s forwards;
+  animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 1.24s forwards;
+  -webkit-animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 1.24s forwards;
 }
 
 .home .mainContent .heroText .line4 {
-  animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 0.96s forwards;
-  -webkit-animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 0.96s forwards;
+  animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 1.36s forwards;
+  -webkit-animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 1.36s forwards;
 }
 
 .home .mainContent .heroText .line5 {
-  animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 1.1s forwards;
-  -webkit-animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 1.1s forwards;
+  animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 1.48s forwards;
+  -webkit-animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 1.48s forwards;
 }
 
 @-webkit-keyframes shiftText {
@@ -814,8 +831,6 @@ button {
   transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
   opacity: 1;
   pointer-events: none;
-  animation: shiftTextBlock 0.8s cubic-bezier(0.7, 0, 0.3, 1) 2.2s forwards;
-  -webkit-animation: shiftTextBlock 0.8s cubic-bezier(0.7, 0, 0.3, 1) 2.2s forwards;
 }
 
 .home .mainContent .arrivalText h1 {
@@ -826,17 +841,17 @@ button {
 
 .home .mainContent .arrivalText .line1 {
   animation: shiftText2 1.4s cubic-bezier(0.7, 0, 0.3, 1) 0.8s forwards;
-  -webkit-animation: shiftText2 1.2s cubic-bezier(0.7, 0, 0.3, 1) 0.4s forwards;
+  -webkit-animation: shiftText2 1.2s cubic-bezier(0.7, 0, 0.3, 1) 0.8s forwards;
 }
 
 .home .mainContent .arrivalText .line2 {
-  animation: shiftText2 1.4s cubic-bezier(0.7, 0, 0.3, 1) 0.8s forwards;
-  -webkit-animation: shiftText2 1.2s cubic-bezier(0.7, 0, 0.3, 1) 0.5s forwards;
+  animation: shiftText2 1.4s cubic-bezier(0.7, 0, 0.3, 1) 0.9s forwards;
+  -webkit-animation: shiftText2 1.2s cubic-bezier(0.7, 0, 0.3, 1) 0.9s forwards;
 }
 
 .home .mainContent .arrivalText .line3 {
-  animation: shiftText2 1.4s cubic-bezier(0.7, 0, 0.3, 1) 0.8s forwards;
-  -webkit-animation: shiftText2 1.2s cubic-bezier(0.7, 0, 0.3, 1) 0.6s forwards;
+  animation: shiftText2 1.4s cubic-bezier(0.7, 0, 0.3, 1) 1s forwards;
+  -webkit-animation: shiftText2 1.2s cubic-bezier(0.7, 0, 0.3, 1) 1s forwards;
 }
 
 @-webkit-keyframes shiftText2 {
@@ -865,8 +880,8 @@ button {
   transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
   transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
   opacity: 0;
-  animation: appear 0.8s ease 1.2s forwards;
-  -webkit-animation: appear 0.8s ease 1.2s forwards;
+  animation: appear 0.8s ease 1.8s forwards;
+  -webkit-animation: appear 0.8s ease 1.8s forwards;
 }
 
 .home .mainContent .heroBtnsActive {
@@ -890,8 +905,6 @@ button {
   border: 1px solid #f7f7f7;
   cursor: pointer;
   overflow: hidden;
-  animation: appear 0.6s ease 0.4s forwards;
-  -webkit-animation: appear 0.6s ease 0.4s forwards;
 }
 
 .home .mainContent .cta::after {
@@ -1174,11 +1187,10 @@ button {
     -webkit-animation: none;
             animation: none;
   }
-  .home .mainContent .arriveHeroText {
-    opacity: 0;
-    pointer-events: none;
-    -webkit-animation: none;
-            animation: none;
+  .home .mainContent .arrivalText {
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1.4);
+            transform: translate(-50%, -50%) scale(1.4);
   }
   .home .mainContent .heroBtns {
     position: static;
@@ -1446,10 +1458,78 @@ button {
 
 .opportunity .mainContent .growth {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.opportunity .mainContent .growth .numberArea {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translate(20%, 0);
+          transform: translate(20%, 0);
+  padding-bottom: calc(2rem + 4vw);
+}
+
+.opportunity .mainContent .growth .numberArea #growthTitle {
+  color: #f7f7f7;
+  font-family: "monument", sans-serif;
+  font-size: calc(1rem + 1.2vw);
+  font-weight: 450;
+  opacity: 0;
+}
+
+.opportunity .mainContent .growth .numberArea .timeline {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 40%;
+  padding-bottom: 1rem;
+  margin-bottom: 2.8rem;
+}
+
+.opportunity .mainContent .growth .numberArea .timelineBorder {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(calc(4rem + 2vw), -10%);
+          transform: translate(calc(4rem + 2vw), -10%);
+  background: #C6D3D8;
+  width: 1px;
+  height: 0%;
+}
+
+.opportunity .mainContent .growth .numberArea .timelineLinks {
+  color: #f7f7f7;
+  font-size: calc(0.8rem + 0.4vw);
+  opacity: 0;
+  border-radius: 2rem;
+  padding: 0.4rem 1.2rem;
 }
 
 .opportunity .mainContent .growth .mapArea {
-  height: 56%;
+  height: 100%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1463,21 +1543,18 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 2rem;
 }
 
 .opportunity .mainContent .growth .mapArea .map {
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  -webkit-transform: translate(0, -36%);
+          transform: translate(0, -36%);
   opacity: 0;
-  width: 60%;
-  height: 80%;
-  padding-top: 2rem;
+  width: 64%;
 }
 
 .opportunity .mainContent .growth .mapArea .map .USA {
   width: 100%;
-  height: 86%;
+  height: 100%;
 }
 
 .opportunity .mainContent .growth .mapArea .map .USA .state {
@@ -1526,123 +1603,77 @@ button {
   background: #BCD0D7;
 }
 
-.opportunity .mainContent .growth .numberArea {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.opportunity .mainContent .growth .numberArea .timeline {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 46%;
-  padding-bottom: 1rem;
-  margin-bottom: 2.8rem;
-}
-
-.opportunity .mainContent .growth .numberArea .timelineBorder {
+.opportunity .mainContent .growth .mapArea .stateCount {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  background: #C6D3D8;
-  width: 0%;
-  height: 1px;
-}
-
-.opportunity .mainContent .growth .numberArea .timelineLinks {
+  bottom: 20%;
+  right: 6%;
+  text-align: right;
   color: #f7f7f7;
-  font-size: calc(0.8rem + 0.4vw);
   opacity: 0;
-  border-radius: 2rem;
-  padding: 0.2rem 0.6rem;
 }
 
-.opportunity .mainContent .growth .numberArea .stats {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 46%;
+.opportunity .mainContent .growth .mapArea .stateCount #numberContainer {
+  overflow: hidden;
+  height: 7rem;
 }
 
-.opportunity .mainContent .growth .numberArea .stats .card {
-  color: #f7f7f7;
-}
-
-.opportunity .mainContent .growth .numberArea .stats .card .number {
+.opportunity .mainContent .growth .mapArea .stateCount .number {
   font-family: "monument", sans-serif;
-  font-size: calc(2rem + 2vw);
+  font-size: calc(2.8rem + 2.8vw);
   font-weight: 450;
 }
 
-.opportunity .mainContent .growth .numberArea .stats .card .number::-moz-selection {
+.opportunity .mainContent .growth .mapArea .stateCount .number::-moz-selection {
   background: #0c5ff2;
   color: #f7f7f7;
 }
 
-.opportunity .mainContent .growth .numberArea .stats .card .number::selection {
+.opportunity .mainContent .growth .mapArea .stateCount .number::selection {
   background: #0c5ff2;
   color: #f7f7f7;
 }
 
-.opportunity .mainContent .growth .numberArea .stats .card .title {
+.opportunity .mainContent .growth .mapArea .stateCount .title {
   font-family: "satoshi", sans-serif;
   font-size: calc(1.4rem + 1.4vw);
   font-weight: 400;
 }
 
-.opportunity .mainContent .growth .numberArea .stats .card .title::-moz-selection {
+.opportunity .mainContent .growth .mapArea .stateCount .title::-moz-selection {
   background: #0c5ff2;
   color: #f7f7f7;
 }
 
-.opportunity .mainContent .growth .numberArea .stats .card .title::selection {
+.opportunity .mainContent .growth .mapArea .stateCount .title::selection {
   background: #0c5ff2;
   color: #f7f7f7;
 }
 
 .opportunity .mainContent .growthAnchors {
   position: absolute;
-  top: 50%;
+  top: 39%;
   width: 100%;
-  height: calc(100vh + 36%);
+  height: calc(100vh + 54%);
   z-index: -1;
 }
 
 .opportunity .mainContent .growthAnchors #anchor2019, .opportunity .mainContent .growthAnchors #anchor2020, .opportunity .mainContent .growthAnchors #anchor2021, .opportunity .mainContent .growthAnchors #anchor2022 {
   position: absolute;
-  top: 12%;
+  top: 10%;
   width: 12rem;
   height: 1rem;
 }
 
 .opportunity .mainContent .growthAnchors #anchor2020 {
-  top: 28%;
+  top: 25%;
 }
 
 .opportunity .mainContent .growthAnchors #anchor2021 {
-  top: 42%;
+  top: 40%;
 }
 
 .opportunity .mainContent .growthAnchors #anchor2022 {
-  top: 60%;
+  top: 55%;
 }
 
 .opportunity .mainContentActive {

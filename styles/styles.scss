@@ -64,10 +64,10 @@ $S-Text: calc(0.8rem + 0.4vw);
   padding: 0;
   box-sizing: border-box;
 }
-*::selection {
-  color: $sunderIce;
-  background: $sunderNavy;
-}
+// *::selection {
+//   color: $sunderIce;
+//   background: $sunderNavy;
+// }
 body {
   background: $sunderSnow;
   color: $sunderMidnight;
@@ -289,9 +289,11 @@ button {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-    }
-    .navLink:hover .linkImg {
-      transform: scale(0.96);
+      &:hover {
+        .linkImg {
+          transform: scale(0.96);
+        }
+      }
     }
     .linkTitle {
       text-transform: capitalize;
@@ -317,6 +319,9 @@ button {
       border-radius: calc(0.8rem + 0.4vw);
       object-fit: cover;
       transition: transform 0.4s ease;
+    }
+    .mobileImg {
+      display: none;
     }
   }
 
@@ -366,17 +371,39 @@ button {
       transform: translate(0, -4vw) scale(0.9);
       transition: transform 0.6s cubic-bezier(.75,.15,.25,.85), opacity 0.6s ease;
       z-index: -1;
+      .navLink {
+        margin: 0 0 0 4vw;
+        .linkImg {
+          background: $sunderSnow;
+          border-radius: 1rem;
+          width: calc(6rem + 12vw);
+          height: calc(12rem + 4vw);
+        }
+        .desktopImg {
+          display: none;
+        }
+        .mobileImg {
+          display: block;
+        }
+      }
     }
+
     .navSlider {
       height: 68%;
       transform: translate(calc(10rem + 4vw), -6vw) scale(0.8);
-    }
-    .navLink {
-      margin: 0 0 0 4vw;
-    }
-    .linkImg {
-      width: calc(6rem + 12vw);
-      height: calc(12rem + 4vw);
+      .navLink {
+        margin: 0 0 0 4vw;
+        .linkImg {
+          width: calc(6rem + 12vw);
+          height: calc(12rem + 4vw);
+        }
+        .desktopImg {
+          display: none;
+        }
+        .mobileImg {
+          display: block;
+        }
+      }
     }
     &Active {
       .navSlider {

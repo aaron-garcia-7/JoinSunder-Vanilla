@@ -13,11 +13,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.6s ease 0.64s;
     z-index: 4;
     &Active {
+      display: block;
       opacity: 1;
       pointer-events: all;
       transition: opacity 0.6s ease;
@@ -37,7 +39,7 @@
       justify-content: center;
       align-items: center;
       &Burger {
-        background: $sunderMidnight;
+        background: $sunderRoyalLight;
         position: relative;
         width: calc(3.2rem + 0.8vw);
         height: calc(3.2rem + 0.8vw);
@@ -128,31 +130,30 @@
         &Active {
           transform: translate(0, calc(-56% - 50vh));
         }
-
         .line1 {
           // transform: translate(0, 100%);
-          animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 0.6s forwards;
-          -webkit-animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) .6s forwards;
+          animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 1s forwards;
+          -webkit-animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 1s forwards;
         }
         .line2 {
           // transform: translate(100%, 0);
-          animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 0.72s forwards;
-          -webkit-animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 0.72s forwards;
+          animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 1.12s forwards;
+          -webkit-animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 1.12s forwards;
         }
         .line3 {
           // transform: translate(0, -100%);
-          animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 0.84s forwards;
-          -webkit-animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 0.84s forwards;
+          animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 1.24s forwards;
+          -webkit-animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 1.24s forwards;
         }
         .line4 {
           // transform: translate(-100%, 0);
-          animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 0.96s forwards;
-          -webkit-animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 0.96s forwards;
+          animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 1.36s forwards;
+          -webkit-animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 1.36s forwards;
         }
         .line5 {
           // transform: translate(0, 100%);
-          animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 1.1s forwards;
-          -webkit-animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 1.1s forwards;
+          animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 1.48s forwards;
+          -webkit-animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 1.48s forwards;
         }
         @keyframes shiftText {
           to {
@@ -181,23 +182,21 @@
         transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
         opacity: 1;
         pointer-events: none;
-        animation: shiftTextBlock 0.8s cubic-bezier(.7,0,.3,1) 2.2s forwards;
-        -webkit-animation: shiftTextBlock 0.8s cubic-bezier(.7,0,.3,1) 2.2s forwards;
         h1 {
           color: $sunderSnow;
           transform: translate(0, 0);
         }
         .line1 {
           animation: shiftText2 1.4s cubic-bezier(.7,0,.3,1) 0.8s forwards;
-          -webkit-animation: shiftText2 1.2s cubic-bezier(.7,0,.3,1) 0.4s forwards;
+          -webkit-animation: shiftText2 1.2s cubic-bezier(.7,0,.3,1) 0.8s forwards;
         }
         .line2 {
-          animation: shiftText2 1.4s cubic-bezier(.7,0,.3,1) 0.8s forwards;
-          -webkit-animation: shiftText2 1.2s cubic-bezier(.7,0,.3,1) 0.5s forwards;
+          animation: shiftText2 1.4s cubic-bezier(.7,0,.3,1) 0.9s forwards;
+          -webkit-animation: shiftText2 1.2s cubic-bezier(.7,0,.3,1) 0.9s forwards;
         }
         .line3 {
-          animation: shiftText2 1.4s cubic-bezier(.7,0,.3,1) 0.8s forwards;
-          -webkit-animation: shiftText2 1.2s cubic-bezier(.7,0,.3,1) 0.6s forwards;
+          animation: shiftText2 1.4s cubic-bezier(.7,0,.3,1) 1s forwards;
+          -webkit-animation: shiftText2 1.2s cubic-bezier(.7,0,.3,1) 1s forwards;
         }
         @keyframes shiftText2 {
           to {
@@ -214,10 +213,8 @@
         display: flex;
         transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
         opacity: 0;
-        animation: appear 0.8s ease 1.2s forwards;
-        -webkit-animation: appear 0.8s ease 1.2s forwards;
-        // animation: appear 0.8s ease 2.4s forwards;
-        // -webkit-animation: appear 0.8s ease 2.4s forwards;
+        animation: appear 0.8s ease 1.8s forwards;
+        -webkit-animation: appear 0.8s ease 1.8s forwards;
         &Active {
           transform: translate(0, -50vh);
         }
@@ -238,8 +235,6 @@
         border: 1px solid $sunderSnow;
         cursor: pointer;
         overflow: hidden;
-        animation: appear 0.6s ease 0.4s forwards;
-        -webkit-animation: appear 0.6s ease 0.4s forwards;
         &::after {
           content: "";
           position: absolute;
@@ -429,11 +424,9 @@
         pointer-events: all;
         animation: none;
       }
-    
-      .arriveHeroText {
-        opacity: 0;
-        pointer-events: none;
-        animation: none;
+      .arrivalText {
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.4);
       }
       
       .heroBtns {

@@ -132,18 +132,14 @@ gsap.to("#growth", {
     pin: true,
     scrub: true,
     start: "top top",
-    end: "480% 6%",
-    // markers: {
-    //   indent: 124,
-    //   startColor: "coral",
-    //   endColor: "coral",
-    // },
+    // end: "480% 6%",
+    end: "800% 6%",
   },
 });
 
 gsap.to("#map", {
   opacity: 1,
-  y: "50%",
+  y: "-6%",
   ease: "none",
   scrollTrigger: {
     trigger: "#growth",
@@ -154,22 +150,90 @@ gsap.to("#map", {
   },
 });
 
-gsap.to("#compass", {
+gsap.to("#growthTitle", {
   opacity: 1,
   scrollTrigger: {
     trigger: "#growth",
-    // scrub: true,
     toggleActions: "play none none reverse", // play, pause, resume, reverse, restart, reset, complete, none
     start: "top top",
     end: "top top",
   },
 });
 
-gsap.to("#timelineBorder", {
-  width: "100%",
+gsap.to("#compass", {
+  opacity: 1,
   scrollTrigger: {
     trigger: "#growth",
-    // scrub: true,
+    toggleActions: "play none none reverse",
+    start: "top top",
+    end: "top top",
+  },
+});
+
+gsap.to("#stateCount", {
+  opacity: 1,
+  scrollTrigger: {
+    trigger: "#growth",
+    toggleActions: "play none none reverse",
+    start: "top top",
+    end: "top top",
+  },
+});
+
+let stateCount = gsap.utils.toArray(".number");
+let stateCountTL = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#numberArea",
+    scrub: true,
+    start: "20% 15%",
+    end: "660% 15%",
+    // markers: true,
+  },
+});
+stateCountTL
+  .to(stateCount, {
+    y: "-100%",
+  })
+  .to(stateCount, {
+    y: "-200%",
+  })
+  .to(stateCount, {
+    y: "-300%",
+  })
+  .to(stateCount, {
+    y: "-400%",
+  })
+  .to(stateCount, {
+    y: "-400%",
+  });
+
+// const staggerNumbes = () => {
+//   // let stateNumber = document.querySelector("#stateNumber");
+//   // var startCount = 7,
+//   //   stateNum = { var: startCount };
+
+//   // const changeNumber = () => {
+//   //   stateNumber.innerHTML = stateNum.var.toFixed();
+//   // };
+
+//   // gsap
+//   //   .timeline({
+//   //     scrollTrigger: {
+//   //       trigger: "#map",
+//   //       scrub: true,
+//   //       start: "120% top",
+//   //       end: "800% top",
+//   //       markers: true,
+//   //     },
+//   //   })
+//   //   .to(stateNum, { var: 30, duration: 5, ease: "none", onUpdate: changeNumber })
+//   //   .to({}, { duration: 2 });
+// }
+
+gsap.to("#timelineBorder", {
+  height: "120%",
+  scrollTrigger: {
+    trigger: "#growth",
     toggleActions: "play none none reverse",
     start: "top top",
     end: "top top",
@@ -197,8 +261,10 @@ let linkHilightTL = gsap.timeline({
   scrollTrigger: {
     trigger: "#numberArea",
     scrub: true,
-    start: "-60% 15%",
-    end: "1200% 15%",
+    // start: "-60% 15%",
+    // end: "1200% 15%",
+    start: "40% 15%",
+    end: "600% 15%",
     // markers: {
     //   indent: 124,
     //   startColor: "lightblue",
@@ -207,27 +273,27 @@ let linkHilightTL = gsap.timeline({
   },
 });
 linkHilightTL
-  .to(".link1", { background: "#0c5ff2" })
-  .to(".link1", { background: "#0c5ff2" })
-  .to(".link1", { background: "#0c5ff2" })
-  .to(".link1", { background: "#0c5ff2" })
+  .to(".link1", { background: "#4693D4" })
+  .to(".link1", { background: "#4693D4" })
+  .to(".link1", { background: "#4693D4" })
+  .to(".link1", { background: "#4693D4" })
   .to(".link1", { background: "transparent" })
-  .to(".link2", { background: "#0c5ff2" })
-  .to(".link2", { background: "#0c5ff2" })
-  .to(".link2", { background: "#0c5ff2" })
-  .to(".link2", { background: "#0c5ff2" })
+  .to(".link2", { background: "#4693D4" })
+  .to(".link2", { background: "#4693D4" })
+  .to(".link2", { background: "#4693D4" })
+  .to(".link2", { background: "#4693D4" })
   .to(".link2", { background: "transparent" })
-  .to(".link3", { background: "#0c5ff2" })
-  .to(".link3", { background: "#0c5ff2" })
-  .to(".link3", { background: "#0c5ff2" })
-  .to(".link3", { background: "#0c5ff2" })
+  .to(".link3", { background: "#4693D4" })
+  .to(".link3", { background: "#4693D4" })
+  .to(".link3", { background: "#4693D4" })
+  .to(".link3", { background: "#4693D4" })
   .to(".link3", { background: "transparent" })
-  .to(".link4", { background: "#0c5ff2" })
-  .to(".link4", { background: "#0c5ff2" })
-  .to(".link4", { background: "#0c5ff2" })
-  .to(".link4", { background: "#0c5ff2" })
+  .to(".link4", { background: "#4693D4" })
+  .to(".link4", { background: "#4693D4" })
+  .to(".link4", { background: "#4693D4" })
+  .to(".link4", { background: "#4693D4" })
   // .to(".link4", { background: "transparent" }); // Activate to toggle last link background
-  .to(".link4", { background: "0c5ff2" }); // Activate to toggle last link background
+  .to(".link4", { background: "4693D4" }); // Activate to toggle last link background
 
 let states2019 = gsap.utils.toArray(".state2019");
 gsap.to(states2019, {
@@ -235,8 +301,10 @@ gsap.to(states2019, {
   scrollTrigger: {
     trigger: "#numberArea",
     scrub: true,
-    start: "-60% 15%",
-    end: "0% 15%",
+    // start: "-60% 15%",
+    // end: "0% 15%",
+    start: "40% 15%",
+    end: "80% 15%",
   },
 });
 
@@ -245,8 +313,8 @@ let pending2019TL = gsap.timeline({
   scrollTrigger: {
     trigger: "#numberArea",
     scrub: true,
-    start: "-60% 15%",
-    end: "380% 15%", // 440% difference
+    start: "40% 15%",
+    end: "200% 15%", // 160% difference
   },
 });
 pending2019TL
@@ -268,8 +336,8 @@ let pending2020TL = gsap.timeline({
   scrollTrigger: {
     trigger: "#numberArea",
     scrub: true,
-    start: "250% 15%", // 130% smaller from previous END
-    end: "690% 15%",
+    start: "150% 15%", // 50% smaller from previous END
+    end: "360% 15%", // 210% difference
   },
 });
 pending2020TL
@@ -291,8 +359,8 @@ let pending2021TL = gsap.timeline({
   scrollTrigger: {
     trigger: "#numberArea",
     scrub: true,
-    start: "560% 15%",
-    end: "1000% 15%",
+    start: "310% 15%",
+    end: "470% 15%",
   },
 });
 pending2021TL
@@ -314,8 +382,8 @@ let pending2022TL = gsap.timeline({
   scrollTrigger: {
     trigger: "#numberArea",
     scrub: true,
-    start: "870% 15%",
-    end: "1310% 15%",
+    start: "420% 15%",
+    end: "630% 15%",
   },
 });
 pending2022TL
@@ -332,6 +400,14 @@ pending2022TL
 //   fill: "#4693D4", // Add this IF the state becomes active
 // });
 
-// window.onbeforeunload = () => {
-//   window.scrollTo(0, 0);
-// };
+let pgWidth = window.innerWidth;
+const checkWidth = () => {
+  if (pgWidth >= 768) {
+    location.reload();
+  }
+};
+window.addEventListener("resize", checkWidth);
+
+window.onbeforeunload = () => {
+  window.scrollTo(0, 0);
+};
