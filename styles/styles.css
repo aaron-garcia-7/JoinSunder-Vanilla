@@ -1,10 +1,3 @@
-/* 
-Satoshi Weights 
-300 - 900 | Variable 
-
-Monument Weights 
-100, 200, 450, 675, 800 | Not Variable 
-*/
 @font-face {
   font-family: "satoshi";
   src: url(../fonts/Satoshi-Variable.woff2);
@@ -45,6 +38,13 @@ Monument Weights
   font-style: normal;
 }
 
+/* 
+Satoshi Weights 
+300 - 900 | Variable 
+
+Monument Weights 
+100, 200, 450, 675, 800 | Not Variable 
+*/
 * {
   margin: 0;
   padding: 0;
@@ -101,7 +101,6 @@ button {
           user-select: none;
 }
 
-/* Logos (Main & Nav Logo) */
 .logo, .navLogo {
   /* position: see individual page style sheet */
   top: 2.4rem;
@@ -145,20 +144,6 @@ button {
           transform: translate(0, -112%);
 }
 
-@-webkit-keyframes appear {
-  to {
-    opacity: 1;
-    pointer-events: all;
-  }
-}
-
-@keyframes appear {
-  to {
-    opacity: 1;
-    pointer-events: all;
-  }
-}
-
 .navLogo {
   top: auto;
   bottom: 3rem;
@@ -189,8 +174,6 @@ button {
   transition: 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.3s;
 }
 
-/* logo */
-/* burger */
 .burgerContainer {
   position: fixed;
   bottom: 2.4rem;
@@ -228,7 +211,7 @@ button {
   }
 }
 
-.burger {
+.burgerContainer .burger {
   background: #0c5ff2;
   position: relative;
   width: calc(3.2rem + 0.8vw);
@@ -254,14 +237,14 @@ button {
   transition: background 0.3s ease 0.2s, transform 0.3s ease, -webkit-transform 0.3s ease !important;
 }
 
-.burger:hover {
+.burgerContainer .burger:hover {
   -webkit-transform: scale(1.12);
           transform: scale(1.12);
   -webkit-box-shadow: 0px 2px 8px #31313155;
           box-shadow: 0px 2px 8px #31313155;
 }
 
-.burger .line, .burger .lineCross, .burger .line5, .burger .home .videoContainer .closeVideoBurger .lineCross, .home .videoContainer .closeVideoBurger .burger .lineCross, .burger .home .videoContainer .closeVideoBurger .line5, .home .videoContainer .closeVideoBurger .burger .line5 {
+.burgerContainer .burger .line, .burgerContainer .burger .lineCross, .burgerContainer .burger .line5, .burgerContainer .burger .home .videoContainer .closeVideoBurger .lineCross, .home .videoContainer .closeVideoBurger .burgerContainer .burger .lineCross, .burgerContainer .burger .home .videoContainer .closeVideoBurger .line5, .home .videoContainer .closeVideoBurger .burgerContainer .burger .line5 {
   background: #f7f7f7;
   width: 40%;
   height: 2px;
@@ -270,18 +253,18 @@ button {
   transition: 0.4s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.4s;
 }
 
-.burger .line:nth-of-type(2), .burger .lineCross:nth-of-type(2), .burger .line5:nth-of-type(2), .burger .home .videoContainer .closeVideoBurger .lineCross:nth-of-type(2), .home .videoContainer .closeVideoBurger .burger .lineCross:nth-of-type(2), .burger .home .videoContainer .closeVideoBurger .line5:nth-of-type(2), .home .videoContainer .closeVideoBurger .burger .line5:nth-of-type(2) {
+.burgerContainer .burger .line:nth-of-type(2), .burgerContainer .burger .lineCross:nth-of-type(2), .burgerContainer .burger .line5:nth-of-type(2), .burgerContainer .burger .home .videoContainer .closeVideoBurger .lineCross:nth-of-type(2), .home .videoContainer .closeVideoBurger .burgerContainer .burger .lineCross:nth-of-type(2), .burgerContainer .burger .home .videoContainer .closeVideoBurger .line5:nth-of-type(2), .home .videoContainer .closeVideoBurger .burgerContainer .burger .line5:nth-of-type(2) {
   margin: 4px 0 4px 0;
   -webkit-transition-delay: 0.46s;
           transition-delay: 0.46s;
 }
 
-.burger .line:nth-of-type(3), .burger .lineCross:nth-of-type(3), .burger .line5:nth-of-type(3), .burger .home .videoContainer .closeVideoBurger .lineCross:nth-of-type(3), .home .videoContainer .closeVideoBurger .burger .lineCross:nth-of-type(3), .burger .home .videoContainer .closeVideoBurger .line5:nth-of-type(3), .home .videoContainer .closeVideoBurger .burger .line5:nth-of-type(3) {
+.burgerContainer .burger .line:nth-of-type(3), .burgerContainer .burger .lineCross:nth-of-type(3), .burgerContainer .burger .line5:nth-of-type(3), .burgerContainer .burger .home .videoContainer .closeVideoBurger .lineCross:nth-of-type(3), .home .videoContainer .closeVideoBurger .burgerContainer .burger .lineCross:nth-of-type(3), .burgerContainer .burger .home .videoContainer .closeVideoBurger .line5:nth-of-type(3), .home .videoContainer .closeVideoBurger .burgerContainer .burger .line5:nth-of-type(3) {
   -webkit-transition-delay: 0.52s;
           transition-delay: 0.52s;
 }
 
-.burger .lineCross, .burger .line5, .burger .home .videoContainer .closeVideoBurger .line5, .home .videoContainer .closeVideoBurger .burger .line5 {
+.burgerContainer .burger .lineCross, .burgerContainer .burger .line5, .burgerContainer .burger .home .videoContainer .closeVideoBurger .line5, .home .videoContainer .closeVideoBurger .burgerContainer .burger .line5 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -292,42 +275,40 @@ button {
           transition-delay: 0s;
 }
 
-.burger .line5 {
+.burgerContainer .burger .line5 {
   -webkit-transform: translate(-50%, -50%) rotate(-45deg) !important;
           transform: translate(-50%, -50%) rotate(-45deg) !important;
 }
 
-.burgerActive {
+.burgerContainer .burgerActive {
   background: #061A2A;
 }
 
-.burgerActive .line, .burgerActive .burger .lineCross, .burger .burgerActive .lineCross, .burgerActive .burger .line5, .burger .burgerActive .line5, .burgerActive .home .videoContainer .closeVideoBurger .lineCross, .home .videoContainer .closeVideoBurger .burgerActive .lineCross, .burgerActive .home .videoContainer .closeVideoBurger .line5, .home .videoContainer .closeVideoBurger .burgerActive .line5 {
+.burgerContainer .burgerActive .line, .burgerContainer .burgerActive .burger .lineCross, .burgerContainer .burger .burgerActive .lineCross, .burgerContainer .burgerActive .burger .line5, .burgerContainer .burger .burgerActive .line5, .burgerContainer .burgerActive .home .videoContainer .closeVideoBurger .lineCross, .home .videoContainer .closeVideoBurger .burgerContainer .burgerActive .lineCross, .burgerContainer .burgerActive .home .videoContainer .closeVideoBurger .line5, .home .videoContainer .closeVideoBurger .burgerContainer .burgerActive .line5 {
   width: 0;
 }
 
-.burgerActive .line:nth-of-type(1), .burgerActive .burger .lineCross:nth-of-type(1), .burger .burgerActive .lineCross:nth-of-type(1), .burgerActive .burger .line5:nth-of-type(1), .burger .burgerActive .line5:nth-of-type(1), .burgerActive .home .videoContainer .closeVideoBurger .lineCross:nth-of-type(1), .home .videoContainer .closeVideoBurger .burgerActive .lineCross:nth-of-type(1), .burgerActive .home .videoContainer .closeVideoBurger .line5:nth-of-type(1), .home .videoContainer .closeVideoBurger .burgerActive .line5:nth-of-type(1) {
+.burgerContainer .burgerActive .line:nth-of-type(1), .burgerContainer .burgerActive .burger .lineCross:nth-of-type(1), .burgerContainer .burger .burgerActive .lineCross:nth-of-type(1), .burgerContainer .burgerActive .burger .line5:nth-of-type(1), .burgerContainer .burger .burgerActive .line5:nth-of-type(1), .burgerContainer .burgerActive .home .videoContainer .closeVideoBurger .lineCross:nth-of-type(1), .home .videoContainer .closeVideoBurger .burgerContainer .burgerActive .lineCross:nth-of-type(1), .burgerContainer .burgerActive .home .videoContainer .closeVideoBurger .line5:nth-of-type(1), .home .videoContainer .closeVideoBurger .burgerContainer .burgerActive .line5:nth-of-type(1) {
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
 
-.burgerActive .line:nth-of-type(2), .burgerActive .burger .lineCross:nth-of-type(2), .burger .burgerActive .lineCross:nth-of-type(2), .burgerActive .burger .line5:nth-of-type(2), .burger .burgerActive .line5:nth-of-type(2), .burgerActive .home .videoContainer .closeVideoBurger .lineCross:nth-of-type(2), .home .videoContainer .closeVideoBurger .burgerActive .lineCross:nth-of-type(2), .burgerActive .home .videoContainer .closeVideoBurger .line5:nth-of-type(2), .home .videoContainer .closeVideoBurger .burgerActive .line5:nth-of-type(2) {
+.burgerContainer .burgerActive .line:nth-of-type(2), .burgerContainer .burgerActive .burger .lineCross:nth-of-type(2), .burgerContainer .burger .burgerActive .lineCross:nth-of-type(2), .burgerContainer .burgerActive .burger .line5:nth-of-type(2), .burgerContainer .burger .burgerActive .line5:nth-of-type(2), .burgerContainer .burgerActive .home .videoContainer .closeVideoBurger .lineCross:nth-of-type(2), .home .videoContainer .closeVideoBurger .burgerContainer .burgerActive .lineCross:nth-of-type(2), .burgerContainer .burgerActive .home .videoContainer .closeVideoBurger .line5:nth-of-type(2), .home .videoContainer .closeVideoBurger .burgerContainer .burgerActive .line5:nth-of-type(2) {
   -webkit-transition-delay: 0.06s;
           transition-delay: 0.06s;
 }
 
-.burgerActive .line:nth-of-type(3), .burgerActive .burger .lineCross:nth-of-type(3), .burger .burgerActive .lineCross:nth-of-type(3), .burgerActive .burger .line5:nth-of-type(3), .burger .burgerActive .line5:nth-of-type(3), .burgerActive .home .videoContainer .closeVideoBurger .lineCross:nth-of-type(3), .home .videoContainer .closeVideoBurger .burgerActive .lineCross:nth-of-type(3), .burgerActive .home .videoContainer .closeVideoBurger .line5:nth-of-type(3), .home .videoContainer .closeVideoBurger .burgerActive .line5:nth-of-type(3) {
+.burgerContainer .burgerActive .line:nth-of-type(3), .burgerContainer .burgerActive .burger .lineCross:nth-of-type(3), .burgerContainer .burger .burgerActive .lineCross:nth-of-type(3), .burgerContainer .burgerActive .burger .line5:nth-of-type(3), .burgerContainer .burger .burgerActive .line5:nth-of-type(3), .burgerContainer .burgerActive .home .videoContainer .closeVideoBurger .lineCross:nth-of-type(3), .home .videoContainer .closeVideoBurger .burgerContainer .burgerActive .lineCross:nth-of-type(3), .burgerContainer .burgerActive .home .videoContainer .closeVideoBurger .line5:nth-of-type(3), .home .videoContainer .closeVideoBurger .burgerContainer .burgerActive .line5:nth-of-type(3) {
   -webkit-transition-delay: 0.12s;
           transition-delay: 0.12s;
 }
 
-.burgerActive .lineCross, .burgerActive .burger .line5, .burger .burgerActive .line5, .burgerActive .home .videoContainer .closeVideoBurger .line5, .home .videoContainer .closeVideoBurger .burgerActive .line5 {
+.burgerContainer .burgerActive .lineCross, .burgerContainer .burgerActive .burger .line5, .burgerContainer .burger .burgerActive .line5, .burgerContainer .burgerActive .home .videoContainer .closeVideoBurger .line5, .home .videoContainer .closeVideoBurger .burgerContainer .burgerActive .line5 {
   width: 40%;
   -webkit-transition-delay: 0.4s;
           transition-delay: 0.4s;
 }
 
-/* burger */
-/* Nav */
 .nav {
   background: #C6D3D8;
   position: fixed;
@@ -445,9 +426,138 @@ button {
   display: none;
 }
 
-/* Nav */
+.cta {
+  background: transparent;
+  border: 1px solid #000014;
+  color: transparent;
+  border-radius: 2.4rem;
+  border-radius: 4rem;
+  width: calc(8rem + 4vw);
+  height: 2.6rem;
+  padding: 0.4rem 1.4rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.cta::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  color: #000014;
+  z-index: 1;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.cta .ctaCircle {
+  position: absolute;
+  top: var(--mouse-x);
+  left: var(--mouse-y);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-animation: restoreBtn 0.46s ease forwards;
+          animation: restoreBtn 0.46s ease forwards;
+}
+
+.cta:hover .ctaCircle {
+  top: var(--mouse-x);
+  left: var(--mouse-y);
+  -webkit-animation: expandBtn 0.46s ease forwards;
+          animation: expandBtn 0.46s ease forwards;
+}
+
+@-webkit-keyframes restoreBtn {
+  0% {
+    width: 220%;
+    height: 320%;
+    opacity: 1;
+  }
+  90% {
+    width: 220%;
+    height: 320%;
+    opacity: 0;
+  }
+  100% {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes restoreBtn {
+  0% {
+    width: 220%;
+    height: 320%;
+    opacity: 1;
+  }
+  90% {
+    width: 220%;
+    height: 320%;
+    opacity: 0;
+  }
+  100% {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes expandBtn {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+  100% {
+    width: 220%;
+    height: 320%;
+    opacity: 1;
+  }
+}
+
+@keyframes expandBtn {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+  100% {
+    width: 220%;
+    height: 320%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes appear {
+  to {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
 @media (max-width: 1024px) {
-  /* logo */
   .logo, .navLogo {
     /* position: see individual page style sheet */
     width: calc(6.4rem + 2vw);
@@ -455,8 +565,6 @@ button {
   .navLogo {
     position: fixed !important;
   }
-  /* logo */
-  /* Nav */
   .nav {
     height: 62vh;
   }
@@ -587,20 +695,19 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  display: none;
   opacity: 0;
   pointer-events: none;
   -webkit-transition: opacity 0.6s ease 0.64s;
   transition: opacity 0.6s ease 0.64s;
-  z-index: 4;
+  z-index: -1;
 }
 
 .home .videoContainerActive {
-  display: block;
   opacity: 1;
   pointer-events: all;
   -webkit-transition: opacity 0.6s ease;
   transition: opacity 0.6s ease;
+  z-index: 4;
 }
 
 .home .videoContainer .videoWrapper {
@@ -701,26 +808,26 @@ button {
   background: #0c5ff2;
 }
 
-.home .videoContainer .closeVideoBurgerActive .line, .home .videoContainer .closeVideoBurgerActive .burger .lineCross, .burger .home .videoContainer .closeVideoBurgerActive .lineCross, .home .videoContainer .closeVideoBurgerActive .burger .line5, .burger .home .videoContainer .closeVideoBurgerActive .line5, .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .lineCross, .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .lineCross, .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .line5, .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .line5 {
+.home .videoContainer .closeVideoBurgerActive .line, .home .videoContainer .closeVideoBurgerActive .burgerContainer .burger .lineCross, .burgerContainer .burger .home .videoContainer .closeVideoBurgerActive .lineCross, .home .videoContainer .closeVideoBurgerActive .burgerContainer .burger .line5, .burgerContainer .burger .home .videoContainer .closeVideoBurgerActive .line5, .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .lineCross, .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .lineCross, .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .line5, .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .line5 {
   width: 0;
 }
 
-.home .videoContainer .closeVideoBurgerActive .line:nth-of-type(1), .home .videoContainer .closeVideoBurgerActive .burger .lineCross:nth-of-type(1), .burger .home .videoContainer .closeVideoBurgerActive .lineCross:nth-of-type(1), .home .videoContainer .closeVideoBurgerActive .burger .line5:nth-of-type(1), .burger .home .videoContainer .closeVideoBurgerActive .line5:nth-of-type(1), .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .lineCross:nth-of-type(1), .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .lineCross:nth-of-type(1), .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .line5:nth-of-type(1), .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .line5:nth-of-type(1) {
+.home .videoContainer .closeVideoBurgerActive .line:nth-of-type(1), .home .videoContainer .closeVideoBurgerActive .burgerContainer .burger .lineCross:nth-of-type(1), .burgerContainer .burger .home .videoContainer .closeVideoBurgerActive .lineCross:nth-of-type(1), .home .videoContainer .closeVideoBurgerActive .burgerContainer .burger .line5:nth-of-type(1), .burgerContainer .burger .home .videoContainer .closeVideoBurgerActive .line5:nth-of-type(1), .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .lineCross:nth-of-type(1), .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .lineCross:nth-of-type(1), .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .line5:nth-of-type(1), .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .line5:nth-of-type(1) {
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
 
-.home .videoContainer .closeVideoBurgerActive .line:nth-of-type(2), .home .videoContainer .closeVideoBurgerActive .burger .lineCross:nth-of-type(2), .burger .home .videoContainer .closeVideoBurgerActive .lineCross:nth-of-type(2), .home .videoContainer .closeVideoBurgerActive .burger .line5:nth-of-type(2), .burger .home .videoContainer .closeVideoBurgerActive .line5:nth-of-type(2), .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .lineCross:nth-of-type(2), .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .lineCross:nth-of-type(2), .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .line5:nth-of-type(2), .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .line5:nth-of-type(2) {
+.home .videoContainer .closeVideoBurgerActive .line:nth-of-type(2), .home .videoContainer .closeVideoBurgerActive .burgerContainer .burger .lineCross:nth-of-type(2), .burgerContainer .burger .home .videoContainer .closeVideoBurgerActive .lineCross:nth-of-type(2), .home .videoContainer .closeVideoBurgerActive .burgerContainer .burger .line5:nth-of-type(2), .burgerContainer .burger .home .videoContainer .closeVideoBurgerActive .line5:nth-of-type(2), .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .lineCross:nth-of-type(2), .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .lineCross:nth-of-type(2), .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .line5:nth-of-type(2), .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .line5:nth-of-type(2) {
   -webkit-transition-delay: 0.06s;
           transition-delay: 0.06s;
 }
 
-.home .videoContainer .closeVideoBurgerActive .line:nth-of-type(3), .home .videoContainer .closeVideoBurgerActive .burger .lineCross:nth-of-type(3), .burger .home .videoContainer .closeVideoBurgerActive .lineCross:nth-of-type(3), .home .videoContainer .closeVideoBurgerActive .burger .line5:nth-of-type(3), .burger .home .videoContainer .closeVideoBurgerActive .line5:nth-of-type(3), .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .lineCross:nth-of-type(3), .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .lineCross:nth-of-type(3), .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .line5:nth-of-type(3), .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .line5:nth-of-type(3) {
+.home .videoContainer .closeVideoBurgerActive .line:nth-of-type(3), .home .videoContainer .closeVideoBurgerActive .burgerContainer .burger .lineCross:nth-of-type(3), .burgerContainer .burger .home .videoContainer .closeVideoBurgerActive .lineCross:nth-of-type(3), .home .videoContainer .closeVideoBurgerActive .burgerContainer .burger .line5:nth-of-type(3), .burgerContainer .burger .home .videoContainer .closeVideoBurgerActive .line5:nth-of-type(3), .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .lineCross:nth-of-type(3), .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .lineCross:nth-of-type(3), .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .line5:nth-of-type(3), .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .line5:nth-of-type(3) {
   -webkit-transition-delay: 0.12s;
           transition-delay: 0.12s;
 }
 
-.home .videoContainer .closeVideoBurgerActive .lineCross, .home .videoContainer .closeVideoBurgerActive .burger .line5, .burger .home .videoContainer .closeVideoBurgerActive .line5, .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .line5, .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .line5 {
+.home .videoContainer .closeVideoBurgerActive .lineCross, .home .videoContainer .closeVideoBurgerActive .burgerContainer .burger .line5, .burgerContainer .burger .home .videoContainer .closeVideoBurgerActive .line5, .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .line5, .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .line5 {
   width: 40%;
   -webkit-transition-delay: 0.4s;
           transition-delay: 0.4s;
@@ -890,55 +997,75 @@ button {
 }
 
 .home .mainContent .heroBtns > * {
+  position: relative;
   font-family: "satoshi", sans-serif;
   font-size: calc(0.8rem + 1vw);
   font-weight: 300;
   border-radius: 4rem;
   padding: 0.4rem 1.4rem;
+  width: calc(8rem + 8vw);
+  height: calc(2.4rem + 1vw);
 }
 
 .home .mainContent .cta {
-  position: relative;
-  margin-right: calc(0.2rem + 2vw);
-  color: #f7f7f7;
-  background: transparent;
   border: 1px solid #f7f7f7;
-  cursor: pointer;
-  overflow: hidden;
+  margin-right: 2vw;
 }
 
-.home .mainContent .cta::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%, 140%);
-          transform: translate(-50%, 140%);
-  width: calc(1.6rem + 1.2vw);
-  height: calc(1.6rem + 1.2vw);
-  border-radius: 4rem;
+.home .mainContent .cta::before {
+  content: 'Join The Squad';
+  color: #f7f7f7;
+  font-size: calc(0.8rem + 1vw);
+}
+
+.home .mainContent .cta .ctaCircle {
   background: #0c5ff2;
-  z-index: -1;
-  -webkit-transition: 0.5s cubic-bezier(0.6, 0, 0.25, 1);
-  transition: 0.5s cubic-bezier(0.6, 0, 0.25, 1);
 }
 
-.home .mainContent .cta:hover::after {
-  -webkit-transform: translate(-50%, 0%) scale(6);
-          transform: translate(-50%, 0%) scale(6);
+.home .mainContent .cta:hover {
+  border: 1px solid #0c5ff2;
+}
+
+.home .mainContent .cta:hover::before {
+  color: #f7f7f7;
 }
 
 .home .mainContent .cta2 {
   background: -webkit-gradient(linear, left top, right top, from(#15499340), to(#4AABD040));
   background: linear-gradient(90deg, #15499340, #4AABD040);
-  color: #f7f7f7;
+  color: transparent;
   border: 1px solid #C6D3D8;
-  cursor: pointer;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.home .mainContent .cta2::before {
+  content: 'Watch Promo';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-56%, -50%);
+          transform: translate(-56%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  color: #000014;
+  z-index: 1;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  color: #f7f7f7;
+  font-size: calc(0.8rem + 1vw);
 }
 
 .home .mainContent .playIconFrame {
@@ -1256,19 +1383,64 @@ button {
 }
 
 .opportunity .mainContent .header {
-  height: clamp(16rem, 68vh, 48rem);
+  position: relative;
+  height: clamp(24rem, 100vh, 64rem);
   padding: 2.4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+.opportunity .mainContent .header > * {
+  position: absolute;
 }
 
 .opportunity .mainContent .header h1 {
-  font-size: calc(0.4rem + 2.8vw);
+  font-size: calc(2rem + 3vw);
   font-weight: 450;
+  bottom: 2.4rem;
+  left: 4.8rem;
+  color: #f7f7f7;
+  z-index: 2;
+  mix-blend-mode: difference;
+}
+
+.opportunity .mainContent .header .cta {
+  top: 2.4rem;
+  right: 2.4rem;
+  opacity: 0;
+  -webkit-animation: appear 0.6s ease 0.6s forwards;
+          animation: appear 0.6s ease 0.6s forwards;
+}
+
+.opportunity .mainContent .header .cta::before {
+  content: 'Join The Squad';
+  color: #000014;
+  font-size: calc(0.8rem + 0.4vw);
+}
+
+.opportunity .mainContent .header .cta .ctaCircle {
+  background: #0c5ff2;
+}
+
+.opportunity .mainContent .header .cta:hover {
+  border: 1px solid #0c5ff2;
+}
+
+.opportunity .mainContent .header .cta:hover::before {
+  color: #f7f7f7;
+}
+
+.opportunity .mainContent .header .repsImg {
+  bottom: 2.4rem;
+  right: 2.4rem;
+  width: 40%;
+}
+
+.opportunity .mainContent .header .shape {
+  bottom: 2.4rem;
+  right: 2.4rem;
+  width: 96%;
+  height: 60%;
+  border-radius: 0 2rem 0 2rem;
+  background: #080808;
 }
 
 .opportunity .mainContent .videos {
@@ -1679,11 +1851,5 @@ button {
 .opportunity .mainContentActive {
   -webkit-transform: translate(0, -50vh);
           transform: translate(0, -50vh);
-}
-
-@media (max-width: 768px) {
-  .opportunity .mainContent .header h1 .smartBreak {
-    display: none;
-  }
 }
 /*# sourceMappingURL=styles.css.map */

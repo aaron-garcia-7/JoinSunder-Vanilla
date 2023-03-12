@@ -1,7 +1,3 @@
-//
-// Handling Navigation Logic
-//
-
 // Global elements
 const burger = document.querySelector(".burger");
 const nav = document.querySelector(".nav");
@@ -11,6 +7,10 @@ const navLogo = document.querySelector(".navLogo");
 // Page Unique elements
 const mainContent = document.querySelector(".mainContent");
 const quoteSection = document.querySelector("#quoteSection");
+
+//
+// Navigation Logic
+//
 
 let navState = false;
 

@@ -18,19 +18,64 @@ $pending: #BCD0D7;
     .mainContent {
         position: relative;
         background: $sunderSnow;
-        // background: $sunderRoyal;
         transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
 
         .header {
-            // border: 2px dashed grey;
-            height: clamp(16rem, 68vh, 48rem);
+            position: relative;
+            height: clamp(24rem, 100vh, 64rem);
             padding: 2.4rem;
-            display: flex;
-            align-items: center;
-            h1 {
-                font-size: $XXL-Text;
-                font-weight: 450;
+            > * {
+                position: absolute;
             }
+            h1 {
+                font-size: calc(2rem + 3vw);
+                font-weight: 450;
+                bottom: 2.4rem;
+                left: 4.8rem;
+                color: $sunderSnow;
+                z-index: 2;
+                mix-blend-mode: difference;
+                // .black {
+                //     color: $sunderMidnight;
+                // }
+            }
+            .cta {
+                top: 2.4rem;
+                right: 2.4rem;
+                opacity: 0;
+                animation: appear 0.6s ease 0.6s forwards;
+                // See Globals for the rest
+                &::before {
+                    content: 'Join The Squad';
+                    color: $sunderMidnight;
+                    font-size: $S-Text;
+                }
+                .ctaCircle {
+                    background: $sunderRoyalLight;
+                }
+
+                &:hover {
+                    border: 1px solid $sunderRoyalLight;
+                    &::before {
+                        color: $sunderSnow;
+                    }
+                }
+            }
+            .repsImg {
+                bottom: 2.4rem;
+                right: 2.4rem;
+                width: 40%;
+            }
+            .shape {
+                bottom: 2.4rem;
+                right: 2.4rem;
+                width: 96%;
+                height: 60%;
+                border-radius: 0 2rem 0 2rem;
+                // background: $sunderMidnight;
+                background: #080808;
+            }
+            
         }
 
         .videos {
@@ -358,17 +403,17 @@ $pending: #BCD0D7;
     }
 }
 
-@media (max-width: 768px) {
-    .opportunity {
+// @media (max-width: 768px) {
+//     .opportunity {
 
-        .mainContent{
-            .header {
-                h1 {
-                    .smartBreak {
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
-}
+//         .mainContent{
+//             .header {
+//                 h1 {
+//                     .smartBreak {
+//                         display: none;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
