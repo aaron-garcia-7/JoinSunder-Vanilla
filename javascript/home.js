@@ -1,4 +1,94 @@
 //
+// Image Reel Logic
+//
+
+let pgWidth1 = window.innerWidth;
+
+const pageScroll = () => {
+  window.scrollBy(0, 1);
+  setTimeout(pageScroll, 24);
+};
+if (pgWidth1 >= 1024) {
+  setTimeout(() => {
+    pageScroll();
+  }, 2000);
+}
+
+const checkWidth = () => {
+  if (pgWidth >= 768) {
+    location.reload();
+  }
+};
+window.addEventListener("resize", checkWidth);
+
+// // CHAT GPT CODE VERSION 1
+// let scrollTimeout;
+// let resumeScrollTimeout;
+
+// function pageScroll() {
+//   window.scrollBy(0, 1);
+//   scrollTimeout = setTimeout(pageScroll, 24);
+// }
+
+// function stopAutoScroll() {
+//   clearTimeout(scrollTimeout);
+//   clearTimeout(resumeScrollTimeout);
+
+//   resumeScrollTimeout = setTimeout(() => {
+//     pageScroll();
+//   }, 2000);
+// }
+
+// window.addEventListener("scroll", stopAutoScroll);
+
+// let initialScroll = setTimeout(() => {
+//   pageScroll();
+// }, 2400);
+
+// // // CHAT GPT CODE VERSION 2
+// // wait until the page is fully loaded
+// window.addEventListener("load", function () {
+//   if (window.innerWidth > 1024) {
+//     const pageHeight = document.body.scrollHeight;
+//     slowScrollTo(pageHeight, 42000);
+//   }
+// });
+
+// window.addEventListener("resize", function () {
+//   if (window.innerWidth > 1024 && !isScrolling) {
+//     const pageHeight = document.body.scrollHeight;
+//     slowScrollTo(pageHeight, 42000);
+//     isScrolling = true;
+//   }
+
+//   if (window.innerWidth <= 1024 && isScrolling) {
+//     clearTimeout(scrollTimeout);
+//     isScrolling = false;
+//   }
+// });
+
+// let isScrolling = false;
+// let scrollTimeout;
+// function slowScrollTo(to, duration) {
+//   const start = window.pageYOffset;
+//   const change = to - start;
+//   const increment = 10;
+//   const numIncrements = Math.ceil(duration / increment);
+//   const incrementAmount = change / numIncrements;
+
+//   function scroll() {
+//     window.scrollBy(0, incrementAmount);
+//     if (Math.abs(window.pageYOffset - to) < Math.abs(incrementAmount)) {
+//       window.scrollTo(0, to);
+//     } else {
+//       scrollTimeout = setTimeout(scroll, increment);
+//     }
+//   }
+
+//   scroll();
+// }
+
+//
 // Handling Navigation Logic
 //
 
@@ -77,6 +167,7 @@ const closeNav = () => {
 
 burger.addEventListener("click", toggleNav);
 mainContent.addEventListener("click", closeNav);
+navLogo.addEventListener("click", closeNav);
 
 //
 // Handling Video Container Logic

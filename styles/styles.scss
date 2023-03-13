@@ -67,26 +67,16 @@ $S-Text: calc(0.8rem + 0.4vw);
 body {
   background: $sunderSnow;
   color: $sunderMidnight;
+  scroll-behavior: smooth;
 }
 a {
   text-decoration: none;
 }
-h1 {
+h1, h2 {
   font-family: $monument;
-  font-weight: 200;
+  font-weight: 450;
 }
-h3 {
-  font-weight: 500;
-  font-family: $satoshi;
-}
-h4 {
-  font-weight: 300;
-  font-family: $satoshi;
-}
-p,
-blockquote,
-a,
-button {
+h3, h4, h5, h6, p, blockquote, a, button {
   font-family: $satoshi;
 }
 
@@ -265,15 +255,15 @@ button {
     height: 60%;
     display: flex;
     flex: 0 0 auto;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    // transform: translate(calc(10rem + 8vw), -4vw) scale(0.9);
-    transform: translate(calc(10rem + 8vw), 2vw) scale(0.9);
+    // opacity: 0;
+    // transform: translate(calc(10rem + 8vw), 2vw) scale(0.9);
+    transform: translate(calc(10rem + 8vw), 2vw);
     transition: transform 0.5s cubic-bezier(.75,.15,.25,.85), opacity 0.4s ease;
 
     .navLink {
-      margin: 0 2rem 0 0;
       transform: translate(2rem, 0);
       display: flex;
       flex-direction: column;
@@ -305,9 +295,10 @@ button {
       background: $sunderSnow;
       width: 20vw;
       height: calc(7rem + 4vw);
-      border-radius: calc(0.8rem + 0.4vw);
+      border-radius: calc(0.4rem + 0.2vw);
       object-fit: cover;
       transition: transform 0.4s ease;
+      cursor: pointer;
     }
     .mobileImg {
       display: none;
@@ -317,11 +308,12 @@ button {
   //.navActive
   &Active {
     transform: translate(0, 0);
-    .navSlider {
-      opacity: 1;
-      transform: translate(calc(10rem + 8vw), 2vw) scale(1);
-      transition: 0.7s cubic-bezier(.75,.15,.25,.85) 0.1s;
-    }
+    // .navSlider {
+    //   // opacity: 1;
+    //   // transform: translate(calc(10rem + 8vw), 2vw) scale(1);
+    //   transform: translate(calc(10rem + 8vw), 2vw);
+    //   transition: 0.7s cubic-bezier(.75,.15,.25,.85) 0.1s;
+    // }
   }
   .navSwiper {
     display: none;
@@ -342,6 +334,7 @@ button {
   overflow: hidden;
   &::before {
       // content: ''; UNIQUE PER BUTTON
+      // color: UNIQUE PER BUTTON;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -350,7 +343,6 @@ button {
       justify-content: center;
       align-items: center;
       width: 100%;
-      color: $sunderMidnight;
       z-index: 1;
       transition: 0.5s ease;
   }
@@ -363,13 +355,13 @@ button {
       border-radius: 50%;
       pointer-events: none;
       opacity: 0;
-      animation: restoreBtn 0.46s ease forwards;
+      animation: restoreBtn 0.52s ease forwards;
   }
   &:hover {
       .ctaCircle {
           top: var(--mouse-x);
           left: var(--mouse-y);
-          animation: expandBtn 0.46s ease forwards;
+          animation: expandBtn 0.52s ease forwards;
       }
   }
   @keyframes restoreBtn {
@@ -448,6 +440,7 @@ button {
       height: 68%;
       padding: 0 4rem 0 1rem;
       display: flex;
+      gap: 4vw;
       justify-content: space-between;
       align-items: center;
       opacity: 0;
@@ -456,7 +449,6 @@ button {
       transition: transform 0.6s cubic-bezier(.75,.15,.25,.85), opacity 0.6s ease;
       z-index: -1;
       .navLink {
-        margin: 0 0 0 4vw;
         .linkImg {
           background: $sunderSnow;
           border-radius: 1rem;
@@ -474,9 +466,10 @@ button {
 
     .navSlider {
       height: 68%;
-      transform: translate(calc(10rem + 4vw), -6vw) scale(0.8);
+      gap: 2vw;
+      // transform: translate(calc(10rem + 4vw), -6vw) scale(0.8);
+      transform: translate(calc(14rem + 2vw), 2vw) scale(1);
       .navLink {
-        margin: 0 0 0 4vw;
         .linkImg {
           width: calc(6rem + 12vw);
           height: calc(12rem + 4vw);
@@ -490,9 +483,9 @@ button {
       }
     }
     &Active {
-      .navSlider {
-        transform: translate(calc(14rem + 4vw), 2vw) scale(1);
-      }
+      // .navSlider {
+      //   transform: translate(calc(14rem + 4vw), 2vw) scale(1);
+      // }
       .navSwiper {
         opacity: 1;
         transform: translate(0, 2vw) scale(1);

@@ -55,31 +55,19 @@ Monument Weights
 body {
   background: #f7f7f7;
   color: #000014;
+  scroll-behavior: smooth;
 }
 
 a {
   text-decoration: none;
 }
 
-h1 {
+h1, h2 {
   font-family: "monument", sans-serif;
-  font-weight: 200;
+  font-weight: 450;
 }
 
-h3 {
-  font-weight: 500;
-  font-family: "satoshi", sans-serif;
-}
-
-h4 {
-  font-weight: 300;
-  font-family: "satoshi", sans-serif;
-}
-
-p,
-blockquote,
-a,
-button {
+h3, h4, h5, h6, p, blockquote, a, button {
   font-family: "satoshi", sans-serif;
 }
 
@@ -339,15 +327,15 @@ button {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
+  gap: 2rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  opacity: 0;
-  -webkit-transform: translate(calc(10rem + 8vw), 2vw) scale(0.9);
-          transform: translate(calc(10rem + 8vw), 2vw) scale(0.9);
+  -webkit-transform: translate(calc(10rem + 8vw), 2vw);
+          transform: translate(calc(10rem + 8vw), 2vw);
   -webkit-transition: opacity 0.4s ease, -webkit-transform 0.5s cubic-bezier(0.75, 0.15, 0.25, 0.85);
   transition: opacity 0.4s ease, -webkit-transform 0.5s cubic-bezier(0.75, 0.15, 0.25, 0.85);
   transition: transform 0.5s cubic-bezier(0.75, 0.15, 0.25, 0.85), opacity 0.4s ease;
@@ -355,7 +343,6 @@ button {
 }
 
 .nav .navSlider .navLink {
-  margin: 0 2rem 0 0;
   -webkit-transform: translate(2rem, 0);
           transform: translate(2rem, 0);
   display: -webkit-box;
@@ -396,13 +383,14 @@ button {
   background: #f7f7f7;
   width: 20vw;
   height: calc(7rem + 4vw);
-  border-radius: calc(0.8rem + 0.4vw);
+  border-radius: calc(0.4rem + 0.2vw);
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transition: -webkit-transform 0.4s ease;
   transition: -webkit-transform 0.4s ease;
   transition: transform 0.4s ease;
   transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+  cursor: pointer;
 }
 
 .nav .navSlider .mobileImg {
@@ -412,14 +400,6 @@ button {
 .navActive {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
-}
-
-.navActive .navSlider {
-  opacity: 1;
-  -webkit-transform: translate(calc(10rem + 8vw), 2vw) scale(1);
-          transform: translate(calc(10rem + 8vw), 2vw) scale(1);
-  -webkit-transition: 0.7s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.1s;
-  transition: 0.7s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.1s;
 }
 
 .nav .navSwiper {
@@ -455,7 +435,6 @@ button {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  color: #000014;
   z-index: 1;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
@@ -470,15 +449,15 @@ button {
   border-radius: 50%;
   pointer-events: none;
   opacity: 0;
-  -webkit-animation: restoreBtn 0.46s ease forwards;
-          animation: restoreBtn 0.46s ease forwards;
+  -webkit-animation: restoreBtn 0.52s ease forwards;
+          animation: restoreBtn 0.52s ease forwards;
 }
 
 .cta:hover .ctaCircle {
   top: var(--mouse-x);
   left: var(--mouse-y);
-  -webkit-animation: expandBtn 0.46s ease forwards;
-          animation: expandBtn 0.46s ease forwards;
+  -webkit-animation: expandBtn 0.52s ease forwards;
+          animation: expandBtn 0.52s ease forwards;
 }
 
 @-webkit-keyframes restoreBtn {
@@ -578,6 +557,7 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    gap: 4vw;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -594,9 +574,6 @@ button {
     transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85), opacity 0.6s ease, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85);
     z-index: -1;
   }
-  .nav .navSwiper .navLink {
-    margin: 0 0 0 4vw;
-  }
   .nav .navSwiper .navLink .linkImg {
     background: #f7f7f7;
     border-radius: 1rem;
@@ -611,11 +588,9 @@ button {
   }
   .nav .navSlider {
     height: 68%;
-    -webkit-transform: translate(calc(10rem + 4vw), -6vw) scale(0.8);
-            transform: translate(calc(10rem + 4vw), -6vw) scale(0.8);
-  }
-  .nav .navSlider .navLink {
-    margin: 0 0 0 4vw;
+    gap: 2vw;
+    -webkit-transform: translate(calc(14rem + 2vw), 2vw) scale(1);
+            transform: translate(calc(14rem + 2vw), 2vw) scale(1);
   }
   .nav .navSlider .navLink .linkImg {
     width: calc(6rem + 12vw);
@@ -626,10 +601,6 @@ button {
   }
   .nav .navSlider .navLink .mobileImg {
     display: block;
-  }
-  .navActive .navSlider {
-    -webkit-transform: translate(calc(14rem + 4vw), 2vw) scale(1);
-            transform: translate(calc(14rem + 4vw), 2vw) scale(1);
   }
   .navActive .navSwiper {
     opacity: 1;
@@ -676,8 +647,21 @@ button {
   }
 }
 
+.home {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.home::-webkit-scrollbar {
+  display: none;
+}
+
 .home .logo, .home .navLogo {
   position: fixed;
+}
+
+.home .navLogo {
+  cursor: pointer;
 }
 
 .home .videoContainer {
@@ -1034,7 +1018,7 @@ button {
   background: -webkit-gradient(linear, left top, right top, from(#15499340), to(#4AABD040));
   background: linear-gradient(90deg, #15499340, #4AABD040);
   color: transparent;
-  border: 1px solid #C6D3D8;
+  border: 1px solid #0c5ff2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1083,8 +1067,8 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transform: translate(25%, 0);
-          transform: translate(25%, 0);
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
   overflow: hidden;
 }
 
@@ -1443,35 +1427,59 @@ button {
   background: #080808;
 }
 
-.opportunity .mainContent .videos {
-  padding: 2.4rem;
-  width: 100vw;
+.opportunity .mainContent .quoteSection {
   height: clamp(24rem, 100vh, 64rem);
+  padding: 2.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.opportunity .mainContent .videos .mainVideo {
-  background: linear-gradient(-45deg, white, grey);
-  width: 80%;
+.opportunity .mainContent .quoteSection .imgWrapper {
+  position: relative;
+  width: 46%;
+  height: 86%;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.opportunity .mainContent .quoteSection .imgWrapper .quoteImg {
+  width: 100%;
   height: 100%;
-  border-radius: 1.6rem;
-  padding: 2.4rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.opportunity .mainContent .videos .mainVideo h2 {
+.opportunity .mainContent .quoteSection .imgWrapper .quoteCaption {
+  position: absolute;
+  bottom: 0;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(20%, #2d2d2dca), to(#2d2d2d00));
+  background: linear-gradient(0deg, #2d2d2dca 20%, #2d2d2d00);
+  width: 100%;
+  padding: 2rem;
+}
+
+.opportunity .mainContent .quoteSection .imgWrapper .quoteCaption h4 {
   font-family: "monument", sans-serif;
-  font-size: calc(0.4rem + 2.8vw);
+  font-size: calc(1.4rem + 1.4vw);
   font-weight: 675;
-  color: white;
+  color: #f7f7f7;
 }
 
-.opportunity .mainContent .videos .videoReel {
-  width: 20%;
-  height: 100%;
-  border-radius: 1.6rem;
+.opportunity .mainContent .quoteSection .imgWrapper .quoteCaption .position {
+  font-size: calc(1rem + 1.2vw);
+  font-weight: 450;
+}
+
+.opportunity .mainContent .quoteSection .quoteWrapper {
+  border-left: 2px solid #000014;
+  width: 46%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1479,66 +1487,27 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  overflow: scroll;
-  gap: 1.2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.opportunity .mainContent .videos .videoReel .smallVideo {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-  background: #D9D9D9;
-  width: 100%;
-  height: 25%;
-  border-radius: 1.6rem;
+.opportunity .mainContent .quoteSection .quoteWrapper > * {
+  padding-left: 2rem;
 }
 
-.opportunity .mainContent .quoteSection {
-  height: clamp(24rem, 100vh, 64rem);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.opportunity .mainContent .quoteSection .quoteWrapper {
-  opacity: 0;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-}
-
-.opportunity .mainContent .quoteSection .quoteWrapper .quote, .opportunity .mainContent .quoteSection .quoteWrapper .quoteCaption p {
+.opportunity .mainContent .quoteSection .quoteWrapper .quote {
+  border-bottom: 2px solid #000014;
+  font-family: "monument", sans-serif;
   font-size: calc(0.8rem + 1vw);
-  font-weight: 500;
-  color: #555555;
-  margin-bottom: 2rem;
+  font-weight: 675;
+  padding-bottom: 2rem;
 }
 
-.opportunity .mainContent .quoteSection .quoteWrapper .quoteCaption {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.opportunity .mainContent .quoteSection .quoteWrapper .quoteCaption .quoteImg {
-  width: 28%;
-  margin-right: 2rem;
-}
-
-.opportunity .mainContent .quoteSection .quoteWrapper .quoteCaption p {
-  text-align: left;
-  margin-bottom: 0;
+.opportunity .mainContent .quoteSection .quoteWrapper .blockquote {
+  font-size: calc(1rem + 1.2vw);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .opportunity .mainContent .reel {
@@ -1571,61 +1540,32 @@ button {
   padding: calc(1.2rem + 2.8vw);
 }
 
-.opportunity .mainContent .reel .repCard .cardHeader {
-  margin-bottom: calc(1.6rem + 1.6vw);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.opportunity .mainContent .videoSection {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
-.opportunity .mainContent .reel .repCard .cardHeader img {
-  width: 32%;
-  margin-right: calc(0.6rem + 1vw);
+.opportunity .mainContent .videoSection .text {
+  position: absolute;
 }
 
-.opportunity .mainContent .reel .repCard .cardHeader .cardTitle .name {
-  font-size: calc(0.4rem + 1.6vw);
+.opportunity .mainContent .videoSection .text h2 {
+  font-size: calc(0.4rem + 2.8vw);
 }
 
-.opportunity .mainContent .reel .repCard .cardHeader .cardTitle .position {
-  font-size: calc(0.4rem + 1vw);
+.opportunity .mainContent .videoSection .text1 {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-89%, -75%);
+          transform: translate(-89%, -75%);
 }
 
-.opportunity .mainContent .reel .repCard .cardBody {
-  height: 56%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.opportunity .mainContent .reel .repCard .cardBody .block {
-  border-bottom: 1px solid #C6D3D8;
-  padding-bottom: 0.6rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: calc(1rem + 2vw);
-}
-
-.opportunity .mainContent .reel .repCard .cardBody .block .year {
-  font-size: calc(0.6rem + 1.2vw);
-}
-
-.opportunity .mainContent .reel .repCard .cardBody .block .stats {
-  font-size: calc(0.6rem + 0.8vw);
+.opportunity .mainContent .videoSection .text2 {
+  bottom: 50%;
+  right: 50%;
+  -webkit-transform: translate(89%, 75%);
+          transform: translate(89%, 75%);
 }
 
 .opportunity .mainContent .growth {
@@ -1675,9 +1615,9 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 40%;
-  padding-bottom: 1rem;
-  margin-bottom: 2.8rem;
+  height: 56%;
+  -webkit-transform: translate(0, 6%);
+          transform: translate(0, 6%);
 }
 
 .opportunity .mainContent .growth .numberArea .timelineBorder {
@@ -1693,7 +1633,8 @@ button {
 
 .opportunity .mainContent .growth .numberArea .timelineLinks {
   color: #f7f7f7;
-  font-size: calc(0.8rem + 0.4vw);
+  font-size: calc(0.8rem + 1vw);
+  text-align: center;
   opacity: 0;
   border-radius: 2rem;
   padding: 0.4rem 1.2rem;

@@ -68,7 +68,7 @@ let backgroundTL = gsap.timeline({
     trigger: "#mainContent",
     scrub: 1,
     start: "30% 40%",
-    end: "146% 60%",
+    end: "120% 60%",
   },
 });
 backgroundTL
@@ -82,27 +82,27 @@ backgroundTL
     backgroundColor: "#000014",
   });
 
-gsap.to("#quoteSection", {
-  scrollTrigger: {
-    trigger: "#quoteSection",
-    pin: true,
-    scrub: true,
-    start: "top top",
-    end: "100% 6%",
-  },
-});
+// gsap.to("#quoteSection", {
+//   scrollTrigger: {
+//     trigger: "#quoteSection",
+//     pin: true,
+//     scrub: true,
+//     start: "top top",
+//     end: "100% 6%",
+//   },
+// });
 
-gsap.to("#quoteWrapper", {
-  opacity: 1,
-  y: "50%",
-  ease: "none",
-  scrollTrigger: {
-    trigger: "#quoteSection",
-    scrub: true,
-    start: "top center",
-    end: "center center",
-  },
-});
+// gsap.to("#quoteWrapper", {
+//   opacity: 1,
+//   y: "50%",
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: "#quoteSection",
+//     scrub: true,
+//     start: "top center",
+//     end: "center center",
+//   },
+// });
 
 gsap.to("#reel", {
   scrollTrigger: {
@@ -400,7 +400,6 @@ pending2022TL
 //   fill: "#4693D4", // Add this IF the state becomes active
 // });
 
-let pgWidth = window.innerWidth;
 const checkWidth = () => {
   if (pgWidth >= 768) {
     location.reload();
