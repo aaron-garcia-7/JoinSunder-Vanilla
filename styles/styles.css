@@ -436,8 +436,8 @@ h3, h4, h5, h6, p, blockquote, a, button {
           align-items: center;
   width: 100%;
   z-index: 1;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
 }
 
 .cta .ctaCircle {
@@ -545,7 +545,7 @@ h3, h4, h5, h6, p, blockquote, a, button {
     position: fixed !important;
   }
   .nav {
-    height: 62vh;
+    height: 52vh;
   }
   .nav .navSwiper {
     display: block;
@@ -573,6 +573,21 @@ h3, h4, h5, h6, p, blockquote, a, button {
     transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85), opacity 0.6s ease;
     transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85), opacity 0.6s ease, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85);
     z-index: -1;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .nav .navSwiper::-webkit-scrollbar {
+    display: none;
+  }
+  .nav .navSwiper .navLink .linkTitle {
+    font-size: calc(0.8rem + 1vw);
+    color: #000014;
+    font-weight: 300;
+    -webkit-transform: translate(4%, -6%);
+            transform: translate(4%, -6%);
+  }
+  .nav .navSwiper .navLink .linkTitleActive {
+    font-weight: 500;
   }
   .nav .navSwiper .navLink .linkImg {
     background: #f7f7f7;
@@ -625,6 +640,9 @@ h3, h4, h5, h6, p, blockquote, a, button {
   .nav .navLink:hover .linkImg {
     -webkit-transform: scale(1);
             transform: scale(1);
+  }
+  .cta .ctaCircle {
+    display: none;
   }
 }
 
@@ -1023,8 +1041,6 @@ h3, h4, h5, h6, p, blockquote, a, button {
   display: -ms-flexbox;
   display: flex;
   cursor: pointer;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
 }
 
 .home .mainContent .cta2::before {
@@ -1046,10 +1062,10 @@ h3, h4, h5, h6, p, blockquote, a, button {
   width: 100%;
   color: #000014;
   z-index: 1;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
   color: #f7f7f7;
   font-size: calc(0.8rem + 1vw);
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
 }
 
 .home .mainContent .playIconFrame {
@@ -1286,8 +1302,8 @@ h3, h4, h5, h6, p, blockquote, a, button {
   }
   .home .mainContent .asideActive {
     position: static;
-    -webkit-transform: translate(0, -62vh);
-            transform: translate(0, -62vh);
+    -webkit-transform: translate(0, -52vh);
+            transform: translate(0, -52vh);
   }
   .home .mainContent .heroText {
     position: static;
@@ -1315,8 +1331,8 @@ h3, h4, h5, h6, p, blockquote, a, button {
   }
   .home .mainContent .reelActive {
     position: static;
-    -webkit-transform: translate(0, -62vh);
-            transform: translate(0, -62vh);
+    -webkit-transform: translate(0, -52vh);
+            transform: translate(0, -52vh);
   }
   .home .mainContent .col1Active,
   .home .mainContent .col2Active {

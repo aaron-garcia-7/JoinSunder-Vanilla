@@ -259,7 +259,6 @@
         border: 1px solid $sunderRoyalLight;
         display: flex;
         cursor: pointer;
-        transition: 0.3s ease;
         &::before {
           content: 'Watch Promo';
           position: absolute;
@@ -272,9 +271,9 @@
           width: 100%;
           color: $sunderMidnight;
           z-index: 1;
-          transition: 0.5s ease;
           color: $sunderSnow;
           font-size: $M-Text;
+          transition: color 0.5s ease;
       }
       }
       .playIconFrame {
@@ -421,7 +420,7 @@
         transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
         &Active {
           position: static;
-          transform: translate(0, -62vh);
+          transform: translate(0, -52vh);
         }
       }
       
@@ -449,7 +448,7 @@
         padding-left: 0;
         &Active {
           position: static;
-          transform: translate(0, -62vh);
+          transform: translate(0, -52vh);
         }
       }
     

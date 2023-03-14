@@ -1,92 +1,81 @@
 //
-// Image Reel Logic
+// Image Reel Logic (Original)
 //
 
-let pgWidth1 = window.innerWidth;
+// const pageScroll = () => {
+//   window.scrollBy(0, 1);
+//   setTimeout(pageScroll, 24);
+// };
 
-const pageScroll = () => {
-  window.scrollBy(0, 1);
-  setTimeout(pageScroll, 24);
-};
-if (pgWidth1 >= 1024) {
-  setTimeout(() => {
-    pageScroll();
-  }, 2000);
-}
+// setTimeout(() => {
+//   pageScroll();
+// }, 2000);
 
-const checkWidth = () => {
-  if (pgWidth >= 768) {
-    location.reload();
+//
+// Testing Media Queries
+//
+
+// const mediaQuery = window.matchMedia("(min-width: 1024px)");
+
+// const handleSmallerScreens = (e) => {
+//   if (e.matches) {
+//     // location.reload();
+//     const pageScroll = () => {
+//       window.scrollBy(0, 1);
+//       setTimeout(pageScroll, 32);
+//     };
+
+//     setTimeout(() => {
+//       pageScroll();
+//     }, 1200);
+//   }
+// };
+// mediaQuery.addEventListener("change", handleSmallerScreens);
+// handleSmallerScreens(mediaQuery);
+
+//
+// Chat GPT Attempt 2
+//
+
+let isPlaying = false;
+let shouldScroll = false;
+let wasSmallerScreen = false;
+const mediaQuery = window.matchMedia("(min-width: 1024px)");
+
+const handleSmallerScreens = (e) => {
+  if (e.matches) {
+    if (!isPlaying) {
+      isPlaying = true;
+      shouldScroll = true;
+      const pageScroll = () => {
+        if (shouldScroll) {
+          window.scrollBy(0, 1);
+          setTimeout(pageScroll, 32);
+        }
+      };
+      setTimeout(() => {
+        pageScroll();
+      }, 1200);
+    }
+    wasSmallerScreen = false;
+  } else {
+    if (isPlaying) {
+      isPlaying = false;
+      shouldScroll = false;
+      wasSmallerScreen = true;
+      mediaQuery.removeEventListener("change", handleSmallerScreens);
+    }
   }
 };
-window.addEventListener("resize", checkWidth);
 
-// // CHAT GPT CODE VERSION 1
-// let scrollTimeout;
-// let resumeScrollTimeout;
+mediaQuery.addEventListener("change", () => {
+  if (wasSmallerScreen && mediaQuery.matches) {
+    location.reload();
+  }
+  handleSmallerScreens(mediaQuery);
+});
 
-// function pageScroll() {
-//   window.scrollBy(0, 1);
-//   scrollTimeout = setTimeout(pageScroll, 24);
-// }
-
-// function stopAutoScroll() {
-//   clearTimeout(scrollTimeout);
-//   clearTimeout(resumeScrollTimeout);
-
-//   resumeScrollTimeout = setTimeout(() => {
-//     pageScroll();
-//   }, 2000);
-// }
-
-// window.addEventListener("scroll", stopAutoScroll);
-
-// let initialScroll = setTimeout(() => {
-//   pageScroll();
-// }, 2400);
-
-// // // CHAT GPT CODE VERSION 2
-// // wait until the page is fully loaded
-// window.addEventListener("load", function () {
-//   if (window.innerWidth > 1024) {
-//     const pageHeight = document.body.scrollHeight;
-//     slowScrollTo(pageHeight, 42000);
-//   }
-// });
-
-// window.addEventListener("resize", function () {
-//   if (window.innerWidth > 1024 && !isScrolling) {
-//     const pageHeight = document.body.scrollHeight;
-//     slowScrollTo(pageHeight, 42000);
-//     isScrolling = true;
-//   }
-
-//   if (window.innerWidth <= 1024 && isScrolling) {
-//     clearTimeout(scrollTimeout);
-//     isScrolling = false;
-//   }
-// });
-
-// let isScrolling = false;
-// let scrollTimeout;
-// function slowScrollTo(to, duration) {
-//   const start = window.pageYOffset;
-//   const change = to - start;
-//   const increment = 10;
-//   const numIncrements = Math.ceil(duration / increment);
-//   const incrementAmount = change / numIncrements;
-
-//   function scroll() {
-//     window.scrollBy(0, incrementAmount);
-//     if (Math.abs(window.pageYOffset - to) < Math.abs(incrementAmount)) {
-//       window.scrollTo(0, to);
-//     } else {
-//       scrollTimeout = setTimeout(scroll, increment);
-//     }
-//   }
-
-//   scroll();
-// }
+handleSmallerScreens(mediaQuery);
 
 //
 // Handling Navigation Logic
