@@ -71,6 +71,14 @@ h3, h4, h5, h6, p, blockquote, a, button {
   font-family: "satoshi", sans-serif;
 }
 
+ul {
+  list-style: none;
+}
+
+ul li {
+  font-family: "satoshi", sans-serif;
+}
+
 #boldTitle {
   font-weight: 675;
 }
@@ -1279,7 +1287,7 @@ h3, h4, h5, h6, p, blockquote, a, button {
   }
   .home .mainContent .aside {
     width: 100vw;
-    height: 91vh;
+    height: 92vh;
     min-height: 28rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1320,9 +1328,20 @@ h3, h4, h5, h6, p, blockquote, a, button {
             transform: translate(-50%, -50%) scale(1.4);
   }
   .home .mainContent .heroBtns {
+    border: 2px solid coral;
     position: static;
-    -webkit-transform: translate(-12.5%, -100%);
-            transform: translate(-12.5%, -100%);
+    width: calc(12rem + 26vw);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-transform: translate(0, -100%);
+            transform: translate(0, -100%);
+  }
+  .home .mainContent .heroBtns .cta {
+    margin: 0;
   }
   .home .mainContent .reel {
     width: 50vw;
@@ -1342,19 +1361,19 @@ h3, h4, h5, h6, p, blockquote, a, button {
 }
 
 @media (max-width: 580px) {
-  .home .aside {
+  .home .mainContent .aside {
+    height: 78vh;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
     padding: 12rem 0 0 2.4rem;
   }
-  .home .heroText {
+  .home .mainContent .aside .heroText {
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
   }
-  .home .heroBtns {
-    -webkit-transform: translate(0, -100%);
-            transform: translate(0, -100%);
+  .home .mainContent .aside .heroBtns {
+    width: 90%;
   }
 }
 
@@ -1444,58 +1463,85 @@ h3, h4, h5, h6, p, blockquote, a, button {
 }
 
 .opportunity .mainContent .quoteSection {
-  height: clamp(24rem, 100vh, 64rem);
-  padding: 2.4rem;
+  padding: 8rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.opportunity .mainContent .quoteSection .imgWrapper {
+.opportunity .mainContent .quoteSection .quote1, .opportunity .mainContent .quoteSection .quote2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10%;
+}
+
+.opportunity .mainContent .quoteSection .quote1 .imgWrapper, .opportunity .mainContent .quoteSection .quote2 .imgWrapper {
   position: relative;
-  width: 46%;
-  height: 86%;
+  padding: calc(10rem + 6vw);
   border-radius: 2rem;
   overflow: hidden;
 }
 
-.opportunity .mainContent .quoteSection .imgWrapper .quoteImg {
+.opportunity .mainContent .quoteSection .quote1 .imgWrapper .quoteImg, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .quoteImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.opportunity .mainContent .quoteSection .imgWrapper .quoteCaption {
+.opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption {
   position: absolute;
   bottom: 0;
+  left: 0;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(20%, #2d2d2dca), to(#2d2d2d00));
   background: linear-gradient(0deg, #2d2d2dca 20%, #2d2d2d00);
   width: 100%;
   padding: 2rem;
 }
 
-.opportunity .mainContent .quoteSection .imgWrapper .quoteCaption h4 {
+.opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption > *, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption > * {
   font-family: "monument", sans-serif;
-  font-size: calc(1.4rem + 1.4vw);
-  font-weight: 675;
   color: #f7f7f7;
 }
 
-.opportunity .mainContent .quoteSection .imgWrapper .quoteCaption .position {
+.opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption .name, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption .name {
   font-size: calc(1rem + 1.2vw);
+  font-weight: 675;
+}
+
+.opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption .name .lastName, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption .name .lastName {
+  font-size: calc(0.4rem + 2.8vw);
+}
+
+.opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption .position, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption .position {
+  font-size: calc(0.8rem + 1vw);
   font-weight: 450;
 }
 
-.opportunity .mainContent .quoteSection .quoteWrapper {
-  border-left: 2px solid #000014;
-  width: 46%;
+.opportunity .mainContent .quoteSection .quote1 .quoteWrapper, .opportunity .mainContent .quoteSection .quote2 .quoteWrapper {
+  width: 42%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1508,22 +1554,34 @@ h3, h4, h5, h6, p, blockquote, a, button {
           justify-content: space-between;
 }
 
-.opportunity .mainContent .quoteSection .quoteWrapper > * {
+.opportunity .mainContent .quoteSection .quote1 .quoteWrapper > *, .opportunity .mainContent .quoteSection .quote2 .quoteWrapper > * {
   padding-left: 2rem;
 }
 
-.opportunity .mainContent .quoteSection .quoteWrapper .quote {
-  border-bottom: 2px solid #000014;
+.opportunity .mainContent .quoteSection .quote1 .quoteWrapper .quote, .opportunity .mainContent .quoteSection .quote2 .quoteWrapper .quote {
   font-family: "monument", sans-serif;
-  font-size: calc(0.8rem + 1vw);
+  font-size: calc(1rem + 1.2vw);
   font-weight: 675;
   padding-bottom: 2rem;
 }
 
-.opportunity .mainContent .quoteSection .quoteWrapper .blockquote {
+.opportunity .mainContent .quoteSection .quote1 .quoteWrapper .blockquote, .opportunity .mainContent .quoteSection .quote2 .quoteWrapper .blockquote {
   font-size: calc(1rem + 1.2vw);
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.opportunity .mainContent .quoteSection .quoteDivider {
+  margin: 4rem;
+  height: calc(12rem + 6vw);
+  border-right: 1px solid #000014;
+}
+
+.opportunity .mainContent .quoteSection .quote2 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 .opportunity .mainContent .reel {
@@ -1533,6 +1591,9 @@ h3, h4, h5, h6, p, blockquote, a, button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1541,19 +1602,48 @@ h3, h4, h5, h6, p, blockquote, a, button {
   z-index: 2;
 }
 
-.opportunity .mainContent .reel > * {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-}
-
 .opportunity .mainContent .reel .repCard {
+  position: relative;
   background: #f7f7f7;
-  width: 36%;
+  width: 32%;
   height: 92%;
   border: 1px solid #bbb;
   border-radius: calc(2.8rem + 2vw);
-  padding: calc(1.2rem + 2.8vw);
+  overflow: hidden;
+}
+
+.opportunity .mainContent .reel .repCard > * {
+  position: absolute;
+  width: 100%;
+}
+
+.opportunity .mainContent .reel .repCard img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 20%;
+     object-position: 50% 20%;
+}
+
+.opportunity .mainContent .reel .repCard figcaption {
+  background: linear-gradient(15deg, #313131, #31313100 50%);
+  bottom: 0;
+  height: 100%;
+  z-index: 2;
+  color: #f7f7f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .opportunity .mainContent .videoSection {

@@ -104,27 +104,27 @@ backgroundTL
 //   },
 // });
 
-gsap.to("#reel", {
-  scrollTrigger: {
-    trigger: "#reel",
-    pin: true,
-    scrub: true,
-    start: "top top",
-    end: "bottom top",
-  },
-});
+// gsap.to("#reel", {
+//   scrollTrigger: {
+//     trigger: "#reel",
+//     pin: true,
+//     scrub: true,
+//     start: "top top",
+//     end: "bottom top",
+//   },
+// });
 
-let repCards = gsap.utils.toArray("#repCard");
-gsap.to(repCards, {
-  xPercent: -18 * (repCards.length - 1), // -18% is  1/2 the width of each Rep Card (36%)
-  ease: "none",
-  scrollTrigger: {
-    trigger: "#reel",
-    scrub: 0.1,
-    start: "center center",
-    end: "bottom top",
-  },
-});
+// let repCards = gsap.utils.toArray("#repCard");
+// gsap.to(repCards, {
+//   xPercent: -18 * (repCards.length - 1), // -18% is  1/2 the width of each Rep Card (36%)
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: "#reel",
+//     scrub: 0.1,
+//     start: "center center",
+//     end: "bottom top",
+//   },
+// });
 
 gsap.to("#growth", {
   scrollTrigger: {
@@ -407,6 +407,6 @@ const checkWidth = () => {
 };
 window.addEventListener("resize", checkWidth);
 
-window.onbeforeunload = () => {
-  window.scrollTo(0, 0);
-};
+// window.onbeforeunload = () => {
+//   window.scrollTo(0, 0);
+// };
