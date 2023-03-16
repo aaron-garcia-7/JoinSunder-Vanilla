@@ -2241,33 +2241,11 @@ ul li {
 }
 
 .contact .mainContent h1 {
-  margin-bottom: 2rem;
   font-size: calc(1.6rem + 2.4vw);
 }
 
 .contact .mainContent .cta {
-  position: relative;
-  opacity: 0;
-  -webkit-animation: appear 0.6s ease 0.6s forwards;
-          animation: appear 0.6s ease 0.6s forwards;
-}
-
-.contact .mainContent .cta::before {
-  content: 'Join The Squad';
-  color: #000014;
-  font-size: calc(0.8rem + 0.4vw);
-}
-
-.contact .mainContent .cta .ctaCircle {
-  background: #0c5ff2;
-}
-
-.contact .mainContent .cta:hover {
-  border: 1px solid #0c5ff2;
-}
-
-.contact .mainContent .cta:hover::before {
-  color: #f7f7f7;
+  display: none;
 }
 
 .contact .mainContentActive {
