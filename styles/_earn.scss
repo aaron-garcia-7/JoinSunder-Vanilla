@@ -1,0 +1,53 @@
+.earn {
+    // GLOBAL COMPONENTS
+    .logo {
+        position: absolute;
+        animation-delay: 0.4s;
+    }
+    .navLogo {
+        position: fixed;
+    }
+    .burgerContainer {
+        animation-delay: 0.6s;
+    }
+    // GLOBAL COMPONENTS
+
+    .mainContent {
+        width: 100vw;
+        height: clamp(26rem, 100dvh, 64rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
+
+        h1 {
+            margin-bottom: 2rem;
+            font-size: $Hero-Text;
+        }
+
+        .cta {
+            position: relative;
+            opacity: 0;
+            animation: appear 0.6s ease 0.6s forwards;
+            &::before {
+                content: 'Join The Squad';
+                color: $sunderMidnight;
+                font-size: $S-Text;
+            }
+            .ctaCircle {
+                background: $sunderRoyalLight;
+            }
+            &:hover {
+                border: 1px solid $sunderRoyalLight;
+                &::before {
+                    color: $sunderSnow;
+                }
+            }
+        }
+
+        &Active {
+            transform: translate(0, -50vh);
+        }
+    }
+}

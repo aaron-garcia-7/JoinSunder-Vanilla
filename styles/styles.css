@@ -1679,7 +1679,7 @@ ul li {
 
 .opportunity .mainContent .videoSection h2 {
   color: #f7f7f7;
-  font-size: calc(0.4rem + 2.8vw);
+  font-size: calc(1.6rem + 2.4vw);
 }
 
 .opportunity .mainContent .videoSection .text1 {
@@ -1983,6 +1983,294 @@ ul li {
 }
 
 .opportunity .mainContentActive {
+  -webkit-transform: translate(0, -50vh);
+          transform: translate(0, -50vh);
+}
+
+.compete .logo, .compete .navLogo {
+  position: absolute;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.compete .navLogo {
+  position: fixed;
+}
+
+.compete .burgerContainer {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.compete .mainContent {
+  width: 100vw;
+  height: clamp(26rem, 100dvh, 64rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+  transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+  transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+  transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+}
+
+.compete .mainContent h1 {
+  margin-bottom: 2rem;
+  font-size: calc(1.6rem + 2.4vw);
+}
+
+.compete .mainContent .cta {
+  position: relative;
+  opacity: 0;
+  -webkit-animation: appear 0.6s ease 0.6s forwards;
+          animation: appear 0.6s ease 0.6s forwards;
+}
+
+.compete .mainContent .cta::before {
+  content: 'Join The Squad';
+  color: #000014;
+  font-size: calc(0.8rem + 0.4vw);
+}
+
+.compete .mainContent .cta .ctaCircle {
+  background: #0c5ff2;
+}
+
+.compete .mainContent .cta:hover {
+  border: 1px solid #0c5ff2;
+}
+
+.compete .mainContent .cta:hover::before {
+  color: #f7f7f7;
+}
+
+.compete .mainContentActive {
+  -webkit-transform: translate(0, -50vh);
+          transform: translate(0, -50vh);
+}
+
+.earn .logo, .earn .navLogo {
+  position: absolute;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.earn .navLogo {
+  position: fixed;
+}
+
+.earn .burgerContainer {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.earn .mainContent {
+  width: 100vw;
+  height: clamp(26rem, 100dvh, 64rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+  transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+  transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+  transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+}
+
+.earn .mainContent h1 {
+  margin-bottom: 2rem;
+  font-size: calc(1.6rem + 2.4vw);
+}
+
+.earn .mainContent .cta {
+  position: relative;
+  opacity: 0;
+  -webkit-animation: appear 0.6s ease 0.6s forwards;
+          animation: appear 0.6s ease 0.6s forwards;
+}
+
+.earn .mainContent .cta::before {
+  content: 'Join The Squad';
+  color: #000014;
+  font-size: calc(0.8rem + 0.4vw);
+}
+
+.earn .mainContent .cta .ctaCircle {
+  background: #0c5ff2;
+}
+
+.earn .mainContent .cta:hover {
+  border: 1px solid #0c5ff2;
+}
+
+.earn .mainContent .cta:hover::before {
+  color: #f7f7f7;
+}
+
+.earn .mainContentActive {
+  -webkit-transform: translate(0, -50vh);
+          transform: translate(0, -50vh);
+}
+
+.resources .logo, .resources .navLogo {
+  position: absolute;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.resources .navLogo {
+  position: fixed;
+}
+
+.resources .burgerContainer {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.resources .mainContent {
+  width: 100vw;
+  height: clamp(26rem, 100dvh, 64rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+  transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+  transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+  transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+}
+
+.resources .mainContent h1 {
+  margin-bottom: 2rem;
+  font-size: calc(1.6rem + 2.4vw);
+}
+
+.resources .mainContent .cta {
+  position: relative;
+  opacity: 0;
+  -webkit-animation: appear 0.6s ease 0.6s forwards;
+          animation: appear 0.6s ease 0.6s forwards;
+}
+
+.resources .mainContent .cta::before {
+  content: 'Join The Squad';
+  color: #000014;
+  font-size: calc(0.8rem + 0.4vw);
+}
+
+.resources .mainContent .cta .ctaCircle {
+  background: #0c5ff2;
+}
+
+.resources .mainContent .cta:hover {
+  border: 1px solid #0c5ff2;
+}
+
+.resources .mainContent .cta:hover::before {
+  color: #f7f7f7;
+}
+
+.resources .mainContentActive {
+  -webkit-transform: translate(0, -50vh);
+          transform: translate(0, -50vh);
+}
+
+.contact .logo, .contact .navLogo {
+  position: absolute;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.contact .navLogo {
+  position: fixed;
+}
+
+.contact .burgerContainer {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.contact .mainContent {
+  width: 100vw;
+  height: clamp(26rem, 100dvh, 64rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+  transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+  transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+  transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+}
+
+.contact .mainContent h1 {
+  margin-bottom: 2rem;
+  font-size: calc(1.6rem + 2.4vw);
+}
+
+.contact .mainContent .cta {
+  position: relative;
+  opacity: 0;
+  -webkit-animation: appear 0.6s ease 0.6s forwards;
+          animation: appear 0.6s ease 0.6s forwards;
+}
+
+.contact .mainContent .cta::before {
+  content: 'Join The Squad';
+  color: #000014;
+  font-size: calc(0.8rem + 0.4vw);
+}
+
+.contact .mainContent .cta .ctaCircle {
+  background: #0c5ff2;
+}
+
+.contact .mainContent .cta:hover {
+  border: 1px solid #0c5ff2;
+}
+
+.contact .mainContent .cta:hover::before {
+  color: #f7f7f7;
+}
+
+.contact .mainContentActive {
   -webkit-transform: translate(0, -50vh);
           transform: translate(0, -50vh);
 }
