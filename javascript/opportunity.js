@@ -67,8 +67,8 @@ let backgroundTL = gsap.timeline({
   scrollTrigger: {
     trigger: "#mainContent",
     scrub: 1,
-    start: "30% 40%",
-    end: "120% 60%",
+    start: "10% 40%",
+    end: "100% 60%",
   },
 });
 backgroundTL
@@ -76,7 +76,7 @@ backgroundTL
     backgroundColor: "#C6D3D8",
   })
   .to("#mainContent", {
-    backgroundColor: "#C6D3D8",
+    backgroundColor: "#000014",
   })
   .to("#mainContent", {
     backgroundColor: "#000014",
@@ -126,6 +126,54 @@ backgroundTL
 //   },
 // });
 
+gsap.to("#videoSection", {
+  scrollTrigger: {
+    trigger: "#videoSection",
+    pin: true,
+    scrub: true,
+    start: "top top",
+    end: "bottom top",
+    // markers: true,
+  },
+});
+gsap.to("#videoText1", {
+  top: "28%",
+  left: "28%",
+  // top: "20%",
+  // left: "20%",
+  opacity: 0,
+  scrollTrigger: {
+    trigger: "#videoText1",
+    scrub: true,
+    start: "-60% top",
+    end: "200% top",
+    // markers: true,
+  },
+});
+gsap.to("#videoText2", {
+  // bottom: "28%",
+  // right: "28%",
+  bottom: "20%",
+  right: "20%",
+  opacity: 0,
+  scrollTrigger: {
+    trigger: "#videoText1",
+    scrub: true,
+    start: "-60% top",
+    end: "200% top",
+  },
+});
+gsap.to("#definitionVideo", {
+  scale: 1,
+  opacity: 1,
+  scrollTrigger: {
+    trigger: "#videoText1",
+    scrub: true,
+    start: "-20% top",
+    end: "280% top",
+  },
+});
+
 gsap.to("#growth", {
   scrollTrigger: {
     trigger: "#growth",
@@ -133,7 +181,8 @@ gsap.to("#growth", {
     scrub: true,
     start: "top top",
     // end: "480% 6%",
-    end: "800% 6%",
+    end: "400% 6%",
+    // markers: true,
   },
 });
 
@@ -186,7 +235,7 @@ let stateCountTL = gsap.timeline({
     trigger: "#numberArea",
     scrub: true,
     start: "20% 15%",
-    end: "660% 15%",
+    end: "440% 15%",
     // markers: true,
   },
 });
@@ -261,10 +310,8 @@ let linkHilightTL = gsap.timeline({
   scrollTrigger: {
     trigger: "#numberArea",
     scrub: true,
-    // start: "-60% 15%",
-    // end: "1200% 15%",
     start: "40% 15%",
-    end: "600% 15%",
+    end: "400% 15%",
     // markers: {
     //   indent: 124,
     //   startColor: "lightblue",
@@ -301,10 +348,9 @@ gsap.to(states2019, {
   scrollTrigger: {
     trigger: "#numberArea",
     scrub: true,
-    // start: "-60% 15%",
-    // end: "0% 15%",
     start: "40% 15%",
-    end: "80% 15%",
+    end: "60% 15%",
+    // markers: true,
   },
 });
 
@@ -314,7 +360,8 @@ let pending2019TL = gsap.timeline({
     trigger: "#numberArea",
     scrub: true,
     start: "40% 15%",
-    end: "200% 15%", // 160% difference
+    end: "150% 15%",
+    // markers: true,
   },
 });
 pending2019TL
@@ -336,8 +383,8 @@ let pending2020TL = gsap.timeline({
   scrollTrigger: {
     trigger: "#numberArea",
     scrub: true,
-    start: "150% 15%", // 50% smaller from previous END
-    end: "360% 15%", // 210% difference
+    start: "120% 15%",
+    end: "230% 15%",
   },
 });
 pending2020TL
@@ -359,8 +406,8 @@ let pending2021TL = gsap.timeline({
   scrollTrigger: {
     trigger: "#numberArea",
     scrub: true,
-    start: "310% 15%",
-    end: "470% 15%",
+    start: "200% 15%",
+    end: "310% 15%",
   },
 });
 pending2021TL
@@ -382,8 +429,8 @@ let pending2022TL = gsap.timeline({
   scrollTrigger: {
     trigger: "#numberArea",
     scrub: true,
-    start: "420% 15%",
-    end: "630% 15%",
+    start: "280% 15%",
+    end: "390% 15%",
   },
 });
 pending2022TL
@@ -400,13 +447,17 @@ pending2022TL
 //   fill: "#4693D4", // Add this IF the state becomes active
 // });
 
-const checkWidth = () => {
-  if (pgWidth >= 768) {
-    location.reload();
-  }
-};
-window.addEventListener("resize", checkWidth);
+//
+// Utility
+//
 
-// window.onbeforeunload = () => {
-//   window.scrollTo(0, 0);
+// const checkWidth = () => {
+//   if (pgWidth >= 768) {
+//     location.reload();
+//   }
 // };
+// window.addEventListener("resize", checkWidth);
+
+window.onbeforeunload = () => {
+  window.scrollTo(0, 0);
+};

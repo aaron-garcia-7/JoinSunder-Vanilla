@@ -80,7 +80,7 @@ h3, h4, h5, h6, p, blockquote, a, button {
   font-family: $satoshi;
 }
 ul {
-  list-style: none;
+  // list-style: none;
   li {
     font-family: $satoshi;
   }
@@ -301,6 +301,8 @@ ul {
       background: $sunderSnow;
       width: 20vw;
       height: calc(7rem + 4vw);
+      // width: calc(20rem + 2vw);
+      // height: calc(8rem + 6vw);
       border-radius: calc(0.4rem + 0.2vw);
       object-fit: cover;
       transition: transform 0.4s ease;

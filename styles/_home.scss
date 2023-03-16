@@ -437,14 +437,14 @@
       }
       
       .heroBtns {
-        border: 2px solid coral;
+        // border: 2px solid coral;
         position: static;
         // width: 50%;
-        width: calc(12rem + 26vw);
+        width: calc(10rem + 36vw);
         display: flex;
         justify-content: space-between;
         // transform: translate(-12.5%, -100%);
-        transform: translate(0, -100%);
+        transform: translate(-10%, -100%);
         .cta {
           margin: 0;
         }
@@ -481,11 +481,17 @@
         align-items: flex-start;
         padding: 12rem 0 0 2.4rem;
         .heroText {
-          transform: translate(0, -50%);
+          // border: 2px solid yellow;
+          transform: translate(6%, -50%);
         }
         .heroBtns {
-          width: 90%;
-          // transform: translate(0, -100%);
+          // border: 2px dashed coral;
+          // width: calc(14rem + 24vw);
+          // width: 90%;
+          justify-content: center;
+          gap: 2rem;
+          left: 50%;
+          transform: translate(0, -100%);
         }
       }
     }

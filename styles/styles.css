@@ -71,10 +71,6 @@ h3, h4, h5, h6, p, blockquote, a, button {
   font-family: "satoshi", sans-serif;
 }
 
-ul {
-  list-style: none;
-}
-
 ul li {
   font-family: "satoshi", sans-serif;
 }
@@ -1328,17 +1324,16 @@ ul li {
             transform: translate(-50%, -50%) scale(1.4);
   }
   .home .mainContent .heroBtns {
-    border: 2px solid coral;
     position: static;
-    width: calc(12rem + 26vw);
+    width: calc(10rem + 36vw);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-transform: translate(0, -100%);
-            transform: translate(0, -100%);
+    -webkit-transform: translate(-10%, -100%);
+            transform: translate(-10%, -100%);
   }
   .home .mainContent .heroBtns .cta {
     margin: 0;
@@ -1369,11 +1364,17 @@ ul li {
     padding: 12rem 0 0 2.4rem;
   }
   .home .mainContent .aside .heroText {
-    -webkit-transform: translate(0, -50%);
-            transform: translate(0, -50%);
+    -webkit-transform: translate(6%, -50%);
+            transform: translate(6%, -50%);
   }
   .home .mainContent .aside .heroBtns {
-    width: 90%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 2rem;
+    left: 50%;
+    -webkit-transform: translate(0, -100%);
+            transform: translate(0, -100%);
   }
 }
 
@@ -1403,7 +1404,7 @@ ul li {
 
 .opportunity .mainContent .header {
   position: relative;
-  height: clamp(24rem, 100vh, 64rem);
+  height: clamp(42rem, 100vh, 72rem);
   padding: 2.4rem;
 }
 
@@ -1584,9 +1585,9 @@ ul li {
           flex-direction: row-reverse;
 }
 
-.opportunity .mainContent .reel {
+.opportunity .mainContent .cardsSection {
   width: 100%;
-  height: 100vh;
+  height: clamp(24rem, 100vh, 64rem);
   padding: 2.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1602,31 +1603,31 @@ ul li {
   z-index: 2;
 }
 
-.opportunity .mainContent .reel .repCard {
+.opportunity .mainContent .cardsSection .repCard {
   position: relative;
   background: #f7f7f7;
   width: 32%;
   height: 92%;
   border: 1px solid #bbb;
-  border-radius: calc(2.8rem + 2vw);
+  border-radius: 2rem;
   overflow: hidden;
 }
 
-.opportunity .mainContent .reel .repCard > * {
+.opportunity .mainContent .cardsSection .repCard > * {
   position: absolute;
   width: 100%;
 }
 
-.opportunity .mainContent .reel .repCard img {
+.opportunity .mainContent .cardsSection .repCard .repImg {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 50% 20%;
-     object-position: 50% 20%;
+  -o-object-position: 50% 40%;
+     object-position: 50% 40%;
 }
 
-.opportunity .mainContent .reel .repCard figcaption {
-  background: linear-gradient(15deg, #313131, #31313100 50%);
+.opportunity .mainContent .cardsSection .repCard .cardText {
+  background: linear-gradient(15deg, #000000, #00000000 60%);
   bottom: 0;
   height: 100%;
   z-index: 2;
@@ -1641,22 +1642,43 @@ ul li {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0 0 1.2rem 3.2rem;
+}
+
+.opportunity .mainContent .cardsSection .repCard .cardText .list {
+  margin-bottom: 1.2rem;
+}
+
+.opportunity .mainContent .cardsSection .repCard .cardText .list li {
+  font-size: calc(0.8rem + 1vw);
+}
+
+.opportunity .mainContent .cardsSection .repCard .cardText .name {
+  font-family: "monument", sans-serif;
+  font-size: calc(0.8rem + 1vw);
+  font-weight: 675;
+}
+
+.opportunity .mainContent .cardsSection .repCard .cardText .name .lastName {
+  font-size: calc(1.4rem + 1.4vw);
 }
 
 .opportunity .mainContent .videoSection {
   position: relative;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
-.opportunity .mainContent .videoSection .text {
+.opportunity .mainContent .videoSection > * {
   position: absolute;
 }
 
-.opportunity .mainContent .videoSection .text h2 {
+.opportunity .mainContent .videoSection h2 {
+  color: #f7f7f7;
   font-size: calc(0.4rem + 2.8vw);
 }
 
@@ -1672,6 +1694,15 @@ ul li {
   right: 50%;
   -webkit-transform: translate(89%, 75%);
           transform: translate(89%, 75%);
+}
+
+.opportunity .mainContent .videoSection .definitionVideo {
+  opacity: 0;
+  width: 60%;
+  top: 50%;
+  left: 50%;
+  scale: 0.2;
+  translate: -50% -50%;
 }
 
 .opportunity .mainContent .growth {
@@ -1703,7 +1734,6 @@ ul li {
 
 .opportunity .mainContent .growth .numberArea #growthTitle {
   color: #f7f7f7;
-  font-family: "monument", sans-serif;
   font-size: calc(1rem + 1.2vw);
   font-weight: 450;
   opacity: 0;
@@ -1870,29 +1900,86 @@ ul li {
 
 .opportunity .mainContent .growthAnchors {
   position: absolute;
-  top: 39%;
+  top: 44%;
   width: 100%;
-  height: calc(100vh + 54%);
+  height: calc(100vh + 32%);
   z-index: -1;
 }
 
 .opportunity .mainContent .growthAnchors #anchor2019, .opportunity .mainContent .growthAnchors #anchor2020, .opportunity .mainContent .growthAnchors #anchor2021, .opportunity .mainContent .growthAnchors #anchor2022 {
   position: absolute;
-  top: 10%;
+  top: 15%;
   width: 12rem;
   height: 1rem;
 }
 
 .opportunity .mainContent .growthAnchors #anchor2020 {
-  top: 25%;
+  top: 32%;
 }
 
 .opportunity .mainContent .growthAnchors #anchor2021 {
-  top: 40%;
+  top: 49%;
 }
 
 .opportunity .mainContent .growthAnchors #anchor2022 {
-  top: 55%;
+  top: 66%;
+}
+
+.opportunity .mainContent .dataSections {
+  position: relative;
+  width: 100vw;
+  height: clamp(26rem, 112vh, 64rem);
+  overflow: hidden;
+}
+
+.opportunity .mainContent .dataSections .gridBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.opportunity .mainContent .dataSections .sectionTitle {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 4rem;
+  left: 0;
+  -webkit-transform: translate(20%, 0);
+          transform: translate(20%, 0);
+  width: 20%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.opportunity .mainContent .dataSections .sectionTitle h2 {
+  color: #000014;
+  font-size: calc(1rem + 1.2vw);
+  font-weight: 450;
+  text-align: left;
+}
+
+.opportunity .mainContent .salesForce {
+  background: #E3E3E3;
+}
+
+.opportunity .mainContent .salesForce .sectionTitle h2 {
+  color: #000014;
+}
+
+.opportunity .mainContent .kwInstalled {
+  background: #363636;
+}
+
+.opportunity .mainContent .kwInstalled .sectionTitle h2 {
+  color: #f7f7f7;
 }
 
 .opportunity .mainContentActive {
