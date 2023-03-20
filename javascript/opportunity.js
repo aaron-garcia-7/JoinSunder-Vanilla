@@ -82,28 +82,6 @@ backgroundTL
     backgroundColor: "#000014",
   });
 
-// gsap.to("#quoteSection", {
-//   scrollTrigger: {
-//     trigger: "#quoteSection",
-//     pin: true,
-//     scrub: true,
-//     start: "top top",
-//     end: "100% 6%",
-//   },
-// });
-
-// gsap.to("#quoteWrapper", {
-//   opacity: 1,
-//   y: "50%",
-//   ease: "none",
-//   scrollTrigger: {
-//     trigger: "#quoteSection",
-//     scrub: true,
-//     start: "top center",
-//     end: "center center",
-//   },
-// });
-
 // gsap.to("#reel", {
 //   scrollTrigger: {
 //     trigger: "#reel",
@@ -205,7 +183,6 @@ gsap.to("#growthTitle", {
     trigger: "#growth",
     toggleActions: "play none none reverse", // play, pause, resume, reverse, restart, reset, complete, none
     start: "top top",
-    end: "top top",
   },
 });
 
@@ -215,7 +192,6 @@ gsap.to("#compass", {
     trigger: "#growth",
     toggleActions: "play none none reverse",
     start: "top top",
-    end: "top top",
   },
 });
 
@@ -225,7 +201,6 @@ gsap.to("#stateCount", {
     trigger: "#growth",
     toggleActions: "play none none reverse",
     start: "top top",
-    end: "top top",
   },
 });
 
@@ -256,7 +231,7 @@ stateCountTL
     y: "-400%",
   });
 
-// const staggerNumbes = () => {
+// const staggerNumbers = () => {
 //   // let stateNumber = document.querySelector("#stateNumber");
 //   // var startCount = 7,
 //   //   stateNum = { var: startCount };
@@ -285,16 +260,10 @@ gsap.to("#timelineBorder", {
     trigger: "#growth",
     toggleActions: "play none none reverse",
     start: "top top",
-    end: "top top",
-    // markers: {
-    //   indent: 124,
-    //   startColor: "coral",
-    //   endColor: "coral",
-    // },
   },
 });
 
-let timelineLinksAppear = gsap.utils.toArray("#timelineLinks");
+let timelineLinksAppear = gsap.utils.toArray(".timelineLinks");
 gsap.to(timelineLinksAppear, {
   opacity: 1,
   stagger: 0.1,
@@ -302,7 +271,6 @@ gsap.to(timelineLinksAppear, {
     trigger: "#growth",
     toggleActions: "play none none reverse",
     start: "top top",
-    end: "top top",
   },
 });
 
@@ -312,11 +280,6 @@ let linkHilightTL = gsap.timeline({
     scrub: true,
     start: "40% 15%",
     end: "400% 15%",
-    // markers: {
-    //   indent: 124,
-    //   startColor: "lightblue",
-    //   endColor: "lightblue",
-    // },
   },
 });
 linkHilightTL
@@ -447,6 +410,146 @@ pending2022TL
 //   fill: "#4693D4", // Add this IF the state becomes active
 // });
 
+// gsap.to(".salesForce", {
+//   scrollTrigger: {
+//     trigger: ".salesForce",
+//     snap: 0.5,
+//   },
+// });
+gsap.to("#salesForceTitle", {
+  y: "108vh",
+  ease: "linear",
+  scrollTrigger: {
+    trigger: ".salesForce",
+    scrub: true,
+    start: "top top",
+    end: "80% 6%",
+  },
+});
+
+let graph1YearsTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".salesForce",
+    toggleActions: "play none none reverse",
+    start: "-15% top",
+    // start: "top top",
+  },
+  defaults: {
+    duration: 0.8,
+  },
+});
+graph1YearsTl
+  .to("#bar2019", { height: "25%" }, 0)
+  .to("#bar2020", { height: "50%" }, 0.1)
+  .to("#bar2021", { height: "75%" }, 0.2)
+  .to("#bar2022", { height: "100%" }, 0.3);
+
+let graph1Multipliers = gsap.utils.toArray(".barMultiplier");
+gsap.to(graph1Multipliers, {
+  opacity: 1,
+  stagger: 0.2,
+  delay: 0.4,
+  scrollTrigger: {
+    trigger: ".salesForce",
+    toggleActions: "restart none none reverse",
+    start: "-15% top",
+    // start: "top top",
+  },
+});
+
+gsap.to("#kwInstalledTitle", {
+  y: "108vh",
+  ease: "linear",
+  scrollTrigger: {
+    trigger: ".kwInstalled",
+    scrub: true,
+    start: "top top",
+    end: "80% 6%",
+  },
+});
+
+gsap.to(".lineGraph", {
+  opacity: 1,
+  scrollTrigger: {
+    trigger: "#lineGraphPath",
+    toggleActions: "restart none none reverse",
+    start: "-50% top",
+    // markers: true,
+  },
+});
+gsap.to("#lineGraphPath", {
+  scrollTrigger: {
+    trigger: "#lineGraphPath",
+    toggleClass: "pathActive",
+    toggleActions: "play none none none",
+    start: "-50% top",
+    // markers: {
+    //   indent: 64,
+    //   startColor: "lightblue",
+    //   endColor: "lightblue",
+    // },
+  },
+});
+
+gsap.to(".point1", {
+  scrollTrigger: {
+    trigger: ".point1",
+    toggleClass: "point1Active",
+    toggleActions: "play none none none",
+    start: "-3160% top",
+  },
+});
+gsap.to(".point2", {
+  scrollTrigger: {
+    trigger: ".point2",
+    toggleClass: "point2Active",
+    toggleActions: "play none none none",
+    start: "-2630% top",
+  },
+});
+gsap.to(".point3", {
+  scrollTrigger: {
+    trigger: ".point3",
+    toggleClass: "point3Active",
+    toggleActions: "play none none none",
+    start: "-1860% top",
+    end: "1200% top",
+  },
+});
+gsap.to(".point4", {
+  scrollTrigger: {
+    trigger: ".point4",
+    toggleClass: "point4Active",
+    toggleActions: "play none none none",
+    start: "-986% top",
+    end: "1200% top",
+  },
+});
+
+let graph2Data = gsap.utils.toArray(".dataPiece");
+gsap.to(graph2Data, {
+  opacity: 1,
+  x: 0,
+  stagger: 0.4,
+  scrollTrigger: {
+    trigger: ".kwInstalled",
+    toggleActions: "restart none none none",
+    start: "-5% top",
+    // markers: true,
+  },
+});
+
+// var kwCounter1 = { val: 4000 },
+//   newVal1 = 6130;
+
+// gsap.to(kwCounter1, 2, {
+//   val: newVal1,
+//   roundProps: "val",
+//   onUpdate: function () {
+//     document.getElementById("kwData1").innerHTML = kwCounter1.val;
+//   },
+// });
+
 //
 // Utility
 //
@@ -458,6 +561,6 @@ pending2022TL
 // };
 // window.addEventListener("resize", checkWidth);
 
-window.onbeforeunload = () => {
-  window.scrollTo(0, 0);
-};
+// window.onbeforeunload = () => {
+//   window.scrollTo(0, 0);
+// };

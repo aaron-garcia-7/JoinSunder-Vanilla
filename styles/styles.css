@@ -1045,6 +1045,8 @@ ul li {
   display: -ms-flexbox;
   display: flex;
   cursor: pointer;
+  -webkit-transition: 0.4s cubic-bezier(0.05, 0.6, 0.56, 1);
+  transition: 0.4s cubic-bezier(0.05, 0.6, 0.56, 1);
 }
 
 .home .mainContent .cta2::before {
@@ -1064,12 +1066,24 @@ ul li {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  color: #000014;
   z-index: 1;
   color: #f7f7f7;
   font-size: calc(0.8rem + 1vw);
-  -webkit-transition: color 0.5s ease;
-  transition: color 0.5s ease;
+  -webkit-transition: color 0.4s ease, -webkit-transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1);
+  transition: color 0.4s ease, -webkit-transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1);
+  transition: color 0.4s ease, transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1);
+  transition: color 0.4s ease, transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1), -webkit-transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1);
+}
+
+.home .mainContent .cta2:hover::before {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.home .mainContent .cta2:hover .playIconFrame {
+  -webkit-transform: translate(150%, 0%);
+          transform: translate(150%, 0%);
+  opacity: 0;
 }
 
 .home .mainContent .playIconFrame {
@@ -1090,6 +1104,10 @@ ul li {
   -webkit-transform: translate(50%, 0);
           transform: translate(50%, 0);
   overflow: hidden;
+  -webkit-transition: opacity 0.2s ease, -webkit-transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1);
+  transition: opacity 0.2s ease, -webkit-transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1);
+  transition: transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1), opacity 0.2s ease;
+  transition: transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1), opacity 0.2s ease, -webkit-transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1);
 }
 
 .home .mainContent .playIconFrame .playIcon {
@@ -1405,26 +1423,30 @@ ul li {
 .opportunity .mainContent .header {
   position: relative;
   height: clamp(42rem, 100vh, 72rem);
-  padding: 2.4rem;
+  margin: 0 2.4rem;
 }
 
 .opportunity .mainContent .header > * {
   position: absolute;
+  -webkit-transform: translate(0, -2.4rem);
+          transform: translate(0, -2.4rem);
 }
 
 .opportunity .mainContent .header h1 {
-  font-size: calc(2rem + 3vw);
+  font-size: calc(1.8rem + 3.6vw);
   font-weight: 450;
-  bottom: 2.4rem;
-  left: 4.8rem;
+  bottom: 1.2rem;
+  left: 2.4rem;
   color: #f7f7f7;
   z-index: 2;
   mix-blend-mode: difference;
+  mix-blend-mode: color-dodge;
+  mix-blend-mode: exclusion;
 }
 
 .opportunity .mainContent .header .cta {
-  top: 2.4rem;
-  right: 2.4rem;
+  top: 4.8rem;
+  right: 0;
   opacity: 0;
   -webkit-animation: appear 0.6s ease 0.6s forwards;
           animation: appear 0.6s ease 0.6s forwards;
@@ -1449,16 +1471,17 @@ ul li {
 }
 
 .opportunity .mainContent .header .repsImg {
-  bottom: 2.4rem;
-  right: 2.4rem;
-  width: 40%;
+  bottom: 0;
+  right: 0;
+  width: 46%;
+  pointer-events: none;
 }
 
 .opportunity .mainContent .header .shape {
-  bottom: 2.4rem;
-  right: 2.4rem;
-  width: 96%;
-  height: 60%;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 68%;
   border-radius: 0 2rem 0 2rem;
   background: #080808;
 }
@@ -1608,7 +1631,6 @@ ul li {
   background: #f7f7f7;
   width: 32%;
   height: 92%;
-  border: 1px solid #bbb;
   border-radius: 2rem;
   overflow: hidden;
 }
@@ -1694,6 +1716,7 @@ ul li {
   right: 50%;
   -webkit-transform: translate(89%, 75%);
           transform: translate(89%, 75%);
+  text-align: right;
 }
 
 .opportunity .mainContent .videoSection .definitionVideo {
@@ -1928,7 +1951,7 @@ ul li {
 .opportunity .mainContent .dataSections {
   position: relative;
   width: 100vw;
-  height: clamp(26rem, 112vh, 64rem);
+  height: clamp(48rem, 146vh, 112rem);
   overflow: hidden;
 }
 
@@ -1943,12 +1966,9 @@ ul li {
 }
 
 .opportunity .mainContent .dataSections .sectionTitle {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 4rem;
+  position: absolute;
+  top: 6rem;
   left: 0;
-  -webkit-transform: translate(20%, 0);
-          transform: translate(20%, 0);
   width: 20%;
   z-index: 1;
   display: -webkit-box;
@@ -1970,21 +1990,452 @@ ul li {
   background: #E3E3E3;
 }
 
+.opportunity .mainContent .salesForce .sectionTitle {
+  -webkit-transform: translate(20%, 0);
+          transform: translate(20%, 0);
+}
+
 .opportunity .mainContent .salesForce .sectionTitle h2 {
   color: #000014;
+}
+
+.opportunity .mainContent .salesForce .barGraph {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: clamp(16rem, 82vw, 97rem);
+  height: clamp(16rem, 40vw, 48rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+}
+
+.opportunity .mainContent .salesForce .barGraph .bars {
+  width: 100%;
+  height: 86%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.opportunity .mainContent .salesForce .barGraph .bars .bar {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #0093D4), to(#0093D400));
+  background: linear-gradient(180deg, #0093D4 10%, #0093D400);
+  width: calc(2rem + 1vw);
+  height: 0%;
+  border-radius: 12rem 12rem 0 0;
+}
+
+.opportunity .mainContent .salesForce .barGraph .bars .bar .barMultiplier {
+  color: #0093D4;
+  font-family: "monument", sans-serif;
+  opacity: 0;
+}
+
+.opportunity .mainContent .salesForce .barGraph .bars .bar .barMultiplier span {
+  display: block;
+  font-size: calc(0.8rem + 1vw);
+  font-weight: 400;
+  -webkit-transform: translate(0, -40%);
+          transform: translate(0, -40%);
+}
+
+.opportunity .mainContent .salesForce .barGraph .bars .bar:nth-of-type(2) .barMultiplier {
+  font-size: calc(1rem + 1.2vw);
+  -webkit-transform: translate(-240%, 0);
+          transform: translate(-240%, 0);
+}
+
+.opportunity .mainContent .salesForce .barGraph .bars .bar:nth-of-type(3) .barMultiplier {
+  font-size: calc(1.4rem + 1.4vw);
+  -webkit-transform: translate(-300%, 0);
+          transform: translate(-300%, 0);
+}
+
+.opportunity .mainContent .salesForce .barGraph .bars .bar:nth-of-type(4) .barMultiplier {
+  font-size: calc(1.6rem + 2.4vw);
+  -webkit-transform: translate(-400%, 0);
+          transform: translate(-400%, 0);
+  font-weight: 675;
+}
+
+.opportunity .mainContent .salesForce .barGraph .key {
+  width: 100%;
+  height: 14%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.opportunity .mainContent .salesForce .barGraph .key .year {
+  font-size: calc(0.8rem + 1vw);
+  font-weight: 600;
 }
 
 .opportunity .mainContent .kwInstalled {
   background: #363636;
 }
 
+.opportunity .mainContent .kwInstalled .sectionTitle {
+  -webkit-transform: translate(20%, 0);
+          transform: translate(20%, 0);
+}
+
 .opportunity .mainContent .kwInstalled .sectionTitle h2 {
   color: #f7f7f7;
+}
+
+.opportunity .mainContent .kwInstalled .lineGraph {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -64%) scale(0.81);
+          transform: translate(-50%, -64%) scale(0.81);
+  width: clamp(16rem, 64vw, 86rem);
+  height: clamp(16rem, 40vw, 48rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+  opacity: 0;
+}
+
+.opportunity .mainContent .kwInstalled .lineGraph > * {
+  position: absolute;
+  width: 100%;
+  -webkit-transform: translate(0, -10%);
+          transform: translate(0, -10%);
+}
+
+.opportunity .mainContent .kwInstalled .lineGraph .line .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .burgerContainer .burger .lineCross .pathActive, .burgerContainer .burger .opportunity .mainContent .kwInstalled .lineGraph .lineCross .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .burgerContainer .burger .line5 .pathActive, .burgerContainer .burger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .home .videoContainer .closeVideoBurger .lineCross .pathActive, .home .videoContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .lineCross .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .home .videoContainer .closeVideoBurger .line5 .pathActive, .home .videoContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive {
+  -webkit-animation: drawPath-1 1.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
+  animation: drawPath-1 1.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
+}
+
+@-webkit-keyframes drawPath-1 {
+  0% {
+    stroke-dashoffset: 1521.593505859375px;
+    stroke-dasharray: 1521.593505859375px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1521.593505859375px;
+  }
+}
+
+@keyframes drawPath-1 {
+  0% {
+    stroke-dashoffset: 1521.593505859375px;
+    stroke-dasharray: 1521.593505859375px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1521.593505859375px;
+  }
+}
+
+.opportunity .mainContent .kwInstalled .lineGraph .points .point1Active {
+  -webkit-animation: drawPoint1 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both, animate-svg-fill-1 0s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
+  animation: drawPoint1 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both, animate-svg-fill-1 0s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
+}
+
+@-webkit-keyframes drawPoint1 {
+  0% {
+    stroke-dashoffset: 118.23892818282235px;
+    stroke-dasharray: 118.23892818282235px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 118.23892818282235px;
+  }
+}
+
+@keyframes drawPoint1 {
+  0% {
+    stroke-dashoffset: 118.23892818282235px;
+    stroke-dasharray: 118.23892818282235px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 118.23892818282235px;
+  }
+}
+
+.opportunity .mainContent .kwInstalled .lineGraph .points .point2Active {
+  -webkit-animation: drawPoint2 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0.3s both, animate-svg-fill-2 0s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s both;
+  animation: drawPoint2 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0.3s both, animate-svg-fill-2 0s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s both;
+}
+
+@-webkit-keyframes drawPoint2 {
+  0% {
+    stroke-dashoffset: 118.23892818282235px;
+    stroke-dasharray: 118.23892818282235px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 118.23892818282235px;
+  }
+}
+
+@keyframes drawPoint2 {
+  0% {
+    stroke-dashoffset: 118.23892818282235px;
+    stroke-dasharray: 118.23892818282235px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 118.23892818282235px;
+  }
+}
+
+@-webkit-keyframes animate-svg-fill-2 {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: #363636;
+  }
+}
+
+@keyframes animate-svg-fill-2 {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: #363636;
+  }
+}
+
+.opportunity .mainContent .kwInstalled .lineGraph .points .point3Active {
+  -webkit-animation: drawPoint3 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0.7s both, animate-svg-fill-3 0s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
+  animation: drawPoint3 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0.7s both, animate-svg-fill-3 0s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
+}
+
+@-webkit-keyframes drawPoint3 {
+  0% {
+    stroke-dashoffset: 118.23892818282235px;
+    stroke-dasharray: 118.23892818282235px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 118.23892818282235px;
+  }
+}
+
+@keyframes drawPoint3 {
+  0% {
+    stroke-dashoffset: 118.23892818282235px;
+    stroke-dasharray: 118.23892818282235px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 118.23892818282235px;
+  }
+}
+
+@-webkit-keyframes animate-svg-fill-3 {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: #363636;
+  }
+}
+
+@keyframes animate-svg-fill-3 {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: #363636;
+  }
+}
+
+.opportunity .mainContent .kwInstalled .lineGraph .points .point4Active {
+  -webkit-animation: drawPoint4 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) 1s both, animate-svg-fill-4 0s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
+  animation: drawPoint4 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) 1s both, animate-svg-fill-4 0s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
+}
+
+@-webkit-keyframes drawPoint4 {
+  0% {
+    stroke-dashoffset: 118.23892818282235px;
+    stroke-dasharray: 118.23892818282235px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 118.23892818282235px;
+  }
+}
+
+@keyframes drawPoint4 {
+  0% {
+    stroke-dashoffset: 118.23892818282235px;
+    stroke-dasharray: 118.23892818282235px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 118.23892818282235px;
+  }
+}
+
+.opportunity .mainContent .kwInstalled .lineGraph .kwData {
+  height: 100%;
+}
+
+.opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece {
+  position: absolute;
+  color: #f7f7f7;
+  font-size: calc(1rem + 1.2vw);
+  font-weight: 100;
+  -webkit-transform: translate(20%, 0);
+          transform: translate(20%, 0);
+  opacity: 0;
+}
+
+.opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(1) {
+  bottom: 12%;
+  left: -4%;
+}
+
+.opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(2) {
+  bottom: 38%;
+  left: 26%;
+}
+
+.opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(3) {
+  top: 22%;
+  right: 26%;
+}
+
+.opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(4) {
+  top: -16%;
+  right: -8%;
+}
+
+.opportunity .mainContent .kwInstalled .lineGraph .key {
+  bottom: 0;
+  -webkit-transform: translate(0, 60%);
+          transform: translate(0, 60%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.opportunity .mainContent .kwInstalled .lineGraph .key .year {
+  color: #f7f7f7;
+  font-size: calc(1rem + 1.2vw);
+  font-weight: 600;
+}
+
+.opportunity .mainContent .kwInstalled .pageFooter {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 90%;
+  height: 16%;
+  background: #f7f7f7;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 1.2rem 1.2rem 0 0;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  padding-left: 4rem;
+}
+
+.opportunity .mainContent .kwInstalled .pageFooter .cta {
+  position: relative;
+  opacity: 0;
+  -webkit-animation: appear 0.6s ease 0.6s forwards;
+          animation: appear 0.6s ease 0.6s forwards;
+}
+
+.opportunity .mainContent .kwInstalled .pageFooter .cta::before {
+  content: 'Join The Squad';
+  color: #000014;
+  font-size: calc(0.8rem + 0.4vw);
+}
+
+.opportunity .mainContent .kwInstalled .pageFooter .cta .ctaCircle {
+  background: #0c5ff2;
+}
+
+.opportunity .mainContent .kwInstalled .pageFooter .cta:hover {
+  border: 1px solid #0c5ff2;
+}
+
+.opportunity .mainContent .kwInstalled .pageFooter .cta:hover::before {
+  color: #f7f7f7;
+}
+
+.opportunity .mainContent .kwInstalled .pageFooter .footerImg {
+  width: 20%;
+  -webkit-transform: translate(0, -20%);
+          transform: translate(0, -20%);
 }
 
 .opportunity .mainContentActive {
   -webkit-transform: translate(0, -50vh);
           transform: translate(0, -50vh);
+}
+
+@media (min-width: 2048px) {
+  .opportunity .mainContent .header {
+    height: clamp(58rem, 100vh, 72rem);
+  }
+  .opportunity .mainContent .header h1 {
+    font-size: 6.4rem;
+  }
+  .opportunity .mainContent .header .repsImg {
+    width: 56rem;
+  }
 }
 
 .compete .logo, .compete .navLogo {

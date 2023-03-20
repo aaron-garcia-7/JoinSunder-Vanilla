@@ -50,7 +50,8 @@ const handleSmallerScreens = (e) => {
       const pageScroll = () => {
         if (shouldScroll) {
           window.scrollBy(0, 1);
-          setTimeout(pageScroll, 32);
+          // setTimeout(pageScroll, 32);
+          setTimeout(pageScroll, 36);
         }
       };
       setTimeout(() => {

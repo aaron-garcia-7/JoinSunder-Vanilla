@@ -5,19 +5,31 @@
 let pgWidth = window.innerWidth;
 
 //
-// Call To Action Button
+// Call To Action Buttons
 //
 
-const cta = document.querySelector(".cta");
-const ctaCircle = document.querySelector(".ctaCircle");
+const cta1 = document.querySelector("#cta1");
+const cta1Circle = document.querySelector("#cta1Circle");
 
-cta.addEventListener("mousemove", (e) => {
-  const rect = cta.getBoundingClientRect(),
+cta1.addEventListener("mousemove", (e) => {
+  const rect = cta1.getBoundingClientRect(),
     x = e.clientX - rect.left,
     y = e.clientY - rect.top;
 
-  ctaCircle.style.setProperty("--mouse-x", `${y}px`);
-  ctaCircle.style.setProperty("--mouse-y", `${x}px`);
+  cta1Circle.style.setProperty("--mouse-x", `${y}px`);
+  cta1Circle.style.setProperty("--mouse-y", `${x}px`);
+});
+
+const cta2 = document.querySelector("#cta2");
+const cta2Circle = document.querySelector("#cta2Circle");
+
+cta2.addEventListener("mousemove", (e) => {
+  const rect = cta2.getBoundingClientRect(),
+    x = e.clientX - rect.left,
+    y = e.clientY - rect.top;
+
+  cta2Circle.style.setProperty("--mouse-x", `${y}px`);
+  cta2Circle.style.setProperty("--mouse-y", `${x}px`);
 });
 
 //

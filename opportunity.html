@@ -27,10 +27,11 @@
     <main class="mainContent" id="mainContent">
 
         <header class="header">
-            <h1><span class="black">More</span> <br> opportunity <br> and faster <br> growth than <br> anywhere <br> else.</h1>
-            <a href="./contact.html" class="cta">
+            <!-- <h1><span class="black">More</span> <br> opportunity <br> and faster <br> growth than <br> anywhere <br> else.</h1> -->
+            <h1>More <br> opportunity <br> and faster <br> growth than <br> anywhere <br> else.</h1>
+            <a href="./contact.html" class="cta" id="cta1">
                 Join The Squad
-                <div class="ctaCircle"></div>
+                <div class="ctaCircle" id="cta1Circle"></div>
             </a>
             <div class="shape"></div>
             <img src="./images/reps.webp" alt="" class="repsImg">
@@ -61,7 +62,7 @@
                     <img src="./images/quoteRep2.jpg" alt="A man in a black t-shirt holding a microphone." class="quoteImg">
                     <figcaption class="imgCaption">
                         <h4 class="name">Brandon<br><span class="lastName">Wilson</span></h4>
-                        <h4 class="position">District Manager</h4>
+                        <h4 class="position">Regional Manager</h4>
                     </figcaption>
                 </figure>
                 <figure class="quoteWrapper">
@@ -130,10 +131,10 @@
                 <h2 id="growthTitle">Growth <br> History</h2>
                 <div class="timeline" id="timeline">
                     <div class="timelineBorder" id="timelineBorder"></div>
-                    <a href="#anchor2019" class="timelineLinks link1" id="timelineLinks">2019</a>
-                    <a href="#anchor2020" class="timelineLinks link2" id="timelineLinks">2020</a>
-                    <a href="#anchor2021" class="timelineLinks link3" id="timelineLinks">2021</a>
-                    <a href="#anchor2022" class="timelineLinks link4" id="timelineLinks">2022</a>
+                    <a href="#anchor2019" class="timelineLinks link1">2019</a>
+                    <a href="#anchor2020" class="timelineLinks link2">2020</a>
+                    <a href="#anchor2021" class="timelineLinks link3">2021</a>
+                    <a href="#anchor2022" class="timelineLinks link4">2022</a>
                 </div>
             </div>
             <div class="mapArea">
@@ -214,16 +215,82 @@
         </div>
 
         <section class="salesForce dataSections">
-            <div class="sectionTitle">
+            <div class="sectionTitle" id="salesForceTitle">
                 <h2>Sales<br>Force</h2>
+            </div>
+            <div class="barGraph">
+                <div class="bars">
+                    <div class="bar" id="bar2019"></div>
+                    <div class="bar" id="bar2020">
+                        <p class="barMultiplier">10x</p>
+                    </div>
+                    <div class="bar" id="bar2021">
+                        <p class="barMultiplier">20x</p>
+                    </div>
+                    <div class="bar" id="bar2022">
+                        <p class="barMultiplier">30x <br> <span class="growthText">Growth</span></p>
+                    </div>
+                </div>
+                <div class="key">
+                    <p class="year">2019</p>
+                    <p class="year">2020</p>
+                    <p class="year">2021</p>
+                    <p class="year">2022</p>
+                </div>
             </div>
             <img src="./images/graphics/grid1.svg" alt="" class="gridBg">
         </section>
 
         <section class="kwInstalled dataSections">
-            <div class="sectionTitle">
+            <div class="sectionTitle" id="kwInstalledTitle">
                 <h2>Kilawatts<br>Installed</h2>
             </div>
+            <div class="lineGraph">
+                <svg class="line" width="1310" height="855" viewBox="0 0 1310 855" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M43 827L250 793L441 643L475.5 625.5L662.5 585.5L846.5 364.5L873.5 338L1051 273L1271.5 37.5" stroke="url(#paint0_linear_480_28)" stroke-width="12" id="lineGraphPath"></path>
+                    <defs>
+                    <linearGradient id="paint0_linear_480_28" x1="205.775" y1="716.5" x2="1094.73" y2="143.467" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="white"></stop>
+                    <stop offset="1" stop-color="#0194D5"></stop>
+                    </linearGradient>
+                    </defs>
+                </svg>     
+                <svg class="points" width="1310" height="855" viewBox="0 0 1310 855" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="25" cy="830" r="18.5" stroke="white" stroke-width="13" class="point1"></circle>
+                    <circle cx="457" cy="633" r="18.5" fill="#363636" stroke="url(#paint0_linear_480_26)" stroke-width="13" class="point2"></circle>
+                    <circle cx="857" cy="349" r="18.5" fill="#363636" stroke="url(#paint1_linear_480_26)" stroke-width="13" class="point3"></circle>
+                    <circle cx="1285" cy="25" r="18.5" stroke="#0194D5" stroke-width="13" class="point4"></circle>
+                    <defs>
+                    <linearGradient id="paint0_linear_480_26" x1="431" y1="649" x2="487.5" y2="622" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#C9E8F6"></stop>
+                    <stop offset="1" stop-color="#BAE2F4"></stop>
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_480_26" x1="840.5" y1="371" x2="881.5" y2="334.5" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#52B6E2"></stop>
+                    <stop offset="1" stop-color="#45B1E0"></stop>
+                    </linearGradient>
+                    </defs>
+                </svg>
+                <div class="kwData">
+                    <p class="dataPiece" id="kwData1">6,130 KW</p>
+                    <p class="dataPiece" id="kwData2">56,630 KW</p>
+                    <p class="dataPiece" id="kwData3">135,948 KW</p>
+                    <p class="dataPiece" id="kwData4">222,780 KW</p>
+                </div>
+                <div class="key">
+                    <p class="year">2019</p>
+                    <p class="year">2020</p>
+                    <p class="year">2021</p>
+                    <p class="year">2022</p>
+                </div>
+            </div>
+            <footer class="pageFooter">
+                <a href="./contact.html" class="cta cta2" id="cta2">
+                    Join The Squad
+                    <div class="ctaCircle" id="cta2Circle"></div>
+                </a>
+                <img src="./images/footerRep.png" alt="" class="footerImg">
+            </footer>
             <img src="./images/graphics/grid2.svg" alt="" class="gridBg">
         </section>
 
