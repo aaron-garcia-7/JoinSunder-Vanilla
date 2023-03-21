@@ -401,6 +401,23 @@ ul li {
   display: none;
 }
 
+.nav .credits {
+  position: absolute;
+  bottom: 2.4rem;
+  right: 2.4rem;
+  opacity: 0;
+}
+
+.nav .credits h6 {
+  font-size: calc(0.8rem + 0.4vw);
+  font-weight: 400;
+  cursor: default;
+}
+
+.nav .credits h6 a {
+  cursor: default;
+}
+
 .navActive {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
@@ -414,10 +431,9 @@ ul li {
   background: transparent;
   border: 1px solid #000014;
   color: transparent;
-  border-radius: 2.4rem;
   border-radius: 4rem;
   width: calc(8rem + 4vw);
-  height: 2.6rem;
+  height: calc(2rem + 1vw);
   padding: 0.4rem 1.4rem;
   cursor: pointer;
   overflow: hidden;
@@ -1433,15 +1449,13 @@ ul li {
 }
 
 .opportunity .mainContent .header h1 {
-  font-size: calc(1.8rem + 3.6vw);
+  font-size: calc(0.1rem + 5.6vw);
   font-weight: 450;
   bottom: 1.2rem;
   left: 2.4rem;
   color: #f7f7f7;
   z-index: 2;
   mix-blend-mode: difference;
-  mix-blend-mode: color-dodge;
-  mix-blend-mode: exclusion;
 }
 
 .opportunity .mainContent .header .cta {
@@ -1482,7 +1496,7 @@ ul li {
   right: 0;
   width: 100%;
   height: 68%;
-  border-radius: 0 2rem 0 2rem;
+  border-radius: 0 3.2rem 0 3.2rem;
   background: #080808;
 }
 
@@ -1519,7 +1533,7 @@ ul li {
 .opportunity .mainContent .quoteSection .quote1 .imgWrapper, .opportunity .mainContent .quoteSection .quote2 .imgWrapper {
   position: relative;
   padding: calc(10rem + 6vw);
-  border-radius: 2rem;
+  border-radius: 3.2rem;
   overflow: hidden;
 }
 
@@ -1610,7 +1624,7 @@ ul li {
 
 .opportunity .mainContent .cardsSection {
   width: 100%;
-  height: clamp(24rem, 100vh, 64rem);
+  height: clamp(48rem, 100vh, 92rem);
   padding: 2.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1630,8 +1644,8 @@ ul li {
   position: relative;
   background: #f7f7f7;
   width: 32%;
-  height: 92%;
-  border-radius: 2rem;
+  height: 98%;
+  border-radius: 3.2rem;
   overflow: hidden;
 }
 
@@ -1795,7 +1809,7 @@ ul li {
   font-size: calc(0.8rem + 1vw);
   text-align: center;
   opacity: 0;
-  border-radius: 2rem;
+  border-radius: 4rem;
   padding: 0.4rem 1.2rem;
 }
 
@@ -1821,7 +1835,7 @@ ul li {
   -webkit-transform: translate(0, -36%);
           transform: translate(0, -36%);
   opacity: 0;
-  width: 64%;
+  width: clamp(12rem, 64%, 82rem);
 }
 
 .opportunity .mainContent .growth .mapArea .map .USA {
@@ -1931,27 +1945,27 @@ ul li {
 
 .opportunity .mainContent .growthAnchors #anchor2019, .opportunity .mainContent .growthAnchors #anchor2020, .opportunity .mainContent .growthAnchors #anchor2021, .opportunity .mainContent .growthAnchors #anchor2022 {
   position: absolute;
-  top: 15%;
+  top: 10%;
   width: 12rem;
   height: 1rem;
 }
 
 .opportunity .mainContent .growthAnchors #anchor2020 {
-  top: 32%;
+  top: 26%;
 }
 
 .opportunity .mainContent .growthAnchors #anchor2021 {
-  top: 49%;
+  top: 42%;
 }
 
 .opportunity .mainContent .growthAnchors #anchor2022 {
-  top: 66%;
+  top: 60%;
 }
 
 .opportunity .mainContent .dataSections {
   position: relative;
   width: 100vw;
-  height: clamp(48rem, 146vh, 112rem);
+  height: clamp(64rem, 146vh, 112rem);
   overflow: hidden;
 }
 
@@ -1968,15 +1982,12 @@ ul li {
 .opportunity .mainContent .dataSections .sectionTitle {
   position: absolute;
   top: 6rem;
-  left: 0;
+  left: 4%;
   width: 20%;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .opportunity .mainContent .dataSections .sectionTitle h2 {
@@ -2372,7 +2383,7 @@ ul li {
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   width: 90%;
-  height: 16%;
+  height: clamp(12rem, 19%, 36rem);
   background: #f7f7f7;
   z-index: 2;
   display: -webkit-box;
@@ -2381,7 +2392,7 @@ ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 1.2rem 1.2rem 0 0;
+  border-radius: 3.2rem 3.2rem 0 0;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -2392,6 +2403,8 @@ ul li {
 
 .opportunity .mainContent .kwInstalled .pageFooter .cta {
   position: relative;
+  width: calc(8rem + 4vw);
+  height: calc(2rem + 1vw);
   opacity: 0;
   -webkit-animation: appear 0.6s ease 0.6s forwards;
           animation: appear 0.6s ease 0.6s forwards;
@@ -2416,9 +2429,10 @@ ul li {
 }
 
 .opportunity .mainContent .kwInstalled .pageFooter .footerImg {
-  width: 20%;
-  -webkit-transform: translate(0, -20%);
-          transform: translate(0, -20%);
+  position: absolute;
+  bottom: 0;
+  right: -2%;
+  width: 16%;
 }
 
 .opportunity .mainContentActive {
@@ -2430,11 +2444,104 @@ ul li {
   .opportunity .mainContent .header {
     height: clamp(58rem, 100vh, 72rem);
   }
+  .opportunity .mainContent .header .cta {
+    width: 14rem;
+    height: 3.2rem;
+  }
+  .opportunity .mainContent .header .cta::before {
+    font-size: 1.4rem;
+  }
   .opportunity .mainContent .header h1 {
     font-size: 6.4rem;
   }
   .opportunity .mainContent .header .repsImg {
     width: 56rem;
+  }
+  .opportunity .mainContent .growth .mapArea .stateCount .number {
+    font-size: 6.4rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .opportunity .mainContent .header {
+    height: clamp(42rem, 100vh, 49rem);
+  }
+  .opportunity .mainContent .header h1 {
+    font-size: calc(1.8rem + 3.6vw);
+    font-size: 4.2rem;
+  }
+  .opportunity .mainContent .header .repsImg {
+    display: none;
+  }
+  .opportunity .mainContent .header .shape {
+    height: 68%;
+  }
+  .opportunity .mainContent .cardsSection {
+    border: 2px dashed coral;
+    height: clamp(24rem, 100vh, auto);
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+  .opportunity .mainContent .cardsSection .repCard {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: 24rem;
+    border-radius: 2rem;
+    overflow: hidden;
+  }
+  .opportunity .mainContent .cardsSection .repCard > * {
+    position: absolute;
+    width: 100%;
+  }
+  .opportunity .mainContent .cardsSection .repCard .repImg {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 40%;
+       object-position: 50% 40%;
+  }
+  .opportunity .mainContent .cardsSection .repCard .cardText {
+    background: linear-gradient(15deg, #000000, #00000000 60%);
+    bottom: 0;
+    height: 100%;
+    z-index: 2;
+    color: #f7f7f7;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 0 0 1.2rem 3.2rem;
+  }
+  .opportunity .mainContent .cardsSection .repCard .cardText .list {
+    margin-bottom: 1.2rem;
+  }
+  .opportunity .mainContent .cardsSection .repCard .cardText .list li {
+    font-size: calc(0.8rem + 1vw);
+  }
+  .opportunity .mainContent .cardsSection .repCard .cardText .name {
+    font-family: "monument", sans-serif;
+    font-size: calc(0.8rem + 1vw);
+    font-weight: 675;
+  }
+  .opportunity .mainContent .cardsSection .repCard .cardText .name .lastName {
+    font-size: calc(1.4rem + 1.4vw);
+  }
+  .opportunity .mainContent .growth {
+    border: 2px dashed burlywood;
+  }
+  .opportunity .mainContent .growth .mapArea .stateCount .number {
+    border: 2px solid blue;
   }
 }
 
@@ -2454,8 +2561,9 @@ ul li {
 }
 
 .compete .mainContent {
+  background: #000014;
   width: 100vw;
-  height: clamp(26rem, 100dvh, 64rem);
+  height: clamp(26rem, 100dvh, 84rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2475,21 +2583,20 @@ ul li {
   transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
 }
 
-.compete .mainContent h1 {
-  margin-bottom: 2rem;
-  font-size: calc(1.6rem + 2.4vw);
-}
-
 .compete .mainContent .cta {
-  position: relative;
+  position: absolute;
+  top: 2.4rem;
+  right: 2.4rem;
   opacity: 0;
+  border: 1px solid #f7f7f7;
   -webkit-animation: appear 0.6s ease 0.6s forwards;
           animation: appear 0.6s ease 0.6s forwards;
+  z-index: 2;
 }
 
 .compete .mainContent .cta::before {
   content: 'Join The Squad';
-  color: #000014;
+  color: #f7f7f7;
   font-size: calc(0.8rem + 0.4vw);
 }
 
@@ -2503,6 +2610,149 @@ ul li {
 
 .compete .mainContent .cta:hover::before {
   color: #f7f7f7;
+}
+
+.compete .mainContent .backgrounds {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.compete .mainContent .backgrounds .backgroundImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.compete .mainContent .backgrounds .backgroundImg:nth-of-type(2) {
+  width: 120%;
+  height: 120%;
+  -webkit-transform: translate(-51.25%, -50%);
+          transform: translate(-51.25%, -50%);
+}
+
+.compete .mainContent .backgrounds .backgroundImg.active {
+  opacity: 1;
+}
+
+.compete .mainContent .details {
+  background: linear-gradient(20deg, #000000ad 20%, #00000000);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.compete .mainContent .details .block {
+  position: absolute;
+  bottom: 5.6rem;
+  left: 2.4rem;
+}
+
+.compete .mainContent .details .block .textWrapper {
+  overflow: hidden;
+}
+
+.compete .mainContent .details .block .title {
+  -webkit-transform: translate(0, 100%);
+          transform: translate(0, 100%);
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+}
+
+.compete .mainContent .details .block .title.active {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.compete .mainContent .details .block .subTitle {
+  -webkit-transform: translate(0, 100%);
+          transform: translate(0, 100%);
+  -webkit-transition: -webkit-transform 0.4s ease 0.1s;
+  transition: -webkit-transform 0.4s ease 0.1s;
+  transition: transform 0.4s ease 0.1s;
+  transition: transform 0.4s ease 0.1s, -webkit-transform 0.4s ease 0.1s;
+}
+
+.compete .mainContent .details .block .subTitle.active {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.compete .mainContent .details .block > * {
+  color: #f7f7f7;
+  font-size: calc(0.4rem + 2.8vw);
+  font-weight: 500;
+}
+
+.compete .mainContent .videoReel {
+  position: absolute;
+  top: 20%;
+  right: 2.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  z-index: 3;
+}
+
+.compete .mainContent .videoReel .imgWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 18rem;
+  height: 18vh;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+}
+
+.compete .mainContent .videoReel .imgWrapper .smallImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.compete .mainContent .videoReel .imgWrapper .playIcon {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 1.2rem;
+  z-index: 2;
+  width: 2rem;
+  height: 2rem;
+}
+
+.compete .mainContent .videoReel .imgWrapper:hover {
+  -webkit-transform: translate(-4%, 0);
+          transform: translate(-4%, 0);
 }
 
 .compete .mainContentActive {

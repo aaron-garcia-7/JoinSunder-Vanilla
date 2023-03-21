@@ -312,6 +312,20 @@ ul {
       display: none;
     }
   }
+  .credits {
+    position: absolute;
+    bottom: 2.4rem;
+    right: 2.4rem;
+    opacity: 0;
+    h6 {
+      font-size: $S-Text;
+      font-weight: 400;
+      cursor: default;
+      a {
+        cursor: default;
+      }
+    }
+  }
 
   //.navActive
   &Active {
@@ -333,10 +347,9 @@ ul {
   background: transparent;
   border: 1px solid $sunderMidnight;
   color: transparent;
-  border-radius: 2.4rem;
   border-radius: 4rem;
   width: calc(8rem + 4vw);
-  height: 2.6rem;
+  height: calc(2rem + 1vw);
   padding: 0.4rem 1.4rem;
   cursor: pointer;
   overflow: hidden;

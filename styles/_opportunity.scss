@@ -23,26 +23,20 @@ $pending: #BCD0D7;
         .header {
             position: relative;
             height: clamp(42rem, 100vh, 72rem);
-            // height: clamp(42rem, 100vh, 60rem);
-            // padding: 2.4rem;
             margin: 0 2.4rem;
             > * {
                 position: absolute;
                 transform: translate(0, -2.4rem);
             }
             h1 {
-                font-size: calc(1.8rem + 3.6vw);
+                // font-size: calc(1.8rem + 3.6vw);
+                font-size: calc(0.1rem + 5.6vw);
                 font-weight: 450;
                 bottom: 1.2rem;
                 left: 2.4rem;
                 color: $sunderSnow;
                 z-index: 2;
                 mix-blend-mode: difference;
-                mix-blend-mode: color-dodge;
-                mix-blend-mode: exclusion;
-                // .black {
-                //     color: $sunderMidnight;
-                // }
             }
             .cta {
                 top: 4.8rem;
@@ -73,19 +67,13 @@ $pending: #BCD0D7;
                 pointer-events: none;
             }
             .shape {
-                // bottom: 2.4rem;
-                // right: 2.4rem;
                 bottom: 0;
                 right: 0;
-                // width: 96%;
                 width: 100%;
                 height: 68%;
-                // height: 54.5%;
-                // height: 41.5%;
-                border-radius: 0 2rem 0 2rem;
+                border-radius: 0 3.2rem 0 3.2rem;
                 background: #080808;
             }
-            
         }
 
         .quoteSection {
@@ -104,7 +92,7 @@ $pending: #BCD0D7;
                     position: relative;
                     // padding: calc(12rem + 4vw);
                     padding: calc(10rem + 6vw);
-                    border-radius: 2rem;
+                    border-radius: 3.2rem;
                     overflow: hidden;
                     .quoteImg {
                         position: absolute;
@@ -177,7 +165,7 @@ $pending: #BCD0D7;
 
         .cardsSection {
             width: 100%;
-            height: clamp(24rem, 100vh, 64rem);
+            height: clamp(48rem, 100vh, 92rem);
             padding: 2.4rem;
             display: flex;
             justify-content: space-between;
@@ -189,10 +177,8 @@ $pending: #BCD0D7;
                 position: relative;
                 background: $sunderSnow;
                 width: 32%;
-                height: 92%;
-                // border: 1px solid #bbb;
-                // border-radius: 1.6rem;
-                border-radius: 2rem;
+                height: 98%;
+                border-radius: 3.2rem;
                 overflow: hidden;
                 > * {
                     position: absolute;
@@ -206,7 +192,6 @@ $pending: #BCD0D7;
                 .cardText {
                     // border: 2px dashed yellow;
                     background: linear-gradient(15deg, #000000, #00000000 60%);
-                    // background: linear-gradient(20deg, red, blue 50%);
                     bottom: 0;
                     height: 100%;
                     z-index: 2;
@@ -217,7 +202,6 @@ $pending: #BCD0D7;
                     align-items: flex-start;
                     padding: 0 0 1.2rem 3.2rem;
                     .list {
-                        // border: 1px solid coral;
                         margin-bottom: 1.2rem;
                         li {
                             font-size: $M-Text;
@@ -312,7 +296,7 @@ $pending: #BCD0D7;
                         font-size: $M-Text;
                         text-align: center;
                         opacity: 0;
-                        border-radius: 2rem;
+                        border-radius: 4rem;
                         padding: 0.4rem 1.2rem;
                     }
                 }
@@ -327,7 +311,8 @@ $pending: #BCD0D7;
                 .map {
                     transform: translate(0, -36%);
                     opacity: 0;
-                    width: 64%;
+                    // width: 64%;
+                    width: clamp(12rem, 64%, 82rem);
                     .USA {
                         width: 100%;
                         height: 100%;
@@ -421,21 +406,21 @@ $pending: #BCD0D7;
             #anchor2019 {
                 // background: coral;
                 position: absolute;
-                top: 15%;
+                top: 10%;
                 width: 12rem;
                 height: 1rem;
             }
             #anchor2020 {
                 @extend #anchor2019;
-                top: 32%;
+                top: 26%;
             }
             #anchor2021 {
                 @extend #anchor2019;
-                top: 49%;
+                top: 42%;
             }
             #anchor2022 {
                 @extend #anchor2019;
-                top: 66%;
+                top: 60%;
             }
         }
 
@@ -443,7 +428,7 @@ $pending: #BCD0D7;
             position: relative;
             width: 100vw;
             // height: clamp(26rem, 124vh, 96rem);
-            height: clamp(48rem, 146vh, 112rem);
+            height: clamp(64rem, 146vh, 112rem);
             overflow: hidden;
             .gridBg {
                 position: absolute;
@@ -457,12 +442,11 @@ $pending: #BCD0D7;
                 // border: 2px dashed coral;
                 position: absolute;
                 top: 6rem;
-                left: 0;
-                // transform: translate(20%, 0);
+                left: 4%;
                 width: 20%;
                 z-index: 1;
                 display: flex;
-                justify-content: center;
+                // justify-content: center;
                 h2 {
                     color: $sunderMidnight;
                     font-size: $L-Text;
@@ -807,20 +791,22 @@ $pending: #BCD0D7;
                 left: 50%;
                 transform: translate(-50%, 0);
                 width: 90%;
-                height: 16%;
+                // height: 24%;
+                height: clamp(12rem, 19%, 36rem);
                 background: $sunderSnow;
                 z-index: 2;
                 display: flex;
                 align-items: center;
-                border-radius: 1.2rem 1.2rem 0 0;
+                border-radius: 3.2rem 3.2rem 0 0;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 padding-left: 4rem;
                 .cta {
                     position: relative;
-                    // top: 4.8rem;
-                    // right: 2.4rem;
+                    width: calc(8rem + 4vw);
+                    height: calc(2rem + 1vw);
+                    // transform: scale(1.2);
                     opacity: 0;
                     animation: appear 0.6s ease 0.6s forwards;
                     // See Globals for the rest
@@ -841,8 +827,10 @@ $pending: #BCD0D7;
                     }
                 }
                 .footerImg {
-                    width: 20%;
-                    transform: translate(0, -20%);
+                    position: absolute;
+                    bottom: 0;
+                    right: -2%;
+                    width: 16%;
                 }
             }
         }
@@ -859,11 +847,130 @@ $pending: #BCD0D7;
         .mainContent{
             .header {
                 height: clamp(58rem, 100vh, 72rem);
+                .cta {
+                    width: 14rem; 
+                    height: 3.2rem;
+                    &::before {
+                        font-size: 1.4rem;
+                    }
+                }
                 h1 {
                     font-size: 6.4rem;
                 }
                 .repsImg {
                     width: 56rem;
+                }
+            }
+            .growth {
+                .mapArea {
+                    .stateCount {
+                        .number {
+                            font-size: 6.4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .opportunity {
+        .mainContent{
+            .header {
+                // border: 2px dashed burlywood;
+                height: clamp(42rem, 100vh, 49rem);
+
+                h1 {
+                    font-size: calc(1.8rem + 3.6vw);
+                    // font-size: calc(3.6rem + 1vw);
+                    font-size: 4.2rem;
+                }
+                .repsImg {
+                    display: none;
+                }
+                .shape {
+                    // bottom: 0;
+                    // right: 0;
+                    // width: 100%;
+                    height: 68%;
+                    // height: 80%;
+                    // border-radius: 0 2rem 0 2rem;
+                    // background: #080808;
+                }
+            }
+
+            .cardsSection {
+                border: 2px dashed coral;
+                // width: 100%;
+                height: clamp(24rem, 100vh, auto);
+                // padding: 2.4rem;
+                // display: flex;
+                // justify-content: space-between;
+                // align-items: center;
+                // gap: calc(1rem + 1vw);
+                // overflow: hidden;
+                flex-wrap: nowrap;
+                overflow-x: scroll;
+                // z-index: 2;
+                .repCard {
+                    flex: 0 0 auto;
+                    // position: relative;
+                    // background: $sunderSnow;
+                    // width: 32%;
+                    width: 24rem;
+                    // height: 92%;
+                    border-radius: 2rem;
+                    overflow: hidden;
+                    > * {
+                        position: absolute;
+                        width: 100%;
+                    }
+                    .repImg {
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: 50% 40%;
+                    }
+                    .cardText {
+                        // border: 2px dashed yellow;
+                        background: linear-gradient(15deg, #000000, #00000000 60%);
+                        // background: linear-gradient(20deg, red, blue 50%);
+                        bottom: 0;
+                        height: 100%;
+                        z-index: 2;
+                        color: $sunderSnow;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        align-items: flex-start;
+                        padding: 0 0 1.2rem 3.2rem;
+                        .list {
+                            // border: 1px solid coral;
+                            margin-bottom: 1.2rem;
+                            li {
+                                font-size: $M-Text;
+                            }
+                        }
+                        .name {
+                            font-family: $monument;
+                            font-size: $M-Text;
+                            font-weight: 675;
+                            .lastName {
+                                font-size: $XL-Text;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .growth {
+                border: 2px dashed burlywood;
+                .mapArea {
+                    .stateCount {
+                        .number {
+                            border: 2px solid blue;
+                        }
+                    }
                 }
             }
         }

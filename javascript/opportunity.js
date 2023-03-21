@@ -7,6 +7,8 @@ const navLogo = document.querySelector(".navLogo");
 // Page Unique elements
 const mainContent = document.querySelector(".mainContent");
 const quoteSection = document.querySelector("#quoteSection");
+const cta2 = document.querySelector("#cta2");
+const cta2Circle = document.querySelector("#cta2Circle");
 
 //
 // Navigation Logic
@@ -54,6 +56,19 @@ const closeNav = () => {
 
 burger.addEventListener("click", toggleNav);
 mainContent.addEventListener("click", closeNav);
+
+//
+// Footer CTA hover animation
+//
+
+cta2.addEventListener("mousemove", (e) => {
+  const rect = cta2.getBoundingClientRect(),
+    x = e.clientX - rect.left,
+    y = e.clientY - rect.top;
+
+  cta2Circle.style.setProperty("--mouse-x", `${y}px`);
+  cta2Circle.style.setProperty("--mouse-y", `${x}px`);
+});
 
 //
 //

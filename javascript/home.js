@@ -40,7 +40,7 @@
 let isPlaying = false;
 let shouldScroll = false;
 let wasSmallerScreen = false;
-const mediaQuery = window.matchMedia("(min-width: 1024px)");
+const mediaQuery = window.matchMedia("(min-width: 1025px)");
 
 const handleSmallerScreens = (e) => {
   if (e.matches) {
