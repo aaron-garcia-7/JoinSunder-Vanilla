@@ -3666,6 +3666,11 @@ ul li {
   }
 }
 
+.earn {
+  background: #ecf3f500;
+  background: #B0C2C9;
+}
+
 .earn .logo, .earn .navLogo {
   position: absolute;
   -webkit-animation-delay: 0.4s;
@@ -3703,16 +3708,15 @@ ul li {
   transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
 }
 
-.earn .mainContent h1 {
-  margin-bottom: 2rem;
-  font-size: calc(1.6rem + 2.4vw);
-}
-
 .earn .mainContent .cta {
-  position: relative;
+  position: absolute;
+  top: 2.4rem;
+  right: 2.4rem;
   opacity: 0;
+  border: 1px solid #000014;
   -webkit-animation: appear 0.6s ease 0.6s forwards;
           animation: appear 0.6s ease 0.6s forwards;
+  z-index: 2;
 }
 
 .earn .mainContent .cta::before {
@@ -3731,6 +3735,37 @@ ul li {
 
 .earn .mainContent .cta:hover::before {
   color: #f7f7f7;
+}
+
+.earn .mainContent .earnHeader {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.earn .mainContent .earnHeader h1 {
+  width: 64%;
+  font-size: calc(1.6rem + 2.4vw);
+}
+
+.earn .mainContent .earnHeader .text1 {
+  margin-bottom: 2rem;
+}
+
+.earn .mainContent .earnHeader .text2 {
+  font-weight: 675;
 }
 
 .earn .mainContentActive {
