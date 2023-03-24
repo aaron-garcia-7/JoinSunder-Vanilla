@@ -8,6 +8,21 @@ const navLogo = document.querySelector(".navLogo");
 const mainContent = document.querySelector(".mainContent");
 
 //
+// CTA 2 Hover Animation
+//
+
+const cta2 = document.querySelector(".cta2");
+const cta2Circle = document.querySelector("#cta2Circle");
+
+cta2.addEventListener("mousemove", (e) => {
+  const rect = cta2.getBoundingClientRect(),
+    x = e.clientX - rect.left,
+    y = e.clientY - rect.top;
+  cta2Circle.style.setProperty("--mouse-x", `${y}px`);
+  cta2Circle.style.setProperty("--mouse-y", `${x}px`);
+});
+
+//
 // Handling Navigation Logic
 //
 

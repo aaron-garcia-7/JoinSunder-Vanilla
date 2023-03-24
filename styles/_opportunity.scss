@@ -21,9 +21,11 @@ $pending: #BCD0D7;
         transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
 
         .header {
+            // border: 2px dashed coral;
             position: relative;
-            height: clamp(42rem, 100vh, 72rem);
-            margin: 0 2.4rem;
+            // height: clamp(42rem, 100vh, 72rem);
+            height: clamp(38rem, 100vh, 48rem);
+            margin: 6.4rem 2.4rem;
             > * {
                 position: absolute;
                 transform: translate(0, -2.4rem);
@@ -39,7 +41,7 @@ $pending: #BCD0D7;
                 mix-blend-mode: difference;
             }
             .cta {
-                top: 4.8rem;
+                top: -2rem;
                 right: 0;
                 opacity: 0;
                 animation: appear 0.6s ease 0.6s forwards;
@@ -63,14 +65,17 @@ $pending: #BCD0D7;
             .repsImg {
                 bottom: 0;
                 right: 0;
-                width: 46%;
+                // width: 46%;
+                width: clamp(4rem, 44%, 46rem);
                 pointer-events: none;
             }
             .shape {
                 bottom: 0;
                 right: 0;
                 width: 100%;
-                height: 68%;
+                // height: 68%;
+                height: 38vw;
+                height: clamp(12rem, 38vw, 36rem);
                 border-radius: 0 3.2rem 0 3.2rem;
                 background: #080808;
             }
@@ -91,7 +96,7 @@ $pending: #BCD0D7;
                 .imgWrapper {
                     position: relative;
                     // padding: calc(12rem + 4vw);
-                    padding: calc(10rem + 6vw);
+                    padding: calc(8rem + 6vw);
                     border-radius: 3.2rem;
                     overflow: hidden;
                     .quoteImg {
@@ -115,21 +120,22 @@ $pending: #BCD0D7;
                             color: $sunderSnow;
                         }
                         .name {
-                            font-size: $L-Text;
+                            font-size: $M-Text;
                             font-weight: 675;
                             // font-weight: 800;
                             .lastName {
-                                font-size: $XXL-Text;
+                                font-size: $XL-Text;
                             }
                         }
                         .position {
-                            font-size: $M-Text;
+                            font-size: $S-Text;
                             font-weight: 450;
                         }
                     }
                 }
                 .quoteWrapper {
-                    // border-left: 2px solid $sunderMidnight;
+                    // border: 2px solid $sunderMidnight;
+                    // width: 38%;
                     width: 42%;
                     // height: 56%;
                     display: flex;
@@ -141,12 +147,12 @@ $pending: #BCD0D7;
                     .quote {
                         // border-bottom: 2px solid $sunderMidnight;
                         font-family: $monument;
-                        font-size: $L-Text;
+                        font-size: $M-Text;
                         font-weight: 675;
                         padding-bottom: 2rem;
                     }
                     .blockquote {
-                        font-size: $L-Text;
+                        font-size: $M-Text;
                         padding-top: 2rem;
                         padding-bottom: 2rem;
                     }
@@ -539,7 +545,7 @@ $pending: #BCD0D7;
         }
 
         .kwInstalled {
-            background: #363636;
+            background: $sunderMidnight;
             // height: clamp(26rem, 124vh, 96rem);
             .sectionTitle {
                 transform: translate(20%, 0);
@@ -552,7 +558,7 @@ $pending: #BCD0D7;
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -64%) scale(0.81);
+                transform: translate(-50%, -56%) scale(0.81);
                 width: clamp(16rem, 64vw, 86rem);
                 height: clamp(16rem, 40vw, 48rem);
                 display: flex;
@@ -651,24 +657,24 @@ $pending: #BCD0D7;
                         stroke-dasharray: 118.23892818282235px;
                         }
                     }
-                    @-webkit-keyframes animate-svg-fill-2 {
-                        0% {
-                        fill: transparent;
-                        }
+                    // @-webkit-keyframes animate-svg-fill-2 {
+                    //     0% {
+                    //     fill: transparent;
+                    //     }
                     
-                        100% {
-                        fill: rgb(54, 54, 54);
-                        }
-                    }
-                    @keyframes animate-svg-fill-2 {
-                        0% {
-                        fill: transparent;
-                        }
+                    //     100% {
+                    //     fill: rgb(54, 54, 54);
+                    //     }
+                    // }
+                    // @keyframes animate-svg-fill-2 {
+                    //     0% {
+                    //     fill: transparent;
+                    //     }
                     
-                        100% {
-                        fill: rgb(54, 54, 54);
-                        }
-                    }
+                    //     100% {
+                    //     fill: rgb(54, 54, 54);
+                    //     }
+                    // }
                     .point3Active {
                         -webkit-animation: drawPoint3 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0.7s both,
                                             animate-svg-fill-3 0s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
@@ -697,24 +703,24 @@ $pending: #BCD0D7;
                         stroke-dasharray: 118.23892818282235px;
                         }
                     }
-                    @-webkit-keyframes animate-svg-fill-3 {
-                        0% {
-                        fill: transparent;
-                        }
+                    // @-webkit-keyframes animate-svg-fill-3 {
+                    //     0% {
+                    //     fill: transparent;
+                    //     }
                     
-                        100% {
-                        fill: rgb(54, 54, 54);
-                        }
-                    }
-                    @keyframes animate-svg-fill-3 {
-                        0% {
-                        fill: transparent;
-                        }
+                    //     100% {
+                    //     fill: rgb(54, 54, 54);
+                    //     }
+                    // }
+                    // @keyframes animate-svg-fill-3 {
+                    //     0% {
+                    //     fill: transparent;
+                    //     }
                     
-                        100% {
-                        fill: rgb(54, 54, 54);
-                        }
-                    }
+                    //     100% {
+                    //     fill: rgb(54, 54, 54);
+                    //     }
+                    // }
                     .point4Active {
                         -webkit-animation: drawPoint4 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) 1s both,
                                             animate-svg-fill-4 0s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
@@ -792,37 +798,39 @@ $pending: #BCD0D7;
                 transform: translate(-50%, 0);
                 width: 90%;
                 // height: 24%;
-                height: clamp(12rem, 19%, 36rem);
-                background: $sunderSnow;
+                // height: clamp(12rem, 19%, 36rem);
+                height: clamp(8rem, 12%, 24rem);
+                // background: linear-gradient(90deg, red, blue);
+                background: linear-gradient(90deg, $sunderMidnight 10%, #0C5FF2);
                 z-index: 2;
                 display: flex;
                 align-items: center;
                 border-radius: 3.2rem 3.2rem 0 0;
                 display: flex;
-                justify-content: space-between;
+                justify-content: flex-end;
                 align-items: center;
-                padding-left: 4rem;
+                padding-right: 4rem;
                 .cta {
                     position: relative;
                     width: calc(8rem + 4vw);
                     height: calc(2rem + 1vw);
-                    // transform: scale(1.2);
+                    border: 1px solid $sunderSnow;
                     opacity: 0;
                     animation: appear 0.6s ease 0.6s forwards;
                     // See Globals for the rest
                     &::before {
                         content: 'Join The Squad';
-                        color: $sunderMidnight;
+                        color: $sunderSnow;
                         font-size: $S-Text;
                     }
                     .ctaCircle {
-                        background: $sunderRoyalLight;
+                        background: $sunderSnow;
                     }
     
                     &:hover {
-                        border: 1px solid $sunderRoyalLight;
+                        // border: 1px solid $sunderRoyalLight;
                         &::before {
-                            color: $sunderSnow;
+                            color: $sunderRoyalLight;
                         }
                     }
                 }
@@ -846,7 +854,8 @@ $pending: #BCD0D7;
     .opportunity {
         .mainContent{
             .header {
-                height: clamp(58rem, 100vh, 72rem);
+                // border: 2px solid blue;
+                height: 56rem;
                 .cta {
                     width: 14rem; 
                     height: 3.2rem;
@@ -869,6 +878,29 @@ $pending: #BCD0D7;
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+@media (min-width: 1500px) {
+    .opportunity {
+        .mainContent{
+            .header {
+                h1 {
+                    font-size: 5.4rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .opportunity {
+        .mainContent{
+            .header {
+                // background: lightblue;
+                height: 42rem;
             }
         }
     }

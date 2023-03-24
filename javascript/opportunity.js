@@ -488,7 +488,7 @@ gsap.to(".lineGraph", {
   scrollTrigger: {
     trigger: "#lineGraphPath",
     toggleActions: "restart none none reverse",
-    start: "-50% top",
+    start: "-50% 10%",
     // markers: true,
   },
 });
@@ -497,7 +497,7 @@ gsap.to("#lineGraphPath", {
     trigger: "#lineGraphPath",
     toggleClass: "pathActive",
     toggleActions: "play none none none",
-    start: "-50% top",
+    start: "-50% 10%",
     // markers: {
     //   indent: 64,
     //   startColor: "lightblue",
@@ -511,7 +511,7 @@ gsap.to(".point1", {
     trigger: ".point1",
     toggleClass: "point1Active",
     toggleActions: "play none none none",
-    start: "-3160% top",
+    start: "-3160% 10%",
   },
 });
 gsap.to(".point2", {
@@ -519,7 +519,7 @@ gsap.to(".point2", {
     trigger: ".point2",
     toggleClass: "point2Active",
     toggleActions: "play none none none",
-    start: "-2630% top",
+    start: "-2630% 10%",
   },
 });
 gsap.to(".point3", {
@@ -527,7 +527,7 @@ gsap.to(".point3", {
     trigger: ".point3",
     toggleClass: "point3Active",
     toggleActions: "play none none none",
-    start: "-1860% top",
+    start: "-1860% 10%",
     end: "1200% top",
   },
 });
@@ -536,7 +536,7 @@ gsap.to(".point4", {
     trigger: ".point4",
     toggleClass: "point4Active",
     toggleActions: "play none none none",
-    start: "-986% top",
+    start: "-986% 10%",
     end: "1200% top",
   },
 });
@@ -549,7 +549,7 @@ gsap.to(graph2Data, {
   scrollTrigger: {
     trigger: ".kwInstalled",
     toggleActions: "restart none none none",
-    start: "-5% top",
+    start: "top 10%",
     // markers: true,
   },
 });

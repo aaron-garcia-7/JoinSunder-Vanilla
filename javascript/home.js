@@ -1,3 +1,18 @@
+// Global elements
+const burger = document.querySelector(".burger");
+const nav = document.querySelector(".nav");
+const logo = document.querySelector(".logo");
+const navLogo = document.querySelector(".navLogo");
+
+// Page Unique elements
+const mainContent = document.querySelector(".mainContent");
+const aside = document.querySelector(".aside");
+const heroText = document.querySelector(".heroText");
+const heroBtns = document.querySelector(".heroBtns");
+const reel = document.querySelector(".reel");
+const col1 = document.querySelector(".col1");
+const col2 = document.querySelector(".col2");
+
 //
 // Image Reel Logic (Original)
 //
@@ -10,32 +25,6 @@
 // setTimeout(() => {
 //   pageScroll();
 // }, 2000);
-
-//
-// Testing Media Queries
-//
-
-// const mediaQuery = window.matchMedia("(min-width: 1024px)");
-
-// const handleSmallerScreens = (e) => {
-//   if (e.matches) {
-//     // location.reload();
-//     const pageScroll = () => {
-//       window.scrollBy(0, 1);
-//       setTimeout(pageScroll, 32);
-//     };
-
-//     setTimeout(() => {
-//       pageScroll();
-//     }, 1200);
-//   }
-// };
-// mediaQuery.addEventListener("change", handleSmallerScreens);
-// handleSmallerScreens(mediaQuery);
-
-//
-// Chat GPT Attempt 2
-//
 
 let isPlaying = false;
 let shouldScroll = false;
@@ -81,21 +70,6 @@ handleSmallerScreens(mediaQuery);
 //
 // Handling Navigation Logic
 //
-
-// Global elements
-const burger = document.querySelector(".burger");
-const nav = document.querySelector(".nav");
-const logo = document.querySelector(".logo");
-const navLogo = document.querySelector(".navLogo");
-
-// Page Unique elements
-const mainContent = document.querySelector(".mainContent");
-const aside = document.querySelector(".aside");
-const heroText = document.querySelector(".heroText");
-const heroBtns = document.querySelector(".heroBtns");
-const reel = document.querySelector(".reel");
-const col1 = document.querySelector(".col1");
-const col2 = document.querySelector(".col2");
 
 let navState = false;
 
@@ -160,10 +134,24 @@ mainContent.addEventListener("click", closeNav);
 navLogo.addEventListener("click", closeNav);
 
 //
-// Handling Video Container Logic
+// CTA 2 Hover Animation
 //
 
 const cta2 = document.querySelector(".cta2");
+const cta2Circle = document.querySelector("#cta2Circle");
+
+cta2.addEventListener("mousemove", (e) => {
+  const rect = cta2.getBoundingClientRect(),
+    x = e.clientX - rect.left,
+    y = e.clientY - rect.top;
+  cta2Circle.style.setProperty("--mouse-x", `${y}px`);
+  cta2Circle.style.setProperty("--mouse-y", `${x}px`);
+});
+
+//
+// Handling Video Container Logic
+//
+
 const videoContainer = document.querySelector(".videoContainer");
 const closeVideoBurger = document.querySelector(".closeVideoBurger");
 const videoElement = document.querySelector("#videoElement");

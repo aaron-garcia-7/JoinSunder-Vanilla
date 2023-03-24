@@ -259,9 +259,6 @@
         border: 1px solid $sunderRoyalLight;
         display: flex;
         cursor: pointer;
-        // box-shadow: 0px 0px 0px 0px #07489580 inset;
-        // box-shadow: 0px 0px 0px 0px $sunderRoyalLight inset;
-        transition: 0.4s cubic-bezier(.05,.6,.56,1);
           &::before {
             content: 'Watch Promo';
             position: absolute;
@@ -275,20 +272,6 @@
             z-index: 1;
             color: $sunderSnow;
             font-size: $M-Text;
-            transition: color 0.4s ease, transform 0.4s cubic-bezier(.05,.6,.56,1);
-        }
-        &:hover {
-          // box-shadow: 0px 0px 0px 36px #07489580 inset;
-          // box-shadow: 0px 0px 0px 1px $sunderRoyalLight inset;
-          // border: 1px solid $sunderRoyal;
-          &::before {
-            // color: $sunderMidnight;
-            transform: translate(-50%, -50%);
-          }
-          .playIconFrame {
-            transform: translate(150%, 0%);
-            opacity: 0;
-          }
         }
       }
       .playIconFrame {
