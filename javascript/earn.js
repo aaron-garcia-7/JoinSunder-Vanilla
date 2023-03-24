@@ -57,3 +57,49 @@ mainContent.addEventListener("click", closeNav);
 //
 
 gsap.registerPlugin(ScrollTrigger);
+
+gsap.to("#col1", {
+  y: "-18.1%",
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#reel",
+    scrub: 0.1,
+    start: "top top",
+    end: "bottom bottom",
+  },
+});
+gsap.to("#col2", {
+  // y: "-19.12%",
+  y: "-10.46%",
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#reel",
+    scrub: 0.1,
+    start: "top top",
+    end: "bottom bottom",
+  },
+});
+gsap.to("#col3", {
+  y: "-18.1%",
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#reel",
+    scrub: 0.1,
+    start: "top top",
+    end: "bottom bottom",
+  },
+});
+gsap.to("#col4", {
+  y: "-10.46%",
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#reel",
+    scrub: 0.1,
+    start: "top top",
+    end: "bottom bottom",
+  },
+});
+
+// window.onbeforeunload = () => {
+//   window.scrollTo(0, 0);
+// };
