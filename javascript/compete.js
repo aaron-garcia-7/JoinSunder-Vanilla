@@ -119,6 +119,81 @@ const nextImage = () => {
 nextImage();
 
 //
+// Carousel V2
+//
+
+// const promoData = [
+//   {
+//     title: "Squad Game",
+//     subTitle: "Run it back | 2022",
+//     imgSrc: "./images/comp1.png",
+//   },
+//   {
+//     title: "Rapid Sunder",
+//     subTitle: "The War Path | 2022",
+//     imgSrc: "./images/comp2.png",
+//   },
+//   {
+//     title: "Rapid Sunder",
+//     subTitle: "A Thousand Victories",
+//     imgSrc: "./images/comp3.png",
+//   },
+//   {
+//     title: "Sunder Dome",
+//     subTitle: "Champion’s League | 2022",
+//     imgSrc: "./images/comp4.png",
+//   },
+//   {
+//     title: "Sunder Dome",
+//     subTitle: "Take What’s Yours | 2022",
+//     imgSrc: "./images/comp5.png",
+//   },
+// ];
+
+// promoData.forEach((obj, index) => (obj.id = index + 1));
+
+// const carouselBackground = document.querySelector(".carousel-background");
+// const titleElement = document.querySelector(".title");
+// const subTitleElement = document.querySelector(".subTitle");
+// const titleWrapper = document.querySelector(".title-wrapper");
+// const subTitleWrapper = document.querySelector(".subTitle-wrapper");
+// const promoButton = document.querySelector(".promo-button");
+
+// let currentIndex = 0;
+
+// // Set the initial background and title/subTitle
+// carouselBackground.style.backgroundImage = `url(${promoData[currentIndex].imgSrc})`;
+// titleElement.innerHTML = promoData[currentIndex].title;
+// subTitleElement.innerHTML = promoData[currentIndex].subTitle;
+
+// // Cycle through the promoData array and update the background and title/subTitle on each interval
+// const carouselInterval = setInterval(() => {
+//   currentIndex = (currentIndex + 1) % promoData.length;
+
+//   // Animate the title wrapper
+//   titleWrapper.style.top = `-${titleWrapper.offsetHeight}px`;
+//   setTimeout(() => {
+//     titleWrapper.style.top = 0;
+//   }, 500);
+
+//   // Animate the subTitle wrapper
+//   subTitleWrapper.style.top = `-${subTitleWrapper.offsetHeight}px`;
+//   setTimeout(() => {
+//     subTitleWrapper.style.top = 0;
+//   }, 1000);
+
+//   const { title, subTitle, imgSrc } = promoData[currentIndex];
+//   titleElement.innerHTML = title;
+//   subTitleElement.innerHTML = subTitle;
+//   carouselBackground.style.backgroundImage = `url(${imgSrc})`;
+// }, 6000);
+
+// // Add an event listener to the button to log the active promo
+// promoButton.addEventListener("click", () => {
+//   console.log(promoData[currentIndex].title);
+// });
+
+//
 // GSAP Animations
 //
 

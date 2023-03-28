@@ -2717,10 +2717,10 @@ ul li {
 .compete .mainContent .details .block .title {
   -webkit-transform: translate(0, 100%);
           transform: translate(0, 100%);
-  -webkit-transition: -webkit-transform 0.6s ease;
-  transition: -webkit-transform 0.6s ease;
-  transition: transform 0.6s ease;
-  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+  -webkit-transition: -webkit-transform 0.6s ease 0.2s;
+  transition: -webkit-transform 0.6s ease 0.2s;
+  transition: transform 0.6s ease 0.2s;
+  transition: transform 0.6s ease 0.2s, -webkit-transform 0.6s ease 0.2s;
 }
 
 .compete .mainContent .details .block .title.active {
@@ -2731,10 +2731,10 @@ ul li {
 .compete .mainContent .details .block .subTitle {
   -webkit-transform: translate(0, 100%);
           transform: translate(0, 100%);
-  -webkit-transition: -webkit-transform 0.6s ease 0.2s;
-  transition: -webkit-transform 0.6s ease 0.2s;
-  transition: transform 0.6s ease 0.2s;
-  transition: transform 0.6s ease 0.2s, -webkit-transform 0.6s ease 0.2s;
+  -webkit-transition: -webkit-transform 0.6s ease 0.4s;
+  transition: -webkit-transform 0.6s ease 0.4s;
+  transition: transform 0.6s ease 0.4s;
+  transition: transform 0.6s ease 0.4s, -webkit-transform 0.6s ease 0.4s;
 }
 
 .compete .mainContent .details .block .subTitle.active {
@@ -3725,11 +3725,6 @@ ul li {
   }
 }
 
-.earn {
-  background: #ecf3f500;
-  background: #B0C2C9;
-}
-
 .earn .logo, .earn .navLogo {
   position: absolute;
   -webkit-animation-delay: 0.4s;
@@ -3746,6 +3741,8 @@ ul li {
 }
 
 .earn .mainContent {
+  background: -webkit-gradient(linear, left top, left bottom, from(#b0c2c9), to(#ecf3f500));
+  background: linear-gradient(180deg, #b0c2c9, #ecf3f500);
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3910,7 +3907,6 @@ ul li {
 
 .resources .mainContent {
   width: 100vw;
-  height: clamp(26rem, 100dvh, 64rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3930,13 +3926,63 @@ ul li {
   transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
 }
 
-.resources .mainContent h1 {
+.resources .mainContent .productivity {
+  width: 100vw;
+  height: auto;
+  padding: 0 2.4rem;
+}
+
+.resources .mainContent .productivity .smartHeader {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.resources .mainContent .productivity .smartHeader h1 {
+  font-size: calc(1.6rem + 2.8vw);
+  font-weight: 500;
   margin-bottom: 2rem;
-  font-size: calc(1.6rem + 2.4vw);
+}
+
+.resources .mainContent .productivity .smartHeader h2 {
+  font-size: calc(1rem + 1.2vw);
+}
+
+.resources .mainContent .productivity .images {
+  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4.8rem;
+  -webkit-transform: translate(0, -4%);
+          transform: translate(0, -4%);
+}
+
+.resources .mainContent .productivity .images .imgWrapper {
+  background: #C6D3D8;
+  width: calc(16rem + 16vw);
+  height: calc(20rem + 20vw);
+  border-radius: calc(0.4rem + 0.2vw);
+  overflow: hidden;
+}
+
+.resources .mainContent .productivity .images .imgWrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .resources .mainContent .cta {
-  position: relative;
+  position: absolute;
+  top: 2.4rem;
+  right: 2.4rem;
   opacity: 0;
   -webkit-animation: appear 0.6s ease 0.6s forwards;
           animation: appear 0.6s ease 0.6s forwards;
