@@ -3926,6 +3926,33 @@ ul li {
   transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
 }
 
+.resources .mainContent .cta {
+  position: absolute;
+  top: 2.4rem;
+  right: 2.4rem;
+  opacity: 0;
+  -webkit-animation: appear 0.6s ease 0.6s forwards;
+          animation: appear 0.6s ease 0.6s forwards;
+}
+
+.resources .mainContent .cta::before {
+  content: 'Join The Squad';
+  color: #000014;
+  font-size: calc(0.8rem + 0.4vw);
+}
+
+.resources .mainContent .cta .ctaCircle {
+  background: #0c5ff2;
+}
+
+.resources .mainContent .cta:hover {
+  border: 1px solid #0c5ff2;
+}
+
+.resources .mainContent .cta:hover::before {
+  color: #f7f7f7;
+}
+
 .resources .mainContent .productivity {
   width: 100vw;
   height: auto;
@@ -3979,31 +4006,171 @@ ul li {
      object-fit: cover;
 }
 
-.resources .mainContent .cta {
+.resources .mainContent .meetTheTeam {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.resources .mainContent .meetTheTeam .row, .resources .mainContent .meetTheTeam .column {
   position: absolute;
-  top: 2.4rem;
-  right: 2.4rem;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.resources .mainContent .meetTheTeam .row h2, .resources .mainContent .meetTheTeam .column h2 {
+  font-size: calc(0.4rem + 2.8vw);
+  font-weight: 200;
+}
+
+.resources .mainContent .meetTheTeam .row {
+  border-top: 1px solid #D4D4D4;
+  border-bottom: 1px solid #D4D4D4;
+  width: calc(16rem + 48vw);
+  padding: 1.4rem;
+}
+
+.resources .mainContent .meetTheTeam .row h2 .spacer {
   opacity: 0;
-  -webkit-animation: appear 0.6s ease 0.6s forwards;
-          animation: appear 0.6s ease 0.6s forwards;
+  margin: 2rem;
 }
 
-.resources .mainContent .cta::before {
-  content: 'Join The Squad';
-  color: #000014;
-  font-size: calc(0.8rem + 0.4vw);
+.resources .mainContent .meetTheTeam .column {
+  border-left: 1px solid #D4D4D4;
+  border-right: 1px solid #D4D4D4;
+  height: calc(24rem + 4vw);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transform: translate(-28%, -50%);
+          transform: translate(-28%, -50%);
+  padding: 1rem;
 }
 
-.resources .mainContent .cta .ctaCircle {
-  background: #0c5ff2;
+.resources .mainContent .meetTheTeam .column::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 36%;
+  background: #f7f7f7cc;
+  z-index: 2;
 }
 
-.resources .mainContent .cta:hover {
-  border: 1px solid #0c5ff2;
+.resources .mainContent .meetTheTeam .column::after {
+  content: "";
+  position: absolute;
+  bottom: -12%;
+  left: 0;
+  width: 100%;
+  height: 48%;
+  background: #f7f7f7cc;
+  z-index: 2;
 }
 
-.resources .mainContent .cta:hover::before {
+.resources .mainContent .meetTheTeam .column h2 {
+  font-weight: 650;
+  -webkit-transform: translate(0, 64px);
+          transform: translate(0, 64px);
+}
+
+.resources .mainContent .reel {
+  height: calc(65rem + 69vw);
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.6rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+  transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+  transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+  transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+  overflow: hidden;
+}
+
+.resources .mainContent .reel .columnOuter {
+  width: 25%;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+  transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+  transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+  transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+}
+
+.resources .mainContent .reel .columnOuter:nth-of-type(2), .resources .mainContent .reel .columnOuter:nth-of-type(4) {
+  -webkit-transform: translate(0, 10%);
+          transform: translate(0, 10%);
+}
+
+.resources .mainContent .reel .columnOuter .reelImg {
+  position: relative;
+  height: calc(16rem + 16vw);
+  margin-bottom: calc(0.6rem + 1.2vw);
+  border-radius: calc(0.4rem + 0.2vw);
+  overflow: hidden;
+}
+
+.resources .mainContent .reel .columnOuter .reelImg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.resources .mainContent .reel .columnOuter .reelImg figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 16%;
+  padding: 1.2rem;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(40%, #000000cc), to(#00000000));
+  background: linear-gradient(0deg, #000000cc 40%, #00000000);
+  z-index: 2;
+}
+
+.resources .mainContent .reel .columnOuter .reelImg figcaption h4, .resources .mainContent .reel .columnOuter .reelImg figcaption h5 {
   color: #f7f7f7;
+  font-family: "monument", sans-serif;
+  font-size: calc(0.8rem + 0.4vw);
+  font-weight: 675;
+}
+
+.resources .mainContent .reel .columnOuter .reelImg figcaption h5 {
+  font-size: calc(0.6rem + 0.3vw);
+  font-weight: 300;
+}
+
+.resources .mainContent .reel .columnOuterActive {
+  -webkit-transform: translate(0, -50vh);
+          transform: translate(0, -50vh);
+}
+
+.resources .mainContent .reelActive {
+  position: absolute;
+  right: 0;
+}
+
+.resources .mainContent .enzy {
+  margin-top: 4rem;
+  width: 100vw;
+  height: 200vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#6CA793), to(#6CA79300));
+  background: linear-gradient(180deg, #6CA793, #6CA79300);
 }
 
 .resources .mainContentActive {

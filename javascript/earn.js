@@ -86,8 +86,8 @@ gsap.to("#col1", {
   },
 });
 gsap.to("#col2", {
-  // y: "-19.12%",
-  y: "-10.46%",
+  y: "-31.25%",
+  // y: "-10.46%",
   ease: "none",
   scrollTrigger: {
     trigger: "#reel",

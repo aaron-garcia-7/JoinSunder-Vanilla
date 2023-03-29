@@ -57,3 +57,44 @@ mainContent.addEventListener("click", closeNav);
 //
 
 gsap.registerPlugin(ScrollTrigger);
+
+gsap.to("#col1", {
+  y: "-21%",
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#reel",
+    scrub: 0.1,
+    start: "top top",
+    end: "bottom bottom",
+  },
+});
+gsap.to("#col2", {
+  y: "-29%",
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#reel",
+    scrub: 0.1,
+    start: "top top",
+    end: "bottom bottom",
+  },
+});
+gsap.to("#col3", {
+  y: "-34.3%",
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#reel",
+    scrub: 0.1,
+    start: "top top",
+    end: "bottom bottom",
+  },
+});
+gsap.to("#col4", {
+  y: "-29%",
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#reel",
+    scrub: 0.1,
+    start: "top top",
+    end: "bottom bottom",
+  },
+});

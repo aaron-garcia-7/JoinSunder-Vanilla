@@ -21,6 +21,28 @@
         align-items: center;
         transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
 
+        .cta {
+            position: absolute;
+            top: 2.4rem;
+            right: 2.4rem;
+            opacity: 0;
+            animation: appear 0.6s ease 0.6s forwards;
+            &::before {
+                content: 'Join The Squad';
+                color: $sunderMidnight;
+                font-size: $S-Text;
+            }
+            .ctaCircle {
+                background: $sunderRoyalLight;
+            }
+            &:hover {
+                border: 1px solid $sunderRoyalLight;
+                &::before {
+                    color: $sunderSnow;
+                }
+            }
+        }
+
         .productivity {
             // border: 2px dashed coral;
             width: 100vw;
@@ -66,26 +88,149 @@
             }
         }
 
-        .cta {
-            position: absolute;
-            top: 2.4rem;
-            right: 2.4rem;
-            opacity: 0;
-            animation: appear 0.6s ease 0.6s forwards;
-            &::before {
-                content: 'Join The Squad';
-                color: $sunderMidnight;
-                font-size: $S-Text;
-            }
-            .ctaCircle {
-                background: $sunderRoyalLight;
-            }
-            &:hover {
-                border: 1px solid $sunderRoyalLight;
-                &::before {
-                    color: $sunderSnow;
+        .meetTheTeam {
+            // border: 2px dashed coral;
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            .row, .column {
+                position: absolute;
+                display: inline-block;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                h2 {
+                    font-size: $XXL-Text;
+                    font-weight: 200;
                 }
             }
+            .row {
+                border-top: 1px solid #D4D4D4;
+                border-bottom: 1px solid #D4D4D4;
+                // width: 60%;
+                width: calc(16rem + 48vw);
+                padding: 1.4rem;
+                h2 {
+                    .spacer {
+                        opacity: 0;
+                        margin: 2rem;
+                    }
+                }
+            }
+            .column {
+                border-left: 1px solid #D4D4D4;
+                border-right: 1px solid #D4D4D4;
+                // height: calc(16rem + 12vw);
+                height: calc(24rem + 4vw);
+                // height: calc(20rem + 8vw);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                transform: translate(-28%, -50%);
+                padding: 1rem;
+                &::before {
+                    // border: 2px solid coral;
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 36%;
+                    background: #f7f7f7cc;
+                    // backdrop-filter: blur(2px);
+                    z-index: 2;
+                }
+                &::after {
+                    // border: 2px solid coral;
+                    content: "";
+                    position: absolute;
+                    bottom: -12%;
+                    left: 0;
+                    width: 100%;
+                    height: 48%;
+                    background: #f7f7f7cc;
+                    // backdrop-filter: blur(2px);
+                    z-index: 2;
+                }
+                h2 {
+                    font-weight: 650;
+                    transform: translate(0, 64px);
+                }
+
+            }
+        }
+
+        .reel {
+            // border: 2px dashed coral;
+            height: calc(65rem + 69vw); // Without the parallax, this height is responsive (ends at) the 2 & 4 column's sixth picture.
+            width: 100vw;
+            display: flex;
+            gap: 1.6rem;
+            justify-content: space-between;
+            transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
+            overflow: hidden;
+            
+            .columnOuter {
+                // border: 2px dashed yellow;
+              width: 25%;
+              transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
+                &:nth-of-type(2),
+                &:nth-of-type(4) {
+                    transform: translate(0, 10%);
+                }
+
+              .reelImg {
+                  position: relative;
+                  height: calc(16rem + 16vw);
+                  margin-bottom: calc(0.6rem + 1.2vw);
+                  border-radius: calc(0.4rem + 0.2vw);
+                  overflow: hidden;
+                  img {
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                  }
+                  figcaption {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 16%;
+                    padding: 1.2rem;
+                    background: linear-gradient(0deg, #000000cc 40%, #00000000);
+                    // background: linear-gradient(0deg, red 20%, blue);
+                    z-index: 2;
+                    h4, h5 {
+                        color: $sunderSnow;
+                        font-family: $monument;
+                        font-size: $S-Text;
+                        font-weight: 675;
+                    }
+                    h5 {
+                        font-size: $XS-Text;
+                        font-weight: 300;
+                    }
+                  }
+              }
+    
+              &Active {
+                transform: translate(0, -50vh);
+              }
+            }
+    
+            &Active {
+              position: absolute;
+              right: 0;
+            }
+        }
+        
+        .enzy {
+            margin-top: 4rem;
+            width: 100vw;
+            height: 200vh;
+            // background: #6CA793;
+            background: linear-gradient(180deg, #6CA793, #6CA79300);
         }
 
         &Active {
