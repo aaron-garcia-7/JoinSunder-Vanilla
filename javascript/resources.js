@@ -58,6 +58,55 @@ mainContent.addEventListener("click", closeNav);
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Text Wrappers
+gsap.to("#textWrapper1", {
+  transform: "translate(0, 0)",
+  scrollTrigger: {
+    trigger: ".smartHeader",
+    scrub: 0.1,
+    start: "top 5%",
+    end: "140% top",
+    // markers: {
+    //   indent: 64,
+    //   startColor: "lightblue",
+    //   endColor: "lightblue",
+    // },
+  },
+});
+
+gsap.to("#textWrapper2", {
+  transform: "translate(0, 0)",
+  scrollTrigger: {
+    trigger: ".smartHeader",
+    scrub: 0.1,
+    start: "180% 5%",
+    end: "420% top",
+    // markers: {
+    //   startColor: "yellow",
+    //   endColor: "yellow",
+    // },
+  },
+});
+
+// Meet the ___ Team
+
+gsap.to(".content", {
+  transform: "translate(0, 100%)",
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".meetTheTeam",
+    scrub: true,
+    start: "top top",
+    end: "bottom bottom",
+    markers: {
+      startColor: "violet",
+      endColor: "violet",
+    },
+  },
+});
+
+// Image Reels
+
 gsap.to("#col1", {
   y: "-21%",
   ease: "none",

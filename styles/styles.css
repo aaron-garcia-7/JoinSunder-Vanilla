@@ -3956,7 +3956,7 @@ ul li {
 .resources .mainContent .productivity {
   width: 100vw;
   height: auto;
-  padding: 0 2.4rem;
+  padding-left: 2.4rem;
 }
 
 .resources .mainContent .productivity .smartHeader {
@@ -3968,13 +3968,27 @@ ul li {
 }
 
 .resources .mainContent .productivity .smartHeader h1 {
-  font-size: calc(1.6rem + 2.8vw);
+  font-size: calc(0.8rem + 4vw);
   font-weight: 500;
   margin-bottom: 2rem;
 }
 
 .resources .mainContent .productivity .smartHeader h2 {
   font-size: calc(1rem + 1.2vw);
+}
+
+.resources .mainContent .productivity .smartHeader .textWrapper {
+  display: inline-block;
+}
+
+.resources .mainContent .productivity .smartHeader .textWrapper:nth-of-type(1) {
+  -webkit-transform: translate(0, 1600%);
+          transform: translate(0, 1600%);
+}
+
+.resources .mainContent .productivity .smartHeader .textWrapper:nth-of-type(2) {
+  -webkit-transform: translate(0, 3200%);
+          transform: translate(0, 3200%);
 }
 
 .resources .mainContent .productivity .images {
@@ -3987,15 +4001,16 @@ ul li {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 4.8rem;
-  -webkit-transform: translate(0, -4%);
-          transform: translate(0, -4%);
+  -webkit-transform: translate(0, -6%);
+          transform: translate(0, -6%);
 }
 
 .resources .mainContent .productivity .images .imgWrapper {
   background: #C6D3D8;
   width: calc(16rem + 16vw);
-  height: calc(20rem + 20vw);
+  height: calc(24rem + 24vw);
   border-radius: calc(0.4rem + 0.2vw);
+  border-radius: calc(0.4rem + 0.2vw) 0 0 calc(0.4rem + 0.2vw);
   overflow: hidden;
 }
 
@@ -4007,6 +4022,11 @@ ul li {
 }
 
 .resources .mainContent .meetTheTeam {
+  width: 100vw;
+  height: 200vh;
+}
+
+.resources .mainContent .meetTheTeam .content {
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -4015,7 +4035,7 @@ ul li {
 .resources .mainContent .meetTheTeam .row, .resources .mainContent .meetTheTeam .column {
   position: absolute;
   display: inline-block;
-  top: 50%;
+  top: 40%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -4032,6 +4052,33 @@ ul li {
   border-bottom: 1px solid #D4D4D4;
   width: calc(16rem + 48vw);
   padding: 1.4rem;
+  z-index: 2;
+}
+
+.resources .mainContent .meetTheTeam .row::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 50;
+  -webkit-transform: translate(-27%, -100%);
+          transform: translate(-27%, -100%);
+  width: 30%;
+  height: 320%;
+  background: rgba(247, 247, 247, 0.8);
+  z-index: 2;
+}
+
+.resources .mainContent .meetTheTeam .row::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50;
+  -webkit-transform: translate(-27%, 100%);
+          transform: translate(-27%, 100%);
+  width: 30%;
+  height: 320%;
+  background: rgba(247, 247, 247, 0.8);
+  z-index: 2;
 }
 
 .resources .mainContent .meetTheTeam .row h2 .spacer {
@@ -4053,31 +4100,9 @@ ul li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transform: translate(-28%, -50%);
-          transform: translate(-28%, -50%);
+  -webkit-transform: translate(-28%, -25%);
+          transform: translate(-28%, -25%);
   padding: 1rem;
-}
-
-.resources .mainContent .meetTheTeam .column::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 36%;
-  background: #f7f7f7cc;
-  z-index: 2;
-}
-
-.resources .mainContent .meetTheTeam .column::after {
-  content: "";
-  position: absolute;
-  bottom: -12%;
-  left: 0;
-  width: 100%;
-  height: 48%;
-  background: #f7f7f7cc;
-  z-index: 2;
 }
 
 .resources .mainContent .meetTheTeam .column h2 {
@@ -4087,6 +4112,7 @@ ul li {
 }
 
 .resources .mainContent .reel {
+  border: 2px dashed violet;
   height: calc(65rem + 69vw);
   width: 100vw;
   display: -webkit-box;
@@ -4176,6 +4202,15 @@ ul li {
 .resources .mainContentActive {
   -webkit-transform: translate(0, -50vh);
           transform: translate(0, -50vh);
+}
+
+@media (max-width: 1440px) {
+  .resources .mainContent .meetTheTeam .row, .resources .mainContent .meetTheTeam .column {
+    top: 36%;
+  }
+  .resources .mainContent .meetTheTeam .column {
+    height: calc(12rem + 12vw);
+  }
 }
 
 .contact .logo, .contact .navLogo {
