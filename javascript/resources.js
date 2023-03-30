@@ -98,10 +98,40 @@ gsap.to(".content", {
     scrub: true,
     start: "top top",
     end: "bottom bottom",
-    markers: {
-      startColor: "violet",
-      endColor: "violet",
-    },
+    // markers: {
+    //   startColor: "violet",
+    //   endColor: "violet",
+    // },
+  },
+});
+
+gsap.to(".column", {
+  transform: "translate(-28%, -80%)",
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".meetTheTeam",
+    scrub: true,
+    start: "top top",
+    end: "bottom bottom",
+    // markers: {
+    //   startColor: "violet",
+    //   endColor: "violet",
+    // },
+  },
+});
+
+gsap.to(".innerColumn", {
+  transform: "translate(0, -24%)",
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".meetTheTeam",
+    scrub: true,
+    start: "top top",
+    end: "bottom bottom",
+    // markers: {
+    //   startColor: "violet",
+    //   endColor: "violet",
+    // },
   },
 });
 
