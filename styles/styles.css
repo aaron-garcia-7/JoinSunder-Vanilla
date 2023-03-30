@@ -4196,9 +4196,159 @@ ul li {
 .resources .mainContent .enzy {
   margin-top: 4rem;
   width: 100vw;
-  height: 200vh;
+  height: 800vh;
   background: -webkit-gradient(linear, left top, left bottom, from(#6CA793), to(#6CA79300));
   background: linear-gradient(180deg, #6CA793, #6CA79300);
+}
+
+.resources .mainContent .enzy .enzyHero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+.resources .mainContent .enzy .cta2Aside {
+  position: relative;
+  background: red;
+}
+
+.resources .mainContent .enzy .cta2Aside .cta2 {
+  background: -webkit-gradient(linear, left top, right top, from(#15499340), to(#4AABD040));
+  background: linear-gradient(90deg, #15499340, #4AABD040);
+  color: transparent;
+  border: 1px solid #6DA894;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.resources .mainContent .enzy .cta2Aside .cta2::before {
+  content: 'Watch Promo';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-56%, -50%);
+          transform: translate(-56%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  z-index: 1;
+  color: #f7f7f7;
+  font-size: calc(0.8rem + 0.4vw);
+}
+
+.resources .mainContent .enzy .cta2Aside .cta2 .playIconFrame {
+  width: calc(1rem + 1vw);
+  height: calc(1rem + 1vw);
+  border-radius: 50%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translate(150%, 0);
+          transform: translate(150%, 0);
+  overflow: hidden;
+  -webkit-transition: opacity 0.2s ease, -webkit-transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1);
+  transition: opacity 0.2s ease, -webkit-transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1);
+  transition: transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1), opacity 0.2s ease;
+  transition: transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1), opacity 0.2s ease, -webkit-transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1);
+}
+
+.resources .mainContent .enzy .cta2Aside .cta2 .playIconFrame .playIcon {
+  width: calc(0.5rem + 0.7vw);
+  height: calc(0.5rem + 0.7vw);
+}
+
+.resources .mainContent .enzy .cta2Aside .cta2 .playIconFrame .playIcon1 {
+  -webkit-transform: translate(-120%, 0);
+          transform: translate(-120%, 0);
+  -webkit-animation: loopRight2 3.6s cubic-bezier(0.6, 0, 0.4, 1) forwards infinite;
+          animation: loopRight2 3.6s cubic-bezier(0.6, 0, 0.4, 1) forwards infinite;
+}
+
+.resources .mainContent .enzy .cta2Aside .cta2 .playIconFrame .playIcon2 {
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  -webkit-animation: loopRight 3.6s cubic-bezier(0.75, 0, 0.25, 1) forwards infinite;
+          animation: loopRight 3.6s cubic-bezier(0.75, 0, 0.25, 1) forwards infinite;
+}
+
+@keyframes loopRight {
+  0% {
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+  }
+  80% {
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+  }
+  100% {
+    -webkit-transform: translate(140%, 0);
+            transform: translate(140%, 0);
+  }
+}
+
+@keyframes loopRight2 {
+  0% {
+    -webkit-transform: translate(-120%);
+            transform: translate(-120%);
+  }
+  90% {
+    -webkit-transform: translate(-120%);
+            transform: translate(-120%);
+  }
+  100% {
+    -webkit-transform: translate(50%, 0);
+            transform: translate(50%, 0);
+  }
+}
+
+.resources .mainContent .enzy .phonesWrapper {
+  border: 2px dashed yellow;
+  width: 32%;
+}
+
+.resources .mainContent .enzy .phonesWrapper .phonesImg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.resources .mainContent .enzy .backgroundGlyph {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
 }
 
 .resources .mainContentActive {

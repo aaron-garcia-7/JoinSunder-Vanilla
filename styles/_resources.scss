@@ -247,9 +247,108 @@
         .enzy {
             margin-top: 4rem;
             width: 100vw;
-            height: 200vh;
+            height: 800vh;
             // background: #6CA793;
             background: linear-gradient(180deg, #6CA793, #6CA79300);
+            .enzyHero {
+                position: relative;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                display: none;
+            }
+            .cta2Aside {
+                position: relative;
+                background: red;
+                .cta2 {
+                    background: linear-gradient(90deg, #15499340, #4AABD040);
+                    color: transparent;
+                    border: 1px solid #6DA894;
+                    display: flex;
+                    cursor: pointer;
+                      &::before {
+                        content: 'Watch Promo';
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-56%, -50%);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        z-index: 1;
+                        color: $sunderSnow;
+                        font-size: $S-Text;
+                    }
+                    .playIconFrame {
+                      width: calc(1rem + 1vw);
+                      height: calc(1rem + 1vw);
+                      border-radius: 50%;
+                      align-self: center;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    //   transform: translate(50%, 0);
+                      transform: translate(150%, 0);
+                      overflow: hidden;
+                      transition: transform 0.4s cubic-bezier(.05,.6,.56,1), opacity 0.2s ease;
+                      .playIcon {
+                        width: calc(0.5rem + 0.7vw);
+                        height: calc(0.5rem + 0.7vw);
+                      }
+                      .playIcon1 {
+                        transform: translate(-120%, 0);
+                        animation: loopRight2 3.6s cubic-bezier(.6,0,.4,1) forwards infinite;
+                      }
+                      .playIcon2 {
+                        transform: translate(-50%, 0);
+                        animation: loopRight 3.6s cubic-bezier(.75,0,.25,1) forwards infinite;
+                      }
+                    }
+                  }
+                  @keyframes loopRight {
+                    0% {
+                      transform: translate(-50%);
+                    }
+                    80% {
+                      transform: translate(-50%);
+                    }
+                    100% {
+                      transform: translate(140%, 0);
+                    }
+                  }
+                  @keyframes loopRight2 {
+                    0% {
+                      transform: translate(-120%);
+                    }
+                    90% {
+                      transform: translate(-120%);
+                    }
+                    100% {
+                      transform: translate(50%, 0);
+                    }
+                  }
+            }
+            .phonesWrapper {
+                border: 2px dashed yellow;
+                width: 32%;
+                .phonesImg {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .backgroundGlyph {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, 0);
+                z-index: -1;
+                width: 100vw;
+                height: 100vh;
+            }
         }
 
         &Active {
