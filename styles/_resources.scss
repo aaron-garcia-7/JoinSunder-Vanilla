@@ -130,32 +130,27 @@
                 width: calc(16rem + 48vw);
                 padding: 1.4rem;
                 z-index: 2;
-                &::before {
-                    // border: 2px solid coral;
+                &::before,
+                &::after {
+                    // border: 1px dashed coral;
                     content: "";
                     position: absolute;
-                    top: -1px;
                     left: 50;
-                    transform: translate(calc(-2rem - 1.5vw), -100%);
-                    width: 30%;
-                    height: 320%;
+                    width: 29%;
+                    height: 300%;
                     background: rgba($sunderSnow, 0.9);
-                    // backdrop-filter: blur(2px);
+                    backdrop-filter: blur(2px);
                     z-index: 2;
                 }
+                &::before {
+                    top: -2px;
+                    transform: translate(calc(-1.9rem - 1.5vw), -100%);
+                    // transform: translate(calc(-3.2rem - 1.5vw), -100%);
+                }
                 &::after {
-                    // border: 2px solid coral;
-                    content: "";
-                    position: absolute;
                     bottom: -1px;
-                    left: 50;
-                    // transform: translate(-27%, 100%);
-                    transform: translate(calc(-2rem - 1.5vw), 100%);
-                    width: 30%;
-                    height: 320%;
-                    background: rgba($sunderSnow, 0.9);
-                    // backdrop-filter: blur(2px);
-                    z-index: 2;
+                    transform: translate(calc(-1.9rem - 1.5vw), 100%);
+                    // transform: translate(calc(-3.2rem - 1.5vw), 100%);
                 }
                 h2 {
                     .spacer {
@@ -167,11 +162,8 @@
             .column {
                 border-left: 1px solid #D4D4D4;
                 border-right: 1px solid #D4D4D4;
-                // height: calc(16rem + 12vw);
                 height: calc(24rem + 4vw);
-                // height: calc(20rem + 8vw);
-                // transform: translate(-28%, -50%);
-                transform: translate(-28%, -25%);
+                transform: translate(-29%, -25%);
                 padding: 1rem;
                 .innerColumn {
                     width: 100%;

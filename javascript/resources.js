@@ -106,7 +106,7 @@ gsap.to(".content", {
 });
 
 gsap.to(".column", {
-  transform: "translate(-28%, -80%)",
+  transform: "translate(-29%, -80%)",
   ease: "none",
   scrollTrigger: {
     trigger: ".meetTheTeam",
@@ -122,6 +122,7 @@ gsap.to(".column", {
 
 gsap.to(".innerColumn", {
   transform: "translate(0, -24%)",
+  // transform: "translate(0, -120px)",
   ease: "none",
   scrollTrigger: {
     trigger: ".meetTheTeam",
