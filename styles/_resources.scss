@@ -249,7 +249,9 @@
             width: 100vw;
             height: 800vh;
             // background: #6CA793;
-            background: linear-gradient(180deg, #6CA793, #6CA79300);
+            background: linear-gradient(180deg, #6CA793, #6CA79300 140%);
+            // background: linear-gradient(180deg, red, white 140%);
+            overflow: hidden;
             .enzyHero {
                 position: relative;
                 width: 100vw;
@@ -257,11 +259,12 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                display: none;
+                // display: none;
             }
             .cta2Aside {
                 position: relative;
                 background: red;
+                display: none;
                 .cta2 {
                     background: linear-gradient(90deg, #15499340, #4AABD040);
                     color: transparent;
@@ -332,8 +335,9 @@
                   }
             }
             .phonesWrapper {
-                border: 2px dashed yellow;
+                // border: 2px dashed yellow;
                 width: 32%;
+                z-index: 1;
                 .phonesImg {
                     width: 100%;
                     height: 100%;
@@ -341,13 +345,14 @@
                 }
             }
             .backgroundGlyph {
+                border: 4px solid black;
                 position: absolute;
                 top: 0;
                 left: 50%;
-                transform: translate(-50%, 0);
-                z-index: -1;
-                width: 100vw;
-                height: 100vh;
+                transform: translate(-50%, -40%);
+                width: 120%;
+                opacity: 0.5;
+                // height: 100vh;
             }
         }
 
