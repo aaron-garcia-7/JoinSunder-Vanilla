@@ -4035,7 +4035,7 @@ ul li {
 .resources .mainContent .meetTheTeam .row, .resources .mainContent .meetTheTeam .column {
   position: absolute;
   display: inline-block;
-  top: 40%;
+  top: 46%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -4209,21 +4209,40 @@ ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.resources .mainContent .enzy .enzyHero .cta2Aside {
+  width: 36%;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 1;
 }
 
-.resources .mainContent .enzy .cta2Aside {
+.resources .mainContent .enzy .enzyHero .cta2Aside .enzyLogo {
+  width: 80%;
+  margin-bottom: 2rem;
+}
+
+.resources .mainContent .enzy .enzyHero .cta2Aside .cta2 {
   position: relative;
-  background: red;
-  display: none;
-}
-
-.resources .mainContent .enzy .cta2Aside .cta2 {
   background: -webkit-gradient(linear, left top, right top, from(#15499340), to(#4AABD040));
   background: linear-gradient(90deg, #15499340, #4AABD040);
   color: transparent;
@@ -4232,9 +4251,11 @@ ul li {
   display: -ms-flexbox;
   display: flex;
   cursor: pointer;
+  width: calc(8rem + 8vw);
+  height: calc(2.4rem + 1vw);
 }
 
-.resources .mainContent .enzy .cta2Aside .cta2::before {
+.resources .mainContent .enzy .enzyHero .cta2Aside .cta2::before {
   content: 'Watch Promo';
   position: absolute;
   top: 50%;
@@ -4253,10 +4274,10 @@ ul li {
   width: 100%;
   z-index: 1;
   color: #f7f7f7;
-  font-size: calc(0.8rem + 0.4vw);
+  font-size: calc(0.8rem + 1vw);
 }
 
-.resources .mainContent .enzy .cta2Aside .cta2 .playIconFrame {
+.resources .mainContent .enzy .enzyHero .cta2Aside .cta2 .playIconFrame {
   width: calc(1rem + 1vw);
   height: calc(1rem + 1vw);
   border-radius: 50%;
@@ -4271,8 +4292,8 @@ ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transform: translate(150%, 0);
-          transform: translate(150%, 0);
+  -webkit-transform: translate(6.4vw, 0);
+          transform: translate(6.4vw, 0);
   overflow: hidden;
   -webkit-transition: opacity 0.2s ease, -webkit-transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1);
   transition: opacity 0.2s ease, -webkit-transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1);
@@ -4280,19 +4301,19 @@ ul li {
   transition: transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1), opacity 0.2s ease, -webkit-transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1);
 }
 
-.resources .mainContent .enzy .cta2Aside .cta2 .playIconFrame .playIcon {
+.resources .mainContent .enzy .enzyHero .cta2Aside .cta2 .playIconFrame .playIcon {
   width: calc(0.5rem + 0.7vw);
   height: calc(0.5rem + 0.7vw);
 }
 
-.resources .mainContent .enzy .cta2Aside .cta2 .playIconFrame .playIcon1 {
+.resources .mainContent .enzy .enzyHero .cta2Aside .cta2 .playIconFrame .playIcon1 {
   -webkit-transform: translate(-120%, 0);
           transform: translate(-120%, 0);
   -webkit-animation: loopRight2 3.6s cubic-bezier(0.6, 0, 0.4, 1) forwards infinite;
           animation: loopRight2 3.6s cubic-bezier(0.6, 0, 0.4, 1) forwards infinite;
 }
 
-.resources .mainContent .enzy .cta2Aside .cta2 .playIconFrame .playIcon2 {
+.resources .mainContent .enzy .enzyHero .cta2Aside .cta2 .playIconFrame .playIcon2 {
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   -webkit-animation: loopRight 3.6s cubic-bezier(0.75, 0, 0.25, 1) forwards infinite;
@@ -4329,19 +4350,36 @@ ul li {
   }
 }
 
-.resources .mainContent .enzy .phonesWrapper {
-  width: 32%;
+.resources .mainContent .enzy .enzyHero .phonesWrapper {
+  width: 42%;
   z-index: 1;
 }
 
-.resources .mainContent .enzy .phonesWrapper .phonesImg {
+.resources .mainContent .enzy .enzyHero .phonesWrapper .phonesImg {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.resources .mainContent .enzy .backgroundGlyph {
+.resources .mainContent .enzy .enzyHero .subText {
+  position: absolute;
+  bottom: 0;
+  right: 16vw;
+  z-index: 1;
+}
+
+.resources .mainContent .enzy .enzyHero .subText h3 {
+  font-size: calc(1rem + 1.2vw);
+  font-weight: 200;
+}
+
+.resources .mainContent .enzy .enzyHero .subText .strong {
+  font-size: calc(0.4rem + 2.8vw);
+  font-weight: 800;
+}
+
+.resources .mainContent .enzy .enzyHero .backgroundGlyph {
   position: absolute;
   top: 0;
   left: 50%;
@@ -4358,10 +4396,12 @@ ul li {
 
 @media (max-width: 1440px) {
   .resources .mainContent .meetTheTeam .row, .resources .mainContent .meetTheTeam .column {
-    top: 36%;
+    top: 42%;
   }
   .resources .mainContent .meetTheTeam .column {
     height: calc(12rem + 12vw);
+    -webkit-transform: translate(-29%, -29%);
+            transform: translate(-29%, -29%);
   }
 }
 
