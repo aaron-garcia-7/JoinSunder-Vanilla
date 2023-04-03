@@ -1,3 +1,6 @@
+/* Enzy Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Saira:wght@100;300;500;700;900&display=swap");
+/* Sunder Fonts */
 @font-face {
   font-family: "satoshi";
   src: url(../fonts/Satoshi-Variable.woff2);
@@ -4062,8 +4065,6 @@ ul li {
   width: 29%;
   height: 300%;
   background: rgba(247, 247, 247, 0.9);
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
   z-index: 2;
 }
 
@@ -4164,10 +4165,20 @@ ul li {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 16%;
-  padding: 1.2rem;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(40%, #000000cc), to(#00000000));
-  background: linear-gradient(0deg, #000000cc 40%, #00000000);
+  height: 18%;
+  padding: 0.8rem 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(24%, #000000ac), to(#00000000));
+  background: linear-gradient(0deg, #000000ac 24%, #00000000);
   z-index: 2;
 }
 
@@ -4194,9 +4205,9 @@ ul li {
 }
 
 .resources .mainContent .enzy {
+  position: relative;
   margin-top: 4rem;
   width: 100vw;
-  height: 800vh;
   background: -webkit-gradient(linear, left top, left bottom, from(#6CA793), color-stop(140%, #6CA79300));
   background: linear-gradient(180deg, #6CA793, #6CA79300 140%);
   overflow: hidden;
@@ -4243,8 +4254,8 @@ ul li {
 
 .resources .mainContent .enzy .enzyHero .cta2Aside .cta2 {
   position: relative;
-  background: -webkit-gradient(linear, left top, right top, from(#15499340), to(#4AABD040));
-  background: linear-gradient(90deg, #15499340, #4AABD040);
+  background: -webkit-gradient(linear, left top, right top, from(#6DA8944d), to(#6EA89570));
+  background: linear-gradient(90deg, #6DA8944d, #6EA89570);
   color: transparent;
   border: 1px solid #6DA894;
   display: -webkit-box;
@@ -4364,19 +4375,23 @@ ul li {
 
 .resources .mainContent .enzy .enzyHero .subText {
   position: absolute;
-  bottom: 0;
-  right: 16vw;
+  bottom: 2vw;
+  right: 12vw;
   z-index: 1;
 }
 
 .resources .mainContent .enzy .enzyHero .subText h3 {
+  color: #262626;
+  font-family: "Saira", sans-serif;
   font-size: calc(1rem + 1.2vw);
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .resources .mainContent .enzy .enzyHero .subText .strong {
-  font-size: calc(0.4rem + 2.8vw);
-  font-weight: 800;
+  font-size: calc(1.6rem + 2.4vw);
+  font-weight: 700;
+  -webkit-transform: translate(0, -24px);
+          transform: translate(0, -24px);
 }
 
 .resources .mainContent .enzy .enzyHero .backgroundGlyph {
@@ -4387,6 +4402,120 @@ ul li {
           transform: translate(-50%, -40%);
   width: 120%;
   opacity: 0.5;
+}
+
+.resources .mainContent .enzy .appUsage {
+  width: 100vw;
+  height: 360vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: calc(2rem + 4vw);
+}
+
+.resources .mainContent .enzy .appUsage .block {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.resources .mainContent .enzy .appUsage .block .blockText {
+  text-align: center;
+}
+
+.resources .mainContent .enzy .appUsage .block .blockText h3 {
+  color: #FAFAFA;
+  font-family: "Saira", sans-serif;
+  font-size: calc(1rem + 1.2vw);
+  font-weight: 300;
+}
+
+.resources .mainContent .enzy .appUsage .block .blockText .strong {
+  font-size: calc(1.6rem + 2.4vw);
+  font-weight: 700;
+}
+
+.resources .mainContent .enzy .appUsage .block2,
+.resources .mainContent .enzy .appUsage .block4 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.resources .mainContent .enzy .pageFooter {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 90%;
+  height: clamp(8rem, 8%, 11rem);
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #BFD9D000), to(#6DA894));
+  background: linear-gradient(90deg, #BFD9D000 10%, #6DA894);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 3.2rem 3.2rem 0 0;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  align-items: center;
+  padding-right: 4rem;
+  z-index: 2;
+}
+
+.resources .mainContent .enzy .pageFooter .cta {
+  position: relative;
+  width: calc(8rem + 4vw);
+  height: calc(2rem + 1vw);
+  border: 1px solid #f7f7f7;
+  opacity: 0;
+  -webkit-animation: appear 0.6s ease 0.6s forwards;
+          animation: appear 0.6s ease 0.6s forwards;
+  -webkit-transform: translate(0, -60%);
+          transform: translate(0, -60%);
+}
+
+.resources .mainContent .enzy .pageFooter .cta::before {
+  content: 'Join The Squad';
+  color: #f7f7f7;
+  font-size: calc(0.8rem + 0.4vw);
+}
+
+.resources .mainContent .enzy .pageFooter .cta .ctaCircle {
+  background: #f7f7f7;
+}
+
+.resources .mainContent .enzy .pageFooter .cta:hover::before {
+  color: #0c5ff2;
+}
+
+.resources .mainContent .enzy .pageFooter .footerImg {
+  position: absolute;
+  bottom: 0;
+  right: -2%;
+  width: 16%;
 }
 
 .resources .mainContentActive {

@@ -1,3 +1,7 @@
+/* Enzy Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@100;300;500;700;900&display=swap');
+
+/* Sunder Fonts */
 @font-face {
   font-family: "satoshi";
   src: url(../fonts/Satoshi-Variable.woff2);
@@ -43,6 +47,7 @@ Monument Weights
 
 $satoshi: "satoshi", sans-serif;
 $monument: "monument", sans-serif;
+$saira: 'Saira', sans-serif;
 
 $sunderSnow: #f7f7f7;
 $sunderIce: #C6D3D8;
@@ -50,6 +55,7 @@ $sunderRoyalLight: #0c5ff2;
 $sunderRoyal: #074895;
 $sunderNavy: #061A2A;
 $sunderMidnight: #000014;
+$enzyHero: #6DA894;
 
 $Hero-Text: calc(1.6rem + 2.4vw);
 $XXL-Text: calc(0.4rem + 2.8vw);
