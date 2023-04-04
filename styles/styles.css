@@ -4070,14 +4070,14 @@ ul li {
 
 .resources .mainContent .meetTheTeam .row::before {
   top: -2px;
-  -webkit-transform: translate(calc(-1.9rem - 1.5vw), -100%);
-          transform: translate(calc(-1.9rem - 1.5vw), -100%);
+  -webkit-transform: translate(calc(-2.4rem - 1.8vw), -100%);
+          transform: translate(calc(-2.4rem - 1.8vw), -100%);
 }
 
 .resources .mainContent .meetTheTeam .row::after {
-  bottom: -1px;
-  -webkit-transform: translate(calc(-1.9rem - 1.5vw), 100%);
-          transform: translate(calc(-1.9rem - 1.5vw), 100%);
+  bottom: -2px;
+  -webkit-transform: translate(calc(-2.4rem - 1.8vw), 100%);
+          transform: translate(calc(-2.4rem - 1.8vw), 100%);
 }
 
 .resources .mainContent .meetTheTeam .row h2 .spacer {
@@ -4089,6 +4089,7 @@ ul li {
   border-left: 1px solid #D4D4D4;
   border-right: 1px solid #D4D4D4;
   height: calc(24rem + 4vw);
+  left: 49%;
   -webkit-transform: translate(-29%, -25%);
           transform: translate(-29%, -25%);
   padding: 1rem;
@@ -4214,9 +4215,10 @@ ul li {
 }
 
 .resources .mainContent .enzy .enzyHero {
+  border: 3px dashed black;
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: clamp(36rem, 100vh, 64rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4375,8 +4377,10 @@ ul li {
 
 .resources .mainContent .enzy .enzyHero .subText {
   position: absolute;
-  bottom: 2vw;
+  bottom: 50%;
   right: 12vw;
+  -webkit-transform: translate(0, 280%);
+          transform: translate(0, 280%);
   z-index: 1;
 }
 
@@ -4405,8 +4409,9 @@ ul li {
 }
 
 .resources .mainContent .enzy .appUsage {
+  position: relative;
   width: 100vw;
-  height: 360vh;
+  height: clamp(224rem, 380vh, 264rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4420,10 +4425,11 @@ ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: calc(2rem + 4vw);
+  gap: calc(1rem + 4vw);
 }
 
 .resources .mainContent .enzy .appUsage .block {
+  position: relative;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4433,6 +4439,10 @@ ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.resources .mainContent .enzy .appUsage .block .blockImg {
+  width: 26%;
 }
 
 .resources .mainContent .enzy .appUsage .block .blockText {
@@ -4451,12 +4461,32 @@ ul li {
   font-weight: 700;
 }
 
+.resources .mainContent .enzy .appUsage .block .linearDot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: calc(0.4rem + 0.4vw);
+  height: calc(0.4rem + 0.4vw);
+  background: #f7f7f7;
+  border-radius: 50%;
+  z-index: 2;
+}
+
 .resources .mainContent .enzy .appUsage .block2,
 .resources .mainContent .enzy .appUsage .block4 {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+}
+
+.resources .mainContent .enzy .appUsage .progressLine {
+  position: absolute;
+  width: 0.1rem;
+  height: 64%;
+  background: #f7f7f7;
 }
 
 .resources .mainContent .enzy .pageFooter {
@@ -4531,6 +4561,20 @@ ul li {
     height: calc(12rem + 12vw);
     -webkit-transform: translate(-29%, -29%);
             transform: translate(-29%, -29%);
+  }
+  .resources .mainContent .enzy .enzyHero {
+    border: 2px solid yellow;
+    height: clamp(28rem, 80vh, 56rem);
+  }
+  .resources .mainContent .enzy .enzyHero .backgroundGlyph {
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, -28%);
+            transform: translate(-50%, -28%);
+    width: 120%;
+  }
+  .resources .mainContent .enzy .appUsage {
+    height: 420vh;
   }
 }
 
