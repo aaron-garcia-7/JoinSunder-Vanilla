@@ -239,7 +239,7 @@ ul li {
           box-shadow: 0px 2px 8px #31313155;
 }
 
-.burgerContainer .burger .line, .burgerContainer .burger .lineCross, .burgerContainer .burger .line5, .burgerContainer .burger .home .videoContainer .closeVideoBurger .lineCross, .home .videoContainer .closeVideoBurger .burgerContainer .burger .lineCross, .burgerContainer .burger .home .videoContainer .closeVideoBurger .line5, .home .videoContainer .closeVideoBurger .burgerContainer .burger .line5 {
+.burgerContainer .burger .line, .burgerContainer .burger .lineCross, .burgerContainer .burger .line5 {
   background: #f7f7f7;
   width: 40%;
   height: 2px;
@@ -248,18 +248,18 @@ ul li {
   transition: 0.4s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.4s;
 }
 
-.burgerContainer .burger .line:nth-of-type(2), .burgerContainer .burger .lineCross:nth-of-type(2), .burgerContainer .burger .line5:nth-of-type(2), .burgerContainer .burger .home .videoContainer .closeVideoBurger .lineCross:nth-of-type(2), .home .videoContainer .closeVideoBurger .burgerContainer .burger .lineCross:nth-of-type(2), .burgerContainer .burger .home .videoContainer .closeVideoBurger .line5:nth-of-type(2), .home .videoContainer .closeVideoBurger .burgerContainer .burger .line5:nth-of-type(2) {
+.burgerContainer .burger .line:nth-of-type(2), .burgerContainer .burger .lineCross:nth-of-type(2), .burgerContainer .burger .line5:nth-of-type(2) {
   margin: 4px 0 4px 0;
   -webkit-transition-delay: 0.46s;
           transition-delay: 0.46s;
 }
 
-.burgerContainer .burger .line:nth-of-type(3), .burgerContainer .burger .lineCross:nth-of-type(3), .burgerContainer .burger .line5:nth-of-type(3), .burgerContainer .burger .home .videoContainer .closeVideoBurger .lineCross:nth-of-type(3), .home .videoContainer .closeVideoBurger .burgerContainer .burger .lineCross:nth-of-type(3), .burgerContainer .burger .home .videoContainer .closeVideoBurger .line5:nth-of-type(3), .home .videoContainer .closeVideoBurger .burgerContainer .burger .line5:nth-of-type(3) {
+.burgerContainer .burger .line:nth-of-type(3), .burgerContainer .burger .lineCross:nth-of-type(3), .burgerContainer .burger .line5:nth-of-type(3) {
   -webkit-transition-delay: 0.52s;
           transition-delay: 0.52s;
 }
 
-.burgerContainer .burger .lineCross, .burgerContainer .burger .line5, .burgerContainer .burger .home .videoContainer .closeVideoBurger .line5, .home .videoContainer .closeVideoBurger .burgerContainer .burger .line5 {
+.burgerContainer .burger .lineCross, .burgerContainer .burger .line5 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -279,26 +279,26 @@ ul li {
   background: #061A2A;
 }
 
-.burgerContainer .burgerActive .line, .burgerContainer .burgerActive .burger .lineCross, .burgerContainer .burger .burgerActive .lineCross, .burgerContainer .burgerActive .burger .line5, .burgerContainer .burger .burgerActive .line5, .burgerContainer .burgerActive .home .videoContainer .closeVideoBurger .lineCross, .home .videoContainer .closeVideoBurger .burgerContainer .burgerActive .lineCross, .burgerContainer .burgerActive .home .videoContainer .closeVideoBurger .line5, .home .videoContainer .closeVideoBurger .burgerContainer .burgerActive .line5 {
+.burgerContainer .burgerActive .line, .burgerContainer .burgerActive .burger .lineCross, .burgerContainer .burger .burgerActive .lineCross, .burgerContainer .burgerActive .burger .line5, .burgerContainer .burger .burgerActive .line5, .burgerContainer .burgerActive .videoContainer .closeVideoBurger .lineCross, .videoContainer .closeVideoBurger .burgerContainer .burgerActive .lineCross, .burgerContainer .burgerActive .videoContainer .closeVideoBurger .line5, .videoContainer .closeVideoBurger .burgerContainer .burgerActive .line5 {
   width: 0;
 }
 
-.burgerContainer .burgerActive .line:nth-of-type(1), .burgerContainer .burgerActive .burger .lineCross:nth-of-type(1), .burgerContainer .burger .burgerActive .lineCross:nth-of-type(1), .burgerContainer .burgerActive .burger .line5:nth-of-type(1), .burgerContainer .burger .burgerActive .line5:nth-of-type(1), .burgerContainer .burgerActive .home .videoContainer .closeVideoBurger .lineCross:nth-of-type(1), .home .videoContainer .closeVideoBurger .burgerContainer .burgerActive .lineCross:nth-of-type(1), .burgerContainer .burgerActive .home .videoContainer .closeVideoBurger .line5:nth-of-type(1), .home .videoContainer .closeVideoBurger .burgerContainer .burgerActive .line5:nth-of-type(1) {
+.burgerContainer .burgerActive .line:nth-of-type(1), .burgerContainer .burgerActive .burger .lineCross:nth-of-type(1), .burgerContainer .burger .burgerActive .lineCross:nth-of-type(1), .burgerContainer .burgerActive .burger .line5:nth-of-type(1), .burgerContainer .burger .burgerActive .line5:nth-of-type(1), .burgerContainer .burgerActive .videoContainer .closeVideoBurger .lineCross:nth-of-type(1), .videoContainer .closeVideoBurger .burgerContainer .burgerActive .lineCross:nth-of-type(1), .burgerContainer .burgerActive .videoContainer .closeVideoBurger .line5:nth-of-type(1), .videoContainer .closeVideoBurger .burgerContainer .burgerActive .line5:nth-of-type(1) {
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
 
-.burgerContainer .burgerActive .line:nth-of-type(2), .burgerContainer .burgerActive .burger .lineCross:nth-of-type(2), .burgerContainer .burger .burgerActive .lineCross:nth-of-type(2), .burgerContainer .burgerActive .burger .line5:nth-of-type(2), .burgerContainer .burger .burgerActive .line5:nth-of-type(2), .burgerContainer .burgerActive .home .videoContainer .closeVideoBurger .lineCross:nth-of-type(2), .home .videoContainer .closeVideoBurger .burgerContainer .burgerActive .lineCross:nth-of-type(2), .burgerContainer .burgerActive .home .videoContainer .closeVideoBurger .line5:nth-of-type(2), .home .videoContainer .closeVideoBurger .burgerContainer .burgerActive .line5:nth-of-type(2) {
+.burgerContainer .burgerActive .line:nth-of-type(2), .burgerContainer .burgerActive .burger .lineCross:nth-of-type(2), .burgerContainer .burger .burgerActive .lineCross:nth-of-type(2), .burgerContainer .burgerActive .burger .line5:nth-of-type(2), .burgerContainer .burger .burgerActive .line5:nth-of-type(2), .burgerContainer .burgerActive .videoContainer .closeVideoBurger .lineCross:nth-of-type(2), .videoContainer .closeVideoBurger .burgerContainer .burgerActive .lineCross:nth-of-type(2), .burgerContainer .burgerActive .videoContainer .closeVideoBurger .line5:nth-of-type(2), .videoContainer .closeVideoBurger .burgerContainer .burgerActive .line5:nth-of-type(2) {
   -webkit-transition-delay: 0.06s;
           transition-delay: 0.06s;
 }
 
-.burgerContainer .burgerActive .line:nth-of-type(3), .burgerContainer .burgerActive .burger .lineCross:nth-of-type(3), .burgerContainer .burger .burgerActive .lineCross:nth-of-type(3), .burgerContainer .burgerActive .burger .line5:nth-of-type(3), .burgerContainer .burger .burgerActive .line5:nth-of-type(3), .burgerContainer .burgerActive .home .videoContainer .closeVideoBurger .lineCross:nth-of-type(3), .home .videoContainer .closeVideoBurger .burgerContainer .burgerActive .lineCross:nth-of-type(3), .burgerContainer .burgerActive .home .videoContainer .closeVideoBurger .line5:nth-of-type(3), .home .videoContainer .closeVideoBurger .burgerContainer .burgerActive .line5:nth-of-type(3) {
+.burgerContainer .burgerActive .line:nth-of-type(3), .burgerContainer .burgerActive .burger .lineCross:nth-of-type(3), .burgerContainer .burger .burgerActive .lineCross:nth-of-type(3), .burgerContainer .burgerActive .burger .line5:nth-of-type(3), .burgerContainer .burger .burgerActive .line5:nth-of-type(3), .burgerContainer .burgerActive .videoContainer .closeVideoBurger .lineCross:nth-of-type(3), .videoContainer .closeVideoBurger .burgerContainer .burgerActive .lineCross:nth-of-type(3), .burgerContainer .burgerActive .videoContainer .closeVideoBurger .line5:nth-of-type(3), .videoContainer .closeVideoBurger .burgerContainer .burgerActive .line5:nth-of-type(3) {
   -webkit-transition-delay: 0.12s;
           transition-delay: 0.12s;
 }
 
-.burgerContainer .burgerActive .lineCross, .burgerContainer .burgerActive .burger .line5, .burgerContainer .burger .burgerActive .line5, .burgerContainer .burgerActive .home .videoContainer .closeVideoBurger .line5, .home .videoContainer .closeVideoBurger .burgerContainer .burgerActive .line5 {
+.burgerContainer .burgerActive .lineCross, .burgerContainer .burgerActive .burger .line5, .burgerContainer .burger .burgerActive .line5, .burgerContainer .burgerActive .videoContainer .closeVideoBurger .line5, .videoContainer .closeVideoBurger .burgerContainer .burgerActive .line5 {
   width: 40%;
   -webkit-transition-delay: 0.4s;
           transition-delay: 0.4s;
@@ -545,6 +545,159 @@ ul li {
   }
 }
 
+.videoContainer {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000014ad;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.6s ease 0.64s;
+  transition: opacity 0.6s ease 0.64s;
+  z-index: -1;
+}
+
+.videoContainerActive {
+  opacity: 1;
+  pointer-events: all;
+  -webkit-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
+  z-index: 4;
+}
+
+.videoContainer .videoWrapper {
+  width: 64vw;
+}
+
+.videoContainer .videoWrapper video {
+  width: 100%;
+}
+
+.videoContainer .closeVideo {
+  position: absolute;
+  bottom: 2.4rem;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.videoContainer .closeVideoBurger {
+  background: #0c5ff2;
+  position: relative;
+  width: calc(3.2rem + 0.8vw);
+  height: calc(3.2rem + 0.8vw);
+  border-radius: 50%;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background 0.3s ease 0.2s, -webkit-transform 0.3s ease !important;
+  transition: background 0.3s ease 0.2s, -webkit-transform 0.3s ease !important;
+  transition: background 0.3s ease 0.2s, transform 0.3s ease !important;
+  transition: background 0.3s ease 0.2s, transform 0.3s ease, -webkit-transform 0.3s ease !important;
+}
+
+.videoContainer .closeVideoBurger:hover {
+  -webkit-transform: scale(1.12);
+          transform: scale(1.12);
+  -webkit-box-shadow: 0px 2px 8px #31313155;
+          box-shadow: 0px 2px 8px #31313155;
+}
+
+.videoContainer .closeVideoBurger .line, .videoContainer .closeVideoBurger .lineCross, .videoContainer .closeVideoBurger .line5 {
+  background: #f7f7f7;
+  width: 40%;
+  height: 2px;
+  border-radius: 2rem;
+  -webkit-transition: 0.4s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.4s;
+  transition: 0.4s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.4s;
+}
+
+.videoContainer .closeVideoBurger .line:nth-of-type(2), .videoContainer .closeVideoBurger .lineCross:nth-of-type(2), .videoContainer .closeVideoBurger .line5:nth-of-type(2) {
+  margin: 4px 0 4px 0;
+  -webkit-transition-delay: 0.46s;
+          transition-delay: 0.46s;
+}
+
+.videoContainer .closeVideoBurger .line:nth-of-type(3), .videoContainer .closeVideoBurger .lineCross:nth-of-type(3), .videoContainer .closeVideoBurger .line5:nth-of-type(3) {
+  -webkit-transition-delay: 0.52s;
+          transition-delay: 0.52s;
+}
+
+.videoContainer .closeVideoBurger .lineCross, .videoContainer .closeVideoBurger .line5 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  width: 0;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.videoContainer .closeVideoBurger .line5 {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg) !important;
+          transform: translate(-50%, -50%) rotate(-45deg) !important;
+}
+
+.videoContainer .closeVideoBurgerActive {
+  background: #0c5ff2;
+}
+
+.videoContainer .closeVideoBurgerActive .line, .videoContainer .closeVideoBurgerActive .burgerContainer .burger .lineCross, .burgerContainer .burger .videoContainer .closeVideoBurgerActive .lineCross, .videoContainer .closeVideoBurgerActive .burgerContainer .burger .line5, .burgerContainer .burger .videoContainer .closeVideoBurgerActive .line5, .videoContainer .closeVideoBurgerActive .closeVideoBurger .lineCross, .videoContainer .closeVideoBurger .closeVideoBurgerActive .lineCross, .videoContainer .closeVideoBurgerActive .closeVideoBurger .line5, .videoContainer .closeVideoBurger .closeVideoBurgerActive .line5 {
+  width: 0;
+}
+
+.videoContainer .closeVideoBurgerActive .line:nth-of-type(1), .videoContainer .closeVideoBurgerActive .burgerContainer .burger .lineCross:nth-of-type(1), .burgerContainer .burger .videoContainer .closeVideoBurgerActive .lineCross:nth-of-type(1), .videoContainer .closeVideoBurgerActive .burgerContainer .burger .line5:nth-of-type(1), .burgerContainer .burger .videoContainer .closeVideoBurgerActive .line5:nth-of-type(1), .videoContainer .closeVideoBurgerActive .closeVideoBurger .lineCross:nth-of-type(1), .videoContainer .closeVideoBurger .closeVideoBurgerActive .lineCross:nth-of-type(1), .videoContainer .closeVideoBurgerActive .closeVideoBurger .line5:nth-of-type(1), .videoContainer .closeVideoBurger .closeVideoBurgerActive .line5:nth-of-type(1) {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.videoContainer .closeVideoBurgerActive .line:nth-of-type(2), .videoContainer .closeVideoBurgerActive .burgerContainer .burger .lineCross:nth-of-type(2), .burgerContainer .burger .videoContainer .closeVideoBurgerActive .lineCross:nth-of-type(2), .videoContainer .closeVideoBurgerActive .burgerContainer .burger .line5:nth-of-type(2), .burgerContainer .burger .videoContainer .closeVideoBurgerActive .line5:nth-of-type(2), .videoContainer .closeVideoBurgerActive .closeVideoBurger .lineCross:nth-of-type(2), .videoContainer .closeVideoBurger .closeVideoBurgerActive .lineCross:nth-of-type(2), .videoContainer .closeVideoBurgerActive .closeVideoBurger .line5:nth-of-type(2), .videoContainer .closeVideoBurger .closeVideoBurgerActive .line5:nth-of-type(2) {
+  -webkit-transition-delay: 0.06s;
+          transition-delay: 0.06s;
+}
+
+.videoContainer .closeVideoBurgerActive .line:nth-of-type(3), .videoContainer .closeVideoBurgerActive .burgerContainer .burger .lineCross:nth-of-type(3), .burgerContainer .burger .videoContainer .closeVideoBurgerActive .lineCross:nth-of-type(3), .videoContainer .closeVideoBurgerActive .burgerContainer .burger .line5:nth-of-type(3), .burgerContainer .burger .videoContainer .closeVideoBurgerActive .line5:nth-of-type(3), .videoContainer .closeVideoBurgerActive .closeVideoBurger .lineCross:nth-of-type(3), .videoContainer .closeVideoBurger .closeVideoBurgerActive .lineCross:nth-of-type(3), .videoContainer .closeVideoBurgerActive .closeVideoBurger .line5:nth-of-type(3), .videoContainer .closeVideoBurger .closeVideoBurgerActive .line5:nth-of-type(3) {
+  -webkit-transition-delay: 0.12s;
+          transition-delay: 0.12s;
+}
+
+.videoContainer .closeVideoBurgerActive .lineCross, .videoContainer .closeVideoBurgerActive .burgerContainer .burger .line5, .burgerContainer .burger .videoContainer .closeVideoBurgerActive .line5, .videoContainer .closeVideoBurgerActive .closeVideoBurger .line5, .videoContainer .closeVideoBurger .closeVideoBurgerActive .line5 {
+  width: 40%;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
 @-webkit-keyframes appear {
   to {
     opacity: 1;
@@ -705,161 +858,8 @@ ul li {
   cursor: pointer;
 }
 
-.home .videoContainer {
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background: #00001499;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  opacity: 0;
-  pointer-events: none;
-  -webkit-transition: opacity 0.6s ease 0.64s;
-  transition: opacity 0.6s ease 0.64s;
-  z-index: -1;
-}
-
-.home .videoContainerActive {
-  opacity: 1;
-  pointer-events: all;
-  -webkit-transition: opacity 0.6s ease;
-  transition: opacity 0.6s ease;
-  z-index: 4;
-}
-
-.home .videoContainer .videoWrapper {
-  width: 60vw;
-}
-
-.home .videoContainer .videoWrapper video {
-  width: 100%;
-}
-
-.home .videoContainer .closeVideo {
-  position: absolute;
-  bottom: 2.4rem;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0%);
-          transform: translate(-50%, 0%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.home .videoContainer .closeVideoBurger {
-  background: #0c5ff2;
-  position: relative;
-  width: calc(3.2rem + 0.8vw);
-  height: calc(3.2rem + 0.8vw);
-  border-radius: 50%;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: background 0.3s ease 0.2s, -webkit-transform 0.3s ease !important;
-  transition: background 0.3s ease 0.2s, -webkit-transform 0.3s ease !important;
-  transition: background 0.3s ease 0.2s, transform 0.3s ease !important;
-  transition: background 0.3s ease 0.2s, transform 0.3s ease, -webkit-transform 0.3s ease !important;
-}
-
-.home .videoContainer .closeVideoBurger:hover {
-  -webkit-transform: scale(1.12);
-          transform: scale(1.12);
-  -webkit-box-shadow: 0px 2px 8px #31313155;
-          box-shadow: 0px 2px 8px #31313155;
-}
-
-.home .videoContainer .closeVideoBurger .line, .home .videoContainer .closeVideoBurger .lineCross, .home .videoContainer .closeVideoBurger .line5 {
-  background: #f7f7f7;
-  width: 40%;
-  height: 2px;
-  border-radius: 2rem;
-  -webkit-transition: 0.4s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.4s;
-  transition: 0.4s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.4s;
-}
-
-.home .videoContainer .closeVideoBurger .line:nth-of-type(2), .home .videoContainer .closeVideoBurger .lineCross:nth-of-type(2), .home .videoContainer .closeVideoBurger .line5:nth-of-type(2) {
-  margin: 4px 0 4px 0;
-  -webkit-transition-delay: 0.46s;
-          transition-delay: 0.46s;
-}
-
-.home .videoContainer .closeVideoBurger .line:nth-of-type(3), .home .videoContainer .closeVideoBurger .lineCross:nth-of-type(3), .home .videoContainer .closeVideoBurger .line5:nth-of-type(3) {
-  -webkit-transition-delay: 0.52s;
-          transition-delay: 0.52s;
-}
-
-.home .videoContainer .closeVideoBurger .lineCross, .home .videoContainer .closeVideoBurger .line5 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-          transform: translate(-50%, -50%) rotate(45deg);
-  width: 0;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
-}
-
-.home .videoContainer .closeVideoBurger .line5 {
-  -webkit-transform: translate(-50%, -50%) rotate(-45deg) !important;
-          transform: translate(-50%, -50%) rotate(-45deg) !important;
-}
-
-.home .videoContainer .closeVideoBurgerActive {
-  background: #0c5ff2;
-}
-
-.home .videoContainer .closeVideoBurgerActive .line, .home .videoContainer .closeVideoBurgerActive .burgerContainer .burger .lineCross, .burgerContainer .burger .home .videoContainer .closeVideoBurgerActive .lineCross, .home .videoContainer .closeVideoBurgerActive .burgerContainer .burger .line5, .burgerContainer .burger .home .videoContainer .closeVideoBurgerActive .line5, .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .lineCross, .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .lineCross, .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .line5, .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .line5 {
-  width: 0;
-}
-
-.home .videoContainer .closeVideoBurgerActive .line:nth-of-type(1), .home .videoContainer .closeVideoBurgerActive .burgerContainer .burger .lineCross:nth-of-type(1), .burgerContainer .burger .home .videoContainer .closeVideoBurgerActive .lineCross:nth-of-type(1), .home .videoContainer .closeVideoBurgerActive .burgerContainer .burger .line5:nth-of-type(1), .burgerContainer .burger .home .videoContainer .closeVideoBurgerActive .line5:nth-of-type(1), .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .lineCross:nth-of-type(1), .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .lineCross:nth-of-type(1), .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .line5:nth-of-type(1), .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .line5:nth-of-type(1) {
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
-}
-
-.home .videoContainer .closeVideoBurgerActive .line:nth-of-type(2), .home .videoContainer .closeVideoBurgerActive .burgerContainer .burger .lineCross:nth-of-type(2), .burgerContainer .burger .home .videoContainer .closeVideoBurgerActive .lineCross:nth-of-type(2), .home .videoContainer .closeVideoBurgerActive .burgerContainer .burger .line5:nth-of-type(2), .burgerContainer .burger .home .videoContainer .closeVideoBurgerActive .line5:nth-of-type(2), .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .lineCross:nth-of-type(2), .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .lineCross:nth-of-type(2), .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .line5:nth-of-type(2), .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .line5:nth-of-type(2) {
-  -webkit-transition-delay: 0.06s;
-          transition-delay: 0.06s;
-}
-
-.home .videoContainer .closeVideoBurgerActive .line:nth-of-type(3), .home .videoContainer .closeVideoBurgerActive .burgerContainer .burger .lineCross:nth-of-type(3), .burgerContainer .burger .home .videoContainer .closeVideoBurgerActive .lineCross:nth-of-type(3), .home .videoContainer .closeVideoBurgerActive .burgerContainer .burger .line5:nth-of-type(3), .burgerContainer .burger .home .videoContainer .closeVideoBurgerActive .line5:nth-of-type(3), .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .lineCross:nth-of-type(3), .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .lineCross:nth-of-type(3), .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .line5:nth-of-type(3), .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .line5:nth-of-type(3) {
-  -webkit-transition-delay: 0.12s;
-          transition-delay: 0.12s;
-}
-
-.home .videoContainer .closeVideoBurgerActive .lineCross, .home .videoContainer .closeVideoBurgerActive .burgerContainer .burger .line5, .burgerContainer .burger .home .videoContainer .closeVideoBurgerActive .line5, .home .videoContainer .closeVideoBurgerActive .closeVideoBurger .line5, .home .videoContainer .closeVideoBurger .closeVideoBurgerActive .line5 {
-  width: 40%;
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
-}
-
 .home .mainContent {
-  background: #f7f7f7;
+  background: #061A2A;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -871,6 +871,7 @@ ul li {
 
 .home .mainContent .aside {
   background: #000014;
+  background: #061A2A;
   width: 49vw;
 }
 
@@ -1193,7 +1194,7 @@ ul li {
 
 .home .mainContent .reel {
   height: calc(140rem + 133vw);
-  background: #000014;
+  background: #061A2A;
   width: 51vw;
   padding-left: 2vw;
   display: -webkit-box;
@@ -1259,11 +1260,6 @@ ul li {
   height: calc(10rem + 10vw);
 }
 
-.home .mainContent .reel .col1 .topImg,
-.home .mainContent .reel .col2 .topImg {
-  border-radius: 0 0 calc(0.4rem + 0.2vw) calc(0.4rem + 0.2vw);
-}
-
 .home .mainContent .reel .col1Active,
 .home .mainContent .reel .col2Active {
   -webkit-transform: translate(0, -50vh);
@@ -1282,13 +1278,13 @@ ul li {
 
 @-webkit-keyframes changeBg {
   to {
-    background: #f7f7f7;
+    background: #061A2A;
   }
 }
 
 @keyframes changeBg {
   to {
-    background: #f7f7f7;
+    background: #061A2A;
   }
 }
 
@@ -1378,8 +1374,8 @@ ul li {
   }
   .home .mainContent .col1Active,
   .home .mainContent .col2Active {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    -webkit-transform: translate(0, 0) !important;
+            transform: translate(0, 0) !important;
   }
 }
 
@@ -2148,7 +2144,7 @@ ul li {
           transform: translate(0, -10%);
 }
 
-.opportunity .mainContent .kwInstalled .lineGraph .line .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .burgerContainer .burger .lineCross .pathActive, .burgerContainer .burger .opportunity .mainContent .kwInstalled .lineGraph .lineCross .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .burgerContainer .burger .line5 .pathActive, .burgerContainer .burger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .home .videoContainer .closeVideoBurger .lineCross .pathActive, .home .videoContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .lineCross .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .home .videoContainer .closeVideoBurger .line5 .pathActive, .home .videoContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive {
+.opportunity .mainContent .kwInstalled .lineGraph .line .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .burgerContainer .burger .lineCross .pathActive, .burgerContainer .burger .opportunity .mainContent .kwInstalled .lineGraph .lineCross .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .burgerContainer .burger .line5 .pathActive, .burgerContainer .burger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .videoContainer .closeVideoBurger .lineCross .pathActive, .videoContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .lineCross .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .videoContainer .closeVideoBurger .line5 .pathActive, .videoContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive {
   -webkit-animation: drawPath-1 1.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
   animation: drawPath-1 1.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
 }
@@ -2515,7 +2511,7 @@ ul li {
 }
 
 .compete .logo, .compete .navLogo {
-  position: absolute;
+  position: fixed;
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
@@ -2616,7 +2612,7 @@ ul li {
 }
 
 .compete .mainContent .details {
-  background: linear-gradient(20deg, #000000ad 20%, #00000000);
+  background: linear-gradient(20deg, #00000088 20%, #00000000);
   position: fixed;
   bottom: 0;
   left: 0;
@@ -3728,6 +3724,16 @@ ul li {
   }
 }
 
+@media (max-width: 1440px) {
+  .compete .mainContent .videoReel {
+    height: 36rem;
+  }
+  .compete .mainContent .videoReel .thumbnail {
+    width: 18rem;
+    height: 11rem;
+  }
+}
+
 .earn .logo, .earn .navLogo {
   position: absolute;
   -webkit-animation-delay: 0.4s;
@@ -4215,7 +4221,6 @@ ul li {
 }
 
 .resources .mainContent .enzy .enzyHero {
-  border: 3px dashed black;
   position: relative;
   width: 100vw;
   height: clamp(36rem, 100vh, 64rem);
@@ -4411,7 +4416,8 @@ ul li {
 .resources .mainContent .enzy .appUsage {
   position: relative;
   width: 100vw;
-  height: clamp(224rem, 380vh, 264rem);
+  height: auto;
+  padding: 16rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4442,7 +4448,7 @@ ul li {
 }
 
 .resources .mainContent .enzy .appUsage .block .blockImg {
-  width: 26%;
+  width: 24%;
 }
 
 .resources .mainContent .enzy .appUsage .block .blockText {
@@ -4467,11 +4473,36 @@ ul li {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: calc(0.4rem + 0.4vw);
-  height: calc(0.4rem + 0.4vw);
+  width: calc(0.6rem + 0.2vw);
+  height: calc(0.6rem + 0.2vw);
   background: #f7f7f7;
   border-radius: 50%;
   z-index: 2;
+}
+
+.resources .mainContent .enzy .appUsage .block .linearDot::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-35%, -50%);
+          transform: translate(-35%, -50%);
+  width: 2px;
+  height: clamp(38rem, 100vh, 100vh);
+  background: #f7f7f7;
+}
+
+.resources .mainContent .enzy .appUsage .block .topDot::before {
+  top: 0;
+  -webkit-transform: translate(-35%, 2px);
+          transform: translate(-35%, 2px);
+}
+
+.resources .mainContent .enzy .appUsage .block .bottomDot::before {
+  top: auto;
+  bottom: 0;
+  -webkit-transform: translate(-35%, -2px);
+          transform: translate(-35%, -2px);
 }
 
 .resources .mainContent .enzy .appUsage .block2,
@@ -4480,13 +4511,6 @@ ul li {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-}
-
-.resources .mainContent .enzy .appUsage .progressLine {
-  position: absolute;
-  width: 0.1rem;
-  height: 64%;
-  background: #f7f7f7;
 }
 
 .resources .mainContent .enzy .pageFooter {
@@ -4562,19 +4586,8 @@ ul li {
     -webkit-transform: translate(-29%, -29%);
             transform: translate(-29%, -29%);
   }
-  .resources .mainContent .enzy .enzyHero {
-    border: 2px solid yellow;
-    height: clamp(28rem, 80vh, 56rem);
-  }
-  .resources .mainContent .enzy .enzyHero .backgroundGlyph {
-    top: 0;
-    left: 50%;
-    -webkit-transform: translate(-50%, -28%);
-            transform: translate(-50%, -28%);
-    width: 120%;
-  }
   .resources .mainContent .enzy .appUsage {
-    height: 420vh;
+    height: auto;
   }
 }
 

@@ -254,7 +254,7 @@
             background: linear-gradient(180deg, #6CA793, #6CA79300 140%);
             overflow: hidden;
             .enzyHero {
-                border: 3px dashed black;
+                // border: 3px dashed black;
                 position: relative;
                 width: 100vw;
                 // height: 100vh;
@@ -393,8 +393,8 @@
                 // border: 2px dashed yellow;
                 position: relative;
                 width: 100vw;
-                // height: 380vh;
-                height: clamp(224rem, 380vh, 264rem);
+                height: auto;
+                padding: 16rem 0;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -408,7 +408,8 @@
                     justify-content: space-around;
                     align-items: center;
                     .blockImg {
-                        width: 26%;
+                        // width: 26%;
+                        width: 24%;
                     }
                     .blockText {
                         text-align: center;
@@ -428,23 +429,39 @@
                         top: 50%;
                         left: 50%;
                         transform: translate(-50%, -50%);
-                        width: calc(0.4rem + 0.4vw);
-                        height: calc(0.4rem + 0.4vw);
+                        width: calc(0.6rem + 0.2vw);
+                        height: calc(0.6rem + 0.2vw);
                         background: $sunderSnow;
                         border-radius: 50%;
                         z-index: 2;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-35%, -50%);
+                            width: 2px;
+                            height: clamp(38rem, 100vh, 100vh);
+                            background: $sunderSnow;
+                        }
+                    }
+                    .topDot {
+                        &::before {
+                            top: 0;
+                            transform: translate(-35%, 2px);
+                        }
+                    }
+                    .bottomDot {
+                        &::before {
+                            top: auto;
+                            bottom: 0;
+                            transform: translate(-35%, -2px);
+                        }
                     }
                 }
                 .block2,
                 .block4 {
                     flex-direction: row-reverse;
-                }
-                .progressLine {
-                    position: absolute;
-                    width: 0.1rem;
-                    height: 64%;
-                    // height: calc(36% + 56vw);
-                    background: $sunderSnow;
                 }
             }
             .pageFooter {
@@ -516,18 +533,13 @@
                 }
             }
             .enzy {
-                .enzyHero {
-                    border: 2px solid yellow;
-                    height: clamp(28rem, 80vh, 56rem);
-                    .backgroundGlyph {
-                        top: 0;
-                        left: 50%;
-                        transform: translate(-50%, -28%);
-                        width: 120%;
-                    }
-                }
+                // .enzyHero {
+
+                // }
                 .appUsage {
-                    height: 420vh;
+                    // height: 420vh;
+                    // height: clamp(224rem, 380vh, 264rem);
+                    height: auto;
                 }
             }
         }
