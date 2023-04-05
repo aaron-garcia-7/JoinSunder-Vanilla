@@ -254,6 +254,19 @@ videoElement.addEventListener("focus", () => {
   openVideo();
 });
 
+const thumbnail1 = document.querySelector(".thumbnail1");
+const thumbnail2 = document.querySelector(".thumbnail2");
+
+thumbnail1.addEventListener("click", () => {
+  videoElement.src = "./assets/Final.mov";
+  toggleVideo();
+  // videoElement.play();
+});
+thumbnail2.addEventListener("click", () => {
+  videoElement.src = "./assets/sample.mp4";
+  toggleVideo();
+});
+
 //
 // GSAP Animations
 //
