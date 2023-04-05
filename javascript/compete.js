@@ -256,14 +256,29 @@ videoElement.addEventListener("focus", () => {
 
 const thumbnail1 = document.querySelector(".thumbnail1");
 const thumbnail2 = document.querySelector(".thumbnail2");
+const thumbnail3 = document.querySelector(".thumbnail3");
+const thumbnail4 = document.querySelector(".thumbnail4");
+const thumbnail5 = document.querySelector(".thumbnail5");
 
 thumbnail1.addEventListener("click", () => {
-  videoElement.src = "./assets/Final.mov";
+  videoElement.src = "./assets/promo1.mp4";
   toggleVideo();
   // videoElement.play();
 });
 thumbnail2.addEventListener("click", () => {
-  videoElement.src = "./assets/sample.mp4";
+  videoElement.src = "./assets/promo2.mp4";
+  toggleVideo();
+});
+thumbnail3.addEventListener("click", () => {
+  videoElement.src = "./assets/promo3.mov";
+  toggleVideo();
+});
+thumbnail4.addEventListener("click", () => {
+  videoElement.src = "./assets/promo4.mp4";
+  toggleVideo();
+});
+thumbnail5.addEventListener("click", () => {
+  videoElement.src = "./assets/promo5.mp4";
   toggleVideo();
 });
 
