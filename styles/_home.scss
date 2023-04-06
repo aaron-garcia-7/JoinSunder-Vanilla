@@ -224,7 +224,9 @@
       }
       
       .reel {
-        height: calc(140rem + 133vw);
+        // height: calc(140rem + 133vw);
+        height: calc(142rem + 133vw);
+        height: calc(137rem + 139vw);
         background: $sunderMidnight;
         width: 51vw;
         padding-left: 2vw;
@@ -248,7 +250,8 @@
           .reelImg,
           .reelImgShort {
               background: var(--sunderIce);
-              height: calc(16rem + 16vw);
+              // height: calc(16rem + 16vw);
+              height: calc(20rem + 16vw);
               margin-bottom: calc(0.6rem + 1.2vw);
               border-radius: calc(0.4rem + 0.2vw);
               overflow: hidden;
@@ -262,11 +265,14 @@
               }
           }
           .reelImgShort {
-              /* height: 32%; */
-              height: calc(10rem + 10vw);
+              // height: calc(10rem + 10vw);
+              height: calc(6rem + 10vw);
           }
           .topImg {
             border-radius: 0 0 calc(0.4rem + 0.2vw) calc(0.4rem + 0.2vw);
+          }
+          .bottomImg {
+            border-radius: calc(0.4rem + 0.2vw) calc(0.4rem + 0.2vw) 0 0;
           }
 
           &Active {

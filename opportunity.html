@@ -38,7 +38,7 @@
         <section class="quoteSection" id="quoteSection">
             <div class="quote1">
                 <figure class="imgWrapper">
-                    <img src="./images/opportunityPage/quoteRep1.jpg" alt="A man in a blue polo shirt holding a microphone." class="quoteImg">
+                    <img src="./images/opportunityPage/quoteRep1.jpg" alt="A man in a blue polo shirt holding a microphone." class="quoteImg" loading="lazy">
                     <figcaption class="imgCaption">
                         <h4 class="name">Max<br><span class="lastName">Britton</span></h4>
                         <h4 class="position">CEO</h4>
@@ -57,7 +57,7 @@
             <div class="quoteDivider"></div>
             <div class="quote2">
                 <figure class="imgWrapper">
-                    <img src="./images/opportunityPage/quoteRep2.jpg" alt="Another man in a black t-shirt holding a microphone." class="quoteImg">
+                    <img src="./images/opportunityPage/quoteRep2.jpg" alt="Another man in a black t-shirt holding a microphone." class="quoteImg" loading="lazy">
                     <figcaption class="imgCaption">
                         <h4 class="name">Brandon<br><span class="lastName">Wilson</span></h4>
                         <h4 class="position">Regional Manager</h4>
@@ -75,9 +75,9 @@
             </div>
         </section>
 
-        <section class="cardsSection" id="reel">
-            <figure class="repCard" id="repCard">
-                <img src="./images/opportunityPage/rep1.jpg" alt="" class="repImg">
+        <section class="cardsSection">
+            <figure class="repCard">
+                <img src="./images/opportunityPage/rep1.jpg" alt="" class="repImg" loading="lazy">
                 <figcaption class="cardText">
                     <ul class="list">
                         <li>Start Date: July 2020</li>
@@ -89,7 +89,7 @@
                 </figcaption>
             </figure>
             <figure class="repCard" id="repCard">
-                <img src="./images/opportunityPage/rep2.jpg" alt="" class="repImg">
+                <img src="./images/opportunityPage/rep2.jpg" alt="" class="repImg" loading="lazy">
                 <figcaption class="cardText">
                     <ul class="list">
                         <li>Start Date: October 2020</li>
@@ -101,7 +101,7 @@
                 </figcaption>
             </figure>
             <figure class="repCard" id="repCard">
-                <img src="./images/opportunityPage/rep3.jpg" alt="" class="repImg">
+                <img src="./images/opportunityPage/rep3.jpg" alt="" class="repImg" loading="lazy">
                 <figcaption class="cardText">
                     <ul class="list">
                         <li>Start Date: January 2019</li>
@@ -121,7 +121,7 @@
             <div class="text text2" id="videoText2">
                 <h2>in the Solar <br>Industry</h2>
             </div>
-            <video src="./assets/opportunity.mp4" class="definitionVideo" id="definitionVideo" controls type="video/mov" preload="none" poster="./images/opportunityPage/poster1.jpg"></video>
+            <video src="./assets/opportunity.mp4" class="definitionVideo" id="definitionVideo" type="video/mov" preload="none" poster="./images/opportunityPage/poster1.jpg"></video>
         </section>
 
         <section class="growth" id="growth">
@@ -310,11 +310,13 @@
                 <img src="./images/navImages/navHome2.webp" alt="Preview of the home page" class="linkImg desktopImg">
                 <img src="./images/navImages/navHomeSmall.webp" alt="Preview of the home page" class="linkImg mobileImg">
             </a>
-            <a href="./opportunity.html" class="navLink">
+            <figure class="navLink" id="activePage">
+            <!-- <a href="./opportunity.html" class="navLink"> -->
                 <h3 class="linkTitle linkTitleActive">Opportunity</h3>
                 <img src="./images/navImages/navOpportunity2.webp" alt="Preview of the opportunity page" class="linkImg desktopImg">
                 <img src="./images/navImages/navHomeSmall.webp" alt="Preview of the opportunity page" class="linkImg mobileImg">
-            </a>
+            <!-- </a> -->
+            </figure>
             <a href="./compete.html"class="navLink">
                 <h3 class="linkTitle">Compete</h3>
                 <img src="./images/navImages/navCompete2.webp" alt="" class="linkImg desktopImg">

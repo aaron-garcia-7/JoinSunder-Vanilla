@@ -3,6 +3,7 @@ const burger = document.querySelector(".burger");
 const nav = document.querySelector(".nav");
 const logo = document.querySelector(".logo");
 const navLogo = document.querySelector(".navLogo");
+const activePage = document.querySelector("#activePage");
 
 // Page Unique elements
 const mainContent = document.querySelector(".mainContent");
@@ -131,6 +132,7 @@ const closeNav = () => {
 
 burger.addEventListener("click", toggleNav);
 mainContent.addEventListener("click", closeNav);
+activePage.addEventListener("click", closeNav);
 navLogo.addEventListener("click", closeNav);
 
 //
@@ -216,7 +218,9 @@ videoElement.addEventListener("focus", () => {
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.to("#col1", {
-  y: "-16.74%",
+  y: "-16.74%", // 12 images OG Size
+  // y: "24%", // 8 images OG Size
+
   // ease: "none",
   scrollTrigger: {
     trigger: "#reel",

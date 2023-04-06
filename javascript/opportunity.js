@@ -3,6 +3,7 @@ const burger = document.querySelector(".burger");
 const nav = document.querySelector(".nav");
 const logo = document.querySelector(".logo");
 const navLogo = document.querySelector(".navLogo");
+const activePage = document.querySelector("#activePage");
 
 // Page Unique elements
 const mainContent = document.querySelector(".mainContent");
@@ -56,6 +57,36 @@ const closeNav = () => {
 
 burger.addEventListener("click", toggleNav);
 mainContent.addEventListener("click", closeNav);
+activePage.addEventListener("click", closeNav);
+
+//
+// Sunder Definition Video
+//
+
+const video = document.querySelector("#definitionVideo");
+
+video.addEventListener("click", () => {
+  if (video.paused) {
+    video.play();
+  } else {
+    video.pause();
+  }
+});
+
+// video.addEventListener("mouseover", function () {
+//   video.setAttribute("controls", "");
+// });
+
+// video.addEventListener("mouseout", function () {
+//   video.removeAttribute("controls");
+// });
+
+window.addEventListener("scroll", () => {
+  const videoRect = video.getBoundingClientRect();
+  if (videoRect.top < window.innerHeight) {
+    video.pause();
+  }
+});
 
 //
 // Footer CTA hover animation

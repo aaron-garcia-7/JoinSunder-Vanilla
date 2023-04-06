@@ -1192,7 +1192,8 @@ ul li {
 }
 
 .home .mainContent .reel {
-  height: calc(140rem + 133vw);
+  height: calc(142rem + 133vw);
+  height: calc(137rem + 139vw);
   background: #000014;
   width: 51vw;
   padding-left: 2vw;
@@ -1230,7 +1231,7 @@ ul li {
 .home .mainContent .reel .col2 .reelImg,
 .home .mainContent .reel .col2 .reelImgShort {
   background: var(--sunderIce);
-  height: calc(16rem + 16vw);
+  height: calc(20rem + 16vw);
   margin-bottom: calc(0.6rem + 1.2vw);
   border-radius: calc(0.4rem + 0.2vw);
   overflow: hidden;
@@ -1255,13 +1256,17 @@ ul li {
 
 .home .mainContent .reel .col1 .reelImgShort,
 .home .mainContent .reel .col2 .reelImgShort {
-  /* height: 32%; */
-  height: calc(10rem + 10vw);
+  height: calc(6rem + 10vw);
 }
 
 .home .mainContent .reel .col1 .topImg,
 .home .mainContent .reel .col2 .topImg {
   border-radius: 0 0 calc(0.4rem + 0.2vw) calc(0.4rem + 0.2vw);
+}
+
+.home .mainContent .reel .col1 .bottomImg,
+.home .mainContent .reel .col2 .bottomImg {
+  border-radius: calc(0.4rem + 0.2vw) calc(0.4rem + 0.2vw) 0 0;
 }
 
 .home .mainContent .reel .col1Active,
@@ -1734,8 +1739,9 @@ ul li {
   width: 60%;
   top: 50%;
   left: 50%;
-  scale: 0.2;
+  scale: 0.16;
   translate: -50% -50%;
+  cursor: pointer;
 }
 
 .opportunity .mainContent .growth {
@@ -3984,7 +3990,7 @@ ul li {
 }
 
 .resources .mainContent .productivity .smartHeader h1 {
-  font-size: calc(0.8rem + 4vw);
+  font-size: calc(0.4rem + 3.6vw);
   font-weight: 500;
   margin-bottom: 2rem;
 }

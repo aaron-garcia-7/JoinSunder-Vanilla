@@ -3,6 +3,7 @@ const burger = document.querySelector(".burger");
 const nav = document.querySelector(".nav");
 const logo = document.querySelector(".logo");
 const navLogo = document.querySelector(".navLogo");
+const activePage = document.querySelector("#activePage");
 
 // Page Unique elements
 const mainContent = document.querySelector(".mainContent");
@@ -66,6 +67,7 @@ const closeNav = () => {
 
 burger.addEventListener("click", toggleNav);
 mainContent.addEventListener("click", closeNav);
+activePage.addEventListener("click", closeNav);
 
 //
 // Carousel Logic
