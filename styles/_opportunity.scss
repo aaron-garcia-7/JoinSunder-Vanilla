@@ -251,6 +251,7 @@ $pending: #BCD0D7;
             }
             .definitionVideo {
                 // border: 2px solid coral;
+                border-radius: calc(0.4rem + 1.2vw);
                 opacity: 0;
                 width: 60%;
                 top: 50%;

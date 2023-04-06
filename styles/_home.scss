@@ -15,14 +15,12 @@
   // GLOBAL COMPONENTS
 
   .mainContent {
-    // background: $sunderSnow;
-    background: $sunderNavy;
+    background: $sunderSnow;
     width: 100vw;
     display: flex;
     justify-content: space-between;
     .aside {
         background: $sunderMidnight;
-        background: $sunderNavy;
         width: 49vw;
         &Active {
           position: fixed;
@@ -37,6 +35,7 @@
         top: 50vh;
         left: calc(2rem + 4vw);
         transform: translate(0, -56%);
+        // transform: translate(15%, -56%) scale(1.3); // For Nav Image Screenshot
         transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
         &Active {
           transform: translate(0, calc(-56% - 50vh));
@@ -226,8 +225,7 @@
       
       .reel {
         height: calc(140rem + 133vw);
-        // background: $sunderMidnight;
-        background: $sunderNavy;
+        background: $sunderMidnight;
         width: 51vw;
         padding-left: 2vw;
         display: flex;
@@ -267,9 +265,9 @@
               /* height: 32%; */
               height: calc(10rem + 10vw);
           }
-          // .topImg {
-          //   border-radius: 0 0 calc(0.4rem + 0.2vw) calc(0.4rem + 0.2vw);
-          // }
+          .topImg {
+            border-radius: 0 0 calc(0.4rem + 0.2vw) calc(0.4rem + 0.2vw);
+          }
 
           &Active {
             transform: translate(0, -50vh);
@@ -288,8 +286,7 @@
 
       @keyframes changeBg {
         to {
-          // background: $sunderSnow;
-          background: $sunderNavy;
+          background: $sunderSnow;
         }
       }
     }

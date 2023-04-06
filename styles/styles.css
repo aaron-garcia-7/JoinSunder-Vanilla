@@ -859,7 +859,7 @@ ul li {
 }
 
 .home .mainContent {
-  background: #061A2A;
+  background: #f7f7f7;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -871,7 +871,6 @@ ul li {
 
 .home .mainContent .aside {
   background: #000014;
-  background: #061A2A;
   width: 49vw;
 }
 
@@ -1194,7 +1193,7 @@ ul li {
 
 .home .mainContent .reel {
   height: calc(140rem + 133vw);
-  background: #061A2A;
+  background: #000014;
   width: 51vw;
   padding-left: 2vw;
   display: -webkit-box;
@@ -1260,6 +1259,11 @@ ul li {
   height: calc(10rem + 10vw);
 }
 
+.home .mainContent .reel .col1 .topImg,
+.home .mainContent .reel .col2 .topImg {
+  border-radius: 0 0 calc(0.4rem + 0.2vw) calc(0.4rem + 0.2vw);
+}
+
 .home .mainContent .reel .col1Active,
 .home .mainContent .reel .col2Active {
   -webkit-transform: translate(0, -50vh);
@@ -1278,13 +1282,13 @@ ul li {
 
 @-webkit-keyframes changeBg {
   to {
-    background: #061A2A;
+    background: #f7f7f7;
   }
 }
 
 @keyframes changeBg {
   to {
-    background: #061A2A;
+    background: #f7f7f7;
   }
 }
 
@@ -1725,6 +1729,7 @@ ul li {
 }
 
 .opportunity .mainContent .videoSection .definitionVideo {
+  border-radius: calc(0.4rem + 1.2vw);
   opacity: 0;
   width: 60%;
   top: 50%;
@@ -3974,6 +3979,8 @@ ul li {
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
+  -webkit-transform: translate(8%, -50%) scale(1.1);
+          transform: translate(8%, -50%) scale(1.1);
 }
 
 .resources .mainContent .productivity .smartHeader h1 {

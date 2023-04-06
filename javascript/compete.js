@@ -270,7 +270,7 @@ thumbnail2.addEventListener("click", () => {
   toggleVideo();
 });
 thumbnail3.addEventListener("click", () => {
-  videoElement.src = "./assets/promo3.mov";
+  videoElement.src = "./assets/promo3.mp4";
   toggleVideo();
 });
 thumbnail4.addEventListener("click", () => {
