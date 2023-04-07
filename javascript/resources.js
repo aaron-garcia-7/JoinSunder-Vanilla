@@ -184,44 +184,72 @@ rowWidthTl
 
 // Image Reels
 
-gsap.to("#col1", {
-  // y: "-21%",
-  y: window.innerWidth <= 1248 ? "0" : "-21%",
+gsap.to("#col1-lg", {
+  y: "-21%",
+  // y: window.innerWidth <= 1248 ? "0" : "-21%",
   ease: "none",
   scrollTrigger: {
-    trigger: "#reel",
+    trigger: "#reel-lg",
     scrub: 0.1,
     start: "top top",
     end: "bottom bottom",
   },
 });
-gsap.to("#col2", {
-  // y: "-29%",
-  y: window.innerWidth <= 1248 ? "0" : "-29%",
+gsap.to("#col2-lg", {
+  y: "-29%",
+  // y: window.innerWidth <= 1248 ? "0" : "-29%",
   ease: "none",
   scrollTrigger: {
-    trigger: "#reel",
+    trigger: "#reel-lg",
     scrub: 0.1,
     start: "top top",
     end: "bottom bottom",
   },
 });
-gsap.to("#col3", {
-  // y: "-34.3%",
-  y: window.innerWidth <= 1248 ? "0" : "-34.3%",
+gsap.to("#col3-lg", {
+  y: "-34.3%",
+  // y: window.innerWidth <= 1248 ? "0" : "-34.3%",
   ease: "none",
   scrollTrigger: {
-    trigger: "#reel",
+    trigger: "#reel-lg",
     scrub: 0.1,
     start: "top top",
     end: "bottom bottom",
   },
 });
-gsap.to("#col4", {
+gsap.to("#col4-lg", {
   y: "-29%",
   ease: "none",
   scrollTrigger: {
-    trigger: "#reel",
+    trigger: "#reel-lg",
+    scrub: 0.1,
+    start: "top top",
+    end: "bottom bottom",
+  },
+});
+
+// RESPONSIVE REELS (MEDIUM)
+
+gsap.to("#col2-md", {
+  y: "-10%",
+  // y: window.innerWidth <= 1248 ? "0" : "-29%",
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#reel-md",
+    scrub: 0.1,
+    start: "top top",
+    end: "bottom bottom",
+  },
+});
+
+// RESPONSIVE REELS (SMALL)
+
+gsap.to("#col1-sm", {
+  y: "-9.1%",
+  // y: window.innerWidth <= 1248 ? "0" : "-29%",
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#reel-md",
     scrub: 0.1,
     start: "top top",
     end: "bottom bottom",

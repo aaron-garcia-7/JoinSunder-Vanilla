@@ -92,7 +92,7 @@
                     background: $sunderIce;
                     // width: calc(16rem + 16vw);
                     width: calc(4rem + 34vw);
-                    // height: calc(24rem + 24vw);
+                    // height: calc(26rem + 26vw);
                     height: calc(28rem + 28vw);
                     border-radius: calc(0.4rem + 0.2vw);
                     border-radius: calc(0.4rem + 0.2vw) 0 0 calc(0.4rem + 0.2vw);
@@ -236,9 +236,6 @@
                     }
                   }
               }
-              .midSizeReelImg {
-                display: none;
-              }
     
               &Active {
                 transform: translate(0, -50vh);
@@ -249,6 +246,10 @@
               position: absolute;
               right: 0;
             }
+        }
+        #reel-md,
+        #reel-sm {
+            display: none;
         }
         
         .enzy {
@@ -529,19 +530,21 @@
 @media (max-width: 1248px) {
     .resources {
         .mainContent {
+
             .productivity {
                 .images {
                     transform: translate(0, -2%);
                 }
             }
+
             .reel {
-                // border: 2px dashed coral;
-                height: calc(129rem + 133vw); // Without the parallax, this height is responsive (ends at) the 2 & 4 column's sixth picture.
+                gap: 1.2rem;
+                height: calc(131rem + 135vw); // Without the parallax, this height is responsive (ends at) the 2 & 4 column's sixth picture.
                 .columnOuter {
                     // border: 2px dashed yellow;
                   width: 32%;
                   &:nth-of-type(2) {
-                      transform: translate(0, 0);
+                      transform: translate(0, 5%);
                   }
                   &:nth-of-type(4) {
                     display: none;
@@ -551,11 +554,15 @@
                     // height: calc(16rem + 16vw);
                     height: calc(18rem + 18vw);
                   }
-                  .midSizeReelImg {
-                    display: block;
-                  }
                 }
             }
+            #reel-lg {
+                display: none;
+            }
+            #reel-md {
+                display: flex;
+            }
+
             .enzy {
                 // .enzyHero {
 
@@ -567,18 +574,61 @@
                     height: auto;
                 }
             }
+
         }
     }
 }
 
-// @media (max-width: 1024px) {
-//     .resources {
-//         .mainContent {
-//             .productivity {
-//                 .images {
-//                     transform: translate(0, 4%);
-//                 }
-//             }
-//         }
-//     }
-// }
+@media (max-width: 856px) {
+    .resources {
+        .mainContent {
+            .reel {
+                gap: 1rem;
+                height: calc(188rem + 192vw); // Without the parallax, this height is responsive (ends at) the 2 & 4 column's sixth picture.
+                .columnOuter {
+                  width: 50%;
+                  &:nth-of-type(2) {
+                      transform: translate(0, 0);
+                  }
+                  &:nth-of-type(3) {
+                    display: none;
+                  }
+                }
+            }
+            #reel-lg,
+            #reel-md {
+                display: none;
+            }
+            #reel-sm {
+                display: flex;
+            }
+        }
+    }
+}
+
+@media (max-width: 582px) {
+    .resources {
+        .mainContent {
+            .reel {
+                gap: 0.8rem;
+                height: calc(156rem + 160vw); // Without the parallax, this height is responsive (ends at) the 2 & 4 column's sixth picture.
+                .columnOuter {
+                  .reelImg {
+                    height: calc(15rem + 15vw);
+                    figcaption {
+                        height: 24%;
+                        padding: 0.2rem 0.4rem;
+                    }
+                  }
+                }
+            }
+            #reel-lg,
+            #reel-md {
+                display: none;
+            }
+            #reel-sm {
+                display: flex;
+            }
+        }
+    }
+}

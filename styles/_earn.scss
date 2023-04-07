@@ -13,8 +13,8 @@
     // GLOBAL COMPONENTS
 
     .mainContent {
-        // background: #B0C2C9;
-        background: linear-gradient(180deg, #b0c2c9, #ecf3f500);
+        // background: linear-gradient(180deg, #b0c2c9, #ecf3f500);
+        background: $sunderSnow;
         width: 100vw;
         // height: clamp(26rem, 100dvh, 64rem);
         display: flex;
