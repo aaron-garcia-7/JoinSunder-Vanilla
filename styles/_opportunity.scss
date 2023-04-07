@@ -62,7 +62,8 @@ $pending: #BCD0D7;
                     }
                 }
             }
-            .repsImg {
+            .repsImg,
+            .soloRepImg {
                 bottom: 0;
                 right: 0;
                 // width: 46%;
@@ -78,6 +79,9 @@ $pending: #BCD0D7;
                 height: clamp(12rem, 38vw, 36rem);
                 border-radius: 0 3.2rem 0 3.2rem;
                 background: #080808;
+            }
+            .soloRepImg {
+                display: none;
             }
         }
 
@@ -964,6 +968,7 @@ $pending: #BCD0D7;
         }
     }
 }
+
 @media (max-width: 1248px) {
     .opportunity {
         .mainContent{
@@ -981,49 +986,94 @@ $pending: #BCD0D7;
     .opportunity {
         .mainContent{
             .header {
-                border: 2px dashed burlywood;
-                border: none;
-                // height: clamp(42rem, 100vh, 49rem);
-
+                // border: 2px dashed coral;
+                top: 0;
+                transform: translate(0, 0);
+                height: 90vh;
+                min-height: 44rem;
+                max-height: 48rem;
+                margin: 0 0 2.4rem 2.4rem;
+                .cta {
+                    top: 2rem;
+                    right: 2rem;
+                }
                 h1 {
-                    font-size: calc(1.8rem + 3.6vw);
-                    // font-size: calc(3.6rem + 1vw);
-                    font-size: 4.2rem;
+                    font-size: calc(3.2rem + 1.2vw);
+                    mix-blend-mode: normal;
+                }
+                .soloRepImg {
+                    display: block;
+                    width: 30rem;
+                    z-index: 0;
                 }
                 .repsImg {
                     display: none;
                 }
                 .shape {
-                    // bottom: 0;
-                    // right: 0;
-                    // width: 100%;
-                    height: 68%;
-                    // height: 80%;
-                    // border-radius: 0 2rem 0 2rem;
-                    // background: #080808;
+                    height: 72%;
+                    border-radius: 0 0 0 1.6rem;
+                }
+            }
+
+            .quoteSection {
+                // border: 2px dashed coral;
+                // padding: 8rem 2rem;
+                padding: 4rem 2rem;
+                .quote1 {
+                    gap: 4%;
+                    .imgWrapper {
+                        // padding: calc(8rem + 6vw);
+                        padding: calc(4rem + 12vw);
+                        border-radius: 1.6rem;
+                        .imgCaption {
+                            padding: 1.4rem;
+                            .name {
+                                font-size: $L-Text;
+                                .lastName {
+                                    font-size: $XXL-Text;
+                                }
+                            }
+                            .position {
+                                font-size: $M-Text;
+                            }
+                        }
+                    }
+                    .quoteWrapper {
+                        width: 42%;
+                        > * {
+                            padding-left: 0;
+                        }
+                        .quote {
+                            padding-bottom: 0;
+                        }
+                        .blockquote {
+                            font-size: $M-Text;
+                            // padding-top: 2rem;
+                            padding-bottom: 2rem;
+                        }
+                    }
+                }
+                .quoteDivider {
+                    margin: 3.2rem;
+                    height: 0;
+                    border-right: 1px solid transparent;
                 }
             }
 
             .cardsSection {
-                border: 2px dashed coral;
-                // width: 100%;
-                height: clamp(24rem, 100vh, auto);
-                // padding: 2.4rem;
-                // display: flex;
-                // justify-content: space-between;
-                // align-items: center;
-                // gap: calc(1rem + 1vw);
-                // overflow: hidden;
+                // height: clamp(24rem, 100vh, auto);
+                padding: 0 2.4rem;
                 flex-wrap: nowrap;
                 overflow-x: scroll;
-                // z-index: 2;
                 .repCard {
                     flex: 0 0 auto;
                     // position: relative;
                     // background: $sunderSnow;
                     // width: 32%;
-                    width: 24rem;
+                    // width: 24rem;
+                    width: calc(24rem + 12vw);
                     // height: 92%;
+                    height: 86%;
                     border-radius: 2rem;
                     overflow: hidden;
                     > * {

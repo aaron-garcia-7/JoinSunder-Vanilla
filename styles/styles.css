@@ -1484,7 +1484,8 @@ ul li {
   color: #f7f7f7;
 }
 
-.opportunity .mainContent .header .repsImg {
+.opportunity .mainContent .header .repsImg,
+.opportunity .mainContent .header .soloRepImg {
   bottom: 0;
   right: 0;
   width: clamp(4rem, 44%, 46rem);
@@ -1500,6 +1501,10 @@ ul li {
   height: clamp(12rem, 38vw, 36rem);
   border-radius: 0 3.2rem 0 3.2rem;
   background: #080808;
+}
+
+.opportunity .mainContent .header .soloRepImg {
+  display: none;
 }
 
 .opportunity .mainContent .quoteSection {
@@ -2504,22 +2509,76 @@ ul li {
 
 @media (max-width: 1024px) {
   .opportunity .mainContent .header {
-    border: 2px dashed burlywood;
-    border: none;
+    top: 0;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    height: 90vh;
+    min-height: 44rem;
+    max-height: 48rem;
+    margin: 0 0 2.4rem 2.4rem;
+  }
+  .opportunity .mainContent .header .cta {
+    top: 2rem;
+    right: 2rem;
   }
   .opportunity .mainContent .header h1 {
-    font-size: calc(1.8rem + 3.6vw);
-    font-size: 4.2rem;
+    font-size: calc(3.2rem + 1.2vw);
+    mix-blend-mode: normal;
+  }
+  .opportunity .mainContent .header .soloRepImg {
+    display: block;
+    width: 30rem;
+    z-index: 0;
   }
   .opportunity .mainContent .header .repsImg {
     display: none;
   }
   .opportunity .mainContent .header .shape {
-    height: 68%;
+    height: 72%;
+    border-radius: 0 0 0 1.6rem;
+  }
+  .opportunity .mainContent .quoteSection {
+    padding: 4rem 2rem;
+  }
+  .opportunity .mainContent .quoteSection .quote1, .opportunity .mainContent .quoteSection .quote2 {
+    gap: 4%;
+  }
+  .opportunity .mainContent .quoteSection .quote1 .imgWrapper, .opportunity .mainContent .quoteSection .quote2 .imgWrapper {
+    padding: calc(4rem + 12vw);
+    border-radius: 1.6rem;
+  }
+  .opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption {
+    padding: 1.4rem;
+  }
+  .opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption .name, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption .name {
+    font-size: calc(1rem + 1.2vw);
+  }
+  .opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption .name .lastName, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption .name .lastName {
+    font-size: calc(0.4rem + 2.8vw);
+  }
+  .opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption .position, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption .position {
+    font-size: calc(0.8rem + 1vw);
+  }
+  .opportunity .mainContent .quoteSection .quote1 .quoteWrapper, .opportunity .mainContent .quoteSection .quote2 .quoteWrapper {
+    width: 42%;
+  }
+  .opportunity .mainContent .quoteSection .quote1 .quoteWrapper > *, .opportunity .mainContent .quoteSection .quote2 .quoteWrapper > * {
+    padding-left: 0;
+  }
+  .opportunity .mainContent .quoteSection .quote1 .quoteWrapper .quote, .opportunity .mainContent .quoteSection .quote2 .quoteWrapper .quote {
+    padding-bottom: 0;
+  }
+  .opportunity .mainContent .quoteSection .quote1 .quoteWrapper .blockquote, .opportunity .mainContent .quoteSection .quote2 .quoteWrapper .blockquote {
+    font-size: calc(0.8rem + 1vw);
+    padding-bottom: 2rem;
+  }
+  .opportunity .mainContent .quoteSection .quoteDivider {
+    margin: 3.2rem;
+    height: 0;
+    border-right: 1px solid transparent;
   }
   .opportunity .mainContent .cardsSection {
-    border: 2px dashed coral;
-    height: clamp(24rem, 100vh, auto);
+    padding: 0 2.4rem;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     overflow-x: scroll;
@@ -2528,7 +2587,8 @@ ul li {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
-    width: 24rem;
+    width: calc(24rem + 12vw);
+    height: 86%;
     border-radius: 2rem;
     overflow: hidden;
   }
