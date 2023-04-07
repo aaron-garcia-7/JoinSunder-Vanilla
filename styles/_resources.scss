@@ -60,11 +60,12 @@
                 transform: translate(8%, -50%) scale(1.1);
                 h1 {
                     font-size: calc(0.2rem + 3.6vw);
-                    font-weight: 500;
+                    font-weight: 675;
                     margin-bottom: 2rem;
                 }
                 h2 {
                     font-size: calc(0.2rem + 1.8vw);
+                    font-weight: 400;
                 }
                 .textWrapper {
                     display: inline-block;
@@ -176,7 +177,7 @@
                 justify-content: space-between;
                 h2 {
                     // background: blue;
-                    font-weight: 650;
+                    font-weight: 675;
                 }
             }
         }
@@ -231,7 +232,7 @@
                     }
                     h5 {
                         font-size: $XS-Text;
-                        font-weight: 300;
+                        font-weight: 200;
                     }
                   }
               }

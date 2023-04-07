@@ -3998,12 +3998,13 @@ ul li {
 
 .resources .mainContent .productivity .smartHeader h1 {
   font-size: calc(0.2rem + 3.6vw);
-  font-weight: 500;
+  font-weight: 675;
   margin-bottom: 2rem;
 }
 
 .resources .mainContent .productivity .smartHeader h2 {
   font-size: calc(0.2rem + 1.8vw);
+  font-weight: 400;
 }
 
 .resources .mainContent .productivity .smartHeader .textWrapper {
@@ -4134,7 +4135,7 @@ ul li {
 }
 
 .resources .mainContent .meetTheTeam .column h2 {
-  font-weight: 650;
+  font-weight: 675;
 }
 
 .resources .mainContent .reel {
@@ -4213,7 +4214,7 @@ ul li {
 
 .resources .mainContent .reel .columnOuter .reelImg figcaption h5 {
   font-size: calc(0.6rem + 0.3vw);
-  font-weight: 300;
+  font-weight: 200;
 }
 
 .resources .mainContent .reel .columnOuter .midSizeReelImg {
