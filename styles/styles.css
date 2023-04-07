@@ -946,7 +946,7 @@ ul li {
   color: #f7f7f7;
   font-family: "monument", sans-serif;
   font-size: calc(1.6rem + 2.4vw);
-  font-weight: 400;
+  font-weight: 450;
   -webkit-transform: translate(0, 120%);
           transform: translate(0, 120%);
 }
@@ -1028,7 +1028,7 @@ ul li {
   font-weight: 300;
   border-radius: 4rem;
   padding: 0.4rem 1.4rem;
-  width: calc(8rem + 8vw);
+  width: calc(7.8rem + 7.8vw);
   height: calc(2.4rem + 1vw);
 }
 
@@ -1060,6 +1060,7 @@ ul li {
   background: linear-gradient(90deg, #15499340, #4AABD040);
   color: transparent;
   border: 1px solid #0c5ff2;
+  width: calc(7.2rem + 7.2vw);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1067,7 +1068,7 @@ ul li {
 }
 
 .home .mainContent .cta2::before {
-  content: 'Watch Promo';
+  content: 'Play Video';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1103,8 +1104,8 @@ ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transform: translate(50%, 0);
-          transform: translate(50%, 0);
+  -webkit-transform: translate(80%, 0);
+          transform: translate(80%, 0);
   overflow: hidden;
   -webkit-transition: opacity 0.2s ease, -webkit-transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1);
   transition: opacity 0.2s ease, -webkit-transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1);
@@ -1488,6 +1489,7 @@ ul li {
   right: 0;
   width: clamp(4rem, 44%, 46rem);
   pointer-events: none;
+  z-index: 3;
 }
 
 .opportunity .mainContent .header .shape {
@@ -1733,15 +1735,49 @@ ul li {
   text-align: right;
 }
 
-.opportunity .mainContent .videoSection .definitionVideo {
+.opportunity .mainContent .videoSection .videoFigure {
+  position: relative;
   border-radius: calc(0.4rem + 1.2vw);
   opacity: 0;
   width: 60%;
+  height: calc(12rem + 24vw);
   top: 50%;
   left: 50%;
   scale: 0.16;
   translate: -50% -50%;
   cursor: pointer;
+}
+
+.opportunity .mainContent .videoSection .videoFigure > * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: calc(0.4rem + 1.2vw);
+}
+
+.opportunity .mainContent .videoSection .videoFigure .overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 20, 0.5);
+  z-index: 1;
+}
+
+.opportunity .mainContent .videoSection .videoFigure .overlay img {
+  -webkit-transform: scale(2.8);
+          transform: scale(2.8);
+  position: absolute;
+  bottom: 16%;
+  left: 8%;
+}
+
+.opportunity .mainContent .videoSection .videoFigure .definitionVideo {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
 }
 
 .opportunity .mainContent .growth {
@@ -2421,8 +2457,18 @@ ul li {
   .opportunity .mainContent .header .repsImg {
     width: 56rem;
   }
+  .opportunity .mainContent .quoteSection {
+    margin: auto;
+  }
+  .opportunity .mainContent .cardsSection {
+    width: 128rem;
+    margin: auto;
+  }
   .opportunity .mainContent .growth .mapArea .stateCount .number {
     font-size: 6.4rem;
+  }
+  .opportunity .mainContent .kwInstalled .pageFooter {
+    width: 128rem;
   }
 }
 
@@ -2434,13 +2480,32 @@ ul li {
 
 @media (max-width: 1440px) {
   .opportunity .mainContent .header {
-    height: 42rem;
+    height: 38rem;
+    margin: 8.6rem 2.4rem 4rem 2.4rem;
+    padding: 0;
+  }
+  .opportunity .mainContent .header > * {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .opportunity .mainContent .header .cta {
+    top: -5.6rem;
+  }
+}
+
+@media (max-width: 1248px) {
+  .opportunity .mainContent .header {
+    height: 32rem;
+  }
+  .opportunity .mainContent .header .cta {
+    top: -6.4rem;
   }
 }
 
 @media (max-width: 1024px) {
   .opportunity .mainContent .header {
-    height: clamp(42rem, 100vh, 49rem);
+    border: 2px dashed burlywood;
+    border: none;
   }
   .opportunity .mainContent .header h1 {
     font-size: calc(1.8rem + 3.6vw);
@@ -2636,6 +2701,7 @@ ul li {
 .compete .mainContent .details .cta {
   position: absolute;
   top: auto;
+  width: calc(5.4rem + 5.4vw);
   bottom: calc(12vw - 4.8rem);
   left: 4.8rem;
   opacity: 0;
@@ -2652,7 +2718,7 @@ ul li {
 }
 
 .compete .mainContent .details .cta::before {
-  content: 'Watch Promo';
+  content: 'Play Video';
   color: #f7f7f7;
   font-size: calc(0.8rem + 0.4vw);
   -webkit-transform: translate(-56%, -50%);
@@ -3783,66 +3849,6 @@ ul li {
   transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
 }
 
-.earn .mainContent .cta {
-  position: absolute;
-  top: 2.4rem;
-  right: 2.4rem;
-  opacity: 0;
-  border: 1px solid #000014;
-  -webkit-animation: appear 0.6s ease 0.6s forwards;
-          animation: appear 0.6s ease 0.6s forwards;
-  z-index: 2;
-}
-
-.earn .mainContent .cta::before {
-  content: 'Join The Squad';
-  color: #000014;
-  font-size: calc(0.8rem + 0.4vw);
-}
-
-.earn .mainContent .cta .ctaCircle {
-  background: #0c5ff2;
-}
-
-.earn .mainContent .cta:hover {
-  border: 1px solid #0c5ff2;
-}
-
-.earn .mainContent .cta:hover::before {
-  color: #f7f7f7;
-}
-
-.earn .mainContent .earnHeader {
-  width: 100vw;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.earn .mainContent .earnHeader h1 {
-  width: 64%;
-  font-size: calc(1.6rem + 2.4vw);
-}
-
-.earn .mainContent .earnHeader .text1 {
-  margin-bottom: 2rem;
-}
-
-.earn .mainContent .earnHeader .text2 {
-  font-weight: 675;
-}
-
 .earn .mainContent .reel {
   height: calc(75rem + 79vw);
   width: 100vw;
@@ -3980,6 +3986,7 @@ ul li {
 }
 
 .resources .mainContent .productivity .smartHeader {
+  width: 80%;
   position: -webkit-sticky;
   position: sticky;
   top: 50%;
@@ -3990,13 +3997,13 @@ ul li {
 }
 
 .resources .mainContent .productivity .smartHeader h1 {
-  font-size: calc(0.4rem + 3.6vw);
+  font-size: calc(0.2rem + 3.6vw);
   font-weight: 500;
   margin-bottom: 2rem;
 }
 
 .resources .mainContent .productivity .smartHeader h2 {
-  font-size: calc(1rem + 1.2vw);
+  font-size: calc(0.2rem + 1.8vw);
 }
 
 .resources .mainContent .productivity .smartHeader .textWrapper {
@@ -4023,14 +4030,14 @@ ul li {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 4.8rem;
-  -webkit-transform: translate(0, -6%);
-          transform: translate(0, -6%);
+  -webkit-transform: translate(0, -4%);
+          transform: translate(0, -4%);
 }
 
 .resources .mainContent .productivity .images .imgWrapper {
   background: #C6D3D8;
-  width: calc(16rem + 16vw);
-  height: calc(24rem + 24vw);
+  width: calc(4rem + 34vw);
+  height: calc(28rem + 28vw);
   border-radius: calc(0.4rem + 0.2vw);
   border-radius: calc(0.4rem + 0.2vw) 0 0 calc(0.4rem + 0.2vw);
   overflow: hidden;
@@ -4057,7 +4064,7 @@ ul li {
 .resources .mainContent .meetTheTeam .row, .resources .mainContent .meetTheTeam .column {
   position: absolute;
   display: inline-block;
-  top: 46%;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -4070,9 +4077,15 @@ ul li {
 }
 
 .resources .mainContent .meetTheTeam .row {
-  border-top: 1px solid #D4D4D4;
-  border-bottom: 1px solid #D4D4D4;
-  width: calc(16rem + 48vw);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: calc(10rem + 36vw);
+  -webkit-transform: translate(-49%, -50%);
+          transform: translate(-49%, -50%);
   padding: 1.4rem;
   z-index: 2;
 }
@@ -4080,43 +4093,34 @@ ul li {
 .resources .mainContent .meetTheTeam .row::before, .resources .mainContent .meetTheTeam .row::after {
   content: "";
   position: absolute;
-  left: 50;
-  width: 29%;
-  height: 300%;
-  background: rgba(247, 247, 247, 0.9);
+  left: 6%;
+  width: 100%;
+  height: 48vh;
   z-index: 2;
 }
 
 .resources .mainContent .meetTheTeam .row::before {
-  top: -2px;
+  top: 2.4rem;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(2%, #ff000000), color-stop(12%, #f7f7f7));
+  background: linear-gradient(0deg, #ff000000 2%, #f7f7f7 12%);
   -webkit-transform: translate(calc(-2.4rem - 1.8vw), -100%);
           transform: translate(calc(-2.4rem - 1.8vw), -100%);
 }
 
 .resources .mainContent .meetTheTeam .row::after {
-  bottom: -2px;
+  bottom: 2.4rem;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(2%, #ff000000), color-stop(12%, #f7f7f7));
+  background: linear-gradient(180deg, #ff000000 2%, #f7f7f7 12%);
   -webkit-transform: translate(calc(-2.4rem - 1.8vw), 100%);
           transform: translate(calc(-2.4rem - 1.8vw), 100%);
 }
 
-.resources .mainContent .meetTheTeam .row h2 .spacer {
-  opacity: 0;
-  margin: 2rem;
-}
-
 .resources .mainContent .meetTheTeam .column {
-  border-left: 1px solid #D4D4D4;
-  border-right: 1px solid #D4D4D4;
-  height: calc(24rem + 4vw);
-  left: 49%;
-  -webkit-transform: translate(-29%, -25%);
-          transform: translate(-29%, -25%);
+  height: calc(12rem + 14vw);
+  left: 50%;
+  -webkit-transform: translate(-36%, -12%);
+          transform: translate(-36%, -12%);
   padding: 1rem;
-}
-
-.resources .mainContent .meetTheTeam .column .innerColumn {
-  width: 100%;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4129,10 +4133,8 @@ ul li {
           justify-content: space-between;
 }
 
-.resources .mainContent .meetTheTeam .column .innerColumn h2 {
+.resources .mainContent .meetTheTeam .column h2 {
   font-weight: 650;
-  -webkit-transform: translate(0, 64px);
-          transform: translate(0, 64px);
 }
 
 .resources .mainContent .reel {
@@ -4169,7 +4171,7 @@ ul li {
   position: relative;
   height: calc(16rem + 16vw);
   margin-bottom: calc(0.6rem + 1.2vw);
-  border-radius: calc(0.4rem + 0.2vw);
+  border-radius: calc(0.4rem + 0.4vw);
   overflow: hidden;
 }
 
@@ -4212,6 +4214,10 @@ ul li {
 .resources .mainContent .reel .columnOuter .reelImg figcaption h5 {
   font-size: calc(0.6rem + 0.3vw);
   font-weight: 300;
+}
+
+.resources .mainContent .reel .columnOuter .midSizeReelImg {
+  display: none;
 }
 
 .resources .mainContent .reel .columnOuterActive {
@@ -4420,8 +4426,8 @@ ul li {
   position: absolute;
   top: 0;
   left: 50%;
-  -webkit-transform: translate(-50%, -40%);
-          transform: translate(-50%, -40%);
+  -webkit-transform: translate(-50%, -47%);
+          transform: translate(-50%, -47%);
   width: 120%;
   opacity: 0.5;
 }
@@ -4430,7 +4436,7 @@ ul li {
   position: relative;
   width: 100vw;
   height: auto;
-  padding: 16rem 0;
+  padding: 14rem 0 16rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4590,14 +4596,29 @@ ul li {
           transform: translate(0, -50vh);
 }
 
-@media (max-width: 1440px) {
-  .resources .mainContent .meetTheTeam .row, .resources .mainContent .meetTheTeam .column {
-    top: 42%;
+@media (max-width: 1248px) {
+  .resources .mainContent .productivity .images {
+    -webkit-transform: translate(0, -2%);
+            transform: translate(0, -2%);
   }
-  .resources .mainContent .meetTheTeam .column {
-    height: calc(12rem + 12vw);
-    -webkit-transform: translate(-29%, -29%);
-            transform: translate(-29%, -29%);
+  .resources .mainContent .reel {
+    height: calc(129rem + 133vw);
+  }
+  .resources .mainContent .reel .columnOuter {
+    width: 32%;
+  }
+  .resources .mainContent .reel .columnOuter:nth-of-type(2) {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .resources .mainContent .reel .columnOuter:nth-of-type(4) {
+    display: none;
+  }
+  .resources .mainContent .reel .columnOuter .reelImg {
+    height: calc(18rem + 18vw);
+  }
+  .resources .mainContent .reel .columnOuter .midSizeReelImg {
+    display: block;
   }
   .resources .mainContent .enzy .appUsage {
     height: auto;

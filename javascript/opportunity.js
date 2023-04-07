@@ -63,29 +63,23 @@ activePage.addEventListener("click", closeNav);
 // Sunder Definition Video
 //
 
+const videoFigure = document.querySelector(".videoFigure");
 const video = document.querySelector("#definitionVideo");
+const overlay = document.querySelector(".overlay");
 
-video.addEventListener("click", () => {
+videoFigure.addEventListener("click", () => {
   if (video.paused) {
     video.play();
+    overlay.style.opacity = "0";
   } else {
     video.pause();
+    overlay.style.opacity = "1";
   }
 });
 
-// video.addEventListener("mouseover", function () {
-//   video.setAttribute("controls", "");
-// });
-
-// video.addEventListener("mouseout", function () {
-//   video.removeAttribute("controls");
-// });
-
 window.addEventListener("scroll", () => {
-  const videoRect = video.getBoundingClientRect();
-  if (videoRect.top < window.innerHeight) {
-    video.pause();
-  }
+  overlay.style.opacity = "1";
+  video.pause();
 });
 
 //
@@ -187,7 +181,7 @@ gsap.to("#videoText2", {
     end: "200% top",
   },
 });
-gsap.to("#definitionVideo", {
+gsap.to(".videoFigure", {
   scale: 1,
   opacity: 1,
   scrollTrigger: {

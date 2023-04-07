@@ -79,14 +79,16 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.to("#textWrapper1", {
   transform: "translate(0, 0)",
   scrollTrigger: {
-    trigger: ".smartHeader",
+    // trigger: ".smartHeader",
+    trigger: ".prodImg1",
     scrub: 0.1,
     start: "top 5%",
-    end: "140% top",
+    // end: "180% top",
+    end: "bottom top",
     // markers: {
-    //   indent: 64,
-    //   startColor: "lightblue",
-    //   endColor: "lightblue",
+    //   indent: 124,
+    //   startColor: "violet",
+    //   endColor: "violet",
     // },
   },
 });
@@ -94,13 +96,13 @@ gsap.to("#textWrapper1", {
 gsap.to("#textWrapper2", {
   transform: "translate(0, 0)",
   scrollTrigger: {
-    trigger: ".smartHeader",
+    trigger: ".prodImg2",
     scrub: 0.1,
-    start: "180% 5%",
-    end: "420% top",
+    start: "top 5%",
+    end: "bottom top",
     // markers: {
-    //   startColor: "yellow",
-    //   endColor: "yellow",
+    //   startColor: "coral",
+    //   endColor: "coral",
     // },
   },
 });
@@ -123,7 +125,8 @@ gsap.to(".content", {
 });
 
 gsap.to(".column", {
-  transform: "translate(-29%, -80%)",
+  // transform: "translate(-36%, -80%)",
+  transform: "translate(-36%, -88%)",
   ease: "none",
   scrollTrigger: {
     trigger: ".meetTheTeam",
@@ -137,26 +140,53 @@ gsap.to(".column", {
   },
 });
 
-gsap.to(".innerColumn", {
-  transform: "translate(0, -24%)",
-  // transform: "translate(0, -120px)",
+let rowWidthTl = gsap.timeline({
   ease: "none",
   scrollTrigger: {
     trigger: ".meetTheTeam",
     scrub: true,
     start: "top top",
-    end: "bottom bottom",
-    // markers: {
-    //   startColor: "violet",
-    //   endColor: "violet",
-    // },
+    end: "60% top",
+    // markers: true,
   },
 });
+rowWidthTl
+  .to(".row", {
+    width: "calc(10rem + 36vw)",
+  })
+  .to(".row", {
+    width: "calc(10rem + 41vw)",
+  })
+  .to(".row", {
+    width: "calc(10rem + 41vw)",
+  })
+  .to(".row", {
+    width: "calc(10rem + 41vw)",
+  })
+  .to(".row", {
+    width: "calc(10rem + 46vw)",
+  })
+  .to(".row", {
+    width: "calc(10rem + 46vw)",
+  })
+  .to(".row", {
+    width: "calc(10rem + 46vw)",
+  })
+  .to(".row", {
+    width: "calc(10rem + 48vw)",
+  })
+  .to(".row", {
+    width: "calc(10rem + 48vw)",
+  })
+  .to(".row", {
+    width: "calc(10rem + 48vw)",
+  });
 
 // Image Reels
 
 gsap.to("#col1", {
-  y: "-21%",
+  // y: "-21%",
+  y: window.innerWidth <= 1248 ? "0" : "-21%",
   ease: "none",
   scrollTrigger: {
     trigger: "#reel",
@@ -166,7 +196,8 @@ gsap.to("#col1", {
   },
 });
 gsap.to("#col2", {
-  y: "-29%",
+  // y: "-29%",
+  y: window.innerWidth <= 1248 ? "0" : "-29%",
   ease: "none",
   scrollTrigger: {
     trigger: "#reel",
@@ -176,7 +207,8 @@ gsap.to("#col2", {
   },
 });
 gsap.to("#col3", {
-  y: "-34.3%",
+  // y: "-34.3%",
+  y: window.innerWidth <= 1248 ? "0" : "-34.3%",
   ease: "none",
   scrollTrigger: {
     trigger: "#reel",

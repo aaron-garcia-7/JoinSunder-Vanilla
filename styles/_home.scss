@@ -75,7 +75,7 @@
         color: $sunderSnow;
         font-family: $monument;
         font-size: $Hero-Text;
-        font-weight: 400;
+        font-weight: 450;
         transform: translate(0, 120%);
       }
       
@@ -132,7 +132,7 @@
         font-weight: 300;
         border-radius: 4rem;
         padding: 0.4rem 1.4rem;
-        width: calc(8rem + 8vw);
+        width: calc(7.8rem + 7.8vw);
         height: calc(2.4rem + 1vw);
       }
       .cta {
@@ -159,14 +159,16 @@
         background: linear-gradient(90deg, #15499340, #4AABD040);
         color: transparent;
         border: 1px solid $sunderRoyalLight;
+        width: calc(7.2rem + 7.2vw);
         display: flex;
         cursor: pointer;
           &::before {
-            content: 'Watch Promo';
+            content: 'Play Video';
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-56%, -50%);
+            // transform: translate(-60%, -50%);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -183,7 +185,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          transform: translate(50%, 0);
+          transform: translate(80%, 0);
           overflow: hidden;
           transition: transform 0.4s cubic-bezier(.05,.6,.56,1), opacity 0.2s ease;
           .playIcon {

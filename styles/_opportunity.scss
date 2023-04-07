@@ -68,12 +68,12 @@ $pending: #BCD0D7;
                 // width: 46%;
                 width: clamp(4rem, 44%, 46rem);
                 pointer-events: none;
+                z-index: 3;
             }
             .shape {
                 bottom: 0;
                 right: 0;
                 width: 100%;
-                // height: 68%;
                 height: 38vw;
                 height: clamp(12rem, 38vw, 36rem);
                 border-radius: 0 3.2rem 0 3.2rem;
@@ -249,11 +249,13 @@ $pending: #BCD0D7;
                 transform: translate(89%, 75%);
                 text-align: right;
             }
-            .definitionVideo {
+            .videoFigure {
                 // border: 2px solid coral;
+                position: relative;
                 border-radius: calc(0.4rem + 1.2vw);
                 opacity: 0;
                 width: 60%;
+                height: calc(12rem + 24vw);
                 top: 50%;
                 left: 50%;
                 // scale: 0.2;
@@ -262,6 +264,34 @@ $pending: #BCD0D7;
                 // transform: translate(-50%, -50%);
                 // cursor: none;
                 cursor: pointer;
+                > * {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border-radius: calc(0.4rem + 1.2vw);
+                }
+                .overlay {
+                    width: 100%;
+                    height: 100%;
+                    background: rgba($sunderMidnight, 0.5);
+                    z-index: 1;
+                    // display: flex;
+                    // justify-content: center;
+                    // align-items: center;
+                    img {
+                        transform: scale(2.8);
+                        position: absolute;
+                        bottom: 16%;
+                        left: 8%;
+                    }
+                }
+                .definitionVideo {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    z-index: -1;
+                }
             }
         }
 
@@ -857,6 +887,7 @@ $pending: #BCD0D7;
 @media (min-width: 2048px) {
     .opportunity {
         .mainContent{
+
             .header {
                 // border: 2px solid blue;
                 height: 56rem;
@@ -874,6 +905,16 @@ $pending: #BCD0D7;
                     width: 56rem;
                 }
             }
+
+            .quoteSection {
+                margin: auto;
+            }
+
+            .cardsSection {
+                width: 128rem;
+                margin: auto;
+            }
+
             .growth {
                 .mapArea {
                     .stateCount {
@@ -881,6 +922,12 @@ $pending: #BCD0D7;
                             font-size: 6.4rem;
                         }
                     }
+                }
+            }
+
+            .kwInstalled {
+                .pageFooter {
+                    width: 128rem;             
                 }
             }
         }
@@ -903,8 +950,28 @@ $pending: #BCD0D7;
     .opportunity {
         .mainContent{
             .header {
-                // background: lightblue;
-                height: 42rem;
+                // height: clamp(38rem, 100vh, 48rem);
+                height: 38rem;
+                margin: 8.6rem 2.4rem 4rem 2.4rem;
+                padding: 0;
+                > * {
+                    transform: translate(0, 0);
+                }
+                .cta {
+                    top: -5.6rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1248px) {
+    .opportunity {
+        .mainContent{
+            .header {
+                height: 32rem;
+                .cta {
+                    top: -6.4rem;
+                }
             }
         }
     }
@@ -914,8 +981,9 @@ $pending: #BCD0D7;
     .opportunity {
         .mainContent{
             .header {
-                // border: 2px dashed burlywood;
-                height: clamp(42rem, 100vh, 49rem);
+                border: 2px dashed burlywood;
+                border: none;
+                // height: clamp(42rem, 100vh, 49rem);
 
                 h1 {
                     font-size: calc(1.8rem + 3.6vw);

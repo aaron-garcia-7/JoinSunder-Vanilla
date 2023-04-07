@@ -11,13 +11,15 @@ let pgWidth = window.innerWidth;
 const cta = document.querySelector("#cta");
 const ctaCircle = document.querySelector("#ctaCircle");
 
-cta.addEventListener("mousemove", (e) => {
-  const rect = cta.getBoundingClientRect(),
-    x = e.clientX - rect.left,
-    y = e.clientY - rect.top;
-  ctaCircle.style.setProperty("--mouse-x", `${y}px`);
-  ctaCircle.style.setProperty("--mouse-y", `${x}px`);
-});
+if (cta) {
+  cta.addEventListener("mousemove", (e) => {
+    const rect = cta.getBoundingClientRect(),
+      x = e.clientX - rect.left,
+      y = e.clientY - rect.top;
+    ctaCircle.style.setProperty("--mouse-x", `${y}px`);
+    ctaCircle.style.setProperty("--mouse-y", `${x}px`);
+  });
+}
 
 //
 // Nav Slider
