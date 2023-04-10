@@ -1319,6 +1319,7 @@ ul li {
     width: 100vw;
     height: 92vh;
     min-height: 28rem;
+    max-height: 42rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1652,7 +1653,7 @@ ul li {
   background: #f7f7f7;
   width: 32%;
   height: 98%;
-  border-radius: 3.2rem;
+  border-radius: calc(1rem + 1vw);
   overflow: hidden;
 }
 
@@ -1688,7 +1689,7 @@ ul li {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 0 0 1.2rem 3.2rem;
+  padding: 0 0 1.2rem calc(1rem + 1vw);
 }
 
 .opportunity .mainContent .cardsSection .repCard .cardText .list {
@@ -1723,6 +1724,7 @@ ul li {
 .opportunity .mainContent .videoSection h2 {
   color: #f7f7f7;
   font-size: calc(1.6rem + 2.4vw);
+  font-weight: 675;
 }
 
 .opportunity .mainContent .videoSection .text1 {
@@ -1979,30 +1981,34 @@ ul li {
 }
 
 .opportunity .mainContent .growthAnchors {
+  border: 2px dashed coral;
   position: absolute;
-  top: 44%;
+  top: 41%;
   width: 100%;
   height: calc(100vh + 32%);
+  height: calc(100vh + 29%);
   z-index: -1;
+  pointer-events: none;
 }
 
 .opportunity .mainContent .growthAnchors #anchor2019, .opportunity .mainContent .growthAnchors #anchor2020, .opportunity .mainContent .growthAnchors #anchor2021, .opportunity .mainContent .growthAnchors #anchor2022 {
+  background: coral;
   position: absolute;
-  top: 10%;
+  top: 14%;
   width: 12rem;
   height: 1rem;
 }
 
 .opportunity .mainContent .growthAnchors #anchor2020 {
-  top: 26%;
+  top: 30%;
 }
 
 .opportunity .mainContent .growthAnchors #anchor2021 {
-  top: 42%;
+  top: 48%;
 }
 
 .opportunity .mainContent .growthAnchors #anchor2022 {
-  top: 60%;
+  top: 66%;
 }
 
 .opportunity .mainContent .dataSections {
@@ -2496,6 +2502,29 @@ ul li {
   .opportunity .mainContent .header .cta {
     top: -5.6rem;
   }
+  .opportunity .mainContent .quoteSection .quoteDivider {
+    margin: 2rem;
+    height: calc(4rem + 6vw);
+    border-right: 1px solid #000014;
+  }
+  .opportunity .mainContent .growthAnchors {
+    border: 2px dashed violet;
+    top: 41.4%;
+    height: calc(100vh + 29%);
+  }
+  .opportunity .mainContent .growthAnchors #anchor2019, .opportunity .mainContent .growthAnchors #anchor2020, .opportunity .mainContent .growthAnchors #anchor2021, .opportunity .mainContent .growthAnchors #anchor2022 {
+    background: violet;
+    top: 14%;
+  }
+  .opportunity .mainContent .growthAnchors #anchor2020 {
+    top: 30%;
+  }
+  .opportunity .mainContent .growthAnchors #anchor2021 {
+    top: 48%;
+  }
+  .opportunity .mainContent .growthAnchors #anchor2022 {
+    top: 66%;
+  }
 }
 
 @media (max-width: 1248px) {
@@ -2516,19 +2545,25 @@ ul li {
     min-height: 44rem;
     max-height: 48rem;
     margin: 0 0 2.4rem 2.4rem;
+    overflow: hidden;
   }
   .opportunity .mainContent .header .cta {
     top: 2rem;
     right: 2rem;
   }
   .opportunity .mainContent .header h1 {
-    font-size: calc(3.2rem + 1.2vw);
+    font-size: calc(2.4rem + 1.6vw);
     mix-blend-mode: normal;
+    -webkit-transform: translate(0, -8%);
+            transform: translate(0, -8%);
+    line-height: 140%;
   }
   .opportunity .mainContent .header .soloRepImg {
     display: block;
-    width: 30rem;
+    width: 28rem;
     z-index: 0;
+    -webkit-transform: translate(12%, 0);
+            transform: translate(12%, 0);
   }
   .opportunity .mainContent .header .repsImg {
     display: none;
@@ -2538,13 +2573,13 @@ ul li {
     border-radius: 0 0 0 1.6rem;
   }
   .opportunity .mainContent .quoteSection {
-    padding: 4rem 2rem;
+    padding: 4rem 0rem;
   }
   .opportunity .mainContent .quoteSection .quote1, .opportunity .mainContent .quoteSection .quote2 {
     gap: 4%;
   }
   .opportunity .mainContent .quoteSection .quote1 .imgWrapper, .opportunity .mainContent .quoteSection .quote2 .imgWrapper {
-    padding: calc(4rem + 12vw);
+    padding: calc(3.2rem + 12vw);
     border-radius: 1.6rem;
   }
   .opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption {
@@ -2578,6 +2613,7 @@ ul li {
     border-right: 1px solid transparent;
   }
   .opportunity .mainContent .cardsSection {
+    height: clamp(42rem, 100vh, 56rem);
     padding: 0 2.4rem;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
@@ -2638,11 +2674,35 @@ ul li {
   .opportunity .mainContent .cardsSection .repCard .cardText .name .lastName {
     font-size: calc(1.4rem + 1.4vw);
   }
-  .opportunity .mainContent .growth {
-    border: 2px dashed burlywood;
+  .opportunity .mainContent .videoSection h2 {
+    font-size: calc(1.4rem + 1.4vw);
   }
-  .opportunity .mainContent .growth .mapArea .stateCount .number {
-    border: 2px solid blue;
+  .opportunity .mainContent .videoSection .text {
+    width: calc(14rem + 14vw);
+  }
+  .opportunity .mainContent .videoSection .text1 {
+    -webkit-transform: translate(-78%, -75%);
+            transform: translate(-78%, -75%);
+  }
+  .opportunity .mainContent .videoSection .text2 {
+    -webkit-transform: translate(78%, 75%);
+            transform: translate(78%, 75%);
+  }
+  .opportunity .mainContent .videoSection .videoFigure {
+    width: 80%;
+    height: calc(10rem + 24vw);
+  }
+  .opportunity .mainContent .videoSection .videoFigure .overlay img {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    left: 10%;
+  }
+  .opportunity .mainContent .videoSection .videoFigure .definitionVideo {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    z-index: -1;
   }
 }
 
@@ -3871,22 +3931,22 @@ ul li {
   }
 }
 
-.earn .logo, .earn .navLogo {
+.experience .logo, .experience .navLogo {
   position: absolute;
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
 
-.earn .navLogo {
+.experience .navLogo {
   position: fixed;
 }
 
-.earn .burgerContainer {
+.experience .burgerContainer {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
 
-.earn .mainContent {
+.experience .mainContent {
   background: #f7f7f7;
   width: 100vw;
   display: -webkit-box;
@@ -3908,7 +3968,7 @@ ul li {
   transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
 }
 
-.earn .mainContent .reel {
+.experience .mainContent .reel {
   height: calc(75rem + 79vw);
   width: 100vw;
   display: -webkit-box;
@@ -3925,7 +3985,7 @@ ul li {
   overflow: hidden;
 }
 
-.earn .mainContent .reel .columnOuter {
+.experience .mainContent .reel .columnOuter {
   width: 25%;
   -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
   transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
@@ -3933,8 +3993,8 @@ ul li {
   transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
 }
 
-.earn .mainContent .reel .columnOuter .reelImg,
-.earn .mainContent .reel .columnOuter .reelImgShort {
+.experience .mainContent .reel .columnOuter .reelImg,
+.experience .mainContent .reel .columnOuter .reelImgShort {
   background: transparent;
   height: calc(16rem + 16vw);
   margin-bottom: calc(0.6rem + 1.2vw);
@@ -3942,35 +4002,35 @@ ul li {
   overflow: hidden;
 }
 
-.earn .mainContent .reel .columnOuter .reelImg img,
-.earn .mainContent .reel .columnOuter .reelImgShort img {
+.experience .mainContent .reel .columnOuter .reelImg img,
+.experience .mainContent .reel .columnOuter .reelImgShort img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.earn .mainContent .reel .columnOuter .reelImgShort {
+.experience .mainContent .reel .columnOuter .reelImgShort {
   /* height: 32%; */
   height: calc(8rem + 8vw);
 }
 
-.earn .mainContent .reel .columnOuterActive {
+.experience .mainContent .reel .columnOuterActive {
   -webkit-transform: translate(0, -50vh);
           transform: translate(0, -50vh);
 }
 
-.earn .mainContent .reelActive {
+.experience .mainContent .reelActive {
   position: absolute;
   right: 0;
 }
 
-.earn .mainContent .videoSection {
+.experience .mainContent .videoSection {
   width: 100vw;
   height: 100dvh;
 }
 
-.earn .mainContentActive {
+.experience .mainContentActive {
   -webkit-transform: translate(0, -50vh);
           transform: translate(0, -50vh);
 }
@@ -4741,22 +4801,22 @@ ul li {
   }
 }
 
-.contact .logo, .contact .navLogo {
+.join .logo, .join .navLogo {
   position: absolute;
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
 
-.contact .navLogo {
+.join .navLogo {
   position: fixed;
 }
 
-.contact .burgerContainer {
+.join .burgerContainer {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
 
-.contact .mainContent {
+.join .mainContent {
   width: 100vw;
   height: clamp(26rem, 100dvh, 64rem);
   display: -webkit-box;
@@ -4778,15 +4838,15 @@ ul li {
   transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
 }
 
-.contact .mainContent h1 {
+.join .mainContent h1 {
   font-size: calc(1.6rem + 2.4vw);
 }
 
-.contact .mainContent .cta {
+.join .mainContent .cta {
   display: none;
 }
 
-.contact .mainContentActive {
+.join .mainContentActive {
   -webkit-transform: translate(0, -50vh);
           transform: translate(0, -50vh);
 }

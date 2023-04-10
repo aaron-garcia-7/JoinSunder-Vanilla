@@ -188,7 +188,7 @@ $pending: #BCD0D7;
                 background: $sunderSnow;
                 width: 32%;
                 height: 98%;
-                border-radius: 3.2rem;
+                border-radius: calc(1rem + 1vw);
                 overflow: hidden;
                 > * {
                     position: absolute;
@@ -210,7 +210,7 @@ $pending: #BCD0D7;
                     flex-direction: column;
                     justify-content: flex-end;
                     align-items: flex-start;
-                    padding: 0 0 1.2rem 3.2rem;
+                    padding: 0 0 1.2rem calc(1rem + 1vw);
                     .list {
                         margin-bottom: 1.2rem;
                         li {
@@ -241,6 +241,7 @@ $pending: #BCD0D7;
             h2 {
                 color: $sunderSnow;
                 font-size: $Hero-Text;
+                font-weight: 675;
             }
             .text1 {
                 top: 50%;
@@ -441,30 +442,33 @@ $pending: #BCD0D7;
         }
 
         .growthAnchors {
-            // border: 2px dashed coral;
+            border: 2px dashed coral;
             position: absolute;
-            top: 44%;
+            // top: 44%;
+            top: 41%;
             width: 100%;
             height: calc(100vh + 32%);
+            height: calc(100vh + 29%);
             z-index: -1;
+            pointer-events: none;
             #anchor2019 {
-                // background: coral;
+                background: coral;
                 position: absolute;
-                top: 10%;
+                top: 14%;
                 width: 12rem;
                 height: 1rem;
             }
             #anchor2020 {
                 @extend #anchor2019;
-                top: 26%;
+                top: 30%;
             }
             #anchor2021 {
                 @extend #anchor2019;
-                top: 42%;
+                top: 48%;
             }
             #anchor2022 {
                 @extend #anchor2019;
-                top: 60%;
+                top: 66%;
             }
         }
 
@@ -965,6 +969,32 @@ $pending: #BCD0D7;
                     top: -5.6rem;
                 }
             }
+            .quoteSection {
+                .quoteDivider {
+                    margin: 2rem;
+                    height: calc(4rem + 6vw);
+                    border-right: 1px solid $sunderMidnight;
+                }
+            }
+
+            .growthAnchors {
+                border: 2px dashed violet;
+                top: 41.4%;
+                height: calc(100vh + 29%);
+                #anchor2019 {
+                    background: violet;
+                    top: 14%;
+                }
+                #anchor2020 {
+                    top: 30%;
+                }
+                #anchor2021 {
+                    top: 48%;
+                }
+                #anchor2022 {
+                    top: 66%;
+                }
+            }
         }
     }
 }
@@ -993,18 +1023,22 @@ $pending: #BCD0D7;
                 min-height: 44rem;
                 max-height: 48rem;
                 margin: 0 0 2.4rem 2.4rem;
+                overflow: hidden;
                 .cta {
                     top: 2rem;
                     right: 2rem;
                 }
                 h1 {
-                    font-size: calc(3.2rem + 1.2vw);
+                    font-size: calc(2.4rem + 1.6vw);
                     mix-blend-mode: normal;
+                    transform: translate(0, -8%);
+                    line-height: 140%;
                 }
                 .soloRepImg {
                     display: block;
-                    width: 30rem;
+                    width: 28rem;
                     z-index: 0;
+                    transform: translate(12%, 0);
                 }
                 .repsImg {
                     display: none;
@@ -1018,12 +1052,12 @@ $pending: #BCD0D7;
             .quoteSection {
                 // border: 2px dashed coral;
                 // padding: 8rem 2rem;
-                padding: 4rem 2rem;
+                padding: 4rem 0rem;
                 .quote1 {
                     gap: 4%;
                     .imgWrapper {
                         // padding: calc(8rem + 6vw);
-                        padding: calc(4rem + 12vw);
+                        padding: calc(3.2rem + 12vw);
                         border-radius: 1.6rem;
                         .imgCaption {
                             padding: 1.4rem;
@@ -1061,7 +1095,7 @@ $pending: #BCD0D7;
             }
 
             .cardsSection {
-                // height: clamp(24rem, 100vh, auto);
+                height: clamp(42rem, 100vh, 56rem);
                 padding: 0 2.4rem;
                 flex-wrap: nowrap;
                 overflow-x: scroll;
@@ -1117,13 +1151,34 @@ $pending: #BCD0D7;
                 }
             }
 
-            .growth {
-                border: 2px dashed burlywood;
-                .mapArea {
-                    .stateCount {
-                        .number {
-                            border: 2px solid blue;
+            .videoSection {
+                h2 {
+                    font-size: $XL-Text;
+                }
+                .text {
+                    width: calc(14rem + 14vw);
+                }
+                .text1 {
+                    transform: translate(-78%, -75%);
+                }
+                .text2 {
+                    transform: translate(78%, 75%);
+                }
+                .videoFigure {
+                    width: 80%;
+                    height: calc(10rem + 24vw);
+                    .overlay {
+                        img {
+                            transform: scale(2);
+                            // bottom: 16%;
+                            left: 10%;
                         }
+                    }
+                    .definitionVideo {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        z-index: -1;
                     }
                 }
             }
@@ -1132,15 +1187,10 @@ $pending: #BCD0D7;
 }
 
 // @media (max-width: 768px) {
-//     .opportunity {
-
-//         .mainContent{
-//             .header {
-//                 h1 {
-//                     .smartBreak {
-//                         display: none;
-//                     }
-//                 }
+//     .opportunity{
+//         .mainContent {
+//             .growth {
+//                 border: 2px dashed burlywood;
 //             }
 //         }
 //     }
