@@ -289,10 +289,10 @@
                         border: 1px solid $enzyHero;
                         display: flex;
                         cursor: pointer;
-                        width: calc(8rem + 8vw);
+                        width: calc(6.8rem + 6.8vw);
                         height: calc(2.4rem + 1vw);
                           &::before {
-                            content: 'Watch Promo';
+                            content: 'Play Video';
                             position: absolute;
                             top: 50%;
                             left: 50%;
@@ -309,18 +309,15 @@
                           width: calc(1rem + 1vw);
                           height: calc(1rem + 1vw);
                           border-radius: 50%;
-                          align-self: center;
                           display: flex;
-                          justify-content: center;
                           align-items: center;
-                        //   transform: translate(50%, 0);
-                        //   transform: translate(350%, 0);
-                          transform: translate(6.4vw, 0);
+                          justify-content: center;
+                          transform: translate(5.2vw, 0.2rem);
                           overflow: hidden;
                           transition: transform 0.4s cubic-bezier(.05,.6,.56,1), opacity 0.2s ease;
                           .playIcon {
-                            width: calc(0.5rem + 0.7vw);
-                            height: calc(0.5rem + 0.7vw);
+                            width: calc(0.6rem + 0.6vw);
+                            height: calc(0.6rem + 0.6vw);
                           }
                           .playIcon1 {
                             transform: translate(-120%, 0);

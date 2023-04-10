@@ -4409,12 +4409,12 @@ ul li {
   display: -ms-flexbox;
   display: flex;
   cursor: pointer;
-  width: calc(8rem + 8vw);
+  width: calc(6.8rem + 6.8vw);
   height: calc(2.4rem + 1vw);
 }
 
 .resources .mainContent .enzy .enzyHero .cta2Aside .cta2::before {
-  content: 'Watch Promo';
+  content: 'Play Video';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -4439,19 +4439,17 @@ ul li {
   width: calc(1rem + 1vw);
   height: calc(1rem + 1vw);
   border-radius: 50%;
-  -ms-flex-item-align: center;
-      align-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transform: translate(6.4vw, 0);
-          transform: translate(6.4vw, 0);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translate(5.2vw, 0.2rem);
+          transform: translate(5.2vw, 0.2rem);
   overflow: hidden;
   -webkit-transition: opacity 0.2s ease, -webkit-transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1);
   transition: opacity 0.2s ease, -webkit-transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1);
@@ -4460,8 +4458,8 @@ ul li {
 }
 
 .resources .mainContent .enzy .enzyHero .cta2Aside .cta2 .playIconFrame .playIcon {
-  width: calc(0.5rem + 0.7vw);
-  height: calc(0.5rem + 0.7vw);
+  width: calc(0.6rem + 0.6vw);
+  height: calc(0.6rem + 0.6vw);
 }
 
 .resources .mainContent .enzy .enzyHero .cta2Aside .cta2 .playIconFrame .playIcon1 {
