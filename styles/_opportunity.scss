@@ -336,6 +336,9 @@ $pending: #BCD0D7;
                         width: 1px;
                         height: 0%;
                     }
+                    &Border2 {
+                        display: none;
+                    }
                     &Links {
                         color: $sunderSnow;
                         font-size: $M-Text;
@@ -423,36 +426,28 @@ $pending: #BCD0D7;
                         font-family: $monument;
                         font-size: calc(2.8rem + 2.8vw);
                         font-weight: 450;
-                        &::selection {
-                            background: $sunderRoyalLight;
-                            color: $sunderSnow;
-                        }
                     }
                     .title {
                         font-family: $satoshi;
                         font-size: $XL-Text;
                         font-weight: 400;
-                        &::selection {
-                            background: $sunderRoyalLight;
-                            color: $sunderSnow;
-                        }
                     }
                 }
             }
         }
 
         .growthAnchors {
-            border: 2px dashed coral;
+            // border: 2px dashed coral;
             position: absolute;
-            // top: 44%;
-            top: 41%;
+            top: calc(38% + 24vw);
+            // top: calc(39% + 22vw);
             width: 100%;
             height: calc(100vh + 32%);
             height: calc(100vh + 29%);
             z-index: -1;
             pointer-events: none;
             #anchor2019 {
-                background: coral;
+                // background: coral;
                 position: absolute;
                 top: 14%;
                 width: 12rem;
@@ -460,15 +455,15 @@ $pending: #BCD0D7;
             }
             #anchor2020 {
                 @extend #anchor2019;
-                top: 30%;
+                top: 32%;
             }
             #anchor2021 {
                 @extend #anchor2019;
-                top: 48%;
+                top: 50%;
             }
             #anchor2022 {
                 @extend #anchor2019;
-                top: 66%;
+                top: 68%;
             }
         }
 
@@ -977,24 +972,58 @@ $pending: #BCD0D7;
                 }
             }
 
-            .growthAnchors {
-                border: 2px dashed violet;
-                top: 41.4%;
-                height: calc(100vh + 29%);
-                #anchor2019 {
-                    background: violet;
-                    top: 14%;
+            .growth {
+                .numberArea {
+                    width: 18%;
+                    // transform: translate(20%, 0); // original
+                    transform: translate(12%, 0);
+                    .timeline {
+                        &Border {
+                            // transform: translate(calc(4rem + 2vw), -10%); // original
+                            transform: translate(calc(4rem + 1vw), -6%);
+                        }
+                    }
                 }
-                #anchor2020 {
-                    top: 30%;
-                }
-                #anchor2021 {
-                    top: 48%;
-                }
-                #anchor2022 {
-                    top: 66%;
+                .mapArea {
+                    .map {
+                        .USA {
+                            transform: translate(-6%, 0);
+                                }
+                            }
+                    .compass {
+                        transform: translate(-18%, 0);
+                        h5 {
+                            .circle {
+                                margin-right: 0.6rem;
+                            }
+                        }
+                    }
+                    .stateCount {
+                        #numberContainer {
+                            height: 6rem;
+                        }
+                    }
                 }
             }
+
+            // .growthAnchors {
+            //     border: 2px dashed violet;
+            //     // top: 41.4%;
+            //     height: calc(100vh + 29%);
+            //     #anchor2019 {
+            //         background: violet;
+            //         top: 14%;
+            //     }
+            //     #anchor2020 {
+            //         top: 32%;
+            //     }
+            //     #anchor2021 {
+            //         top: 50%;
+            //     }
+            //     #anchor2022 {
+            //         top: 68%;
+            //     }
+            // }
         }
     }
 }
@@ -1100,12 +1129,9 @@ $pending: #BCD0D7;
                 flex-wrap: nowrap;
                 overflow-x: scroll;
                 .repCard {
-                    flex: 0 0 auto;
-                    // position: relative;
-                    // background: $sunderSnow;
-                    // width: 32%;
-                    // width: 24rem;
-                    width: calc(24rem + 12vw);
+                    flex: 0 0 auto;;
+                    // width: calc(24rem + 12vw);
+                    width: calc(22rem + 12vw);
                     // height: 92%;
                     height: 86%;
                     border-radius: 2rem;
@@ -1182,16 +1208,99 @@ $pending: #BCD0D7;
                     }
                 }
             }
+
+            .growth {
+                .numberArea {
+                    .timeline {
+                        height: 48%;
+                    }
+                }
+            }
         }
     }
 }
 
-// @media (max-width: 768px) {
-//     .opportunity{
-//         .mainContent {
-//             .growth {
-//                 border: 2px dashed burlywood;
-//             }
-//         }
-//     }
-// }
+@media (max-width: 768px) {
+    .opportunity{
+        .mainContent {
+            .growth {
+                // border: 2px dashed burlywood;
+                flex-direction: column-reverse;
+                .numberArea {
+                    // border: 2px solid orange;
+                    // width: 18%;
+                    width: 100%;
+                    // transform: translate(12%, 0);
+                    // transform: translate(0, -64%);
+                    transform: translate(0, -80%);
+                    margin: auto;
+                    #growthTitle {
+                        display: none;
+                    }
+                    .timeline {
+                        flex-direction: row;
+                        align-items: center;
+                        // background: blue;
+                        width: 68%;
+                        &Border {
+                            display: none;
+                        }
+                        &Border2 {
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            transform: translate(0, -3.2rem);
+                            display: block;
+                            width: 0%;
+                            height: 1px;
+                            background: $sunderSnow;
+                            // border: 2px dashed white;
+                        }
+                    }
+                }
+                .mapArea {
+                    margin: auto;
+                    .map {
+                        // border: 2px solid yellow;
+                        .USA {
+                            transform: translate(0, 0);
+                                }
+                            }
+                    .compass {
+                        transform: translate(0, 0);
+                        // h5 {
+                        //     .circle {
+                        //         margin-right: 0.6rem;
+                        //     }
+                        // }
+                    }
+                    .stateCount {
+                        border: 2px solid blue;
+                        display: none;
+                        #numberContainer {
+                            height: 6rem;
+                        }
+                    }
+                }
+            }
+            .growthAnchors {
+                border: 2px dashed violet;
+                // top: 41.4%;
+                height: calc(100vh + 29%);
+                #anchor2019 {
+                    background: violet;
+                    top: 14%;
+                }
+                #anchor2020 {
+                    top: 32%;
+                }
+                #anchor2021 {
+                    top: 50%;
+                }
+                #anchor2022 {
+                    top: 68%;
+                }
+            }
+        }
+    }
+}

@@ -303,6 +303,15 @@ gsap.to("#timelineBorder", {
   },
 });
 
+gsap.to("#timelineBorder2", {
+  width: "100%",
+  scrollTrigger: {
+    trigger: "#growth",
+    toggleActions: "play none none reverse",
+    start: "top top",
+  },
+});
+
 let timelineLinksAppear = gsap.utils.toArray(".timelineLinks");
 gsap.to(timelineLinksAppear, {
   opacity: 1,
@@ -320,6 +329,7 @@ let linkHilightTL = gsap.timeline({
     scrub: true,
     start: "40% 15%",
     end: "400% 15%",
+    // markers: true,
   },
 });
 linkHilightTL

@@ -124,6 +124,13 @@
               right: 0;
             }
         }
+        .reel-lg {
+            display: flex;
+        }
+        .reel-md, 
+        .reel-sm {
+            display: none;
+        }
 
         .videoSection {
             width: 100vw;
@@ -132,6 +139,43 @@
 
         &Active {
             transform: translate(0, -50vh);
+        }
+    }
+}
+
+
+@media (max-width: 1248px) {
+    .experience {
+        .mainContent {
+            .reel {
+                .columnOuter {
+                    width: 33%;
+                }
+            }
+            .reel-lg {
+                display: none;
+            }
+            .reel-md {
+                display: flex;
+            }
+        }
+    }
+}
+
+@media (max-width: 856px) {
+    .experience {
+        .mainContent {
+            .reel {
+                .columnOuter {
+                    width: 50%;
+                }
+            }
+            .reel-md {
+                display: none;
+            }
+            .reel-sm {
+                display: flex;
+            }
         }
     }
 }
