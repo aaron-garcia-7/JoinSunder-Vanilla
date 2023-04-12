@@ -249,26 +249,29 @@ let stateCountTL = gsap.timeline({
   scrollTrigger: {
     trigger: "#numberArea",
     scrub: true,
-    start: "20% 15%",
-    end: "440% 15%",
-    // markers: true,
+    start: window.innerWidth > 768 ? "20% 15%" : "-100% 15%",
+    end: window.innerWidth > 768 ? "440% 15%" : "2600% 15%",
   },
 });
 stateCountTL
   .to(stateCount, {
-    y: "-100%",
+    y: window.innerWidth > 768 ? "-100%" : "-112%",
   })
   .to(stateCount, {
-    y: "-200%",
+    // y: "-200%",
+    y: window.innerWidth > 768 ? "-200%" : "-212%",
   })
   .to(stateCount, {
-    y: "-300%",
+    // y: "-300%",
+    y: window.innerWidth > 768 ? "-300%" : "-312%",
   })
   .to(stateCount, {
-    y: "-400%",
+    // y: "-400%",
+    y: window.innerWidth > 768 ? "-400%" : "-412%",
   })
   .to(stateCount, {
-    y: "-400%",
+    // y: "-400%",
+    y: window.innerWidth > 768 ? "-400%" : "-412%",
   });
 
 // const staggerNumbers = () => {
@@ -328,7 +331,7 @@ let linkHilightTL = gsap.timeline({
     trigger: "#numberArea",
     scrub: true,
     start: "40% 15%",
-    end: "400% 15%",
+    end: window.innerWidth > 768 ? "400% 15%" : "2300% 15%",
     // markers: true,
   },
 });
@@ -362,7 +365,7 @@ gsap.to(states2019, {
     trigger: "#numberArea",
     scrub: true,
     start: "40% 15%",
-    end: "60% 15%",
+    end: window.innerWidth > 768 ? "60% 15%" : "200% 15%",
     // markers: true,
   },
 });
@@ -373,8 +376,12 @@ let pending2019TL = gsap.timeline({
     trigger: "#numberArea",
     scrub: true,
     start: "40% 15%",
-    end: "150% 15%",
-    // markers: true,
+    end: window.innerWidth > 768 ? "150% 15%" : "800% 15%",
+    // markers: {
+    //   indent: 84,
+    //   startColor: "lightblue",
+    //   endColor: "lightblue",
+    // },
   },
 });
 pending2019TL
@@ -396,8 +403,9 @@ let pending2020TL = gsap.timeline({
   scrollTrigger: {
     trigger: "#numberArea",
     scrub: true,
-    start: "120% 15%",
-    end: "230% 15%",
+    start: window.innerWidth > 768 ? "120% 15%" : "600% 15%",
+    end: window.innerWidth > 768 ? "230% 15%" : "1300% 15%",
+    // markers: true,
   },
 });
 pending2020TL
@@ -419,8 +427,13 @@ let pending2021TL = gsap.timeline({
   scrollTrigger: {
     trigger: "#numberArea",
     scrub: true,
-    start: "200% 15%",
-    end: "310% 15%",
+    start: window.innerWidth > 768 ? "200% 15%" : "1100% 15%",
+    end: window.innerWidth > 768 ? "310% 15%" : "1800% 15%",
+    // markers: {
+    //   indent: 84,
+    //   startColor: "lightblue",
+    //   endColor: "lightblue",
+    // },
   },
 });
 pending2021TL
@@ -442,8 +455,8 @@ let pending2022TL = gsap.timeline({
   scrollTrigger: {
     trigger: "#numberArea",
     scrub: true,
-    start: "280% 15%",
-    end: "390% 15%",
+    start: window.innerWidth > 768 ? "280% 15%" : "1600% 15%",
+    end: window.innerWidth > 768 ? "390% 15%" : "2300% 15%",
   },
 });
 pending2022TL
@@ -604,13 +617,22 @@ gsap.to(graph2Data, {
 // Utility
 //
 
-// const checkWidth = () => {
-//   if (pgWidth >= 768) {
-//     location.reload();
-//   }
-// };
-// window.addEventListener("resize", checkWidth);
+let needsRefresh = false;
 
-// window.onbeforeunload = () => {
-//   window.scrollTo(0, 0);
-// };
+window.addEventListener("resize", function () {
+  if (window.innerWidth <= 768 || window.innerWidth > 768) {
+    needsRefresh = true;
+  } else {
+    needsRefresh = false;
+  }
+});
+
+setInterval(function () {
+  if (needsRefresh) {
+    location.reload();
+  }
+}, 1000);
+
+window.onbeforeunload = () => {
+  window.scrollTo(0, 0);
+};

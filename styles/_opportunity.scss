@@ -359,7 +359,6 @@ $pending: #BCD0D7;
                 .map {
                     transform: translate(0, -36%);
                     opacity: 0;
-                    // width: 64%;
                     width: clamp(12rem, 64%, 82rem);
                     .USA {
                         width: 100%;
@@ -433,6 +432,9 @@ $pending: #BCD0D7;
                         font-weight: 400;
                     }
                 }
+            }
+            .mobileTitle {
+                display: none;
             }
         }
 
@@ -1224,15 +1226,10 @@ $pending: #BCD0D7;
     .opportunity{
         .mainContent {
             .growth {
-                // border: 2px dashed burlywood;
                 flex-direction: column-reverse;
                 .numberArea {
-                    // border: 2px solid orange;
-                    // width: 18%;
                     width: 100%;
-                    // transform: translate(12%, 0);
-                    // transform: translate(0, -64%);
-                    transform: translate(0, -80%);
+                    transform: translate(0, -60%);
                     margin: auto;
                     #growthTitle {
                         display: none;
@@ -1249,7 +1246,7 @@ $pending: #BCD0D7;
                             position: absolute;
                             top: 50%;
                             left: 0;
-                            transform: translate(0, -3.2rem);
+                            transform: translate(0, -1.8rem);
                             display: block;
                             width: 0%;
                             height: 1px;
@@ -1262,12 +1259,14 @@ $pending: #BCD0D7;
                     margin: auto;
                     .map {
                         // border: 2px solid yellow;
+                        // width: clamp(12rem, 64%, 82rem);
+                        width: clamp(12rem, 78%, 82rem);
                         .USA {
-                            transform: translate(0, 0);
+                            transform: translate(0, 16%);
                                 }
                             }
                     .compass {
-                        transform: translate(0, 0);
+                        transform: translate(0, 3.2rem);
                         // h5 {
                         //     .circle {
                         //         margin-right: 0.6rem;
@@ -1275,30 +1274,54 @@ $pending: #BCD0D7;
                         // }
                     }
                     .stateCount {
-                        border: 2px solid blue;
-                        display: none;
-                        #numberContainer {
-                            height: 6rem;
+                        // border: 1px solid blue;
+                        bottom: auto;
+                        top: 2.4rem;
+                        right: calc(2rem + 4vw);
+                        // text-align: right;                
+                        // color: $sunderSnow;
+                        // opacity: 0;
+                        // display: none;
+                            #numberContainer {
+                            height: 1.6rem;
                         }
+                        .number {
+                            font-size: calc(1.2rem + 1.2vw);
+                            // font-weight: 450;
+                        }
+                        .title {
+                            font-size: $M-Text;
+                            // font-weight: 400;
+                        }
+                    }
+                }
+                .mobileTitle {
+                    display: block;
+                    position: absolute;
+                    top: 2.4rem;
+                    left: calc(2rem + 4vw);
+                    h2 {
+                        color: $sunderSnow;
+                        font-size: $M-Text;
                     }
                 }
             }
             .growthAnchors {
-                border: 2px dashed violet;
+                // border: 2px dashed violet;
                 // top: 41.4%;
                 height: calc(100vh + 29%);
                 #anchor2019 {
-                    background: violet;
-                    top: 14%;
+                    // background: violet;
+                    top: 20%;
                 }
                 #anchor2020 {
-                    top: 32%;
+                    top: 40%;
                 }
                 #anchor2021 {
-                    top: 50%;
+                    top: 56%;
                 }
                 #anchor2022 {
-                    top: 68%;
+                    top: 73%;
                 }
             }
         }

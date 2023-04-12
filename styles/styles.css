@@ -1964,6 +1964,10 @@ ul li {
   font-weight: 400;
 }
 
+.opportunity .mainContent .growth .mobileTitle {
+  display: none;
+}
+
 .opportunity .mainContent .growthAnchors {
   position: absolute;
   top: calc(38% + 24vw);
@@ -2705,8 +2709,8 @@ ul li {
   }
   .opportunity .mainContent .growth .numberArea {
     width: 100%;
-    -webkit-transform: translate(0, -80%);
-            transform: translate(0, -80%);
+    -webkit-transform: translate(0, -60%);
+            transform: translate(0, -60%);
     margin: auto;
   }
   .opportunity .mainContent .growth .numberArea #growthTitle {
@@ -2729,8 +2733,8 @@ ul li {
     position: absolute;
     top: 50%;
     left: 0;
-    -webkit-transform: translate(0, -3.2rem);
-            transform: translate(0, -3.2rem);
+    -webkit-transform: translate(0, -1.8rem);
+            transform: translate(0, -1.8rem);
     display: block;
     width: 0%;
     height: 1px;
@@ -2739,37 +2743,55 @@ ul li {
   .opportunity .mainContent .growth .mapArea {
     margin: auto;
   }
+  .opportunity .mainContent .growth .mapArea .map {
+    width: clamp(12rem, 78%, 82rem);
+  }
   .opportunity .mainContent .growth .mapArea .map .USA {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    -webkit-transform: translate(0, 16%);
+            transform: translate(0, 16%);
   }
   .opportunity .mainContent .growth .mapArea .compass {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    -webkit-transform: translate(0, 3.2rem);
+            transform: translate(0, 3.2rem);
   }
   .opportunity .mainContent .growth .mapArea .stateCount {
-    border: 2px solid blue;
-    display: none;
+    bottom: auto;
+    top: 2.4rem;
+    right: calc(2rem + 4vw);
   }
   .opportunity .mainContent .growth .mapArea .stateCount #numberContainer {
-    height: 6rem;
+    height: 1.6rem;
+  }
+  .opportunity .mainContent .growth .mapArea .stateCount .number {
+    font-size: calc(1.2rem + 1.2vw);
+  }
+  .opportunity .mainContent .growth .mapArea .stateCount .title {
+    font-size: calc(0.8rem + 1vw);
+  }
+  .opportunity .mainContent .growth .mobileTitle {
+    display: block;
+    position: absolute;
+    top: 2.4rem;
+    left: calc(2rem + 4vw);
+  }
+  .opportunity .mainContent .growth .mobileTitle h2 {
+    color: #f7f7f7;
+    font-size: calc(0.8rem + 1vw);
   }
   .opportunity .mainContent .growthAnchors {
-    border: 2px dashed violet;
     height: calc(100vh + 29%);
   }
   .opportunity .mainContent .growthAnchors #anchor2019, .opportunity .mainContent .growthAnchors #anchor2020, .opportunity .mainContent .growthAnchors #anchor2021, .opportunity .mainContent .growthAnchors #anchor2022 {
-    background: violet;
-    top: 14%;
+    top: 20%;
   }
   .opportunity .mainContent .growthAnchors #anchor2020 {
-    top: 32%;
+    top: 40%;
   }
   .opportunity .mainContent .growthAnchors #anchor2021 {
-    top: 50%;
+    top: 56%;
   }
   .opportunity .mainContent .growthAnchors #anchor2022 {
-    top: 68%;
+    top: 73%;
   }
 }
 
