@@ -1224,12 +1224,44 @@ $pending: #BCD0D7;
 
 @media (max-width: 768px) {
     .opportunity{
+
+        // GLOBAL COMPONENTS
+        .logo {
+            position: absolute;
+            top: 1.6rem;
+            left: 1.2rem;
+            animation-delay: 0.4s;
+        }
+        // GLOBAL COMPONENTS
+        
         .mainContent {
+            .header {
+                // height: 90vh;
+                height: 80vh;
+                // min-height: 44rem;
+                min-height: 42rem;
+                // max-height: 48rem;
+                margin: 0 0 2.4rem 1.2rem;
+                .cta {
+                    top: 1.2rem;
+                    right: 1.2rem;
+                }
+                h1 {
+                    font-size: calc(2rem + 1.6vw);
+                    transform: translate(-4%, -8%);
+                }
+                .soloRepImg {
+                    width: 26rem;
+                }
+                .shape {
+                    height: 66%;
+                }
+            }
             .growth {
                 flex-direction: column-reverse;
                 .numberArea {
                     width: 100%;
-                    transform: translate(0, -60%);
+                    transform: translate(0, -68%);
                     margin: auto;
                     #growthTitle {
                         display: none;
@@ -1246,7 +1278,7 @@ $pending: #BCD0D7;
                             position: absolute;
                             top: 50%;
                             left: 0;
-                            transform: translate(0, -1.8rem);
+                            transform: translate(0, -2rem);
                             display: block;
                             width: 0%;
                             height: 1px;
@@ -1258,15 +1290,13 @@ $pending: #BCD0D7;
                 .mapArea {
                     margin: auto;
                     .map {
-                        // border: 2px solid yellow;
-                        // width: clamp(12rem, 64%, 82rem);
                         width: clamp(12rem, 78%, 82rem);
                         .USA {
-                            transform: translate(0, 16%);
+                            transform: translate(0, 10%);
                                 }
                             }
                     .compass {
-                        transform: translate(0, 3.2rem);
+                        transform: translate(0, 1.6rem);
                         // h5 {
                         //     .circle {
                         //         margin-right: 0.6rem;

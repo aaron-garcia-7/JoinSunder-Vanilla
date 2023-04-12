@@ -620,7 +620,7 @@ gsap.to(graph2Data, {
 let needsRefresh = false;
 
 window.addEventListener("resize", function () {
-  if (window.innerWidth <= 768 || window.innerWidth > 768) {
+  if (window.innerWidth > 580) {
     needsRefresh = true;
   } else {
     needsRefresh = false;
