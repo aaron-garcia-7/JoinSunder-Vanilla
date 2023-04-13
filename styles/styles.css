@@ -721,7 +721,7 @@ ul li {
     position: fixed !important;
   }
   .nav {
-    height: 52vh;
+    height: 58vh;
   }
   .nav .navSwiper {
     display: block;
@@ -1341,8 +1341,8 @@ ul li {
   }
   .home .mainContent .asideActive {
     position: static;
-    -webkit-transform: translate(0, -52vh);
-            transform: translate(0, -52vh);
+    -webkit-transform: translate(0, -58vh);
+            transform: translate(0, -58vh);
   }
   .home .mainContent .heroText {
     position: static;
@@ -1380,8 +1380,8 @@ ul li {
   }
   .home .mainContent .reelActive {
     position: static;
-    -webkit-transform: translate(0, -52vh);
-            transform: translate(0, -52vh);
+    -webkit-transform: translate(0, -58vh);
+            transform: translate(0, -58vh);
   }
   .home .mainContent .col1Active,
   .home .mainContent .col2Active {
@@ -2698,6 +2698,10 @@ ul li {
   .opportunity .mainContent .growth .numberArea .timeline {
     height: 48%;
   }
+  .opportunity .mainContentActive {
+    -webkit-transform: translate(0, -58vh);
+            transform: translate(0, -58vh);
+  }
 }
 
 @media (max-width: 768px) {
@@ -2707,6 +2711,12 @@ ul li {
     left: 1.2rem;
     -webkit-animation-delay: 0.4s;
             animation-delay: 0.4s;
+  }
+  .opportunity .navLogo {
+    top: auto;
+    bottom: 3rem;
+    width: auto;
+    height: 1.8rem;
   }
   .opportunity .mainContent .header {
     height: 80vh;
@@ -2727,6 +2737,37 @@ ul li {
   }
   .opportunity .mainContent .header .shape {
     height: 66%;
+  }
+  .opportunity .mainContent .quoteSection .quote1, .opportunity .mainContent .quoteSection .quote2 {
+    padding: 0 1.2rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 0;
+  }
+  .opportunity .mainContent .quoteSection .quote1 .imgWrapper, .opportunity .mainContent .quoteSection .quote2 .imgWrapper {
+    padding: calc(3.2rem + 12vw);
+    border-radius: 1.6rem;
+  }
+  .opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption {
+    padding: 1rem;
+  }
+  .opportunity .mainContent .quoteSection .quote1 .quoteWrapper, .opportunity .mainContent .quoteSection .quote2 .quoteWrapper {
+    width: 50%;
+  }
+  .opportunity .mainContent .cardsSection {
+    height: clamp(36rem, 90vh, 52rem);
+    padding: 0 1.2rem;
+  }
+  .opportunity .mainContent .cardsSection .repCard {
+    width: calc(16rem + 12vw);
+    border-radius: 1.6rem;
+  }
+  .opportunity .mainContent .cardsSection .repCard .cardText {
+    padding: 0 0 1.2rem 2.4rem;
+  }
+  .opportunity .mainContent .cardsSection .repCard .cardText .list li {
+    font-size: calc(0.8rem + 0.4vw);
   }
   .opportunity .mainContent .growth {
     -webkit-box-orient: vertical;
@@ -2802,6 +2843,7 @@ ul li {
     left: calc(2rem + 4vw);
   }
   .opportunity .mainContent .growth .mobileTitle h2 {
+    opacity: 0;
     color: #f7f7f7;
     font-size: calc(0.8rem + 1vw);
   }
@@ -2819,6 +2861,54 @@ ul li {
   }
   .opportunity .mainContent .growthAnchors #anchor2022 {
     top: 73%;
+  }
+  .opportunity .mainContent .dataSections {
+    height: clamp(48rem, 112vh, 86rem);
+  }
+  .opportunity .mainContent .dataSections .sectionTitle {
+    top: 2.6rem;
+  }
+  .opportunity .mainContent .dataSections .sectionTitle h2 {
+    font-size: calc(0.8rem + 1vw);
+  }
+  .opportunity .mainContent .salesForce .barGraph {
+    width: clamp(16rem, 82vw, 97rem);
+    height: clamp(16rem, 60vw, 48rem);
+  }
+  .opportunity .mainContent .salesForce .barGraph .bars .bar {
+    width: calc(1rem + 1vw);
+  }
+  .opportunity .mainContent .salesForce .barGraph .bars .bar:nth-of-type(2) .barMultiplier {
+    -webkit-transform: translate(-320%, -24%);
+            transform: translate(-320%, -24%);
+  }
+  .opportunity .mainContent .salesForce .barGraph .bars .bar:nth-of-type(3) .barMultiplier {
+    -webkit-transform: translate(-420%, -24%);
+            transform: translate(-420%, -24%);
+  }
+  .opportunity .mainContent .salesForce .barGraph .bars .bar:nth-of-type(4) .barMultiplier {
+    -webkit-transform: translate(-540%, -48%);
+            transform: translate(-540%, -48%);
+  }
+  .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(1) {
+    bottom: 32%;
+    left: -8%;
+  }
+  .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(2) {
+    bottom: 58%;
+    left: 22%;
+  }
+  .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(3) {
+    top: -4%;
+    right: 22%;
+  }
+  .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(4) {
+    top: -38%;
+    right: -12%;
+  }
+  .opportunity .mainContent .kwInstalled .pageFooter {
+    border-radius: 2.4rem 2.4rem 0 0;
+    padding-right: 2.8rem;
   }
 }
 

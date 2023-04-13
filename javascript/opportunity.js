@@ -226,6 +226,15 @@ gsap.to("#growthTitle", {
   },
 });
 
+gsap.to("#growthTitleMobile", {
+  opacity: 1,
+  scrollTrigger: {
+    trigger: "#growth",
+    toggleActions: "play none none reverse",
+    start: "top top",
+  },
+});
+
 gsap.to("#compass", {
   opacity: 1,
   scrollTrigger: {
@@ -480,7 +489,7 @@ pending2022TL
 //   },
 // });
 gsap.to("#salesForceTitle", {
-  y: "108vh",
+  y: window.innerWidth > 768 ? "110vh" : "84vh",
   ease: "linear",
   scrollTrigger: {
     trigger: ".salesForce",
@@ -521,7 +530,7 @@ gsap.to(graph1Multipliers, {
 });
 
 gsap.to("#kwInstalledTitle", {
-  y: "108vh",
+  y: window.innerWidth > 768 ? "108vh" : "84vh",
   ease: "linear",
   scrollTrigger: {
     trigger: ".kwInstalled",
@@ -536,7 +545,7 @@ gsap.to(".lineGraph", {
   scrollTrigger: {
     trigger: "#lineGraphPath",
     toggleActions: "restart none none reverse",
-    start: "-50% 10%",
+    start: window.innerWidth > 768 ? "-50% 10%" : "-100% 10%",
     // markers: true,
   },
 });
@@ -545,7 +554,7 @@ gsap.to("#lineGraphPath", {
     trigger: "#lineGraphPath",
     toggleClass: "pathActive",
     toggleActions: "play none none none",
-    start: "-50% 10%",
+    start: window.innerWidth > 768 ? "-50% 10%" : "-100% 10%",
     // markers: {
     //   indent: 64,
     //   startColor: "lightblue",
@@ -559,7 +568,9 @@ gsap.to(".point1", {
     trigger: ".point1",
     toggleClass: "point1Active",
     toggleActions: "play none none none",
-    start: "-3160% 10%",
+    // start: "-3160% 10%",
+    start: window.innerWidth > 768 ? "-3160% 10%" : "-4220% 10%",
+    // markers: true,
   },
 });
 gsap.to(".point2", {
@@ -568,6 +579,8 @@ gsap.to(".point2", {
     toggleClass: "point2Active",
     toggleActions: "play none none none",
     start: "-2630% 10%",
+    start: window.innerWidth > 768 ? "-2630% 10%" : "-3720% 10%",
+    // markers: true,
   },
 });
 gsap.to(".point3", {
@@ -575,8 +588,10 @@ gsap.to(".point3", {
     trigger: ".point3",
     toggleClass: "point3Active",
     toggleActions: "play none none none",
-    start: "-1860% 10%",
+    // start: "-1860% 10%",
+    start: window.innerWidth > 768 ? "-1860% 10%" : "-2920% 10%",
     end: "1200% top",
+    // markers: true,
   },
 });
 gsap.to(".point4", {
@@ -584,8 +599,10 @@ gsap.to(".point4", {
     trigger: ".point4",
     toggleClass: "point4Active",
     toggleActions: "play none none none",
-    start: "-986% 10%",
+    // start: "-986% 10%",
+    start: window.innerWidth > 768 ? "-986% 10%" : "-2080% 10%",
     end: "1200% top",
+    // markers: true,
   },
 });
 
@@ -597,7 +614,8 @@ gsap.to(graph2Data, {
   scrollTrigger: {
     trigger: ".kwInstalled",
     toggleActions: "restart none none none",
-    start: "top 10%",
+    // start: "top 10%",
+    start: window.innerWidth > 768 ? "top 10%" : "-12% top",
     // markers: true,
   },
 });
