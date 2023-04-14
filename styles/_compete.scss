@@ -49,20 +49,50 @@
         .mySwiper {
             // border: 2px dashed coral;
             width: 100vw;
-            height: 72vh;
+            height: 78vh;
             // transform: translate(24px, 0);
-            padding-left: 2.4rem;
+            // padding-left: 2.4rem;
+            padding-left: 1.2rem;
             .swiper-wrapper {
                 // background: blue;
-                height: 92%;
+                height: 94%;
                 .swiper-slide {
                     // border: 2px dashed coral;
+                    position: relative;
                     border-radius: 0.8rem;
                     overflow: hidden;
+                    margin: 0 1.2rem;
                     img {
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
+                        // opacity: 0.2;
+                    }
+                    .details {
+                        position: absolute;
+                        bottom: 0;
+                        // border: 2px dashed coral;
+                        z-index: 2;
+                        width: 100%;
+                        height: 18%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        background: linear-gradient(0deg, #000000ac 24%, #00000000);
+                        padding-left: 1.2rem;
+                        .videoTitle,
+                        .videoDescription {
+                            color: $sunderSnow;
+                            font-weight: 675;
+                        }
+                        .videoTitle {
+                            font-size: $XS-Text;
+                        }
+                        .videoDescription {
+                            font-family: $monument;
+                            font-size: $S-Text;
+                        }
                     }
                 }
             }
@@ -74,31 +104,14 @@
     }
 }
 
-@media (min-width: 2048px) {
-    .compete {
-        .mainContent {
-            .videoReel {
-                // border: 2px dashed coral;
-                height: 48rem;
-                .thumbnail {
-                    width: 18rem;
-                    height: 11rem;
-                }
-            }
-        }
-    }
-}
-
 @media (max-width: 1440px) {
     .compete {
         .mainContent {
-            .videoReel {
-                height: 36rem;
-                // top: 8rem;
-                .thumbnail {
-                    width: 18rem;
-                    height: 11rem;
-                }
+            .mySwiper {
+                height: 74vh;
+                // .swiper-wrapper {
+                //     height: 94%;
+                // }
             }
         }
     }

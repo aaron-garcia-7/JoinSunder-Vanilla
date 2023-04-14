@@ -75,7 +75,8 @@ activePage.addEventListener("click", closeNav);
 
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 2, // use breakpoints below
-  spaceBetween: 30,
+  // spaceBetween: 30,
+  // spaceBetween: "240px",
   // loop: true,
   pagination: {
     el: ".swiper-pagination",
