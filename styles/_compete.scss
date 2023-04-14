@@ -96,6 +96,28 @@
                     }
                 }
             }
+            .swiper-pagination {
+                // border: 1px solid black;
+                width: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transform: translate(2.4rem, 0);
+                &-bullet {
+                    border: 1px solid $sunderRoyalLight;
+                    background: $sunderIce;
+                    width: 16px;
+                    height: 16px;
+                    background: transparent;
+                    transition: 0.3s ease;
+                    &-active {
+                        background: $sunderRoyalLight;
+                    }
+                    &:hover {
+                        background: $sunderRoyal;
+                    }
+                }
+            }
         }
 
         &Active {
