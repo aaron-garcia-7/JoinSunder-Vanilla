@@ -391,7 +391,8 @@
         padding: 12rem 0 0 2.4rem;
         .heroText {
           // border: 2px solid yellow;
-          transform: translate(6%, -50%);
+          // transform: translate(6%, -50%);
+          transform: translate(8%, -32%);
         }
         .heroBtns {
           // border: 2px dashed coral;
@@ -400,7 +401,8 @@
           justify-content: center;
           gap: 2rem;
           left: 50%;
-          transform: translate(0, -100%);
+          // transform: translate(0, -100%);
+          transform: translate(8%, -50%);
         }
       }
     }
