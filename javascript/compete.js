@@ -74,9 +74,9 @@ activePage.addEventListener("click", closeNav);
 //
 
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 3,
+  slidesPerView: 2, // use breakpoints below
   spaceBetween: 30,
-  loop: true,
+  // loop: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -85,9 +85,21 @@ var swiper = new Swiper(".mySwiper", {
   //   nextEl: ".swiper-button-next",
   //   prevEl: ".swiper-button-prev",
   // },
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
   breakpoints: {
+    // 520: {
+    //   slidesPerView: 1,
+    //   spaceBetween: 20,
+    // },
     768: {
-      slidesPerView: 2,
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 4,
       spaceBetween: 20,
     },
   },

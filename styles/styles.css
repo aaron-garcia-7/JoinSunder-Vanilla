@@ -2981,13 +2981,24 @@ ul li {
 
 .compete .mainContent .mySwiper {
   width: 100vw;
-  height: 68vh;
-  -webkit-transform: translate(24px, 0);
-          transform: translate(24px, 0);
+  height: 72vh;
+  padding-left: 2.4rem;
+}
+
+.compete .mainContent .mySwiper .swiper-wrapper {
+  height: 92%;
 }
 
 .compete .mainContent .mySwiper .swiper-wrapper .swiper-slide {
-  background: lightblue;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.compete .mainContent .mySwiper .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .compete .mainContentActive {
