@@ -31,9 +31,11 @@ const navSlider = document.querySelector(".navSlider");
 navSlider.addEventListener("mousemove", (e) => {
   if (pgWidth > 1024) {
     navSlider.style.transform = `translate(calc(20vw - calc(${e.pageX}px * 0.43)), 2vw)`;
-  } else if (pgWidth <= 1024 || pgWidth >= 620) {
-    navSlider.style.transform = `translate(calc(35vw - calc(${e.pageX}px * 0.8)), 2vw)`;
-  } else if (pgWidth < 620) {
+  } else if (pgWidth <= 1024 || pgWidth > 620) {
+    // navSlider.style.transform = `translate(calc(35vw - calc(${e.pageX}px * 0.8)), 2vw)`;
+    navSlider.style.transform = `translate(calc(50vw - calc(${e.pageX}px * 1.12)), 2vw)`;
+    // navSlider.style.border = `2px dashed coral`;
+  } else if (pgWidth <= 620) {
     navSlider.style.transform = `translate(calc(100vw - calc(${e.pageX}px * 0.5)), 2vw)`;
     navSlider.style.border = `2px dashed coral`;
   }

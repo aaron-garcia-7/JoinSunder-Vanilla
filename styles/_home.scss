@@ -226,9 +226,8 @@
       }
       
       .reel {
-        // height: calc(140rem + 133vw);
-        height: calc(142rem + 133vw);
-        height: calc(137rem + 139vw);
+        // border: 2px dashed coral;
+        height: calc(108rem + 148vw);
         background: $sunderMidnight;
         width: 51vw;
         padding-left: 2vw;
@@ -253,7 +252,8 @@
           .reelImgShort {
               background: var(--sunderIce);
               // height: calc(16rem + 16vw);
-              height: calc(20rem + 16vw);
+              // height: calc(20rem + 16vw);
+              height: calc(14rem + 18vw);
               margin-bottom: calc(0.6rem + 1.2vw);
               border-radius: calc(0.4rem + 0.2vw);
               overflow: hidden;
@@ -391,18 +391,29 @@
         padding: 12rem 0 0 2.4rem;
         .heroText {
           // border: 2px solid yellow;
-          // transform: translate(6%, -50%);
           transform: translate(8%, -32%);
         }
         .heroBtns {
           // border: 2px dashed coral;
-          // width: calc(14rem + 24vw);
-          // width: 90%;
           justify-content: center;
           gap: 2rem;
           left: 50%;
-          // transform: translate(0, -100%);
           transform: translate(8%, -50%);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    .mainContent {
+      .aside {
+        .heroText {
+          transform: translate(0, -32%);
+        }
+        .heroBtns {
+          transform: translate(0, -50%);
         }
       }
     }

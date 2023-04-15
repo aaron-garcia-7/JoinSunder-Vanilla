@@ -124,46 +124,21 @@ ul {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.2s;
+    // transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.2s;
+    transition: transform 0.4s cubic-bezier(.75,.15,.25,.85) 0.28s;
   }
   .logoLink {
     cursor: pointer;
   }
-
+  
   &Active {
-    border: none;
+    // border: none;
     pointer-events: none;
     user-select: none;
     cursor: default;
-    // .logoLink {
-    //   @extend .logoActive;
-    // }
     .logoImg {
       transform: translate(0, -112%);
-    }
-  }
-}
-
-.navLogo {
-  @extend .logo;
-  // position: fixed; // Wasn't working as global - added individually
-  top: auto;
-  // bottom: 2.4rem;
-  bottom: 3rem;
-  opacity: 1;
-  animation: none;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: translate(0, 120%);
-    transition: 0.6s cubic-bezier(.75,.15,.25,.85);
-  }
-  &Active {
-    pointer-events: all;
-    img {
-      transform: translate(0, 0);
-      transition: 0.6s cubic-bezier(.75,.15,.25,.85) 0.3s;
+      transition: transform 0.4s cubic-bezier(.75,.15,.25,.85) 0.12s;
     }
   }
 }
@@ -312,7 +287,7 @@ ul {
       height: calc(7rem + 4vw);
       // width: calc(20rem + 2vw);
       // height: calc(8rem + 6vw);
-      border-radius: calc(0.4rem + 0.2vw);
+      border-radius: calc(0.6rem + 0.1vw);
       object-fit: cover;
       transition: transform 0.4s ease;
       cursor: pointer;
@@ -348,6 +323,30 @@ ul {
   }
   .navSwiper {
     display: none;
+  }
+}
+
+.navLogo {
+  @extend .logo;
+  // position: fixed; // Wasn't working as global - added individually
+  top: auto;
+  // bottom: 2.4rem;
+  bottom: 3rem;
+  opacity: 1;
+  animation: none;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(0, 120%);
+    transition: 0.4s cubic-bezier(.75,.15,.25,.85) 0s;
+  }
+  &Active {
+    pointer-events: all;
+    img {
+      transform: translate(0, 0);
+      transition: 0.4s cubic-bezier(.75,.15,.25,.85) 0.28s;
+    }
   }
 }
 
@@ -556,27 +555,30 @@ ul {
     /* position: see individual page style sheet */
     width: calc(6.4rem + 2vw);
   }
-  .navLogo {
-    position: fixed !important;
+
+  .burgerContainer {
+    .burger {
+      width: calc(3rem + 0.8vw);
+      height: calc(3rem + 0.8vw);
+    }
   }
 
   .nav {
-    // height: 52vh;
     height: 58vh;
     .navSwiper {
+      // border: 2px dashed coral;
       display: block;
       position: absolute;
       left: 0;
       width: 100%;
       height: 68%;
-      padding: 0 4rem 0 1rem;
+      padding: 0 2rem 0 2rem;
       display: flex;
       gap: 4vw;
       justify-content: space-between;
       align-items: center;
-      opacity: 0;
       overflow: scroll;
-      transform: translate(0, -4vw) scale(0.9);
+      transform: translate(0, 2vw);
       transition: transform 0.6s cubic-bezier(.75,.15,.25,.85), opacity 0.6s ease;
       z-index: -1;
       -ms-overflow-style: none;
@@ -612,7 +614,6 @@ ul {
     .navSlider {
       height: 68%;
       gap: 2vw;
-      // transform: translate(calc(10rem + 4vw), -6vw) scale(0.8);
       transform: translate(calc(14rem + 2vw), 2vw) scale(1);
       .navLink {
         .linkImg {
@@ -632,11 +633,15 @@ ul {
       //   transform: translate(calc(14rem + 4vw), 2vw) scale(1);
       // }
       .navSwiper {
-        opacity: 1;
-        transform: translate(0, 2vw) scale(1);
+        // opacity: 1;
+        transform: translate(0, 2vw);
         transition: 0.6s cubic-bezier(.75,.15,.25,.85) 0.1s;
       }
     }
+  }
+
+  .navLogo {
+    position: fixed !important;
   }
 }
 
