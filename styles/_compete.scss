@@ -48,61 +48,93 @@
 
         .mySwiper {
             // border: 2px dashed coral;
-            width: 100vw;
+            // width: 100vw;
+            width: 96vw;
             height: 78vh;
-            // transform: translate(24px, 0);
-            // padding-left: 2.4rem;
-            padding-left: 1.2rem;
+            // min-height: 48rem;
+            min-height: 36rem;
+            // padding-left: 1.2rem;
+            // padding-right: 2.4rem;
             .swiper-wrapper {
                 // background: blue;
                 height: 94%;
+                &:hover {
+                    cursor: grab;
+                    &:active {
+                        cursor: grabbing;
+                    }
+                    .swiper-slide {
+                        opacity: 0.7;
+                    }
+                }
                 .swiper-slide {
                     // border: 2px dashed coral;
                     position: relative;
                     border-radius: 0.8rem;
                     overflow: hidden;
-                    margin: 0 1.2rem;
-                    img {
+                    // margin: 0 1.2rem;
+                    cursor: pointer;
+                    transition: 0.3s ease;
+                    &:hover {
+                        opacity: 1;
+                    }
+                    &:active {
+                        cursor: grabbing;
+                    }
+                    &:focus {
+                        border: 2px solid $sunderRoyalLight;
+                        // outline: 2px solid $sunderRoyalLight;
+                    }
+
+                    .videoPoster {
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
-                        // opacity: 0.2;
+                    }
+                    .playIcon {
+                        position: absolute;
+                        top: 1.2rem;
+                        right: 1.2rem;
+                        z-index: 2;
+                        width: calc(1.2rem + 1vw);
                     }
                     .details {
+                        // border: 2px dashed coral;
                         position: absolute;
                         bottom: 0;
-                        // border: 2px dashed coral;
                         z-index: 2;
                         width: 100%;
-                        height: 18%;
+                        height: 16%;
                         display: flex;
                         flex-direction: column;
-                        justify-content: center;
+                        justify-content: flex-start;
                         align-items: flex-start;
                         background: linear-gradient(0deg, #000000ac 24%, #00000000);
                         padding-left: 1.2rem;
                         .videoTitle,
                         .videoDescription {
                             color: $sunderSnow;
-                            font-weight: 675;
+                            font-weight: 450;
                         }
                         .videoTitle {
-                            font-size: $XS-Text;
+                            font-size: $S-Text;
+                            margin-bottom: 0.4rem;
                         }
                         .videoDescription {
                             font-family: $monument;
-                            font-size: $S-Text;
+                            font-size: calc(0.2rem + 1.4vw);
+                            ;
                         }
                     }
                 }
             }
             .swiper-pagination {
-                // border: 1px solid black;
                 width: auto;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                transform: translate(2.4rem, 0);
+                gap: 0.2rem;
+                // transform: translate(2.4rem, 0);
                 &-bullet {
                     border: 1px solid $sunderRoyalLight;
                     background: $sunderIce;
@@ -110,11 +142,12 @@
                     height: 16px;
                     background: transparent;
                     transition: 0.3s ease;
+                    opacity: 1 !important;
                     &-active {
                         background: $sunderRoyalLight;
                     }
                     &:hover {
-                        background: $sunderRoyal;
+                        background: $sunderIce;
                     }
                 }
             }
@@ -131,9 +164,25 @@
         .mainContent {
             .mySwiper {
                 height: 74vh;
-                // .swiper-wrapper {
-                //     height: 94%;
-                // }
+                min-height: 24rem;
+                .swiper-wrapper {
+                    // height: 94%;
+                    .swiper-slide {
+                        .details {
+                            height: 18%;
+                            padding-left: 0.6rem;
+                        }
+                    }
+                }
+                .swiper-pagination {
+                    gap: 0;
+                    &-bullet {
+                        // border: 1px solid $sunderRoyalLight;
+                        // background: $sunderMidnight;
+                        width: 12px;
+                        height: 12px;
+                    }
+                }
             }
         }
     }

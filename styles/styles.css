@@ -369,7 +369,7 @@ ul li {
           transform: scale(0.96);
 }
 
-.nav .navSlider .linkTitle {
+.nav .navSlider .navLink .linkTitle {
   text-transform: capitalize;
   margin-bottom: 0.6vw;
   color: #000014;
@@ -382,7 +382,7 @@ ul li {
   font-weight: 400;
 }
 
-.nav .navSlider .linkTitleActive {
+.nav .navSlider .navLink .linkTitleActive {
   font-weight: 600;
 }
 
@@ -2980,27 +2980,64 @@ ul li {
 }
 
 .compete .mainContent .mySwiper {
-  width: 100vw;
+  width: 96vw;
   height: 78vh;
-  padding-left: 1.2rem;
+  min-height: 36rem;
 }
 
 .compete .mainContent .mySwiper .swiper-wrapper {
   height: 94%;
 }
 
+.compete .mainContent .mySwiper .swiper-wrapper:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.compete .mainContent .mySwiper .swiper-wrapper:hover:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.compete .mainContent .mySwiper .swiper-wrapper:hover .swiper-slide {
+  opacity: 0.7;
+}
+
 .compete .mainContent .mySwiper .swiper-wrapper .swiper-slide {
   position: relative;
   border-radius: 0.8rem;
   overflow: hidden;
-  margin: 0 1.2rem;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
-.compete .mainContent .mySwiper .swiper-wrapper .swiper-slide img {
+.compete .mainContent .mySwiper .swiper-wrapper .swiper-slide:hover {
+  opacity: 1;
+}
+
+.compete .mainContent .mySwiper .swiper-wrapper .swiper-slide:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.compete .mainContent .mySwiper .swiper-wrapper .swiper-slide:focus {
+  border: 2px solid #0c5ff2;
+}
+
+.compete .mainContent .mySwiper .swiper-wrapper .swiper-slide .videoPoster {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.compete .mainContent .mySwiper .swiper-wrapper .swiper-slide .playIcon {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  z-index: 2;
+  width: calc(1.2rem + 1vw);
 }
 
 .compete .mainContent .mySwiper .swiper-wrapper .swiper-slide .details {
@@ -3008,7 +3045,7 @@ ul li {
   bottom: 0;
   z-index: 2;
   width: 100%;
-  height: 18%;
+  height: 16%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3016,9 +3053,9 @@ ul li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -3030,16 +3067,17 @@ ul li {
 .compete .mainContent .mySwiper .swiper-wrapper .swiper-slide .details .videoTitle,
 .compete .mainContent .mySwiper .swiper-wrapper .swiper-slide .details .videoDescription {
   color: #f7f7f7;
-  font-weight: 675;
+  font-weight: 450;
 }
 
 .compete .mainContent .mySwiper .swiper-wrapper .swiper-slide .details .videoTitle {
-  font-size: calc(0.6rem + 0.3vw);
+  font-size: calc(0.8rem + 0.4vw);
+  margin-bottom: 0.4rem;
 }
 
 .compete .mainContent .mySwiper .swiper-wrapper .swiper-slide .details .videoDescription {
   font-family: "monument", sans-serif;
-  font-size: calc(0.8rem + 0.4vw);
+  font-size: calc(0.2rem + 1.4vw);
 }
 
 .compete .mainContent .mySwiper .swiper-pagination {
@@ -3053,8 +3091,7 @@ ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transform: translate(2.4rem, 0);
-          transform: translate(2.4rem, 0);
+  gap: 0.2rem;
 }
 
 .compete .mainContent .mySwiper .swiper-pagination-bullet {
@@ -3065,6 +3102,7 @@ ul li {
   background: transparent;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+  opacity: 1 !important;
 }
 
 .compete .mainContent .mySwiper .swiper-pagination-bullet-active {
@@ -3072,7 +3110,7 @@ ul li {
 }
 
 .compete .mainContent .mySwiper .swiper-pagination-bullet:hover {
-  background: #074895;
+  background: #C6D3D8;
 }
 
 .compete .mainContentActive {
@@ -3083,6 +3121,18 @@ ul li {
 @media (max-width: 1440px) {
   .compete .mainContent .mySwiper {
     height: 74vh;
+    min-height: 24rem;
+  }
+  .compete .mainContent .mySwiper .swiper-wrapper .swiper-slide .details {
+    height: 18%;
+    padding-left: 0.6rem;
+  }
+  .compete .mainContent .mySwiper .swiper-pagination {
+    gap: 0;
+  }
+  .compete .mainContent .mySwiper .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
   }
 }
 
