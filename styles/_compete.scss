@@ -56,7 +56,6 @@
             // padding-left: 1.2rem;
             // padding-right: 2.4rem;
             .swiper-wrapper {
-                // background: blue;
                 height: 94%;
                 &:hover {
                     cursor: grab;
@@ -71,8 +70,8 @@
                     // border: 2px dashed coral;
                     position: relative;
                     border-radius: 0.8rem;
-                    overflow: hidden;
                     // margin: 0 1.2rem;
+                    overflow: hidden;
                     cursor: pointer;
                     transition: 0.3s ease;
                     &:hover {

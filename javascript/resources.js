@@ -13,6 +13,8 @@ const activePage = document.querySelector("#activePage");
 const mainContent = document.querySelector(".mainContent");
 const cta2 = document.querySelector("#cta2");
 const cta2Circle = document.querySelector("#cta2Circle");
+const cta3 = document.querySelector("#cta3");
+const cta3Circle = document.querySelector("#cta3Circle");
 
 let navState = false;
 
@@ -67,6 +69,19 @@ cta2.addEventListener("mousemove", (e) => {
 
   cta2Circle.style.setProperty("--mouse-x", `${y}px`);
   cta2Circle.style.setProperty("--mouse-y", `${x}px`);
+});
+
+//
+// CTA3 Hover Animation
+//
+
+cta3.addEventListener("mousemove", (e) => {
+  const rect = cta3.getBoundingClientRect(),
+    x = e.clientX - rect.left,
+    y = e.clientY - rect.top;
+
+  cta3Circle.style.setProperty("--mouse-x", `${y}px`);
+  cta3Circle.style.setProperty("--mouse-y", `${x}px`);
 });
 
 //
