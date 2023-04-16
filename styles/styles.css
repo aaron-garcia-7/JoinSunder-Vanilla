@@ -1455,6 +1455,7 @@ ul li {
 .opportunity .mainContent .header {
   position: relative;
   height: clamp(38rem, 100vh, 48rem);
+  height: clamp(38rem, 100dvh, 48rem);
   margin: 6.4rem 2.4rem;
 }
 
@@ -1513,7 +1514,6 @@ ul li {
   bottom: 0;
   right: 0;
   width: 100%;
-  height: 38vw;
   height: clamp(12rem, 38vw, 36rem);
   border-radius: 0 3.2rem 0 3.2rem;
   background: #080808;
@@ -1648,6 +1648,7 @@ ul li {
 .opportunity .mainContent .cardsSection {
   width: 100%;
   height: clamp(48rem, 100vh, 92rem);
+  height: clamp(48rem, 100dvh, 92rem);
   padding: 2.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1984,10 +1985,10 @@ ul li {
 }
 
 .opportunity .mainContent .growthAnchors {
+  border: 2px dashed coral;
   position: absolute;
   top: calc(38% + 24vw);
   width: 100%;
-  height: calc(100vh + 32%);
   height: calc(100vh + 29%);
   z-index: -1;
   pointer-events: none;
@@ -2624,6 +2625,11 @@ ul li {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .opportunity .mainContent .cardsSection::-webkit-scrollbar {
+    display: none;
   }
   .opportunity .mainContent .cardsSection .repCard {
     -webkit-box-flex: 0;
@@ -2760,10 +2766,6 @@ ul li {
             justify-content: space-between;
     gap: 0;
   }
-  .opportunity .mainContent .quoteSection .quote1 .imgWrapper, .opportunity .mainContent .quoteSection .quote2 .imgWrapper {
-    padding: calc(3.2rem + 12vw);
-    border-radius: 1.6rem;
-  }
   .opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption {
     padding: 1rem;
   }
@@ -2804,6 +2806,9 @@ ul li {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -2942,6 +2947,12 @@ ul li {
   }
   .opportunity .mainContent .quoteSection .quote1 .imgWrapper, .opportunity .mainContent .quoteSection .quote2 .imgWrapper {
     padding: calc(2.8rem + 10vw);
+    border-radius: 1.2rem;
+  }
+  .opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption {
+    padding: 0.6rem;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(40%, #2d2d2dca), to(#2d2d2d00));
+    background: linear-gradient(0deg, #2d2d2dca 40%, #2d2d2d00);
   }
   .opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption .name, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption .name {
     font-size: calc(0.8rem + 0.4vw);
@@ -2964,6 +2975,9 @@ ul li {
   .opportunity .mainContent .cardsSection .repCard {
     height: 76%;
   }
+  .opportunity .mainContent .videoSection {
+    height: 60vh;
+  }
   .opportunity .mainContent .videoSection h2 {
     font-size: calc(1rem + 1.2vw);
   }
@@ -2973,6 +2987,69 @@ ul li {
   .opportunity .mainContent .videoSection .videoFigure {
     width: 86%;
     height: calc(10rem + 12vw);
+  }
+  .opportunity .mainContent .growth .numberArea {
+    -webkit-transform: translate(0, -160%);
+            transform: translate(0, -160%);
+  }
+  .opportunity .mainContent .growth .numberArea .timeline {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 80%;
+  }
+  .opportunity .mainContent .growth .numberArea .timelineBorder2 {
+    -webkit-transform: translate(0, -2rem);
+            transform: translate(0, -2rem);
+  }
+  .opportunity .mainContent .growth .numberArea .timelineLinks {
+    padding: 0.2rem 0.8rem;
+  }
+  .opportunity .mainContent .growth .mapArea .map {
+    width: clamp(12rem, 112%, 82rem);
+  }
+  .opportunity .mainContent .growth .mapArea .stateCount {
+    top: 4rem;
+    right: 2.4rem;
+  }
+  .opportunity .mainContent .growth .mapArea .stateCount #numberContainer {
+    height: 1.8rem;
+  }
+  .opportunity .mainContent .growth .mapArea .stateCount .number {
+    font-size: calc(1.4rem + 1.4vw);
+  }
+  .opportunity .mainContent .growth .mapArea .stateCount .title {
+    font-size: calc(1rem + 1.2vw);
+  }
+  .opportunity .mainContent .growth .mobileTitle {
+    top: 4rem;
+    left: 2.4rem;
+  }
+  .opportunity .mainContent .growth .mobileTitle h2 {
+    font-size: calc(1rem + 1.2vw);
+  }
+  .opportunity .mainContent .growthAnchors {
+    height: calc(100vh + 29%);
+  }
+  .opportunity .mainContent .growthAnchors #anchor2019, .opportunity .mainContent .growthAnchors #anchor2020, .opportunity .mainContent .growthAnchors #anchor2021, .opportunity .mainContent .growthAnchors #anchor2022 {
+    top: 20%;
+  }
+  .opportunity .mainContent .growthAnchors #anchor2020 {
+    top: 40%;
+  }
+  .opportunity .mainContent .growthAnchors #anchor2021 {
+    top: 56%;
+  }
+  .opportunity .mainContent .growthAnchors #anchor2022 {
+    top: 73%;
+  }
+  .opportunity .mainContent .dataSections {
+    height: clamp(36rem, 100vh, 86rem);
+  }
+  .opportunity .mainContent .dataSections .sectionTitle {
+    top: 2.6rem;
+  }
+  .opportunity .mainContent .dataSections .sectionTitle h2 {
+    font-size: calc(0.8rem + 1vw);
   }
 }
 

@@ -149,7 +149,8 @@ gsap.to("#videoSection", {
     trigger: "#videoSection",
     pin: true,
     scrub: true,
-    start: "top top",
+    // start: "top top",
+    start: window.innerWidth > 480 ? "top top" : "top 20%",
     end: "bottom top",
     // markers: true,
   },
@@ -489,7 +490,13 @@ pending2022TL
 //   },
 // });
 gsap.to("#salesForceTitle", {
-  y: window.innerWidth > 768 ? "110vh" : "84vh",
+  // y: window.innerWidth > 768 ? "110vh" : "84vh",
+  y:
+    window.innerWidth > 768
+      ? "110vh"
+      : window.innerWidth <= 480
+      ? "70vh"
+      : "84vh",
   ease: "linear",
   scrollTrigger: {
     trigger: ".salesForce",

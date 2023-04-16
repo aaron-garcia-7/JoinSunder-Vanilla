@@ -23,8 +23,8 @@ $pending: #BCD0D7;
         .header {
             // border: 2px dashed coral;
             position: relative;
-            // height: clamp(42rem, 100vh, 72rem);
             height: clamp(38rem, 100vh, 48rem);
+            height: clamp(38rem, 100dvh, 48rem);
             margin: 6.4rem 2.4rem;
             > * {
                 position: absolute;
@@ -75,7 +75,6 @@ $pending: #BCD0D7;
                 bottom: 0;
                 right: 0;
                 width: 100%;
-                height: 38vw;
                 height: clamp(12rem, 38vw, 36rem);
                 border-radius: 0 3.2rem 0 3.2rem;
                 background: #080808;
@@ -172,6 +171,7 @@ $pending: #BCD0D7;
         .cardsSection {
             width: 100%;
             height: clamp(48rem, 100vh, 92rem);
+            height: clamp(48rem, 100dvh, 92rem);
             padding: 2.4rem;
             display: flex;
             justify-content: space-between;
@@ -230,6 +230,7 @@ $pending: #BCD0D7;
             position: relative;
             width: 100vw;
             height: 100vh;
+            // height: 100dvh;
             overflow: hidden;
             > * {
                 position: absolute;
@@ -299,6 +300,7 @@ $pending: #BCD0D7;
         .growth {
             // border: 2px dashed coral;
             height: 100vh;
+            // height: 100dvh;
             display: flex;
             .numberArea {
                 // border: 2px dashed coral;
@@ -435,13 +437,13 @@ $pending: #BCD0D7;
         }
 
         .growthAnchors {
-            // border: 2px dashed coral;
+            border: 2px dashed coral;
             position: absolute;
             top: calc(38% + 24vw);
             // top: calc(39% + 22vw);
             width: 100%;
-            height: calc(100vh + 32%);
             height: calc(100vh + 29%);
+            // height: calc(100dvh + 29%);
             z-index: -1;
             pointer-events: none;
             #anchor2019 {
@@ -468,8 +470,8 @@ $pending: #BCD0D7;
         .dataSections {
             position: relative;
             width: 100vw;
-            // height: clamp(26rem, 124vh, 96rem);
             height: clamp(64rem, 146vh, 112rem);
+            // height: clamp(64rem, 146dvh, 112rem);
             overflow: hidden;
             .gridBg {
                 position: absolute;
@@ -581,7 +583,6 @@ $pending: #BCD0D7;
 
         .kwInstalled {
             background: $sunderMidnight;
-            // height: clamp(26rem, 124vh, 96rem);
             .sectionTitle {
                 transform: translate(20%, 0);
                 h2 {
@@ -951,7 +952,6 @@ $pending: #BCD0D7;
     .opportunity {
         .mainContent{
             .header {
-                // height: clamp(38rem, 100vh, 48rem);
                 height: 38rem;
                 margin: 8.6rem 2.4rem 4rem 2.4rem;
                 padding: 0;
@@ -973,11 +973,9 @@ $pending: #BCD0D7;
             .growth {
                 .numberArea {
                     width: 18%;
-                    // transform: translate(20%, 0); // original
                     transform: translate(12%, 0);
                     .timeline {
                         &Border {
-                            // transform: translate(calc(4rem + 2vw), -10%); // original
                             transform: translate(calc(4rem + 1vw), -6%);
                         }
                     }
@@ -1003,25 +1001,6 @@ $pending: #BCD0D7;
                     }
                 }
             }
-
-            // .growthAnchors {
-            //     border: 2px dashed violet;
-            //     // top: 41.4%;
-            //     height: calc(100vh + 29%);
-            //     #anchor2019 {
-            //         background: violet;
-            //         top: 14%;
-            //     }
-            //     #anchor2020 {
-            //         top: 32%;
-            //     }
-            //     #anchor2021 {
-            //         top: 50%;
-            //     }
-            //     #anchor2022 {
-            //         top: 68%;
-            //     }
-            // }
         }
     }
 }
@@ -1047,6 +1026,7 @@ $pending: #BCD0D7;
                 top: 0;
                 transform: translate(0, 0);
                 height: 90vh;
+                // height: 90dvh;
                 min-height: 44rem;
                 max-height: 48rem;
                 margin: 0 0 2.4rem 2.4rem;
@@ -1119,9 +1099,15 @@ $pending: #BCD0D7;
 
             .cardsSection {
                 height: clamp(42rem, 100vh, 56rem);
+                // height: clamp(42rem, 100dvh, 56rem);
                 padding: 0 2.4rem;
                 flex-wrap: nowrap;
                 overflow-x: scroll;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+                &::-webkit-scrollbar {
+                  display: none;
+                }
                 .repCard {
                     flex: 0 0 auto;
                     // width: calc(24rem + 12vw);
@@ -1240,11 +1226,9 @@ $pending: #BCD0D7;
         
         .mainContent {
             .header {
-                // height: 90vh;
                 height: 80vh;
-                // min-height: 44rem;
+                // height: 80dvh;
                 min-height: 42rem;
-                // max-height: 48rem;
                 margin: 0 0 2.4rem 1.2rem;
                 .cta {
                     top: 1.2rem;
@@ -1267,8 +1251,6 @@ $pending: #BCD0D7;
                     justify-content: space-between;
                     gap: 0;
                     .imgWrapper {
-                        padding: calc(3.2rem + 12vw);
-                        border-radius: 1.6rem;
                         .imgCaption {
                             padding: 1rem;
                         }
@@ -1280,6 +1262,7 @@ $pending: #BCD0D7;
             }
             .cardsSection {
                 height: clamp(36rem, 90vh, 52rem);
+                // height: clamp(36rem, 90dvh, 52rem);
                 padding: 0 1.2rem;
                 .repCard {
                     width: calc(16rem + 12vw);
@@ -1305,6 +1288,7 @@ $pending: #BCD0D7;
                     }
                     .timeline {
                         flex-direction: row;
+                        justify-content: space-evenly;
                         align-items: center;
                         // background: blue;
                         width: 68%;
@@ -1375,8 +1359,6 @@ $pending: #BCD0D7;
                 }
             }
             .growthAnchors {
-                // border: 2px dashed violet;
-                // top: 41.4%;
                 height: calc(100vh + 29%);
                 #anchor2019 {
                     // background: violet;
@@ -1393,8 +1375,8 @@ $pending: #BCD0D7;
                 }
             }
             .dataSections {
-                // height: clamp(64rem, 146vh, 112rem);
                 height: clamp(48rem, 112vh, 86rem);
+                // height: clamp(48rem, 112dvh, 86rem);
                 .sectionTitle {
                     // border: 2px dashed coral;
                     top: 2.6rem;
@@ -1486,7 +1468,10 @@ $pending: #BCD0D7;
                 .quote1 {
                     .imgWrapper {
                         padding: calc(2.8rem + 10vw);
+                        border-radius: 1.2rem;
                         .imgCaption {
+                            padding: 0.6rem;
+                            background: linear-gradient(0deg, #2d2d2dca 40%, #2d2d2d00);
                             .name {
                                 font-size: $S-Text;
                                 .lastName {
@@ -1517,6 +1502,8 @@ $pending: #BCD0D7;
                 }
             }
             .videoSection {
+                height: 60vh;
+                // height: 60dvh;
                 h2 {
                     font-size: $L-Text;
                 }
@@ -1527,6 +1514,76 @@ $pending: #BCD0D7;
                     // width: 80%;
                     width: 86%;
                     height: calc(10rem + 12vw);
+                }
+            }
+            .growth {
+                // border: 2px dashed yellow;
+                .numberArea {
+                    transform: translate(0, -160%);
+                    .timeline {
+                        justify-content: space-around;
+                        width: 80%;
+                        &Border2 {
+                            transform: translate(0, -2rem);
+                        }
+                        &Links {
+                            padding: 0.2rem 0.8rem;
+                        }
+                    }
+                }
+                .mapArea {
+                    .map {
+                        width: clamp(12rem, 112%, 82rem);
+                    }
+                    .stateCount {
+                        top: 4rem;
+                        right: 2.4rem;
+                        #numberContainer {
+                            height: 1.8rem;
+                        }
+                        .number {
+                            font-size: calc(1.4rem + 1.4vw);
+                        }
+                        .title {
+                            font-size: $L-Text;
+                        }
+                    }
+                }
+                .mobileTitle {
+                    top: 4rem;
+                    left: 2.4rem;
+                    h2 {
+                        font-size: $L-Text;
+                    }
+                }
+            }
+            .growthAnchors {
+                height: calc(100vh + 29%);
+                #anchor2019 {
+                    // background: violet;
+                    top: 20%;
+                }
+                #anchor2020 {
+                    top: 40%;
+                }
+                #anchor2021 {
+                    top: 56%;
+                }
+                #anchor2022 {
+                    top: 73%;
+                }
+            }
+            .dataSections {
+                height: clamp(36rem, 100vh, 86rem);
+                // height: clamp(36rem, 100dvh, 86rem);
+                .sectionTitle {
+                    // border: 2px dashed coral;
+                    top: 2.6rem;
+                    // left: 4%;
+                    // width: 20%;
+                    h2 {
+                        font-size: $M-Text;
+                    }
                 }
             }
         }
