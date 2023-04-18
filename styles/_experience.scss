@@ -179,3 +179,12 @@
         }
     }
 }
+@media (max-width: 768px) {
+    .experience {
+        .mainContent {
+            &Active {
+                transform: translate(0, -58vh);
+            }
+        }
+    }
+}

@@ -95,10 +95,10 @@ var swiper = new Swiper(".mySwiper", {
     disableOnInteraction: false,
   },
   breakpoints: {
-    // 520: {
-    //   slidesPerView: 1,
-    //   spaceBetween: 20,
-    // },
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    },
     768: {
       slidesPerView: 3,
       spaceBetween: 20,

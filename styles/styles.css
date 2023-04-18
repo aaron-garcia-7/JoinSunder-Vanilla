@@ -416,8 +416,8 @@ ul li {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transform: translate(0, 120%);
-          transform: translate(0, 120%);
+  -webkit-transform: translate(0, 124%);
+          transform: translate(0, 124%);
   -webkit-transition: 0.4s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0s;
   transition: 0.4s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0s;
 }
@@ -3338,8 +3338,8 @@ ul li {
 }
 
 .compete .mainContentActive {
-  -webkit-transform: translate(0, -50vh);
-          transform: translate(0, -50vh);
+  -webkit-transform: translate(0, -58vh);
+          transform: translate(0, -58vh);
 }
 
 @media (max-width: 1440px) {
@@ -3357,6 +3357,47 @@ ul li {
   .compete .mainContent .mySwiper .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .compete .mainContent .mySwiper {
+    width: 90vw;
+    height: 72vh;
+    -webkit-transform: translate(0, 2%);
+            transform: translate(0, 2%);
+  }
+  .compete .mainContent .mySwiper .swiper-wrapper {
+    height: 92%;
+  }
+}
+
+@media (max-width: 480px) {
+  .compete .logo, .compete .navLogo {
+    left: 0.7rem;
+  }
+  .compete .mainContent .cta {
+    right: 0.7rem;
+  }
+  .compete .mainContent .mySwiper {
+    width: 96vw;
+    height: 56vh;
+    -webkit-transform: translate(0, 2%);
+            transform: translate(0, 2%);
+  }
+  .compete .mainContent .mySwiper .swiper-wrapper {
+    height: 90%;
+  }
+  .compete .mainContent .mySwiper .swiper-wrapper .swiper-slide .details {
+    height: 18%;
+    padding-left: 0.6rem;
+  }
+  .compete .mainContent .mySwiper .swiper-pagination {
+    gap: 0.2rem;
+  }
+  .compete .mainContent .mySwiper .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
   }
 }
 
@@ -3500,6 +3541,13 @@ ul li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience .mainContentActive {
+    -webkit-transform: translate(0, -58vh);
+            transform: translate(0, -58vh);
   }
 }
 
