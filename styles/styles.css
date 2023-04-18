@@ -1787,6 +1787,16 @@ ul li {
   z-index: 1;
 }
 
+.opportunity .mainContent .videoSection .videoFigure .overlay .videoTitle {
+  position: absolute;
+  top: 8%;
+  left: 7%;
+  color: #f7f7f7;
+  font-family: "monument", sans-serif;
+  font-size: calc(1.6rem + 2.4vw);
+  font-weight: 675;
+}
+
 .opportunity .mainContent .videoSection .videoFigure .overlay img {
   -webkit-transform: scale(2.8);
           transform: scale(2.8);
@@ -2541,6 +2551,32 @@ ul li {
   .opportunity .mainContent .header .cta {
     top: -6.4rem;
   }
+  .opportunity .mainContent .salesForce .barGraph {
+    height: clamp(16rem, 52vw, 48rem);
+  }
+  .opportunity .mainContent .salesForce .barGraph .bars .bar {
+    width: calc(1.6rem + 1vw);
+  }
+  .opportunity .mainContent .salesForce .barGraph .bars .bar:nth-of-type(4) .barMultiplier {
+    -webkit-transform: translate(-440%, 0);
+            transform: translate(-440%, 0);
+  }
+  .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(1) {
+    bottom: 18%;
+    left: -6%;
+  }
+  .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(2) {
+    bottom: 44%;
+    left: 24%;
+  }
+  .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(3) {
+    top: 14%;
+    right: 26%;
+  }
+  .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(4) {
+    top: -24%;
+    right: -8%;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -2932,6 +2968,29 @@ ul li {
   }
 }
 
+@media (max-width: 520px) {
+  .opportunity .mainContent .kwInstalled .lineGraph > * {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(1) {
+    bottom: 28%;
+    left: -14%;
+  }
+  .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(2) {
+    bottom: 50%;
+    left: 14%;
+  }
+  .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(3) {
+    top: -4%;
+    right: 22%;
+  }
+  .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(4) {
+    top: -32%;
+    right: -16%;
+  }
+}
+
 @media (max-width: 480px) {
   .opportunity .mainContent .header {
     margin: 0 0 2.4rem 0.8rem;
@@ -3124,6 +3183,9 @@ ul li {
   width: 96vw;
   height: 78vh;
   min-height: 36rem;
+  opacity: 0;
+  -webkit-animation: appear 0.4s ease 0.8s forwards;
+          animation: appear 0.4s ease 0.8s forwards;
 }
 
 .compete .mainContent .mySwiper .swiper-wrapper {
@@ -3140,10 +3202,6 @@ ul li {
   cursor: grabbing;
 }
 
-.compete .mainContent .mySwiper .swiper-wrapper:hover .swiper-slide {
-  opacity: 0.7;
-}
-
 .compete .mainContent .mySwiper .swiper-wrapper .swiper-slide {
   position: relative;
   border-radius: 0.8rem;
@@ -3154,7 +3212,8 @@ ul li {
 }
 
 .compete .mainContent .mySwiper .swiper-wrapper .swiper-slide:hover {
-  opacity: 1;
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
 }
 
 .compete .mainContent .mySwiper .swiper-wrapper .swiper-slide:active {

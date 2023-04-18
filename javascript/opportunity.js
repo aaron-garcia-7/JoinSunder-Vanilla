@@ -537,7 +537,12 @@ gsap.to(graph1Multipliers, {
 });
 
 gsap.to("#kwInstalledTitle", {
-  y: window.innerWidth > 768 ? "108vh" : "84vh",
+  y:
+    window.innerWidth > 768
+      ? "108vh"
+      : window.innerWidth <= 480
+      ? "70vh"
+      : "84vh",
   ease: "linear",
   scrollTrigger: {
     trigger: ".kwInstalled",
@@ -552,7 +557,13 @@ gsap.to(".lineGraph", {
   scrollTrigger: {
     trigger: "#lineGraphPath",
     toggleActions: "restart none none reverse",
-    start: window.innerWidth > 768 ? "-50% 10%" : "-100% 10%",
+    // start: window.innerWidth > 768 ? "-50% 10%" : "-100% 10%",
+    start:
+      window.innerWidth > 768
+        ? "-50% 10%"
+        : window.innerWidth <= 580
+        ? "-100% 40%"
+        : "-100% 10%",
     // markers: true,
   },
 });
@@ -561,7 +572,13 @@ gsap.to("#lineGraphPath", {
     trigger: "#lineGraphPath",
     toggleClass: "pathActive",
     toggleActions: "play none none none",
-    start: window.innerWidth > 768 ? "-50% 10%" : "-100% 10%",
+    // start: window.innerWidth > 768 ? "-50% 10%" : "-100% 10%",
+    start:
+      window.innerWidth > 768
+        ? "-50% 10%"
+        : window.innerWidth <= 580
+        ? "-100% 40%"
+        : "-100% 10%",
     // markers: {
     //   indent: 64,
     //   startColor: "lightblue",
@@ -576,7 +593,13 @@ gsap.to(".point1", {
     toggleClass: "point1Active",
     toggleActions: "play none none none",
     // start: "-3160% 10%",
-    start: window.innerWidth > 768 ? "-3160% 10%" : "-4220% 10%",
+    // start: window.innerWidth > 768 ? "-3160% 10%" : "-4220% 10%",
+    start:
+      window.innerWidth > 768
+        ? "-3160% 10%"
+        : window.innerWidth <= 480
+        ? "-4220% 40%"
+        : "-4220% 10%",
     // markers: true,
   },
 });
@@ -586,7 +609,13 @@ gsap.to(".point2", {
     toggleClass: "point2Active",
     toggleActions: "play none none none",
     start: "-2630% 10%",
-    start: window.innerWidth > 768 ? "-2630% 10%" : "-3720% 10%",
+    // start: window.innerWidth > 768 ? "-2630% 10%" : "-3720% 10%",
+    start:
+      window.innerWidth > 768
+        ? "-2630% 10%"
+        : window.innerWidth <= 480
+        ? "-3720 40%"
+        : "-3720% 10%",
     // markers: true,
   },
 });
@@ -642,22 +671,22 @@ gsap.to(graph2Data, {
 // Utility
 //
 
-let needsRefresh = false;
+// let needsRefresh = false;
 
-window.addEventListener("resize", function () {
-  if (window.innerWidth > 580) {
-    needsRefresh = true;
-  } else {
-    needsRefresh = false;
-  }
-});
+// window.addEventListener("resize", function () {
+//   if (window.innerWidth > 580) {
+//     needsRefresh = true;
+//   } else {
+//     needsRefresh = false;
+//   }
+// });
 
-setInterval(function () {
-  if (needsRefresh) {
-    location.reload();
-  }
-}, 1000);
+// setInterval(function () {
+//   if (needsRefresh) {
+//     location.reload();
+//   }
+// }, 1000);
 
-window.onbeforeunload = () => {
-  window.scrollTo(0, 0);
-};
+// window.onbeforeunload = () => {
+//   window.scrollTo(0, 0);
+// };

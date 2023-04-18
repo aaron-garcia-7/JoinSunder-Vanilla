@@ -281,6 +281,15 @@ $pending: #BCD0D7;
                     // display: flex;
                     // justify-content: center;
                     // align-items: center;
+                    .videoTitle {
+                        position: absolute;
+                        top: 8%;
+                        left: 7%;
+                        color: $sunderSnow;
+                        font-family: $monument;
+                        font-size: $Hero-Text;
+                        font-weight: 675;
+                    }
                     img {
                         transform: scale(2.8);
                         position: absolute;
@@ -590,7 +599,6 @@ $pending: #BCD0D7;
                 }
             }
             .lineGraph {
-                // border: 2px dashed yellow;
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -1012,6 +1020,45 @@ $pending: #BCD0D7;
                 height: 32rem;
                 .cta {
                     top: -6.4rem;
+                }
+            }
+            .salesForce {
+                .barGraph {
+                    height: clamp(16rem, 52vw, 48rem);
+                    .bars {
+                        .bar {
+                            width: calc(1.6rem + 1vw);
+                            &:nth-of-type(4) {
+                                .barMultiplier {
+                                    transform: translate(-440%, 0);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .kwInstalled {
+                .lineGraph {
+                    .kwData {
+                        .dataPiece {
+                            &:nth-of-type(1) {
+                                bottom: 18%;
+                                left: -6%;
+                            }
+                            &:nth-of-type(2) {
+                                bottom: 44%;
+                                left: 24%;
+                            }
+                            &:nth-of-type(3) {
+                                top: 14%;
+                                right: 26%;
+                            }
+                            &:nth-of-type(4) {
+                                top: -24%;
+                                right: -8%;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -1451,6 +1498,39 @@ $pending: #BCD0D7;
     }
 }
 
+@media (max-width: 520px) {
+    .opportunity {
+        .mainContent {
+            .kwInstalled {
+                .lineGraph {
+                    > * {
+                        transform: translate(0, 0);
+                    }
+                    .kwData {
+                        .dataPiece {
+                            &:nth-of-type(1) {
+                                bottom: 28%;
+                                left: -14%;
+                            }
+                            &:nth-of-type(2) {
+                                bottom: 50%;
+                                left: 14%;
+                            }
+                            &:nth-of-type(3) {
+                                top: -4%;
+                                right: 22%;
+                            }
+                            &:nth-of-type(4) {
+                                top: -32%;
+                                right: -16%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 @media (max-width: 480px) {
     .opportunity {
         .mainContent {
