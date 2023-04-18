@@ -281,20 +281,20 @@ $pending: #BCD0D7;
                     // display: flex;
                     // justify-content: center;
                     // align-items: center;
-                    .videoTitle {
+                    > * {
                         position: absolute;
+                        left: 8%;
+                    }
+                    .videoTitle {
                         top: 8%;
-                        left: 7%;
                         color: $sunderSnow;
                         font-family: $monument;
                         font-size: $Hero-Text;
                         font-weight: 675;
                     }
                     img {
-                        transform: scale(2.8);
-                        position: absolute;
                         bottom: 16%;
-                        left: 8%;
+                        transform: scale(2.8);
                     }
                 }
                 .definitionVideo {
@@ -446,17 +446,13 @@ $pending: #BCD0D7;
         }
 
         .growthAnchors {
-            border: 2px dashed coral;
             position: absolute;
             top: calc(38% + 24vw);
-            // top: calc(39% + 22vw);
             width: 100%;
             height: calc(100vh + 29%);
-            // height: calc(100dvh + 29%);
             z-index: -1;
             pointer-events: none;
             #anchor2019 {
-                // background: coral;
                 position: absolute;
                 top: 14%;
                 width: 12rem;
@@ -1406,9 +1402,8 @@ $pending: #BCD0D7;
                 }
             }
             .growthAnchors {
-                height: calc(100vh + 29%);
+                top: calc(41% + 24vw);
                 #anchor2019 {
-                    // background: violet;
                     top: 20%;
                 }
                 #anchor2020 {
@@ -1487,11 +1482,10 @@ $pending: #BCD0D7;
                     }
                 }
                 .pageFooter {
-                    // width: 90%;
                     // height: clamp(8rem, 12%, 24rem);
                     border-radius: 2.4rem 2.4rem 0 0;
-                    // padding-right: 4rem;
                     padding-right: 2.8rem;
+                    border-radius: 1.6rem 1.6rem 0 0;
                 }
             }
         }
@@ -1517,20 +1511,25 @@ $pending: #BCD0D7;
                                 left: 14%;
                             }
                             &:nth-of-type(3) {
-                                top: -4%;
+                                top: 12%;
                                 right: 22%;
                             }
                             &:nth-of-type(4) {
-                                top: -32%;
+                                top: -16%;
                                 right: -16%;
                             }
                         }
                     }
                 }
+                .pageFooter {
+                    width: 100%;
+                    padding-right: 2rem;
+                }
             }
         }
     }
 }
+
 @media (max-width: 480px) {
     .opportunity {
         .mainContent {
@@ -1593,7 +1592,7 @@ $pending: #BCD0D7;
                 .videoFigure {
                     // width: 80%;
                     width: 86%;
-                    height: calc(10rem + 12vw);
+                    height: calc(12rem + 12vw);
                 }
             }
             .growth {
@@ -1664,6 +1663,30 @@ $pending: #BCD0D7;
                     h2 {
                         font-size: $M-Text;
                     }
+                }
+            }
+            .kwInstalled {
+                .lineGraph {
+                    width: clamp(16rem, 86vw, 86rem);
+                    .kwData {
+                        .dataPiece {
+                            &:nth-of-type(1) {
+                                bottom: 24%;
+                                left: -12%;
+                            }
+                            &:nth-of-type(4) {
+                                right: -12%;
+                            }
+                        }
+                    }
+                    .key {
+                        width: 112%;
+                        transform: translate(0, 160%);
+                    }
+                }
+                .pageFooter {
+                    width: 100%;
+                    padding-right: 1.2rem;
                 }
             }
         }

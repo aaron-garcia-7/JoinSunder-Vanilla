@@ -75,6 +75,9 @@ videoFigure.addEventListener("click", () => {
     video.pause();
     overlay.style.opacity = "1";
   }
+  if (window.innerWidth < 480) {
+    overlay.style.display = "none"; // Hide Overlay on small devices (mobile) on click
+  }
 });
 
 window.addEventListener("scroll", () => {
@@ -268,19 +271,15 @@ stateCountTL
     y: window.innerWidth > 768 ? "-100%" : "-112%",
   })
   .to(stateCount, {
-    // y: "-200%",
     y: window.innerWidth > 768 ? "-200%" : "-212%",
   })
   .to(stateCount, {
-    // y: "-300%",
     y: window.innerWidth > 768 ? "-300%" : "-312%",
   })
   .to(stateCount, {
-    // y: "-400%",
     y: window.innerWidth > 768 ? "-400%" : "-412%",
   })
   .to(stateCount, {
-    // y: "-400%",
     y: window.innerWidth > 768 ? "-400%" : "-412%",
   });
 
@@ -597,7 +596,7 @@ gsap.to(".point1", {
     start:
       window.innerWidth > 768
         ? "-3160% 10%"
-        : window.innerWidth <= 480
+        : window.innerWidth <= 520
         ? "-4220% 40%"
         : "-4220% 10%",
     // markers: true,
@@ -613,10 +612,14 @@ gsap.to(".point2", {
     start:
       window.innerWidth > 768
         ? "-2630% 10%"
-        : window.innerWidth <= 480
-        ? "-3720 40%"
+        : window.innerWidth <= 520
+        ? "-3720% 40%"
         : "-3720% 10%",
-    // markers: true,
+    // markers: {
+    //   indent: 64,
+    //   startColor: "lightblue",
+    //   endColor: "lightblue",
+    // },
   },
 });
 gsap.to(".point3", {
@@ -625,7 +628,13 @@ gsap.to(".point3", {
     toggleClass: "point3Active",
     toggleActions: "play none none none",
     // start: "-1860% 10%",
-    start: window.innerWidth > 768 ? "-1860% 10%" : "-2920% 10%",
+    // start: window.innerWidth > 768 ? "-1860% 10%" : "-2920% 10%",
+    start:
+      window.innerWidth > 768
+        ? "-1860% 10%"
+        : window.innerWidth <= 520
+        ? "-2920% 40%"
+        : "-2920% 10%",
     end: "1200% top",
     // markers: true,
   },
@@ -636,9 +645,19 @@ gsap.to(".point4", {
     toggleClass: "point4Active",
     toggleActions: "play none none none",
     // start: "-986% 10%",
-    start: window.innerWidth > 768 ? "-986% 10%" : "-2080% 10%",
+    // start: window.innerWidth > 768 ? "-986% 10%" : "-2080% 10%",
+    start:
+      window.innerWidth > 768
+        ? "-986% 10%"
+        : window.innerWidth <= 520
+        ? "-2080% 40%"
+        : "-2080% 10%",
     end: "1200% top",
-    // markers: true,
+    // markers: {
+    //   indent: 64,
+    //   startColor: "lightblue",
+    //   endColor: "lightblue",
+    // },
   },
 });
 
@@ -671,22 +690,22 @@ gsap.to(graph2Data, {
 // Utility
 //
 
-// let needsRefresh = false;
+let needsRefresh = false;
 
-// window.addEventListener("resize", function () {
-//   if (window.innerWidth > 580) {
-//     needsRefresh = true;
-//   } else {
-//     needsRefresh = false;
-//   }
-// });
+window.addEventListener("resize", function () {
+  if (window.innerWidth > 580) {
+    needsRefresh = true;
+  } else {
+    needsRefresh = false;
+  }
+});
 
-// setInterval(function () {
-//   if (needsRefresh) {
-//     location.reload();
-//   }
-// }, 1000);
+setInterval(function () {
+  if (needsRefresh) {
+    location.reload();
+  }
+}, 1000);
 
-// window.onbeforeunload = () => {
-//   window.scrollTo(0, 0);
-// };
+window.onbeforeunload = () => {
+  window.scrollTo(0, 0);
+};

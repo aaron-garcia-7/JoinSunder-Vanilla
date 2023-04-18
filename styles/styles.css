@@ -1787,10 +1787,13 @@ ul li {
   z-index: 1;
 }
 
-.opportunity .mainContent .videoSection .videoFigure .overlay .videoTitle {
+.opportunity .mainContent .videoSection .videoFigure .overlay > * {
   position: absolute;
+  left: 8%;
+}
+
+.opportunity .mainContent .videoSection .videoFigure .overlay .videoTitle {
   top: 8%;
-  left: 7%;
   color: #f7f7f7;
   font-family: "monument", sans-serif;
   font-size: calc(1.6rem + 2.4vw);
@@ -1798,11 +1801,9 @@ ul li {
 }
 
 .opportunity .mainContent .videoSection .videoFigure .overlay img {
+  bottom: 16%;
   -webkit-transform: scale(2.8);
           transform: scale(2.8);
-  position: absolute;
-  bottom: 16%;
-  left: 8%;
 }
 
 .opportunity .mainContent .videoSection .videoFigure .definitionVideo {
@@ -1995,7 +1996,6 @@ ul li {
 }
 
 .opportunity .mainContent .growthAnchors {
-  border: 2px dashed coral;
   position: absolute;
   top: calc(38% + 24vw);
   width: 100%;
@@ -2904,7 +2904,7 @@ ul li {
     font-size: calc(0.8rem + 1vw);
   }
   .opportunity .mainContent .growthAnchors {
-    height: calc(100vh + 29%);
+    top: calc(41% + 24vw);
   }
   .opportunity .mainContent .growthAnchors #anchor2019, .opportunity .mainContent .growthAnchors #anchor2020, .opportunity .mainContent .growthAnchors #anchor2021, .opportunity .mainContent .growthAnchors #anchor2022 {
     top: 20%;
@@ -2965,6 +2965,7 @@ ul li {
   .opportunity .mainContent .kwInstalled .pageFooter {
     border-radius: 2.4rem 2.4rem 0 0;
     padding-right: 2.8rem;
+    border-radius: 1.6rem 1.6rem 0 0;
   }
 }
 
@@ -2982,12 +2983,16 @@ ul li {
     left: 14%;
   }
   .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(3) {
-    top: -4%;
+    top: 12%;
     right: 22%;
   }
   .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(4) {
-    top: -32%;
+    top: -16%;
     right: -16%;
+  }
+  .opportunity .mainContent .kwInstalled .pageFooter {
+    width: 100%;
+    padding-right: 2rem;
   }
 }
 
@@ -3045,7 +3050,7 @@ ul li {
   }
   .opportunity .mainContent .videoSection .videoFigure {
     width: 86%;
-    height: calc(10rem + 12vw);
+    height: calc(12rem + 12vw);
   }
   .opportunity .mainContent .growth .numberArea {
     -webkit-transform: translate(0, -160%);
@@ -3109,6 +3114,25 @@ ul li {
   }
   .opportunity .mainContent .dataSections .sectionTitle h2 {
     font-size: calc(0.8rem + 1vw);
+  }
+  .opportunity .mainContent .kwInstalled .lineGraph {
+    width: clamp(16rem, 86vw, 86rem);
+  }
+  .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(1) {
+    bottom: 24%;
+    left: -12%;
+  }
+  .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(4) {
+    right: -12%;
+  }
+  .opportunity .mainContent .kwInstalled .lineGraph .key {
+    width: 112%;
+    -webkit-transform: translate(0, 160%);
+            transform: translate(0, 160%);
+  }
+  .opportunity .mainContent .kwInstalled .pageFooter {
+    width: 100%;
+    padding-right: 1.2rem;
   }
 }
 
