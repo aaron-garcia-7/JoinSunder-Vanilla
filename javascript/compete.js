@@ -172,7 +172,6 @@ let allPosters = document.querySelectorAll(".poster");
 
 allPosters.forEach((obj, index) => {
   obj.addEventListener("click", () => {
-    // console.log(`clicked on poster ${index}`);
     videoElement.src = `./assets/promo${index}.mp4`;
     toggleVideo();
   });

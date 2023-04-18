@@ -3338,8 +3338,8 @@ ul li {
 }
 
 .compete .mainContentActive {
-  -webkit-transform: translate(0, -58vh);
-          transform: translate(0, -58vh);
+  -webkit-transform: translate(0, -50vh);
+          transform: translate(0, -50vh);
 }
 
 @media (max-width: 1440px) {
@@ -3369,6 +3369,10 @@ ul li {
   }
   .compete .mainContent .mySwiper .swiper-wrapper {
     height: 92%;
+  }
+  .compete .mainContentActive {
+    -webkit-transform: translate(0, -58vh);
+            transform: translate(0, -58vh);
   }
 }
 
@@ -3419,6 +3423,7 @@ ul li {
 .experience .mainContent {
   background: #f7f7f7;
   width: 100vw;
+  padding-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3438,9 +3443,39 @@ ul li {
   transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
 }
 
+.experience .mainContent .cta {
+  display: none;
+  position: absolute;
+  top: 2.4rem;
+  right: 2.4rem;
+  opacity: 0;
+  border: 1px solid #000014;
+  -webkit-animation: appear 0.6s ease 0.6s forwards;
+          animation: appear 0.6s ease 0.6s forwards;
+  z-index: 2;
+}
+
+.experience .mainContent .cta::before {
+  content: 'Join The Squad';
+  color: #000014;
+  font-size: calc(0.8rem + 0.4vw);
+}
+
+.experience .mainContent .cta .ctaCircle {
+  background: #0c5ff2;
+}
+
+.experience .mainContent .cta:hover {
+  border: 1px solid #0c5ff2;
+}
+
+.experience .mainContent .cta:hover::before {
+  color: #f7f7f7;
+}
+
 .experience .mainContent .reel {
   height: calc(75rem + 79vw);
-  width: 100vw;
+  width: 96vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3481,18 +3516,12 @@ ul li {
 }
 
 .experience .mainContent .reel .columnOuter .reelImgShort {
-  /* height: 32%; */
   height: calc(8rem + 8vw);
 }
 
 .experience .mainContent .reel .columnOuterActive {
   -webkit-transform: translate(0, -50vh);
           transform: translate(0, -50vh);
-}
-
-.experience .mainContent .reelActive {
-  position: absolute;
-  right: 0;
 }
 
 .experience .mainContent .reel-lg {
@@ -3506,9 +3535,138 @@ ul li {
   display: none;
 }
 
-.experience .mainContent .videoSection {
-  width: 100vw;
-  height: 100dvh;
+.experience .mainContent .mySwiper {
+  border: 2px dashed grey;
+  width: 96vw;
+  opacity: 0;
+  -webkit-animation: appear 0.4s ease 0.8s forwards;
+          animation: appear 0.4s ease 0.8s forwards;
+}
+
+.experience .mainContent .mySwiper .swiper-wrapper {
+  background: lightcoral;
+  height: 94%;
+}
+
+.experience .mainContent .mySwiper .swiper-wrapper:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.experience .mainContent .mySwiper .swiper-wrapper:hover:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.experience .mainContent .mySwiper .swiper-wrapper .swiper-slide {
+  position: relative;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.experience .mainContent .mySwiper .swiper-wrapper .swiper-slide:hover {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.experience .mainContent .mySwiper .swiper-wrapper .swiper-slide:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.experience .mainContent .mySwiper .swiper-wrapper .swiper-slide:focus {
+  border: 2px solid #0c5ff2;
+}
+
+.experience .mainContent .mySwiper .swiper-wrapper .swiper-slide .videoPoster {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.experience .mainContent .mySwiper .swiper-wrapper .swiper-slide .playIcon {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  z-index: 2;
+  width: calc(1.2rem + 1vw);
+}
+
+.experience .mainContent .mySwiper .swiper-wrapper .swiper-slide .details {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  height: 16%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(24%, #000000ac), to(#00000000));
+  background: linear-gradient(0deg, #000000ac 24%, #00000000);
+  padding-left: 1.2rem;
+}
+
+.experience .mainContent .mySwiper .swiper-wrapper .swiper-slide .details .videoTitle,
+.experience .mainContent .mySwiper .swiper-wrapper .swiper-slide .details .videoDescription {
+  color: #f7f7f7;
+  font-weight: 450;
+}
+
+.experience .mainContent .mySwiper .swiper-wrapper .swiper-slide .details .videoTitle {
+  font-size: calc(0.8rem + 0.4vw);
+  margin-bottom: 0.4rem;
+}
+
+.experience .mainContent .mySwiper .swiper-wrapper .swiper-slide .details .videoDescription {
+  font-family: "monument", sans-serif;
+  font-size: calc(0.2rem + 1.4vw);
+}
+
+.experience .mainContent .mySwiper .swiper-pagination {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.2rem;
+}
+
+.experience .mainContent .mySwiper .swiper-pagination-bullet {
+  border: 1px solid #0c5ff2;
+  background: #C6D3D8;
+  width: 16px;
+  height: 16px;
+  background: transparent;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  opacity: 1 !important;
+}
+
+.experience .mainContent .mySwiper .swiper-pagination-bullet-active {
+  background: #0c5ff2;
+}
+
+.experience .mainContent .mySwiper .swiper-pagination-bullet:hover {
+  background: #C6D3D8;
 }
 
 .experience .mainContentActive {

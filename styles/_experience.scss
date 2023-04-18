@@ -13,68 +13,44 @@
     // GLOBAL COMPONENTS
 
     .mainContent {
-        // background: linear-gradient(180deg, #b0c2c9, #ecf3f500);
         background: $sunderSnow;
         width: 100vw;
-        // height: clamp(26rem, 100dvh, 64rem);
+        padding-top: 2rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
 
-        // .cta {
-        //     position: absolute;
-        //     top: 2.4rem;
-        //     right: 2.4rem;
-        //     opacity: 0;
-        //     border: 1px solid $sunderMidnight;
-        //     animation: appear 0.6s ease 0.6s forwards;
-        //     z-index: 2;
-        //     &::before {
-        //         content: 'Join The Squad';
-        //         color: $sunderMidnight;
-        //         font-size: $S-Text;
-        //     }
-        //     .ctaCircle {
-        //         background: $sunderRoyalLight;
-        //     }
-        //     &:hover {
-        //         border: 1px solid $sunderRoyalLight;
-        //         &::before {
-        //             color: $sunderSnow;
-        //         }
-        //     }
-        // }
-
-        // .experienceHeader {
-        //     // border: 2px dashed coral;
-        //     width: 100vw;
-        //     height: 100vh;
-        //     display: flex;
-        //     flex-direction: column;
-        //     justify-content: center;
-        //     align-items: center;
-        //     h1 {
-        //         width: 64%;
-        //         font-size: $Hero-Text;
-        //         // transform: translate(12%, 0) scale(1.3);
-        //     }
-        //     .text1 {
-        //         margin-bottom: 2rem;
-        //         // margin-bottom: 4rem;
-        //     }
-        //     .text2 {
-        //         font-weight: 675;
-        //     }
-        // }
+        .cta {
+            display: none;
+            position: absolute;
+            top: 2.4rem;
+            right: 2.4rem;
+            opacity: 0;
+            border: 1px solid $sunderMidnight;
+            animation: appear 0.6s ease 0.6s forwards;
+            z-index: 2;
+            &::before {
+                content: 'Join The Squad';
+                color: $sunderMidnight;
+                font-size: $S-Text;
+            }
+            .ctaCircle {
+                background: $sunderRoyalLight;
+            }
+            &:hover {
+                border: 1px solid $sunderRoyalLight;
+                &::before {
+                    color: $sunderSnow;
+                }
+            }
+        }
 
         .reel {
-            // border: 2px dashed coral;
-            // height: calc(58rem + 62vw); // Without the parallax, this height is responsive (ends at) the 2 & 4 column's fifth picture.
             height: calc(75rem + 79vw); // Without the parallax, this height is responsive (ends at) the 2 & 4 column's sixth picture.
-            width: 100vw;
-            // padding-left: 2vw;
+            // width: 100vw;
+            width: 96vw;
             display: flex;
             gap: 1.6rem;
             justify-content: space-between;
@@ -82,10 +58,8 @@
             overflow: hidden;
             
             .columnOuter {
-                // border: 2px dashed yellow;
               width: 25%;
               transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
-    
               .reelImg,
               .reelImgShort {
                   background: transparent;
@@ -98,30 +72,14 @@
                       height: 100%;
                       object-fit: cover;
                   }
-                //   &:last-of-type {
-                //       margin-bottom: 0;
-                //   }
               }
               .reelImgShort {
-                  /* height: 32%; */
                   height: calc(8rem + 8vw);
               }
-            //   .topImg {
-            //     border-radius: 0 0 calc(0.4rem + 0.2vw) calc(0.4rem + 0.2vw);
-            //   }
     
               &Active {
                 transform: translate(0, -50vh);
               }
-            }
-            // .col2Inner,
-            // .col4Inner {
-            //   transition: 0.6s cubic-bezier(.1,.44,.44,1);
-            // }
-    
-            &Active {
-              position: absolute;
-              right: 0;
             }
         }
         .reel-lg {
@@ -132,9 +90,103 @@
             display: none;
         }
 
-        .videoSection {
-            width: 100vw;
-            height: 100dvh;
+        .mySwiper {
+            border: 2px dashed grey;
+            width: 96vw;
+            // height: 78vh;
+            // min-height: 36rem;
+            opacity: 0;
+            animation: appear 0.4s ease 0.8s forwards;
+            .swiper-wrapper {
+                background: lightcoral;
+                height: 94%;
+                &:hover {
+                    cursor: grab;
+                    &:active {
+                        cursor: grabbing;
+                    }
+                }
+                .swiper-slide {
+                    position: relative;
+                    border-radius: 0.8rem;
+                    overflow: hidden;
+                    cursor: pointer;
+                    transition: 0.3s ease;
+                    &:hover {
+                        transform: scale(0.98);
+                    }
+                    &:active {
+                        cursor: grabbing;
+                    }
+                    &:focus {
+                        border: 2px solid $sunderRoyalLight;
+                    }
+
+                    .videoPoster {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    .playIcon {
+                        position: absolute;
+                        top: 1.2rem;
+                        right: 1.2rem;
+                        z-index: 2;
+                        width: calc(1.2rem + 1vw);
+                    }
+                    .details {
+                        // border: 2px dashed coral;
+                        position: absolute;
+                        bottom: 0;
+                        z-index: 2;
+                        width: 100%;
+                        height: 16%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        background: linear-gradient(0deg, #000000ac 24%, #00000000);
+                        padding-left: 1.2rem;
+                        .videoTitle,
+                        .videoDescription {
+                            color: $sunderSnow;
+                            font-weight: 450;
+                        }
+                        .videoTitle {
+                            font-size: $S-Text;
+                            margin-bottom: 0.4rem;
+                        }
+                        .videoDescription {
+                            font-family: $monument;
+                            font-size: calc(0.2rem + 1.4vw);
+                            ;
+                        }
+                    }
+                }
+            }
+            .swiper-pagination {
+                width: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.2rem;
+                // transform: translate(2.4rem, 0);
+                &-bullet {
+                    border: 1px solid $sunderRoyalLight;
+                    background: $sunderIce;
+                    width: 16px;
+                    height: 16px;
+                    background: transparent;
+                    transition: 0.3s ease;
+                    opacity: 1 !important;
+                    &-active {
+                        background: $sunderRoyalLight;
+                    }
+                    &:hover {
+                        background: $sunderIce;
+                    }
+                }
+            }
         }
 
         &Active {
