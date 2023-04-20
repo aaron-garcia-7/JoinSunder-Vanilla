@@ -140,7 +140,6 @@ gsap.to(".content", {
 });
 
 gsap.to(".column", {
-  // transform: "translate(-36%, -80%)",
   transform: "translate(-36%, -88%)",
   ease: "none",
   scrollTrigger: {
@@ -154,6 +153,48 @@ gsap.to(".column", {
     // },
   },
 });
+// let columnTl = gsap.timeline({
+//   // transform: "translate(-36%, -88%)",
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: ".meetTheTeam",
+//     scrub: true,
+//     start: "top top",
+//     end: "bottom bottom",
+//     // markers: {
+//     //   startColor: "violet",
+//     //   endColor: "violet",
+//     // },
+//   },
+// });
+// columnTl
+//   .to(".column", {
+//     transform: "translate(-36%, 0%)",
+//   })
+//   .to(".column", {
+//     transform: "translate(-36%, -22%)",
+//   })
+//   .to(".column", {
+//     transform: "translate(-36%, -22%)",
+//   })
+//   .to(".column", {
+//     transform: "translate(-36%, -44%)",
+//   })
+//   .to(".column", {
+//     transform: "translate(-36%, -44%)",
+//   })
+//   .to(".column", {
+//     transform: "translate(-36%, -66%)",
+//   })
+//   .to(".column", {
+//     transform: "translate(-36%, -66%)",
+//   })
+//   .to(".column", {
+//     transform: "translate(-36%, -88%)",
+//   })
+//   .to(".column", {
+//     transform: "translate(-36%, -88%)",
+//   });
 
 let rowWidthTl = gsap.timeline({
   ease: "none",
