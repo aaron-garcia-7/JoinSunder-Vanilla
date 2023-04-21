@@ -2963,7 +2963,6 @@ ul li {
     right: -12%;
   }
   .opportunity .mainContent .kwInstalled .pageFooter {
-    border-radius: 2.4rem 2.4rem 0 0;
     padding-right: 2.8rem;
     border-radius: 1.6rem 1.6rem 0 0;
   }
@@ -3131,7 +3130,6 @@ ul li {
             transform: translate(0, 160%);
   }
   .opportunity .mainContent .kwInstalled .pageFooter {
-    width: 100%;
     padding-right: 1.2rem;
   }
 }
@@ -3990,8 +3988,8 @@ ul li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transform: translate(5.2vw, 0.2rem);
-          transform: translate(5.2vw, 0.2rem);
+  -webkit-transform: translate(calc(1rem + 4.2vw), 0.2rem);
+          transform: translate(calc(1rem + 4.2vw), 0.2rem);
   overflow: hidden;
   -webkit-transition: opacity 0.2s ease, -webkit-transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1);
   transition: opacity 0.2s ease, -webkit-transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1);
@@ -4245,13 +4243,6 @@ ul li {
   color: #0c5ff2;
 }
 
-.resources .mainContent .enzy .pageFooter .footerImg {
-  position: absolute;
-  bottom: 0;
-  right: -2%;
-  width: 16%;
-}
-
 .resources .mainContentActive {
   -webkit-transform: translate(0, -50vh);
           transform: translate(0, -50vh);
@@ -4292,6 +4283,10 @@ ul li {
   }
   .resources .mainContent .enzy .enzyHero .backgroundGlyph {
     width: calc(72rem + 24vw);
+  }
+  .resources .mainContent .enzy .enzyHero .cta2Aside .cta2 .playIconFrame {
+    -webkit-transform: translate(calc(1.2rem + 3.2vw), 0.2rem);
+            transform: translate(calc(1.2rem + 3.2vw), 0.2rem);
   }
   .resources .mainContent .enzy .enzyHero .subText {
     -webkit-transform: translate(0, 20rem);
@@ -4336,6 +4331,18 @@ ul li {
   .resources .mainContent .enzy .enzyHero .subText {
     -webkit-transform: translate(0, 14rem);
             transform: translate(0, 14rem);
+  }
+  .resources .mainContent .enzy .appUsage {
+    padding: 4rem 0 16rem 0;
+  }
+  .resources .mainContent .enzy .appUsage .block .blockImg {
+    width: 36%;
+  }
+  .resources .mainContent .enzy .appUsage .block .blockText h3 {
+    font-size: calc(0.8rem + 1vw);
+  }
+  .resources .mainContent .enzy .appUsage .block .blockText .strong {
+    font-size: calc(1.6rem + 2.4vw);
   }
 }
 
@@ -4390,8 +4397,8 @@ ul li {
     margin-bottom: 1.2rem;
   }
   .resources .mainContent .enzy {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #6CA793), to(#6ca79348));
-    background: linear-gradient(180deg, #6CA793 50%, #6ca79348);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, #6CA793), to(#6ca79348));
+    background: linear-gradient(180deg, #6CA793 80%, #6ca79348);
   }
   .resources .mainContent .enzy .enzyHero {
     margin-bottom: 4rem;
@@ -4427,6 +4434,10 @@ ul li {
     -webkit-transform: translate(-50%, -50%) scale(1.2);
             transform: translate(-50%, -50%) scale(1.2);
   }
+  .resources .mainContent .enzy .enzyHero .cta2Aside .cta2 .playIconFrame {
+    -webkit-transform: translate(calc(1.2rem + 2.2vw), 0.2rem);
+            transform: translate(calc(1.2rem + 2.2vw), 0.2rem);
+  }
   .resources .mainContent .enzy .enzyHero .phonesWrapper {
     width: calc(20rem + 20vw);
     -webkit-transform: translate(-50%, -24%);
@@ -4452,146 +4463,28 @@ ul li {
     opacity: 0.2;
   }
   .resources .mainContent .enzy .appUsage {
-    position: relative;
-    width: 100vw;
-    height: auto;
     padding: 14rem 0 16rem 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    gap: calc(4rem + 4vw);
+  }
+  .resources .mainContent .enzy .appUsage .block {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: calc(1rem + 4vw);
-  }
-  .resources .mainContent .enzy .appUsage .block {
-    position: relative;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .resources .mainContent .enzy .appUsage .block .blockImg {
-    width: 24%;
-  }
-  .resources .mainContent .enzy .appUsage .block .blockText {
-    text-align: center;
+    width: 48%;
   }
   .resources .mainContent .enzy .appUsage .block .blockText h3 {
-    color: #FAFAFA;
-    font-family: "Saira", sans-serif;
     font-size: calc(1rem + 1.2vw);
-    font-weight: 300;
-  }
-  .resources .mainContent .enzy .appUsage .block .blockText .strong {
-    font-size: calc(1.6rem + 2.4vw);
-    font-weight: 700;
   }
   .resources .mainContent .enzy .appUsage .block .linearDot {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    width: calc(0.6rem + 0.2vw);
-    height: calc(0.6rem + 0.2vw);
-    background: #f7f7f7;
-    border-radius: 50%;
-    z-index: 2;
-  }
-  .resources .mainContent .enzy .appUsage .block .linearDot::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-35%, -50%);
-            transform: translate(-35%, -50%);
-    width: 2px;
-    height: clamp(38rem, 100vh, 100vh);
-    background: #f7f7f7;
-  }
-  .resources .mainContent .enzy .appUsage .block .topDot::before {
-    top: 0;
-    -webkit-transform: translate(-35%, 2px);
-            transform: translate(-35%, 2px);
-  }
-  .resources .mainContent .enzy .appUsage .block .bottomDot::before {
-    top: auto;
-    bottom: 0;
-    -webkit-transform: translate(-35%, -2px);
-            transform: translate(-35%, -2px);
-  }
-  .resources .mainContent .enzy .appUsage .block2,
-  .resources .mainContent .enzy .appUsage .block4 {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    display: none;
   }
   .resources .mainContent .enzy .pageFooter {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-    width: 90%;
-    height: clamp(8rem, 8%, 11rem);
-    background: -webkit-gradient(linear, left top, right top, color-stop(10%, #BFD9D000), to(#6DA894));
-    background: linear-gradient(90deg, #BFD9D000 10%, #6DA894);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-radius: 3.2rem 3.2rem 0 0;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    align-items: center;
-    padding-right: 4rem;
-    z-index: 2;
-  }
-  .resources .mainContent .enzy .pageFooter .cta {
-    position: relative;
-    width: calc(8rem + 4vw);
-    height: calc(2rem + 1vw);
-    border: 1px solid #f7f7f7;
-    opacity: 0;
-    -webkit-animation: appear 0.6s ease 0.6s forwards;
-            animation: appear 0.6s ease 0.6s forwards;
-    -webkit-transform: translate(0, -60%);
-            transform: translate(0, -60%);
-  }
-  .resources .mainContent .enzy .pageFooter .cta::before {
-    content: 'Join The Squad';
-    color: #f7f7f7;
-    font-size: calc(0.8rem + 0.4vw);
-  }
-  .resources .mainContent .enzy .pageFooter .cta .ctaCircle {
-    background: #f7f7f7;
-  }
-  .resources .mainContent .enzy .pageFooter .cta:hover::before {
-    color: #0c5ff2;
-  }
-  .resources .mainContent .enzy .pageFooter .footerImg {
-    position: absolute;
-    bottom: 0;
-    right: -2%;
-    width: 16%;
+    width: 100%;
+    border-radius: 1.6rem 1.6rem 0 0;
+    padding-right: 2.8rem;
   }
   .resources .mainContentActive {
     -webkit-transform: translate(0, -58vh);
@@ -4625,15 +4518,15 @@ ul li {
             transform: translate(-50%, -56%);
   }
   .resources .mainContent .enzy .enzyHero .cta2Aside .cta2 {
-    -webkit-transform: translate(-50%, 180%) scale(1.2);
-            transform: translate(-50%, 180%) scale(1.2);
+    -webkit-transform: translate(-50%, 420%) scale(1.2);
+            transform: translate(-50%, 420%) scale(1.2);
   }
   .resources .mainContent .enzy .enzyHero .cta2Aside .cta2::before {
     font-weight: 450;
   }
   .resources .mainContent .enzy .enzyHero .cta2Aside .cta2 .playIconFrame {
-    -webkit-transform: translate(7.6vw, 0.2rem);
-            transform: translate(7.6vw, 0.2rem);
+    -webkit-transform: translate(calc(1.2rem + 1.6vw), 0.2rem);
+            transform: translate(calc(1.2rem + 1.6vw), 0.2rem);
   }
   .resources .mainContent .enzy .enzyHero .cta2Aside .cta2 .playIconFrame .playIcon {
     width: calc(0.8rem + 0.8vw);
@@ -4641,14 +4534,54 @@ ul li {
   }
   .resources .mainContent .enzy .enzyHero .phonesWrapper {
     width: calc(18rem + 18vw);
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -40%);
+            transform: translate(-50%, -40%);
   }
   .resources .mainContent .enzy .enzyHero .subText {
-    -webkit-transform: translate(-50%, 200%);
-            transform: translate(-50%, 200%);
+    -webkit-transform: translate(-50%, 280%);
+            transform: translate(-50%, 280%);
     width: 100%;
     height: 12%;
+  }
+  .resources .mainContent .enzy .appUsage {
+    padding: 8rem 0 16rem 0;
+  }
+  .resources .mainContent .enzy .pageFooter {
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .resources .mainContent .enzy .enzyHero .cta2Aside {
+    -webkit-transform: translate(-50%, -56%);
+            transform: translate(-50%, -56%);
+  }
+  .resources .mainContent .enzy .enzyHero .cta2Aside .enzyLogo {
+    width: calc(12rem + 20vw);
+    -webkit-transform: translate(0, 50%);
+            transform: translate(0, 50%);
+  }
+  .resources .mainContent .enzy .enzyHero .cta2Aside .cta2 {
+    -webkit-transform: translate(-50%, 260%) scale(1.2);
+            transform: translate(-50%, 260%) scale(1.2);
+  }
+  .resources .mainContent .enzy .enzyHero .cta2Aside .cta2 .playIconFrame {
+    -webkit-transform: translate(calc(1.5rem + 1.6vw), 0.2rem);
+            transform: translate(calc(1.5rem + 1.6vw), 0.2rem);
+  }
+  .resources .mainContent .enzy .enzyHero .cta2Aside .cta2 .playIconFrame .playIcon {
+    width: calc(0.8rem + 0.8vw);
+    height: calc(0.8rem + 0.8vw);
+  }
+  .resources .mainContent .enzy .enzyHero .subText {
+    -webkit-transform: translate(-50%, 220%);
+            transform: translate(-50%, 220%);
+  }
+  .resources .mainContent .enzy .appUsage {
+    padding: 4rem 0 16rem 0;
+  }
+  .resources .mainContent .enzy .pageFooter {
+    padding-right: 1.2rem;
   }
 }
 
