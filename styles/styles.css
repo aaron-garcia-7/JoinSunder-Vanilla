@@ -3374,6 +3374,23 @@ ul li {
   }
 }
 
+@media (max-width: 580px) {
+  .compete .logo, .compete .navLogo {
+    top: 1.6rem;
+    left: 1.2rem;
+  }
+  .compete .navLogo {
+    top: auto;
+    bottom: 3.2rem;
+    width: calc(6.4rem + 0.4vw);
+    height: 1.4rem;
+  }
+  .compete .mainContent .cta {
+    top: 1.2rem;
+    right: 1.2rem;
+  }
+}
+
 @media (max-width: 480px) {
   .compete .logo, .compete .navLogo {
     left: 0.7rem;
@@ -3570,6 +3587,12 @@ ul li {
   .experience .mainContentActive {
     -webkit-transform: translate(0, -58vh);
             transform: translate(0, -58vh);
+  }
+}
+
+@media (max-width: 580px) {
+  .experience .mainContent .reel {
+    gap: 0.8rem;
   }
 }
 

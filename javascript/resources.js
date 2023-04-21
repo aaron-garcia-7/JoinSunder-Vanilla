@@ -7,7 +7,7 @@ const burger = document.querySelector(".burger");
 const nav = document.querySelector(".nav");
 const logo = document.querySelector(".logo");
 const navLogo = document.querySelector(".navLogo");
-const activePage = document.querySelector("#activePage");
+const activePage = document.querySelectorAll(".activePage");
 
 // Page Unique elements
 const mainContent = document.querySelector(".mainContent");
@@ -56,7 +56,9 @@ const closeNav = () => {
 
 burger.addEventListener("click", toggleNav);
 mainContent.addEventListener("click", closeNav);
-activePage.addEventListener("click", closeNav);
+activePage.forEach((obj) => {
+  obj.addEventListener("click", closeNav);
+});
 
 //
 // CTA2 Hover Animation
@@ -365,26 +367,24 @@ gsap.to("#col1-sm", {
   },
 });
 
-//
-// Utility
-//
+Utility;
 
-// let needsRefresh = false;
+let needsRefresh = false;
 
-// window.addEventListener("resize", function () {
-//   if (window.innerWidth > 580) {
-//     needsRefresh = true;
-//   } else {
-//     needsRefresh = false;
-//   }
-// });
+window.addEventListener("resize", function () {
+  if (window.innerWidth > 580) {
+    needsRefresh = true;
+  } else {
+    needsRefresh = false;
+  }
+});
 
-// setInterval(function () {
-//   if (needsRefresh) {
-//     location.reload();
-//   }
-// }, 1000);
+setInterval(function () {
+  if (needsRefresh) {
+    location.reload();
+  }
+}, 1000);
 
-// window.onbeforeunload = () => {
-//   window.scrollTo(0, 0);
-// };
+window.onbeforeunload = () => {
+  window.scrollTo(0, 0);
+};

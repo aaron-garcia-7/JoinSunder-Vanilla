@@ -3,12 +3,14 @@
     .logo {
         position: absolute;
         animation-delay: 0.4s;
+        // display: none;
     }
     .navLogo {
         position: fixed;
     }
     .burgerContainer {
         animation-delay: 0.6s;
+        // display: none;
     }
     // GLOBAL COMPONENTS
 
@@ -137,6 +139,15 @@
         .mainContent {
             &Active {
                 transform: translate(0, -58vh);
+            }
+        }
+    }
+}
+@media (max-width: 580px) {
+    .experience {
+        .mainContent {
+            .reel {
+                gap: 0.8rem;
             }
         }
     }
