@@ -74,38 +74,6 @@ mainContent.addEventListener("click", closeNav);
 activePage.addEventListener("click", closeNav);
 
 //
-// Swiper Carousel Logic
-//
-
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 2, // use breakpoints below
-  spaceBetween: 20,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  autoplay: {
-    delay: 6000,
-    disableOnInteraction: false,
-  },
-  breakpoints: {
-    480: {
-      slidesPerView: 2,
-      spaceBetween: 16,
-    },
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    },
-    1024: {
-      // slidesPerView: 4,
-      slidesPerView: 3,
-      spaceBetween: 20,
-    },
-  },
-});
-
-//
 // Handling Video Container Logic
 //
 

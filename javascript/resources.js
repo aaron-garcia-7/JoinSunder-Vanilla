@@ -140,7 +140,8 @@ gsap.to(".content", {
 });
 
 gsap.to(".column", {
-  transform: "translate(-36%, -88%)",
+  // transform: "translate(-36%, -88%)",
+  transform: "translate(-36%, calc(0.2vw - 88%))",
   ease: "none",
   scrollTrigger: {
     trigger: ".meetTheTeam",
@@ -238,6 +239,58 @@ rowWidthTl
     width: "calc(10rem + 48vw)",
   });
 
+// let rowWidthTl = gsap.timeline({
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: ".meetTheTeam",
+//     scrub: true,
+//     start: "top top",
+//     end: "60% top",
+//     // markers: true,
+//   },
+// });
+// rowWidthTl
+//   .fromTo(
+//     ".row",
+//     { width: "calc(10rem + 41vw)" },
+//     { width: "calc(10rem + 41vw)" }
+//   )
+//   .fromTo(
+//     ".row",
+//     { width: "calc(10rem + 41vw)" },
+//     { width: "calc(10rem + 41vw)" }
+//   )
+//   .fromTo(
+//     ".row",
+//     { width: "calc(10rem + 41vw)" },
+//     { width: "calc(10rem + 46vw)" }
+//   )
+//   .fromTo(
+//     ".row",
+//     { width: "calc(10rem + 46vw)" },
+//     { width: "calc(10rem + 46vw)" }
+//   )
+//   .fromTo(
+//     ".row",
+//     { width: "calc(10rem + 46vw)" },
+//     { width: "calc(10rem + 46vw)" }
+//   )
+//   .fromTo(
+//     ".row",
+//     { width: "calc(10rem + 46vw)" },
+//     { width: "calc(10rem + 48vw)" }
+//   )
+//   .fromTo(
+//     ".row",
+//     { width: "calc(10rem + 48vw)" },
+//     { width: "calc(10rem + 48vw)" }
+//   )
+//   .fromTo(
+//     ".row",
+//     { width: "calc(10rem + 48vw)" },
+//     { width: "calc(10rem + 48vw)" }
+//   );
+
 // Image Reels
 
 gsap.to("#col1-lg", {
@@ -311,3 +364,27 @@ gsap.to("#col1-sm", {
     end: "bottom bottom",
   },
 });
+
+//
+// Utility
+//
+
+// let needsRefresh = false;
+
+// window.addEventListener("resize", function () {
+//   if (window.innerWidth > 580) {
+//     needsRefresh = true;
+//   } else {
+//     needsRefresh = false;
+//   }
+// });
+
+// setInterval(function () {
+//   if (needsRefresh) {
+//     location.reload();
+//   }
+// }, 1000);
+
+// window.onbeforeunload = () => {
+//   window.scrollTo(0, 0);
+// };
