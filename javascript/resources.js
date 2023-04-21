@@ -367,7 +367,7 @@ gsap.to("#col1-sm", {
   },
 });
 
-Utility;
+// Utility
 
 let needsRefresh = false;
 
