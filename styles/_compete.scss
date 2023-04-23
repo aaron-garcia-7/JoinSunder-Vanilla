@@ -201,7 +201,8 @@
                 }
             }
             &Active {
-                transform: translate(0, -58vh);
+                // transform: translate(0, -58vh);
+                transform: $nav-shift;
             }
         }
     }

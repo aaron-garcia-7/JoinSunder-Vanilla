@@ -65,6 +65,8 @@ $M-Text: calc(0.8rem + 1vw);
 $S-Text: calc(0.8rem + 0.4vw);
 $XS-Text: calc(0.6rem + 0.3vw);
 
+$nav-shift: translate(0, -50vh);
+
 
 * {
   margin: 0;
@@ -564,7 +566,8 @@ ul {
   }
 
   .nav {
-    height: 58vh;
+    // height: 58vh;
+    height: 50vh;
     .navSwiper {
       // border: 2px dashed coral;
       display: block;

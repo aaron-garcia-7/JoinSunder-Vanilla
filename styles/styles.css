@@ -725,7 +725,7 @@ ul li {
     height: calc(3rem + 0.8vw);
   }
   .nav {
-    height: 58vh;
+    height: 50vh;
   }
   .nav .navSwiper {
     display: block;
@@ -1345,8 +1345,8 @@ ul li {
   }
   .home .mainContent .asideActive {
     position: static;
-    -webkit-transform: translate(0, -58vh);
-            transform: translate(0, -58vh);
+    -webkit-transform: translate(0, -50vh);
+            transform: translate(0, -50vh);
   }
   .home .mainContent .heroText {
     position: static;
@@ -1384,8 +1384,8 @@ ul li {
   }
   .home .mainContent .reelActive {
     position: static;
-    -webkit-transform: translate(0, -58vh);
-            transform: translate(0, -58vh);
+    -webkit-transform: translate(0, -50vh);
+            transform: translate(0, -50vh);
   }
   .home .mainContent .col1Active,
   .home .mainContent .col2Active {
@@ -2756,8 +2756,8 @@ ul li {
     height: 48%;
   }
   .opportunity .mainContentActive {
-    -webkit-transform: translate(0, -58vh);
-            transform: translate(0, -58vh);
+    -webkit-transform: translate(0, -50vh);
+            transform: translate(0, -50vh);
   }
 }
 
@@ -3369,8 +3369,8 @@ ul li {
     height: 92%;
   }
   .compete .mainContentActive {
-    -webkit-transform: translate(0, -58vh);
-            transform: translate(0, -58vh);
+    -webkit-transform: translate(0, -50vh);
+            transform: translate(0, -50vh);
   }
 }
 
@@ -3585,8 +3585,8 @@ ul li {
 
 @media (max-width: 768px) {
   .experience .mainContentActive {
-    -webkit-transform: translate(0, -58vh);
-            transform: translate(0, -58vh);
+    -webkit-transform: translate(0, -50vh);
+            transform: translate(0, -50vh);
   }
 }
 
@@ -4510,8 +4510,8 @@ ul li {
     padding-right: 2.8rem;
   }
   .resources .mainContentActive {
-    -webkit-transform: translate(0, -58vh);
-            transform: translate(0, -58vh);
+    -webkit-transform: translate(0, -50vh);
+            transform: translate(0, -50vh);
   }
 }
 

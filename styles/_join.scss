@@ -30,7 +30,7 @@
         }
 
         &Active {
-            transform: translate(0, -50vh);
+            transform: $nav-shift;
         }
     }
 }
