@@ -70,12 +70,17 @@ h1, h2 {
   font-weight: 450;
 }
 
-h3, h4, h5, h6, p, blockquote, a, button {
+h3, h4, h5, h6, p, blockquote, a, button, input, label {
   font-family: "satoshi", sans-serif;
 }
 
 ul li {
   font-family: "satoshi", sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
 }
 
 #boldTitle {
@@ -3460,32 +3465,6 @@ ul li {
 
 .experience .mainContent .cta {
   display: none;
-  position: absolute;
-  top: 2.4rem;
-  right: 2.4rem;
-  opacity: 0;
-  border: 1px solid #000014;
-  -webkit-animation: appear 0.6s ease 0.6s forwards;
-          animation: appear 0.6s ease 0.6s forwards;
-  z-index: 2;
-}
-
-.experience .mainContent .cta::before {
-  content: 'Join The Squad';
-  color: #000014;
-  font-size: calc(0.8rem + 0.4vw);
-}
-
-.experience .mainContent .cta .ctaCircle {
-  background: #0c5ff2;
-}
-
-.experience .mainContent .cta:hover {
-  border: 1px solid #0c5ff2;
-}
-
-.experience .mainContent .cta:hover::before {
-  color: #f7f7f7;
 }
 
 .experience .mainContent .reel {
@@ -4642,7 +4621,36 @@ ul li {
 
 .join .mainContent {
   width: 100vw;
-  height: clamp(26rem, 100dvh, 64rem);
+  height: 100vh;
+  height: 100dvh;
+  min-height: 36rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+  transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+  transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+  transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+}
+
+.join .mainContent .leftSide {
+  background: #0c5ff2;
+  width: 50%;
+  height: 100%;
+}
+
+.join .mainContent .leftSide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.join .mainContent .formPanel {
+  background: #000014;
+  width: 50%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4650,28 +4658,135 @@ ul li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
-  transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
-  transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
-  transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
 }
 
-.join .mainContent h1 {
-  font-size: calc(1.6rem + 2.4vw);
+.join .mainContent .formPanel .formLogo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.join .mainContent .cta {
-  display: none;
+.join .mainContent .formPanel .formLogo img {
+  width: calc(12rem + 4vw);
+}
+
+.join .mainContent .formPanel .contactForm {
+  width: 100%;
+  height: 68%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+.join .mainContent .formPanel .contactForm .formBlock {
+  position: relative;
+  width: 76%;
+  height: 10%;
+  border-bottom: 1px solid #f7f7f7;
+}
+
+.join .mainContent .formPanel .contactForm .input {
+  position: absolute;
+  bottom: 12%;
+  left: 0;
+  font-size: calc(0.8rem + 1vw);
+  color: #f7f7f7;
+  background: transparent;
+  border: none;
+  width: 100%;
+  height: 50%;
+  border-radius: 0;
+  outline: none;
+  -webkit-transition: border 0.1s ease;
+  transition: border 0.1s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.join .mainContent .formPanel .contactForm .label {
+  position: absolute;
+  width: 100%;
+  top: 36%;
+  left: 0;
+  font-size: calc(0.8rem + 1vw);
+  font-weight: 300;
+  color: #f7f7f7;
+  pointer-events: none;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.join .mainContent .formPanel .contactForm .input:focus ~ .label,
+.join .mainContent .formPanel .contactForm .input:not(:placeholder-shown).input:not(focus) ~ .label {
+  -webkit-transform: translate(0, -112%);
+          transform: translate(0, -112%);
+  opacity: 0.8;
+  font-size: calc(1rem + 0.2vw);
+}
+
+.join .mainContent .formPanel .contactForm .cta {
+  position: relative;
+  opacity: 0;
+  border: 1px solid #f7f7f7;
+  -webkit-animation: appear 0.6s ease 0.6s forwards;
+          animation: appear 0.6s ease 0.6s forwards;
+  z-index: 2;
+}
+
+.join .mainContent .formPanel .contactForm .cta::before {
+  content: 'Submit';
+  color: #f7f7f7;
+  font-size: calc(0.8rem + 0.4vw);
+}
+
+.join .mainContent .formPanel .contactForm .cta .ctaCircle {
+  background: #0c5ff2;
+}
+
+.join .mainContent .formPanel .contactForm .cta:hover {
+  border: 1px solid #0c5ff2;
+}
+
+.join .mainContent .formPanel .contactForm .cta:hover::before {
+  color: #f7f7f7;
 }
 
 .join .mainContentActive {
   -webkit-transform: translate(0, -50vh);
           transform: translate(0, -50vh);
+}
+
+@media (max-width: 1024px) {
+  .join .mainContent .leftSide {
+    display: none;
+  }
+  .join .mainContent .formPanel {
+    width: 100vw;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

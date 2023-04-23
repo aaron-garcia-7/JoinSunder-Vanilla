@@ -12,19 +12,80 @@
     <script src="./javascript/global.js" defer></script>
 </head>
 <body class="join">
-    <div class="logo">
-        <a href="./index.html" class="logoLink">
-          <img src="./assets/logoDark.svg" alt="Sunder" class="logoImg">
-        </a>
-    </div>
 
     <main class="mainContent">
 
-        <h1>Join Page</h1>
+        <figure class="leftSide">
+            <img src="./images/joinPage/joinImg.png" alt="">
+        </figure>
 
-        <button class="cta" id="cta">
-            Join The Squad
-        </button>
+        <aside class="formPanel">
+            <figure class="formLogo">
+                <img src="./assets/logoLight.svg" alt="Sunder">
+            </figure>
+            <form class="contactForm" action="">
+                <div class="formBlock">
+                    <input class="input"
+                        type="text"
+                        name="name"
+                        placeholder=" "
+                        aria-labelledby="Please enter your first and last name."
+                        id="name"
+                        required
+                    />
+                    <label for="name" class="label">
+                        Name
+                    </label>
+                </div>
+                <div class="formBlock">
+                    <input class="input"
+                        type="email"
+                        name="email"
+                        placeholder=" "
+                        aria-labelledby="Please enter your Email address."
+                        id="email"
+                        required
+                    />
+                    <label for="email" class="label">
+                        Email
+                    </label>
+                </div>
+                <div class="formBlock">
+                    <input class="input"
+                        type="tel"
+                        name="phone"
+                        placeholder=" "
+                        aria-labelledby="Please enter your preferred phone number."
+                        id="phone"
+                        required
+                    />
+                    <label for="phone" class="label">
+                        Phone
+                    </label>
+                </div>
+                <div class="formBlock">
+                    <input class="input"
+                        type="number"
+                        pattern="[0-9]{5}"
+                        name="zip"
+                        placeholder=" "
+                        aria-labelledby="Please enter your zip code."
+                        id="zip-code"
+                        required
+                    />
+                    <label for="zip-code" class="label">
+                        Zip Code
+                    </label>
+                </div>
+                <div class="mockCaptcha">
+                    <p>I’m not a robot</p>
+                </div>
+                <button type="submit" class="cta" id="cta">
+                    Submit
+                    <div class="ctaCircle" id="ctaCircle"></div>
+                </button>
+            </form>
+        </aside>
 
     </main>
 

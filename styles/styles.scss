@@ -85,7 +85,7 @@ h1, h2 {
   font-family: $monument;
   font-weight: 450;
 }
-h3, h4, h5, h6, p, blockquote, a, button {
+h3, h4, h5, h6, p, blockquote, a, button, input, label {
   font-family: $satoshi;
 }
 ul {
@@ -93,6 +93,11 @@ ul {
   li {
     font-family: $satoshi;
   }
+}
+// This hides the default buttons on input type="number"
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
 }
 
 #boldTitle {
