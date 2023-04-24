@@ -4753,8 +4753,8 @@ input::-webkit-inner-spin-button {
   position: relative;
   opacity: 0;
   border: 1px solid #f7f7f7;
-  -webkit-animation: appear 0.6s ease 0.6s forwards;
-          animation: appear 0.6s ease 0.6s forwards;
+  -webkit-animation: appear 0.6s ease 0.2s forwards;
+          animation: appear 0.6s ease 0.2s forwards;
   z-index: 2;
 }
 
