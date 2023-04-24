@@ -23,7 +23,8 @@
             <figure class="formLogo">
                 <img src="./assets/logoLight.svg" alt="Sunder">
             </figure>
-            <form class="contactForm" action="">
+            <form class="contactForm" action="/contact" method="POST" name="contactSunder" netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true" hidden>
+                <input type="hidden" name="contactSunder" value="contact">
                 <div class="formBlock">
                     <input class="input"
                         type="text"
@@ -80,6 +81,8 @@
                 <div class="mockCaptcha">
                     <p>I’m not a robot</p>
                 </div>
+                <!-- Captcha is in an iFrame. Traditional styling won't work. -->
+                <div data-netlify-recaptcha="true" class="recaptcha"></div>
                 <button type="submit" class="cta" id="cta">
                     Submit
                     <div class="ctaCircle" id="ctaCircle"></div>

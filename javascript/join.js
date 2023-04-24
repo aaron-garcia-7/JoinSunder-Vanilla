@@ -53,6 +53,15 @@ burger.addEventListener("click", toggleNav);
 mainContent.addEventListener("click", closeNav);
 
 //
+// ReCaptcha
+//
+
+// document.addEventListener("DOMContentLoaded", (event) => {
+const recaptcha = document.querySelector(".g-recaptcha");
+recaptcha.setAttribute("data-theme", "dark");
+// });
+
+//
 // GSAP Animations
 //
 
