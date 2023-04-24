@@ -172,13 +172,13 @@ let allPosters = document.querySelectorAll(".poster");
 
 allPosters.forEach((obj, index) => {
   obj.addEventListener("click", () => {
-    videoElement.src = `./assets/promo${index}.mp4`;
+    videoElement.src = `./assets/compete${index}.mp4`;
     toggleVideo();
   });
   obj.addEventListener("keydown", (e) => {
     // console.log(e);
     if (e.code === "Enter") {
-      videoElement.src = `./assets/promo${index}.mp4`;
+      videoElement.src = `./assets/compete${index}.mp4`;
       toggleVideo();
     }
   });
