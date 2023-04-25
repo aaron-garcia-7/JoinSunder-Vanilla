@@ -4788,5 +4788,27 @@ input::-webkit-inner-spin-button {
   .join .mainContent .formPanel {
     width: 100vw;
   }
+  .join .mainContent .formPanel .formLogo img {
+    width: calc(8rem + 4vw);
+  }
+}
+
+@media (max-width: 480px) {
+  .join .mainContent .formPanel {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .join .mainContent .formPanel .formLogo {
+    margin-bottom: 2rem;
+  }
+  .join .mainContent .formPanel .contactForm {
+    height: 58%;
+    gap: 1.2rem;
+  }
+  .join .mainContent .formPanel .contactForm .cta::before {
+    font-weight: 400;
+    font-size: calc(0.8rem + 1vw);
+  }
 }
 /*# sourceMappingURL=styles.css.map */
