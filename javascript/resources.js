@@ -433,7 +433,7 @@ gsap.to("#col1-sm", {
 let needsRefresh = false;
 
 window.addEventListener("resize", function () {
-  if (window.innerWidth > 580) {
+  if (window.innerWidth > 580 && !videoState) {
     needsRefresh = true;
   } else {
     needsRefresh = false;
@@ -446,6 +446,6 @@ setInterval(function () {
   }
 }, 1000);
 
-window.onbeforeunload = () => {
-  window.scrollTo(0, 0);
-};
+// window.onbeforeunload = () => {
+//   window.scrollTo(0, 0);
+// };

@@ -3640,7 +3640,7 @@ input::-webkit-inner-spin-button {
 }
 
 .resources .videoContainerEnzy .videoWrapper {
-  width: 24vw;
+  width: calc(16rem + 4vw);
   -webkit-transform: translate(0, -6%);
           transform: translate(0, -6%);
 }

@@ -13,8 +13,7 @@
     }
     .videoContainerEnzy {
         .videoWrapper {
-            // border: 2px dashed coral;
-            width: 24vw;
+            width: calc(16rem + 4vw);
             transform: translate(0, -6%);
         }
     }
