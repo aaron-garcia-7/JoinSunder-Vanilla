@@ -11,9 +11,17 @@
         animation-delay: 0.6s;
         // display: none;
     }
+    .videoContainerEnzy {
+        .videoWrapper {
+            // border: 2px dashed coral;
+            width: 24vw;
+            transform: translate(0, -6%);
+        }
+    }
     // GLOBAL COMPONENTS
 
     .mainContent {
+        background: $sunderSnow;
         width: 100vw;
         // height: clamp(26rem, 100dvh, 64rem);
         display: flex;

@@ -87,6 +87,67 @@ cta3.addEventListener("mousemove", (e) => {
 });
 
 //
+// Handling Video Container Logic
+//
+
+const videoContainer = document.querySelector(".videoContainer");
+const closeVideoBurger = document.querySelector(".closeVideoBurger");
+const videoElement = document.querySelector("#videoElement");
+
+let videoState = false;
+
+const toggleVideo = () => {
+  videoState = !videoState;
+  videoElement.play();
+
+  if (videoState) {
+    videoContainer.classList.add("videoContainerActive");
+    closeVideoBurger.classList.add("closeVideoBurgerActive");
+  } else {
+    videoContainer.classList.remove("videoContainerActive");
+    closeVideoBurger.classList.remove("closeVideoBurgerActive");
+  }
+};
+const openVideo = () => {
+  videoState = true;
+  videoElement.play();
+
+  if (videoState) {
+    videoContainer.classList.add("videoContainerActive");
+  } else {
+    videoContainer.classList.remove("videoContainerActive");
+  }
+};
+const closeVideo = () => {
+  videoState = false;
+  videoElement.pause();
+
+  if (videoState) {
+    videoContainer.classList.add("videoContainerActive");
+  } else {
+    videoContainer.classList.remove("videoContainerActive");
+  }
+};
+
+cta2.addEventListener("click", () => {
+  toggleVideo();
+});
+closeVideoBurger.addEventListener("click", () => {
+  toggleVideo();
+  videoElement.pause();
+});
+
+videoContainer.addEventListener("click", ({ target }) => {
+  if (target.classList.contains("videoContainer")) {
+    toggleVideo();
+    videoElement.pause();
+  }
+});
+videoElement.addEventListener("focus", () => {
+  openVideo();
+});
+
+//
 // GSAP Animations
 //
 

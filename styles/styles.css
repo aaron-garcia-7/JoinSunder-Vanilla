@@ -3639,7 +3639,14 @@ input::-webkit-inner-spin-button {
           animation-delay: 0.6s;
 }
 
+.resources .videoContainerEnzy .videoWrapper {
+  width: 24vw;
+  -webkit-transform: translate(0, -6%);
+          transform: translate(0, -6%);
+}
+
 .resources .mainContent {
+  background: #f7f7f7;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
