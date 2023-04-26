@@ -181,28 +181,26 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .compete {
+        .mainContent {
+            &Active {
+                transform: translate(0, -58vh);
+            }
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .compete {
         .mainContent {
             .mySwiper {
                 width: 90vw;
                 height: 72vh;
-                // height: 87vh;
                 transform: translate(0, 2%);
-                // transform: translate(0, 11%);
                 .swiper-wrapper {
                     height: 92%;
-                    // .swiper-slide {
-                    //     .details {
-                    //         height: 18%;
-                    //         padding-left: 0.6rem;
-                    //     }
-                    // }
                 }
-            }
-            &Active {
-                // transform: translate(0, -58vh);
-                transform: $nav-shift;
             }
         }
     }
@@ -246,13 +244,10 @@
             .mySwiper {
                 // border: 1px solid blue;
                 width: 96vw;
-                // height: 60vh;
                 height: 56vh;
-                // min-height: 24rem;
                 transform: translate(0, 2%);
                 .swiper-wrapper {
                     height: 90%;
-                    // height: 80%;
                     .swiper-slide {
                         .details {
                             height: 18%;
@@ -262,12 +257,14 @@
                 }
                 .swiper-pagination {
                     gap: 0.2rem;
-                    // transform: translate(0, 40%);
                     &-bullet {
                         width: 14px;
                         height: 14px;
                     }
                 }
+            }
+            &Active {
+                transform: $nav-shift;
             }
         }
     }

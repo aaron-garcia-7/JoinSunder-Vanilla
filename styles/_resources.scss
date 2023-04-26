@@ -321,28 +321,6 @@
                           }
                         }
                       }
-                      @keyframes loopRight {
-                        0% {
-                          transform: translate(-50%);
-                        }
-                        80% {
-                          transform: translate(-50%);
-                        }
-                        100% {
-                          transform: translate(140%, 0);
-                        }
-                      }
-                      @keyframes loopRight2 {
-                        0% {
-                          transform: translate(-120%);
-                        }
-                        90% {
-                          transform: translate(-120%);
-                        }
-                        100% {
-                          transform: translate(50%, 0);
-                        }
-                      }
                 }
                 .phonesWrapper {
                     width: 42%;

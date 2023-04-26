@@ -1242,8 +1242,8 @@ $pending: #BCD0D7;
             }
 
             &Active {
-                // transform: translate(0, -58vh);
-                transform: $nav-shift;
+                transform: translate(0, -58vh);
+                // transform: $nav-shift;
             }
         }
     }
@@ -1685,6 +1685,9 @@ $pending: #BCD0D7;
                 .pageFooter {
                     padding-right: 1.2rem;
                 }
+            }
+            &Active {
+                transform: $nav-shift;
             }
         }
     }

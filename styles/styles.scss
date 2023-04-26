@@ -280,6 +280,8 @@ input::-webkit-inner-spin-button {
         font-size: $S-Text;
         font-weight: 400;
         // transform: translate(0.2vw, 0);
+        transform: translate(2%, -10%);
+
         &Active {
           // background: $sunderRoyalLight;
           // border-radius: 1rem;
@@ -548,6 +550,30 @@ input::-webkit-inner-spin-button {
   }
 }
 
+// For CTA2 (video call to action)
+@keyframes loopRight {
+  0% {
+    transform: translate(-50%);
+  }
+  80% {
+    transform: translate(-50%);
+  }
+  100% {
+    transform: translate(140%, 0);
+  }
+}
+@keyframes loopRight2 {
+  0% {
+    transform: translate(-120%);
+  }
+  90% {
+    transform: translate(-120%);
+  }
+  100% {
+    transform: translate(50%, 0);
+  }
+}
+
 //
 // Media Queries
 //
@@ -571,8 +597,8 @@ input::-webkit-inner-spin-button {
   }
 
   .nav {
-    // height: 58vh;
-    height: 50vh;
+    height: 58vh;
+    // height: 50vh;
     .navSwiper {
       // border: 2px dashed coral;
       display: block;
@@ -599,14 +625,14 @@ input::-webkit-inner-spin-button {
           font-size: $M-Text;
           color: $sunderMidnight;
           font-weight: 300;
-          transform: translate(4%, -6%);
+          transform: translate(2%, -10%);
         }
         .linkTitleActive {
           font-weight: 500;
         }
         .linkImg {
           background: $sunderSnow;
-          border-radius: 1rem;
+          border-radius: calc(0.6rem + 0.1vw);
           width: calc(6rem + 12vw);
           height: calc(12rem + 4vw);
         }
@@ -652,6 +678,13 @@ input::-webkit-inner-spin-button {
     position: fixed !important;
   }
 }
+
+@media (max-width: 480px) {
+  .nav {
+    height: 50vh;
+  }
+}
+
 
 @media (hover: none) {
   .nav {
