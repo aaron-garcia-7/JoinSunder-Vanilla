@@ -3640,7 +3640,7 @@ input::-webkit-inner-spin-button {
 }
 
 .resources .videoContainerEnzy .videoWrapper {
-  width: calc(16rem + 4vw);
+  width: calc(24rem + 4vw);
   -webkit-transform: translate(0, -6%);
           transform: translate(0, -6%);
 }
@@ -4274,6 +4274,14 @@ input::-webkit-inner-spin-button {
 .resources .mainContentActive {
   -webkit-transform: translate(0, -50vh);
           transform: translate(0, -50vh);
+}
+
+@media (max-width: 1440px) {
+  .resources .videoContainerEnzy .videoWrapper {
+    width: calc(16rem + 4vw);
+    -webkit-transform: translate(0, -6%);
+            transform: translate(0, -6%);
+  }
 }
 
 @media (max-width: 1248px) {

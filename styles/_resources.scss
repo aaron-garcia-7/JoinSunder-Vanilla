@@ -13,7 +13,7 @@
     }
     .videoContainerEnzy {
         .videoWrapper {
-            width: calc(16rem + 4vw);
+            width: calc(24rem + 4vw);
             transform: translate(0, -6%);
         }
     }
@@ -490,6 +490,18 @@
 }
 
 
+@media (max-width: 1440px) {
+    .resources {
+        // GLOBAL COMPONENTS
+        .videoContainerEnzy {
+            .videoWrapper {
+                width: calc(16rem + 4vw);
+                transform: translate(0, -6%);
+            }
+        }
+        // GLOBAL COMPONENTS
+    }
+}
 @media (max-width: 1248px) {
     .resources {
         .mainContent {
