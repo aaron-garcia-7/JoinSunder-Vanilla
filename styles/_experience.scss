@@ -213,6 +213,26 @@
             .reel-md {
                 display: flex;
             }
+
+            .mySwiper {
+                height: 96vh;
+                min-height: 36rem;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        .details {
+                            height: 18%;
+                            padding-left: 0.6rem;
+                        }
+                    }
+                }
+                .swiper-pagination {
+                    gap: 0;
+                    &-bullet {
+                        width: 12px;
+                        height: 12px;
+                    }
+                }
+            }
         }
     }
 }
@@ -241,6 +261,13 @@
             }
             .reel-sm {
                 display: flex;
+            }
+
+            .mySwiper {
+                height: 92vh;
+                .swiper-wrapper {
+                    height: 92%;
+                }
             }
         }
     }
@@ -271,6 +298,30 @@
 @media (max-width: 480px) {
     .experience {
         .mainContent {
+            .mySwiper {
+                // border: 1px solid blue;
+                // width: 96vw;
+                height: 52vh;
+                min-height: 24rem;
+                margin: 2rem 0 8rem 0;
+                .swiper-wrapper {
+                    height: 90%;
+                    // height: 80%;
+                    .swiper-slide {
+                        .details {
+                            height: 18%;
+                            padding-left: 0.6rem;
+                        }
+                    }
+                }
+                .swiper-pagination {
+                    gap: 0.2rem;
+                    &-bullet {
+                        width: 14px;
+                        height: 14px;
+                    }
+                }
+            }
             &Active {
                 transform: $nav-shift;
             }

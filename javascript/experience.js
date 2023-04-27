@@ -79,7 +79,7 @@ activePage.addEventListener("click", closeNav);
 
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 2, // use breakpoints below
-  spaceBetween: 20,
+  spaceBetween: 12,
   loop: true,
   // centeredSlides: true,
   pagination: {

@@ -159,7 +159,6 @@
                 height: 74vh;
                 min-height: 24rem;
                 .swiper-wrapper {
-                    // height: 94%;
                     .swiper-slide {
                         .details {
                             height: 18%;
@@ -170,8 +169,6 @@
                 .swiper-pagination {
                     gap: 0;
                     &-bullet {
-                        // border: 1px solid $sunderRoyalLight;
-                        // background: $sunderMidnight;
                         width: 12px;
                         height: 12px;
                     }
