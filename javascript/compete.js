@@ -77,7 +77,7 @@ activePage.addEventListener("click", closeNav);
 // Swiper Carousel Logic
 //
 
-var swiper = new Swiper(".mySwiper", {
+let swiper = new Swiper(".mySwiper", {
   slidesPerView: 2, // use breakpoints below
   spaceBetween: 20,
   // loop: true,
