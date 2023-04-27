@@ -261,7 +261,7 @@ let stateCount = gsap.utils.toArray(".number");
 let stateCountTL = gsap.timeline({
   scrollTrigger: {
     trigger: "#numberArea",
-    scrub: true,
+    scrub: window.innerWidth > 480 ? true : false,
     start: window.innerWidth > 768 ? "20% 15%" : "-100% 15%",
     end: window.innerWidth > 768 ? "440% 15%" : "2600% 15%",
   },

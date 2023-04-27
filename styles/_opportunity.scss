@@ -1595,6 +1595,7 @@ $pending: #BCD0D7;
             }
             .growth {
                 // border: 2px dashed yellow;
+                height: 48rem;
                 .numberArea {
                     transform: translate(0, -160%);
                     .timeline {
@@ -1635,19 +1636,26 @@ $pending: #BCD0D7;
                 }
             }
             .growthAnchors {
-                height: calc(100vh + 29%);
+                // border: 2px dashed violet;
+                // height: calc(100vh + 29%);
+                height: 48rem;
+                // z-index: 1;
                 #anchor2019 {
                     // background: violet;
-                    top: 20%;
+                    // top: 20%;
+                    top: 8%;
                 }
                 #anchor2020 {
-                    top: 40%;
+                    // top: 40%;
+                    top: 22%;
                 }
                 #anchor2021 {
-                    top: 56%;
+                    // top: 56%;
+                    top: 36%;
                 }
                 #anchor2022 {
-                    top: 73%;
+                    // top: 73%;
+                    top: 50%;
                 }
             }
             .dataSections {

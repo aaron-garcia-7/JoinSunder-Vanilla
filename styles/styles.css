@@ -3074,6 +3074,9 @@ input::-webkit-inner-spin-button {
     width: 86%;
     height: calc(12rem + 12vw);
   }
+  .opportunity .mainContent .growth {
+    height: 48rem;
+  }
   .opportunity .mainContent .growth .numberArea {
     -webkit-transform: translate(0, -160%);
             transform: translate(0, -160%);
@@ -3114,19 +3117,19 @@ input::-webkit-inner-spin-button {
     font-size: calc(1rem + 1.2vw);
   }
   .opportunity .mainContent .growthAnchors {
-    height: calc(100vh + 29%);
+    height: 48rem;
   }
   .opportunity .mainContent .growthAnchors #anchor2019, .opportunity .mainContent .growthAnchors #anchor2020, .opportunity .mainContent .growthAnchors #anchor2021, .opportunity .mainContent .growthAnchors #anchor2022 {
-    top: 20%;
+    top: 8%;
   }
   .opportunity .mainContent .growthAnchors #anchor2020 {
-    top: 40%;
+    top: 22%;
   }
   .opportunity .mainContent .growthAnchors #anchor2021 {
-    top: 56%;
+    top: 36%;
   }
   .opportunity .mainContent .growthAnchors #anchor2022 {
-    top: 73%;
+    top: 50%;
   }
   .opportunity .mainContent .dataSections {
     height: clamp(36rem, 100vh, 86rem);
