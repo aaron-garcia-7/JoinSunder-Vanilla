@@ -111,7 +111,7 @@ let backgroundTL = gsap.timeline({
     trigger: "#mainContent",
     scrub: 1,
     start: "10% 40%",
-    end: "100% 60%",
+    end: window.innerWidth > 480 ? "100% 60%" : "86% 60%",
   },
 });
 backgroundTL
@@ -150,48 +150,34 @@ backgroundTL
 gsap.to("#videoSection", {
   scrollTrigger: {
     trigger: "#videoSection",
-    // pin: true,
     pin: window.innerWidth > 480 ? true : false,
-    // scrub: true,
     scrub: window.innerWidth > 480 ? true : false,
     start: "top top",
-    // start: window.innerWidth > 480 ? "top top" : "top 20%",
     end: "bottom top",
-    // markers: true,
   },
 });
 gsap.to("#videoText1", {
   top: "28%",
   left: "28%",
-  // top: "20%",
-  // left: "20%",
   opacity: 0,
   scrollTrigger: {
     trigger: "#videoText1",
-    // scrub: true,
     scrub: window.innerWidth > 480 ? true : false,
     toggleActions: "play none none reverse",
     start: window.innerWidth > 480 ? "-60% top" : "center 46%",
-    end: window.innerWidth > 480 ? "200% top" : "center center",
-    // markers: true,
+    end: "200% top",
   },
 });
 gsap.to("#videoText2", {
-  // bottom: "28%",
-  // right: "28%",
   bottom: "20%",
   right: "20%",
   opacity: 0,
   scrollTrigger: {
     trigger: "#videoText1",
-    // scrub: true,
-    toggleActions: "play none none reverse",
     scrub: window.innerWidth > 480 ? true : false,
-    // start: "-60% top",
-    end: "200% top",
+    toggleActions: "play none none reverse",
     start: window.innerWidth > 480 ? "-60% top" : "center 46%",
-    // end: window.innerWidth > 480 ? "200% top" : "center center",
-    // markers: true,
+    end: "200% top",
   },
 });
 gsap.to(".videoFigure", {
@@ -202,39 +188,20 @@ gsap.to(".videoFigure", {
     trigger: "#videoText1",
     toggleActions: "play none none reverse",
     scrub: window.innerWidth > 480 ? true : false,
-    // start: "-20% top",
-    // end: "280% top",
     start: window.innerWidth > 480 ? "-20% top" : "center 46%",
-    end: window.innerWidth > 480 ? "280% top" : "center center",
-    // markers: true,
+    end: "280% top",
   },
 });
 
 gsap.to("#growth", {
   scrollTrigger: {
     trigger: "#growth",
-    pin: true,
-    scrub: true,
+    pin: window.innerWidth > 480 ? true : false,
+    scrub: window.innerWidth > 480 ? true : false,
     start: "top top",
-    // end: "480% 6%",
     end: "400% 6%",
-    // markers: true,
   },
 });
-
-gsap.to("#map", {
-  opacity: 1,
-  y: "-6%",
-  ease: "none",
-  scrollTrigger: {
-    trigger: "#growth",
-    scrub: true,
-    start: "top 75%",
-    end: "center center",
-    // markers: true,
-  },
-});
-
 gsap.to("#growthTitle", {
   opacity: 1,
   scrollTrigger: {
@@ -243,7 +210,6 @@ gsap.to("#growthTitle", {
     start: "top top",
   },
 });
-
 gsap.to("#growthTitleMobile", {
   opacity: 1,
   scrollTrigger: {
@@ -252,13 +218,24 @@ gsap.to("#growthTitleMobile", {
     start: "top top",
   },
 });
+gsap.to("#map", {
+  opacity: 1,
+  y: window.innerWidth > 480 ? "-6%" : "-36%",
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#growth",
+    scrub: true,
+    start: "top 75%",
+    end: "center center",
+  },
+});
 
 gsap.to("#compass", {
   opacity: 1,
   scrollTrigger: {
     trigger: "#growth",
     toggleActions: "play none none reverse",
-    start: "top top",
+    start: window.innerWidth > 480 ? "top top" : "top 16%",
   },
 });
 
@@ -267,7 +244,8 @@ gsap.to("#stateCount", {
   scrollTrigger: {
     trigger: "#growth",
     toggleActions: "play none none reverse",
-    start: "top top",
+    start: window.innerWidth > 480 ? "top top" : "top 16%",
+    // markers: true,
   },
 });
 
@@ -278,6 +256,7 @@ let stateCountTL = gsap.timeline({
     scrub: window.innerWidth > 480 ? true : false,
     start: window.innerWidth > 768 ? "20% 15%" : "-100% 15%",
     end: window.innerWidth > 768 ? "440% 15%" : "2600% 15%",
+    // markers: true,
   },
 });
 stateCountTL
@@ -334,7 +313,8 @@ gsap.to("#timelineBorder2", {
   scrollTrigger: {
     trigger: "#growth",
     toggleActions: "play none none reverse",
-    start: "top top",
+    // start: "top top",
+    start: window.innerWidth > 480 ? "top top" : "top 16%",
   },
 });
 
@@ -345,7 +325,8 @@ gsap.to(timelineLinksAppear, {
   scrollTrigger: {
     trigger: "#growth",
     toggleActions: "play none none reverse",
-    start: "top top",
+    // start: "top top",
+    start: window.innerWidth > 480 ? "top top" : "top 16%",
   },
 });
 

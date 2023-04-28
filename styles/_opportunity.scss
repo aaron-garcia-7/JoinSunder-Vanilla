@@ -417,7 +417,6 @@ $pending: #BCD0D7;
                     }
                 }
                 .stateCount {
-                    // border: 2px solid coral;
                     position: absolute;
                     bottom: 20%;
                     right: 6%;
@@ -1333,7 +1332,6 @@ $pending: #BCD0D7;
                         flex-direction: row;
                         justify-content: space-evenly;
                         align-items: center;
-                        // background: blue;
                         width: 68%;
                         &Border {
                             display: none;
@@ -1347,7 +1345,6 @@ $pending: #BCD0D7;
                             width: 0%;
                             height: 1px;
                             background: $sunderSnow;
-                            // border: 2px dashed white;
                         }
                     }
                 }
@@ -1361,31 +1358,20 @@ $pending: #BCD0D7;
                             }
                     .compass {
                         transform: translate(0, 1.6rem);
-                        // h5 {
-                        //     .circle {
-                        //         margin-right: 0.6rem;
-                        //     }
-                        // }
                     }
                     .stateCount {
-                        // border: 1px solid blue;
+                        border: 2px dashed coral;
                         bottom: auto;
                         top: 2.4rem;
                         right: calc(2rem + 4vw);
-                        // text-align: right;                
-                        // color: $sunderSnow;
-                        // opacity: 0;
-                        // display: none;
                             #numberContainer {
                             height: 1.6rem;
                         }
                         .number {
                             font-size: calc(1.2rem + 1.2vw);
-                            // font-weight: 450;
                         }
                         .title {
                             font-size: $M-Text;
-                            // font-weight: 400;
                         }
                     }
                 }
@@ -1579,9 +1565,7 @@ $pending: #BCD0D7;
                 }
             }
             .videoSection {
-                // border: 2px dashed yellow;
                 height: 60vh;
-                // height: 60dvh;
                 h2 {
                     font-size: $L-Text;
                 }
@@ -1598,7 +1582,8 @@ $pending: #BCD0D7;
                 // border: 2px dashed yellow;
                 height: 48rem;
                 .numberArea {
-                    transform: translate(0, -160%);
+                    // transform: translate(0, -160%);
+                    transform: translate(0, -220%);
                     .timeline {
                         justify-content: space-around;
                         width: 80%;
@@ -1614,9 +1599,13 @@ $pending: #BCD0D7;
                     .map {
                         width: clamp(12rem, 112%, 82rem);
                     }
+                    .compass {
+                        transform: translate(0, 0);
+                    }
                     .stateCount {
                         top: 4rem;
                         right: 2.4rem;
+                        z-index: 12;
                         #numberContainer {
                             height: 1.8rem;
                         }

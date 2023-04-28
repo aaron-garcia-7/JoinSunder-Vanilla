@@ -2902,6 +2902,7 @@ input::-webkit-inner-spin-button {
             transform: translate(0, 1.6rem);
   }
   .opportunity .mainContent .growth .mapArea .stateCount {
+    border: 2px dashed coral;
     bottom: auto;
     top: 2.4rem;
     right: calc(2rem + 4vw);
@@ -3078,8 +3079,8 @@ input::-webkit-inner-spin-button {
     height: 48rem;
   }
   .opportunity .mainContent .growth .numberArea {
-    -webkit-transform: translate(0, -160%);
-            transform: translate(0, -160%);
+    -webkit-transform: translate(0, -220%);
+            transform: translate(0, -220%);
   }
   .opportunity .mainContent .growth .numberArea .timeline {
     -ms-flex-pack: distribute;
@@ -3096,9 +3097,14 @@ input::-webkit-inner-spin-button {
   .opportunity .mainContent .growth .mapArea .map {
     width: clamp(12rem, 112%, 82rem);
   }
+  .opportunity .mainContent .growth .mapArea .compass {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
   .opportunity .mainContent .growth .mapArea .stateCount {
     top: 4rem;
     right: 2.4rem;
+    z-index: 12;
   }
   .opportunity .mainContent .growth .mapArea .stateCount #numberContainer {
     height: 1.8rem;
