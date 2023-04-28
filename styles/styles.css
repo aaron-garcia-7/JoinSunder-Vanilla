@@ -2660,9 +2660,6 @@ input::-webkit-inner-spin-button {
   .opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption .position, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption .position {
     font-size: calc(0.8rem + 1vw);
   }
-  .opportunity .mainContent .quoteSection .quote1 .quoteWrapper, .opportunity .mainContent .quoteSection .quote2 .quoteWrapper {
-    width: 42%;
-  }
   .opportunity .mainContent .quoteSection .quote1 .quoteWrapper > *, .opportunity .mainContent .quoteSection .quote2 .quoteWrapper > * {
     padding-left: 0;
   }
@@ -2902,7 +2899,6 @@ input::-webkit-inner-spin-button {
             transform: translate(0, 1.6rem);
   }
   .opportunity .mainContent .growth .mapArea .stateCount {
-    border: 2px dashed coral;
     bottom: auto;
     top: 2.4rem;
     right: calc(2rem + 4vw);
@@ -3032,8 +3028,17 @@ input::-webkit-inner-spin-button {
     -webkit-transform: translate(24%, 0);
             transform: translate(24%, 0);
   }
+  .opportunity .mainContent .quoteSection {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .opportunity .mainContent .quoteSection .quote1, .opportunity .mainContent .quoteSection .quote2 {
+    padding: 0;
+    margin: 0 0.8rem;
+  }
   .opportunity .mainContent .quoteSection .quote1 .imgWrapper, .opportunity .mainContent .quoteSection .quote2 .imgWrapper {
-    padding: calc(2.8rem + 10vw);
+    padding: calc(2.8rem + 8vw);
     border-radius: 1.2rem;
   }
   .opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption {
@@ -3050,6 +3055,9 @@ input::-webkit-inner-spin-button {
   .opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption .position, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption .position {
     font-size: calc(0.6rem + 0.3vw);
   }
+  .opportunity .mainContent .quoteSection .quote1 .quoteWrapper, .opportunity .mainContent .quoteSection .quote2 .quoteWrapper {
+    width: 54%;
+  }
   .opportunity .mainContent .quoteSection .quote1 .quoteWrapper .quote, .opportunity .mainContent .quoteSection .quote2 .quoteWrapper .quote {
     font-size: 12px;
     margin-bottom: 0;
@@ -3058,6 +3066,9 @@ input::-webkit-inner-spin-button {
     font-size: 12px;
     padding-top: 0.4rem;
     padding-bottom: 0.4rem;
+  }
+  .opportunity .mainContent .cardsSection {
+    padding: 0 0.8rem;
   }
   .opportunity .mainContent .cardsSection .repCard {
     height: 76%;
@@ -3094,6 +3105,9 @@ input::-webkit-inner-spin-button {
   .opportunity .mainContent .growth .numberArea .timelineLinks {
     padding: 0.2rem 0.8rem;
   }
+  .opportunity .mainContent .growth .mapArea {
+    position: relative;
+  }
   .opportunity .mainContent .growth .mapArea .map {
     width: clamp(12rem, 112%, 82rem);
   }
@@ -3102,18 +3116,25 @@ input::-webkit-inner-spin-button {
             transform: translate(0, 0);
   }
   .opportunity .mainContent .growth .mapArea .stateCount {
-    top: 4rem;
-    right: 2.4rem;
-    z-index: 12;
+    display: none;
   }
-  .opportunity .mainContent .growth .mapArea .stateCount #numberContainer {
-    height: 1.8rem;
+  .opportunity .mainContent .growth .mapArea .stateCountMobile {
+    position: absolute;
+    top: 2.4rem;
+    right: -1.2rem;
+    text-align: right;
+    line-height: 140%;
+    opacity: 0;
   }
-  .opportunity .mainContent .growth .mapArea .stateCount .number {
-    font-size: calc(1.4rem + 1.4vw);
+  .opportunity .mainContent .growth .mapArea .stateCountMobile #stateNumberMobile {
+    color: #f7f7f7;
+    font-family: "monument", sans-serif;
+    font-size: calc(1.6rem + 1.6vw);
   }
-  .opportunity .mainContent .growth .mapArea .stateCount .title {
+  .opportunity .mainContent .growth .mapArea .stateCountMobile .titleMobile {
+    color: #f7f7f7;
     font-size: calc(1rem + 1.2vw);
+    font-weight: 400;
   }
   .opportunity .mainContent .growth .mobileTitle {
     top: 4rem;

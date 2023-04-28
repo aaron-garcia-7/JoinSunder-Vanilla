@@ -1120,7 +1120,6 @@ $pending: #BCD0D7;
                         }
                     }
                     .quoteWrapper {
-                        width: 42%;
                         > * {
                             padding-left: 0;
                         }
@@ -1360,7 +1359,7 @@ $pending: #BCD0D7;
                         transform: translate(0, 1.6rem);
                     }
                     .stateCount {
-                        border: 2px dashed coral;
+                        // border: 2px dashed coral;
                         bottom: auto;
                         top: 2.4rem;
                         right: calc(2rem + 4vw);
@@ -1528,9 +1527,12 @@ $pending: #BCD0D7;
                 }
             }
             .quoteSection {
+                justify-content: space-between;
                 .quote1 {
+                    padding: 0;
+                    margin: 0 0.8rem;
                     .imgWrapper {
-                        padding: calc(2.8rem + 10vw);
+                        padding: calc(2.8rem + 8vw);
                         border-radius: 1.2rem;
                         .imgCaption {
                             padding: 0.6rem;
@@ -1547,6 +1549,7 @@ $pending: #BCD0D7;
                         }
                     }
                     .quoteWrapper {
+                        width: 54%;
                         .quote {
                             font-size: 12px;
                             margin-bottom: 0;
@@ -1560,6 +1563,7 @@ $pending: #BCD0D7;
                 }
             }
             .cardsSection {
+                padding: 0 0.8rem;
                 .repCard {
                     height: 76%;
                 }
@@ -1596,24 +1600,33 @@ $pending: #BCD0D7;
                     }
                 }
                 .mapArea {
+                    position: relative;
                     .map {
+                        // border: 2px dashed yellow;
                         width: clamp(12rem, 112%, 82rem);
                     }
                     .compass {
                         transform: translate(0, 0);
                     }
                     .stateCount {
-                        top: 4rem;
-                        right: 2.4rem;
-                        z-index: 12;
-                        #numberContainer {
-                            height: 1.8rem;
+                        display: none;
+                    }
+                    .stateCountMobile {
+                        position: absolute;
+                        top: 2.4rem;
+                        right: -1.2rem;
+                        text-align: right;
+                        line-height: 140%;
+                        opacity: 0;
+                        #stateNumberMobile {
+                            color: $sunderSnow;
+                            font-family: $monument;
+                            font-size: calc(1.6rem + 1.6vw);
                         }
-                        .number {
-                            font-size: calc(1.4rem + 1.4vw);
-                        }
-                        .title {
+                        .titleMobile {
+                            color: $sunderSnow;
                             font-size: $L-Text;
+                            font-weight: 400;
                         }
                     }
                 }

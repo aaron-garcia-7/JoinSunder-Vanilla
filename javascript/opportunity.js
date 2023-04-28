@@ -276,28 +276,36 @@ stateCountTL
     y: window.innerWidth > 768 ? "-400%" : "-412%",
   });
 
-// const staggerNumbers = () => {
-//   // let stateNumber = document.querySelector("#stateNumber");
-//   // var startCount = 7,
-//   //   stateNum = { var: startCount };
+gsap.to("#stateCountMobile", {
+  opacity: 1,
+  scrollTrigger: {
+    trigger: "#growth",
+    toggleActions: "play none none reverse",
+    start: "top 16%",
+    // markers: true,
+  },
+});
 
-//   // const changeNumber = () => {
-//   //   stateNumber.innerHTML = stateNum.var.toFixed();
-//   // };
-
-//   // gsap
-//   //   .timeline({
-//   //     scrollTrigger: {
-//   //       trigger: "#map",
-//   //       scrub: true,
-//   //       start: "120% top",
-//   //       end: "800% top",
-//   //       markers: true,
-//   //     },
-//   //   })
-//   //   .to(stateNum, { var: 30, duration: 5, ease: "none", onUpdate: changeNumber })
-//   //   .to({}, { duration: 2 });
-// }
+gsap.from("#stateNumberMobile", {
+  textContent: 0,
+  duration: 1.6,
+  ease: "power1.in",
+  snap: { textContent: 1 },
+  stagger: {
+    each: 1.0,
+    // onUpdate: function () {
+    //   this.targets()[0].innerHTML = numberWithCommas(
+    //     Math.ceil(this.targets()[0].textContent)
+    //   );
+    // },
+  },
+  scrollTrigger: {
+    trigger: "#map",
+    toggleActions: "play none none reverse",
+    start: "top center",
+    // markers: true,
+  },
+});
 
 gsap.to("#timelineBorder", {
   height: "120%",
