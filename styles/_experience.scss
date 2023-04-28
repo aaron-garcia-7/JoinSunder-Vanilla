@@ -95,11 +95,13 @@
         .mySwiper {
             // border: 2px dashed coral;
             width: 96vw;
-            height: 100vh;
-            // min-height: 36rem;
-            min-height: 48rem;
-            margin: 4rem 0;
+            height: 78vh;
+            min-height: 36rem;
+            margin: 4rem 0 8rem 0;
+            // opacity: 0;
+            // animation: appear 0.4s ease 0.8s forwards;
             .swiper-wrapper {
+                // background: lightcoral;
                 height: 94%;
                 &:hover {
                     cursor: grab;
@@ -133,8 +135,7 @@
                         top: 1.2rem;
                         right: 1.2rem;
                         z-index: 2;
-                        // width: calc(1.2rem + 1vw);
-                        width: calc(1.6rem + 1.6vw);
+                        width: calc(1.2rem + 1vw);
                     }
                     .details {
                         // border: 2px dashed coral;
@@ -167,7 +168,6 @@
                 }
             }
             .swiper-pagination {
-                // background: red;
                 width: auto;
                 display: flex;
                 justify-content: center;
@@ -198,25 +198,13 @@
     }
 }
 
-
-@media (max-width: 1248px) {
+@media (max-width: 1440px) {
     .experience {
         .mainContent {
-            .reel {
-                .columnOuter {
-                    width: 33%;
-                }
-            }
-            .reel-lg {
-                display: none;
-            }
-            .reel-md {
-                display: flex;
-            }
-
             .mySwiper {
-                height: 96vh;
-                min-height: 36rem;
+                height: 74vh;
+                min-height: 24rem;
+                margin: 4rem 0 6rem 0;
                 .swiper-wrapper {
                     .swiper-slide {
                         .details {
@@ -233,6 +221,45 @@
                     }
                 }
             }
+        }
+    }
+}
+
+
+@media (max-width: 1248px) {
+    .experience {
+        .mainContent {
+            .reel {
+                .columnOuter {
+                    width: 33%;
+                }
+            }
+            .reel-lg {
+                display: none;
+            }
+            .reel-md {
+                display: flex;
+            }
+
+            // .mySwiper {
+            //     height: 96vh;
+            //     min-height: 36rem;
+            //     .swiper-wrapper {
+            //         .swiper-slide {
+            //             .details {
+            //                 height: 18%;
+            //                 padding-left: 0.6rem;
+            //             }
+            //         }
+            //     }
+            //     .swiper-pagination {
+            //         gap: 0;
+            //         &-bullet {
+            //             width: 12px;
+            //             height: 12px;
+            //         }
+            //     }
+            // }
         }
     }
 }
@@ -264,7 +291,9 @@
             }
 
             .mySwiper {
-                height: 92vh;
+                // width: 90vw;
+                height: 72vh;
+                transform: translate(0, 2%);
                 .swiper-wrapper {
                     height: 92%;
                 }

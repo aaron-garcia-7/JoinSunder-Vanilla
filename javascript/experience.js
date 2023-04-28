@@ -77,15 +77,19 @@ activePage.addEventListener("click", closeNav);
 // Swiper Carousel Logic
 //
 
-var swiper = new Swiper(".mySwiper", {
+let swiper = new Swiper(".mySwiper", {
   slidesPerView: 2, // use breakpoints below
-  spaceBetween: 12,
+  spaceBetween: 20,
   loop: true,
   // centeredSlides: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
+  // navigation: {
+  //   nextEl: ".swiper-button-next",
+  //   prevEl: ".swiper-button-prev",
+  // },
   autoplay: {
     delay: 6000,
     disableOnInteraction: false,
@@ -97,6 +101,10 @@ var swiper = new Swiper(".mySwiper", {
     },
     856: {
       slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1248: {
+      slidesPerView: 4,
       spaceBetween: 20,
     },
   },
@@ -164,14 +172,14 @@ let allPosters = document.querySelectorAll(".poster");
 
 allPosters.forEach((obj, index) => {
   obj.addEventListener("click", () => {
-    // console.log(`clicked on poster ${index}`);
-    videoElement.src = `./assets/promo${index}.mp4`;
+    console.log(`clicked on poster ${index + 1}`);
+    videoElement.src = `./assets/vid${index + 1}.mp4`;
     toggleVideo();
   });
   obj.addEventListener("keydown", (e) => {
     // console.log(e);
     if (e.code === "Enter") {
-      videoElement.src = `./assets/promo${index}.mp4`;
+      videoElement.src = `./assets/vid${index + 1}.mp4`;
       toggleVideo();
     }
   });

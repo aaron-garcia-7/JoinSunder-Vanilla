@@ -150,10 +150,12 @@ backgroundTL
 gsap.to("#videoSection", {
   scrollTrigger: {
     trigger: "#videoSection",
-    pin: true,
-    scrub: true,
-    // start: "top top",
-    start: window.innerWidth > 480 ? "top top" : "top 20%",
+    // pin: true,
+    pin: window.innerWidth > 480 ? true : false,
+    // scrub: true,
+    scrub: window.innerWidth > 480 ? true : false,
+    start: "top top",
+    // start: window.innerWidth > 480 ? "top top" : "top 20%",
     end: "bottom top",
     // markers: true,
   },
@@ -166,9 +168,11 @@ gsap.to("#videoText1", {
   opacity: 0,
   scrollTrigger: {
     trigger: "#videoText1",
-    scrub: true,
-    start: "-60% top",
-    end: "200% top",
+    // scrub: true,
+    scrub: window.innerWidth > 480 ? true : false,
+    toggleActions: "play none none reverse",
+    start: window.innerWidth > 480 ? "-60% top" : "center 46%",
+    end: window.innerWidth > 480 ? "200% top" : "center center",
     // markers: true,
   },
 });
@@ -180,19 +184,29 @@ gsap.to("#videoText2", {
   opacity: 0,
   scrollTrigger: {
     trigger: "#videoText1",
-    scrub: true,
-    start: "-60% top",
+    // scrub: true,
+    toggleActions: "play none none reverse",
+    scrub: window.innerWidth > 480 ? true : false,
+    // start: "-60% top",
     end: "200% top",
+    start: window.innerWidth > 480 ? "-60% top" : "center 46%",
+    // end: window.innerWidth > 480 ? "200% top" : "center center",
+    // markers: true,
   },
 });
 gsap.to(".videoFigure", {
   scale: 1,
   opacity: 1,
+  delay: window.innerWidth > 480 ? null : 0.4,
   scrollTrigger: {
     trigger: "#videoText1",
-    scrub: true,
-    start: "-20% top",
-    end: "280% top",
+    toggleActions: "play none none reverse",
+    scrub: window.innerWidth > 480 ? true : false,
+    // start: "-20% top",
+    // end: "280% top",
+    start: window.innerWidth > 480 ? "-20% top" : "center 46%",
+    end: window.innerWidth > 480 ? "280% top" : "center center",
+    // markers: true,
   },
 });
 
