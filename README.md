@@ -1,3 +1,3 @@
-This is the build for Join Sunder
+This is the full build for Join Sunder. 
 
 https://joinsunder.com
