@@ -1769,15 +1769,15 @@ input::-webkit-inner-spin-button {
 .opportunity .mainContent .videoSection .text1 {
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-89%, -75%);
-          transform: translate(-89%, -75%);
+  -webkit-transform: translate(-87%, -75%);
+          transform: translate(-87%, -75%);
 }
 
 .opportunity .mainContent .videoSection .text2 {
   bottom: 50%;
   right: 50%;
-  -webkit-transform: translate(89%, 75%);
-          transform: translate(89%, 75%);
+  -webkit-transform: translate(87%, 75%);
+          transform: translate(87%, 75%);
   text-align: right;
 }
 
@@ -1910,6 +1910,10 @@ input::-webkit-inner-spin-button {
   opacity: 0;
   border-radius: 4rem;
   padding: 0.4rem 1.2rem;
+}
+
+.opportunity .mainContent .growth .numberArea .timeline p.timelineLinks {
+  display: none;
 }
 
 .opportunity .mainContent .growth .mapArea {
@@ -2238,29 +2242,29 @@ input::-webkit-inner-spin-button {
 }
 
 .opportunity .mainContent .kwInstalled .lineGraph .line .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .burgerContainer .burger .lineCross .pathActive, .burgerContainer .burger .opportunity .mainContent .kwInstalled .lineGraph .lineCross .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .burgerContainer .burger .line5 .pathActive, .burgerContainer .burger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .videoContainer .closeVideoBurger .lineCross .pathActive, .videoContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .lineCross .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .videoContainer .closeVideoBurger .line5 .pathActive, .videoContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive {
-  -webkit-animation: drawPath-1 1.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
-  animation: drawPath-1 1.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
+  -webkit-animation: animate-svg-stroke-1 1.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
+  animation: animate-svg-stroke-1 1.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
 }
 
-@-webkit-keyframes drawPath-1 {
+@-webkit-keyframes animate-svg-stroke-1 {
   0% {
-    stroke-dashoffset: 1521.593505859375px;
-    stroke-dasharray: 1521.593505859375px;
+    stroke-dashoffset: 1470.5576171875px;
+    stroke-dasharray: 1470.5576171875px;
   }
   100% {
-    stroke-dashoffset: 0;
-    stroke-dasharray: 1521.593505859375px;
+    stroke-dashoffset: 2941.115234375px;
+    stroke-dasharray: 1470.5576171875px;
   }
 }
 
-@keyframes drawPath-1 {
+@keyframes animate-svg-stroke-1 {
   0% {
-    stroke-dashoffset: 1521.593505859375px;
-    stroke-dasharray: 1521.593505859375px;
+    stroke-dashoffset: 1470.5576171875px;
+    stroke-dasharray: 1470.5576171875px;
   }
   100% {
-    stroke-dashoffset: 0;
-    stroke-dasharray: 1521.593505859375px;
+    stroke-dashoffset: 2941.115234375px;
+    stroke-dasharray: 1470.5576171875px;
   }
 }
 
@@ -2388,21 +2392,21 @@ input::-webkit-inner-spin-button {
 
 .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(1) {
   bottom: 12%;
-  left: -4%;
+  left: -5%;
 }
 
 .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(2) {
   bottom: 38%;
-  left: 26%;
+  left: 24%;
 }
 
 .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(3) {
   top: 22%;
-  right: 26%;
+  right: 30%;
 }
 
 .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(4) {
-  top: -16%;
+  top: -14%;
   right: -8%;
 }
 
@@ -2565,6 +2569,22 @@ input::-webkit-inner-spin-button {
   .opportunity .mainContent .growth .mapArea .stateCount #numberContainer {
     height: 6rem;
   }
+  .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(1) {
+    bottom: 16%;
+    left: -6%;
+  }
+  .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(2) {
+    bottom: 42%;
+    left: 20%;
+  }
+  .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(3) {
+    top: 14%;
+    right: 28%;
+  }
+  .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(4) {
+    top: -22%;
+    right: -8%;
+  }
 }
 
 @media (max-width: 1248px) {
@@ -2583,22 +2603,6 @@ input::-webkit-inner-spin-button {
   .opportunity .mainContent .salesForce .barGraph .bars .bar:nth-of-type(4) .barMultiplier {
     -webkit-transform: translate(-440%, 0);
             transform: translate(-440%, 0);
-  }
-  .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(1) {
-    bottom: 18%;
-    left: -6%;
-  }
-  .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(2) {
-    bottom: 44%;
-    left: 24%;
-  }
-  .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(3) {
-    top: 14%;
-    right: 26%;
-  }
-  .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(4) {
-    top: -24%;
-    right: -8%;
   }
 }
 
@@ -2749,12 +2753,12 @@ input::-webkit-inner-spin-button {
     width: calc(14rem + 14vw);
   }
   .opportunity .mainContent .videoSection .text1 {
-    -webkit-transform: translate(-78%, -75%);
-            transform: translate(-78%, -75%);
+    -webkit-transform: translate(-74%, -75%);
+            transform: translate(-74%, -75%);
   }
   .opportunity .mainContent .videoSection .text2 {
-    -webkit-transform: translate(78%, 75%);
-            transform: translate(78%, 75%);
+    -webkit-transform: translate(74%, 75%);
+            transform: translate(74%, 75%);
   }
   .opportunity .mainContent .videoSection .videoFigure {
     width: 80%;
@@ -3087,23 +3091,53 @@ input::-webkit-inner-spin-button {
     height: calc(12rem + 12vw);
   }
   .opportunity .mainContent .growth {
+    position: relative;
     height: 48rem;
   }
   .opportunity .mainContent .growth .numberArea {
-    -webkit-transform: translate(0, -220%);
-            transform: translate(0, -220%);
+    width: 86vw;
+    overflow: hidden;
+    -webkit-transform: translate(0, -260%);
+            transform: translate(0, -260%);
   }
   .opportunity .mainContent .growth .numberArea .timeline {
+    position: relative;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    width: 80%;
+    width: 100%;
+    -webkit-transform: translate(0, 200%);
+            transform: translate(0, 200%);
+  }
+  .opportunity .mainContent .growth .numberArea .timeline::before, .opportunity .mainContent .growth .numberArea .timeline::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    width: 42%;
+    height: 360%;
+  }
+  .opportunity .mainContent .growth .numberArea .timeline::before {
+    background: -webkit-gradient(linear, left top, right top, from(#000014), to(rgba(0, 0, 20, 0.2)));
+    background: linear-gradient(90deg, #000014, rgba(0, 0, 20, 0.2));
+    left: 0;
+  }
+  .opportunity .mainContent .growth .numberArea .timeline::after {
+    background: -webkit-gradient(linear, right top, left top, from(#000014), to(rgba(0, 0, 20, 0.2)));
+    background: linear-gradient(-90deg, #000014, rgba(0, 0, 20, 0.2));
+    right: 0;
   }
   .opportunity .mainContent .growth .numberArea .timelineBorder2 {
     -webkit-transform: translate(0, -2rem);
             transform: translate(0, -2rem);
   }
   .opportunity .mainContent .growth .numberArea .timelineLinks {
+    opacity: 1;
     padding: 0.2rem 0.8rem;
+    pointer-events: none;
+  }
+  .opportunity .mainContent .growth .numberArea .timeline p.timelineLinks {
+    display: block;
   }
   .opportunity .mainContent .growth .mapArea {
     position: relative;
@@ -3137,8 +3171,8 @@ input::-webkit-inner-spin-button {
     font-weight: 400;
   }
   .opportunity .mainContent .growth .mobileTitle {
-    top: 4rem;
-    left: 2.4rem;
+    top: 2rem;
+    left: 1.6rem;
   }
   .opportunity .mainContent .growth .mobileTitle h2 {
     font-size: calc(1rem + 1.2vw);
@@ -3502,7 +3536,7 @@ input::-webkit-inner-spin-button {
 .experience .mainContent {
   background: #f7f7f7;
   width: 100vw;
-  padding-top: 1.6rem;
+  padding-top: 1.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3528,7 +3562,7 @@ input::-webkit-inner-spin-button {
 
 .experience .mainContent .reel {
   height: calc(75rem + 79vw);
-  width: 96vw;
+  width: 98vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3589,7 +3623,7 @@ input::-webkit-inner-spin-button {
 }
 
 .experience .mainContent .mySwiper {
-  width: 96vw;
+  width: 98vw;
   height: 78vh;
   min-height: 36rem;
   margin: 4rem 0 8rem 0;

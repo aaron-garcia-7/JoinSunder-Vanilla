@@ -17,7 +17,7 @@
     .mainContent {
         background: $sunderSnow;
         width: 100vw;
-        padding-top: 1.6rem;
+        padding-top: 1.2rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -52,7 +52,7 @@
         .reel {
             height: calc(75rem + 79vw); // Without the parallax, this height is responsive (ends at) the 2 & 4 column's sixth picture.
             // width: 100vw;
-            width: 96vw;
+            width: 98vw;
             display: flex;
             gap: 1.6rem;
             justify-content: space-between;
@@ -94,7 +94,7 @@
 
         .mySwiper {
             // border: 2px dashed coral;
-            width: 96vw;
+            width: 98vw;
             height: 78vh;
             min-height: 36rem;
             margin: 4rem 0 8rem 0;

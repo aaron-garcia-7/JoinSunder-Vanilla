@@ -244,12 +244,12 @@ $pending: #BCD0D7;
             .text1 {
                 top: 50%;
                 left: 50%;
-                transform: translate(-89%, -75%);
+                transform: translate(-87%, -75%);
             }
             .text2 {
                 bottom: 50%;
                 right: 50%;
-                transform: translate(89%, 75%);
+                transform: translate(87%, 75%);
                 text-align: right;
             }
             .videoFigure {
@@ -355,6 +355,9 @@ $pending: #BCD0D7;
                         border-radius: 4rem;
                         padding: 0.4rem 1.2rem;
                     }
+                    p.timelineLinks {
+                        display: none;
+                    }
                 }
             }
             .mapArea {
@@ -379,7 +382,7 @@ $pending: #BCD0D7;
                             //     fill: lightgoldenrodyellow;
                             // }
                         }
-                        // .UT {
+                        // .AZ {
                         //     fill: $pending;
                         //     fill: $active;
                         // }
@@ -614,31 +617,59 @@ $pending: #BCD0D7;
                 }
                 .line {
                     .pathActive {
-                        -webkit-animation: drawPath-1 1.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
-                                animation: drawPath-1 1.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
+                        -webkit-animation: animate-svg-stroke-1 1.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
+                                animation: animate-svg-stroke-1 1.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
                     }
-                    @-webkit-keyframes drawPath-1 {
+                    @-webkit-keyframes animate-svg-stroke-1 {
                         0% {
-                        stroke-dashoffset: 1521.593505859375px;
-                        stroke-dasharray: 1521.593505859375px;
+                        stroke-dashoffset: 1470.5576171875px;
+                        stroke-dasharray: 1470.5576171875px;
                         }
                     
                         100% {
-                        stroke-dashoffset: 0;
-                        stroke-dasharray: 1521.593505859375px;
+                        stroke-dashoffset: 2941.115234375px;
+                        stroke-dasharray: 1470.5576171875px;
                         }
                     }
-                    @keyframes drawPath-1 {
+                    
+                    @keyframes animate-svg-stroke-1 {
                         0% {
-                        stroke-dashoffset: 1521.593505859375px;
-                        stroke-dasharray: 1521.593505859375px;
+                        stroke-dashoffset: 1470.5576171875px;
+                        stroke-dasharray: 1470.5576171875px;
                         }
                     
                         100% {
-                        stroke-dashoffset: 0;
-                        stroke-dasharray: 1521.593505859375px;
+                        stroke-dashoffset: 2941.115234375px;
+                        stroke-dasharray: 1470.5576171875px;
                         }
                     }
+                    
+                    // .pathActive {
+                    //     -webkit-animation: drawPath-1 1.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
+                    //             animation: drawPath-1 1.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
+                    // }
+                    // @-webkit-keyframes drawPath-1 {
+                    //     0% {
+                    //     stroke-dashoffset: 1521.593505859375px;
+                    //     stroke-dasharray: 1521.593505859375px;
+                    //     }
+                    
+                    //     100% {
+                    //     stroke-dashoffset: 0;
+                    //     stroke-dasharray: 1521.593505859375px;
+                    //     }
+                    // }
+                    // @keyframes drawPath-1 {
+                    //     0% {
+                    //     stroke-dashoffset: 1521.593505859375px;
+                    //     stroke-dasharray: 1521.593505859375px;
+                    //     }
+                    
+                    //     100% {
+                    //     stroke-dashoffset: 0;
+                    //     stroke-dasharray: 1521.593505859375px;
+                    //     }
+                    // }
                 }
                 .points {
                     .point1Active {
@@ -802,18 +833,18 @@ $pending: #BCD0D7;
                         opacity: 0;
                         &:nth-of-type(1) {
                             bottom: 12%;
-                            left: -4%;
+                            left: -5%;
                         }
                         &:nth-of-type(2) {
                             bottom: 38%;
-                            left: 26%;
+                            left: 24%;
                         }
                         &:nth-of-type(3) {
                             top: 22%;
-                            right: 26%;
+                            right: 30%;
                         }
                         &:nth-of-type(4) {
-                            top: -16%;
+                            top: -14%;
                             right: -8%;
                         }
                     }
@@ -973,7 +1004,6 @@ $pending: #BCD0D7;
                     border-right: 1px solid $sunderMidnight;
                 }
             }
-
             .growth {
                 .numberArea {
                     width: 18%;
@@ -1005,6 +1035,30 @@ $pending: #BCD0D7;
                     }
                 }
             }
+            .kwInstalled {
+                .lineGraph {
+                    .kwData {
+                        .dataPiece {
+                            &:nth-of-type(1) {
+                                bottom: 16%;
+                                left: -6%;
+                            }
+                            &:nth-of-type(2) {
+                                bottom: 42%;
+                                left: 20%;
+                            }
+                            &:nth-of-type(3) {
+                                top: 14%;
+                                right: 28%;
+                            }
+                            &:nth-of-type(4) {
+                                top: -22%;
+                                right: -8%;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -1028,30 +1082,6 @@ $pending: #BCD0D7;
                                 .barMultiplier {
                                     transform: translate(-440%, 0);
                                 }
-                            }
-                        }
-                    }
-                }
-            }
-            .kwInstalled {
-                .lineGraph {
-                    .kwData {
-                        .dataPiece {
-                            &:nth-of-type(1) {
-                                bottom: 18%;
-                                left: -6%;
-                            }
-                            &:nth-of-type(2) {
-                                bottom: 44%;
-                                left: 24%;
-                            }
-                            &:nth-of-type(3) {
-                                top: 14%;
-                                right: 26%;
-                            }
-                            &:nth-of-type(4) {
-                                top: -24%;
-                                right: -8%;
                             }
                         }
                     }
@@ -1207,10 +1237,10 @@ $pending: #BCD0D7;
                     width: calc(14rem + 14vw);
                 }
                 .text1 {
-                    transform: translate(-78%, -75%);
+                    transform: translate(-74%, -75%);
                 }
                 .text2 {
-                    transform: translate(78%, 75%);
+                    transform: translate(74%, 75%);
                 }
                 .videoFigure {
                     width: 80%;
@@ -1375,6 +1405,7 @@ $pending: #BCD0D7;
                     }
                 }
                 .mobileTitle {
+                    // border: 2px dashed coral;
                     display: block;
                     position: absolute;
                     top: 2.4rem;
@@ -1584,18 +1615,47 @@ $pending: #BCD0D7;
             }
             .growth {
                 // border: 2px dashed yellow;
+                position: relative;
                 height: 48rem;
                 .numberArea {
+                    // border: 1px solid yellow;
+                    width: 86vw;
+                    overflow: hidden;
                     // transform: translate(0, -160%);
-                    transform: translate(0, -220%);
+                    transform: translate(0, -260%);
                     .timeline {
+                        // background: blue;
+                        position: relative;
                         justify-content: space-around;
-                        width: 80%;
+                        width: 100%;
+                        transform: translate(0, 200%);
+                        &::before,
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            transform: translate(0, -50%);
+                            width: 42%;
+                            height: 360%;
+                        }
+                        &::before {
+                            background: linear-gradient(90deg, $sunderMidnight, rgba($sunderMidnight, 0.2));
+                            left: 0;
+                        }
+                        &::after {
+                            background: linear-gradient(-90deg, $sunderMidnight, rgba($sunderMidnight, 0.2));
+                            right: 0;
+                        }
                         &Border2 {
                             transform: translate(0, -2rem);
                         }
                         &Links {
+                            opacity: 1;
                             padding: 0.2rem 0.8rem;
+                            pointer-events: none;
+                        }
+                        p.timelineLinks {
+                            display: block;
                         }
                     }
                 }
@@ -1631,8 +1691,9 @@ $pending: #BCD0D7;
                     }
                 }
                 .mobileTitle {
-                    top: 4rem;
-                    left: 2.4rem;
+                    // top: 4rem;
+                    top: 2rem;
+                    left: 1.6rem;
                     h2 {
                         font-size: $L-Text;
                     }

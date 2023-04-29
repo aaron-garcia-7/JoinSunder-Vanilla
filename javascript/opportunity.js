@@ -111,7 +111,9 @@ let backgroundTL = gsap.timeline({
     trigger: "#mainContent",
     scrub: 1,
     start: "10% 40%",
-    end: window.innerWidth > 480 ? "100% 60%" : "86% 60%",
+    // end: window.innerWidth > 480 ? "100% 60%" : "86% 60%",
+    end: window.innerWidth > 480 ? "100% 60%" : "76% 60%",
+    // markers: true,
   },
 });
 backgroundTL
@@ -215,7 +217,7 @@ gsap.to("#growthTitleMobile", {
   scrollTrigger: {
     trigger: "#growth",
     toggleActions: "play none none reverse",
-    start: "top top",
+    start: window.innerWidth > 480 ? "top top" : "top 16%",
   },
 });
 gsap.to("#map", {
@@ -229,7 +231,6 @@ gsap.to("#map", {
     end: "center center",
   },
 });
-
 gsap.to("#compass", {
   opacity: 1,
   scrollTrigger: {
@@ -238,7 +239,6 @@ gsap.to("#compass", {
     start: window.innerWidth > 480 ? "top top" : "top 16%",
   },
 });
-
 gsap.to("#stateCount", {
   opacity: 1,
   scrollTrigger: {
@@ -248,7 +248,6 @@ gsap.to("#stateCount", {
     // markers: true,
   },
 });
-
 let stateCount = gsap.utils.toArray(".number");
 let stateCountTL = gsap.timeline({
   scrollTrigger: {
@@ -256,7 +255,6 @@ let stateCountTL = gsap.timeline({
     scrub: window.innerWidth > 480 ? true : false,
     start: window.innerWidth > 768 ? "20% 15%" : "-100% 15%",
     end: window.innerWidth > 768 ? "440% 15%" : "2600% 15%",
-    // markers: true,
   },
 });
 stateCountTL
@@ -275,7 +273,6 @@ stateCountTL
   .to(stateCount, {
     y: window.innerWidth > 768 ? "-400%" : "-412%",
   });
-
 gsap.to("#stateCountMobile", {
   opacity: 1,
   scrollTrigger: {
@@ -288,8 +285,9 @@ gsap.to("#stateCountMobile", {
 
 gsap.from("#stateNumberMobile", {
   textContent: 0,
-  duration: 1.6,
-  ease: "power1.in",
+  // duration: 1.6,
+  duration: 2.8,
+  ease: "power1.out",
   snap: { textContent: 1 },
   stagger: {
     each: 1.0,
@@ -329,7 +327,8 @@ gsap.to("#timelineBorder2", {
 let timelineLinksAppear = gsap.utils.toArray(".timelineLinks");
 gsap.to(timelineLinksAppear, {
   opacity: 1,
-  stagger: 0.1,
+  // stagger: 0.1,
+  stagger: window.innerWidth > 480 ? 0.1 : null,
   scrollTrigger: {
     trigger: "#growth",
     toggleActions: "play none none reverse",
@@ -375,8 +374,10 @@ gsap.to(states2019, {
   fill: "#4693D4",
   scrollTrigger: {
     trigger: "#numberArea",
-    scrub: true,
-    start: "40% 15%",
+    scrub: window.innerWidth > 480 ? true : false,
+    toggleActions: "play none none reverse",
+    // start: "40% 15%",
+    start: window.innerWidth > 480 ? "40% 15%" : "top 94%",
     end: window.innerWidth > 768 ? "60% 15%" : "200% 15%",
     // markers: true,
   },
@@ -384,16 +385,13 @@ gsap.to(states2019, {
 
 let pending2019 = gsap.utils.toArray(".pend2019");
 let pending2019TL = gsap.timeline({
+  delay: 0.2,
   scrollTrigger: {
     trigger: "#numberArea",
-    scrub: true,
-    start: "40% 15%",
+    scrub: window.innerWidth > 480 ? true : false,
+    toggleActions: "play none none reverse",
+    start: window.innerWidth > 480 ? "40% 15%" : "top 94%",
     end: window.innerWidth > 768 ? "150% 15%" : "800% 15%",
-    // markers: {
-    //   indent: 84,
-    //   startColor: "lightblue",
-    //   endColor: "lightblue",
-    // },
   },
 });
 pending2019TL
@@ -412,12 +410,18 @@ pending2019TL
 
 let pending2020 = gsap.utils.toArray(".pend2020");
 let pending2020TL = gsap.timeline({
+  delay: 0.4,
   scrollTrigger: {
     trigger: "#numberArea",
-    scrub: true,
-    start: window.innerWidth > 768 ? "120% 15%" : "600% 15%",
+    scrub: window.innerWidth > 480 ? true : false,
+    toggleActions: "play none none reverse",
+    start:
+      window.innerWidth > 768
+        ? "120% 15%"
+        : window.innerWidth <= 768 && window.innerWidth > 480
+        ? "600% 15%"
+        : "top 94%",
     end: window.innerWidth > 768 ? "230% 15%" : "1300% 15%",
-    // markers: true,
   },
 });
 pending2020TL
@@ -436,16 +440,18 @@ pending2020TL
 
 let pending2021 = gsap.utils.toArray(".pend2021");
 let pending2021TL = gsap.timeline({
+  delay: 0.8,
   scrollTrigger: {
     trigger: "#numberArea",
-    scrub: true,
-    start: window.innerWidth > 768 ? "200% 15%" : "1100% 15%",
+    scrub: window.innerWidth > 480 ? true : false,
+    toggleActions: "play none none reverse",
+    start:
+      window.innerWidth > 768
+        ? "200% 15%"
+        : window.innerWidth <= 768 && window.innerWidth > 480
+        ? "1100% 15%"
+        : "top 94%",
     end: window.innerWidth > 768 ? "310% 15%" : "1800% 15%",
-    // markers: {
-    //   indent: 84,
-    //   startColor: "lightblue",
-    //   endColor: "lightblue",
-    // },
   },
 });
 pending2021TL
@@ -464,10 +470,17 @@ pending2021TL
 
 let pending2022 = gsap.utils.toArray(".pend2022");
 let pending2022TL = gsap.timeline({
+  delay: 1.2,
   scrollTrigger: {
     trigger: "#numberArea",
-    scrub: true,
-    start: window.innerWidth > 768 ? "280% 15%" : "1600% 15%",
+    scrub: window.innerWidth > 480 ? true : false,
+    toggleActions: "play none none reverse",
+    start:
+      window.innerWidth > 768
+        ? "280% 15%"
+        : window.innerWidth <= 768 && window.innerWidth > 480
+        ? "1600% 15%"
+        : "top 94%",
     end: window.innerWidth > 768 ? "390% 15%" : "2300% 15%",
   },
 });
@@ -485,12 +498,6 @@ pending2022TL
 //   fill: "#4693D4", // Add this IF the state becomes active
 // });
 
-// gsap.to(".salesForce", {
-//   scrollTrigger: {
-//     trigger: ".salesForce",
-//     snap: 0.5,
-//   },
-// });
 gsap.to("#salesForceTitle", {
   // y: window.innerWidth > 768 ? "110vh" : "84vh",
   y:
@@ -520,9 +527,9 @@ let graph1YearsTl = gsap.timeline({
   },
 });
 graph1YearsTl
-  .to("#bar2019", { height: "25%" }, 0)
-  .to("#bar2020", { height: "50%" }, 0.1)
-  .to("#bar2021", { height: "75%" }, 0.2)
+  .to("#bar2019", { height: "3.33%" }, 0)
+  .to("#bar2020", { height: "33.33%" }, 0.1)
+  .to("#bar2021", { height: "69.99%" }, 0.2)
   .to("#bar2022", { height: "100%" }, 0.3);
 
 let graph1Multipliers = gsap.utils.toArray(".barMultiplier");
@@ -709,6 +716,6 @@ setInterval(function () {
   }
 }, 1000);
 
-window.onbeforeunload = () => {
-  window.scrollTo(0, 0);
-};
+// window.onbeforeunload = () => {
+//   window.scrollTo(0, 0);
+// };
