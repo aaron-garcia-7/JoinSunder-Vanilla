@@ -66,6 +66,8 @@ $S-Text: calc(0.8rem + 0.4vw);
 $XS-Text: calc(0.6rem + 0.3vw);
 
 $nav-shift: translate(0, -50vh);
+$nav-transition: 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
+// $nav-transition: 0.6s cubic-bezier(.52,.01,.42,.99) 0.06s;
 
 
 * {
@@ -131,8 +133,8 @@ input::-webkit-inner-spin-button {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    // transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.2s;
     transition: transform 0.4s cubic-bezier(.75,.15,.25,.85) 0.28s;
+    // transition: transform 0.12s cubic-bezier(.75,.15,.25,.85) 0.28s;
   }
   .logoLink {
     cursor: pointer;
@@ -146,6 +148,7 @@ input::-webkit-inner-spin-button {
     .logoImg {
       transform: translate(0, -112%);
       transition: transform 0.4s cubic-bezier(.75,.15,.25,.85) 0.12s;
+      // transition: transform 0.12s cubic-bezier(.75,.15,.25,.85) 0.12s;
     }
   }
 }
@@ -245,7 +248,7 @@ input::-webkit-inner-spin-button {
   display: flex;
   justify-content: center;
   overflow: hidden;
-  transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
+  transition: transform $nav-transition;
   .navSlider {
     // border: 2px solid black;
     width: 280%;
@@ -349,12 +352,14 @@ input::-webkit-inner-spin-button {
     object-fit: cover;
     transform: translate(0, 124%);
     transition: 0.4s cubic-bezier(.75,.15,.25,.85) 0s;
+    // transition: 0.12s cubic-bezier(.75,.15,.25,.85) 0s;
   }
   &Active {
     pointer-events: all;
     img {
       transform: translate(0, 0);
       transition: 0.4s cubic-bezier(.75,.15,.25,.85) 0.28s;
+      // transition: 0.12s cubic-bezier(.75,.15,.25,.85) 0.28s;
     }
   }
 }
@@ -599,6 +604,7 @@ input::-webkit-inner-spin-button {
   .nav {
     height: 58vh;
     // height: 50vh;
+    // NOT TO BE CONFUSED WITH NAVSLIDER // MOBILE VS DESKTOP
     .navSwiper {
       // border: 2px dashed coral;
       display: block;
@@ -613,7 +619,6 @@ input::-webkit-inner-spin-button {
       align-items: center;
       overflow: scroll;
       transform: translate(0, 2vw);
-      transition: transform 0.6s cubic-bezier(.75,.15,.25,.85), opacity 0.6s ease;
       z-index: -1;
       -ms-overflow-style: none;
       scrollbar-width: none;

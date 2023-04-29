@@ -19,7 +19,7 @@ $pending: #BCD0D7;
     .mainContent {
         position: relative;
         background: $sunderSnow;
-        transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
+        transition: transform $nav-transition;
 
         .header {
             // border: 2px dashed coral;
@@ -1637,12 +1637,15 @@ $pending: #BCD0D7;
                             transform: translate(0, -50%);
                             width: 42%;
                             height: 360%;
+                            z-index: 2;
                         }
                         &::before {
+                            // border: 1px solid lightcoral;
                             background: linear-gradient(90deg, $sunderMidnight, rgba($sunderMidnight, 0.2));
                             left: 0;
                         }
                         &::after {
+                            // border: 1px solid lightcoral;
                             background: linear-gradient(-90deg, $sunderMidnight, rgba($sunderMidnight, 0.2));
                             right: 0;
                         }
@@ -1650,12 +1653,14 @@ $pending: #BCD0D7;
                             transform: translate(0, -2rem);
                         }
                         &Links {
-                            opacity: 1;
+                            // opacity: 1;
                             padding: 0.2rem 0.8rem;
                             pointer-events: none;
+                            transform: translate(280%, 0);
                         }
                         p.timelineLinks {
                             display: block;
+                            transform: translate(280%, 0);
                         }
                     }
                 }

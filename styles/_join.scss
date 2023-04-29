@@ -23,7 +23,7 @@
         min-height: 48rem;
         display: flex;
         overflow: hidden;
-        transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
+        transition: transform $nav-transition;
 
         .leftSide {
             background: $sunderRoyalLight;

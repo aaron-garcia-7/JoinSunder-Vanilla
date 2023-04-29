@@ -814,10 +814,6 @@ input::-webkit-inner-spin-button {
     overflow: scroll;
     -webkit-transform: translate(0, 2vw);
             transform: translate(0, 2vw);
-    -webkit-transition: opacity 0.6s ease, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85);
-    transition: opacity 0.6s ease, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85);
-    transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85), opacity 0.6s ease;
-    transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85), opacity 0.6s ease, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85);
     z-index: -1;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -3116,6 +3112,7 @@ input::-webkit-inner-spin-button {
             transform: translate(0, -50%);
     width: 42%;
     height: 360%;
+    z-index: 2;
   }
   .opportunity .mainContent .growth .numberArea .timeline::before {
     background: -webkit-gradient(linear, left top, right top, from(#000014), to(rgba(0, 0, 20, 0.2)));
@@ -3132,12 +3129,15 @@ input::-webkit-inner-spin-button {
             transform: translate(0, -2rem);
   }
   .opportunity .mainContent .growth .numberArea .timelineLinks {
-    opacity: 1;
     padding: 0.2rem 0.8rem;
     pointer-events: none;
+    -webkit-transform: translate(280%, 0);
+            transform: translate(280%, 0);
   }
   .opportunity .mainContent .growth .numberArea .timeline p.timelineLinks {
     display: block;
+    -webkit-transform: translate(280%, 0);
+            transform: translate(280%, 0);
   }
   .opportunity .mainContent .growth .mapArea {
     position: relative;
@@ -3570,19 +3570,11 @@ input::-webkit-inner-spin-button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
-  transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
-  transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
-  transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
   overflow: hidden;
 }
 
 .experience .mainContent .reel .columnOuter {
   width: 25%;
-  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
-  transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
-  transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
-  transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
 }
 
 .experience .mainContent .reel .columnOuter .reelImg,
@@ -4108,19 +4100,11 @@ input::-webkit-inner-spin-button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
-  transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
-  transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
-  transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
   overflow: hidden;
 }
 
 .resources .mainContent .reel .columnOuter {
   width: 25%;
-  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
-  transition: -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
-  transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
-  transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s, -webkit-transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
 }
 
 .resources .mainContent .reel .columnOuter:nth-of-type(2), .resources .mainContent .reel .columnOuter:nth-of-type(4) {

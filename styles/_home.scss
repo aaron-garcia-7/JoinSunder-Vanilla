@@ -36,7 +36,7 @@
         left: calc(2rem + 4vw);
         transform: translate(0, -56%);
         // transform: translate(15%, -56%) scale(1.3); // For Nav Image Screenshot
-        transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
+        transition: transform $nav-transition;
         &Active {
           transform: translate(0, calc(-56% - 50vh));
         }
@@ -84,7 +84,7 @@
         top: 50vh;
         left: 0;
         transform: translate(36vw, -50%) scale(2);
-        transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
+        transition: transform $nav-transition;
         opacity: 1;
         pointer-events: none;
         h1 {
@@ -116,7 +116,7 @@
         top: calc(100% - 16vh);
         left: calc(2rem + 4vw);
         display: flex;
-        transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
+        transition: transform $nav-transition;
         opacity: 0;
         animation: appear 0.8s ease 1.8s forwards;
         -webkit-animation: appear 0.8s ease 1.8s forwards;
@@ -213,7 +213,7 @@
         justify-content: space-between;
         animation: changeBg 0.8s ease 0.2s forwards;
         -webkit-animation: changeBg 0.8s ease 0.2s forwards;
-        transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
+        transition: transform $nav-transition;
         overflow: hidden;
         animation: changeBg 0.6s ease 1.6s forwards;
         -webkit-animation: changeBg 0.6s ease 1.6s forwards;
@@ -222,7 +222,7 @@
         .col2 {
           width: 48%;
           opacity: 0;
-          transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
+          transition: transform $nav-transition;
           animation: appear 0.6s ease 1.7s forwards;
           -webkit-animation: appear 0.6s ease 1.7s forwards;
 
@@ -306,7 +306,8 @@
         justify-content: center;
         align-items: center;
         padding-top: 12rem;
-        transition: transform 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
+        transition: transform $nav-transition;
+        // transition: transform 0.6s ease 0.06s;
         .heroText {
           position: static;
           transform: translate(-25%, -40%);

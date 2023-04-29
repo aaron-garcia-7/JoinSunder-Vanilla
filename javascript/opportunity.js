@@ -326,9 +326,11 @@ gsap.to("#timelineBorder2", {
 
 let timelineLinksAppear = gsap.utils.toArray(".timelineLinks");
 gsap.to(timelineLinksAppear, {
+  x: "0",
   opacity: 1,
   // stagger: 0.1,
   stagger: window.innerWidth > 480 ? 0.1 : null,
+  duration: 2.4,
   scrollTrigger: {
     trigger: "#growth",
     toggleActions: "play none none reverse",
@@ -341,7 +343,8 @@ let linkHilightTL = gsap.timeline({
   scrollTrigger: {
     trigger: "#numberArea",
     scrub: true,
-    start: "40% 15%",
+    // start: "40% 15%",
+    start: window.innerWidth > 480 ? "40% 15%" : "200% top",
     end: window.innerWidth > 768 ? "400% 15%" : "2300% 15%",
     // markers: true,
   },
