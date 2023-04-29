@@ -1794,13 +1794,13 @@ $pending: #BCD0D7;
     }
 }
 
-@media (orientation: landscape) {
-    .opportunity {
-        .mainContent {
-            .growth {
-                display: none;
-            }
-        }
-    }
-  }
+// @media (max-width: 520) and (orientation: landscape) {
+//     .opportunity {
+//         .mainContent {
+//             .growth {
+//                 display: none;
+//             }
+//         }
+//     }
+//   }
   

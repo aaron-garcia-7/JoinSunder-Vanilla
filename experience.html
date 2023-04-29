@@ -300,7 +300,7 @@
                 <figure class="swiper-slide poster" tabindex="0">
                     <img src="./images/experiencePage/vid4.webp" alt="" class="videoPoster" loading="lazy">
                     <figcaption class="details">
-                        <h2 class="videoTitle">Sunder Dome Champions</h2>
+                        <!-- <h2 class="videoTitle">Sunder Dome Champions</h2> -->
                         <h3 class="videoDescription">Miami Florida 2022</h3>
                     </figcaption>
                     <img src="./images/graphics/playIcon.svg" alt="" class="playIcon">
@@ -316,7 +316,7 @@
                 <figure class="swiper-slide poster" tabindex="0">
                     <img src="./images/experiencePage/vid6.webp" alt="" class="videoPoster" loading="lazy">
                     <figcaption class="details">
-                        <h2 class="videoTitle">Rapid Sunder Champions</h2>
+                        <!-- <h2 class="videoTitle">Rapid Sunder Champions</h2> -->
                         <h3 class="videoDescription">Pirates Cove 2022</h3>
                     </figcaption>
                     <img src="./images/graphics/playIcon.svg" alt="" class="playIcon">
@@ -348,7 +348,7 @@
             <video src="" id="videoElement" preload="none" controls></video>
         </div>
         <div class="closeVideo"> 
-            <div class='closeVideoBurger'>
+            <div class='closeVideoBurger cvb1'>
                 <div class='line'></div>
                 <div class='line'></div>
                 <div class='line'></div>
@@ -359,7 +359,16 @@
     </div>
 
     <div class="iframeContainer">
-        <iframe class="iframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe class="iframe" id="player" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="closeVideo"> 
+            <div class='closeVideoBurger cvb2'>
+                <div class='line'></div>
+                <div class='line'></div>
+                <div class='line'></div>
+                <div class='lineCross'></div>
+                <div class='lineCross line5'></div>
+            </div>
+        </div>
     </div>
 
     <div class="burgerContainer"> 
@@ -444,5 +453,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js" integrity="sha512-A64Nik4Ql7/W/PJk2RNOmVyC/Chobn5TY08CiKEX50Sdw+33WTOpPJ/63bfWPl0hxiRv1trPs5prKO8CpA7VNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
 </body>
 </html>

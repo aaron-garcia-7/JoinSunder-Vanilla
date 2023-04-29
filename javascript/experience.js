@@ -115,7 +115,7 @@ let swiper = new Swiper(".mySwiper", {
 //
 
 const videoContainer = document.querySelector(".videoContainer");
-const closeVideoBurger = document.querySelector(".closeVideoBurger");
+const closeVideoBurger = document.querySelector(".cvb1");
 const videoElement = document.querySelector("#videoElement");
 
 let videoState = false;
@@ -176,6 +176,7 @@ let src2 = "https://www.youtube.com/embed/DIB0r_xZlyI"; // Paradise Los Cabo | 2
 
 let iframeContainer = document.querySelector(".iframeContainer");
 let iframe = document.querySelector(".iframe");
+const closeVideoBurger2 = document.querySelector(".cvb2");
 
 let iframeState = false;
 
@@ -185,6 +186,7 @@ const toggleiframe = (index) => {
 
   if (iframeState) {
     iframeContainer.classList.add("iframeContainerActive");
+    closeVideoBurger2.classList.add("closeVideoBurgerActive");
     switch (videoIndex) {
       case 1:
         iframe.src = src1;
@@ -195,9 +197,14 @@ const toggleiframe = (index) => {
     }
   } else {
     iframeContainer.classList.remove("iframeContainerActive");
+    closeVideoBurger2.classList.remove("closeVideoBurgerActive");
     iframe.src = null;
   }
 };
+
+closeVideoBurger2.addEventListener("click", () => {
+  toggleiframe();
+});
 
 iframeContainer.addEventListener("click", ({ target }) => {
   if (target.classList.contains("iframeContainer")) {
