@@ -17,10 +17,7 @@
         background: $sunderSnow;
         width: 100vw;
         height: clamp(36rem, 100dvh, 84rem);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        padding-top: 14vh;
         transition: transform $nav-transition;
 
         .cta {
@@ -239,10 +236,10 @@
                 right: 0.7rem;
             }
             .mySwiper {
-                // border: 1px solid blue;
+                // border: 2px dashed blue;
                 width: 96vw;
                 height: 56vh;
-                transform: translate(0, 2%);
+                // transform: translate(0, 20%);
                 .swiper-wrapper {
                     height: 90%;
                     .swiper-slide {

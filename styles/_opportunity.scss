@@ -1087,6 +1087,30 @@ $pending: #BCD0D7;
                     }
                 }
             }
+            .kwInstalled {
+                .lineGraph {
+                    .kwData {
+                        .dataPiece {
+                            &:nth-of-type(1) {
+                                bottom: 20%;
+                                left: -8%;
+                            }
+                            &:nth-of-type(2) {
+                                bottom: 46%;
+                                left: 18%;
+                            }
+                            &:nth-of-type(3) {
+                                top: 10%;
+                                right: 30%;
+                            }
+                            &:nth-of-type(4) {
+                                top: -26%;
+                                right: -8%;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -1769,3 +1793,14 @@ $pending: #BCD0D7;
         }
     }
 }
+
+@media (orientation: landscape) {
+    .opportunity {
+        .mainContent {
+            .growth {
+                display: none;
+            }
+        }
+    }
+  }
+  

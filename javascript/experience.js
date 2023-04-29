@@ -168,13 +168,58 @@ videoElement.addEventListener("focus", () => {
   openVideo();
 });
 
+// iFrame Logic
+//
+
+let src1 = "https://www.youtube.com/embed/EOdM6yTCCJg"; // Paradise Los Cabo | 2023
+let src2 = "https://www.youtube.com/embed/DIB0r_xZlyI"; // Paradise Los Cabo | 2022
+
+let iframeContainer = document.querySelector(".iframeContainer");
+let iframe = document.querySelector(".iframe");
+
+let iframeState = false;
+
+const toggleiframe = (index) => {
+  iframeState = !iframeState;
+  let videoIndex = index + 1;
+
+  if (iframeState) {
+    iframeContainer.classList.add("iframeContainerActive");
+    switch (videoIndex) {
+      case 1:
+        iframe.src = src1;
+        break;
+      case 2:
+        iframe.src = src2;
+        break;
+    }
+  } else {
+    iframeContainer.classList.remove("iframeContainerActive");
+    iframe.src = null;
+  }
+};
+
+iframeContainer.addEventListener("click", ({ target }) => {
+  if (target.classList.contains("iframeContainer")) {
+    toggleiframe();
+    // videoElement.pause();
+  }
+});
+
+// Posters
+//
+
 let allPosters = document.querySelectorAll(".poster");
 
 allPosters.forEach((obj, index) => {
   obj.addEventListener("click", () => {
-    console.log(`clicked on poster ${index + 1}`);
-    videoElement.src = `./assets/vid${index + 1}.mp4`;
-    toggleVideo();
+    if (index === 0 || index === 1) {
+      toggleiframe(index);
+      return;
+    } else {
+      videoElement.src = `./assets/vid${index + 1}.mp4`;
+      toggleVideo();
+    }
   });
   obj.addEventListener("keydown", (e) => {
     // console.log(e);

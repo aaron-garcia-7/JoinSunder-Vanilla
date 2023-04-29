@@ -48,3 +48,11 @@ navSlider.addEventListener("mousemove", (e) => {
 //   navSlider.style.transform = `translate(calc(18vw - calc(${e.pageX}px * 0.38)), -4vw) scale(1)`;
 //   navSlider.style.transition = null;
 // });
+
+//
+// Utility
+//
+
+window.addEventListener("orientationchange", function () {
+  location.reload();
+});

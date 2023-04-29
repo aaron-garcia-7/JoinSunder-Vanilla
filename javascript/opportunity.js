@@ -703,21 +703,34 @@ gsap.to(graph2Data, {
 // Utility
 //
 
-let needsRefresh = false;
+function refreshOnDesktop() {
+  const isTouchDevice =
+    "ontouchstart" in window ||
+    navigator.maxTouchPoints > 0 ||
+    navigator.msMaxTouchPoints > 0;
 
-window.addEventListener("resize", function () {
-  if (window.innerWidth > 580) {
-    needsRefresh = true;
-  } else {
-    needsRefresh = false;
+  if (!isTouchDevice) {
+    window.location.reload();
   }
-});
+}
 
-setInterval(function () {
-  if (needsRefresh) {
-    location.reload();
-  }
-}, 1000);
+window.addEventListener("resize", refreshOnDesktop);
+
+// let needsRefresh = false;
+
+// window.addEventListener("resize", function () {
+//   if (window.innerWidth > 580) {
+//     needsRefresh = true;
+//   } else {
+//     needsRefresh = false;
+//   }
+// });
+
+// setInterval(function () {
+//   if (needsRefresh) {
+//     location.reload();
+//   }
+// }, 1000);
 
 // window.onbeforeunload = () => {
 //   window.scrollTo(0, 0);
