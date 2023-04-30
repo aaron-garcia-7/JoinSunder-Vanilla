@@ -12,7 +12,6 @@ $pending: #BCD0D7;
     }
     .burgerContainer {
         animation-delay: 0.6s;
-        // display: none;
     }
     // GLOBAL COMPONENTS
 
@@ -20,9 +19,7 @@ $pending: #BCD0D7;
         position: relative;
         background: $sunderSnow;
         transition: transform $nav-transition;
-
         .header {
-            // border: 2px dashed coral;
             position: relative;
             height: clamp(38rem, 100vh, 48rem);
             height: clamp(38rem, 100dvh, 48rem);
@@ -32,7 +29,6 @@ $pending: #BCD0D7;
                 transform: translate(0, -2.4rem);
             }
             h1 {
-                // font-size: calc(1.8rem + 3.6vw);
                 font-size: calc(0.1rem + 5.6vw);
                 font-weight: 450;
                 bottom: 1.2rem;
@@ -67,7 +63,6 @@ $pending: #BCD0D7;
             .soloRepImg {
                 bottom: 0;
                 right: 0;
-                // width: 46%;
                 width: clamp(4rem, 44%, 46rem);
                 pointer-events: none;
                 z-index: 3;
@@ -84,9 +79,7 @@ $pending: #BCD0D7;
                 display: none;
             }
         }
-
         .quoteSection {
-            // border: 2px dashed coral;
             padding: 8rem 0;
             display: flex;
             flex-direction: column;
@@ -136,7 +129,6 @@ $pending: #BCD0D7;
                     }
                 }
                 .quoteWrapper {
-                    // border: 2px solid $sunderMidnight;
                     width: 42%;
                     display: flex;
                     flex-direction: column;
@@ -145,7 +137,6 @@ $pending: #BCD0D7;
                         padding-left: 2rem;
                     }
                     .quote {
-                        // border-bottom: 2px solid $sunderMidnight;
                         font-family: $monument;
                         font-size: $M-Text;
                         font-weight: 675;
@@ -168,7 +159,6 @@ $pending: #BCD0D7;
                 flex-direction: row-reverse;
             }
         }
-
         .cardsSection {
             width: 100%;
             height: clamp(48rem, 100vh, 92rem);
@@ -197,7 +187,6 @@ $pending: #BCD0D7;
                     object-position: 50% 40%;
                 }
                 .cardText {
-                    // border: 2px dashed yellow;
                     background: linear-gradient(15deg, #000000, #00000000 60%);
                     bottom: 0;
                     height: 100%;
@@ -225,13 +214,10 @@ $pending: #BCD0D7;
                 }
             }
         }
-
         .videoSection {
-            // border: 2px dashed yellow;
             position: relative;
             width: 100vw;
             height: 100vh;
-            // height: 100dvh;
             overflow: hidden;
             > * {
                 position: absolute;
@@ -253,7 +239,6 @@ $pending: #BCD0D7;
                 text-align: right;
             }
             .videoFigure {
-                // border: 2px solid coral;
                 position: relative;
                 border-radius: calc(0.4rem + 1.2vw);
                 opacity: 0;
@@ -261,11 +246,8 @@ $pending: #BCD0D7;
                 height: calc(12rem + 24vw);
                 top: 50%;
                 left: 50%;
-                // scale: 0.2;
                 scale: 0.16;
                 translate: -50% -50%;
-                // transform: translate(-50%, -50%);
-                // cursor: none;
                 cursor: pointer;
                 > * {
                     position: absolute;
@@ -279,9 +261,6 @@ $pending: #BCD0D7;
                     height: 100%;
                     background: rgba($sunderMidnight, 0.5);
                     z-index: 1;
-                    // display: flex;
-                    // justify-content: center;
-                    // align-items: center;
                     > * {
                         position: absolute;
                         left: 8%;
@@ -306,14 +285,10 @@ $pending: #BCD0D7;
                 }
             }
         }
-
         .growth {
-            // border: 2px dashed coral;
             height: 100vh;
-            // height: 100dvh;
             display: flex;
             .numberArea {
-                // border: 2px dashed coral;
                 width: 20%;
                 display: flex;
                 flex-direction: column;
@@ -328,7 +303,6 @@ $pending: #BCD0D7;
                     opacity: 0;
                 }
                 .timeline {
-                    // background-color: lightblue;
                     position: relative;
                     display: flex;
                     flex-direction: column;
@@ -378,18 +352,10 @@ $pending: #BCD0D7;
                             fill: transparent;
                             stroke: $sunderIce;
                             transition: 0.2s ease;
-                            // &:hover {
-                            //     fill: lightgoldenrodyellow;
-                            // }
                         }
-                        // .AZ {
-                        //     fill: $pending;
-                        //     fill: $active;
-                        // }
                     }
                 }
                 .compass {
-                    // border: 2px solid green;
                     width: calc(10rem + 6vw);
                     display: flex;
                     justify-content: space-between;
@@ -427,7 +393,6 @@ $pending: #BCD0D7;
                     color: $sunderSnow;
                     opacity: 0;
                     #numberContainer {
-                        // border: 1px solid coral;
                         overflow: hidden;
                         height: 7rem;
                     }
@@ -447,7 +412,6 @@ $pending: #BCD0D7;
                 display: none;
             }
         }
-
         .growthAnchors {
             position: absolute;
             top: calc(38% + 24vw);
@@ -474,30 +438,18 @@ $pending: #BCD0D7;
                 top: 68%;
             }
         }
-
         .dataSections {
             position: relative;
             width: 100vw;
             height: clamp(64rem, 146vh, 112rem);
-            // height: clamp(64rem, 146dvh, 112rem);
             overflow: hidden;
-            .gridBg {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
             .sectionTitle {
-                // border: 2px dashed coral;
                 position: absolute;
                 top: 6rem;
                 left: 4%;
                 width: 20%;
                 z-index: 1;
                 display: flex;
-                // justify-content: center;
                 h2 {
                     color: $sunderMidnight;
                     font-size: $L-Text;
@@ -506,7 +458,6 @@ $pending: #BCD0D7;
                 }
             }
         }
-
         .salesForce {
             background: #E3E3E3;
             .sectionTitle {
@@ -516,13 +467,10 @@ $pending: #BCD0D7;
                 }
             }
             .barGraph {
-                // border: 4px dashed coral;
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                // transform: translate(-50%, -100%);
                 transform: translate(-50%, -50%);
-                // width: clamp(16rem, 80vw, 72rem);
                 width: clamp(16rem, 82vw, 97rem);
                 height: clamp(16rem, 40vw, 48rem);
                 display: flex;
@@ -531,7 +479,6 @@ $pending: #BCD0D7;
                 align-items: center;
                 z-index: 1;
                 .bars {
-                    // border: 2px solid coral;
                     width: 100%;
                     height: 86%;
                     display: flex;
@@ -588,7 +535,6 @@ $pending: #BCD0D7;
                 }
             }
         }
-
         .kwInstalled {
             background: $sunderMidnight;
             .sectionTitle {
@@ -643,33 +589,6 @@ $pending: #BCD0D7;
                         stroke-dasharray: 1470.5576171875px;
                         }
                     }
-                    
-                    // .pathActive {
-                    //     -webkit-animation: drawPath-1 1.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
-                    //             animation: drawPath-1 1.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
-                    // }
-                    // @-webkit-keyframes drawPath-1 {
-                    //     0% {
-                    //     stroke-dashoffset: 1521.593505859375px;
-                    //     stroke-dasharray: 1521.593505859375px;
-                    //     }
-                    
-                    //     100% {
-                    //     stroke-dashoffset: 0;
-                    //     stroke-dasharray: 1521.593505859375px;
-                    //     }
-                    // }
-                    // @keyframes drawPath-1 {
-                    //     0% {
-                    //     stroke-dashoffset: 1521.593505859375px;
-                    //     stroke-dasharray: 1521.593505859375px;
-                    //     }
-                    
-                    //     100% {
-                    //     stroke-dashoffset: 0;
-                    //     stroke-dasharray: 1521.593505859375px;
-                    //     }
-                    // }
                 }
                 .points {
                     .point1Active {
@@ -728,24 +647,6 @@ $pending: #BCD0D7;
                         stroke-dasharray: 118.23892818282235px;
                         }
                     }
-                    // @-webkit-keyframes animate-svg-fill-2 {
-                    //     0% {
-                    //     fill: transparent;
-                    //     }
-                    
-                    //     100% {
-                    //     fill: rgb(54, 54, 54);
-                    //     }
-                    // }
-                    // @keyframes animate-svg-fill-2 {
-                    //     0% {
-                    //     fill: transparent;
-                    //     }
-                    
-                    //     100% {
-                    //     fill: rgb(54, 54, 54);
-                    //     }
-                    // }
                     .point3Active {
                         -webkit-animation: drawPoint3 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0.7s both,
                                             animate-svg-fill-3 0s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
@@ -774,24 +675,6 @@ $pending: #BCD0D7;
                         stroke-dasharray: 118.23892818282235px;
                         }
                     }
-                    // @-webkit-keyframes animate-svg-fill-3 {
-                    //     0% {
-                    //     fill: transparent;
-                    //     }
-                    
-                    //     100% {
-                    //     fill: rgb(54, 54, 54);
-                    //     }
-                    // }
-                    // @keyframes animate-svg-fill-3 {
-                    //     0% {
-                    //     fill: transparent;
-                    //     }
-                    
-                    //     100% {
-                    //     fill: rgb(54, 54, 54);
-                    //     }
-                    // }
                     .point4Active {
                         -webkit-animation: drawPoint4 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) 1s both,
                                             animate-svg-fill-4 0s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
@@ -822,7 +705,6 @@ $pending: #BCD0D7;
                     }
                 }
                 .kwData {
-                    // border: 2px solid white;
                     height: 100%;
                     .dataPiece {
                         position: absolute;
@@ -850,7 +732,6 @@ $pending: #BCD0D7;
                     }
                 }
                 .key {
-                    // border: 2px dashed coral;
                     bottom: 0;
                     transform: translate(0, 60%);
                     display: flex;
@@ -868,10 +749,7 @@ $pending: #BCD0D7;
                 left: 50%;
                 transform: translate(-50%, 0);
                 width: 90%;
-                // height: 24%;
-                // height: clamp(12rem, 19%, 36rem);
                 height: clamp(8rem, 12%, 24rem);
-                // background: linear-gradient(90deg, red, blue);
                 background: linear-gradient(90deg, $sunderMidnight 10%, #0C5FF2);
                 z-index: 2;
                 display: flex;
@@ -899,7 +777,6 @@ $pending: #BCD0D7;
                     }
     
                     &:hover {
-                        // border: 1px solid $sunderRoyalLight;
                         &::before {
                             color: $sunderRoyalLight;
                         }
@@ -914,7 +791,6 @@ $pending: #BCD0D7;
             }
         }
 
-
         &Active {
             transform: translate(0, -50vh);
         }
@@ -924,9 +800,7 @@ $pending: #BCD0D7;
 @media (min-width: 2048px) {
     .opportunity {
         .mainContent{
-
             .header {
-                // border: 2px solid blue;
                 height: 56rem;
                 .cta {
                     width: 14rem; 
@@ -942,16 +816,13 @@ $pending: #BCD0D7;
                     width: 56rem;
                 }
             }
-
             .quoteSection {
                 margin: auto;
             }
-
             .cardsSection {
                 width: 128rem;
                 margin: auto;
             }
-
             .growth {
                 .mapArea {
                     .stateCount {
@@ -961,7 +832,6 @@ $pending: #BCD0D7;
                     }
                 }
             }
-
             .kwInstalled {
                 .pageFooter {
                     width: 128rem;             
@@ -1119,11 +989,9 @@ $pending: #BCD0D7;
     .opportunity {
         .mainContent{
             .header {
-                // border: 2px dashed coral;
                 top: 0;
                 transform: translate(0, 0);
                 height: 90vh;
-                // height: 90dvh;
                 min-height: 44rem;
                 max-height: 48rem;
                 margin: 0 0 2.4rem 2.4rem;
@@ -1152,7 +1020,6 @@ $pending: #BCD0D7;
                     border-radius: 0 0 0 1.6rem;
                 }
             }
-
             .quoteSection {
                 padding: 4rem 0rem;
                 .quote1 {
@@ -1192,10 +1059,8 @@ $pending: #BCD0D7;
                     border-right: 1px solid transparent;
                 }
             }
-
             .cardsSection {
                 height: clamp(42rem, 100vh, 56rem);
-                // height: clamp(42rem, 100dvh, 56rem);
                 padding: 0 2.4rem;
                 flex-wrap: nowrap;
                 overflow-x: scroll;
@@ -1206,9 +1071,7 @@ $pending: #BCD0D7;
                 }
                 .repCard {
                     flex: 0 0 auto;
-                    // width: calc(24rem + 12vw);
                     width: calc(22rem + 12vw);
-                    // height: 92%;
                     height: 86%;
                     border-radius: 2rem;
                     overflow: hidden;
@@ -1222,9 +1085,7 @@ $pending: #BCD0D7;
                         object-position: 50% 40%;
                     }
                     .cardText {
-                        // border: 2px dashed yellow;
                         background: linear-gradient(15deg, #000000, #00000000 60%);
-                        // background: linear-gradient(20deg, red, blue 50%);
                         bottom: 0;
                         height: 100%;
                         z-index: 2;
@@ -1235,7 +1096,6 @@ $pending: #BCD0D7;
                         align-items: flex-start;
                         padding: 0 0 1.2rem 3.2rem;
                         .list {
-                            // border: 1px solid coral;
                             margin-bottom: 1.2rem;
                             li {
                                 font-size: $M-Text;
@@ -1252,7 +1112,6 @@ $pending: #BCD0D7;
                     }
                 }
             }
-
             .videoSection {
                 h2 {
                     font-size: $XL-Text;
@@ -1272,7 +1131,6 @@ $pending: #BCD0D7;
                     .overlay {
                         img {
                             transform: scale(2);
-                            // bottom: 16%;
                             left: 10%;
                         }
                     }
@@ -1284,7 +1142,6 @@ $pending: #BCD0D7;
                     }
                 }
             }
-
             .growth {
                 .numberArea {
                     .timeline {
@@ -1295,7 +1152,6 @@ $pending: #BCD0D7;
 
             &Active {
                 transform: translate(0, -58vh);
-                // transform: $nav-shift;
             }
         }
     }
@@ -1322,7 +1178,6 @@ $pending: #BCD0D7;
         .mainContent {
             .header {
                 height: 80vh;
-                // height: 80dvh;
                 min-height: 42rem;
                 margin: 0 0 2.4rem 1.2rem;
                 .cta {
@@ -1357,7 +1212,6 @@ $pending: #BCD0D7;
             }
             .cardsSection {
                 height: clamp(36rem, 90vh, 52rem);
-                // height: clamp(36rem, 90dvh, 52rem);
                 padding: 0 1.2rem;
                 .repCard {
                     width: calc(16rem + 12vw);
@@ -1413,7 +1267,6 @@ $pending: #BCD0D7;
                         transform: translate(0, 1.6rem);
                     }
                     .stateCount {
-                        // border: 2px dashed coral;
                         bottom: auto;
                         top: 2.4rem;
                         right: calc(2rem + 4vw);
@@ -1429,7 +1282,6 @@ $pending: #BCD0D7;
                     }
                 }
                 .mobileTitle {
-                    // border: 2px dashed coral;
                     display: block;
                     position: absolute;
                     top: 2.4rem;
@@ -1458,12 +1310,8 @@ $pending: #BCD0D7;
             }
             .dataSections {
                 height: clamp(48rem, 112vh, 86rem);
-                // height: clamp(48rem, 112dvh, 86rem);
                 .sectionTitle {
-                    // border: 2px dashed coral;
                     top: 2.6rem;
-                    // left: 4%;
-                    // width: 20%;
                     h2 {
                         font-size: $M-Text;
                     }
@@ -1471,10 +1319,7 @@ $pending: #BCD0D7;
             }
             .salesForce {
                 .barGraph {
-                    // border: 4px dashed coral;
-                    // width: clamp(16rem, 80vw, 72rem);
                     width: clamp(16rem, 82vw, 97rem);
-                    // height: clamp(16rem, 40vw, 48rem);
                     height: clamp(16rem, 60vw, 48rem);
                     .bars {
                         .bar {
@@ -1632,23 +1477,18 @@ $pending: #BCD0D7;
                     width: calc(10.6rem + 10.6vw);
                 }
                 .videoFigure {
-                    // width: 80%;
                     width: 86%;
                     height: calc(12rem + 12vw);
                 }
             }
             .growth {
-                // border: 2px dashed yellow;
                 position: relative;
                 height: 48rem;
                 .numberArea {
-                    // border: 1px solid yellow;
                     width: 86vw;
                     overflow: hidden;
-                    // transform: translate(0, -160%);
                     transform: translate(0, -260%);
                     .timeline {
-                        // background: blue;
                         position: relative;
                         justify-content: space-around;
                         width: 100%;
@@ -1664,12 +1504,10 @@ $pending: #BCD0D7;
                             z-index: 2;
                         }
                         &::before {
-                            // border: 1px solid lightcoral;
                             background: linear-gradient(90deg, $sunderMidnight, rgba($sunderMidnight, 0.2));
                             left: 0;
                         }
                         &::after {
-                            // border: 1px solid lightcoral;
                             background: linear-gradient(-90deg, $sunderMidnight, rgba($sunderMidnight, 0.2));
                             right: 0;
                         }
@@ -1677,7 +1515,6 @@ $pending: #BCD0D7;
                             transform: translate(0, -2rem);
                         }
                         &Links {
-                            // opacity: 1;
                             padding: 0.2rem 0.8rem;
                             pointer-events: none;
                             transform: translate(280%, 0);
@@ -1691,7 +1528,6 @@ $pending: #BCD0D7;
                 .mapArea {
                     position: relative;
                     .map {
-                        // border: 2px dashed yellow;
                         width: clamp(12rem, 112%, 82rem);
                     }
                     .compass {
@@ -1720,7 +1556,6 @@ $pending: #BCD0D7;
                     }
                 }
                 .mobileTitle {
-                    // top: 4rem;
                     top: 2rem;
                     left: 1.6rem;
                     h2 {
@@ -1729,36 +1564,24 @@ $pending: #BCD0D7;
                 }
             }
             .growthAnchors {
-                // border: 2px dashed violet;
-                // height: calc(100vh + 29%);
                 height: 48rem;
-                // z-index: 1;
                 #anchor2019 {
-                    // background: violet;
-                    // top: 20%;
                     top: 8%;
                 }
                 #anchor2020 {
-                    // top: 40%;
                     top: 22%;
                 }
                 #anchor2021 {
-                    // top: 56%;
                     top: 36%;
                 }
                 #anchor2022 {
-                    // top: 73%;
                     top: 50%;
                 }
             }
             .dataSections {
                 height: clamp(36rem, 100vh, 86rem);
-                // height: clamp(36rem, 100dvh, 86rem);
                 .sectionTitle {
-                    // border: 2px dashed coral;
                     top: 2.6rem;
-                    // left: 4%;
-                    // width: 20%;
                     h2 {
                         font-size: $M-Text;
                     }
@@ -1784,9 +1607,14 @@ $pending: #BCD0D7;
                     }
                 }
                 .pageFooter {
-                    padding-right: 1.2rem;
+                    height: clamp(12.4rem, 12%, 12.4rem);
+                    padding-right: 25vw;
+                    .cta {
+                        transform: translate(-16%, -120%) scale(1.2);
+                    }
                 }
             }
+            
             &Active {
                 transform: $nav-shift;
             }

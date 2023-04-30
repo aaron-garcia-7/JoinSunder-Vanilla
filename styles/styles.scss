@@ -67,8 +67,6 @@ $XS-Text: calc(0.6rem + 0.3vw);
 
 $nav-shift: translate(0, -50vh);
 $nav-transition: 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
-// $nav-transition: 0.6s cubic-bezier(.52,.01,.42,.99) 0.06s;
-
 
 * {
   margin: 0;
@@ -91,7 +89,6 @@ h3, h4, h5, h6, p, blockquote, a, button, input, label {
   font-family: $satoshi;
 }
 ul {
-  // list-style: none;
   li {
     font-family: $satoshi;
   }
@@ -134,21 +131,18 @@ input::-webkit-inner-spin-button {
     height: 100%;
     object-fit: cover;
     transition: transform 0.4s cubic-bezier(.75,.15,.25,.85) 0.28s;
-    // transition: transform 0.12s cubic-bezier(.75,.15,.25,.85) 0.28s;
   }
   .logoLink {
     cursor: pointer;
   }
   
   &Active {
-    // border: none;
     pointer-events: none;
     user-select: none;
     cursor: default;
     .logoImg {
       transform: translate(0, -112%);
       transition: transform 0.4s cubic-bezier(.75,.15,.25,.85) 0.12s;
-      // transition: transform 0.12s cubic-bezier(.75,.15,.25,.85) 0.12s;
     }
   }
 }
@@ -164,7 +158,6 @@ input::-webkit-inner-spin-button {
   z-index: 3;
   opacity: 0;
   animation: burgerAppear 0.6s ease 2.6s forwards;
-  // display: none;
   @keyframes burgerAppear {
     to {
       transform: translate(-50%, 0);
@@ -177,7 +170,6 @@ input::-webkit-inner-spin-button {
     width: calc(3.2rem + 0.8vw);
     height: calc(3.2rem + 0.8vw);
     border-radius: 50%;
-    // border: 1px solid $sunderSnow;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -217,7 +209,6 @@ input::-webkit-inner-spin-button {
     }
     &Active {
       background: $sunderNavy;
-      // border: 8px solid $sunderIce;
       .line {
         width: 0;
         &:nth-of-type(1){
@@ -250,7 +241,6 @@ input::-webkit-inner-spin-button {
   overflow: hidden;
   transition: transform $nav-transition;
   .navSlider {
-    // border: 2px solid black;
     width: 280%;
     height: 60%;
     display: flex;
@@ -258,8 +248,6 @@ input::-webkit-inner-spin-button {
     gap: 2rem;
     justify-content: center;
     align-items: center;
-    // opacity: 0;
-    // transform: translate(calc(10rem + 8vw), 2vw) scale(0.9);
     transform: translate(calc(10rem + 8vw), 2vw);
     transition: transform 0.5s cubic-bezier(.75,.15,.25,.85), opacity 0.4s ease;
 
@@ -282,7 +270,6 @@ input::-webkit-inner-spin-button {
         font-family: $satoshi;
         font-size: $S-Text;
         font-weight: 400;
-        // transform: translate(0.2vw, 0);
         transform: translate(2%, -10%);
 
         &Active {
@@ -297,8 +284,6 @@ input::-webkit-inner-spin-button {
       background: $sunderSnow;
       width: 20vw;
       height: calc(7rem + 4vw);
-      // width: calc(20rem + 2vw);
-      // height: calc(8rem + 6vw);
       border-radius: calc(0.6rem + 0.1vw);
       object-fit: cover;
       transition: transform 0.4s ease;
@@ -326,12 +311,6 @@ input::-webkit-inner-spin-button {
   //.navActive
   &Active {
     transform: translate(0, 0);
-    // .navSlider {
-    //   // opacity: 1;
-    //   // transform: translate(calc(10rem + 8vw), 2vw) scale(1);
-    //   transform: translate(calc(10rem + 8vw), 2vw);
-    //   transition: 0.7s cubic-bezier(.75,.15,.25,.85) 0.1s;
-    // }
   }
   .navSwiper {
     display: none;
@@ -342,7 +321,6 @@ input::-webkit-inner-spin-button {
   @extend .logo;
   // position: fixed; // Wasn't working as global - added individually
   top: auto;
-  // bottom: 2.4rem;
   bottom: 3rem;
   opacity: 1;
   animation: none;
@@ -352,14 +330,12 @@ input::-webkit-inner-spin-button {
     object-fit: cover;
     transform: translate(0, 124%);
     transition: 0.4s cubic-bezier(.75,.15,.25,.85) 0s;
-    // transition: 0.12s cubic-bezier(.75,.15,.25,.85) 0s;
   }
   &Active {
     pointer-events: all;
     img {
       transform: translate(0, 0);
       transition: 0.4s cubic-bezier(.75,.15,.25,.85) 0.28s;
-      // transition: 0.12s cubic-bezier(.75,.15,.25,.85) 0.28s;
     }
   }
 }
@@ -411,15 +387,11 @@ input::-webkit-inner-spin-button {
       0% {
           width: 220%;
           height: 320%;
-          // width: 420px;
-          // height: 180px;
           opacity: 1;
       }
       90% {
           width: 220%;
           height: 320%;
-          // width: 420px;
-          // height: 180px;
           opacity: 0;
       }
       100% {
@@ -437,8 +409,6 @@ input::-webkit-inner-spin-button {
       100% {
           width: 220%;
           height: 320%;
-          // width: 420px;
-          // height: 180px;
           opacity: 1;
       }
   }
@@ -464,7 +434,6 @@ input::-webkit-inner-spin-button {
     z-index: 4;
   }
   .videoWrapper {
-    // border: 2px dashed coral;
     width: 64vw;
     video {
       width: 100%;
@@ -550,16 +519,13 @@ input::-webkit-inner-spin-button {
   width: 100vw;
   height: 100vh;
   background: #000014ad;
-  // background: rgba($sunderRoyalLight, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
   pointer-events: none;
-  // transition: opacity 0.6s ease 0.64s;
   transition: opacity 0.3s ease 0.3s;
   z-index: -1;
-  // display: none;
   &Active {
     opacity: 1;
     pointer-events: all;
@@ -567,12 +533,8 @@ input::-webkit-inner-spin-button {
     z-index: 4;
   }
   .iframe {
-    // display: none;
     width: 64vw;
     height: 36vw;
-    // &Active {
-    //   display: block;
-    // }
   }
   .closeVideo {
     position: absolute;
@@ -707,10 +669,8 @@ input::-webkit-inner-spin-button {
 
   .nav {
     height: 58vh;
-    // height: 50vh;
     // NOT TO BE CONFUSED WITH NAVSLIDER // MOBILE VS DESKTOP
     .navSwiper {
-      // border: 2px dashed coral;
       display: block;
       position: absolute;
       left: 0;
@@ -760,7 +720,6 @@ input::-webkit-inner-spin-button {
       transform: translate(calc(14rem + 2vw), 2vw) scale(1);
       .navLink {
         .linkImg {
-          // border: 2px dashed coral;
           width: calc(6rem + 12vw);
           height: calc(12rem + 4vw);
         }

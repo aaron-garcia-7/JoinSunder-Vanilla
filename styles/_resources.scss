@@ -782,8 +782,7 @@
                 }
                 .pageFooter {
                     width: 100%;
-                    // height: clamp(8rem, 8%, 11rem);
-                    // background: linear-gradient(90deg, #BFD9D000 10%, #6DA894);
+                    height: clamp(8rem, 8%, 8rem);
                     border-radius: 1.6rem 1.6rem 0 0;
                     padding-right: 2.8rem;
                 }
@@ -909,7 +908,11 @@
                     padding: 4rem 0 16rem 0;
                 }
                 .pageFooter {
-                    padding-right: 1.2rem;
+                    height: clamp(12rem, 8%, 12rem);
+                    padding-right: 25vw;
+                    .cta {
+                        transform: translate(0, -180%) scale(1.2);
+                    }
                 }
             }
         }

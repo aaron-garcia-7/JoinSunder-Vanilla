@@ -2234,16 +2234,6 @@ input::-webkit-inner-spin-button {
   overflow: hidden;
 }
 
-.opportunity .mainContent .dataSections .gridBg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .opportunity .mainContent .dataSections .sectionTitle {
   position: absolute;
   top: 6rem;
@@ -3414,7 +3404,12 @@ input::-webkit-inner-spin-button {
             transform: translate(0, 160%);
   }
   .opportunity .mainContent .kwInstalled .pageFooter {
-    padding-right: 1.2rem;
+    height: clamp(12.4rem, 12%, 12.4rem);
+    padding-right: 25vw;
+  }
+  .opportunity .mainContent .kwInstalled .pageFooter .cta {
+    -webkit-transform: translate(-16%, -120%) scale(1.2);
+            transform: translate(-16%, -120%) scale(1.2);
   }
   .opportunity .mainContentActive {
     -webkit-transform: translate(0, -50vh);
@@ -4928,6 +4923,7 @@ input::-webkit-inner-spin-button {
   }
   .resources .mainContent .enzy .pageFooter {
     width: 100%;
+    height: clamp(8rem, 8%, 8rem);
     border-radius: 1.6rem 1.6rem 0 0;
     padding-right: 2.8rem;
   }
@@ -5043,7 +5039,12 @@ input::-webkit-inner-spin-button {
     padding: 4rem 0 16rem 0;
   }
   .resources .mainContent .enzy .pageFooter {
-    padding-right: 1.2rem;
+    height: clamp(12rem, 8%, 12rem);
+    padding-right: 25vw;
+  }
+  .resources .mainContent .enzy .pageFooter .cta {
+    -webkit-transform: translate(0, -180%) scale(1.2);
+            transform: translate(0, -180%) scale(1.2);
   }
 }
 
