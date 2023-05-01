@@ -279,29 +279,21 @@ gsap.to("#stateCountMobile", {
     trigger: "#growth",
     toggleActions: "play none none reverse",
     start: "top 16%",
-    // markers: true,
   },
 });
 
 gsap.from("#stateNumberMobile", {
   textContent: 0,
-  // duration: 1.6,
   duration: 2.8,
   ease: "power1.out",
   snap: { textContent: 1 },
   stagger: {
     each: 1.0,
-    // onUpdate: function () {
-    //   this.targets()[0].innerHTML = numberWithCommas(
-    //     Math.ceil(this.targets()[0].textContent)
-    //   );
-    // },
   },
   scrollTrigger: {
     trigger: "#map",
     toggleActions: "play none none reverse",
     start: "top center",
-    // markers: true,
   },
 });
 
@@ -319,7 +311,6 @@ gsap.to("#timelineBorder2", {
   scrollTrigger: {
     trigger: "#growth",
     toggleActions: "play none none reverse",
-    // start: "top top",
     start: window.innerWidth > 480 ? "top top" : "top 16%",
   },
 });
@@ -328,13 +319,11 @@ let timelineLinksAppear = gsap.utils.toArray(".timelineLinks");
 gsap.to(timelineLinksAppear, {
   x: "0",
   opacity: 1,
-  // stagger: 0.1,
   stagger: window.innerWidth > 480 ? 0.1 : null,
-  duration: 2.4,
+  duration: window.innerWidth > 480 ? 0.36 : 2.4,
   scrollTrigger: {
     trigger: "#growth",
     toggleActions: "play none none reverse",
-    // start: "top top",
     start: window.innerWidth > 480 ? "top top" : "top 16%",
   },
 });
@@ -343,10 +332,8 @@ let linkHilightTL = gsap.timeline({
   scrollTrigger: {
     trigger: "#numberArea",
     scrub: true,
-    // start: "40% 15%",
     start: window.innerWidth > 480 ? "40% 15%" : "200% top",
     end: window.innerWidth > 768 ? "400% 15%" : "2300% 15%",
-    // markers: true,
   },
 });
 linkHilightTL
@@ -502,7 +489,6 @@ pending2022TL
 // });
 
 gsap.to("#salesForceTitle", {
-  // y: window.innerWidth > 768 ? "110vh" : "84vh",
   y:
     window.innerWidth > 768
       ? "110vh"
@@ -523,7 +509,6 @@ let graph1YearsTl = gsap.timeline({
     trigger: ".salesForce",
     toggleActions: "play none none reverse",
     start: "-15% top",
-    // start: "top top",
   },
   defaults: {
     duration: 0.8,
@@ -569,14 +554,12 @@ gsap.to(".lineGraph", {
   scrollTrigger: {
     trigger: "#lineGraphPath",
     toggleActions: "restart none none reverse",
-    // start: window.innerWidth > 768 ? "-50% 10%" : "-100% 10%",
     start:
       window.innerWidth > 768
         ? "-50% 10%"
         : window.innerWidth <= 580
         ? "-100% 40%"
         : "-100% 10%",
-    // markers: true,
   },
 });
 gsap.to("#lineGraphPath", {
@@ -584,18 +567,12 @@ gsap.to("#lineGraphPath", {
     trigger: "#lineGraphPath",
     toggleClass: "pathActive",
     toggleActions: "play none none none",
-    // start: window.innerWidth > 768 ? "-50% 10%" : "-100% 10%",
     start:
       window.innerWidth > 768
         ? "-50% 10%"
         : window.innerWidth <= 580
         ? "-100% 40%"
         : "-100% 10%",
-    // markers: {
-    //   indent: 64,
-    //   startColor: "lightblue",
-    //   endColor: "lightblue",
-    // },
   },
 });
 
@@ -604,15 +581,12 @@ gsap.to(".point1", {
     trigger: ".point1",
     toggleClass: "point1Active",
     toggleActions: "play none none none",
-    // start: "-3160% 10%",
-    // start: window.innerWidth > 768 ? "-3160% 10%" : "-4220% 10%",
     start:
       window.innerWidth > 768
         ? "-3160% 10%"
         : window.innerWidth <= 520
         ? "-4220% 40%"
         : "-4220% 10%",
-    // markers: true,
   },
 });
 gsap.to(".point2", {

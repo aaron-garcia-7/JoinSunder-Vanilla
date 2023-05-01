@@ -18,15 +18,6 @@ const col2 = document.querySelector(".col2");
 // Image Reel Logic (Original)
 //
 
-// const pageScroll = () => {
-//   window.scrollBy(0, 1);
-//   setTimeout(pageScroll, 24);
-// };
-
-// setTimeout(() => {
-//   pageScroll();
-// }, 2000);
-
 let isPlaying = false;
 let shouldScroll = false;
 let wasSmallerScreen = false;

@@ -9,7 +9,6 @@
     }
     .burgerContainer {
         animation-delay: 0.6s;
-        // display: none;
     }
     .videoContainerEnzy {
         .videoWrapper {
@@ -22,13 +21,11 @@
     .mainContent {
         background: $sunderSnow;
         width: 100vw;
-        // height: clamp(26rem, 100dvh, 64rem);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         transition: transform $nav-transition;
-        // overflow-x: hidden;
 
         .cta {
             position: absolute;
@@ -53,7 +50,6 @@
         }
 
         .productivity {
-            // border: 2px dashed coral;
             width: 100vw;
             height: auto;
             padding-left: 2.4rem;
@@ -75,17 +71,14 @@
                 .textWrapper {
                     display: inline-block;
                     &:nth-of-type(1) {
-                        // border: 2px dashed coral;
                         transform: translate(0, 1600%);
                     }
                     &:nth-of-type(2) {
-                        // border: 2px dashed coral;
                         transform: translate(0, 3200%);
                     }
                 }
             }
             .images {
-                // border: 2px dashed coral;
                 float: right;
                 display: flex;
                 flex-direction: column;
@@ -107,11 +100,9 @@
         }
 
         .meetTheTeam {
-            // border: 2px dashed coral;
             width: 100vw;
             height: 200vh;
             .content {
-                // border: 2px dashed violet;
                 position: relative;
                 width: 100vw;
                 height: 100vh;
@@ -128,7 +119,6 @@
                     }
                 }
                 .row {
-                    // border: 2px solid blue;
                     display: flex;
                     justify-content: space-between;
                     width: calc(10rem + 36vw); // HQ width
@@ -140,7 +130,6 @@
                     z-index: 2;
                     &::before,
                     &::after {
-                        // border: 1px dashed coral;
                         content: "";
                         position: absolute;
                         left: 6%;
@@ -151,31 +140,23 @@
                     &::before {
                         top: 2.4rem;
                         background: linear-gradient(0deg, #ff000000 2%, $sunderSnow 12%);
-                        // transform: translate(calc(-1.9rem - 1.5vw), -100%);
                         transform: translate(calc(-2.4rem - 1.8vw), -100%);
                     }
                     &::after {
                         bottom: 2.4rem;
                         background: linear-gradient(180deg, #ff000000 2%, $sunderSnow 12%);
-                        // transform: translate(calc(-1.9rem - 1.5vw), 100%);
                         transform: translate(calc(-2.4rem - 1.8vw), 100%);
                     }
                 }
                 .column {
-                    // border: 1px dashed coral;
                     height: calc(12rem + 14vw); // Super Responsive
                     left: 50%;
                     transform: translate(-36%, calc(0.2vw - 12%));
-                    // transform: translate(-24%, -12%);
-                    // transform: translate(-24%, -37%);
-                    // transform: translate(-24%, -63%);
-                    // transform: translate(-24%, -88%);
                     padding: 1rem;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
                     h2 {
-                        // background: blue;
                         font-weight: 675;
                     }
                 }
@@ -186,7 +167,6 @@
         }
 
         .reel {
-            // border: 2px dashed violet;
             height: calc(65rem + 69vw); // Without the parallax, this height is responsive (ends at) the 2 & 4 column's sixth picture.
             width: 100vw;
             display: flex;
@@ -195,7 +175,6 @@
             overflow: hidden;
             
             .columnOuter {
-                // border: 2px dashed yellow;
               width: 25%;
                 &:nth-of-type(2),
                 &:nth-of-type(4) {
@@ -268,7 +247,6 @@
                 align-items: center;
                 .cta2Aside {
                     width: 36%;
-                    // height: 50vh;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -308,7 +286,6 @@
                           display: flex;
                           align-items: center;
                           justify-content: center;
-                        //   transform: translate(5.2vw, 0.2rem);
                           transform: translate(calc(1rem + 4.2vw), 0.2rem);
                           overflow: hidden;
                           transition: transform 0.4s cubic-bezier(.05,.6,.56,1), opacity 0.2s ease;
@@ -364,11 +341,9 @@
                 }
             }
             .appUsage {
-                // border: 2px dashed yellow;
                 position: relative;
                 width: 100vw;
                 height: auto;
-                // padding: 16rem 0;
                 padding: 14rem 0 16rem 0;
                 display: flex;
                 flex-direction: column;
@@ -376,14 +351,12 @@
                 align-items: center;
                 gap: calc(1rem + 4vw);
                 .block {
-                    // border: 2px solid black;
                     position: relative;
                     width: 100%;
                     display: flex;
                     justify-content: space-around;
                     align-items: center;
                     .blockImg {
-                        // width: 26%;
                         width: 24%;
                     }
                     .blockText {
@@ -515,7 +488,6 @@
                 gap: 1.2rem;
                 height: calc(131rem + 135vw); // Without the parallax, this height is responsive (ends at) the 2 & 4 column's sixth picture.
                 .columnOuter {
-                    // border: 2px dashed yellow;
                   width: 32%;
                   &:nth-of-type(2) {
                       transform: translate(0, 5%);
@@ -525,7 +497,6 @@
                   }
 
                   .reelImg {
-                    // height: calc(16rem + 16vw);
                     height: calc(18rem + 18vw);
                   }
                 }
@@ -586,7 +557,6 @@
             }
             .enzy {
                 .enzyHero {
-                    // border: 2px dashed coral;
                     > * {
                         transform: translate(0, -4.2rem);
                     }
@@ -598,13 +568,9 @@
                     }
                 }
                 .appUsage {
-                    // border: 2px dashed yellow;
-                    // padding: 14rem 0 16rem 0;
                     padding: 4rem 0 16rem 0;
-                    // gap: calc(1rem + 4vw);
                     .block {
                         .blockImg {
-                            // width: 24%;
                             width: 36%;
                         }
                         .blockText {
@@ -613,48 +579,9 @@
                             }
                             .strong {
                                 font-size: $Hero-Text;
-                                // font-size: $XL-Text;
                             }
                         }
-                        // .linearDot {
-                        //     position: absolute;
-                        //     top: 50%;
-                        //     left: 50%;
-                        //     transform: translate(-50%, -50%);
-                        //     width: calc(0.6rem + 0.2vw);
-                        //     height: calc(0.6rem + 0.2vw);
-                        //     background: $sunderSnow;
-                        //     border-radius: 50%;
-                        //     z-index: 2;
-                        //     // &::before {
-                        //     //     content: '';
-                        //     //     position: absolute;
-                        //     //     top: 50%;
-                        //     //     left: 50%;
-                        //     //     transform: translate(-35%, -50%);
-                        //     //     width: 2px;
-                        //     //     height: clamp(38rem, 100vh, 100vh);
-                        //     //     background: $sunderSnow;
-                        //     // }
-                        // }
-                        // .topDot {
-                        //     &::before {
-                        //         top: 0;
-                        //         transform: translate(-35%, 2px);
-                        //     }
-                        // }
-                        // .bottomDot {
-                        //     &::before {
-                        //         top: auto;
-                        //         bottom: 0;
-                        //         transform: translate(-35%, -2px);
-                        //     }
-                        // }
                     }
-                    // .block2,
-                    // .block4 {
-                    //     flex-direction: row-reverse;
-                    // }
                 }
             }
         }
@@ -674,7 +601,6 @@
                     align-items: flex-end;
                     transform: translate(0, 0);
                     .imgWrapper {
-                        // width: 68vw;
                         width: calc(12rem + 40vw);
                         height: calc(28rem + 28vw);
                         border-radius: calc(0.4rem + 0.2vw) 0 0 calc(0.4rem + 0.2vw);
@@ -735,13 +661,11 @@
                                 transform: translate(-50%, -50%) scale(1.2);
                             }
                             .playIconFrame {
-                                // transform: translate(calc(1.2rem + 3.2vw), 0.2rem);
                                 transform: translate(calc(1.2rem + 2.2vw), 0.2rem);
                             }
                           }
                     }
                     .phonesWrapper {
-                        // width: 64%;
                         width: calc(20rem + 20vw);
                         transform: translate(-50%, -24%);
                     }
@@ -788,7 +712,6 @@
                 }
             }
             &Active {
-                // transform: translate(0, -58vh);
                 transform: $nav-shift;
             }
         }
@@ -847,7 +770,6 @@
                                 font-weight: 450;
                             }
                             .playIconFrame {
-                            // transform: translate(5.6vw, 0.2rem);
                             transform: translate(calc(1.2rem + 1.6vw), 0.2rem);
                             
                                 .playIcon {

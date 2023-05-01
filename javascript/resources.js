@@ -157,17 +157,10 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.to("#textWrapper1", {
   transform: "translate(0, 0)",
   scrollTrigger: {
-    // trigger: ".smartHeader",
     trigger: ".prodImg1",
     scrub: 0.1,
     start: "top 5%",
-    // end: "180% top",
     end: "bottom top",
-    // markers: {
-    //   indent: 124,
-    //   startColor: "violet",
-    //   endColor: "violet",
-    // },
   },
 });
 
@@ -178,10 +171,6 @@ gsap.to("#textWrapper2", {
     scrub: 0.1,
     start: "top 5%",
     end: "bottom top",
-    // markers: {
-    //   startColor: "coral",
-    //   endColor: "coral",
-    // },
   },
 });
 
@@ -195,15 +184,10 @@ gsap.to(".content", {
     scrub: true,
     start: "top top",
     end: "bottom bottom",
-    // markers: {
-    //   startColor: "violet",
-    //   endColor: "violet",
-    // },
   },
 });
 
 gsap.to(".column", {
-  // transform: "translate(-36%, -88%)",
   transform: "translate(-36%, calc(0.2vw - 88%))",
   ease: "none",
   scrollTrigger: {
@@ -211,10 +195,6 @@ gsap.to(".column", {
     scrub: true,
     start: "top top",
     end: "bottom bottom",
-    // markers: {
-    //   startColor: "violet",
-    //   endColor: "violet",
-    // },
   },
 });
 // let columnTl = gsap.timeline({
@@ -302,63 +282,10 @@ rowWidthTl
     width: "calc(10rem + 48vw)",
   });
 
-// let rowWidthTl = gsap.timeline({
-//   ease: "none",
-//   scrollTrigger: {
-//     trigger: ".meetTheTeam",
-//     scrub: true,
-//     start: "top top",
-//     end: "60% top",
-//     // markers: true,
-//   },
-// });
-// rowWidthTl
-//   .fromTo(
-//     ".row",
-//     { width: "calc(10rem + 41vw)" },
-//     { width: "calc(10rem + 41vw)" }
-//   )
-//   .fromTo(
-//     ".row",
-//     { width: "calc(10rem + 41vw)" },
-//     { width: "calc(10rem + 41vw)" }
-//   )
-//   .fromTo(
-//     ".row",
-//     { width: "calc(10rem + 41vw)" },
-//     { width: "calc(10rem + 46vw)" }
-//   )
-//   .fromTo(
-//     ".row",
-//     { width: "calc(10rem + 46vw)" },
-//     { width: "calc(10rem + 46vw)" }
-//   )
-//   .fromTo(
-//     ".row",
-//     { width: "calc(10rem + 46vw)" },
-//     { width: "calc(10rem + 46vw)" }
-//   )
-//   .fromTo(
-//     ".row",
-//     { width: "calc(10rem + 46vw)" },
-//     { width: "calc(10rem + 48vw)" }
-//   )
-//   .fromTo(
-//     ".row",
-//     { width: "calc(10rem + 48vw)" },
-//     { width: "calc(10rem + 48vw)" }
-//   )
-//   .fromTo(
-//     ".row",
-//     { width: "calc(10rem + 48vw)" },
-//     { width: "calc(10rem + 48vw)" }
-//   );
-
 // Image Reels
 
 gsap.to("#col1-lg", {
   y: "-21%",
-  // y: window.innerWidth <= 1248 ? "0" : "-21%",
   ease: "none",
   scrollTrigger: {
     trigger: "#reel-lg",
@@ -369,7 +296,6 @@ gsap.to("#col1-lg", {
 });
 gsap.to("#col2-lg", {
   y: "-29%",
-  // y: window.innerWidth <= 1248 ? "0" : "-29%",
   ease: "none",
   scrollTrigger: {
     trigger: "#reel-lg",
@@ -380,7 +306,6 @@ gsap.to("#col2-lg", {
 });
 gsap.to("#col3-lg", {
   y: "-34.3%",
-  // y: window.innerWidth <= 1248 ? "0" : "-34.3%",
   ease: "none",
   scrollTrigger: {
     trigger: "#reel-lg",
@@ -404,7 +329,6 @@ gsap.to("#col4-lg", {
 
 gsap.to("#col2-md", {
   y: "-10%",
-  // y: window.innerWidth <= 1248 ? "0" : "-29%",
   ease: "none",
   scrollTrigger: {
     trigger: "#reel-md",
@@ -418,7 +342,6 @@ gsap.to("#col2-md", {
 
 gsap.to("#col1-sm", {
   y: "-9.1%",
-  // y: window.innerWidth <= 1248 ? "0" : "-29%",
   ease: "none",
   scrollTrigger: {
     trigger: "#reel-md",

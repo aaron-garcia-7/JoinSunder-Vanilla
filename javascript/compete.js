@@ -81,15 +81,10 @@ let swiper = new Swiper(".mySwiper", {
   slidesPerView: 2, // use breakpoints below
   spaceBetween: 20,
   // loop: true,
-  // centeredSlides: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
-  // navigation: {
-  //   nextEl: ".swiper-button-next",
-  //   prevEl: ".swiper-button-prev",
-  // },
   autoplay: {
     delay: 6000,
     disableOnInteraction: false,
