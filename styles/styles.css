@@ -1000,10 +1000,6 @@ input::-webkit-inner-spin-button {
     /* position: see individual page style sheet */
     width: calc(6.4rem + 2vw);
   }
-  .burgerContainer .burger {
-    width: calc(3rem + 0.8vw);
-    height: calc(3rem + 0.8vw);
-  }
   .nav {
     height: 58vh;
   }

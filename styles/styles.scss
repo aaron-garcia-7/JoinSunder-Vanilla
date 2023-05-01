@@ -148,6 +148,7 @@ input::-webkit-inner-spin-button {
 }
 
 .burgerContainer {
+  // border: 1px dashed coral;
   position: fixed;
   bottom: 2.4rem;
   left: 50%;
@@ -478,6 +479,7 @@ input::-webkit-inner-spin-button {
     }
   } 
   .closeVideo {
+    // border: 1px dashed yellow;
     position: absolute;
     bottom: 2.4rem;
     left: 50%;
@@ -717,12 +719,12 @@ input::-webkit-inner-spin-button {
     width: calc(6.4rem + 2vw);
   }
 
-  .burgerContainer {
-    .burger {
-      width: calc(3rem + 0.8vw);
-      height: calc(3rem + 0.8vw);
-    }
-  }
+  // .burgerContainer {
+  //   .burger {
+  //     width: calc(3.2rem + 0.8vw);
+  //     height: calc(3.2rem + 0.8vw);
+  //   }
+  // }
 
   .nav {
     height: 58vh;
