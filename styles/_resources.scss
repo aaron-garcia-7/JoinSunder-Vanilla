@@ -286,7 +286,7 @@
                           display: flex;
                           align-items: center;
                           justify-content: center;
-                          transform: translate(calc(1rem + 4.2vw), 0.2rem);
+                          transform: translate(calc(1.2rem + 4.2vw), 0.3rem);
                           overflow: hidden;
                           transition: transform 0.4s cubic-bezier(.05,.6,.56,1), opacity 0.2s ease;
                           .playIcon {
@@ -315,20 +315,21 @@
                 }
                 .subText {
                     position: absolute;
-                    bottom: 50%;
-                    right: 12vw;
-                    transform: translate(0, 280%);
+                    // bottom: 50%;
+                    bottom: 2%;
+                    right: 14vw;
+                    // transform: translate(0, 280%);
                     z-index: 1;
                     h3 {
                         color: #262626;
                         font-family: $saira;
-                        font-size: $L-Text;
-                        font-weight: 300;
+                        font-size: $XL-Text;
+                        font-weight: 600;
                     }
                     .strong {
                         font-size: $Hero-Text;
                         font-weight: 700;
-                        transform: translate(0, -24px);
+                        // transform: translate(0, -24px);
                     }
                 }
                 .backgroundGlyph {
@@ -471,6 +472,16 @@
             }
         }
         // GLOBAL COMPONENTS
+        .mainContent {
+            .enzy {
+                .enzyHero {
+                    .subText {
+                        right: 10vw;
+                        bottom: -2%;
+                    }
+                }
+            }
+        }
     }
 }
 @media (max-width: 1248px) {
@@ -521,7 +532,12 @@
                         }
                     }
                     .subText {
-                        transform: translate(0, 20rem);
+                        // transform: translate(0, 20rem);
+                        bottom: 8%;
+                        right: 14vw;
+                        h3 {
+                            font-size: $L-Text;
+                        }
                     }
                 }
                 .appUsage {
@@ -564,7 +580,9 @@
                         width: calc(64rem + 24vw);
                     }
                     .subText {
-                        transform: translate(0, 14rem);
+                        // transform: translate(0, 14rem);
+                        bottom: 12%;
+                        right: 10vw;
                     }
                 }
                 .appUsage {
@@ -670,10 +688,12 @@
                         transform: translate(-50%, -24%);
                     }
                     .subText {
+                        // border: 2px dashed yellow;
                         transform: translate(-50%, 240%);
-                        width: 40%;
+                        width: 80%;
                         height: 20%;
                         text-align: center;
+                        line-height: 120%;
                         h3 {
                             margin-bottom: 0.8rem;
                         }

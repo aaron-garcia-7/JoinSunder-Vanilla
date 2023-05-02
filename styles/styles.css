@@ -4472,8 +4472,8 @@ input::-webkit-inner-spin-button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transform: translate(calc(1rem + 4.2vw), 0.2rem);
-          transform: translate(calc(1rem + 4.2vw), 0.2rem);
+  -webkit-transform: translate(calc(1.2rem + 4.2vw), 0.3rem);
+          transform: translate(calc(1.2rem + 4.2vw), 0.3rem);
   overflow: hidden;
   -webkit-transition: opacity 0.2s ease, -webkit-transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1);
   transition: opacity 0.2s ease, -webkit-transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1);
@@ -4514,25 +4514,21 @@ input::-webkit-inner-spin-button {
 
 .resources .mainContent .enzy .enzyHero .subText {
   position: absolute;
-  bottom: 50%;
-  right: 12vw;
-  -webkit-transform: translate(0, 280%);
-          transform: translate(0, 280%);
+  bottom: 2%;
+  right: 14vw;
   z-index: 1;
 }
 
 .resources .mainContent .enzy .enzyHero .subText h3 {
   color: #262626;
   font-family: "Saira", sans-serif;
-  font-size: calc(1rem + 1.2vw);
-  font-weight: 300;
+  font-size: calc(1.4rem + 1.4vw);
+  font-weight: 600;
 }
 
 .resources .mainContent .enzy .enzyHero .subText .strong {
   font-size: calc(1.6rem + 2.4vw);
   font-weight: 700;
-  -webkit-transform: translate(0, -24px);
-          transform: translate(0, -24px);
 }
 
 .resources .mainContent .enzy .enzyHero .backgroundGlyph {
@@ -4708,6 +4704,10 @@ input::-webkit-inner-spin-button {
     -webkit-transform: translate(0, -6%);
             transform: translate(0, -6%);
   }
+  .resources .mainContent .enzy .enzyHero .subText {
+    right: 10vw;
+    bottom: -2%;
+  }
 }
 
 @media (max-width: 1248px) {
@@ -4751,8 +4751,11 @@ input::-webkit-inner-spin-button {
             transform: translate(calc(1.2rem + 3.2vw), 0.2rem);
   }
   .resources .mainContent .enzy .enzyHero .subText {
-    -webkit-transform: translate(0, 20rem);
-            transform: translate(0, 20rem);
+    bottom: 8%;
+    right: 14vw;
+  }
+  .resources .mainContent .enzy .enzyHero .subText h3 {
+    font-size: calc(1rem + 1.2vw);
   }
   .resources .mainContent .enzy .appUsage {
     height: auto;
@@ -4791,8 +4794,8 @@ input::-webkit-inner-spin-button {
     width: calc(64rem + 24vw);
   }
   .resources .mainContent .enzy .enzyHero .subText {
-    -webkit-transform: translate(0, 14rem);
-            transform: translate(0, 14rem);
+    bottom: 12%;
+    right: 10vw;
   }
   .resources .mainContent .enzy .appUsage {
     padding: 4rem 0 16rem 0;
@@ -4908,9 +4911,10 @@ input::-webkit-inner-spin-button {
   .resources .mainContent .enzy .enzyHero .subText {
     -webkit-transform: translate(-50%, 240%);
             transform: translate(-50%, 240%);
-    width: 40%;
+    width: 80%;
     height: 20%;
     text-align: center;
+    line-height: 120%;
   }
   .resources .mainContent .enzy .enzyHero .subText h3 {
     margin-bottom: 0.8rem;
