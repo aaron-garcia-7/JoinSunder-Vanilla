@@ -121,11 +121,12 @@
                 .row {
                     display: flex;
                     justify-content: space-between;
-                    width: calc(10rem + 36vw); // HQ width
+                    // width: calc(10rem + 36vw); // HQ width
                     // width: calc(10rem + 41vw); // Best width
                     // width: calc(10rem + 46vw); // Dream width
-                    // width: calc(10rem + 48vw); // Sunder width
-                    transform: translate(-49%, -50%);
+                    width: calc(10rem + 48vw); // Sunder width
+                    // transform: translate(-49%, -50%);
+                    transform: translate(-50%, -50%);
                     padding: 1.4rem;
                     z-index: 2;
                     &::before,
@@ -149,15 +150,19 @@
                     }
                 }
                 .column {
-                    height: calc(12rem + 14vw); // Super Responsive
+                    // border: 1px solid black;
+                    // height: calc(12rem + 14vw); // Super Responsive
+                    height: calc(6rem + 7vw);
                     left: 50%;
-                    transform: translate(-36%, calc(0.2vw - 12%));
+                    // transform: translate(-36%, calc(0.2vw - 12%));
+                    transform: translate(-49%, calc(0.2vw - 24%));
                     padding: 1rem;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
                     h2 {
                         font-weight: 675;
+                        // color: $sunderRoyal;
                     }
                 }
             }
@@ -166,33 +171,31 @@
             }
         }
 
-        .reel {
-            height: calc(65rem + 69vw); // Without the parallax, this height is responsive (ends at) the 2 & 4 column's sixth picture.
-            width: 100vw;
+        .board {
+            // border: 2px dashed lightcoral;
+            width: 96vw;
             display: flex;
-            gap: 1.6rem;
-            justify-content: space-between;
-            overflow: hidden;
-            
-            .columnOuter {
-              width: 25%;
-                &:nth-of-type(2),
-                &:nth-of-type(4) {
-                    transform: translate(0, 10%);
-                }
-
-              .reelImg {
-                  position: relative;
-                  height: calc(16rem + 16vw);
-                  margin-bottom: calc(0.6rem + 1.2vw);
-                  border-radius: calc(0.4rem + 0.4vw);
-                  overflow: hidden;
-                  img {
-                      width: 100%;
-                      height: 100%;
-                      object-fit: cover;
-                  }
-                  figcaption {
+            flex-wrap: wrap;
+            gap: calc(1rem + 1vw);
+            justify-content: center;
+            margin-bottom: 4rem;
+            .boardGroup {
+                // border: 2px dashed coral;
+                width: calc(6rem + 36vw);
+                display: flex;
+                gap: calc(1rem + 1vw);
+                .boardImg {
+                    position: relative;
+                    height: calc(16rem + 16vw);
+                    // margin-bottom: calc(0.6rem + 1.2vw);
+                    border-radius: calc(0.4rem + 0.4vw);
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    figcaption {
                     position: absolute;
                     bottom: 0;
                     left: 0;
@@ -214,23 +217,76 @@
                         font-size: $XS-Text;
                         font-weight: 200;
                     }
-                  }
-              }
-    
-              &Active {
-                transform: translate(0, -50vh);
-              }
-            }
-    
-            &Active {
-              position: absolute;
-              right: 0;
+                    }
+                }
             }
         }
-        #reel-md,
-        #reel-sm {
-            display: none;
-        }
+
+        // .reel {
+        //     height: calc(65rem + 69vw); // Without the parallax, this height is responsive (ends at) the 2 & 4 column's sixth picture.
+        //     width: 100vw;
+        //     display: flex;
+        //     gap: 1.6rem;
+        //     justify-content: space-between;
+        //     overflow: hidden;
+            
+        //     .columnOuter {
+        //       width: 25%;
+        //         &:nth-of-type(2),
+        //         &:nth-of-type(4) {
+        //             transform: translate(0, 10%);
+        //         }
+
+        //       .reelImg {
+        //           position: relative;
+        //           height: calc(16rem + 16vw);
+        //           margin-bottom: calc(0.6rem + 1.2vw);
+        //           border-radius: calc(0.4rem + 0.4vw);
+        //           overflow: hidden;
+        //           img {
+        //               width: 100%;
+        //               height: 100%;
+        //               object-fit: cover;
+        //           }
+        //           figcaption {
+        //             position: absolute;
+        //             bottom: 0;
+        //             left: 0;
+        //             width: 100%;
+        //             height: 18%;
+        //             padding: 0.8rem 1.2rem;
+        //             display: flex;
+        //             flex-direction: column;
+        //             justify-content: flex-end;
+        //             background: linear-gradient(0deg, #000000ac 24%, #00000000);
+        //             z-index: 2;
+        //             h4, h5 {
+        //                 color: $sunderSnow;
+        //                 font-family: $monument;
+        //                 font-size: $S-Text;
+        //                 font-weight: 675;
+        //             }
+        //             h5 {
+        //                 font-size: $XS-Text;
+        //                 font-weight: 200;
+        //             }
+        //           }
+        //       }
+    
+        //       &Active {
+        //         transform: translate(0, -50vh);
+        //       }
+        //     }
+    
+        //     &Active {
+        //       position: absolute;
+        //       right: 0;
+        //     }
+        // }
+        // #reel-md,
+        // #reel-sm {
+        //     display: none;
+        // }
         
         .enzy {
             position: relative;
@@ -495,29 +551,37 @@
                 }
             }
 
-            .reel {
-                gap: 1.2rem;
-                height: calc(131rem + 135vw); // Without the parallax, this height is responsive (ends at) the 2 & 4 column's sixth picture.
-                .columnOuter {
-                  width: 32%;
-                  &:nth-of-type(2) {
-                      transform: translate(0, 5%);
-                  }
-                  &:nth-of-type(4) {
-                    display: none;
-                  }
-
-                  .reelImg {
-                    height: calc(18rem + 18vw);
-                  }
+            .board {
+                // border: 2px dashed coral;
+                .boardImg {
+                    // position: relative;
+                    height: calc(14rem + 14vw);
                 }
             }
-            #reel-lg {
-                display: none;
-            }
-            #reel-md {
-                display: flex;
-            }
+
+            // .reel {
+            //     gap: 1.2rem;
+            //     height: calc(131rem + 135vw); // Without the parallax, this height is responsive (ends at) the 2 & 4 column's sixth picture.
+            //     .columnOuter {
+            //       width: 32%;
+            //       &:nth-of-type(2) {
+            //           transform: translate(0, 5%);
+            //       }
+            //       &:nth-of-type(4) {
+            //         display: none;
+            //       }
+
+            //       .reelImg {
+            //         height: calc(18rem + 18vw);
+            //       }
+            //     }
+            // }
+            // #reel-lg {
+            //     display: none;
+            // }
+            // #reel-md {
+            //     display: flex;
+            // }
 
             .enzy {
                 .enzyHero {
@@ -548,29 +612,44 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .resources {
+        .mainContent {
+            .board {
+                .boardGroup {
+                    width: calc(16rem + 38vw);
+                    .boardImg {
+                        height: calc(14rem + 14vw);
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 856px) {
     .resources {
         .mainContent {
-            .reel {
-                gap: 1rem;
-                height: calc(188rem + 192vw); // Without the parallax, this height is responsive (ends at) the 2 & 4 column's sixth picture.
-                .columnOuter {
-                  width: 50%;
-                  &:nth-of-type(2) {
-                      transform: translate(0, 0);
-                  }
-                  &:nth-of-type(3) {
-                    display: none;
-                  }
-                }
-            }
-            #reel-lg,
-            #reel-md {
-                display: none;
-            }
-            #reel-sm {
-                display: flex;
-            }
+            // .reel {
+            //     gap: 1rem;
+            //     height: calc(188rem + 192vw); // Without the parallax, this height is responsive (ends at) the 2 & 4 column's sixth picture.
+            //     .columnOuter {
+            //       width: 50%;
+            //       &:nth-of-type(2) {
+            //           transform: translate(0, 0);
+            //       }
+            //       &:nth-of-type(3) {
+            //         display: none;
+            //       }
+            //     }
+            // }
+            // #reel-lg,
+            // #reel-md {
+            //     display: none;
+            // }
+            // #reel-sm {
+            //     display: flex;
+            // }
             .enzy {
                 .enzyHero {
                     > * {
@@ -646,6 +725,16 @@
                         font-size: $Hero-Text;
                         font-weight: 675;
                         margin-bottom: 1.2rem;
+                    }
+                }
+            }
+
+            .board {
+                .boardGroup {
+                    .boardImg {
+                        figcaption {
+                            padding: 0.4rem 0.6rem;
+                        }
                     }
                 }
             }
@@ -759,26 +848,27 @@
                 top: 1.2rem;
                 right: 1.2rem;
             }
-            .reel {
-                gap: 0.8rem;
-                height: calc(156rem + 160vw); // Without the parallax, this height is responsive (ends at) the 2 & 4 column's sixth picture.
-                .columnOuter {
-                  .reelImg {
-                    height: calc(15rem + 15vw);
-                    figcaption {
-                        height: 24%;
-                        padding: 0.2rem 0.4rem;
-                    }
-                  }
-                }
-            }
-            #reel-lg,
-            #reel-md {
-                display: none;
-            }
-            #reel-sm {
-                display: flex;
-            }
+
+            // .reel {
+            //     gap: 0.8rem;
+            //     height: calc(156rem + 160vw); // Without the parallax, this height is responsive (ends at) the 2 & 4 column's sixth picture.
+            //     .columnOuter {
+            //       .reelImg {
+            //         height: calc(15rem + 15vw);
+            //         figcaption {
+            //             height: 24%;
+            //             padding: 0.2rem 0.4rem;
+            //         }
+            //       }
+            //     }
+            // }
+            // #reel-lg,
+            // #reel-md {
+            //     display: none;
+            // }
+            // #reel-sm {
+            //     display: flex;
+            // }
 
             .enzy {
                 .enzyHero {
@@ -823,6 +913,18 @@
 @media (max-width: 480px) {
     .resources {
         .mainContent {
+            .board {
+                .boardGroup {
+                    width: calc(12rem + 38vw);
+                    .boardImg {
+                        height: calc(12rem + 12vw);
+                        figcaption {
+                            height: 24%;
+                            padding: 0.2rem 0.4rem;
+                        }
+                    }
+                }
+            }
             .enzy {
                 .enzyHero {
                     .cta2Aside {

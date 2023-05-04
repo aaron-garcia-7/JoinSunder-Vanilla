@@ -188,168 +188,133 @@ gsap.to(".content", {
 });
 
 gsap.to(".column", {
-  transform: "translate(-36%, calc(0.2vw - 88%))",
+  // transform: "translate(-36%, calc(0.2vw - 88%))",
+  transform: "translate(-49%, calc(0.2vw - 77%))",
   ease: "none",
   scrollTrigger: {
     trigger: ".meetTheTeam",
-    scrub: true,
-    start: "top top",
+    // scrub: true,
+    toggleActions: "play none none reverse",
+    start: "center center",
     end: "bottom bottom",
+    // markers: true,
   },
 });
-// let columnTl = gsap.timeline({
-//   // transform: "translate(-36%, -88%)",
-//   ease: "none",
-//   scrollTrigger: {
-//     trigger: ".meetTheTeam",
-//     scrub: true,
-//     start: "top top",
-//     end: "bottom bottom",
-//     // markers: {
-//     //   startColor: "violet",
-//     //   endColor: "violet",
-//     // },
-//   },
-// });
-// columnTl
-//   .to(".column", {
-//     transform: "translate(-36%, 0%)",
-//   })
-//   .to(".column", {
-//     transform: "translate(-36%, -22%)",
-//   })
-//   .to(".column", {
-//     transform: "translate(-36%, -22%)",
-//   })
-//   .to(".column", {
-//     transform: "translate(-36%, -44%)",
-//   })
-//   .to(".column", {
-//     transform: "translate(-36%, -44%)",
-//   })
-//   .to(".column", {
-//     transform: "translate(-36%, -66%)",
-//   })
-//   .to(".column", {
-//     transform: "translate(-36%, -66%)",
-//   })
-//   .to(".column", {
-//     transform: "translate(-36%, -88%)",
-//   })
-//   .to(".column", {
-//     transform: "translate(-36%, -88%)",
-//   });
 
-let rowWidthTl = gsap.timeline({
+// let rowWidthTl = gsap.timeline({
+gsap.to(".row", {
+  width: "calc(10rem + 53vw)",
   ease: "none",
   scrollTrigger: {
     trigger: ".meetTheTeam",
-    scrub: true,
-    start: "top top",
+    // scrub: true,
+    toggleActions: "play none none reverse",
+    // start: "top top",
+    start: "center center",
     end: "60% top",
     // markers: true,
   },
 });
-rowWidthTl
-  .to(".row", {
-    width: "calc(10rem + 36vw)",
-  })
-  .to(".row", {
-    width: "calc(10rem + 41vw)",
-  })
-  .to(".row", {
-    width: "calc(10rem + 41vw)",
-  })
-  .to(".row", {
-    width: "calc(10rem + 41vw)",
-  })
-  .to(".row", {
-    width: "calc(10rem + 46vw)",
-  })
-  .to(".row", {
-    width: "calc(10rem + 46vw)",
-  })
-  .to(".row", {
-    width: "calc(10rem + 46vw)",
-  })
-  .to(".row", {
-    width: "calc(10rem + 48vw)",
-  })
-  .to(".row", {
-    width: "calc(10rem + 48vw)",
-  })
-  .to(".row", {
-    width: "calc(10rem + 48vw)",
-  });
+// rowWidthTl
+//   .to(".row", {
+//     width: "calc(10rem + 36vw)",
+//   })
+//   .to(".row", {
+//     width: "calc(10rem + 41vw)",
+//   })
+//   .to(".row", {
+//     width: "calc(10rem + 41vw)",
+//   })
+//   .to(".row", {
+//     width: "calc(10rem + 41vw)",
+//   })
+//   .to(".row", {
+//     width: "calc(10rem + 46vw)",
+//   })
+//   .to(".row", {
+//     width: "calc(10rem + 46vw)",
+//   })
+//   .to(".row", {
+//     width: "calc(10rem + 46vw)",
+//   })
+//   .to(".row", {
+//     width: "calc(10rem + 48vw)",
+//   })
+//   .to(".row", {
+//     width: "calc(10rem + 48vw)",
+//   })
+//   .to(".row", {
+//     width: "calc(10rem + 48vw)",
+//   });
 
-// Image Reels
+// // Image Reels
 
-gsap.to("#col1-lg", {
-  y: "-21%",
-  ease: "none",
-  scrollTrigger: {
-    trigger: "#reel-lg",
-    scrub: 0.1,
-    start: "top top",
-    end: "bottom bottom",
-  },
-});
-gsap.to("#col2-lg", {
-  y: "-29%",
-  ease: "none",
-  scrollTrigger: {
-    trigger: "#reel-lg",
-    scrub: 0.1,
-    start: "top top",
-    end: "bottom bottom",
-  },
-});
-gsap.to("#col3-lg", {
-  y: "-34.3%",
-  ease: "none",
-  scrollTrigger: {
-    trigger: "#reel-lg",
-    scrub: 0.1,
-    start: "top top",
-    end: "bottom bottom",
-  },
-});
-gsap.to("#col4-lg", {
-  y: "-29%",
-  ease: "none",
-  scrollTrigger: {
-    trigger: "#reel-lg",
-    scrub: 0.1,
-    start: "top top",
-    end: "bottom bottom",
-  },
-});
+// gsap.to("#col1-lg", {
+//   y: "-21%",
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: "#reel-lg",
+//     scrub: 0.1,
+//     start: "top top",
+//     end: "bottom bottom",
+//   },
+// });
+// gsap.to("#col2-lg", {
+//   y: "-29%",
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: "#reel-lg",
+//     scrub: 0.1,
+//     start: "top top",
+//     end: "bottom bottom",
+//   },
+// });
+// gsap.to("#col3-lg", {
+//   y: "-34.3%",
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: "#reel-lg",
+//     scrub: 0.1,
+//     start: "top top",
+//     end: "bottom bottom",
+//   },
+// });
+// gsap.to("#col4-lg", {
+//   y: "-29%",
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: "#reel-lg",
+//     scrub: 0.1,
+//     start: "top top",
+//     end: "bottom bottom",
+//   },
+// });
 
-// RESPONSIVE REELS (MEDIUM)
+// // RESPONSIVE REELS (MEDIUM)
 
-gsap.to("#col2-md", {
-  y: "-10%",
-  ease: "none",
-  scrollTrigger: {
-    trigger: "#reel-md",
-    scrub: 0.1,
-    start: "top top",
-    end: "bottom bottom",
-  },
-});
+// gsap.to("#col2-md", {
+//   y: "-10%",
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: "#reel-md",
+//     scrub: 0.1,
+//     start: "top top",
+//     end: "bottom bottom",
+//   },
+// });
 
-// RESPONSIVE REELS (SMALL)
+// // RESPONSIVE REELS (SMALL)
 
-gsap.to("#col1-sm", {
-  y: "-9.1%",
-  ease: "none",
-  scrollTrigger: {
-    trigger: "#reel-md",
-    scrub: 0.1,
-    start: "top top",
-    end: "bottom bottom",
-  },
-});
+// gsap.to("#col1-sm", {
+//   y: "-9.1%",
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: "#reel-md",
+//     scrub: 0.1,
+//     start: "top top",
+//     end: "bottom bottom",
+//   },
+// });
 
 // Utility
 
