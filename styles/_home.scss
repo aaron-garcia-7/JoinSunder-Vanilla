@@ -8,6 +8,7 @@
   // GLOBAL COMPONENTS
   .logo {
     position: fixed;
+    // display: none;
   }
   .navLogo {
     cursor: pointer;
@@ -35,6 +36,7 @@
         top: 50vh;
         left: calc(2rem + 4vw);
         transform: translate(0, -56%);
+        // transform: translate(6%, -56%) scale(1.25);
         transition: transform $nav-transition;
         &Active {
           transform: translate(0, calc(-56% - 50vh));
@@ -114,6 +116,7 @@
         top: calc(100% - 16vh);
         left: calc(2rem + 4vw);
         display: flex;
+        // display: none;
         transition: transform $nav-transition;
         opacity: 0;
         animation: appear 0.8s ease 1.8s forwards;
@@ -363,6 +366,7 @@
         padding: 12rem 0 0 2.4rem;
         .heroText {
           transform: translate(8%, -32%);
+          // transform: translate(12%, -32%) scale(1.2);
         }
         .heroBtns {
           // border: 2px dashed coral;
@@ -371,6 +375,7 @@
           gap: 2rem;
           left: 50%;
           transform: translate(8%, -50%);
+          // display: none;
         }
       }
       .reel {

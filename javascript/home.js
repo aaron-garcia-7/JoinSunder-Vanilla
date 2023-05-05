@@ -15,7 +15,7 @@ const col1 = document.querySelector(".col1");
 const col2 = document.querySelector(".col2");
 
 //
-// Image Reel Logic (Original)
+// Image Reel Logic
 //
 
 let isPlaying = false;
