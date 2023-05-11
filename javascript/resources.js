@@ -8,6 +8,7 @@ const nav = document.querySelector(".nav");
 const logo = document.querySelector(".logo");
 const navLogo = document.querySelector(".navLogo");
 const activePage = document.querySelectorAll(".activePage");
+const firstNavLink = document.querySelector("#firstNavLink");
 
 // Page Unique elements
 const mainContent = document.querySelector(".mainContent");
@@ -35,9 +36,25 @@ const toggleNav = () => {
     mainContent.classList.remove("mainContentActive");
   }
 };
-
 const closeNav = () => {
   navState = false;
+
+  if (navState) {
+    burger.classList.add("burgerActive");
+    nav.classList.add("navActive");
+    logo.classList.add("logoActive");
+    navLogo.classList.add("navLogoActive");
+    mainContent.classList.add("mainContentActive");
+  } else {
+    burger.classList.remove("burgerActive");
+    nav.classList.remove("navActive");
+    logo.classList.remove("logoActive");
+    navLogo.classList.remove("navLogoActive");
+    mainContent.classList.remove("mainContentActive");
+  }
+};
+const openNav = () => {
+  navState = true;
 
   if (navState) {
     burger.classList.add("burgerActive");
@@ -143,6 +160,28 @@ videoContainer.addEventListener("click", ({ target }) => {
     videoElement.pause();
   }
 });
+
+//
+// a11y tabIndex
+//
+
+logo.addEventListener("focusin", () => {
+  closeNav();
+});
+
+cta2.addEventListener("focusin", () => {
+  closeNav();
+});
+
+firstNavLink.addEventListener("focusin", () => {
+  openNav();
+  closeVideo();
+});
+
+navLogo.addEventListener("focusin", () => {
+  openNav();
+});
+
 videoElement.addEventListener("focus", () => {
   openVideo();
 });

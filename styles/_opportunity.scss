@@ -249,6 +249,13 @@ $pending: #BCD0D7;
                 scale: 0.16;
                 translate: -50% -50%;
                 cursor: pointer;
+                &:hover {
+                    .overlay {
+                        img {
+                            transform: scale(3.2) translate(12%, 0);
+                        }
+                    }
+                }
                 > * {
                     position: absolute;
                     top: 50%;
@@ -275,6 +282,7 @@ $pending: #BCD0D7;
                     img {
                         bottom: 16%;
                         transform: scale(2.8);
+                        transition: 0.3s ease;
                     }
                 }
                 .definitionVideo {
@@ -781,6 +789,13 @@ $pending: #BCD0D7;
                             color: $sunderRoyalLight;
                         }
                     }
+                    &:focus {
+                        background: $sunderSnow;
+                        &::before {
+                          color: $sunderRoyalLight !important;
+                          transition: color 0.3s ease;
+                        }
+                      }
                 }
                 .footerImg {
                     position: absolute;

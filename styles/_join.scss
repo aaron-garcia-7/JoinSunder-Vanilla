@@ -43,8 +43,12 @@
                 width: 100%;
                 display: flex;
                 justify-content: center;
-                img {
-                    width: calc(12rem + 4vw);
+                align-items: center;
+                a {
+                    width: auto;
+                    img {
+                        width: calc(12rem + 4vw);
+                    }
                 }
             }
             .contactForm {
@@ -141,8 +145,10 @@
                 padding-top: calc(2rem + 2vw);
                 .formLogo {
                     margin-bottom: calc(2rem + 2vw);
-                    img {
-                        width: calc(8rem + 4vw);
+                    a {
+                        img {
+                            width: calc(8rem + 4vw);
+                        }
                     }
                 }
                 .contactForm {

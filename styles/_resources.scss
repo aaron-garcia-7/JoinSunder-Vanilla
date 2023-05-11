@@ -321,6 +321,13 @@
                         cursor: pointer;
                         width: calc(6.8rem + 6.8vw);
                         height: calc(2.4rem + 1vw);
+                        &:focus {
+                            background: $sunderRoyalLight;
+                            &::before {
+                              color: $sunderSnow !important;
+                              transition: color 0.3s ease;
+                            }
+                          }
                           &::before {
                             content: 'Play Video';
                             position: absolute;
