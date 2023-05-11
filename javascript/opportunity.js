@@ -4,6 +4,7 @@ const nav = document.querySelector(".nav");
 const logo = document.querySelector(".logo");
 const navLogo = document.querySelector(".navLogo");
 const activePage = document.querySelector("#activePage");
+const firstNavLink = document.querySelector("#firstNavLink");
 
 // Page Unique elements
 const mainContent = document.querySelector(".mainContent");
@@ -55,6 +56,26 @@ const closeNav = () => {
   }
 };
 
+const openNav = () => {
+  navState = true;
+
+  if (navState) {
+    burger.classList.add("burgerActive");
+    nav.classList.add("navActive");
+    logo.classList.add("logoActive");
+    navLogo.classList.add("navLogoActive");
+    mainContent.classList.add("mainContentActive");
+    quoteSection.classList.add("quoteSectionActive");
+  } else {
+    burger.classList.remove("burgerActive");
+    nav.classList.remove("navActive");
+    logo.classList.remove("logoActive");
+    navLogo.classList.remove("navLogoActive");
+    mainContent.classList.remove("mainContentActive");
+    quoteSection.classList.remove("quoteSectionActive");
+  }
+};
+
 burger.addEventListener("click", toggleNav);
 mainContent.addEventListener("click", closeNav);
 activePage.addEventListener("click", closeNav);
@@ -80,6 +101,13 @@ videoFigure.addEventListener("click", () => {
   }
 });
 
+videoFigure.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    video.play();
+    overlay.style.opacity = "0";
+  }
+});
+
 window.addEventListener("scroll", () => {
   overlay.style.opacity = "1";
   video.pause();
@@ -97,6 +125,26 @@ cta2.addEventListener("mousemove", (e) => {
   cta2Circle.style.setProperty("--mouse-x", `${y}px`);
   cta2Circle.style.setProperty("--mouse-y", `${x}px`);
 });
+
+//
+// a11y tabIndex
+//
+
+logo.addEventListener("focusin", () => {
+  closeNav();
+});
+cta2.addEventListener("focusin", () => {
+  closeNav();
+});
+
+firstNavLink.addEventListener("focusin", () => {
+  openNav();
+});
+navLogo.addEventListener("focusin", () => {
+  openNav();
+});
+
+const closeVideo = () => null;
 
 //
 //

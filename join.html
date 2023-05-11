@@ -30,7 +30,9 @@
 
         <aside class="formPanel">
             <figure class="formLogo">
-                <img src="./assets/logoLight.svg" alt="Sunder">
+                <a href="./index.html" aria-labelledby="Return to the home screen" class="formLogo">
+                    <img src="./assets/logoLight.svg" alt="Sunder">
+                </a>
             </figure>
             <form class="contactForm" action="/contact" method="POST" name="contactSunder" netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true" hidden>
                 <input type="hidden" name="contactSunder" value="contact">
@@ -113,7 +115,7 @@
 
     <div class="nav">
         <div class="navSlider">
-            <a href="./index.html" class="navLink">
+            <a href="./index.html" class="navLink" id="firstNavLink">
                 <h3 class="linkTitle">Home</h3>
                 <img src="./images/navImages/navHome.webp" alt="" class="linkImg desktopImg">
                 <img src="./images/navImages/navHomeSmall.webp" alt="" class="linkImg mobileImg">
@@ -144,7 +146,7 @@
                 <img src="./images/navImages/navJoinSmall.webp" alt="" class="linkImg mobileImg">
             </a>
         </div>
-        <div class="navSwiper">
+        <div class="navSwiper"> 
             <a href="./index.html"class="navLink">
                 <h3 class="linkTitle">Home</h3>
                 <img src="./images/navImages/navHomeSmall.webp" alt="" class="linkImg">

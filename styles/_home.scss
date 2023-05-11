@@ -135,6 +135,9 @@
         padding: 0.4rem 1.4rem;
         width: calc(7.8rem + 7.8vw);
         height: calc(2.4rem + 1vw);
+        &:focus {
+          background: $sunderRoyalLight;
+        }
       }
       .cta {
         border: 1px solid $sunderSnow;

@@ -19,6 +19,11 @@ if (cta) {
     ctaCircle.style.setProperty("--mouse-x", `${y}px`);
     ctaCircle.style.setProperty("--mouse-y", `${x}px`);
   });
+
+  cta.addEventListener("focusin", () => {
+    closeNav();
+    closeVideo();
+  });
 }
 
 //

@@ -5,6 +5,8 @@ const logo = document.querySelector(".logo");
 const navLogo = document.querySelector(".navLogo");
 const activePage = document.querySelector("#activePage");
 const activePageSwiper = document.querySelector("#activePageSwiper");
+const firstNavLink = document.querySelector("#firstNavLink");
+const lastNavLink = document.querySelector("#lastNavLink");
 // Page Unique elements
 const mainContent = document.querySelector(".mainContent");
 const aside = document.querySelector(".aside");
@@ -121,6 +123,34 @@ const closeNav = () => {
   }
 };
 
+const openNav = () => {
+  navState = true;
+
+  if (navState) {
+    burger.classList.add("burgerActive");
+    nav.classList.add("navActive");
+    logo.classList.add("logoActive");
+    navLogo.classList.add("navLogoActive");
+    aside.classList.add("asideActive");
+    heroText.classList.add("heroTextActive");
+    heroBtns.classList.add("heroBtnsActive");
+    reel.classList.add("reelActive");
+    col1.classList.add("col1Active");
+    col2.classList.add("col2Active");
+  } else {
+    burger.classList.remove("burgerActive");
+    nav.classList.remove("navActive");
+    logo.classList.remove("logoActive");
+    navLogo.classList.remove("navLogoActive");
+    aside.classList.remove("asideActive");
+    heroText.classList.remove("heroTextActive");
+    heroBtns.classList.remove("heroBtnsActive");
+    reel.classList.remove("reelActive");
+    col1.classList.remove("col1Active");
+    col2.classList.remove("col2Active");
+  }
+};
+
 burger.addEventListener("click", toggleNav);
 mainContent.addEventListener("click", closeNav);
 activePage.addEventListener("click", closeNav);
@@ -201,6 +231,20 @@ videoContainer.addEventListener("click", ({ target }) => {
 });
 videoElement.addEventListener("focus", () => {
   openVideo();
+});
+
+logo.addEventListener("focusin", () => {
+  closeVideo();
+  closeNav();
+});
+
+lastNavLink.addEventListener("focusin", () => {
+  openNav();
+});
+
+firstNavLink.addEventListener("focusin", () => {
+  openNav();
+  closeVideo();
 });
 
 //
