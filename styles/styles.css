@@ -120,7 +120,7 @@ input::-webkit-inner-spin-button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.28s;
+  transition: transform 0.4s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.12s;
 }
 .logoActive {
   pointer-events: none;
@@ -129,7 +129,7 @@ input::-webkit-inner-spin-button {
 }
 .logoActive .logoImg {
   transform: translate(0, -112%);
-  transition: transform 0.4s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.12s;
+  transition: transform 0.4s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0s;
 }
 
 .burgerContainer {
@@ -261,7 +261,7 @@ input::-webkit-inner-spin-button {
 }
 .nav .navSlider .linkImg {
   background: #f7f7f7;
-  width: 20vw;
+  width: calc(8rem + 12vw);
   height: calc(7rem + 4vw);
   border-radius: calc(0.6rem + 0.1vw);
   object-fit: cover;
@@ -644,6 +644,19 @@ input::-webkit-inner-spin-button {
     transform: translate(50%, 0);
   }
 }
+@media (max-height: 620px) {
+  .nav .navSlider .linkImg {
+    width: calc(6rem + 10vw);
+    height: calc(5rem + 3vw);
+  }
+  .nav .navSlider .mobileImg {
+    display: none;
+  }
+  .nav .navSwiper .navLink .linkImg {
+    width: calc(6rem + 10vw);
+    height: calc(5rem + 3vw);
+  }
+}
 @media (min-width: 2048px) {
   .nav .navSlider .linkImg,
   .nav .navSwiper .linkImg {
@@ -700,6 +713,33 @@ input::-webkit-inner-spin-button {
 @media (max-width: 480px) {
   .nav {
     height: 50vh;
+  }
+  .navSlider {
+    display: flex !important;
+  }
+  .navSliderActive {
+    display: flex !important;
+  }
+  .navSwiper {
+    display: none !important;
+  }
+  .navSwiperActive {
+    display: none !important;
+  }
+  .navSlider {
+    display: none !important;
+  }
+  .navSliderActive {
+    display: none !important;
+  }
+  .navSwiper {
+    display: flex !important;
+  }
+  .navSwiperActive {
+    display: flex !important;
+  }
+  .navLink:hover .linkImg {
+    transform: scale(1);
   }
 }
 @media (hover: hover) {
@@ -814,6 +854,7 @@ input::-webkit-inner-spin-button {
 .home .mainContent .arrivalText {
   position: fixed;
   top: 50vh;
+  top: 50dvh;
   left: 0;
   transform: translate(36vw, -50%) scale(2);
   transition: transform 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
@@ -862,10 +903,12 @@ input::-webkit-inner-spin-button {
   border-radius: 4rem;
   padding: 0.4rem 1.4rem;
   width: calc(7.8rem + 7.8vw);
-  height: calc(2.4rem + 1vw);
+  height: calc(2.2rem + 1.6vw);
 }
 .home .mainContent .heroBtns > *:focus {
+  outline: none;
   background: #0c5ff2;
+  border: 1px solid #0c5ff2;
 }
 .home .mainContent .cta {
   border: 1px solid #f7f7f7;
@@ -1033,7 +1076,7 @@ input::-webkit-inner-spin-button {
   }
   .home .mainContent .aside .heroText {
     position: static;
-    transform: translate(-14%, -40%);
+    transform: translate(-10%, -40%);
     opacity: 1;
     pointer-events: all;
     animation: none;
@@ -1125,6 +1168,30 @@ input::-webkit-inner-spin-button {
   }
   .home .mainContent .reelActive {
     transform: translate(0, -50vh);
+  }
+}
+@media (max-height: 620px) {
+  .home .mainContent .aside .heroText h1,
+  .home .mainContent .aside .arrivalText h1 {
+    font-size: calc(1.4rem + 1.4vw);
+  }
+  .home .mainContent .aside .heroBtns {
+    transform: translate(-12%, 0) scale(0.8);
+  }
+  .home .mainContent .aside .heroBtnsActive {
+    transform: translate(-12%, -50vh) scale(0.8);
+  }
+}
+@media screen and (max-height: 620px) and (max-width: 1024px) {
+  .home .mainContent .aside .heroText h1,
+  .home .mainContent .aside .arrivalText h1 {
+    font-size: calc(1.4rem + 1.4vw);
+  }
+  .home .mainContent .aside .heroBtns {
+    transform: translate(-2%, -2.6rem) scale(0.8);
+  }
+  .home .mainContent .aside .heroBtnsActive {
+    transform: translate(-2%, -2.6rem) scale(0.8);
   }
 }
 .opportunity .logo, .opportunity .navLogo {
@@ -2144,6 +2211,9 @@ input::-webkit-inner-spin-button {
   .opportunity .mainContent .videoSection .videoFigure {
     width: 80%;
     height: calc(10rem + 24vw);
+  }
+  .opportunity .mainContent .videoSection .videoFigure:hover .overlay img {
+    transform: scale(2.4) translate(12%, 0);
   }
   .opportunity .mainContent .videoSection .videoFigure .overlay img {
     transform: scale(2);
@@ -3852,7 +3922,7 @@ input::-webkit-inner-spin-button {
 .join .mainContent .formPanel .contactForm .cta::before {
   content: "Submit";
   color: #f7f7f7;
-  font-size: calc(0.8rem + 0.4vw);
+  font-size: calc(0.8rem + 0.6vw);
 }
 .join .mainContent .formPanel .contactForm .cta .ctaCircle {
   background: #0c5ff2;

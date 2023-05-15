@@ -83,6 +83,7 @@
       .arrivalText {
         position: fixed;
         top: 50vh;
+        top: 50dvh;
         left: 0;
         transform: translate(36vw, -50%) scale(2);
         transition: transform $nav-transition;
@@ -134,9 +135,11 @@
         border-radius: 4rem;
         padding: 0.4rem 1.4rem;
         width: calc(7.8rem + 7.8vw);
-        height: calc(2.4rem + 1vw);
+        height: calc(2.2rem + 1.6vw);
         &:focus {
+          outline: none;
           background: $sunderRoyalLight;
+          border: 1px solid $sunderRoyalLight;
         }
       }
       .cta {
@@ -274,15 +277,15 @@
           background: $sunderSnow;
         }
       }
-    }
   }
+}
 
-  @keyframes appear {
-    to {
-      opacity: 1;
-      pointer-events: all;
-    }
+@keyframes appear {
+  to {
+    opacity: 1;
+    pointer-events: all;
   }
+}
 
 @media (max-width: 1024px) {
   .home {
@@ -308,7 +311,7 @@
         transition: transform $nav-transition;
         .heroText {
           position: static;
-          transform: translate(-14%, -40%);
+          transform: translate(-10%, -40%);
           opacity: 1;
           pointer-events: all;
           animation: none;
@@ -359,7 +362,6 @@
     }
   }
 }
-
 
 @media (max-width: 580px) {
   .home {
@@ -416,6 +418,49 @@
       .reel {
         &Active {
           transform: $nav-shift;
+        }
+      }
+    }
+  }
+}
+
+//
+// Height Media Queries
+//
+
+@media (max-height: 620px) {
+  .home {
+    .mainContent {
+      .aside {
+        .heroText h1,
+        .arrivalText h1 {
+          font-size: $XL-Text;
+        }
+        .heroBtns {
+          // border: 2px dashed coral;
+          transform: translate(-12%, 0) scale(0.8);
+          &Active {
+            transform: translate(-12%, -50vh) scale(0.8);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 620px) and (max-width: 1024px) {
+  .home {
+    .mainContent {
+      .aside {
+        .heroText h1,
+        .arrivalText h1 {
+          font-size: $XL-Text;
+        }
+        .heroBtns {
+          transform: translate(-2%, -2.6rem) scale(0.8);
+          &Active {
+            transform: translate(-2%, -2.6rem) scale(0.8);
+          }
         }
       }
     }
