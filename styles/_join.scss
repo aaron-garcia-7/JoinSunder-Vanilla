@@ -111,7 +111,7 @@
                     &::before {
                         content: 'Submit';
                         color: $sunderSnow;
-                        font-size: $S-Text;
+                        font-size: calc(0.8rem + 0.6vw);
                     }
                     .ctaCircle {
                         background: $sunderRoyalLight;

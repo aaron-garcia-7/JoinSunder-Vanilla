@@ -103,8 +103,13 @@ videoFigure.addEventListener("click", () => {
 
 videoFigure.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
-    video.play();
-    overlay.style.opacity = "0";
+    if (video.paused) {
+      video.play();
+      overlay.style.opacity = "0";
+    } else {
+      video.pause();
+      overlay.style.opacity = "1";
+    }
   }
 });
 
