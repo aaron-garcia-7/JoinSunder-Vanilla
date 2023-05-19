@@ -611,20 +611,29 @@ gsap.to(".lineGraph", {
       window.innerWidth > 768
         ? "-50% 10%"
         : window.innerWidth <= 580
-        ? "-100% 40%"
+        ? "-100% 50%"
         : "-100% 10%",
+    // markers: {
+    //   indent: 64,
+    //   startColor: "yellow",
+    //   endColor: "yellow",
+    // },
   },
 });
 gsap.to("#lineGraphPath", {
   scrollTrigger: {
     trigger: "#lineGraphPath",
-    toggleClass: "pathActive",
-    toggleActions: "play none none none",
+    // toggleClass: "pathActive",
+    onEnter: () =>
+      document.querySelector("#lineGraphPath").classList.add("pathActive"),
+    onLeaveBack: () =>
+      document.querySelector("#lineGraphPath").classList.remove("pathActive"),
+    toggleActions: "restart none none reverse",
     start:
       window.innerWidth > 768
         ? "-50% 10%"
         : window.innerWidth <= 580
-        ? "-100% 40%"
+        ? "-100% 50%"
         : "-100% 10%",
   },
 });
@@ -632,48 +641,49 @@ gsap.to("#lineGraphPath", {
 gsap.to(".point1", {
   scrollTrigger: {
     trigger: ".point1",
-    toggleClass: "point1Active",
-    toggleActions: "play none none none",
+    onEnter: () =>
+      document.querySelector(".point1").classList.add("point1Active"),
+    onLeaveBack: () =>
+      document.querySelector(".point1").classList.remove("point1Active"),
+    toggleActions: "restart none none reverse",
     start:
       window.innerWidth > 768
         ? "-3160% 10%"
         : window.innerWidth <= 520
-        ? "-4220% 40%"
+        ? "-4220% 50%"
         : "-4220% 10%",
   },
 });
 gsap.to(".point2", {
   scrollTrigger: {
     trigger: ".point2",
-    toggleClass: "point2Active",
-    toggleActions: "play none none none",
+    onEnter: () =>
+      document.querySelector(".point2").classList.add("point2Active"),
+    onLeaveBack: () =>
+      document.querySelector(".point2").classList.remove("point2Active"),
+    toggleActions: "restart none none reverse",
     start: "-2630% 10%",
-    // start: window.innerWidth > 768 ? "-2630% 10%" : "-3720% 10%",
     start:
       window.innerWidth > 768
         ? "-2630% 10%"
         : window.innerWidth <= 520
-        ? "-3720% 40%"
+        ? "-3720% 50%"
         : "-3720% 10%",
-    // markers: {
-    //   indent: 64,
-    //   startColor: "lightblue",
-    //   endColor: "lightblue",
-    // },
   },
 });
 gsap.to(".point3", {
   scrollTrigger: {
     trigger: ".point3",
-    toggleClass: "point3Active",
-    toggleActions: "play none none none",
-    // start: "-1860% 10%",
-    // start: window.innerWidth > 768 ? "-1860% 10%" : "-2920% 10%",
+    onEnter: () =>
+      document.querySelector(".point3").classList.add("point3Active"),
+    onLeaveBack: () =>
+      document.querySelector(".point3").classList.remove("point3Active"),
+    toggleActions: "restart none none reverse",
     start:
       window.innerWidth > 768
         ? "-1860% 10%"
         : window.innerWidth <= 520
-        ? "-2920% 40%"
+        ? "-2920% 50%"
         : "-2920% 10%",
     end: "1200% top",
     // markers: true,
@@ -682,22 +692,18 @@ gsap.to(".point3", {
 gsap.to(".point4", {
   scrollTrigger: {
     trigger: ".point4",
-    toggleClass: "point4Active",
-    toggleActions: "play none none none",
-    // start: "-986% 10%",
-    // start: window.innerWidth > 768 ? "-986% 10%" : "-2080% 10%",
+    onEnter: () =>
+      document.querySelector(".point4").classList.add("point4Active"),
+    onLeaveBack: () =>
+      document.querySelector(".point4").classList.remove("point4Active"),
+    toggleActions: "restart none none reverse",
     start:
       window.innerWidth > 768
         ? "-986% 10%"
         : window.innerWidth <= 520
-        ? "-2080% 40%"
+        ? "-2080% 50%"
         : "-2080% 10%",
     end: "1200% top",
-    // markers: {
-    //   indent: 64,
-    //   startColor: "lightblue",
-    //   endColor: "lightblue",
-    // },
   },
 });
 
@@ -708,9 +714,13 @@ gsap.to(graph2Data, {
   stagger: 0.4,
   scrollTrigger: {
     trigger: ".kwInstalled",
-    toggleActions: "restart none none none",
-    // start: "top 10%",
-    start: window.innerWidth > 768 ? "top 10%" : "-12% top",
+    toggleActions: "restart none none reverse",
+    start:
+      window.innerWidth > 768
+        ? "top 10%"
+        : window.innerWidth <= 520
+        ? "top 28%"
+        : "-12% top",
     // markers: true,
   },
 });
