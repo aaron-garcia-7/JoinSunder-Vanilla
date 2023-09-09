@@ -3219,7 +3219,6 @@ input::-webkit-inner-spin-button {
   display: flex;
   justify-content: space-between;
   width: calc(10rem + 48vw);
-  transform: translate(-50%, -50%);
   padding: 1.4rem;
   z-index: 2;
 }
@@ -3242,9 +3241,10 @@ input::-webkit-inner-spin-button {
   transform: translate(calc(-2.4rem - 1.8vw), 100%);
 }
 .resources .mainContent .meetTheTeam .content .column {
-  height: calc(6rem + 7vw);
-  left: 50%;
-  transform: translate(-49%, calc(0.2vw - 24%));
+  height: calc(2rem + 12vw);
+  left: 54.5%;
+  top: 50%;
+  top: calc(62.5% - 2.8vw);
   padding: 1rem;
   display: flex;
   flex-direction: column;

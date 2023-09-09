@@ -228,7 +228,8 @@ gsap.to(".content", {
 
 gsap.to(".column", {
   // transform: "translate(-36%, calc(0.2vw - 88%))",
-  transform: "translate(-49%, calc(0.2vw - 77%))",
+  // transform: "translate(-49%, calc(0.2vw - 77%))",
+  top: "calc(49% - 3.4vw)",
   ease: "none",
   scrollTrigger: {
     trigger: ".meetTheTeam",

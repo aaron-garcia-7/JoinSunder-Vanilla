@@ -121,12 +121,7 @@
                 .row {
                     display: flex;
                     justify-content: space-between;
-                    // width: calc(10rem + 36vw); // HQ width
-                    // width: calc(10rem + 41vw); // Best width
-                    // width: calc(10rem + 46vw); // Dream width
                     width: calc(10rem + 48vw); // Sunder width
-                    // transform: translate(-49%, -50%);
-                    transform: translate(-50%, -50%);
                     padding: 1.4rem;
                     z-index: 2;
                     &::before,
@@ -150,19 +145,16 @@
                     }
                 }
                 .column {
-                    // border: 1px solid black;
-                    // height: calc(12rem + 14vw); // Super Responsive
-                    height: calc(6rem + 7vw);
-                    left: 50%;
-                    // transform: translate(-36%, calc(0.2vw - 12%));
-                    transform: translate(-49%, calc(0.2vw - 24%));
+                    height: calc(2rem + 12vw);
+                    left: 54.5%;
+                    top: 50%;
+                    top: calc(62.5% - 2.8vw);
                     padding: 1rem;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
                     h2 {
                         font-weight: 675;
-                        // color: $sunderRoyal;
                     }
                 }
             }
@@ -172,7 +164,6 @@
         }
 
         .board {
-            // border: 2px dashed lightcoral;
             width: 96vw;
             display: flex;
             flex-wrap: wrap;
