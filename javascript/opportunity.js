@@ -164,8 +164,8 @@ let backgroundTL = gsap.timeline({
     trigger: "#mainContent",
     scrub: 1,
     start: "10% 40%",
-    // end: window.innerWidth > 480 ? "100% 60%" : "86% 60%",
-    end: window.innerWidth > 480 ? "100% 60%" : "76% 60%",
+    // end: window.innerWidth > 480 ? "100% 60%" : "76% 60%", // WITH SOLAR REP CARDS
+    end: window.innerWidth > 480 ? "76% 60%" : "52% 60%",
     // markers: true,
   },
 });

@@ -429,21 +429,25 @@ $pending: #BCD0D7;
             pointer-events: none;
             #anchor2019 {
                 position: absolute;
-                top: 14%;
+                // top: 14%; With Solar Rep 
+                top: 4%;
                 width: 12rem;
                 height: 1rem;
             }
             #anchor2020 {
                 @extend #anchor2019;
-                top: 32%;
+                // top: 32%; With Solar Rep 
+                top: 22%;
             }
             #anchor2021 {
                 @extend #anchor2019;
-                top: 50%;
+                // top: 50%; With Solar Rep 
+                top: 40%;
             }
             #anchor2022 {
                 @extend #anchor2019;
-                top: 68%;
+                // top: 68%; With Solar Rep 
+                top: 58%;
             }
         }
         .dataSections {
@@ -1318,16 +1322,20 @@ $pending: #BCD0D7;
             .growthAnchors {
                 top: calc(41% + 24vw);
                 #anchor2019 {
-                    top: 20%;
+                    // top: 20%; With Solar Rep Cards
+                    top: 10%;
                 }
                 #anchor2020 {
-                    top: 40%;
+                    // top: 40%; With Solar Rep Cards
+                    top: 30%;
                 }
                 #anchor2021 {
-                    top: 56%;
+                    // top: 56%; With Solar Rep Cards
+                    top: 46%;
                 }
                 #anchor2022 {
-                    top: 73%;
+                    // top: 73%; With Solar Rep Cards
+                    top: 63%;
                 }
             }
             .dataSections {

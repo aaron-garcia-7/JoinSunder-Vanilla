@@ -1609,18 +1609,18 @@ input::-webkit-inner-spin-button {
 }
 .opportunity .mainContent .growthAnchors #anchor2019, .opportunity .mainContent .growthAnchors #anchor2022, .opportunity .mainContent .growthAnchors #anchor2021, .opportunity .mainContent .growthAnchors #anchor2020 {
   position: absolute;
-  top: 14%;
+  top: 4%;
   width: 12rem;
   height: 1rem;
 }
 .opportunity .mainContent .growthAnchors #anchor2020 {
-  top: 32%;
+  top: 22%;
 }
 .opportunity .mainContent .growthAnchors #anchor2021 {
-  top: 50%;
+  top: 40%;
 }
 .opportunity .mainContent .growthAnchors #anchor2022 {
-  top: 68%;
+  top: 58%;
 }
 .opportunity .mainContent .dataSections {
   position: relative;
@@ -2360,16 +2360,16 @@ input::-webkit-inner-spin-button {
     top: calc(41% + 24vw);
   }
   .opportunity .mainContent .growthAnchors #anchor2019, .opportunity .mainContent .growthAnchors #anchor2020, .opportunity .mainContent .growthAnchors #anchor2021, .opportunity .mainContent .growthAnchors #anchor2022 {
-    top: 20%;
+    top: 10%;
   }
   .opportunity .mainContent .growthAnchors #anchor2020 {
-    top: 40%;
+    top: 30%;
   }
   .opportunity .mainContent .growthAnchors #anchor2021 {
-    top: 56%;
+    top: 46%;
   }
   .opportunity .mainContent .growthAnchors #anchor2022 {
-    top: 73%;
+    top: 63%;
   }
   .opportunity .mainContent .dataSections {
     height: clamp(48rem, 112vh, 86rem);
