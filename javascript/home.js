@@ -269,3 +269,14 @@ gsap.to("#col1", {
 window.onbeforeunload = () => {
   window.scrollTo(0, 0);
 };
+
+// Lenis Smooth Scroll
+
+const lenis = new Lenis();
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);

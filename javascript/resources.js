@@ -356,6 +356,45 @@ gsap.to(".row", {
 //   },
 // });
 
+// Enzy Animations
+
+function animateFromTo(element, trigger, propsFrom, propsTo, delay = 0) {
+  gsap.fromTo(
+    element,
+    { ...propsFrom, opacity: 0 },
+    {
+      ...propsTo,
+      opacity: 1,
+      delay,
+      scrollTrigger: {
+        trigger: trigger,
+        start: "top center",
+        toggleActions: "restart none none reverse",
+      },
+    }
+  );
+}
+
+// Animation for block 1 elements
+animateFromTo(".block-header-1", ".block1", { x: "10%" }, { x: 0 });
+animateFromTo(".block-description-1", ".block1", { x: "10%" }, { x: 0 }, 0.12);
+animateFromTo(".block-img-1", ".block1", { y: "10%" }, { y: 0 }, 0.12);
+
+// Animation for block 2 elements
+animateFromTo(".block-header-2", ".block2", { x: "10%" }, { x: 0 });
+animateFromTo(".block-description-2", ".block2", { x: "10%" }, { x: 0 }, 0.12);
+animateFromTo(".block-img-2", ".block2", { y: "10%" }, { y: 0 }, 0.12);
+
+// Animation for block 3 elements
+animateFromTo(".block-header-3", ".block3", { x: "10%" }, { x: 0 });
+animateFromTo(".block-description-3", ".block3", { x: "10%" }, { x: 0 }, 0.12);
+animateFromTo(".block-img-3", ".block3", { y: "10%" }, { y: 0 }, 0.12);
+
+// Animation for block 4 elements
+animateFromTo(".block-header-4", ".block4", { x: "10%" }, { x: 0 });
+animateFromTo(".block-description-4", ".block4", { x: "10%" }, { x: 0 }, 0.12);
+animateFromTo(".block-img-4", ".block4", { y: "10%" }, { y: 0 }, 0.12);
+
 // Utility
 
 let needsRefresh = false;
@@ -377,3 +416,14 @@ setInterval(function () {
 // window.onbeforeunload = () => {
 //   window.scrollTo(0, 0);
 // };
+
+// Lenis Smooth Scroll
+
+const lenis = new Lenis();
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);

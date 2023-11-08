@@ -163,10 +163,8 @@ let backgroundTL = gsap.timeline({
   scrollTrigger: {
     trigger: "#mainContent",
     scrub: 1,
-    start: "10% 40%",
-    // end: window.innerWidth > 480 ? "100% 60%" : "76% 60%", // WITH SOLAR REP CARDS
-    end: window.innerWidth > 480 ? "76% 60%" : "52% 60%",
-    // markers: true,
+    start: "8% 40%",
+    end: window.innerWidth > 480 ? "64% 60%" : "52% 60%",
   },
 });
 backgroundTL
@@ -298,7 +296,6 @@ gsap.to("#stateCount", {
     trigger: "#growth",
     toggleActions: "play none none reverse",
     start: window.innerWidth > 480 ? "top top" : "top 16%",
-    // markers: true,
   },
 });
 let stateCount = gsap.utils.toArray(".number");
@@ -307,7 +304,8 @@ let stateCountTL = gsap.timeline({
     trigger: "#numberArea",
     scrub: window.innerWidth > 480 ? true : false,
     start: window.innerWidth > 768 ? "20% 15%" : "-100% 15%",
-    end: window.innerWidth > 768 ? "440% 15%" : "2600% 15%",
+    // end: window.innerWidth > 768 ? "440% 15%" : "2600% 15%",
+    end: window.innerWidth > 768 ? "400% 15%" : "2600% 15%",
   },
 });
 stateCountTL
@@ -315,7 +313,16 @@ stateCountTL
     y: window.innerWidth > 768 ? "-100%" : "-112%",
   })
   .to(stateCount, {
+    y: window.innerWidth > 768 ? "-100%" : "-112%",
+  })
+  .to(stateCount, {
     y: window.innerWidth > 768 ? "-200%" : "-212%",
+  })
+  .to(stateCount, {
+    y: window.innerWidth > 768 ? "-200%" : "-212%",
+  })
+  .to(stateCount, {
+    y: window.innerWidth > 768 ? "-300%" : "-312%",
   })
   .to(stateCount, {
     y: window.innerWidth > 768 ? "-300%" : "-312%",
@@ -325,6 +332,9 @@ stateCountTL
   })
   .to(stateCount, {
     y: window.innerWidth > 768 ? "-400%" : "-412%",
+  })
+  .to(stateCount, {
+    y: window.innerWidth > 768 ? "-500%" : "-412%",
   });
 gsap.to("#stateCountMobile", {
   opacity: 1,
@@ -381,15 +391,21 @@ gsap.to(timelineLinksAppear, {
   },
 });
 
-let linkHilightTL = gsap.timeline({
+let linkHighlightTL = gsap.timeline({
   scrollTrigger: {
     trigger: "#numberArea",
     scrub: true,
     start: window.innerWidth > 480 ? "40% 15%" : "200% top",
-    end: window.innerWidth > 768 ? "400% 15%" : "2300% 15%",
+    // end: window.innerWidth > 768 ? "400% 15%" : "2300% 15%",
+    end: window.innerWidth > 768 ? "450% 15%" : "2300% 15%",
+    // markers: {
+    //   startColor: "white",
+    //   endColor: "white",
+    //   indent: 128,
+    // },
   },
 });
-linkHilightTL
+linkHighlightTL
   .to(".link1", { background: "#4693D4" })
   .to(".link1", { background: "#4693D4" })
   .to(".link1", { background: "#4693D4" })
@@ -409,8 +425,13 @@ linkHilightTL
   .to(".link4", { background: "#4693D4" })
   .to(".link4", { background: "#4693D4" })
   .to(".link4", { background: "#4693D4" })
-  // .to(".link4", { background: "transparent" }); // Activate to toggle last link background
-  .to(".link4", { background: "4693D4" }); // Activate to toggle last link background
+  .to(".link4", { background: "transparent" })
+  .to(".link5", { background: "#4693D4" })
+  .to(".link5", { background: "#4693D4" })
+  .to(".link5", { background: "#4693D4" })
+  .to(".link5", { background: "#4693D4" })
+  .to(".link5", { background: "transparent" }); // Activate to toggle last link background
+// .to(".link5", { background: "4693D4" }); // Activate to toggle last link background
 
 let states2019 = gsap.utils.toArray(".state2019");
 gsap.to(states2019, {
@@ -422,7 +443,11 @@ gsap.to(states2019, {
     // start: "40% 15%",
     start: window.innerWidth > 480 ? "40% 15%" : "top 94%",
     end: window.innerWidth > 768 ? "60% 15%" : "200% 15%",
-    // markers: true,
+    // markers: {
+    //   startColor: "white",
+    //   endColor: "white",
+    //   indent: 128,
+    // },
   },
 });
 
@@ -465,6 +490,7 @@ let pending2020TL = gsap.timeline({
         ? "600% 15%"
         : "top 94%",
     end: window.innerWidth > 768 ? "230% 15%" : "1300% 15%",
+    // markers: true,
   },
 });
 pending2020TL
@@ -525,6 +551,11 @@ let pending2022TL = gsap.timeline({
         ? "1600% 15%"
         : "top 94%",
     end: window.innerWidth > 768 ? "390% 15%" : "2300% 15%",
+    // markers: {
+    //   startColor: "white",
+    //   endColor: "white",
+    //   indent: 128,
+    // },
   },
 });
 pending2022TL
@@ -536,10 +567,10 @@ pending2022TL
   })
   .to(pending2022, {
     fill: "#BCD0D7",
+  })
+  .to(pending2022, {
+    fill: "#4693D4", // Add this IF the state becomes active
   });
-// .to(pending2022, {
-//   fill: "#4693D4", // Add this IF the state becomes active
-// });
 
 gsap.to("#salesForceTitle", {
   y:
@@ -772,3 +803,14 @@ window.addEventListener("resize", refreshOnDesktop);
 // window.onbeforeunload = () => {
 //   window.scrollTo(0, 0);
 // };
+
+// Lenis Smooth Scroll
+
+const lenis = new Lenis();
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);

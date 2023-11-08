@@ -296,6 +296,7 @@ $pending: #BCD0D7;
         .growth {
             height: 100vh;
             display: flex;
+
             .numberArea {
                 width: 20%;
                 display: flex;
@@ -336,6 +337,11 @@ $pending: #BCD0D7;
                         opacity: 0;
                         border-radius: 4rem;
                         padding: 0.4rem 1.2rem;
+                        border: 2px solid transparent;
+                        transition: border 0.3s ease;
+                        &:hover {
+                            border: 2px solid $sunderRoyalLight;
+                        }
                     }
                     p.timelineLinks {
                         display: none;
@@ -422,32 +428,32 @@ $pending: #BCD0D7;
         }
         .growthAnchors {
             position: absolute;
-            top: calc(38% + 24vw);
+            top: calc(31% + 24vw);
             width: 100%;
             height: calc(100vh + 29%);
             z-index: -1;
             pointer-events: none;
             #anchor2019 {
                 position: absolute;
-                // top: 14%; With Solar Rep 
-                top: 4%;
+                top: 5%;
                 width: 12rem;
                 height: 1rem;
             }
             #anchor2020 {
                 @extend #anchor2019;
-                // top: 32%; With Solar Rep 
-                top: 22%;
+                top: 24%;
             }
             #anchor2021 {
                 @extend #anchor2019;
-                // top: 50%; With Solar Rep 
-                top: 40%;
+                top: 42%;
             }
             #anchor2022 {
                 @extend #anchor2019;
-                // top: 68%; With Solar Rep 
-                top: 58%;
+                top: 60%;
+            }
+            #anchor2023 {
+                @extend #anchor2019;
+                top: 80%;
             }
         }
         .dataSections {
