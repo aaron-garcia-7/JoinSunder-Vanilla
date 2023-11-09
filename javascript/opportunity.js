@@ -303,9 +303,9 @@ let stateCountTL = gsap.timeline({
   scrollTrigger: {
     trigger: "#numberArea",
     scrub: window.innerWidth > 480 ? true : false,
-    start: window.innerWidth > 768 ? "20% 15%" : "-100% 15%",
-    // end: window.innerWidth > 768 ? "440% 15%" : "2600% 15%",
-    end: window.innerWidth > 768 ? "400% 15%" : "2600% 15%",
+    start: window.innerWidth > 768 ? "16% 15%" : "-100% 15%",
+    end: window.innerWidth > 768 ? "400% 15%" : "1920% 15%",
+    // markers: true,
   },
 });
 stateCountTL
@@ -334,7 +334,7 @@ stateCountTL
     y: window.innerWidth > 768 ? "-400%" : "-412%",
   })
   .to(stateCount, {
-    y: window.innerWidth > 768 ? "-500%" : "-412%",
+    y: window.innerWidth > 768 ? "-500%" : "-512%",
   });
 gsap.to("#stateCountMobile", {
   opacity: 1,
@@ -370,7 +370,7 @@ gsap.to("#timelineBorder", {
 });
 
 gsap.to("#timelineBorder2", {
-  width: "100%",
+  width: "calc(100% + 4rem)",
   scrollTrigger: {
     trigger: "#growth",
     toggleActions: "play none none reverse",
@@ -396,8 +396,8 @@ let linkHighlightTL = gsap.timeline({
     trigger: "#numberArea",
     scrub: true,
     start: window.innerWidth > 480 ? "40% 15%" : "200% top",
-    // end: window.innerWidth > 768 ? "400% 15%" : "2300% 15%",
-    end: window.innerWidth > 768 ? "450% 15%" : "2300% 15%",
+    // end: window.innerWidth > 768 ? "450% 15%" : "2720% 15%",
+    end: window.innerWidth > 768 ? "450% 15%" : "2200% 15%",
     // markers: {
     //   startColor: "white",
     //   endColor: "white",
@@ -459,7 +459,7 @@ let pending2019TL = gsap.timeline({
     scrub: window.innerWidth > 480 ? true : false,
     toggleActions: "play none none reverse",
     start: window.innerWidth > 480 ? "40% 15%" : "top 94%",
-    end: window.innerWidth > 768 ? "150% 15%" : "800% 15%",
+    end: window.innerWidth > 768 ? "150% 15%" : "500% 15%",
   },
 });
 pending2019TL
@@ -487,9 +487,9 @@ let pending2020TL = gsap.timeline({
       window.innerWidth > 768
         ? "120% 15%"
         : window.innerWidth <= 768 && window.innerWidth > 480
-        ? "600% 15%"
+        ? "500% 15%"
         : "top 94%",
-    end: window.innerWidth > 768 ? "230% 15%" : "1300% 15%",
+    end: window.innerWidth > 768 ? "230% 15%" : "900% 15%",
     // markers: true,
   },
 });
@@ -518,9 +518,9 @@ let pending2021TL = gsap.timeline({
       window.innerWidth > 768
         ? "200% 15%"
         : window.innerWidth <= 768 && window.innerWidth > 480
-        ? "1100% 15%"
+        ? "1000% 15%"
         : "top 94%",
-    end: window.innerWidth > 768 ? "310% 15%" : "1800% 15%",
+    end: window.innerWidth > 768 ? "310% 15%" : "1300% 15%",
   },
 });
 pending2021TL
@@ -548,9 +548,9 @@ let pending2022TL = gsap.timeline({
       window.innerWidth > 768
         ? "280% 15%"
         : window.innerWidth <= 768 && window.innerWidth > 480
-        ? "1600% 15%"
+        ? "1500% 15%"
         : "top 94%",
-    end: window.innerWidth > 768 ? "390% 15%" : "2300% 15%",
+    end: window.innerWidth > 768 ? "390% 15%" : "1700% 15%",
     // markers: {
     //   startColor: "white",
     //   endColor: "white",

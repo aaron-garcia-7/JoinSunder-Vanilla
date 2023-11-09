@@ -1346,61 +1346,6 @@ input::-webkit-inner-spin-button {
 .opportunity .mainContent .quoteSection .quote2 {
   flex-direction: row-reverse;
 }
-.opportunity .mainContent .cardsSection {
-  width: 100%;
-  height: clamp(48rem, 100vh, 92rem);
-  height: clamp(48rem, 100dvh, 92rem);
-  padding: 2.4rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: calc(1rem + 1vw);
-  overflow: hidden;
-  z-index: 2;
-}
-.opportunity .mainContent .cardsSection .repCard {
-  position: relative;
-  background: #f7f7f7;
-  width: 32%;
-  height: 98%;
-  border-radius: calc(1rem + 1vw);
-  overflow: hidden;
-}
-.opportunity .mainContent .cardsSection .repCard > * {
-  position: absolute;
-  width: 100%;
-}
-.opportunity .mainContent .cardsSection .repCard .repImg {
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 40%;
-}
-.opportunity .mainContent .cardsSection .repCard .cardText {
-  background: linear-gradient(15deg, #000000, rgba(0, 0, 0, 0) 60%);
-  bottom: 0;
-  height: 100%;
-  z-index: 2;
-  color: #f7f7f7;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-  padding: 0 0 1.2rem calc(1rem + 1vw);
-}
-.opportunity .mainContent .cardsSection .repCard .cardText .list {
-  margin-bottom: 1.2rem;
-}
-.opportunity .mainContent .cardsSection .repCard .cardText .list li {
-  font-size: calc(0.8rem + 1vw);
-}
-.opportunity .mainContent .cardsSection .repCard .cardText .name {
-  font-family: "monument", sans-serif;
-  font-size: calc(0.8rem + 1vw);
-  font-weight: 675;
-}
-.opportunity .mainContent .cardsSection .repCard .cardText .name .lastName {
-  font-size: calc(1.4rem + 1.4vw);
-}
 .opportunity .mainContent .videoSection {
   position: relative;
   width: 100vw;
@@ -1601,6 +1546,9 @@ input::-webkit-inner-spin-button {
   font-size: calc(1.4rem + 1.4vw);
   font-weight: 400;
 }
+.opportunity .mainContent .growth .mapArea .stateCountMobile {
+  display: none;
+}
 .opportunity .mainContent .growth .mobileTitle {
   display: none;
 }
@@ -1609,10 +1557,10 @@ input::-webkit-inner-spin-button {
   top: calc(31% + 24vw);
   width: 100%;
   height: calc(100vh + 29%);
-  z-index: -1;
   pointer-events: none;
 }
 .opportunity .mainContent .growthAnchors #anchor2019, .opportunity .mainContent .growthAnchors #anchor2023, .opportunity .mainContent .growthAnchors #anchor2022, .opportunity .mainContent .growthAnchors #anchor2021, .opportunity .mainContent .growthAnchors #anchor2020 {
+  background: lightblue;
   position: absolute;
   top: 5%;
   width: 12rem;
@@ -1979,10 +1927,6 @@ input::-webkit-inner-spin-button {
   .opportunity .mainContent .quoteSection {
     margin: auto;
   }
-  .opportunity .mainContent .cardsSection {
-    width: 128rem;
-    margin: auto;
-  }
   .opportunity .mainContent .growth .mapArea .stateCount .number {
     font-size: 6.4rem;
   }
@@ -2151,59 +2095,6 @@ input::-webkit-inner-spin-button {
     height: 0;
     border-right: 1px solid transparent;
   }
-  .opportunity .mainContent .cardsSection {
-    height: clamp(42rem, 100vh, 56rem);
-    padding: 0 2.4rem;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .opportunity .mainContent .cardsSection::-webkit-scrollbar {
-    display: none;
-  }
-  .opportunity .mainContent .cardsSection .repCard {
-    flex: 0 0 auto;
-    width: calc(22rem + 12vw);
-    height: 86%;
-    border-radius: 2rem;
-    overflow: hidden;
-  }
-  .opportunity .mainContent .cardsSection .repCard > * {
-    position: absolute;
-    width: 100%;
-  }
-  .opportunity .mainContent .cardsSection .repCard .repImg {
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 40%;
-  }
-  .opportunity .mainContent .cardsSection .repCard .cardText {
-    background: linear-gradient(15deg, #000000, rgba(0, 0, 0, 0) 60%);
-    bottom: 0;
-    height: 100%;
-    z-index: 2;
-    color: #f7f7f7;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding: 0 0 1.2rem 3.2rem;
-  }
-  .opportunity .mainContent .cardsSection .repCard .cardText .list {
-    margin-bottom: 1.2rem;
-  }
-  .opportunity .mainContent .cardsSection .repCard .cardText .list li {
-    font-size: calc(0.8rem + 1vw);
-  }
-  .opportunity .mainContent .cardsSection .repCard .cardText .name {
-    font-family: "monument", sans-serif;
-    font-size: calc(0.8rem + 1vw);
-    font-weight: 675;
-  }
-  .opportunity .mainContent .cardsSection .repCard .cardText .name .lastName {
-    font-size: calc(1.4rem + 1.4vw);
-  }
   .opportunity .mainContent .videoSection h2 {
     font-size: calc(1.4rem + 1.4vw);
   }
@@ -2283,20 +2174,6 @@ input::-webkit-inner-spin-button {
   .opportunity .mainContent .quoteSection .quote1 .quoteWrapper, .opportunity .mainContent .quoteSection .quote2 .quoteWrapper {
     width: 50%;
   }
-  .opportunity .mainContent .cardsSection {
-    height: clamp(36rem, 90vh, 52rem);
-    padding: 0 1.2rem;
-  }
-  .opportunity .mainContent .cardsSection .repCard {
-    width: calc(16rem + 12vw);
-    border-radius: 1.6rem;
-  }
-  .opportunity .mainContent .cardsSection .repCard .cardText {
-    padding: 0 0 1.2rem 2.4rem;
-  }
-  .opportunity .mainContent .cardsSection .repCard .cardText .list li {
-    font-size: calc(0.8rem + 0.4vw);
-  }
   .opportunity .mainContent .growth {
     flex-direction: column-reverse;
   }
@@ -2320,7 +2197,7 @@ input::-webkit-inner-spin-button {
   .opportunity .mainContent .growth .numberArea .timelineBorder2 {
     position: absolute;
     top: 50%;
-    left: 0;
+    left: -2rem;
     transform: translate(0, -2rem);
     display: block;
     width: 0%;
@@ -2365,19 +2242,24 @@ input::-webkit-inner-spin-button {
     font-size: calc(0.8rem + 1vw);
   }
   .opportunity .mainContent .growthAnchors {
-    top: calc(41% + 24vw);
+    border: 2px dashed lightblue;
+    height: calc(100vh + 32%);
+    top: calc(35% + 24vw);
   }
   .opportunity .mainContent .growthAnchors #anchor2019, .opportunity .mainContent .growthAnchors #anchor2020, .opportunity .mainContent .growthAnchors #anchor2021, .opportunity .mainContent .growthAnchors #anchor2022, .opportunity .mainContent .growthAnchors #anchor2023 {
-    top: 10%;
+    top: 14%;
   }
   .opportunity .mainContent .growthAnchors #anchor2020 {
-    top: 30%;
+    top: 29%;
   }
   .opportunity .mainContent .growthAnchors #anchor2021 {
-    top: 46%;
+    top: 42%;
   }
   .opportunity .mainContent .growthAnchors #anchor2022 {
-    top: 63%;
+    top: 62%;
+  }
+  .opportunity .mainContent .growthAnchors #anchor2023 {
+    top: 74%;
   }
   .opportunity .mainContent .dataSections {
     height: clamp(48rem, 112vh, 86rem);
@@ -2573,6 +2455,7 @@ input::-webkit-inner-spin-button {
     display: none;
   }
   .opportunity .mainContent .growth .mapArea .stateCountMobile {
+    display: block;
     position: absolute;
     top: 2.4rem;
     right: -1.2rem;

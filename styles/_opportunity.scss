@@ -159,61 +159,61 @@ $pending: #BCD0D7;
                 flex-direction: row-reverse;
             }
         }
-        .cardsSection {
-            width: 100%;
-            height: clamp(48rem, 100vh, 92rem);
-            height: clamp(48rem, 100dvh, 92rem);
-            padding: 2.4rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: calc(1rem + 1vw);
-            overflow: hidden;
-            z-index: 2;
-            .repCard {
-                position: relative;
-                background: $sunderSnow;
-                width: 32%;
-                height: 98%;
-                border-radius: calc(1rem + 1vw);
-                overflow: hidden;
-                > * {
-                    position: absolute;
-                    width: 100%;
-                }
-                .repImg {
-                    height: 100%;
-                    object-fit: cover;
-                    object-position: 50% 40%;
-                }
-                .cardText {
-                    background: linear-gradient(15deg, #000000, #00000000 60%);
-                    bottom: 0;
-                    height: 100%;
-                    z-index: 2;
-                    color: $sunderSnow;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-end;
-                    align-items: flex-start;
-                    padding: 0 0 1.2rem calc(1rem + 1vw);
-                    .list {
-                        margin-bottom: 1.2rem;
-                        li {
-                            font-size: $M-Text;
-                        }
-                    }
-                    .name {
-                        font-family: $monument;
-                        font-size: $M-Text;
-                        font-weight: 675;
-                        .lastName {
-                            font-size: $XL-Text;
-                        }
-                    }
-                }
-            }
-        }
+        // .cardsSection {
+        //     width: 100%;
+        //     height: clamp(48rem, 100vh, 92rem);
+        //     height: clamp(48rem, 100dvh, 92rem);
+        //     padding: 2.4rem;
+        //     display: flex;
+        //     justify-content: space-between;
+        //     align-items: center;
+        //     gap: calc(1rem + 1vw);
+        //     overflow: hidden;
+        //     z-index: 2;
+        //     .repCard {
+        //         position: relative;
+        //         background: $sunderSnow;
+        //         width: 32%;
+        //         height: 98%;
+        //         border-radius: calc(1rem + 1vw);
+        //         overflow: hidden;
+        //         > * {
+        //             position: absolute;
+        //             width: 100%;
+        //         }
+        //         .repImg {
+        //             height: 100%;
+        //             object-fit: cover;
+        //             object-position: 50% 40%;
+        //         }
+        //         .cardText {
+        //             background: linear-gradient(15deg, #000000, #00000000 60%);
+        //             bottom: 0;
+        //             height: 100%;
+        //             z-index: 2;
+        //             color: $sunderSnow;
+        //             display: flex;
+        //             flex-direction: column;
+        //             justify-content: flex-end;
+        //             align-items: flex-start;
+        //             padding: 0 0 1.2rem calc(1rem + 1vw);
+        //             .list {
+        //                 margin-bottom: 1.2rem;
+        //                 li {
+        //                     font-size: $M-Text;
+        //                 }
+        //             }
+        //             .name {
+        //                 font-family: $monument;
+        //                 font-size: $M-Text;
+        //                 font-weight: 675;
+        //                 .lastName {
+        //                     font-size: $XL-Text;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
         .videoSection {
             position: relative;
             width: 100vw;
@@ -421,6 +421,9 @@ $pending: #BCD0D7;
                         font-weight: 400;
                     }
                 }
+                .stateCountMobile {
+                    display: none;
+                }
             }
             .mobileTitle {
                 display: none;
@@ -431,9 +434,10 @@ $pending: #BCD0D7;
             top: calc(31% + 24vw);
             width: 100%;
             height: calc(100vh + 29%);
-            z-index: -1;
+            // z-index: -1;
             pointer-events: none;
             #anchor2019 {
+                background: lightblue;
                 position: absolute;
                 top: 5%;
                 width: 12rem;
@@ -844,10 +848,10 @@ $pending: #BCD0D7;
             .quoteSection {
                 margin: auto;
             }
-            .cardsSection {
-                width: 128rem;
-                margin: auto;
-            }
+            // .cardsSection {
+            //     width: 128rem;
+            //     margin: auto;
+            // }
             .growth {
                 .mapArea {
                     .stateCount {
@@ -1084,59 +1088,59 @@ $pending: #BCD0D7;
                     border-right: 1px solid transparent;
                 }
             }
-            .cardsSection {
-                height: clamp(42rem, 100vh, 56rem);
-                padding: 0 2.4rem;
-                flex-wrap: nowrap;
-                overflow-x: scroll;
-                -ms-overflow-style: none;
-                scrollbar-width: none;
-                &::-webkit-scrollbar {
-                  display: none;
-                }
-                .repCard {
-                    flex: 0 0 auto;
-                    width: calc(22rem + 12vw);
-                    height: 86%;
-                    border-radius: 2rem;
-                    overflow: hidden;
-                    > * {
-                        position: absolute;
-                        width: 100%;
-                    }
-                    .repImg {
-                        height: 100%;
-                        object-fit: cover;
-                        object-position: 50% 40%;
-                    }
-                    .cardText {
-                        background: linear-gradient(15deg, #000000, #00000000 60%);
-                        bottom: 0;
-                        height: 100%;
-                        z-index: 2;
-                        color: $sunderSnow;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: flex-end;
-                        align-items: flex-start;
-                        padding: 0 0 1.2rem 3.2rem;
-                        .list {
-                            margin-bottom: 1.2rem;
-                            li {
-                                font-size: $M-Text;
-                            }
-                        }
-                        .name {
-                            font-family: $monument;
-                            font-size: $M-Text;
-                            font-weight: 675;
-                            .lastName {
-                                font-size: $XL-Text;
-                            }
-                        }
-                    }
-                }
-            }
+            // .cardsSection {
+            //     height: clamp(42rem, 100vh, 56rem);
+            //     padding: 0 2.4rem;
+            //     flex-wrap: nowrap;
+            //     overflow-x: scroll;
+            //     -ms-overflow-style: none;
+            //     scrollbar-width: none;
+            //     &::-webkit-scrollbar {
+            //       display: none;
+            //     }
+            //     .repCard {
+            //         flex: 0 0 auto;
+            //         width: calc(22rem + 12vw);
+            //         height: 86%;
+            //         border-radius: 2rem;
+            //         overflow: hidden;
+            //         > * {
+            //             position: absolute;
+            //             width: 100%;
+            //         }
+            //         .repImg {
+            //             height: 100%;
+            //             object-fit: cover;
+            //             object-position: 50% 40%;
+            //         }
+            //         .cardText {
+            //             background: linear-gradient(15deg, #000000, #00000000 60%);
+            //             bottom: 0;
+            //             height: 100%;
+            //             z-index: 2;
+            //             color: $sunderSnow;
+            //             display: flex;
+            //             flex-direction: column;
+            //             justify-content: flex-end;
+            //             align-items: flex-start;
+            //             padding: 0 0 1.2rem 3.2rem;
+            //             .list {
+            //                 margin-bottom: 1.2rem;
+            //                 li {
+            //                     font-size: $M-Text;
+            //                 }
+            //             }
+            //             .name {
+            //                 font-family: $monument;
+            //                 font-size: $M-Text;
+            //                 font-weight: 675;
+            //                 .lastName {
+            //                     font-size: $XL-Text;
+            //                 }
+            //             }
+            //         }
+            //     }
+            // }
             .videoSection {
                 h2 {
                     font-size: $XL-Text;
@@ -1242,22 +1246,22 @@ $pending: #BCD0D7;
                     }
                 }
             }
-            .cardsSection {
-                height: clamp(36rem, 90vh, 52rem);
-                padding: 0 1.2rem;
-                .repCard {
-                    width: calc(16rem + 12vw);
-                    border-radius: 1.6rem;
-                    .cardText {
-                        padding: 0 0 1.2rem 2.4rem;
-                        .list {
-                            li {
-                                font-size: $S-Text;
-                            }
-                        }
-                    }
-                }
-            }
+            // .cardsSection {
+            //     height: clamp(36rem, 90vh, 52rem);
+            //     padding: 0 1.2rem;
+            //     .repCard {
+            //         width: calc(16rem + 12vw);
+            //         border-radius: 1.6rem;
+            //         .cardText {
+            //             padding: 0 0 1.2rem 2.4rem;
+            //             .list {
+            //                 li {
+            //                     font-size: $S-Text;
+            //                 }
+            //             }
+            //         }
+            //     }
+            // }
             .growth {
                 flex-direction: column-reverse;
                 .numberArea {
@@ -1278,7 +1282,7 @@ $pending: #BCD0D7;
                         &Border2 {
                             position: absolute;
                             top: 50%;
-                            left: 0;
+                            left: -2rem;
                             transform: translate(0, -2rem);
                             display: block;
                             width: 0%;
@@ -1326,22 +1330,25 @@ $pending: #BCD0D7;
                 }
             }
             .growthAnchors {
-                top: calc(41% + 24vw);
+                border: 2px dashed lightblue;
+                height: calc(100vh + 32%);
+                // top: calc(41% + 24vw);
+                top: calc(35% + 24vw);
+                // display: none;
                 #anchor2019 {
-                    // top: 20%; With Solar Rep Cards
-                    top: 10%;
+                    top: 14%;
                 }
                 #anchor2020 {
-                    // top: 40%; With Solar Rep Cards
-                    top: 30%;
+                    top: 29%;
                 }
                 #anchor2021 {
-                    // top: 56%; With Solar Rep Cards
-                    top: 46%;
+                    top: 42%;
                 }
                 #anchor2022 {
-                    // top: 73%; With Solar Rep Cards
-                    top: 63%;
+                    top: 62%;
+                }
+                #anchor2023 {
+                    top: 74%;
                 }
             }
             .dataSections {
@@ -1573,6 +1580,7 @@ $pending: #BCD0D7;
                         display: none;
                     }
                     .stateCountMobile {
+                        display: block;
                         position: absolute;
                         top: 2.4rem;
                         right: -1.2rem;
