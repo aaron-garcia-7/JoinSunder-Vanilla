@@ -1557,10 +1557,10 @@ input::-webkit-inner-spin-button {
   top: calc(31% + 24vw);
   width: 100%;
   height: calc(100vh + 29%);
+  z-index: -1;
   pointer-events: none;
 }
 .opportunity .mainContent .growthAnchors #anchor2019, .opportunity .mainContent .growthAnchors #anchor2023, .opportunity .mainContent .growthAnchors #anchor2022, .opportunity .mainContent .growthAnchors #anchor2021, .opportunity .mainContent .growthAnchors #anchor2020 {
-  background: lightblue;
   position: absolute;
   top: 5%;
   width: 12rem;
@@ -2242,7 +2242,6 @@ input::-webkit-inner-spin-button {
     font-size: calc(0.8rem + 1vw);
   }
   .opportunity .mainContent .growthAnchors {
-    border: 2px dashed lightblue;
     height: calc(100vh + 32%);
     top: calc(35% + 24vw);
   }
@@ -2256,10 +2255,10 @@ input::-webkit-inner-spin-button {
     top: 42%;
   }
   .opportunity .mainContent .growthAnchors #anchor2022 {
-    top: 62%;
+    top: 57%;
   }
   .opportunity .mainContent .growthAnchors #anchor2023 {
-    top: 74%;
+    top: 72%;
   }
   .opportunity .mainContent .dataSections {
     height: clamp(48rem, 112vh, 86rem);
@@ -2481,19 +2480,7 @@ input::-webkit-inner-spin-button {
     font-size: calc(1rem + 1.2vw);
   }
   .opportunity .mainContent .growthAnchors {
-    height: 48rem;
-  }
-  .opportunity .mainContent .growthAnchors #anchor2019, .opportunity .mainContent .growthAnchors #anchor2020, .opportunity .mainContent .growthAnchors #anchor2021, .opportunity .mainContent .growthAnchors #anchor2022, .opportunity .mainContent .growthAnchors #anchor2023 {
-    top: 8%;
-  }
-  .opportunity .mainContent .growthAnchors #anchor2020 {
-    top: 22%;
-  }
-  .opportunity .mainContent .growthAnchors #anchor2021 {
-    top: 36%;
-  }
-  .opportunity .mainContent .growthAnchors #anchor2022 {
-    top: 50%;
+    display: none;
   }
   .opportunity .mainContent .dataSections {
     height: clamp(36rem, 100vh, 86rem);
