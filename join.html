@@ -1,186 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Join Sunder. Our mission is to give people the power to change the future.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Join Sunder. Our mission is to give people the power to change the future."
+    />
     <title>Join Sunder | Join</title>
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="icon" href="./public/favicon.ico">
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="icon" href="./public/favicon.ico" />
     <script src="./javascript/join.js" defer></script>
     <script src="./javascript/global.js" defer></script>
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JX37G2KL28"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-JX37G2KL28"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  gtag('config', 'G-JX37G2KL28');
-</script>
-<body class="join">
-
+    gtag("config", "G-JX37G2KL28");
+  </script>
+  <body class="join">
     <main class="mainContent">
+      <figure class="leftSide">
+        <img src="./images/joinPage/joinImg.png" alt="" />
+      </figure>
 
-        <figure class="leftSide">
-            <img src="./images/joinPage/joinImg.png" alt="">
+      <aside class="formPanel">
+        <figure class="formLogo">
+          <a
+            href="./index.html"
+            aria-label="Return to the home screen"
+            class="formLogoLink"
+          >
+            <img src="./assets/logoLight.svg" alt="Sunder" />
+          </a>
         </figure>
+        <form
+          class="contactForm"
+          action="/contact"
+          method="POST"
+          name="contactSunder"
+          netlify="true"
+          netlify-honeypot="bot-field"
+          data-netlify-recaptcha="true"
+          hidden
+        >
+          <input type="hidden" name="contactSunder" value="contact" />
+          <div class="formBlock">
+            <input
+              class="input"
+              type="text"
+              name="name"
+              placeholder=" "
+              aria-label="Please enter your first and last name."
+              id="name"
+              required
+            />
+            <label for="name" class="label"> Name </label>
+          </div>
+          <div class="formBlock">
+            <input
+              class="input"
+              type="email"
+              name="email"
+              placeholder=" "
+              aria-label="Please enter your Email address."
+              id="email"
+              required
+            />
+            <label for="email" class="label"> Email </label>
+          </div>
+          <div class="formBlock">
+            <input
+              class="input"
+              type="tel"
+              name="phone"
+              placeholder=" "
+              aria-label="Please enter your preferred phone number."
+              id="phone"
+              required
+            />
+            <label for="phone" class="label"> Phone </label>
+          </div>
 
-        <aside class="formPanel">
-            <figure class="formLogo">
-                <a href="./index.html" aria-labelledby="Return to the home screen" class="formLogoLink">
-                    <img src="./assets/logoLight.svg" alt="Sunder">
-                </a>
-            </figure>
-            <form class="contactForm" action="/contact" method="POST" name="contactSunder" netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true" hidden>
-                <input type="hidden" name="contactSunder" value="contact">
-                <div class="formBlock">
-                    <input class="input"
-                        type="text"
-                        name="name"
-                        placeholder=" "
-                        aria-labelledby="Please enter your first and last name."
-                        id="name"
-                        required
-                    />
-                    <label for="name" class="label">
-                        Name
-                    </label>
-                </div>
-                <div class="formBlock">
-                    <input class="input"
-                        type="email"
-                        name="email"
-                        placeholder=" "
-                        aria-labelledby="Please enter your Email address."
-                        id="email"
-                        required
-                    />
-                    <label for="email" class="label">
-                        Email
-                    </label>
-                </div>
-                <div class="formBlock">
-                    <input class="input"
-                        type="tel"
-                        name="phone"
-                        placeholder=" "
-                        aria-labelledby="Please enter your preferred phone number."
-                        id="phone"
-                        required
-                    />
-                    <label for="phone" class="label">
-                        Phone
-                    </label>
-                </div>
-                <div class="formBlock lastBlock">
-                    <input class="input"
-                        type="number"
-                        pattern="[0-9]{5}"
-                        name="zip"
-                        placeholder=" "
-                        aria-labelledby="Please enter your zip code."
-                        id="zip-code"
-                        required
-                    />
-                    <label for="zip-code" class="label">
-                        Zip Code
-                    </label>
-                </div>
-                <!-- <div class="mockCaptcha">
+          <div class="formBlock">
+            <input
+              class="input"
+              type="text"
+              name="city"
+              placeholder=" "
+              aria-label="Please enter your city."
+              id="city"
+              required
+            />
+            <label for="city" class="label"> City </label>
+          </div>
+          <div class="formBlock">
+            <input
+              class="input"
+              type="text"
+              name="state"
+              placeholder=" "
+              aria-label="Please enter state."
+              id="state"
+              required
+            />
+            <label for="state" class="label"> State </label>
+          </div>
+
+          <div class="formBlock lastBlock">
+            <input
+              class="input"
+              type="number"
+              pattern="[0-9]{5}"
+              name="zip"
+              placeholder=" "
+              aria-label="Please enter your zip code."
+              id="zip-code"
+              required
+            />
+            <label for="zip-code" class="label"> Zip Code </label>
+          </div>
+          <!-- <div class="mockCaptcha">
                     <p>I’m not a robot</p>
                 </div> -->
-                <!-- Captcha is in an iFrame. Traditional styling won't work. -->
-                <div data-netlify-recaptcha="true" class="recaptcha"></div>
-                <button type="submit" class="cta" id="cta">
-                    Submit
-                    <div class="ctaCircle" id="ctaCircle"></div>
-                </button>
-            </form>
-        </aside>
-
+          <!-- Captcha is in an iFrame. Traditional styling won't work. -->
+          <div data-netlify-recaptcha="true" class="recaptcha"></div>
+          <button type="submit" class="cta" id="cta">
+            Submit
+            <div class="ctaCircle" id="ctaCircle"></div>
+          </button>
+        </form>
+      </aside>
     </main>
 
-    <div class="burgerContainer"> 
-        <div class='burger'>
-            <div class='line'></div>
-            <div class='line'></div>
-            <div class='line'></div>
-            <div class='lineCross'></div>
-            <div class='lineCross line5'></div>
-        </div>
+    <div class="burgerContainer">
+      <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="lineCross"></div>
+        <div class="lineCross line5"></div>
+      </div>
     </div>
 
     <div class="nav">
-        <div class="navSlider">
-            <a href="./index.html" class="navLink" id="firstNavLink">
-                <h3 class="linkTitle">Home</h3>
-                <img src="./images/navImages/navHome.webp" alt="" class="linkImg desktopImg">
-                <img src="./images/navImages/navHomeSmall.webp" alt="" class="linkImg mobileImg">
-            </a>
-            <a href="./opportunity.html" class="navLink">
-                <h3 class="linkTitle">Opportunity</h3>
-                <img src="./images/navImages/navOpportunity.webp" alt="" class="linkImg desktopImg">
-                <img src="./images/navImages/navOpportunitySmall.webp" alt="" class="linkImg mobileImg">
-            </a>
-            <a href="./compete.html"class="navLink">
-                <h3 class="linkTitle">Compete</h3>
-                <img src="./images/navImages/navCompete.webp" alt="" class="linkImg desktopImg">
-                <img src="./images/navImages/navCompeteSmall.webp" alt="" class="linkImg mobileImg">
-            </a>
-            <a href="./experience.html"class="navLink">
-                <h3 class="linkTitle">Experience</h3>
-                <img src="./images/navImages/navExperience.webp" alt="" class="linkImg desktopImg">
-                <img src="./images/navImages/navExperienceSmall.webp" alt="" class="linkImg mobileImg">
-            </a>
-            <a href="./resources.html"class="navLink">
-                <h3 class="linkTitle">Resources</h3>
-                <img src="./images/navImages/navResources.webp" alt="" class="linkImg desktopImg">
-                <img src="./images/navImages/navResourcesSmall.webp" alt="" class="linkImg mobileImg">
-            </a>
-            <a href="./join.html"class="navLink">
-                <h3 class="linkTitle linkTitleActive">Join</h3>
-                <img src="./images/navImages/navJoin.webp" alt="" class="linkImg desktopImg">
-                <img src="./images/navImages/navJoinSmall.webp" alt="" class="linkImg mobileImg">
-            </a>
-        </div>
-        <div class="navSwiper"> 
-            <a href="./index.html"class="navLink">
-                <h3 class="linkTitle">Home</h3>
-                <img src="./images/navImages/navHomeSmall.webp" alt="" class="linkImg">
-            </a>
-            <a href="./opportunity.html" class="navLink">
-                <h3 class="linkTitle">Opportunity</h3>
-                <img src="./images/navImages/navOpportunitySmall.webp" alt="" class="linkImg">
-            </a>
-            <a href="./compete.html"class="navLink">
-                <h3 class="linkTitle">Compete</h3>
-                <img src="./images/navImages/navCompeteSmall.webp" alt="" class="linkImg">
-            </a>
-            <a href="./experience.html"class="navLink">
-                <h3 class="linkTitle">Experience</h3>
-                <img src="./images/navImages/navExperienceSmall.webp" alt="" class="linkImg">
-            </a>
-            <a href="./resources.html"class="navLink">
-                <h3 class="linkTitle">Resources</h3>
-                <img src="./images/navImages/navResourcesSmall.webp" alt="" class="linkImg">
-            </a>
-            <a href="./join.html"class="navLink">
-                <h3 class="linkTitle linkTitleActive">Join</h3>
-                <img src="./images/navImages/navJoinSmall.webp" alt="" class="linkImg">
-            </a>
-        </div>
+      <div class="navSlider">
+        <a href="./index.html" class="navLink" id="firstNavLink">
+          <h3 class="linkTitle">Home</h3>
+          <img
+            src="./images/navImages/navHome.webp"
+            alt=""
+            class="linkImg desktopImg"
+          />
+          <img
+            src="./images/navImages/navHomeSmall.webp"
+            alt=""
+            class="linkImg mobileImg"
+          />
+        </a>
+        <a href="./opportunity.html" class="navLink">
+          <h3 class="linkTitle">Opportunity</h3>
+          <img
+            src="./images/navImages/navOpportunity.webp"
+            alt=""
+            class="linkImg desktopImg"
+          />
+          <img
+            src="./images/navImages/navOpportunitySmall.webp"
+            alt=""
+            class="linkImg mobileImg"
+          />
+        </a>
+        <a href="./compete.html" class="navLink">
+          <h3 class="linkTitle">Compete</h3>
+          <img
+            src="./images/navImages/navCompete.webp"
+            alt=""
+            class="linkImg desktopImg"
+          />
+          <img
+            src="./images/navImages/navCompeteSmall.webp"
+            alt=""
+            class="linkImg mobileImg"
+          />
+        </a>
+        <a href="./experience.html" class="navLink">
+          <h3 class="linkTitle">Experience</h3>
+          <img
+            src="./images/navImages/navExperience.webp"
+            alt=""
+            class="linkImg desktopImg"
+          />
+          <img
+            src="./images/navImages/navExperienceSmall.webp"
+            alt=""
+            class="linkImg mobileImg"
+          />
+        </a>
+        <a href="./resources.html" class="navLink">
+          <h3 class="linkTitle">Resources</h3>
+          <img
+            src="./images/navImages/navResources.webp"
+            alt=""
+            class="linkImg desktopImg"
+          />
+          <img
+            src="./images/navImages/navResourcesSmall.webp"
+            alt=""
+            class="linkImg mobileImg"
+          />
+        </a>
+        <a href="./join.html" class="navLink">
+          <h3 class="linkTitle linkTitleActive">Join</h3>
+          <img
+            src="./images/navImages/navJoin.webp"
+            alt=""
+            class="linkImg desktopImg"
+          />
+          <img
+            src="./images/navImages/navJoinSmall.webp"
+            alt=""
+            class="linkImg mobileImg"
+          />
+        </a>
+      </div>
+      <div class="navSwiper">
+        <a href="./index.html" class="navLink">
+          <h3 class="linkTitle">Home</h3>
+          <img
+            src="./images/navImages/navHomeSmall.webp"
+            alt=""
+            class="linkImg"
+          />
+        </a>
+        <a href="./opportunity.html" class="navLink">
+          <h3 class="linkTitle">Opportunity</h3>
+          <img
+            src="./images/navImages/navOpportunitySmall.webp"
+            alt=""
+            class="linkImg"
+          />
+        </a>
+        <a href="./compete.html" class="navLink">
+          <h3 class="linkTitle">Compete</h3>
+          <img
+            src="./images/navImages/navCompeteSmall.webp"
+            alt=""
+            class="linkImg"
+          />
+        </a>
+        <a href="./experience.html" class="navLink">
+          <h3 class="linkTitle">Experience</h3>
+          <img
+            src="./images/navImages/navExperienceSmall.webp"
+            alt=""
+            class="linkImg"
+          />
+        </a>
+        <a href="./resources.html" class="navLink">
+          <h3 class="linkTitle">Resources</h3>
+          <img
+            src="./images/navImages/navResourcesSmall.webp"
+            alt=""
+            class="linkImg"
+          />
+        </a>
+        <a href="./join.html" class="navLink">
+          <h3 class="linkTitle linkTitleActive">Join</h3>
+          <img
+            src="./images/navImages/navJoinSmall.webp"
+            alt=""
+            class="linkImg"
+          />
+        </a>
+      </div>
     </div>
 
     <div class="navLogo">
-        <a href="./index.html" class="logoLink">
-          <img src="./assets/logoDark.svg" alt="Sunder" class="navlogoImg">
-        </a>
+      <a href="./index.html" class="logoLink">
+        <img src="./assets/logoDark.svg" alt="Sunder" class="navlogoImg" />
+      </a>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js" integrity="sha512-A64Nik4Ql7/W/PJk2RNOmVyC/Chobn5TY08CiKEX50Sdw+33WTOpPJ/63bfWPl0hxiRv1trPs5prKO8CpA7VNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+      integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"
+      integrity="sha512-A64Nik4Ql7/W/PJk2RNOmVyC/Chobn5TY08CiKEX50Sdw+33WTOpPJ/63bfWPl0hxiRv1trPs5prKO8CpA7VNQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
 </html>

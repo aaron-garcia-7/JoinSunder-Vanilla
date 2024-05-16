@@ -1,4 +1,3 @@
-/* Enzy Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Saira:wght@100;300;500;700;900&display=swap");
 /* Sunder Fonts */
 @font-face {
@@ -47,6 +46,10 @@ Monument Weights
   padding: 0;
   box-sizing: border-box;
 }
+*:-webkit-autofill, *:-webkit-autofill:hover, *:-webkit-autofill:focus {
+  -webkit-text-fill-color: #f7f7f7;
+  -webkit-box-shadow: 0 0 0px 1000px #000014 inset;
+}
 
 body {
   background: #f7f7f7;
@@ -58,12 +61,22 @@ a {
   text-decoration: none;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: "monument", sans-serif;
   font-weight: 450;
 }
 
-h3, h4, h5, h6, p, blockquote, a, button, input, label {
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+button,
+input,
+label {
   font-family: "satoshi", sans-serif;
 }
 
@@ -88,7 +101,9 @@ input::-webkit-inner-spin-button {
   position: absolute;
   opacity: 0;
   pointer-events: none;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .logo, .navLogo {
@@ -119,12 +134,15 @@ input::-webkit-inner-spin-button {
 .logo .logoLink .logoImg, .navLogo .logoLink .logoImg {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: transform 0.4s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.12s;
 }
 .logoActive {
   pointer-events: none;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   cursor: default;
 }
 .logoActive .logoImg {
@@ -193,7 +211,7 @@ input::-webkit-inner-spin-button {
   transform: translate(-50%, -50%) rotate(-45deg) !important;
 }
 .burgerContainer .burgerActive {
-  background: #061A2A;
+  background: #061a2a;
 }
 .burgerContainer .burgerActive .line, .burgerContainer .burgerActive .iframeContainer .closeVideoBurger .lineCross, .burgerContainer .burgerActive .iframeContainer .closeVideoBurger .line5, .iframeContainer .closeVideoBurger .burgerContainer .burgerActive .lineCross, .iframeContainer .closeVideoBurger .burgerContainer .burgerActive .line5, .burgerContainer .burgerActive .videoContainer .closeVideoBurger .lineCross, .burgerContainer .burgerActive .videoContainer .closeVideoBurger .line5, .videoContainer .closeVideoBurger .burgerContainer .burgerActive .lineCross, .videoContainer .closeVideoBurger .burgerContainer .burgerActive .line5, .burgerContainer .burgerActive .burger .lineCross, .burgerContainer .burger .burgerActive .lineCross, .burgerContainer .burgerActive .burger .line5, .burgerContainer .burger .burgerActive .line5 {
   width: 0;
@@ -213,7 +231,7 @@ input::-webkit-inner-spin-button {
 }
 
 .nav {
-  background: #C6D3D8;
+  background: #c6d3d8;
   position: fixed;
   bottom: 0;
   transform: translate(0, 100%);
@@ -264,7 +282,8 @@ input::-webkit-inner-spin-button {
   width: calc(8rem + 12vw);
   height: calc(7rem + 4vw);
   border-radius: calc(0.6rem + 0.1vw);
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: transform 0.4s ease;
   cursor: pointer;
 }
@@ -304,7 +323,8 @@ input::-webkit-inner-spin-button {
   width: 20vw;
   height: calc(7rem + 4vw);
   border-radius: calc(0.6rem + 0.1vw);
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .nav .navSwiper .navLink .mobileImg {
   display: none;
@@ -336,7 +356,8 @@ input::-webkit-inner-spin-button {
 .navLogo img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transform: translate(0, 124%);
   transition: 0.4s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0s;
 }
@@ -1012,7 +1033,8 @@ input::-webkit-inner-spin-button {
 .home .mainContent .reel .col2 .reelImgShort img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .home .mainContent .reel .col1 .reelImg:last-of-type,
 .home .mainContent .reel .col1 .reelImgShort:last-of-type,
@@ -1293,7 +1315,8 @@ input::-webkit-inner-spin-button {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption {
   position: absolute;
@@ -1418,7 +1441,8 @@ input::-webkit-inner-spin-button {
 .opportunity .mainContent .videoSection .videoFigure .definitionVideo {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   z-index: -1;
 }
 .opportunity .mainContent .growth {
@@ -1453,7 +1477,7 @@ input::-webkit-inner-spin-button {
   top: 0;
   right: 0;
   transform: translate(calc(4rem + 2vw), -10%);
-  background: #C6D3D8;
+  background: #c6d3d8;
   width: 1px;
   height: 0%;
 }
@@ -1495,7 +1519,7 @@ input::-webkit-inner-spin-button {
 }
 .opportunity .mainContent .growth .mapArea .map .USA .state {
   fill: transparent;
-  stroke: #C6D3D8;
+  stroke: #c6d3d8;
   transition: 0.2s ease;
 }
 .opportunity .mainContent .growth .mapArea .compass {
@@ -1697,18 +1721,7 @@ input::-webkit-inner-spin-button {
   transform: translate(0, -10%);
 }
 .opportunity .mainContent .kwInstalled .lineGraph .line .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .burgerContainer .burger .lineCross .pathActive, .burgerContainer .burger .opportunity .mainContent .kwInstalled .lineGraph .lineCross .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .burgerContainer .burger .line5 .pathActive, .burgerContainer .burger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .videoContainer .closeVideoBurger .lineCross .pathActive, .videoContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .lineCross .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .videoContainer .closeVideoBurger .line5 .pathActive, .videoContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .iframeContainer .closeVideoBurger .lineCross .pathActive, .iframeContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .lineCross .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .iframeContainer .closeVideoBurger .line5 .pathActive, .iframeContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive {
-  -webkit-animation: animate-svg-stroke-1 1.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
   animation: animate-svg-stroke-1 1.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
-}
-@-webkit-keyframes animate-svg-stroke-1 {
-  0% {
-    stroke-dashoffset: 1470.5576171875px;
-    stroke-dasharray: 1470.5576171875px;
-  }
-  100% {
-    stroke-dashoffset: 2941.115234375px;
-    stroke-dasharray: 1470.5576171875px;
-  }
 }
 @keyframes animate-svg-stroke-1 {
   0% {
@@ -1721,18 +1734,7 @@ input::-webkit-inner-spin-button {
   }
 }
 .opportunity .mainContent .kwInstalled .lineGraph .points .point1Active {
-  -webkit-animation: drawPoint1 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both, animate-svg-fill-1 0s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
   animation: drawPoint1 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both, animate-svg-fill-1 0s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
-}
-@-webkit-keyframes drawPoint1 {
-  0% {
-    stroke-dashoffset: 118.2389281828px;
-    stroke-dasharray: 118.2389281828px;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    stroke-dasharray: 118.2389281828px;
-  }
 }
 @keyframes drawPoint1 {
   0% {
@@ -1745,18 +1747,7 @@ input::-webkit-inner-spin-button {
   }
 }
 .opportunity .mainContent .kwInstalled .lineGraph .points .point2Active {
-  -webkit-animation: drawPoint2 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0.3s both, animate-svg-fill-2 0s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s both;
   animation: drawPoint2 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0.3s both, animate-svg-fill-2 0s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s both;
-}
-@-webkit-keyframes drawPoint2 {
-  0% {
-    stroke-dashoffset: 118.2389281828px;
-    stroke-dasharray: 118.2389281828px;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    stroke-dasharray: 118.2389281828px;
-  }
 }
 @keyframes drawPoint2 {
   0% {
@@ -1769,18 +1760,7 @@ input::-webkit-inner-spin-button {
   }
 }
 .opportunity .mainContent .kwInstalled .lineGraph .points .point3Active {
-  -webkit-animation: drawPoint3 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0.7s both, animate-svg-fill-3 0s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
   animation: drawPoint3 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0.7s both, animate-svg-fill-3 0s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
-}
-@-webkit-keyframes drawPoint3 {
-  0% {
-    stroke-dashoffset: 118.2389281828px;
-    stroke-dasharray: 118.2389281828px;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    stroke-dasharray: 118.2389281828px;
-  }
 }
 @keyframes drawPoint3 {
   0% {
@@ -1793,18 +1773,7 @@ input::-webkit-inner-spin-button {
   }
 }
 .opportunity .mainContent .kwInstalled .lineGraph .points .point4Active {
-  -webkit-animation: drawPoint4 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) 1s both, animate-svg-fill-4 0s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
   animation: drawPoint4 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) 1s both, animate-svg-fill-4 0s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
-}
-@-webkit-keyframes drawPoint4 {
-  0% {
-    stroke-dashoffset: 118.2389281828px;
-    stroke-dasharray: 118.2389281828px;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    stroke-dasharray: 118.2389281828px;
-  }
 }
 @keyframes drawPoint4 {
   0% {
@@ -2121,7 +2090,8 @@ input::-webkit-inner-spin-button {
   .opportunity .mainContent .videoSection .videoFigure .definitionVideo {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     z-index: -1;
   }
   .opportunity .mainContent .growth .numberArea .timeline {
@@ -2591,7 +2561,8 @@ input::-webkit-inner-spin-button {
 .compete .mainContent .mySwiper .swiper-wrapper .swiper-slide .videoPoster {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .compete .mainContent .mySwiper .swiper-wrapper .swiper-slide .playIcon {
   position: absolute;
@@ -2635,7 +2606,7 @@ input::-webkit-inner-spin-button {
 }
 .compete .mainContent .mySwiper .swiper-pagination-bullet {
   border: 1px solid #0c5ff2;
-  background: #C6D3D8;
+  background: #c6d3d8;
   width: 16px;
   height: 16px;
   background: transparent;
@@ -2646,7 +2617,7 @@ input::-webkit-inner-spin-button {
   background: #0c5ff2;
 }
 .compete .mainContent .mySwiper .swiper-pagination-bullet:hover {
-  background: #C6D3D8;
+  background: #c6d3d8;
 }
 .compete .mainContentActive {
   transform: translate(0, -50vh);
@@ -2775,7 +2746,8 @@ input::-webkit-inner-spin-button {
 .experience .mainContent .reel .columnOuter .reelImgShort img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .experience .mainContent .reel .columnOuter .reelImgShort {
   height: calc(8rem + 8vw);
@@ -2824,7 +2796,8 @@ input::-webkit-inner-spin-button {
 .experience .mainContent .mySwiper .swiper-wrapper .swiper-slide .videoPoster {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .experience .mainContent .mySwiper .swiper-wrapper .swiper-slide .playIcon {
   position: absolute;
@@ -2868,7 +2841,7 @@ input::-webkit-inner-spin-button {
 }
 .experience .mainContent .mySwiper .swiper-pagination-bullet {
   border: 1px solid #0c5ff2;
-  background: #C6D3D8;
+  background: #c6d3d8;
   width: 16px;
   height: 16px;
   background: transparent;
@@ -2879,7 +2852,7 @@ input::-webkit-inner-spin-button {
   background: #0c5ff2;
 }
 .experience .mainContent .mySwiper .swiper-pagination-bullet:hover {
-  background: #C6D3D8;
+  background: #c6d3d8;
 }
 .experience .mainContentActive {
   transform: translate(0, -50vh);
@@ -3061,7 +3034,7 @@ input::-webkit-inner-spin-button {
   transform: translate(0, -4%);
 }
 .resources .mainContent .productivity .images .imgWrapper {
-  background: #C6D3D8;
+  background: #c6d3d8;
   width: calc(4rem + 34vw);
   height: calc(28rem + 28vw);
   border-radius: calc(0.4rem + 0.2vw) 0 0 calc(0.4rem + 0.2vw);
@@ -3070,7 +3043,8 @@ input::-webkit-inner-spin-button {
 .resources .mainContent .productivity .images .imgWrapper img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .resources .mainContent .meetTheTeam {
   width: 100vw;
@@ -3156,7 +3130,8 @@ input::-webkit-inner-spin-button {
 .resources .mainContent .board .boardGroup .boardImg img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .resources .mainContent .board .boardGroup .boardImg figcaption {
   position: absolute;
@@ -3212,7 +3187,7 @@ input::-webkit-inner-spin-button {
   position: relative;
   background: linear-gradient(90deg, rgba(109, 168, 148, 0.3019607843), rgba(110, 168, 149, 0.4392156863));
   color: transparent;
-  border: 1px solid #6DA894;
+  border: 1px solid #6da894;
   display: flex;
   cursor: pointer;
   width: calc(6.8rem + 6.8vw);
@@ -3269,7 +3244,8 @@ input::-webkit-inner-spin-button {
 .resources .mainContent .enzy .enzyHero .phonesWrapper .phonesImg {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .resources .mainContent .enzy .enzyHero .subText {
   position: absolute;
@@ -3716,7 +3692,8 @@ input::-webkit-inner-spin-button {
 .join .mainContent .leftSide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .join .mainContent .formPanel {
   background: #000014;
@@ -3751,14 +3728,14 @@ input::-webkit-inner-spin-button {
 .join .mainContent .formPanel .contactForm .formBlock {
   position: relative;
   width: 76%;
-  height: 10%;
+  height: 8%;
   border-bottom: 1px solid #f7f7f7;
 }
 .join .mainContent .formPanel .contactForm .formBlock .input {
   position: absolute;
   bottom: 12%;
   left: 0;
-  font-size: calc(0.8rem + 1vw);
+  font-size: calc(0.8rem + 0.4vw);
   color: #f7f7f7;
   background: transparent;
   border: none;
@@ -3775,14 +3752,14 @@ input::-webkit-inner-spin-button {
   width: 100%;
   top: 36%;
   left: 0;
-  font-size: calc(0.8rem + 1vw);
+  font-size: calc(0.8rem + 0.4vw);
   font-weight: 300;
   color: #f7f7f7;
   pointer-events: none;
   transition: 0.3s ease;
 }
 .join .mainContent .formPanel .contactForm .formBlock .input:focus ~ .label,
-.join .mainContent .formPanel .contactForm .formBlock .input:not(:placeholder-shown).input:not(focus) ~ .label {
+.join .mainContent .formPanel .contactForm .formBlock .input:not(:placeholder-shown).input:not(focus) ~ .label, .join .mainContent .formPanel .contactForm .formBlock:-webkit-autofill, .join .mainContent .formPanel .contactForm .formBlock:-webkit-autofill:hover, .join .mainContent .formPanel .contactForm .formBlock:-webkit-autofill:focus {
   transform: translate(0, -112%);
   opacity: 0.8;
   font-size: calc(1rem + 0.2vw);

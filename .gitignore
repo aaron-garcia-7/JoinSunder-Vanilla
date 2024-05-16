@@ -1,1 +1,18 @@
 /.DS_Store
+
+# Exclude video files
+*.mp4
+*.avi
+*.flv
+*.wmv
+*.mov
+*.mkv
+*.webm
+*.mpeg
+*.mpg
+*.m4v
+*.h264
+*.flv
+*.rm
+*.swf
+*.vob

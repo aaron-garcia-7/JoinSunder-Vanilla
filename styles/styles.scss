@@ -1,5 +1,6 @@
-/* Enzy Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Saira:wght@100;300;500;700;900&display=swap');
+@import "./base/mixins";
+
+@import url("https://fonts.googleapis.com/css2?family=Saira:wght@100;300;500;700;900&display=swap");
 
 /* Sunder Fonts */
 @font-face {
@@ -47,15 +48,15 @@ Monument Weights
 
 $satoshi: "satoshi", sans-serif;
 $monument: "monument", sans-serif;
-$saira: 'Saira', sans-serif;
+$saira: "Saira", sans-serif;
 
 $sunderSnow: #f7f7f7;
-$sunderIce: #C6D3D8;
+$sunderIce: #c6d3d8;
 $sunderRoyalLight: #0c5ff2;
 $sunderRoyal: #074895;
-$sunderNavy: #061A2A;
+$sunderNavy: #061a2a;
 $sunderMidnight: #000014;
-$enzyHero: #6DA894;
+$enzyHero: #6da894;
 
 $Hero-Text: calc(1.6rem + 2.4vw);
 $XXL-Text: calc(0.4rem + 2.8vw);
@@ -66,12 +67,22 @@ $S-Text: calc(0.8rem + 0.4vw);
 $XS-Text: calc(0.6rem + 0.3vw);
 
 $nav-shift: translate(0, -50vh);
-$nav-transition: 0.6s cubic-bezier(.75,.15,.25,.85) 0.06s;
+$nav-transition: 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  // Autofill for form fields: input, textarea, select, etc.
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    -webkit-text-fill-color: $sunderSnow;
+    -webkit-box-shadow: 0 0 0px 1000px $sunderMidnight inset;
+    // -webkit-text-fill-color: var(--primary-font-color);
+    // -webkit-box-shadow: 0 0 0px 1000px var(--background-color) inset;
+  }
 }
 body {
   background: $sunderSnow;
@@ -81,11 +92,21 @@ body {
 a {
   text-decoration: none;
 }
-h1, h2 {
+h1,
+h2 {
   font-family: $monument;
   font-weight: 450;
 }
-h3, h4, h5, h6, p, blockquote, a, button, input, label {
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+button,
+input,
+label {
   font-family: $satoshi;
 }
 ul {
@@ -143,17 +164,17 @@ input::-webkit-inner-spin-button {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.4s cubic-bezier(.75,.15,.25,.85) 0.12s;
+      transition: transform 0.4s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.12s;
     }
   }
-  
+
   &Active {
     pointer-events: none;
     user-select: none;
     cursor: default;
     .logoImg {
       transform: translate(0, -112%);
-      transition: transform 0.4s cubic-bezier(.75,.15,.25,.85) 0s;
+      transition: transform 0.4s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0s;
     }
   }
 }
@@ -197,7 +218,7 @@ input::-webkit-inner-spin-button {
       width: 40%;
       height: 2px;
       border-radius: 2rem;
-      transition: 0.4s cubic-bezier(.75,.15,.25,.85) 0.4s;
+      transition: 0.4s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.4s;
       &:nth-of-type(2) {
         margin: 4px 0 4px 0;
         transition-delay: 0.46s;
@@ -223,13 +244,13 @@ input::-webkit-inner-spin-button {
       background: $sunderNavy;
       .line {
         width: 0;
-        &:nth-of-type(1){
+        &:nth-of-type(1) {
           transition-delay: 0s;
         }
-        &:nth-of-type(2){
+        &:nth-of-type(2) {
           transition-delay: 0.06s;
         }
-        &:nth-of-type(3){
+        &:nth-of-type(3) {
           transition-delay: 0.12s;
         }
       }
@@ -262,7 +283,8 @@ input::-webkit-inner-spin-button {
     justify-content: center;
     align-items: center;
     transform: translate(calc(10rem + 8vw), 2vw);
-    transition: transform 0.5s cubic-bezier(.75,.15,.25,.85), opacity 0.4s ease;
+    transition: transform 0.5s cubic-bezier(0.75, 0.15, 0.25, 0.85),
+      opacity 0.4s ease;
     .navLink {
       transform: translate(2rem, 0);
       display: flex;
@@ -379,13 +401,13 @@ input::-webkit-inner-spin-button {
     height: 100%;
     object-fit: cover;
     transform: translate(0, 124%);
-    transition: 0.4s cubic-bezier(.75,.15,.25,.85) 0s;
+    transition: 0.4s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0s;
   }
   &Active {
     pointer-events: all;
     img {
       transform: translate(0, 0);
-      transition: 0.4s cubic-bezier(.75,.15,.25,.85) 0.28s;
+      transition: 0.4s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.28s;
     }
   }
 }
@@ -402,36 +424,36 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
   overflow: hidden;
   &::before {
-      // content: ''; UNIQUE PER BUTTON
-      // color: UNIQUE PER BUTTON;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      z-index: 1;
-      transition: color 0.5s ease;
+    // content: ''; UNIQUE PER BUTTON
+    // color: UNIQUE PER BUTTON;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    transition: color 0.5s ease;
   }
   .ctaCircle {
-      // background: UNIQUE PER BUTTON;
-      position: absolute;
-      top: var(--mouse-x);
-      left: var(--mouse-y);
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      pointer-events: none;
-      opacity: 0;
-      animation: restoreBtn 0.52s ease forwards;
+    // background: UNIQUE PER BUTTON;
+    position: absolute;
+    top: var(--mouse-x);
+    left: var(--mouse-y);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+    animation: restoreBtn 0.52s ease forwards;
   }
   &:hover {
-      .ctaCircle {
-          top: var(--mouse-x);
-          left: var(--mouse-y);
-          animation: expandBtn 0.52s ease forwards;
-      }
+    .ctaCircle {
+      top: var(--mouse-x);
+      left: var(--mouse-y);
+      animation: expandBtn 0.52s ease forwards;
+    }
   }
   &:focus {
     background: $sunderRoyalLight;
@@ -441,33 +463,33 @@ input::-webkit-inner-spin-button {
     }
   }
   @keyframes restoreBtn {
-      0% {
-          width: 220%;
-          height: 320%;
-          opacity: 1;
-      }
-      90% {
-          width: 220%;
-          height: 320%;
-          opacity: 0;
-      }
-      100% {
-          width: 0px;
-          height: 0px;
-          opacity: 0;
-      }
+    0% {
+      width: 220%;
+      height: 320%;
+      opacity: 1;
+    }
+    90% {
+      width: 220%;
+      height: 320%;
+      opacity: 0;
+    }
+    100% {
+      width: 0px;
+      height: 0px;
+      opacity: 0;
+    }
   }
   @keyframes expandBtn {
-      0% {
-          width: 0px;
-          height: 0px;
-          opacity: 0;
-      }
-      100% {
-          width: 220%;
-          height: 320%;
-          opacity: 1;
-      }
+    0% {
+      width: 0px;
+      height: 0px;
+      opacity: 0;
+    }
+    100% {
+      width: 220%;
+      height: 320%;
+      opacity: 1;
+    }
   }
 }
 
@@ -496,7 +518,7 @@ input::-webkit-inner-spin-button {
     video {
       width: 100%;
     }
-  } 
+  }
   .closeVideo {
     position: absolute;
     bottom: 2.4rem;
@@ -526,7 +548,7 @@ input::-webkit-inner-spin-button {
         width: 40%;
         height: 2px;
         border-radius: 2rem;
-        transition: 0.4s cubic-bezier(.75,.15,.25,.85) 0.4s;
+        transition: 0.4s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.4s;
         &:nth-of-type(2) {
           margin: 4px 0 4px 0;
           transition-delay: 0.46s;
@@ -552,13 +574,13 @@ input::-webkit-inner-spin-button {
         background: $sunderRoyalLight;
         .line {
           width: 0;
-          &:nth-of-type(1){
+          &:nth-of-type(1) {
             transition-delay: 0s;
           }
-          &:nth-of-type(2){
+          &:nth-of-type(2) {
             transition-delay: 0.06s;
           }
-          &:nth-of-type(3){
+          &:nth-of-type(3) {
             transition-delay: 0.12s;
           }
         }
@@ -623,7 +645,7 @@ input::-webkit-inner-spin-button {
         width: 40%;
         height: 2px;
         border-radius: 2rem;
-        transition: 0.4s cubic-bezier(.75,.15,.25,.85) 0.4s;
+        transition: 0.4s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.4s;
         &:nth-of-type(2) {
           margin: 4px 0 4px 0;
           transition-delay: 0.46s;
@@ -649,13 +671,13 @@ input::-webkit-inner-spin-button {
         background: $sunderRoyalLight;
         .line {
           width: 0;
-          &:nth-of-type(1){
+          &:nth-of-type(1) {
             transition-delay: 0s;
           }
-          &:nth-of-type(2){
+          &:nth-of-type(2) {
             transition-delay: 0.06s;
           }
-          &:nth-of-type(3){
+          &:nth-of-type(3) {
             transition-delay: 0.12s;
           }
         }
@@ -680,28 +702,28 @@ input::-webkit-inner-spin-button {
 }
 
 // For CTA2 (video call to action)
-  @keyframes loopRight {
-    0% {
-      transform: translate(-50%);
-    }
-    80% {
-      transform: translate(-50%);
-    }
-    100% {
-      transform: translate(140%, 0);
-    }
+@keyframes loopRight {
+  0% {
+    transform: translate(-50%);
   }
-  @keyframes loopRight2 {
-    0% {
-      transform: translate(-120%);
-    }
-    90% {
-      transform: translate(-120%);
-    }
-    100% {
-      transform: translate(50%, 0);
-    }
+  80% {
+    transform: translate(-50%);
   }
+  100% {
+    transform: translate(140%, 0);
+  }
+}
+@keyframes loopRight2 {
+  0% {
+    transform: translate(-120%);
+  }
+  90% {
+    transform: translate(-120%);
+  }
+  100% {
+    transform: translate(50%, 0);
+  }
+}
 
 //
 // Media Queries
@@ -738,7 +760,7 @@ input::-webkit-inner-spin-button {
         height: calc(6rem + 8vw);
       }
     }
-  
+
     //.navActive
     &Active {
       transform: translate(0, 0);
@@ -747,11 +769,10 @@ input::-webkit-inner-spin-button {
 }
 
 @media (max-width: 1024px) {
-
   //
   // Global Components
   //
-  
+
   .logo {
     /* position: see individual page style sheet */
     width: calc(6.4rem + 2vw);
@@ -797,7 +818,7 @@ input::-webkit-inner-spin-button {
     &Active {
       .navSwiper {
         transform: translate(0, 2vw);
-        transition: 0.6s cubic-bezier(.75,.15,.25,.85) 0.1s;
+        transition: 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.1s;
       }
     }
   }
@@ -840,7 +861,6 @@ input::-webkit-inner-spin-button {
   }
 }
 
-
 @media (hover: hover) {
   .nav {
     .navSlider {
@@ -855,7 +875,6 @@ input::-webkit-inner-spin-button {
         display: none;
       }
     }
-    
   }
 }
 @media (hover: none) {
