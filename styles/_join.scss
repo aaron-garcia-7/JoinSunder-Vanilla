@@ -63,6 +63,7 @@
           position: relative;
           width: 76%;
           height: 8%;
+          min-height: 40px;
           border-bottom: 1px solid $sunderSnow;
           .input {
             position: absolute;
@@ -111,6 +112,7 @@
           border: 1px solid $sunderSnow;
           animation: appear 0.6s ease 0.2s forwards;
           z-index: 2;
+          flex-shrink: 0;
           &::before {
             content: "Submit";
             color: $sunderSnow;

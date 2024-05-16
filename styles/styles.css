@@ -3729,6 +3729,7 @@ input::-webkit-inner-spin-button {
   position: relative;
   width: 76%;
   height: 8%;
+  min-height: 40px;
   border-bottom: 1px solid #f7f7f7;
 }
 .join .mainContent .formPanel .contactForm .formBlock .input {
@@ -3773,6 +3774,7 @@ input::-webkit-inner-spin-button {
   border: 1px solid #f7f7f7;
   animation: appear 0.6s ease 0.2s forwards;
   z-index: 2;
+  flex-shrink: 0;
 }
 .join .mainContent .formPanel .contactForm .cta::before {
   content: "Submit";
