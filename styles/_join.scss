@@ -39,6 +39,12 @@
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
+      overflow: auto;
+
+      @include mq-max("md") {
+        padding-bottom: 768px;
+      }
+
       .formLogo {
         width: 100%;
         display: flex;
