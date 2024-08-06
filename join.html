@@ -137,16 +137,21 @@
           <div class="formBlock lastBlock">
             <textarea
               class="input textarea"
-              name="discovery-method"
+              name="discovery_method"
               placeholder=" "
               aria-label="How did you hear about us?"
               id="discovery-method"
               rows="4"
-              cols="50"
+              maxlength="180"
               required
             ></textarea>
-            <label for="zip-code" class="label">
+            <label for="discovery-method" class="label">
               How did you hear about us?
+              <span class="nested-label">
+                Max
+                <span class="remaining-characters"> 180 </span>
+                characters
+              </span>
             </label>
           </div>
           <div data-netlify-recaptcha="true" class="recaptcha"></div>

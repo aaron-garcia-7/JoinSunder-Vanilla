@@ -244,7 +244,7 @@ input::-webkit-inner-spin-button {
     gap: 4vw;
     justify-content: space-between;
     align-items: center;
-    overflow: scroll;
+    overflow: auto;
     transform: translate(0, 2vw);
     z-index: -1;
     -ms-overflow-style: none;

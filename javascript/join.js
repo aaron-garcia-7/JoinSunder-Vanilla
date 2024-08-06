@@ -66,6 +66,23 @@ burger.addEventListener("click", toggleNav);
 mainContent.addEventListener("click", closeNav);
 
 //
+// Form
+//
+
+const textareaCount = (() => {
+  const textarea = document.getElementById("discovery-method");
+  const charCountLabel = document.querySelector(".remaining-characters");
+  const maxLength = textarea.maxLength;
+
+  charCountLabel.textContent = maxLength;
+
+  textarea.addEventListener("input", () => {
+    const remaining = maxLength - textarea.value.length;
+    charCountLabel.textContent = remaining;
+  });
+})();
+
+//
 // ReCaptcha
 //
 

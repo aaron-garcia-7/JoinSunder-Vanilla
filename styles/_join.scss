@@ -34,7 +34,7 @@
     .formPanel {
       background: $sunderMidnight;
       width: 50%;
-      height: 100%;
+      // height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
@@ -49,7 +49,8 @@
         }
 
         @include mq-max("md") {
-          padding-bottom: 768px;
+          // Remember the Captcha. Note left 08/05/24
+          padding-block-end: 248px;
         }
       }
 
@@ -67,35 +68,43 @@
       }
       .contact-form {
         $form-width: 68%;
+        $form-width-md: 76%;
+        $input-gap-md: 24px;
 
         width: 100%;
-        // height: 68%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        gap: 32px;
+        gap: 40px;
 
-        @include mq-max("lg") {
-          gap: 24px;
+        @include mq-max("xxl") {
+          gap: 32px;
         }
-
-        @include mq-max("sm") {
-          height: 68%;
+        @include mq-max("md") {
+          gap: $input-gap-md;
         }
 
         .formBlock {
           // border: $test;
           position: relative;
           width: $form-width;
-          // height: 8%;
           min-height: 40px;
           border-bottom: 1px solid $sunderSnow;
 
+          @include mq-max("md") {
+            width: $form-width-md;
+            border-color: $sunderIce;
+          }
+
           &:has(.textarea) {
-            // border: $test;
-            height: 20%;
-            min-height: 96px;
+            margin-block-start: 12px;
+            min-height: 88px;
+
+            @include mq-max("xxl") {
+              margin-block-start: 16px;
+              min-height: 80px;
+            }
           }
 
           .input {
@@ -109,10 +118,15 @@
             width: 100%;
             height: 64%;
             border-radius: 0;
-            outline: none;
             transition: border 0.1s ease;
             display: flex;
             justify-content: center;
+
+            &:hover {
+              & ~ .label {
+                opacity: 0.8;
+              }
+            }
           }
 
           .textarea {
@@ -129,8 +143,13 @@
             font-size: $S-Text;
             font-weight: 300;
             color: $sunderSnow;
+            opacity: 0.5;
             pointer-events: none;
             transition: 0.3s ease;
+
+            @include mq-max("md") {
+              top: calc(100% - 24px);
+            }
           }
           .input:focus ~ .label,
           .input:not(:placeholder-shown).input:not(focus) ~ .label,
@@ -138,13 +157,45 @@
           &:-webkit-autofill:hover,
           &:-webkit-autofill:focus {
             top: -64%;
-            opacity: 0.8;
-            font-size: calc(1rem + 0.2vw);
+            opacity: 1;
+
+            @include mq-max("md") {
+              top: -32%;
+            }
+          }
+          .textarea:focus ~ .label,
+          .textarea:not(:placeholder-shown).textarea:not(focus) ~ .label,
+          &:-webkit-autofill,
+          &:-webkit-autofill:hover,
+          &:-webkit-autofill:focus {
+            top: -34%;
+
+            .nested-label {
+              opacity: 1;
+              transition: 0.4s ease 0.2s;
+            }
+          }
+
+          .nested-label {
+            color: $sunderIce;
+            opacity: 0;
+            font-size: 14px;
+            transition: 0.4s ease;
+
+            @include mq-max("xxl") {
+              font-size: 13px;
+            }
+            @include mq-max("sm") {
+              font-size: 10px;
+            }
           }
         }
+
+        // Spacing For ReCaptcha
         .lastBlock {
-          margin-bottom: calc(1.2rem + 1.2vw);
+          margin-block-end: 24px;
         }
+
         .side-by-side {
           display: flex;
           gap: 12px;
@@ -157,6 +208,8 @@
           @include mq-max("md") {
             flex-direction: column;
             align-items: center;
+            gap: $input-gap-md;
+            width: $form-width-md;
           }
 
           .formBlock {

@@ -288,7 +288,7 @@ input::-webkit-inner-spin-button {
   gap: 4vw;
   justify-content: space-between;
   align-items: center;
-  overflow: scroll;
+  overflow: auto;
   transform: translate(0, 2vw);
   z-index: -1;
   -ms-overflow-style: none;
@@ -3686,7 +3686,6 @@ input::-webkit-inner-spin-button {
 .join .mainContent .formPanel {
   background: #000014;
   width: 50%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -3702,7 +3701,7 @@ input::-webkit-inner-spin-button {
 }
 @media screen and (max-width: 768px) {
   .join .mainContent .formPanel {
-    padding-bottom: 768px;
+    padding-block-end: 248px;
   }
 }
 .join .mainContent .formPanel .formLogo {
@@ -3723,16 +3722,16 @@ input::-webkit-inner-spin-button {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 32px;
+  gap: 40px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1512px) {
   .join .mainContent .formPanel .contact-form {
-    gap: 24px;
+    gap: 32px;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .join .mainContent .formPanel .contact-form {
-    height: 68%;
+    gap: 24px;
   }
 }
 .join .mainContent .formPanel .contact-form .formBlock {
@@ -3741,9 +3740,21 @@ input::-webkit-inner-spin-button {
   min-height: 40px;
   border-bottom: 1px solid #f7f7f7;
 }
+@media screen and (max-width: 768px) {
+  .join .mainContent .formPanel .contact-form .formBlock {
+    width: 76%;
+    border-color: #c6d3d8;
+  }
+}
 .join .mainContent .formPanel .contact-form .formBlock:has(.textarea) {
-  height: 20%;
-  min-height: 96px;
+  margin-block-start: 12px;
+  min-height: 88px;
+}
+@media screen and (max-width: 1512px) {
+  .join .mainContent .formPanel .contact-form .formBlock:has(.textarea) {
+    margin-block-start: 16px;
+    min-height: 80px;
+  }
 }
 .join .mainContent .formPanel .contact-form .formBlock .input {
   position: absolute;
@@ -3756,10 +3767,12 @@ input::-webkit-inner-spin-button {
   width: 100%;
   height: 64%;
   border-radius: 0;
-  outline: none;
   transition: border 0.1s ease;
   display: flex;
   justify-content: center;
+}
+.join .mainContent .formPanel .contact-form .formBlock .input:hover ~ .label {
+  opacity: 0.8;
 }
 .join .mainContent .formPanel .contact-form .formBlock .textarea {
   height: 100%;
@@ -3774,17 +3787,54 @@ input::-webkit-inner-spin-button {
   font-size: calc(0.8rem + 0.4vw);
   font-weight: 300;
   color: #f7f7f7;
+  opacity: 0.5;
   pointer-events: none;
   transition: 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+  .join .mainContent .formPanel .contact-form .formBlock .label {
+    top: calc(100% - 24px);
+  }
 }
 .join .mainContent .formPanel .contact-form .formBlock .input:focus ~ .label,
 .join .mainContent .formPanel .contact-form .formBlock .input:not(:placeholder-shown).input:not(focus) ~ .label, .join .mainContent .formPanel .contact-form .formBlock:-webkit-autofill, .join .mainContent .formPanel .contact-form .formBlock:-webkit-autofill:hover, .join .mainContent .formPanel .contact-form .formBlock:-webkit-autofill:focus {
   top: -64%;
-  opacity: 0.8;
-  font-size: calc(1rem + 0.2vw);
+  opacity: 1;
+}
+@media screen and (max-width: 768px) {
+  .join .mainContent .formPanel .contact-form .formBlock .input:focus ~ .label,
+  .join .mainContent .formPanel .contact-form .formBlock .input:not(:placeholder-shown).input:not(focus) ~ .label, .join .mainContent .formPanel .contact-form .formBlock:-webkit-autofill, .join .mainContent .formPanel .contact-form .formBlock:-webkit-autofill:hover, .join .mainContent .formPanel .contact-form .formBlock:-webkit-autofill:focus {
+    top: -32%;
+  }
+}
+.join .mainContent .formPanel .contact-form .formBlock .textarea:focus ~ .label,
+.join .mainContent .formPanel .contact-form .formBlock .textarea:not(:placeholder-shown).textarea:not(focus) ~ .label, .join .mainContent .formPanel .contact-form .formBlock:-webkit-autofill, .join .mainContent .formPanel .contact-form .formBlock:-webkit-autofill:hover, .join .mainContent .formPanel .contact-form .formBlock:-webkit-autofill:focus {
+  top: -34%;
+}
+.join .mainContent .formPanel .contact-form .formBlock .textarea:focus ~ .label .nested-label,
+.join .mainContent .formPanel .contact-form .formBlock .textarea:not(:placeholder-shown).textarea:not(focus) ~ .label .nested-label, .join .mainContent .formPanel .contact-form .formBlock:-webkit-autofill .nested-label, .join .mainContent .formPanel .contact-form .formBlock:-webkit-autofill:hover .nested-label, .join .mainContent .formPanel .contact-form .formBlock:-webkit-autofill:focus .nested-label {
+  opacity: 1;
+  -webkit-transition: 0.4s ease 0.2s;
+  transition: 0.4s ease 0.2s;
+}
+.join .mainContent .formPanel .contact-form .formBlock .nested-label {
+  color: #c6d3d8;
+  opacity: 0;
+  font-size: 14px;
+  transition: 0.4s ease;
+}
+@media screen and (max-width: 1512px) {
+  .join .mainContent .formPanel .contact-form .formBlock .nested-label {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .join .mainContent .formPanel .contact-form .formBlock .nested-label {
+    font-size: 10px;
+  }
 }
 .join .mainContent .formPanel .contact-form .lastBlock {
-  margin-bottom: calc(1.2rem + 1.2vw);
+  margin-block-end: 24px;
 }
 .join .mainContent .formPanel .contact-form .side-by-side {
   display: flex;
@@ -3800,6 +3850,8 @@ input::-webkit-inner-spin-button {
   .join .mainContent .formPanel .contact-form .side-by-side {
     flex-direction: column;
     align-items: center;
+    gap: 24px;
+    width: 76%;
   }
 }
 .join .mainContent .formPanel .contact-form .side-by-side .formBlock {
