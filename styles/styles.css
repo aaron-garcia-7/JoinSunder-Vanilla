@@ -3701,7 +3701,7 @@ input::-webkit-inner-spin-button {
 }
 @media screen and (max-width: 768px) {
   .join .mainContent .formPanel {
-    padding-block-end: 248px;
+    padding-block-end: 128px;
   }
 }
 .join .mainContent .formPanel .formLogo {

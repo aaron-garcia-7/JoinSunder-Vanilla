@@ -50,7 +50,7 @@
 
         @include mq-max("md") {
           // Remember the Captcha. Note left 08/05/24
-          padding-block-end: 248px;
+          padding-block-end: 128px;
         }
       }
 
@@ -257,9 +257,6 @@
         display: none;
       }
       .formPanel {
-        // width: 100vw;
-        // justify-content: flex-start;
-        // padding-top: calc(2rem + 2vw);
         .formLogo {
           margin-bottom: calc(2rem + 2vw);
           a {
