@@ -852,8 +852,21 @@ input::-webkit-inner-spin-button {
 .home .mainContent .heroTextWrapper {
   overflow: hidden;
 }
-.home .mainContent .heroText h1,
-.home .mainContent .arrivalText h1 {
+.home .mainContent .heroText .line, .home .mainContent .heroText .burgerContainer .burger .lineCross, .burgerContainer .burger .home .mainContent .heroText .lineCross, .home .mainContent .heroText .burgerContainer .burger .line5, .burgerContainer .burger .home .mainContent .heroText .line5, .home .mainContent .heroText .videoContainer .closeVideoBurger .lineCross, .videoContainer .closeVideoBurger .home .mainContent .heroText .lineCross, .home .mainContent .heroText .videoContainer .closeVideoBurger .line5, .videoContainer .closeVideoBurger .home .mainContent .heroText .line5, .home .mainContent .heroText .iframeContainer .closeVideoBurger .lineCross, .iframeContainer .closeVideoBurger .home .mainContent .heroText .lineCross, .home .mainContent .heroText .iframeContainer .closeVideoBurger .line5, .iframeContainer .closeVideoBurger .home .mainContent .heroText .line5,
+.home .mainContent .arrivalText .line,
+.home .mainContent .arrivalText .burgerContainer .burger .lineCross,
+.burgerContainer .burger .home .mainContent .arrivalText .lineCross,
+.home .mainContent .arrivalText .burgerContainer .burger .line5,
+.burgerContainer .burger .home .mainContent .arrivalText .line5,
+.home .mainContent .arrivalText .videoContainer .closeVideoBurger .lineCross,
+.videoContainer .closeVideoBurger .home .mainContent .arrivalText .lineCross,
+.home .mainContent .arrivalText .videoContainer .closeVideoBurger .line5,
+.videoContainer .closeVideoBurger .home .mainContent .arrivalText .line5,
+.home .mainContent .arrivalText .iframeContainer .closeVideoBurger .lineCross,
+.iframeContainer .closeVideoBurger .home .mainContent .arrivalText .lineCross,
+.home .mainContent .arrivalText .iframeContainer .closeVideoBurger .line5,
+.iframeContainer .closeVideoBurger .home .mainContent .arrivalText .line5 {
+  display: block;
   color: #f7f7f7;
   font-family: "monument", sans-serif;
   font-size: calc(1.6rem + 2.4vw);
@@ -870,7 +883,7 @@ input::-webkit-inner-spin-button {
   opacity: 1;
   pointer-events: none;
 }
-.home .mainContent .arrivalText h1 {
+.home .mainContent .arrivalText .line, .home .mainContent .arrivalText .burgerContainer .burger .lineCross, .burgerContainer .burger .home .mainContent .arrivalText .lineCross, .home .mainContent .arrivalText .burgerContainer .burger .line5, .burgerContainer .burger .home .mainContent .arrivalText .line5, .home .mainContent .arrivalText .videoContainer .closeVideoBurger .lineCross, .videoContainer .closeVideoBurger .home .mainContent .arrivalText .lineCross, .home .mainContent .arrivalText .videoContainer .closeVideoBurger .line5, .videoContainer .closeVideoBurger .home .mainContent .arrivalText .line5, .home .mainContent .arrivalText .iframeContainer .closeVideoBurger .lineCross, .iframeContainer .closeVideoBurger .home .mainContent .arrivalText .lineCross, .home .mainContent .arrivalText .iframeContainer .closeVideoBurger .line5, .iframeContainer .closeVideoBurger .home .mainContent .arrivalText .line5 {
   color: #f7f7f7;
   transform: translate(0, 0);
 }
@@ -1181,8 +1194,20 @@ input::-webkit-inner-spin-button {
   }
 }
 @media (max-height: 620px) {
-  .home .mainContent .aside .heroText h1,
-  .home .mainContent .aside .arrivalText h1 {
+  .home .mainContent .aside .heroText .line, .home .mainContent .aside .heroText .burgerContainer .burger .lineCross, .burgerContainer .burger .home .mainContent .aside .heroText .lineCross, .home .mainContent .aside .heroText .burgerContainer .burger .line5, .burgerContainer .burger .home .mainContent .aside .heroText .line5, .home .mainContent .aside .heroText .videoContainer .closeVideoBurger .lineCross, .videoContainer .closeVideoBurger .home .mainContent .aside .heroText .lineCross, .home .mainContent .aside .heroText .videoContainer .closeVideoBurger .line5, .videoContainer .closeVideoBurger .home .mainContent .aside .heroText .line5, .home .mainContent .aside .heroText .iframeContainer .closeVideoBurger .lineCross, .iframeContainer .closeVideoBurger .home .mainContent .aside .heroText .lineCross, .home .mainContent .aside .heroText .iframeContainer .closeVideoBurger .line5, .iframeContainer .closeVideoBurger .home .mainContent .aside .heroText .line5,
+  .home .mainContent .aside .arrivalText .line,
+  .home .mainContent .aside .arrivalText .burgerContainer .burger .lineCross,
+  .burgerContainer .burger .home .mainContent .aside .arrivalText .lineCross,
+  .home .mainContent .aside .arrivalText .burgerContainer .burger .line5,
+  .burgerContainer .burger .home .mainContent .aside .arrivalText .line5,
+  .home .mainContent .aside .arrivalText .videoContainer .closeVideoBurger .lineCross,
+  .videoContainer .closeVideoBurger .home .mainContent .aside .arrivalText .lineCross,
+  .home .mainContent .aside .arrivalText .videoContainer .closeVideoBurger .line5,
+  .videoContainer .closeVideoBurger .home .mainContent .aside .arrivalText .line5,
+  .home .mainContent .aside .arrivalText .iframeContainer .closeVideoBurger .lineCross,
+  .iframeContainer .closeVideoBurger .home .mainContent .aside .arrivalText .lineCross,
+  .home .mainContent .aside .arrivalText .iframeContainer .closeVideoBurger .line5,
+  .iframeContainer .closeVideoBurger .home .mainContent .aside .arrivalText .line5 {
     font-size: calc(1.4rem + 1.4vw);
   }
   .home .mainContent .aside .heroBtns {
@@ -1193,8 +1218,20 @@ input::-webkit-inner-spin-button {
   }
 }
 @media screen and (max-height: 620px) and (max-width: 1024px) {
-  .home .mainContent .aside .heroText h1,
-  .home .mainContent .aside .arrivalText h1 {
+  .home .mainContent .aside .heroText .line, .home .mainContent .aside .heroText .burgerContainer .burger .lineCross, .burgerContainer .burger .home .mainContent .aside .heroText .lineCross, .home .mainContent .aside .heroText .burgerContainer .burger .line5, .burgerContainer .burger .home .mainContent .aside .heroText .line5, .home .mainContent .aside .heroText .videoContainer .closeVideoBurger .lineCross, .videoContainer .closeVideoBurger .home .mainContent .aside .heroText .lineCross, .home .mainContent .aside .heroText .videoContainer .closeVideoBurger .line5, .videoContainer .closeVideoBurger .home .mainContent .aside .heroText .line5, .home .mainContent .aside .heroText .iframeContainer .closeVideoBurger .lineCross, .iframeContainer .closeVideoBurger .home .mainContent .aside .heroText .lineCross, .home .mainContent .aside .heroText .iframeContainer .closeVideoBurger .line5, .iframeContainer .closeVideoBurger .home .mainContent .aside .heroText .line5,
+  .home .mainContent .aside .arrivalText .line,
+  .home .mainContent .aside .arrivalText .burgerContainer .burger .lineCross,
+  .burgerContainer .burger .home .mainContent .aside .arrivalText .lineCross,
+  .home .mainContent .aside .arrivalText .burgerContainer .burger .line5,
+  .burgerContainer .burger .home .mainContent .aside .arrivalText .line5,
+  .home .mainContent .aside .arrivalText .videoContainer .closeVideoBurger .lineCross,
+  .videoContainer .closeVideoBurger .home .mainContent .aside .arrivalText .lineCross,
+  .home .mainContent .aside .arrivalText .videoContainer .closeVideoBurger .line5,
+  .videoContainer .closeVideoBurger .home .mainContent .aside .arrivalText .line5,
+  .home .mainContent .aside .arrivalText .iframeContainer .closeVideoBurger .lineCross,
+  .iframeContainer .closeVideoBurger .home .mainContent .aside .arrivalText .lineCross,
+  .home .mainContent .aside .arrivalText .iframeContainer .closeVideoBurger .line5,
+  .iframeContainer .closeVideoBurger .home .mainContent .aside .arrivalText .line5 {
     font-size: calc(1.4rem + 1.4vw);
   }
   .home .mainContent .aside .heroBtns {

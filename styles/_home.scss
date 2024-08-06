@@ -21,262 +21,274 @@
     display: flex;
     justify-content: space-between;
     .aside {
-        background: $sunderMidnight;
-        width: 49vw;
-        &Active {
-          position: fixed;
-          bottom: 0;
-          left: 0;
-          height: 100vh;
-        }
-      }
-    
-      .heroText {
+      background: $sunderMidnight;
+      width: 49vw;
+      &Active {
         position: fixed;
-        top: 50vh;
-        left: calc(2rem + 4vw);
-        transform: translate(0, -56%);
-        // transform: translate(6%, -56%) scale(1.25);
-        transition: transform $nav-transition;
-        &Active {
-          transform: translate(0, calc(-56% - 50vh));
-        }
-        .line1 {
-          animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 1s forwards;
-          -webkit-animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 1s forwards;
-        }
-        .line2 {
-          animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 1.12s forwards;
-          -webkit-animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 1.12s forwards;
-        }
-        .line3 {
-          animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 1.24s forwards;
-          -webkit-animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 1.24s forwards;
-        }
-        .line4 {
-          animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 1.36s forwards;
-          -webkit-animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 1.36s forwards;
-        }
-        .line5 {
-          animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 1.48s forwards;
-          -webkit-animation: shiftText 1.4s cubic-bezier(.7,0,.3,1) 1.48s forwards;
-        }
-        @keyframes shiftText {
-          to {
-            transform: translate(0, 0) scale(1);
-          }
-        }
-      }
-      
-      .heroTextWrapper {
-        overflow: hidden;
-      }
-      .heroText h1,
-      .arrivalText h1 {
-        color: $sunderSnow;
-        font-family: $monument;
-        font-size: $Hero-Text;
-        font-weight: 450;
-        transform: translate(0, 120%);
-      }
-      
-      .arrivalText {
-        position: fixed;
-        top: 50vh;
-        top: 50dvh;
+        bottom: 0;
         left: 0;
-        transform: translate(36vw, -50%) scale(2);
-        transition: transform $nav-transition;
-        opacity: 1;
-        pointer-events: none;
-        h1 {
-          color: $sunderSnow;
-          transform: translate(0, 0);
-        }
-        .line1 {
-          animation: shiftText2 1.4s cubic-bezier(.7,0,.3,1) 0.8s forwards;
-          -webkit-animation: shiftText2 1.2s cubic-bezier(.7,0,.3,1) 0.8s forwards;
-        }
-        .line2 {
-          animation: shiftText2 1.4s cubic-bezier(.7,0,.3,1) 0.9s forwards;
-          -webkit-animation: shiftText2 1.2s cubic-bezier(.7,0,.3,1) 0.9s forwards;
-        }
-        .line3 {
-          animation: shiftText2 1.4s cubic-bezier(.7,0,.3,1) 1s forwards;
-          -webkit-animation: shiftText2 1.2s cubic-bezier(.7,0,.3,1) 1s forwards;
-        }
-        @keyframes shiftText2 {
-          to {
-            transform: translate(0, -120%);
-          }
+        height: 100vh;
+      }
+    }
+
+    .heroText {
+      position: fixed;
+      top: 50vh;
+      left: calc(2rem + 4vw);
+      transform: translate(0, -56%);
+      // transform: translate(6%, -56%) scale(1.25);
+      transition: transform $nav-transition;
+      &Active {
+        transform: translate(0, calc(-56% - 50vh));
+      }
+      .line1 {
+        animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 1s forwards;
+        -webkit-animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 1s
+          forwards;
+      }
+      .line2 {
+        animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 1.12s forwards;
+        -webkit-animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 1.12s
+          forwards;
+      }
+      .line3 {
+        animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 1.24s forwards;
+        -webkit-animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 1.24s
+          forwards;
+      }
+      .line4 {
+        animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 1.36s forwards;
+        -webkit-animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 1.36s
+          forwards;
+      }
+      .line5 {
+        animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 1.48s forwards;
+        -webkit-animation: shiftText 1.4s cubic-bezier(0.7, 0, 0.3, 1) 1.48s
+          forwards;
+      }
+      @keyframes shiftText {
+        to {
+          transform: translate(0, 0) scale(1);
         }
       }
-      
-      .heroBtns {
-        position: fixed;
-        top: calc(100% - 16vh);
-        left: calc(2rem + 4vw);
+    }
+
+    .heroTextWrapper {
+      overflow: hidden;
+    }
+    .heroText .line,
+    .arrivalText .line {
+      display: block;
+      color: $sunderSnow;
+      font-family: $monument;
+      font-size: $Hero-Text;
+      font-weight: 450;
+      transform: translate(0, 120%);
+    }
+
+    .arrivalText {
+      position: fixed;
+      top: 50vh;
+      top: 50dvh;
+      left: 0;
+      transform: translate(36vw, -50%) scale(2);
+      transition: transform $nav-transition;
+      opacity: 1;
+      pointer-events: none;
+      .line {
+        color: $sunderSnow;
+        transform: translate(0, 0);
+      }
+      .line1 {
+        animation: shiftText2 1.4s cubic-bezier(0.7, 0, 0.3, 1) 0.8s forwards;
+        -webkit-animation: shiftText2 1.2s cubic-bezier(0.7, 0, 0.3, 1) 0.8s
+          forwards;
+      }
+      .line2 {
+        animation: shiftText2 1.4s cubic-bezier(0.7, 0, 0.3, 1) 0.9s forwards;
+        -webkit-animation: shiftText2 1.2s cubic-bezier(0.7, 0, 0.3, 1) 0.9s
+          forwards;
+      }
+      .line3 {
+        animation: shiftText2 1.4s cubic-bezier(0.7, 0, 0.3, 1) 1s forwards;
+        -webkit-animation: shiftText2 1.2s cubic-bezier(0.7, 0, 0.3, 1) 1s
+          forwards;
+      }
+      @keyframes shiftText2 {
+        to {
+          transform: translate(0, -120%);
+        }
+      }
+    }
+
+    .heroBtns {
+      position: fixed;
+      top: calc(100% - 16vh);
+      left: calc(2rem + 4vw);
+      display: flex;
+      // display: none;
+      transition: transform $nav-transition;
+      opacity: 0;
+      animation: appear 0.8s ease 1.8s forwards;
+      -webkit-animation: appear 0.8s ease 1.8s forwards;
+      &Active {
+        transform: translate(0, -50vh);
+      }
+    }
+
+    .heroBtns > * {
+      position: relative;
+      font-family: $satoshi;
+      font-size: $M-Text;
+      font-weight: 300;
+      border-radius: 4rem;
+      padding: 0.4rem 1.4rem;
+      width: calc(7.8rem + 7.8vw);
+      height: calc(2.2rem + 1.6vw);
+      &:focus {
+        outline: none;
+        background: $sunderRoyalLight;
+        border: 1px solid $sunderRoyalLight;
+      }
+    }
+    .cta {
+      border: 1px solid $sunderSnow;
+      margin-right: 2vw;
+      // See Globals for the rest
+      &::before {
+        content: "Join The Squad";
+        color: $sunderSnow;
+        font-size: $M-Text;
+      }
+      .ctaCircle {
+        background: $sunderRoyalLight;
+      }
+
+      &:hover {
+        border: 1px solid $sunderRoyalLight;
+        &::before {
+          color: $sunderSnow;
+        }
+      }
+    }
+    .cta2 {
+      background: linear-gradient(90deg, #15499340, #4aabd040);
+      color: transparent;
+      border: 1px solid $sunderRoyalLight;
+      width: calc(7.2rem + 7.2vw);
+      display: flex;
+      cursor: pointer;
+      &::before {
+        content: "Play Video";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-56%, -50%);
         display: flex;
-        // display: none;
-        transition: transform $nav-transition;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        z-index: 1;
+        color: $sunderSnow;
+        font-size: $M-Text;
+      }
+      .playIconFrame {
+        width: calc(1rem + 1vw);
+        height: calc(1rem + 1vw);
+        border-radius: 50%;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translate(80%, 0);
+        overflow: hidden;
+        transition: transform 0.4s cubic-bezier(0.05, 0.6, 0.56, 1),
+          opacity 0.2s ease;
+        .playIcon {
+          width: calc(0.5rem + 0.7vw);
+          height: calc(0.5rem + 0.7vw);
+        }
+        .playIcon1 {
+          transform: translate(-120%, 0);
+          animation: loopRight2 3.6s cubic-bezier(0.6, 0, 0.4, 1) forwards
+            infinite;
+        }
+        .playIcon2 {
+          transform: translate(-50%, 0);
+          animation: loopRight 3.6s cubic-bezier(0.75, 0, 0.25, 1) forwards
+            infinite;
+        }
+      }
+    }
+
+    .reel {
+      height: calc(108rem + 148vw);
+      background: $sunderMidnight;
+      width: 51vw;
+      padding-left: 2vw;
+      display: flex;
+      justify-content: space-between;
+      animation: changeBg 0.8s ease 0.2s forwards;
+      -webkit-animation: changeBg 0.8s ease 0.2s forwards;
+      transition: transform $nav-transition;
+      overflow: hidden;
+      animation: changeBg 0.6s ease 1.6s forwards;
+      -webkit-animation: changeBg 0.6s ease 1.6s forwards;
+
+      .col1,
+      .col2 {
+        width: 48%;
         opacity: 0;
-        animation: appear 0.8s ease 1.8s forwards;
-        -webkit-animation: appear 0.8s ease 1.8s forwards;
+        transition: transform $nav-transition;
+        animation: appear 0.6s ease 1.7s forwards;
+        -webkit-animation: appear 0.6s ease 1.7s forwards;
+
+        .reelImg,
+        .reelImgShort {
+          background: var(--sunderIce);
+          height: calc(14rem + 18vw);
+          margin-bottom: calc(0.6rem + 1.2vw);
+          border-radius: calc(0.4rem + 0.2vw);
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+        .reelImgShort {
+          height: calc(6rem + 10vw);
+        }
+        .topImg {
+          border-radius: 0 0 calc(0.4rem + 0.2vw) calc(0.4rem + 0.2vw);
+        }
+        .bottomImg {
+          border-radius: calc(0.4rem + 0.2vw) calc(0.4rem + 0.2vw) 0 0;
+        }
+
         &Active {
           transform: translate(0, -50vh);
         }
       }
-      
-      .heroBtns > * {
-        position: relative;
-        font-family: $satoshi;
-        font-size: $M-Text;
-        font-weight: 300;
-        border-radius: 4rem;
-        padding: 0.4rem 1.4rem;
-        width: calc(7.8rem + 7.8vw);
-        height: calc(2.2rem + 1.6vw);
-        &:focus {
-          outline: none;
-          background: $sunderRoyalLight;
-          border: 1px solid $sunderRoyalLight;
-        }
-      }
-      .cta {
-        border: 1px solid $sunderSnow;
-        margin-right: 2vw;
-        // See Globals for the rest
-        &::before {
-            content: 'Join The Squad';
-            color: $sunderSnow;
-            font-size: $M-Text;
-        }
-        .ctaCircle {
-            background: $sunderRoyalLight;
-        }
 
-        &:hover {
-            border: 1px solid $sunderRoyalLight;
-            &::before {
-                color: $sunderSnow;
-            }
-        }
+      .col2Inner {
+        transition: 0.6s cubic-bezier(0.1, 0.44, 0.44, 1);
+      }
+
+      &Active {
+        position: absolute;
+        right: 0;
+      }
     }
-      .cta2 {
-        background: linear-gradient(90deg, #15499340, #4AABD040);
-        color: transparent;
-        border: 1px solid $sunderRoyalLight;
-        width: calc(7.2rem + 7.2vw);
-        display: flex;
-        cursor: pointer;
-          &::before {
-            content: 'Play Video';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-56%, -50%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            z-index: 1;
-            color: $sunderSnow;
-            font-size: $M-Text;
-        }
-        .playIconFrame {
-          width: calc(1rem + 1vw);
-          height: calc(1rem + 1vw);
-          border-radius: 50%;
-          align-self: center;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          transform: translate(80%, 0);
-          overflow: hidden;
-          transition: transform 0.4s cubic-bezier(.05,.6,.56,1), opacity 0.2s ease;
-          .playIcon {
-            width: calc(0.5rem + 0.7vw);
-            height: calc(0.5rem + 0.7vw);
-          }
-          .playIcon1 {
-            transform: translate(-120%, 0);
-            animation: loopRight2 3.6s cubic-bezier(.6,0,.4,1) forwards infinite;
-          }
-          .playIcon2 {
-            transform: translate(-50%, 0);
-            animation: loopRight 3.6s cubic-bezier(.75,0,.25,1) forwards infinite;
-          }
-        }
+
+    @keyframes changeBg {
+      to {
+        background: $sunderSnow;
       }
-      
-      .reel {
-        height: calc(108rem + 148vw);
-        background: $sunderMidnight;
-        width: 51vw;
-        padding-left: 2vw;
-        display: flex;
-        justify-content: space-between;
-        animation: changeBg 0.8s ease 0.2s forwards;
-        -webkit-animation: changeBg 0.8s ease 0.2s forwards;
-        transition: transform $nav-transition;
-        overflow: hidden;
-        animation: changeBg 0.6s ease 1.6s forwards;
-        -webkit-animation: changeBg 0.6s ease 1.6s forwards;
-
-        .col1,
-        .col2 {
-          width: 48%;
-          opacity: 0;
-          transition: transform $nav-transition;
-          animation: appear 0.6s ease 1.7s forwards;
-          -webkit-animation: appear 0.6s ease 1.7s forwards;
-
-          .reelImg,
-          .reelImgShort {
-              background: var(--sunderIce);
-              height: calc(14rem + 18vw);
-              margin-bottom: calc(0.6rem + 1.2vw);
-              border-radius: calc(0.4rem + 0.2vw);
-              overflow: hidden;
-              img {
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-              }
-              &:last-of-type {
-                  margin-bottom: 0;
-              }
-          }
-          .reelImgShort {
-              height: calc(6rem + 10vw);
-          }
-          .topImg {
-            border-radius: 0 0 calc(0.4rem + 0.2vw) calc(0.4rem + 0.2vw);
-          }
-          .bottomImg {
-            border-radius: calc(0.4rem + 0.2vw) calc(0.4rem + 0.2vw) 0 0;
-          }
-
-          &Active {
-            transform: translate(0, -50vh);
-          }
-        }
-
-        .col2Inner {
-          transition: 0.6s cubic-bezier(.1,.44,.44,1);
-        }
-
-        &Active {
-          position: absolute;
-          right: 0;
-        }
-      }
-
-      @keyframes changeBg {
-        to {
-          background: $sunderSnow;
-        }
-      }
+    }
   }
 }
 
@@ -289,7 +301,6 @@
 
 @media (max-width: 1024px) {
   .home {
-
     // GLOBAL COMPONENTS
     .logo {
       position: absolute;
@@ -320,7 +331,7 @@
           left: 50%;
           transform: translate(-50%, -50%) scale(1.4);
         }
-        
+
         .heroBtns {
           position: static;
           width: calc(12rem + 28vw);
@@ -345,7 +356,7 @@
         .col2 {
           .reelImg,
           .reelImgShort {
-              height: calc(24rem + 18vw);
+            height: calc(24rem + 18vw);
           }
           .reelImgShort {
             height: calc(12rem + 10vw);
@@ -389,7 +400,7 @@
         .col2 {
           .reelImg,
           .reelImgShort {
-              height: calc(14rem + 18vw);
+            height: calc(14rem + 18vw);
           }
           .reelImgShort {
             height: calc(6rem + 10vw);
@@ -432,8 +443,8 @@
   .home {
     .mainContent {
       .aside {
-        .heroText h1,
-        .arrivalText h1 {
+        .heroText .line,
+        .arrivalText .line {
           font-size: $XL-Text;
         }
         .heroBtns {
@@ -452,8 +463,8 @@
   .home {
     .mainContent {
       .aside {
-        .heroText h1,
-        .arrivalText h1 {
+        .heroText .line,
+        .arrivalText .line {
           font-size: $XL-Text;
         }
         .heroBtns {

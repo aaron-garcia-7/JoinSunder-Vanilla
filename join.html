@@ -44,6 +44,7 @@
             <img src="./assets/logoLight.svg" alt="Sunder" />
           </a>
         </figure>
+
         <form
           class="contact-form"
           action="/contact"
@@ -139,10 +140,11 @@
               class="input textarea"
               name="discovery_method"
               placeholder=" "
-              aria-label="How did you hear about us?"
               id="discovery-method"
               rows="4"
               maxlength="180"
+              spellcheck="true"
+              aria-label="How did you hear about us?"
               required
             ></textarea>
             <label for="discovery-method" class="label">
@@ -155,7 +157,12 @@
             </label>
           </div>
           <div data-netlify-recaptcha="true" class="recaptcha"></div>
-          <button type="submit" class="cta" id="cta">
+          <button
+            type="submit"
+            class="cta"
+            id="cta"
+            aria-label="submit the form"
+          >
             Submit
             <div class="ctaCircle" id="ctaCircle"></div>
           </button>
