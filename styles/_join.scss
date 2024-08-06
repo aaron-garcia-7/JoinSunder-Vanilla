@@ -41,8 +41,16 @@
       align-items: center;
       overflow: auto;
 
-      @include mq-max("md") {
-        padding-bottom: 768px;
+      @media all {
+        @include mq-max("lg") {
+          width: 100vw;
+          justify-content: flex-start;
+          padding-top: calc(2rem + 2vw);
+        }
+
+        @include mq-max("md") {
+          padding-bottom: 768px;
+        }
       }
 
       .formLogo {
@@ -57,20 +65,39 @@
           }
         }
       }
-      .contactForm {
+      .contact-form {
+        $form-width: 68%;
+
         width: 100%;
-        height: 68%;
+        // height: 68%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        gap: 2rem;
+        gap: 32px;
+
+        @include mq-max("lg") {
+          gap: 24px;
+        }
+
+        @include mq-max("sm") {
+          height: 68%;
+        }
+
         .formBlock {
+          // border: $test;
           position: relative;
-          width: 76%;
-          height: 8%;
+          width: $form-width;
+          // height: 8%;
           min-height: 40px;
           border-bottom: 1px solid $sunderSnow;
+
+          &:has(.textarea) {
+            // border: $test;
+            height: 20%;
+            min-height: 96px;
+          }
+
           .input {
             position: absolute;
             bottom: 12%;
@@ -80,17 +107,24 @@
             background: transparent;
             border: none;
             width: 100%;
-            height: 50%;
+            height: 64%;
             border-radius: 0;
             outline: none;
             transition: border 0.1s ease;
             display: flex;
             justify-content: center;
           }
+
+          .textarea {
+            height: 100%;
+            bottom: 0;
+            resize: none;
+          }
+
           .label {
             position: absolute;
             width: 100%;
-            top: 36%;
+            top: calc(100% - 32px);
             left: 0;
             font-size: $S-Text;
             font-weight: 300;
@@ -103,13 +137,32 @@
           &:-webkit-autofill,
           &:-webkit-autofill:hover,
           &:-webkit-autofill:focus {
-            transform: translate(0, -112%);
+            top: -64%;
             opacity: 0.8;
             font-size: calc(1rem + 0.2vw);
           }
         }
         .lastBlock {
           margin-bottom: calc(1.2rem + 1.2vw);
+        }
+        .side-by-side {
+          display: flex;
+          gap: 12px;
+          width: $form-width;
+
+          @include mq-max("lg") {
+            max-width: 32rem;
+          }
+
+          @include mq-max("md") {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .formBlock {
+            width: 100%;
+            max-width: unset;
+          }
         }
 
         .cta {
@@ -151,9 +204,9 @@
         display: none;
       }
       .formPanel {
-        width: 100vw;
-        justify-content: flex-start;
-        padding-top: calc(2rem + 2vw);
+        // width: 100vw;
+        // justify-content: flex-start;
+        // padding-top: calc(2rem + 2vw);
         .formLogo {
           margin-bottom: calc(2rem + 2vw);
           a {
@@ -162,8 +215,7 @@
             }
           }
         }
-        .contactForm {
-          gap: 1.2rem;
+        .contact-form {
           .formBlock {
             max-width: 32rem;
             height: 12%;
@@ -184,9 +236,7 @@
   .join {
     .mainContent {
       .formPanel {
-        .contactForm {
-          height: 68%;
-          gap: 1.2rem;
+        .contact-form {
           .input {
             height: 80%;
             bottom: 0%;

@@ -45,7 +45,7 @@
           </a>
         </figure>
         <form
-          class="contactForm"
+          class="contact-form"
           action="/contact"
           method="POST"
           name="contactSunder"
@@ -67,31 +67,32 @@
             />
             <label for="name" class="label"> Name </label>
           </div>
-          <div class="formBlock">
-            <input
-              class="input"
-              type="email"
-              name="email"
-              placeholder=" "
-              aria-label="Please enter your Email address."
-              id="email"
-              required
-            />
-            <label for="email" class="label"> Email </label>
+          <div class="side-by-side">
+            <div class="formBlock">
+              <input
+                class="input"
+                type="email"
+                name="email"
+                placeholder=" "
+                aria-label="Please enter your Email address."
+                id="email"
+                required
+              />
+              <label for="email" class="label"> Email </label>
+            </div>
+            <div class="formBlock">
+              <input
+                class="input"
+                type="tel"
+                name="phone"
+                placeholder=" "
+                aria-label="Please enter your preferred phone number."
+                id="phone"
+                required
+              />
+              <label for="phone" class="label"> Phone </label>
+            </div>
           </div>
-          <div class="formBlock">
-            <input
-              class="input"
-              type="tel"
-              name="phone"
-              placeholder=" "
-              aria-label="Please enter your preferred phone number."
-              id="phone"
-              required
-            />
-            <label for="phone" class="label"> Phone </label>
-          </div>
-
           <div class="formBlock">
             <input
               class="input"
@@ -104,31 +105,49 @@
             />
             <label for="city" class="label"> City </label>
           </div>
-          <div class="formBlock">
-            <input
-              class="input"
-              type="text"
-              name="state"
-              placeholder=" "
-              aria-label="Please enter state."
-              id="state"
-              required
-            />
-            <label for="state" class="label"> State </label>
+
+          <div class="side-by-side">
+            <div class="formBlock">
+              <input
+                class="input"
+                type="text"
+                name="state"
+                placeholder=" "
+                aria-label="Please enter state."
+                id="state"
+                required
+              />
+              <label for="state" class="label"> State </label>
+            </div>
+            <div class="formBlock">
+              <input
+                class="input"
+                type="number"
+                pattern="[0-9]{5}"
+                name="zip"
+                placeholder=" "
+                aria-label="Please enter your zip code."
+                id="zip-code"
+                required
+              />
+              <label for="zip-code" class="label"> Zip Code </label>
+            </div>
           </div>
 
           <div class="formBlock lastBlock">
-            <input
-              class="input"
-              type="number"
-              pattern="[0-9]{5}"
-              name="zip"
+            <textarea
+              class="input textarea"
+              name="discovery-method"
               placeholder=" "
-              aria-label="Please enter your zip code."
-              id="zip-code"
+              aria-label="How did you hear about us?"
+              id="discovery-method"
+              rows="4"
+              cols="50"
               required
-            />
-            <label for="zip-code" class="label"> Zip Code </label>
+            ></textarea>
+            <label for="zip-code" class="label">
+              How did you hear about us?
+            </label>
           </div>
           <div data-netlify-recaptcha="true" class="recaptcha"></div>
           <button type="submit" class="cta" id="cta">

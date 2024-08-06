@@ -1,78 +1,14 @@
-@import "./base/mixins";
-
-@import url("https://fonts.googleapis.com/css2?family=Saira:wght@100;300;500;700;900&display=swap");
-
-/* Sunder Fonts */
-@font-face {
-  font-family: "satoshi";
-  src: url(../fonts/Satoshi-Variable.woff2);
-}
-@font-face {
-  font-family: "monument";
-  src: url(../fonts/PPMonumentExtended-Black.woff2);
-  font-weight: 800;
-  font-style: normal;
-}
-@font-face {
-  font-family: "monument";
-  src: url(../fonts/PPMonumentExtended-Bold.woff2);
-  font-weight: 675;
-  font-style: normal;
-}
-@font-face {
-  font-family: "monument";
-  src: url(../fonts/PPMonumentExtended-Regular.woff2);
-  font-weight: 450;
-  font-style: normal;
-}
-@font-face {
-  font-family: "monument";
-  src: url(../fonts/PPMonumentExtended-Light.woff2);
-  font-weight: 200;
-  font-style: normal;
-}
-@font-face {
-  font-family: "monument";
-  src: url(../fonts/PPMonumentExtended-Thin.woff2);
-  font-weight: 100;
-  font-style: normal;
-}
-
-/* 
-Satoshi Weights 
-300 - 900 | Variable 
-
-Monument Weights 
-100, 200, 450, 675, 800 | Not Variable 
-*/
-
-$satoshi: "satoshi", sans-serif;
-$monument: "monument", sans-serif;
-$saira: "Saira", sans-serif;
-
-$sunderSnow: #f7f7f7;
-$sunderIce: #c6d3d8;
-$sunderRoyalLight: #0c5ff2;
-$sunderRoyal: #074895;
-$sunderNavy: #061a2a;
-$sunderMidnight: #000014;
-$enzyHero: #6da894;
-
-$Hero-Text: calc(1.6rem + 2.4vw);
-$XXL-Text: calc(0.4rem + 2.8vw);
-$XL-Text: calc(1.4rem + 1.4vw);
-$L-Text: calc(1rem + 1.2vw);
-$M-Text: calc(0.8rem + 1vw);
-$S-Text: calc(0.8rem + 0.4vw);
-$XS-Text: calc(0.6rem + 0.3vw);
-
-$nav-shift: translate(0, -50vh);
-$nav-transition: 0.6s cubic-bezier(0.75, 0.15, 0.25, 0.85) 0.06s;
+// prettier-ignore
+@import "./base/mixins",
+ "./base/fonts",
+ "./base/variables",
+ "./base/utility";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: $satoshi;
 
   // Autofill for form fields: input, textarea, select, etc.
   &:-webkit-autofill,
@@ -97,40 +33,10 @@ h2 {
   font-family: $monument;
   font-weight: 450;
 }
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-a,
-button,
-input,
-label {
-  font-family: $satoshi;
-}
-ul {
-  li {
-    font-family: $satoshi;
-  }
-}
 // This hides the default buttons on input type="number"
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   display: none;
-}
-
-#boldTitle {
-  font-weight: 675;
-}
-.hide {
-  display: none;
-}
-.a11y {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-  user-select: none;
 }
 
 //

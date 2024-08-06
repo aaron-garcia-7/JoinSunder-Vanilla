@@ -1,0 +1,18 @@
+#boldTitle {
+  font-weight: 675;
+}
+
+.hide {
+  display: none;
+}
+
+.a11y {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.monument-font {
+  font-family: $monument;
+}

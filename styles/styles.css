@@ -41,10 +41,32 @@ Satoshi Weights
 Monument Weights 
 100, 200, 450, 675, 800 | Not Variable 
 */
+#boldTitle {
+  font-weight: 675;
+}
+
+.hide {
+  display: none;
+}
+
+.a11y {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.monument-font {
+  font-family: "monument", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "satoshi", sans-serif;
 }
 *:-webkit-autofill, *:-webkit-autofill:hover, *:-webkit-autofill:focus {
   -webkit-text-fill-color: #f7f7f7;
@@ -67,43 +89,9 @@ h2 {
   font-weight: 450;
 }
 
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-a,
-button,
-input,
-label {
-  font-family: "satoshi", sans-serif;
-}
-
-ul li {
-  font-family: "satoshi", sans-serif;
-}
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   display: none;
-}
-
-#boldTitle {
-  font-weight: 675;
-}
-
-.hide {
-  display: none;
-}
-
-.a11y {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 
 .logo, .navLogo {
@@ -3705,6 +3693,13 @@ input::-webkit-inner-spin-button {
   align-items: center;
   overflow: auto;
 }
+@media screen and (max-width: 1024px) {
+  .join .mainContent .formPanel {
+    width: 100vw;
+    justify-content: flex-start;
+    padding-top: calc(2rem + 2vw);
+  }
+}
 @media screen and (max-width: 768px) {
   .join .mainContent .formPanel {
     padding-bottom: 768px;
@@ -3722,23 +3717,35 @@ input::-webkit-inner-spin-button {
 .join .mainContent .formPanel .formLogo a img {
   width: calc(12rem + 4vw);
 }
-.join .mainContent .formPanel .contactForm {
+.join .mainContent .formPanel .contact-form {
   width: 100%;
-  height: 68%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 2rem;
+  gap: 32px;
 }
-.join .mainContent .formPanel .contactForm .formBlock {
+@media screen and (max-width: 1024px) {
+  .join .mainContent .formPanel .contact-form {
+    gap: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .join .mainContent .formPanel .contact-form {
+    height: 68%;
+  }
+}
+.join .mainContent .formPanel .contact-form .formBlock {
   position: relative;
-  width: 76%;
-  height: 8%;
+  width: 68%;
   min-height: 40px;
   border-bottom: 1px solid #f7f7f7;
 }
-.join .mainContent .formPanel .contactForm .formBlock .input {
+.join .mainContent .formPanel .contact-form .formBlock:has(.textarea) {
+  height: 20%;
+  min-height: 96px;
+}
+.join .mainContent .formPanel .contact-form .formBlock .input {
   position: absolute;
   bottom: 12%;
   left: 0;
@@ -3747,17 +3754,22 @@ input::-webkit-inner-spin-button {
   background: transparent;
   border: none;
   width: 100%;
-  height: 50%;
+  height: 64%;
   border-radius: 0;
   outline: none;
   transition: border 0.1s ease;
   display: flex;
   justify-content: center;
 }
-.join .mainContent .formPanel .contactForm .formBlock .label {
+.join .mainContent .formPanel .contact-form .formBlock .textarea {
+  height: 100%;
+  bottom: 0;
+  resize: none;
+}
+.join .mainContent .formPanel .contact-form .formBlock .label {
   position: absolute;
   width: 100%;
-  top: 36%;
+  top: calc(100% - 32px);
   left: 0;
   font-size: calc(0.8rem + 0.4vw);
   font-weight: 300;
@@ -3765,16 +3777,36 @@ input::-webkit-inner-spin-button {
   pointer-events: none;
   transition: 0.3s ease;
 }
-.join .mainContent .formPanel .contactForm .formBlock .input:focus ~ .label,
-.join .mainContent .formPanel .contactForm .formBlock .input:not(:placeholder-shown).input:not(focus) ~ .label, .join .mainContent .formPanel .contactForm .formBlock:-webkit-autofill, .join .mainContent .formPanel .contactForm .formBlock:-webkit-autofill:hover, .join .mainContent .formPanel .contactForm .formBlock:-webkit-autofill:focus {
-  transform: translate(0, -112%);
+.join .mainContent .formPanel .contact-form .formBlock .input:focus ~ .label,
+.join .mainContent .formPanel .contact-form .formBlock .input:not(:placeholder-shown).input:not(focus) ~ .label, .join .mainContent .formPanel .contact-form .formBlock:-webkit-autofill, .join .mainContent .formPanel .contact-form .formBlock:-webkit-autofill:hover, .join .mainContent .formPanel .contact-form .formBlock:-webkit-autofill:focus {
+  top: -64%;
   opacity: 0.8;
   font-size: calc(1rem + 0.2vw);
 }
-.join .mainContent .formPanel .contactForm .lastBlock {
+.join .mainContent .formPanel .contact-form .lastBlock {
   margin-bottom: calc(1.2rem + 1.2vw);
 }
-.join .mainContent .formPanel .contactForm .cta {
+.join .mainContent .formPanel .contact-form .side-by-side {
+  display: flex;
+  gap: 12px;
+  width: 68%;
+}
+@media screen and (max-width: 1024px) {
+  .join .mainContent .formPanel .contact-form .side-by-side {
+    max-width: 32rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .join .mainContent .formPanel .contact-form .side-by-side {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.join .mainContent .formPanel .contact-form .side-by-side .formBlock {
+  width: 100%;
+  max-width: unset;
+}
+.join .mainContent .formPanel .contact-form .cta {
   position: relative;
   opacity: 0;
   border: 1px solid #f7f7f7;
@@ -3782,18 +3814,18 @@ input::-webkit-inner-spin-button {
   z-index: 2;
   flex-shrink: 0;
 }
-.join .mainContent .formPanel .contactForm .cta::before {
+.join .mainContent .formPanel .contact-form .cta::before {
   content: "Submit";
   color: #f7f7f7;
   font-size: calc(0.8rem + 0.6vw);
 }
-.join .mainContent .formPanel .contactForm .cta .ctaCircle {
+.join .mainContent .formPanel .contact-form .cta .ctaCircle {
   background: #0c5ff2;
 }
-.join .mainContent .formPanel .contactForm .cta:hover {
+.join .mainContent .formPanel .contact-form .cta:hover {
   border: 1px solid #0c5ff2;
 }
-.join .mainContent .formPanel .contactForm .cta:hover::before {
+.join .mainContent .formPanel .contact-form .cta:hover::before {
   color: #f7f7f7;
 }
 .join .mainContentActive {
@@ -3807,41 +3839,29 @@ input::-webkit-inner-spin-button {
   .join .mainContent .leftSide {
     display: none;
   }
-  .join .mainContent .formPanel {
-    width: 100vw;
-    justify-content: flex-start;
-    padding-top: calc(2rem + 2vw);
-  }
   .join .mainContent .formPanel .formLogo {
     margin-bottom: calc(2rem + 2vw);
   }
   .join .mainContent .formPanel .formLogo a img {
     width: calc(8rem + 4vw);
   }
-  .join .mainContent .formPanel .contactForm {
-    gap: 1.2rem;
-  }
-  .join .mainContent .formPanel .contactForm .formBlock {
+  .join .mainContent .formPanel .contact-form .formBlock {
     max-width: 32rem;
     height: 12%;
   }
-  .join .mainContent .formPanel .contactForm .lastBlock {
+  .join .mainContent .formPanel .contact-form .lastBlock {
     margin-bottom: calc(1.2rem + 1.2vw);
   }
-  .join .mainContent .formPanel .contactForm .recaptcha {
+  .join .mainContent .formPanel .contact-form .recaptcha {
     transform: scale(0.86);
   }
 }
 @media (max-width: 480px) {
-  .join .mainContent .formPanel .contactForm {
-    height: 68%;
-    gap: 1.2rem;
-  }
-  .join .mainContent .formPanel .contactForm .input {
+  .join .mainContent .formPanel .contact-form .input {
     height: 80%;
     bottom: 0%;
   }
-  .join .mainContent .formPanel .contactForm .cta::before {
+  .join .mainContent .formPanel .contact-form .cta::before {
     font-weight: 400;
     font-size: calc(0.8rem + 1vw);
   }
