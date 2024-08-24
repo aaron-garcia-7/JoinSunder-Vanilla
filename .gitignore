@@ -1,18 +1,23 @@
-/.DS_Store
+_site/
+_tmp/
+.DS_Store
+node_modules/
+.vscode/
+*git/
+package-lock.json
+.env
 
-# Exclude video files
+# Local Netlify folder
+.netlify
+
+# Ignore all video files
 *.mp4
 *.avi
-*.flv
-*.wmv
 *.mov
-*.mkv
-*.webm
-*.mpeg
-*.mpg
-*.m4v
-*.h264
+*.wmv
 *.flv
-*.rm
-*.swf
-*.vob
+*.mkv
+
+# Prevent outputted css files from sass (doesn't appear to be working)
+*.css.map
+*.map

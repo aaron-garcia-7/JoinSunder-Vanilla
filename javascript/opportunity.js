@@ -8,7 +8,7 @@ const firstNavLink = document.querySelector("#firstNavLink");
 
 // Page Unique elements
 const mainContent = document.querySelector(".mainContent");
-const quoteSection = document.querySelector("#quoteSection");
+const quoteSection = document.querySelector("#quote-section");
 const cta2 = document.querySelector("#cta2");
 const cta2Circle = document.querySelector("#cta2Circle");
 
@@ -27,14 +27,12 @@ const toggleNav = () => {
     logo.classList.add("logoActive");
     navLogo.classList.add("navLogoActive");
     mainContent.classList.add("mainContentActive");
-    quoteSection.classList.add("quoteSectionActive");
   } else {
     burger.classList.remove("burgerActive");
     nav.classList.remove("navActive");
     logo.classList.remove("logoActive");
     navLogo.classList.remove("navLogoActive");
     mainContent.classList.remove("mainContentActive");
-    quoteSection.classList.remove("quoteSectionActive");
   }
 };
 
@@ -177,28 +175,6 @@ backgroundTL
   .to("#mainContent", {
     backgroundColor: "#000014",
   });
-
-// gsap.to("#reel", {
-//   scrollTrigger: {
-//     trigger: "#reel",
-//     pin: true,
-//     scrub: true,
-//     start: "top top",
-//     end: "bottom top",
-//   },
-// });
-
-// let repCards = gsap.utils.toArray("#repCard");
-// gsap.to(repCards, {
-//   xPercent: -18 * (repCards.length - 1), // -18% is  1/2 the width of each Rep Card (36%)
-//   ease: "none",
-//   scrollTrigger: {
-//     trigger: "#reel",
-//     scrub: 0.1,
-//     start: "center center",
-//     end: "bottom top",
-//   },
-// });
 
 gsap.to("#videoSection", {
   scrollTrigger: {
@@ -777,9 +753,9 @@ function refreshOnDesktop() {
     navigator.maxTouchPoints > 0 ||
     navigator.msMaxTouchPoints > 0;
 
-  if (!isTouchDevice) {
-    window.location.reload();
-  }
+  // if (!isTouchDevice) {
+  //   window.location.reload();
+  // }
 }
 
 window.addEventListener("resize", refreshOnDesktop);

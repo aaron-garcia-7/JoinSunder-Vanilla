@@ -1,3 +1,10 @@
+/* 
+Satoshi Weights 
+300 - 900 | Variable 
+
+Monument Weights 
+100, 200, 450, 675, 800 | Not Variable 
+*/
 @import url("https://fonts.googleapis.com/css2?family=Saira:wght@100;300;500;700;900&display=swap");
 /* Sunder Fonts */
 @font-face {
@@ -34,13 +41,6 @@
   font-weight: 100;
   font-style: normal;
 }
-/* 
-Satoshi Weights 
-300 - 900 | Variable 
-
-Monument Weights 
-100, 200, 450, 675, 800 | Not Variable 
-*/
 #boldTitle {
   font-weight: 675;
 }
@@ -73,6 +73,11 @@ Monument Weights
   -webkit-box-shadow: 0 0 0px 1000px #000014 inset;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
 body {
   background: #f7f7f7;
   color: #000014;
@@ -87,11 +92,6 @@ h1,
 h2 {
   font-family: "monument", sans-serif;
   font-weight: 450;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  display: none;
 }
 
 .logo, .navLogo {
@@ -1241,15 +1241,17 @@ input::-webkit-inner-spin-button {
     transform: translate(-2%, -2.6rem) scale(0.8);
   }
 }
-.opportunity .logo, .opportunity .navLogo {
-  position: absolute;
-  animation-delay: 0.4s;
-}
-.opportunity .navLogo {
-  position: fixed;
-}
-.opportunity .burgerContainer {
-  animation-delay: 0.6s;
+@media all {
+  .opportunity .logo, .opportunity .navLogo {
+    position: absolute;
+    animation-delay: 0.4s;
+  }
+  .opportunity .navLogo {
+    position: fixed;
+  }
+  .opportunity .burgerContainer {
+    animation-delay: 0.6s;
+  }
 }
 .opportunity .mainContent {
   position: relative;
@@ -1308,91 +1310,189 @@ input::-webkit-inner-spin-button {
   right: 0;
   width: 100%;
   height: clamp(12rem, 38vw, 36rem);
-  border-radius: 0 3.2rem 0 3.2rem;
+  border-radius: 0 calc(24px + 2vw) 0 calc(24px + 2vw);
   background: #080808;
 }
 .opportunity .mainContent .header .soloRepImg {
   display: none;
 }
-.opportunity .mainContent .quoteSection {
+.opportunity .mainContent .quote-section {
   padding: 8rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.opportunity .mainContent .quoteSection .quote1, .opportunity .mainContent .quoteSection .quote2 {
+@media screen and (max-width: 1024px) {
+  .opportunity .mainContent .quote-section {
+    padding: 4rem 0rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .opportunity .mainContent .quote-section .quote-wrapper {
+    width: 54%;
+  }
+  .opportunity .mainContent .quote-section .quote-wrapper .quote-title {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+  .opportunity .mainContent .quote-section .quote-wrapper .blockquote {
+    font-size: 12px;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+  }
+}
+.opportunity .mainContent .quote-section .quote-block {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10%;
+  gap: 64px;
 }
-.opportunity .mainContent .quoteSection .quote1 .imgWrapper, .opportunity .mainContent .quoteSection .quote2 .imgWrapper {
+@media screen and (max-width: 1024px) {
+  .opportunity .mainContent .quote-section .quote-block {
+    gap: 4%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .quote-section .quote-block {
+    flex-direction: column-reverse;
+    gap: 48px;
+  }
+}
+.opportunity .mainContent .quote-section .quote-block .image-wrapper {
   position: relative;
-  padding: calc(8rem + 6vw);
-  border-radius: 3.2rem;
+  display: flex;
+  border-radius: calc(24px + 2vw);
   overflow: hidden;
+  width: 580px;
 }
-.opportunity .mainContent .quoteSection .quote1 .imgWrapper .quoteImg, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .quoteImg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+@media screen and (max-width: 1512px) {
+  .opportunity .mainContent .quote-section .quote-block .image-wrapper {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .opportunity .mainContent .quote-section .quote-block .image-wrapper {
+    width: 320px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .quote-section .quote-block .image-wrapper {
+    width: calc(100% - 2.4rem);
+  }
+}
+.opportunity .mainContent .quote-section .quote-block .image-wrapper .quoteImg {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption {
+.opportunity .mainContent .quote-section .quote-block .image-wrapper .imgCaption {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: linear-gradient(0deg, rgba(45, 45, 45, 0.7921568627) 20%, rgba(45, 45, 45, 0));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7921568627) 20%, rgba(0, 0, 0, 0));
   width: 100%;
   padding: 2rem;
 }
-.opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption > *, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption > * {
+@media screen and (max-width: 480px) {
+  .opportunity .mainContent .quote-section .quote-block .image-wrapper .imgCaption {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7921568627) 0%, rgba(0, 0, 0, 0) 50%);
+  }
+}
+.opportunity .mainContent .quote-section .quote-block .image-wrapper .imgCaption * {
   font-family: "monument", sans-serif;
   color: #f7f7f7;
 }
-.opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption .name, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption .name {
+.opportunity .mainContent .quote-section .quote-block .image-wrapper .imgCaption .name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.opportunity .mainContent .quote-section .quote-block .image-wrapper .imgCaption .name .name__first {
   font-size: calc(0.8rem + 1vw);
   font-weight: 675;
 }
-.opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption .name .lastName, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption .name .lastName {
-  font-size: calc(1.4rem + 1.4vw);
+@media screen and (max-width: 1024px) {
+  .opportunity .mainContent .quote-section .quote-block .image-wrapper .imgCaption .name .name__first {
+    font-size: calc(1rem + 1.2vw);
+  }
 }
-.opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption .position, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption .position {
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .quote-section .quote-block .image-wrapper .imgCaption .name .name__first {
+    font-size: calc(1.4rem + 1.4vw);
+  }
+}
+.opportunity .mainContent .quote-section .quote-block .image-wrapper .imgCaption .name .name__last {
+  font-size: calc(1.4rem + 1.4vw);
+  font-weight: 675;
+}
+@media screen and (max-width: 1024px) {
+  .opportunity .mainContent .quote-section .quote-block .image-wrapper .imgCaption .name .name__last {
+    font-size: calc(0.4rem + 2.8vw);
+  }
+}
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .quote-section .quote-block .image-wrapper .imgCaption .name .name__last {
+    font-size: calc(1.6rem + 2.4vw);
+  }
+}
+.opportunity .mainContent .quote-section .quote-block .image-wrapper .imgCaption .position {
   font-size: calc(0.8rem + 0.4vw);
   font-weight: 450;
 }
-.opportunity .mainContent .quoteSection .quote1 .quoteWrapper, .opportunity .mainContent .quoteSection .quote2 .quoteWrapper {
+@media screen and (max-width: 1024px) {
+  .opportunity .mainContent .quote-section .quote-block .image-wrapper .imgCaption .position {
+    font-size: calc(0.8rem + 1vw);
+  }
+}
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .quote-section .quote-block .image-wrapper .imgCaption .position {
+    font-size: calc(1rem + 1.2vw);
+  }
+}
+.opportunity .mainContent .quote-section .quote-block .quote-wrapper {
   width: 42%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.opportunity .mainContent .quoteSection .quote1 .quoteWrapper > *, .opportunity .mainContent .quoteSection .quote2 .quoteWrapper > * {
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .quote-section .quote-block .quote-wrapper {
+    width: calc(100% - 2.4rem);
+  }
+}
+.opportunity .mainContent .quote-section .quote-block .quote-wrapper > * {
   padding-left: 2rem;
 }
-.opportunity .mainContent .quoteSection .quote1 .quoteWrapper .quote, .opportunity .mainContent .quoteSection .quote2 .quoteWrapper .quote {
+@media screen and (max-width: 1024px) {
+  .opportunity .mainContent .quote-section .quote-block .quote-wrapper > * {
+    padding-left: 0;
+  }
+}
+.opportunity .mainContent .quote-section .quote-block .quote-wrapper .quote-title {
   font-family: "monument", sans-serif;
-  font-size: calc(0.8rem + 1vw);
+  font-size: calc(1rem + 1.2vw);
   font-weight: 675;
   padding-bottom: 2rem;
 }
-.opportunity .mainContent .quoteSection .quote1 .quoteWrapper .blockquote, .opportunity .mainContent .quoteSection .quote2 .quoteWrapper .blockquote {
+@media screen and (max-width: 1024px) {
+  .opportunity .mainContent .quote-section .quote-block .quote-wrapper .quote-title {
+    font-size: calc(1.4rem + 1.4vw);
+    padding-bottom: 0;
+  }
+}
+.opportunity .mainContent .quote-section .quote-block .quote-wrapper .blockquote {
   font-size: calc(0.8rem + 1vw);
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.opportunity .mainContent .quoteSection .quoteDivider {
-  margin: 4rem;
-  height: calc(12rem + 6vw);
-  border-right: 1px solid #000014;
-}
-.opportunity .mainContent .quoteSection .quote2 {
-  flex-direction: row-reverse;
+@media screen and (max-width: 1024px) {
+  .opportunity .mainContent .quote-section .quote-block .quote-wrapper .blockquote {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
 }
 .opportunity .mainContent .videoSection {
   position: relative;
@@ -1421,7 +1521,7 @@ input::-webkit-inner-spin-button {
 }
 .opportunity .mainContent .videoSection .videoFigure {
   position: relative;
-  border-radius: calc(0.4rem + 1.2vw);
+  border-radius: calc(24px + 2vw);
   opacity: 0;
   width: 60%;
   height: calc(12rem + 24vw);
@@ -1431,7 +1531,7 @@ input::-webkit-inner-spin-button {
   translate: -50% -50%;
   cursor: pointer;
 }
-.opportunity .mainContent .videoSection .videoFigure:hover .overlay img {
+.opportunity .mainContent .videoSection .videoFigure:hover .overlay img, .opportunity .mainContent .videoSection .videoFigure:focus-within .overlay img {
   transform: scale(3.2) translate(12%, 0);
 }
 .opportunity .mainContent .videoSection .videoFigure > * {
@@ -1439,7 +1539,7 @@ input::-webkit-inner-spin-button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: calc(0.4rem + 1.2vw);
+  border-radius: calc(24px + 2vw);
 }
 .opportunity .mainContent .videoSection .videoFigure .overlay {
   width: 100%;
@@ -1568,10 +1668,10 @@ input::-webkit-inner-spin-button {
   margin-right: 0.4rem;
 }
 .opportunity .mainContent .growth .mapArea .compass .active .circle {
-  background: #4693D4;
+  background: #4693d4;
 }
 .opportunity .mainContent .growth .mapArea .compass .pending .circle {
-  background: #BCD0D7;
+  background: #bcd0d7;
 }
 .opportunity .mainContent .growth .mapArea .stateCount {
   position: absolute;
@@ -1648,7 +1748,7 @@ input::-webkit-inner-spin-button {
   text-align: left;
 }
 .opportunity .mainContent .salesForce {
-  background: #E3E3E3;
+  background: #e3e3e3;
 }
 .opportunity .mainContent .salesForce .sectionTitle {
   transform: translate(20%, 0);
@@ -1677,13 +1777,13 @@ input::-webkit-inner-spin-button {
   align-items: flex-end;
 }
 .opportunity .mainContent .salesForce .barGraph .bars .bar {
-  background: linear-gradient(180deg, #0093D4 10%, rgba(0, 147, 212, 0));
+  background: linear-gradient(180deg, #0093d4 10%, rgba(0, 147, 212, 0));
   width: calc(2rem + 1vw);
   height: 0%;
   border-radius: 12rem 12rem 0 0;
 }
 .opportunity .mainContent .salesForce .barGraph .bars .bar .barMultiplier {
-  color: #0093D4;
+  color: #0093d4;
   font-family: "monument", sans-serif;
   opacity: 0;
 }
@@ -1745,7 +1845,7 @@ input::-webkit-inner-spin-button {
   width: 100%;
   transform: translate(0, -10%);
 }
-.opportunity .mainContent .kwInstalled .lineGraph .line .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .burgerContainer .burger .lineCross .pathActive, .burgerContainer .burger .opportunity .mainContent .kwInstalled .lineGraph .lineCross .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .burgerContainer .burger .line5 .pathActive, .burgerContainer .burger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .videoContainer .closeVideoBurger .lineCross .pathActive, .videoContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .lineCross .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .videoContainer .closeVideoBurger .line5 .pathActive, .videoContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .iframeContainer .closeVideoBurger .lineCross .pathActive, .iframeContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .lineCross .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .iframeContainer .closeVideoBurger .line5 .pathActive, .iframeContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive {
+.opportunity .mainContent .kwInstalled .lineGraph .line .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .burgerContainer .burger .lineCross .pathActive, .burgerContainer .burger .opportunity .mainContent .kwInstalled .lineGraph .lineCross .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .burgerContainer .burger .line5 .pathActive, .burgerContainer .burger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .videoContainer .closeVideoBurger .lineCross .pathActive, .videoContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .lineCross .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .videoContainer .closeVideoBurger .burgerContainer .burger .line5 .pathActive, .videoContainer .closeVideoBurger .burgerContainer .burger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .burgerContainer .burger .videoContainer .closeVideoBurger .line5 .pathActive, .burgerContainer .burger .videoContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .videoContainer .closeVideoBurger .line5 .pathActive, .videoContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .iframeContainer .closeVideoBurger .lineCross .pathActive, .iframeContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .lineCross .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .iframeContainer .closeVideoBurger .burgerContainer .burger .line5 .pathActive, .iframeContainer .closeVideoBurger .burgerContainer .burger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .burgerContainer .burger .iframeContainer .closeVideoBurger .line5 .pathActive, .burgerContainer .burger .iframeContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .iframeContainer .videoContainer .closeVideoBurger .line5 .pathActive, .iframeContainer .videoContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .videoContainer .iframeContainer .closeVideoBurger .line5 .pathActive, .videoContainer .iframeContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .iframeContainer .closeVideoBurger .line5 .pathActive, .iframeContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive {
   animation: animate-svg-stroke-1 1.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
 }
 @keyframes animate-svg-stroke-1 {
@@ -1855,7 +1955,7 @@ input::-webkit-inner-spin-button {
   transform: translate(-50%, 0);
   width: 90%;
   height: clamp(8rem, 12%, 24rem);
-  background: linear-gradient(90deg, #000014 10%, #0C5FF2);
+  background: linear-gradient(90deg, #000014 10%, #0c5ff2);
   z-index: 2;
   display: flex;
   align-items: center;
@@ -1918,9 +2018,6 @@ input::-webkit-inner-spin-button {
   .opportunity .mainContent .header .repsImg {
     width: 56rem;
   }
-  .opportunity .mainContent .quoteSection {
-    margin: auto;
-  }
   .opportunity .mainContent .growth .mapArea .stateCount .number {
     font-size: 6.4rem;
   }
@@ -1944,11 +2041,6 @@ input::-webkit-inner-spin-button {
   }
   .opportunity .mainContent .header .cta {
     top: -5.6rem;
-  }
-  .opportunity .mainContent .quoteSection .quoteDivider {
-    margin: 2rem;
-    height: calc(4rem + 6vw);
-    border-right: 1px solid #000014;
   }
   .opportunity .mainContent .growth .numberArea {
     width: 18%;
@@ -2052,43 +2144,6 @@ input::-webkit-inner-spin-button {
     height: 72%;
     border-radius: 0 0 0 1.6rem;
   }
-  .opportunity .mainContent .quoteSection {
-    padding: 4rem 0rem;
-  }
-  .opportunity .mainContent .quoteSection .quote1, .opportunity .mainContent .quoteSection .quote2 {
-    gap: 4%;
-  }
-  .opportunity .mainContent .quoteSection .quote1 .imgWrapper, .opportunity .mainContent .quoteSection .quote2 .imgWrapper {
-    padding: calc(3.2rem + 12vw);
-    border-radius: 1.6rem;
-  }
-  .opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption {
-    padding: 1.4rem;
-  }
-  .opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption .name, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption .name {
-    font-size: calc(1rem + 1.2vw);
-  }
-  .opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption .name .lastName, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption .name .lastName {
-    font-size: calc(0.4rem + 2.8vw);
-  }
-  .opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption .position, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption .position {
-    font-size: calc(0.8rem + 1vw);
-  }
-  .opportunity .mainContent .quoteSection .quote1 .quoteWrapper > *, .opportunity .mainContent .quoteSection .quote2 .quoteWrapper > * {
-    padding-left: 0;
-  }
-  .opportunity .mainContent .quoteSection .quote1 .quoteWrapper .quote, .opportunity .mainContent .quoteSection .quote2 .quoteWrapper .quote {
-    padding-bottom: 0;
-  }
-  .opportunity .mainContent .quoteSection .quote1 .quoteWrapper .blockquote, .opportunity .mainContent .quoteSection .quote2 .quoteWrapper .blockquote {
-    padding-top: 1.2rem;
-    padding-bottom: 1.2rem;
-  }
-  .opportunity .mainContent .quoteSection .quoteDivider {
-    margin: 3.2rem;
-    height: 0;
-    border-right: 1px solid transparent;
-  }
   .opportunity .mainContent .videoSection h2 {
     font-size: calc(1.4rem + 1.4vw);
   }
@@ -2157,17 +2212,6 @@ input::-webkit-inner-spin-button {
   }
   .opportunity .mainContent .header .shape {
     height: 66%;
-  }
-  .opportunity .mainContent .quoteSection .quote1, .opportunity .mainContent .quoteSection .quote2 {
-    padding: 0 1.2rem;
-    justify-content: space-between;
-    gap: 0;
-  }
-  .opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption {
-    padding: 1rem;
-  }
-  .opportunity .mainContent .quoteSection .quote1 .quoteWrapper, .opportunity .mainContent .quoteSection .quote2 .quoteWrapper {
-    width: 50%;
   }
   .opportunity .mainContent .growth {
     flex-direction: column-reverse;
@@ -2336,42 +2380,6 @@ input::-webkit-inner-spin-button {
   }
   .opportunity .mainContent .header .soloRepImg {
     transform: translate(24%, 0);
-  }
-  .opportunity .mainContent .quoteSection {
-    justify-content: space-between;
-  }
-  .opportunity .mainContent .quoteSection .quote1, .opportunity .mainContent .quoteSection .quote2 {
-    padding: 0;
-    margin: 0 0.8rem;
-  }
-  .opportunity .mainContent .quoteSection .quote1 .imgWrapper, .opportunity .mainContent .quoteSection .quote2 .imgWrapper {
-    padding: calc(2.8rem + 8vw);
-    border-radius: 1.2rem;
-  }
-  .opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption {
-    padding: 0.6rem;
-    background: linear-gradient(0deg, rgba(45, 45, 45, 0.7921568627) 40%, rgba(45, 45, 45, 0));
-  }
-  .opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption .name, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption .name {
-    font-size: calc(0.8rem + 0.4vw);
-  }
-  .opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption .name .lastName, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption .name .lastName {
-    font-size: calc(0.8rem + 0.4vw);
-  }
-  .opportunity .mainContent .quoteSection .quote1 .imgWrapper .imgCaption .position, .opportunity .mainContent .quoteSection .quote2 .imgWrapper .imgCaption .position {
-    font-size: calc(0.6rem + 0.3vw);
-  }
-  .opportunity .mainContent .quoteSection .quote1 .quoteWrapper, .opportunity .mainContent .quoteSection .quote2 .quoteWrapper {
-    width: 54%;
-  }
-  .opportunity .mainContent .quoteSection .quote1 .quoteWrapper .quote, .opportunity .mainContent .quoteSection .quote2 .quoteWrapper .quote {
-    font-size: 12px;
-    margin-bottom: 0;
-  }
-  .opportunity .mainContent .quoteSection .quote1 .quoteWrapper .blockquote, .opportunity .mainContent .quoteSection .quote2 .quoteWrapper .blockquote {
-    font-size: 12px;
-    padding-top: 0.4rem;
-    padding-bottom: 0.4rem;
   }
   .opportunity .mainContent .cardsSection {
     padding: 0 0.8rem;
@@ -3058,14 +3066,14 @@ input::-webkit-inner-spin-button {
   gap: 4.8rem;
   transform: translate(0, -4%);
 }
-.resources .mainContent .productivity .images .imgWrapper {
+.resources .mainContent .productivity .images .image-wrapper {
   background: #c6d3d8;
   width: calc(4rem + 34vw);
   height: calc(28rem + 28vw);
   border-radius: calc(0.4rem + 0.2vw) 0 0 calc(0.4rem + 0.2vw);
   overflow: hidden;
 }
-.resources .mainContent .productivity .images .imgWrapper img {
+.resources .mainContent .productivity .images .image-wrapper img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -3080,7 +3088,8 @@ input::-webkit-inner-spin-button {
   width: 100vw;
   height: 100vh;
 }
-.resources .mainContent .meetTheTeam .content .row, .resources .mainContent .meetTheTeam .content .column {
+.resources .mainContent .meetTheTeam .content .row,
+.resources .mainContent .meetTheTeam .content .column {
   position: absolute;
   display: inline-block;
   top: 50%;
@@ -3088,7 +3097,8 @@ input::-webkit-inner-spin-button {
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.resources .mainContent .meetTheTeam .content .row h2, .resources .mainContent .meetTheTeam .content .column h2 {
+.resources .mainContent .meetTheTeam .content .row h2,
+.resources .mainContent .meetTheTeam .content .column h2 {
   font-size: calc(0.4rem + 2.8vw);
   font-weight: 200;
 }
@@ -3171,7 +3181,8 @@ input::-webkit-inner-spin-button {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.6745098039) 24%, rgba(0, 0, 0, 0));
   z-index: 2;
 }
-.resources .mainContent .board .boardGroup .boardImg figcaption h4, .resources .mainContent .board .boardGroup .boardImg figcaption h5 {
+.resources .mainContent .board .boardGroup .boardImg figcaption h4,
+.resources .mainContent .board .boardGroup .boardImg figcaption h5 {
   color: #f7f7f7;
   font-family: "monument", sans-serif;
   font-size: calc(0.8rem + 0.4vw);
@@ -3185,7 +3196,7 @@ input::-webkit-inner-spin-button {
   position: relative;
   margin-top: 4rem;
   width: 100vw;
-  background: linear-gradient(180deg, #6CA793, rgba(108, 167, 147, 0) 140%);
+  background: linear-gradient(180deg, #6ca793, rgba(108, 167, 147, 0) 140%);
   overflow: hidden;
 }
 .resources .mainContent .enzy .enzyHero {
@@ -3321,7 +3332,7 @@ input::-webkit-inner-spin-button {
   text-align: center;
 }
 .resources .mainContent .enzy .appUsage .block .blockText h3 {
-  color: #FAFAFA;
+  color: #fafafa;
   font-family: "Saira", sans-serif;
   font-size: calc(1rem + 1.2vw);
   font-weight: 300;
@@ -3371,7 +3382,7 @@ input::-webkit-inner-spin-button {
   transform: translate(-50%, 0);
   width: 90%;
   height: clamp(8rem, 8%, 11rem);
-  background: linear-gradient(90deg, rgba(191, 217, 208, 0) 10%, #6DA894);
+  background: linear-gradient(90deg, rgba(191, 217, 208, 0) 10%, #6da894);
   display: flex;
   align-items: center;
   border-radius: 3.2rem 3.2rem 0 0;
@@ -3486,12 +3497,12 @@ input::-webkit-inner-spin-button {
     align-items: flex-end;
     transform: translate(0, 0);
   }
-  .resources .mainContent .productivity .images .imgWrapper {
+  .resources .mainContent .productivity .images .image-wrapper {
     width: calc(12rem + 40vw);
     height: calc(28rem + 28vw);
     border-radius: calc(0.4rem + 0.2vw) 0 0 calc(0.4rem + 0.2vw);
   }
-  .resources .mainContent .productivity .images .imgWrapper:nth-of-type(2) {
+  .resources .mainContent .productivity .images .image-wrapper:nth-of-type(2) {
     border-radius: 0 calc(0.4rem + 0.2vw) calc(0.4rem + 0.2vw) 0;
     align-self: flex-start;
   }
@@ -3518,7 +3529,7 @@ input::-webkit-inner-spin-button {
     padding: 0.4rem 0.6rem;
   }
   .resources .mainContent .enzy {
-    background: linear-gradient(180deg, #6CA793 80%, rgba(108, 167, 147, 0.2823529412));
+    background: linear-gradient(180deg, #6ca793 80%, rgba(108, 167, 147, 0.2823529412));
   }
   .resources .mainContent .enzy .enzyHero {
     margin-bottom: 4rem;
@@ -3544,7 +3555,7 @@ input::-webkit-inner-spin-button {
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 520%) scale(1.2);
-    background: #92DCC1;
+    background: #92dcc1;
   }
   .resources .mainContent .enzy .enzyHero .cta2Aside .cta2 .ctaCircle {
     transform: translate(-50%, -50%) scale(1.2);

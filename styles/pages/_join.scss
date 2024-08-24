@@ -111,7 +111,7 @@
             position: absolute;
             bottom: 12%;
             left: 0;
-            font-size: $S-Text;
+            font-size: $sm-text;
             color: $sunderSnow;
             background: transparent;
             border: none;
@@ -140,7 +140,7 @@
             width: 100%;
             top: calc(100% - 32px);
             left: 0;
-            font-size: $S-Text;
+            font-size: $sm-text;
             font-weight: 300;
             color: $sunderSnow;
             opacity: 0.5;
@@ -294,7 +294,7 @@
           .cta {
             &::before {
               font-weight: 400;
-              font-size: $M-Text;
+              font-size: $md-text;
             }
           }
         }
