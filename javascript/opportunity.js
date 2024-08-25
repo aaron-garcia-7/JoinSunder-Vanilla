@@ -133,6 +133,24 @@ cta2.addEventListener("mousemove", (e) => {
 // a11y tabIndex
 //
 
+const focusMapLinks = (() => {
+  const mapLinks = document.querySelectorAll(".timeline a.timelineLinks"),
+    mapAnchors = document.querySelectorAll(".growth-anchor");
+
+  if (mapLinks.length === mapAnchors.length) {
+    mapLinks.forEach((link, index) => {
+      link.addEventListener("focus", () => {
+        mapAnchors[index].scrollIntoView({
+          behavior: "smooth",
+          // block: "center",
+        });
+      });
+    });
+  } else {
+    console.error("The number of mapLinks and mapAnchors do not match.");
+  }
+})();
+
 logo.addEventListener("focusin", () => {
   closeNav();
 });
@@ -149,6 +167,33 @@ navLogo.addEventListener("focusin", () => {
 
 const closeVideo = () => null;
 
+// Automation
+
+const countActiveStates = (() => {
+  let dc = 0; // Whether or not they want to count DC as a state
+  let hawaii = -3; // There are four path/svg for hawaii. These classes are messing the count up
+  const years = [2019, 2020, 2021, 2022, 2023, 2024];
+  let activeStates = 0;
+
+  years.forEach((year, index) => {
+    const currentStates = document.querySelectorAll(`.state${year}`).length;
+    const pendingStates = document.querySelectorAll(`.pend${year - 1}`).length;
+
+    if (index === 0) {
+      activeStates += currentStates;
+    } else {
+      activeStates += pendingStates;
+    }
+
+    // Include DC for 2021
+    if (year === 2021) {
+      activeStates += dc;
+    }
+
+    document.querySelector(`#number${year}`).innerHTML = activeStates;
+  });
+})();
+
 //
 //
 // GSAP Animations
@@ -157,396 +202,414 @@ const closeVideo = () => null;
 
 gsap.registerPlugin(ScrollTrigger);
 
-let backgroundTL = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#mainContent",
-    scrub: 1,
-    start: "8% 40%",
-    end: window.innerWidth > 480 ? "64% 60%" : "52% 60%",
-  },
-});
-backgroundTL
-  .to("#mainContent", {
-    backgroundColor: "#C6D3D8",
-  })
-  .to("#mainContent", {
-    backgroundColor: "#000014",
-  })
-  .to("#mainContent", {
-    backgroundColor: "#000014",
+const backgroundFading = (() => {
+  let backgroundTL = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#mainContent",
+      scrub: 1,
+      start: "8% 40%",
+      end: window.innerWidth > 480 ? "64% 60%" : "68% 60%",
+    },
+  });
+  backgroundTL
+    .to("#mainContent", {
+      backgroundColor: "#C6D3D8",
+    })
+    .to("#mainContent", {
+      backgroundColor: "#000014",
+    })
+    .to("#mainContent", {
+      backgroundColor: "#000014",
+    });
+})();
+
+const videoAnimation = (() => {
+  gsap.to("#videoSection", {
+    scrollTrigger: {
+      trigger: "#videoSection",
+      pin: window.innerWidth > 480 ? true : false,
+      scrub: window.innerWidth > 480 ? true : false,
+      start: "top top",
+      end: "bottom top",
+    },
+  });
+  gsap.to("#videoText1", {
+    top: "28%",
+    left: "28%",
+    opacity: 0,
+    scrollTrigger: {
+      trigger: "#videoText1",
+      scrub: window.innerWidth > 480 ? true : false,
+      toggleActions: "play none none reverse",
+      start: window.innerWidth > 480 ? "-60% top" : "center 46%",
+      end: "200% top",
+    },
+  });
+  gsap.to("#videoText2", {
+    bottom: "20%",
+    right: "20%",
+    opacity: 0,
+    scrollTrigger: {
+      trigger: "#videoText1",
+      scrub: window.innerWidth > 480 ? true : false,
+      toggleActions: "play none none reverse",
+      start: window.innerWidth > 480 ? "-60% top" : "center 46%",
+      end: "200% top",
+    },
+  });
+  gsap.to(".videoFigure", {
+    scale: 1,
+    opacity: 1,
+    delay: window.innerWidth > 480 ? null : 0.4,
+    scrollTrigger: {
+      trigger: "#videoText1",
+      toggleActions: "play none none reverse",
+      scrub: window.innerWidth > 480 ? true : false,
+      start: window.innerWidth > 480 ? "-20% top" : "center 46%",
+      end: "280% top",
+    },
+  });
+})();
+
+const growthMapAnimation = (() => {
+  let pinDuration = "500%";
+
+  gsap.to("#growth", {
+    scrollTrigger: {
+      trigger: "#growth",
+      pin: window.innerWidth > 480 ? true : false,
+      scrub: window.innerWidth > 480 ? true : false,
+      start: "top top",
+      // end: "400% 6%",
+      end: `${pinDuration} 6%`,
+    },
+  });
+  gsap.to("#growthTitle", {
+    opacity: 1,
+    scrollTrigger: {
+      trigger: "#growth",
+      toggleActions: "play none none reverse", // play, pause, resume, reverse, restart, reset, complete, none
+      start: "top top",
+    },
+  });
+  gsap.to("#growthTitleMobile", {
+    opacity: 1,
+    scrollTrigger: {
+      trigger: "#growth",
+      toggleActions: "play none none reverse",
+      start: window.innerWidth > 480 ? "top top" : "top 16%",
+    },
+  });
+  gsap.to("#map", {
+    opacity: 1,
+    y: window.innerWidth > 480 ? "-6%" : "-36%",
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#growth",
+      scrub: true,
+      start: "top 75%",
+      end: "center center",
+    },
+  });
+  gsap.to("#compass", {
+    opacity: 1,
+    scrollTrigger: {
+      trigger: "#growth",
+      toggleActions: "play none none reverse",
+      start: window.innerWidth > 480 ? "top top" : "top 16%",
+    },
+  });
+  gsap.to("#stateCount", {
+    opacity: 1,
+    scrollTrigger: {
+      trigger: "#growth",
+      toggleActions: "play none none reverse",
+      start: window.innerWidth > 480 ? "top top" : "top 16%",
+    },
   });
 
-gsap.to("#videoSection", {
-  scrollTrigger: {
-    trigger: "#videoSection",
-    pin: window.innerWidth > 480 ? true : false,
-    scrub: window.innerWidth > 480 ? true : false,
-    start: "top top",
-    end: "bottom top",
-  },
-});
-gsap.to("#videoText1", {
-  top: "28%",
-  left: "28%",
-  opacity: 0,
-  scrollTrigger: {
-    trigger: "#videoText1",
-    scrub: window.innerWidth > 480 ? true : false,
-    toggleActions: "play none none reverse",
-    start: window.innerWidth > 480 ? "-60% top" : "center 46%",
-    end: "200% top",
-  },
-});
-gsap.to("#videoText2", {
-  bottom: "20%",
-  right: "20%",
-  opacity: 0,
-  scrollTrigger: {
-    trigger: "#videoText1",
-    scrub: window.innerWidth > 480 ? true : false,
-    toggleActions: "play none none reverse",
-    start: window.innerWidth > 480 ? "-60% top" : "center 46%",
-    end: "200% top",
-  },
-});
-gsap.to(".videoFigure", {
-  scale: 1,
-  opacity: 1,
-  delay: window.innerWidth > 480 ? null : 0.4,
-  scrollTrigger: {
-    trigger: "#videoText1",
-    toggleActions: "play none none reverse",
-    scrub: window.innerWidth > 480 ? true : false,
-    start: window.innerWidth > 480 ? "-20% top" : "center 46%",
-    end: "280% top",
-  },
-});
-
-gsap.to("#growth", {
-  scrollTrigger: {
-    trigger: "#growth",
-    pin: window.innerWidth > 480 ? true : false,
-    scrub: window.innerWidth > 480 ? true : false,
-    start: "top top",
-    end: "400% 6%",
-  },
-});
-gsap.to("#growthTitle", {
-  opacity: 1,
-  scrollTrigger: {
-    trigger: "#growth",
-    toggleActions: "play none none reverse", // play, pause, resume, reverse, restart, reset, complete, none
-    start: "top top",
-  },
-});
-gsap.to("#growthTitleMobile", {
-  opacity: 1,
-  scrollTrigger: {
-    trigger: "#growth",
-    toggleActions: "play none none reverse",
-    start: window.innerWidth > 480 ? "top top" : "top 16%",
-  },
-});
-gsap.to("#map", {
-  opacity: 1,
-  y: window.innerWidth > 480 ? "-6%" : "-36%",
-  ease: "none",
-  scrollTrigger: {
-    trigger: "#growth",
-    scrub: true,
-    start: "top 75%",
-    end: "center center",
-  },
-});
-gsap.to("#compass", {
-  opacity: 1,
-  scrollTrigger: {
-    trigger: "#growth",
-    toggleActions: "play none none reverse",
-    start: window.innerWidth > 480 ? "top top" : "top 16%",
-  },
-});
-gsap.to("#stateCount", {
-  opacity: 1,
-  scrollTrigger: {
-    trigger: "#growth",
-    toggleActions: "play none none reverse",
-    start: window.innerWidth > 480 ? "top top" : "top 16%",
-  },
-});
-let stateCount = gsap.utils.toArray(".number");
-let stateCountTL = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#numberArea",
-    scrub: window.innerWidth > 480 ? true : false,
-    start: window.innerWidth > 768 ? "16% 15%" : "-100% 15%",
-    end: window.innerWidth > 768 ? "400% 15%" : "1920% 15%",
-    // markers: true,
-  },
-});
-stateCountTL
-  .to(stateCount, {
-    y: window.innerWidth > 768 ? "-100%" : "-112%",
-  })
-  .to(stateCount, {
-    y: window.innerWidth > 768 ? "-100%" : "-112%",
-  })
-  .to(stateCount, {
-    y: window.innerWidth > 768 ? "-200%" : "-212%",
-  })
-  .to(stateCount, {
-    y: window.innerWidth > 768 ? "-200%" : "-212%",
-  })
-  .to(stateCount, {
-    y: window.innerWidth > 768 ? "-300%" : "-312%",
-  })
-  .to(stateCount, {
-    y: window.innerWidth > 768 ? "-300%" : "-312%",
-  })
-  .to(stateCount, {
-    y: window.innerWidth > 768 ? "-400%" : "-412%",
-  })
-  .to(stateCount, {
-    y: window.innerWidth > 768 ? "-400%" : "-412%",
-  })
-  .to(stateCount, {
-    y: window.innerWidth > 768 ? "-500%" : "-512%",
+  let stateCount = gsap.utils.toArray(".number");
+  let stateCountTL = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#year-links",
+      scrub: window.innerWidth > 480 ? true : false,
+      start: window.innerWidth > 768 ? "16% 15%" : "-100% 15%",
+      // end: window.innerWidth > 768 ? "400% 15%" : "1920% 15%",
+      end: window.innerWidth > 768 ? `${pinDuration} 15%` : "1920% 15%",
+      markers: true,
+    },
   });
-gsap.to("#stateCountMobile", {
-  opacity: 1,
-  scrollTrigger: {
-    trigger: "#growth",
-    toggleActions: "play none none reverse",
-    start: "top 16%",
-  },
-});
+  stateCountTL
+    .to(stateCount, {
+      y: window.innerWidth > 768 ? "-100%" : "-112%",
+    })
+    .to(stateCount, {
+      y: window.innerWidth > 768 ? "-100%" : "-112%",
+    })
+    .to(stateCount, {
+      y: window.innerWidth > 768 ? "-200%" : "-212%",
+    })
+    .to(stateCount, {
+      y: window.innerWidth > 768 ? "-200%" : "-212%",
+    })
+    .to(stateCount, {
+      y: window.innerWidth > 768 ? "-300%" : "-312%",
+    })
+    .to(stateCount, {
+      y: window.innerWidth > 768 ? "-300%" : "-312%",
+    })
+    .to(stateCount, {
+      y: window.innerWidth > 768 ? "-400%" : "-412%",
+    })
+    .to(stateCount, {
+      y: window.innerWidth > 768 ? "-400%" : "-412%",
+    })
+    .to(stateCount, {
+      y: window.innerWidth > 768 ? "-500%" : "-512%",
+    })
+    .to(stateCount, {
+      y: window.innerWidth > 768 ? "-500%" : "-512%",
+    })
+    .to(stateCount, {
+      y: window.innerWidth > 768 ? "-600%" : "-612%",
+    });
 
-gsap.from("#stateNumberMobile", {
-  textContent: 0,
-  duration: 2.8,
-  ease: "power1.out",
-  snap: { textContent: 1 },
-  stagger: {
-    each: 1.0,
-  },
-  scrollTrigger: {
-    trigger: "#map",
-    toggleActions: "play none none reverse",
-    start: "top center",
-  },
-});
+  gsap.to("#stateCountMobile", {
+    opacity: 1,
+    scrollTrigger: {
+      trigger: "#growth",
+      toggleActions: "play none none reverse",
+      start: "top 16%",
+    },
+  });
 
-gsap.to("#timelineBorder", {
-  height: "120%",
-  scrollTrigger: {
-    trigger: "#growth",
-    toggleActions: "play none none reverse",
-    start: "top top",
-  },
-});
+  gsap.from("#stateNumberMobile", {
+    textContent: 0,
+    duration: 2.8,
+    ease: "power1.out",
+    snap: { textContent: 1 },
+    stagger: {
+      each: 1.0,
+    },
+    scrollTrigger: {
+      trigger: "#map",
+      toggleActions: "play none none reverse",
+      start: "top center",
+    },
+  });
 
-gsap.to("#timelineBorder2", {
-  width: "calc(100% + 4rem)",
-  scrollTrigger: {
-    trigger: "#growth",
-    toggleActions: "play none none reverse",
-    start: window.innerWidth > 480 ? "top top" : "top 16%",
-  },
-});
+  gsap.to(".timeline__border", {
+    height: "100%",
+    scrollTrigger: {
+      trigger: "#growth",
+      toggleActions: "play none none reverse",
+      start: "top top",
+    },
+  });
 
-let timelineLinksAppear = gsap.utils.toArray(".timelineLinks");
-gsap.to(timelineLinksAppear, {
-  x: "0",
-  opacity: 1,
-  stagger: window.innerWidth > 480 ? 0.1 : null,
-  duration: window.innerWidth > 480 ? 0.36 : 2.4,
-  scrollTrigger: {
-    trigger: "#growth",
-    toggleActions: "play none none reverse",
-    start: window.innerWidth > 480 ? "top top" : "top 16%",
-  },
-});
+  gsap.to(".timeline__border-2", {
+    width: "calc(100% + 4rem)",
+    scrollTrigger: {
+      trigger: "#growth",
+      toggleActions: "play none none reverse",
+      start: window.innerWidth > 480 ? "top top" : "top 16%",
+    },
+  });
 
-let linkHighlightTL = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#numberArea",
-    scrub: true,
-    start: window.innerWidth > 480 ? "40% 15%" : "200% top",
-    // end: window.innerWidth > 768 ? "450% 15%" : "2720% 15%",
-    end: window.innerWidth > 768 ? "450% 15%" : "2200% 15%",
-    // markers: {
-    //   startColor: "white",
-    //   endColor: "white",
-    //   indent: 128,
-    // },
-  },
-});
-linkHighlightTL
-  .to(".link1", { background: "#4693D4" })
-  .to(".link1", { background: "#4693D4" })
-  .to(".link1", { background: "#4693D4" })
-  .to(".link1", { background: "#4693D4" })
-  .to(".link1", { background: "transparent" })
-  .to(".link2", { background: "#4693D4" })
-  .to(".link2", { background: "#4693D4" })
-  .to(".link2", { background: "#4693D4" })
-  .to(".link2", { background: "#4693D4" })
-  .to(".link2", { background: "transparent" })
-  .to(".link3", { background: "#4693D4" })
-  .to(".link3", { background: "#4693D4" })
-  .to(".link3", { background: "#4693D4" })
-  .to(".link3", { background: "#4693D4" })
-  .to(".link3", { background: "transparent" })
-  .to(".link4", { background: "#4693D4" })
-  .to(".link4", { background: "#4693D4" })
-  .to(".link4", { background: "#4693D4" })
-  .to(".link4", { background: "#4693D4" })
-  .to(".link4", { background: "transparent" })
-  .to(".link5", { background: "#4693D4" })
-  .to(".link5", { background: "#4693D4" })
-  .to(".link5", { background: "#4693D4" })
-  .to(".link5", { background: "#4693D4" })
-  .to(".link5", { background: "transparent" }); // Activate to toggle last link background
-// .to(".link5", { background: "4693D4" }); // Activate to toggle last link background
+  let timelineLinksAppear = gsap.utils.toArray(".timelineLinks");
+  gsap.to(timelineLinksAppear, {
+    x: "0",
+    opacity: 1,
+    stagger: window.innerWidth > 480 ? 0.1 : null,
+    duration: window.innerWidth > 480 ? 0.36 : 2.4,
+    scrollTrigger: {
+      trigger: "#growth",
+      toggleActions: "play none none reverse",
+      start: window.innerWidth > 480 ? "top top" : "top 16%",
+    },
+  });
 
-let states2019 = gsap.utils.toArray(".state2019");
-gsap.to(states2019, {
-  fill: "#4693D4",
-  scrollTrigger: {
-    trigger: "#numberArea",
-    scrub: window.innerWidth > 480 ? true : false,
-    toggleActions: "play none none reverse",
-    // start: "40% 15%",
-    start: window.innerWidth > 480 ? "40% 15%" : "top 94%",
-    end: window.innerWidth > 768 ? "60% 15%" : "200% 15%",
-    // markers: {
-    //   startColor: "white",
-    //   endColor: "white",
-    //   indent: 128,
-    // },
-  },
-});
+  let linkHighlightTL = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#year-links",
+      scrub: true,
+      start: window.innerWidth > 480 ? "40% 15%" : "200% top",
+      // end: window.innerWidth > 768 ? "450% 15%" : "2720% 15%",
+      end: window.innerWidth > 768 ? "450% 15%" : "2200% 15%",
+      // markers: {
+      //   startColor: "white",
+      //   endColor: "white",
+      //   indent: 128,
+      // },
+    },
+  });
+  linkHighlightTL
+    .to(".link1", { background: "#4693D4" })
+    .to(".link1", { background: "#4693D4" })
+    .to(".link1", { background: "#4693D4" })
+    .to(".link1", { background: "#4693D4" })
+    .to(".link1", { background: "transparent" })
+    .to(".link2", { background: "#4693D4" })
+    .to(".link2", { background: "#4693D4" })
+    .to(".link2", { background: "#4693D4" })
+    .to(".link2", { background: "#4693D4" })
+    .to(".link2", { background: "transparent" })
+    .to(".link3", { background: "#4693D4" })
+    .to(".link3", { background: "#4693D4" })
+    .to(".link3", { background: "#4693D4" })
+    .to(".link3", { background: "#4693D4" })
+    .to(".link3", { background: "transparent" })
+    .to(".link4", { background: "#4693D4" })
+    .to(".link4", { background: "#4693D4" })
+    .to(".link4", { background: "#4693D4" })
+    .to(".link4", { background: "#4693D4" })
+    .to(".link4", { background: "transparent" })
+    .to(".link5", { background: "#4693D4" })
+    .to(".link5", { background: "#4693D4" })
+    .to(".link5", { background: "#4693D4" })
+    .to(".link5", { background: "#4693D4" })
+    .to(".link5", { background: "transparent" }); // Activate to toggle last link background
+  // .to(".link5", { background: "4693D4" }); // Activate to toggle last link background
 
-let pending2019 = gsap.utils.toArray(".pend2019");
-let pending2019TL = gsap.timeline({
-  delay: 0.2,
-  scrollTrigger: {
-    trigger: "#numberArea",
-    scrub: window.innerWidth > 480 ? true : false,
-    toggleActions: "play none none reverse",
-    start: window.innerWidth > 480 ? "40% 15%" : "top 94%",
-    end: window.innerWidth > 768 ? "150% 15%" : "500% 15%",
-  },
-});
-pending2019TL
-  .to(pending2019, {
-    fill: "#BCD0D7",
-  })
-  .to(pending2019, {
-    fill: "#BCD0D7",
-  })
-  .to(pending2019, {
-    fill: "#BCD0D7",
-  })
-  .to(pending2019, {
+  let states2019 = gsap.utils.toArray(".state2019");
+  gsap.to(states2019, {
     fill: "#4693D4",
+    scrollTrigger: {
+      trigger: "#year-links",
+      scrub: window.innerWidth > 480 ? true : false,
+      toggleActions: "play none none reverse",
+      // start: "40% 15%",
+      start: window.innerWidth > 480 ? "40% 15%" : "top 94%",
+      end: window.innerWidth > 768 ? "60% 15%" : "200% 15%",
+      // markers: {
+      //   startColor: "white",
+      //   endColor: "white",
+      //   indent: 128,
+      // },
+    },
   });
 
-let pending2020 = gsap.utils.toArray(".pend2020");
-let pending2020TL = gsap.timeline({
-  delay: 0.4,
-  scrollTrigger: {
-    trigger: "#numberArea",
-    scrub: window.innerWidth > 480 ? true : false,
-    toggleActions: "play none none reverse",
-    start:
-      window.innerWidth > 768
-        ? "120% 15%"
-        : window.innerWidth <= 768 && window.innerWidth > 480
-        ? "500% 15%"
-        : "top 94%",
-    end: window.innerWidth > 768 ? "230% 15%" : "900% 15%",
-    // markers: true,
-  },
-});
-pending2020TL
-  .to(pending2020, {
-    fill: "#BCD0D7",
-  })
-  .to(pending2020, {
-    fill: "#BCD0D7",
-  })
-  .to(pending2020, {
-    fill: "#BCD0D7",
-  })
-  .to(pending2020, {
-    fill: "#4693D4",
+  let pending2019 = gsap.utils.toArray(".pend2019");
+  let pending2019TL = gsap.timeline({
+    delay: 0.2,
+    scrollTrigger: {
+      trigger: "#year-links",
+      scrub: window.innerWidth > 480 ? true : false,
+      toggleActions: "play none none reverse",
+      start: window.innerWidth > 480 ? "40% 15%" : "top 94%",
+      end: window.innerWidth > 768 ? "150% 15%" : "500% 15%",
+    },
   });
+  pending2019TL
+    .to(pending2019, {
+      fill: "#BCD0D7",
+    })
+    .to(pending2019, {
+      fill: "#BCD0D7",
+    })
+    .to(pending2019, {
+      fill: "#BCD0D7",
+    })
+    .to(pending2019, {
+      fill: "#4693D4",
+    });
 
-let pending2021 = gsap.utils.toArray(".pend2021");
-let pending2021TL = gsap.timeline({
-  delay: 0.8,
-  scrollTrigger: {
-    trigger: "#numberArea",
-    scrub: window.innerWidth > 480 ? true : false,
-    toggleActions: "play none none reverse",
-    start:
-      window.innerWidth > 768
-        ? "200% 15%"
-        : window.innerWidth <= 768 && window.innerWidth > 480
-        ? "1000% 15%"
-        : "top 94%",
-    end: window.innerWidth > 768 ? "310% 15%" : "1300% 15%",
-  },
-});
-pending2021TL
-  .to(pending2021, {
-    fill: "#BCD0D7",
-  })
-  .to(pending2021, {
-    fill: "#BCD0D7",
-  })
-  .to(pending2021, {
-    fill: "#BCD0D7",
-  })
-  .to(pending2021, {
-    fill: "#4693D4",
+  let pending2020 = gsap.utils.toArray(".pend2020");
+  let pending2020TL = gsap.timeline({
+    delay: 0.4,
+    scrollTrigger: {
+      trigger: "#year-links",
+      scrub: window.innerWidth > 480 ? true : false,
+      toggleActions: "play none none reverse",
+      start:
+        window.innerWidth > 768
+          ? "120% 15%"
+          : window.innerWidth <= 768 && window.innerWidth > 480
+          ? "500% 15%"
+          : "top 94%",
+      end: window.innerWidth > 768 ? "230% 15%" : "900% 15%",
+      // markers: true,
+    },
   });
+  pending2020TL
+    .to(pending2020, {
+      fill: "#BCD0D7",
+    })
+    .to(pending2020, {
+      fill: "#BCD0D7",
+    })
+    .to(pending2020, {
+      fill: "#BCD0D7",
+    })
+    .to(pending2020, {
+      fill: "#4693D4",
+    });
 
-let pending2022 = gsap.utils.toArray(".pend2022");
-let pending2022TL = gsap.timeline({
-  delay: 1.2,
-  scrollTrigger: {
-    trigger: "#numberArea",
-    scrub: window.innerWidth > 480 ? true : false,
-    toggleActions: "play none none reverse",
-    start:
-      window.innerWidth > 768
-        ? "280% 15%"
-        : window.innerWidth <= 768 && window.innerWidth > 480
-        ? "1500% 15%"
-        : "top 94%",
-    end: window.innerWidth > 768 ? "390% 15%" : "1700% 15%",
-    // markers: {
-    //   startColor: "white",
-    //   endColor: "white",
-    //   indent: 128,
-    // },
-  },
-});
-pending2022TL
-  .to(pending2022, {
-    fill: "#BCD0D7",
-  })
-  .to(pending2022, {
-    fill: "#BCD0D7",
-  })
-  .to(pending2022, {
-    fill: "#BCD0D7",
-  })
-  .to(pending2022, {
-    fill: "#4693D4", // Add this IF the state becomes active
+  let pending2021 = gsap.utils.toArray(".pend2021");
+  let pending2021TL = gsap.timeline({
+    delay: 0.8,
+    scrollTrigger: {
+      trigger: "#year-links",
+      scrub: window.innerWidth > 480 ? true : false,
+      toggleActions: "play none none reverse",
+      start:
+        window.innerWidth > 768
+          ? "200% 15%"
+          : window.innerWidth <= 768 && window.innerWidth > 480
+          ? "1000% 15%"
+          : "top 94%",
+      end: window.innerWidth > 768 ? "310% 15%" : "1300% 15%",
+    },
   });
+  pending2021TL
+    .to(pending2021, {
+      fill: "#BCD0D7",
+    })
+    .to(pending2021, {
+      fill: "#BCD0D7",
+    })
+    .to(pending2021, {
+      fill: "#BCD0D7",
+    })
+    .to(pending2021, {
+      fill: "#4693D4",
+    });
+
+  let pending2022 = gsap.utils.toArray(".pend2022");
+  let pending2022TL = gsap.timeline({
+    delay: 1.2,
+    scrollTrigger: {
+      trigger: "#year-links",
+      scrub: window.innerWidth > 480 ? true : false,
+      toggleActions: "play none none reverse",
+      start:
+        window.innerWidth > 768
+          ? "280% 15%"
+          : window.innerWidth <= 768 && window.innerWidth > 480
+          ? "1500% 15%"
+          : "top 94%",
+      end: window.innerWidth > 768 ? "390% 15%" : "1700% 15%",
+      // markers: {
+      //   startColor: "white",
+      //   endColor: "white",
+      //   indent: 128,
+      // },
+    },
+  });
+  pending2022TL
+    .to(pending2022, {
+      fill: "#BCD0D7",
+    })
+    .to(pending2022, {
+      fill: "#BCD0D7",
+    })
+    .to(pending2022, {
+      fill: "#BCD0D7",
+    })
+    .to(pending2022, {
+      fill: "#4693D4", // Add this IF the state becomes active
+    });
+})();
 
 gsap.to("#salesForceTitle", {
   y:
@@ -747,40 +810,21 @@ gsap.to(graph2Data, {
 // Utility
 //
 
-function refreshOnDesktop() {
-  const isTouchDevice =
-    "ontouchstart" in window ||
-    navigator.maxTouchPoints > 0 ||
-    navigator.msMaxTouchPoints > 0;
+// // Instead, refresh scrollTrigger
+// const gsapResizing = (() => {
+//   const refreshOnDesktop = () => {
+//     const isTouchDevice =
+//       "ontouchstart" in window ||
+//       navigator.maxTouchPoints > 0 ||
+//       navigator.msMaxTouchPoints > 0;
 
-  // if (!isTouchDevice) {
-  //   window.location.reload();
-  // }
-}
+//     if (!isTouchDevice) {
+//       window.location.reload();
+//     }
+//   };
 
-window.addEventListener("resize", refreshOnDesktop);
-
-// let needsRefresh = false;
-
-// window.addEventListener("resize", function () {
-//   if (window.innerWidth > 580) {
-//     needsRefresh = true;
-//   } else {
-//     needsRefresh = false;
-//   }
-// });
-
-// setInterval(function () {
-//   if (needsRefresh) {
-//     location.reload();
-//   }
-// }, 1000);
-
-// window.onbeforeunload = () => {
-//   window.scrollTo(0, 0);
-// };
-
-// Lenis Smooth Scroll
+//   window.addEventListener("resize", refreshOnDesktop);
+// })();
 
 const lenis = new Lenis();
 

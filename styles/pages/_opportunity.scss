@@ -351,7 +351,18 @@ $pending: #bcd0d7;
       height: 100vh;
       display: flex;
 
-      .numberArea {
+      @media all {
+        @include mq-max("md") {
+          flex-direction: column-reverse;
+        }
+
+        @include mq-max("sm") {
+          position: relative;
+          height: 48rem;
+        }
+      }
+
+      .year-links {
         width: 20%;
         display: flex;
         flex-direction: column;
@@ -359,49 +370,166 @@ $pending: #bcd0d7;
         align-items: center;
         transform: translate(20%, 0);
         padding-bottom: calc(2rem + 4vw);
+
+        @media all {
+          @include mq-max("xxl") {
+            width: 18%;
+            transform: translate(12%, 0);
+          }
+
+          @include mq-max("md") {
+            width: 100%;
+            transform: translate(0, -68%);
+            margin: auto;
+          }
+
+          @include mq-max("sm") {
+            width: 86vw;
+            overflow: hidden;
+            transform: translate(0, -260%);
+          }
+        }
+
         #growthTitle {
           color: $sunderSnow;
           font-size: $lg-text;
           font-weight: 450;
           opacity: 0;
+
+          @include mq-max("md") {
+            display: none;
+          }
         }
+
         .timeline {
+          @include column-center(flex-start);
+          gap: 24px;
           position: relative;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          height: 56%;
-          transform: translate(0, 6%);
-          &Border {
+
+          @media all {
+            @include mq-max("xxl") {
+              gap: 16px;
+            }
+
+            @include mq-max("lg") {
+              gap: 16px;
+            }
+
+            @include mq-max("md") {
+              flex-direction: row;
+              gap: 0;
+            }
+
+            @include mq-max("sm") {
+              position: relative;
+              justify-content: space-around;
+              width: 100%;
+              transform: translate(0, 128%);
+
+              &::before,
+              &::after {
+                content: "";
+                position: absolute;
+                top: 8px;
+                transform: translate(0, -50%);
+                width: 40%;
+                height: 120%;
+                z-index: 2;
+              }
+
+              &::before {
+                left: 0;
+                background: linear-gradient(
+                  90deg,
+                  $sunderMidnight,
+                  rgba($sunderMidnight, 0.2)
+                );
+              }
+
+              &::after {
+                right: 0;
+                background: linear-gradient(
+                  -90deg,
+                  $sunderMidnight,
+                  rgba($sunderMidnight, 0.2)
+                );
+              }
+            }
+          }
+
+          &__border {
             position: absolute;
             top: 0;
             right: 0;
-            transform: translate(calc(4rem + 2vw), -10%);
+            transform: translate(calc(24px + 2vw), 0);
             background: $sunderIce;
             width: 1px;
             height: 0%;
+
+            @include mq-max("xxl") {
+              transform: translate(calc(24px + 1vw), 0);
+            }
+
+            @include mq-max("md") {
+              display: none;
+            }
           }
-          &Border2 {
+
+          &__border-2 {
             display: none;
+
+            @include mq-max("md") {
+              position: absolute;
+              top: 50%;
+              left: -2rem;
+              transform: translate(0, -2rem);
+              display: block;
+              width: 0%;
+              height: 1px;
+              background: $sunderSnow;
+            }
+
+            @include mq-max("sm") {
+              transform: translate(0, -2rem);
+            }
           }
+
           &Links {
             color: $sunderSnow;
             font-size: $md-text;
             text-align: center;
             opacity: 0;
             border-radius: 4rem;
-            padding: 0.4rem 1.2rem;
+            padding: 4px 18px;
             border: 2px solid transparent;
             transition: border 0.3s ease;
-            &:hover {
+
+            @include mq-max("md") {
+              font-size: $sm-text;
+              transform: translate(280%, 0);
+            }
+
+            @include mq-max("sm") {
+              pointer-events: none;
+            }
+
+            &:hover,
+            &:focus-visible {
               border: 2px solid $sunderRoyalLight;
             }
           }
+
           p.timelineLinks {
             display: none;
+
+            @include mq-max("sm") {
+              display: block;
+              transform: translate(280%, 0);
+            }
           }
         }
       }
+
       .mapArea {
         height: 100%;
         width: 80%;
@@ -409,13 +537,47 @@ $pending: #bcd0d7;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        @media all {
+          @include mq-max("md") {
+            margin: auto;
+          }
+
+          @include mq-max("sm") {
+            position: relative;
+            pointer-events: none;
+          }
+        }
+
         .map {
-          transform: translate(0, -36%);
           opacity: 0;
+          transform: translate(0, -36%);
           width: clamp(12rem, 64%, 82rem);
+
+          @media all {
+            @include mq-max("md") {
+              width: clamp(12rem, 78%, 82rem);
+            }
+
+            @include mq-max("sm") {
+              width: clamp(12rem, 112%, 82rem);
+            }
+          }
+
           .USA {
             width: 100%;
             height: 100%;
+
+            @media all {
+              @include mq-max("xxl") {
+                transform: translate(-6%, 0);
+              }
+
+              @include mq-max("md") {
+                transform: translate(0, 10%);
+              }
+            }
+
             .state {
               fill: transparent;
               stroke: $sunderIce;
@@ -423,11 +585,27 @@ $pending: #bcd0d7;
             }
           }
         }
+
         .compass {
           width: calc(10rem + 6vw);
           display: flex;
           justify-content: space-between;
           opacity: 0;
+
+          @media all {
+            @include mq-max("xxl") {
+              transform: translate(-18%, 0);
+            }
+
+            @include mq-max("md") {
+              transform: translate(0, 1.6rem);
+            }
+
+            @include mq-max("sm") {
+              transform: translate(0, 0);
+            }
+          }
+
           h5 {
             font-family: $font-family-body;
             font-size: $sm-text;
@@ -435,24 +613,32 @@ $pending: #bcd0d7;
             color: $sunderSnow;
             display: flex;
             align-items: center;
+
             .circle {
               width: 0.8rem;
               height: 0.8rem;
               border-radius: 50%;
               margin-right: 0.4rem;
+
+              @include mq-max("xxl") {
+                margin-right: 0.6rem;
+              }
             }
           }
+
           .active {
             .circle {
               background: $active;
             }
           }
+
           .pending {
             .circle {
               background: $pending;
             }
           }
         }
+
         .stateCount {
           position: absolute;
           bottom: 20%;
@@ -460,37 +646,150 @@ $pending: #bcd0d7;
           text-align: right;
           color: $sunderSnow;
           opacity: 0;
+
+          @media all {
+            @include mq-max("md") {
+              bottom: auto;
+              top: 2.4rem;
+              right: calc(2rem + 4vw);
+            }
+
+            @include mq-max("sm") {
+              display: none;
+            }
+          }
+
           #numberContainer {
             overflow: hidden;
             height: 7rem;
+
+            @media all {
+              @include mq-max("xxl") {
+                height: 6rem;
+              }
+
+              @include mq-max("md") {
+                height: 1.6rem;
+              }
+            }
           }
+
           .number {
             font-family: $font-family-heading;
             font-size: calc(2.8rem + 2.8vw);
             font-weight: 450;
+
+            @media (min-width: 2048px) {
+              font-size: 6.4rem;
+            }
+
+            @include mq-max("md") {
+              font-size: calc(1.2rem + 1.2vw);
+            }
           }
+
           .title {
             font-family: $font-family-body;
             font-size: $xl-text;
             font-weight: 400;
+
+            @include mq-max("md") {
+              font-size: $md-text;
+            }
           }
         }
+
         .stateCountMobile {
           display: none;
+
+          @include mq-max("sm") {
+            display: block;
+            position: absolute;
+            top: 2.4rem;
+            right: -1.2rem;
+            text-align: right;
+            line-height: 140%;
+            opacity: 0;
+
+            #stateNumberMobile {
+              color: $sunderSnow;
+              font-family: $font-family-heading;
+              font-size: calc(1.6rem + 1.6vw);
+            }
+
+            .titleMobile {
+              color: $sunderSnow;
+              font-size: $lg-text;
+              font-weight: 400;
+            }
+          }
         }
       }
+
       .mobileTitle {
         display: none;
+
+        @include mq-max("md") {
+          display: block;
+          position: absolute;
+          top: 2.4rem;
+          left: calc(2rem + 4vw);
+        }
+
+        @include mq-max("sm") {
+          top: 2rem;
+          left: 1.6rem;
+        }
+
+        h2 {
+          opacity: 0;
+          color: $sunderSnow;
+          font-size: $md-text;
+
+          @include mq-max("sm") {
+            font-size: $lg-text;
+          }
+        }
       }
     }
 
-    .growthAnchors {
+    .growth-anchors {
       position: absolute;
       top: calc(31% + 24vw);
       width: 100%;
       height: calc(100vh + 29%);
-      z-index: -1;
       pointer-events: none;
+      // z-index: -1;
+
+      // .growth-anchor {
+      //   background-color: violet;
+      // }
+
+      @include mq-max("md") {
+        height: calc(100vh + 32%);
+        top: calc(35% + 24vw);
+
+        #anchor2019 {
+          top: 14%;
+        }
+        #anchor2020 {
+          top: 29%;
+        }
+        #anchor2021 {
+          top: 42%;
+        }
+        #anchor2022 {
+          top: 57%;
+        }
+        #anchor2023 {
+          top: 72%;
+        }
+      }
+
+      @include mq-max("sm") {
+        display: none;
+      }
+
       #anchor2019 {
         position: absolute;
         top: 5%;
@@ -915,16 +1214,6 @@ $pending: #bcd0d7;
         }
       }
 
-      .growth {
-        .mapArea {
-          .stateCount {
-            .number {
-              font-size: 6.4rem;
-            }
-          }
-        }
-      }
-
       .kwInstalled {
         .pageFooter {
           width: 128rem;
@@ -958,38 +1247,6 @@ $pending: #bcd0d7;
         }
         .cta {
           top: -5.6rem;
-        }
-      }
-
-      .growth {
-        .numberArea {
-          width: 18%;
-          transform: translate(12%, 0);
-          .timeline {
-            &Border {
-              transform: translate(calc(4rem + 1vw), -6%);
-            }
-          }
-        }
-        .mapArea {
-          .map {
-            .USA {
-              transform: translate(-6%, 0);
-            }
-          }
-          .compass {
-            transform: translate(-18%, 0);
-            h5 {
-              .circle {
-                margin-right: 0.6rem;
-              }
-            }
-          }
-          .stateCount {
-            #numberContainer {
-              height: 6rem;
-            }
-          }
         }
       }
 
@@ -1147,14 +1404,6 @@ $pending: #bcd0d7;
         }
       }
 
-      .growth {
-        .numberArea {
-          .timeline {
-            height: 48%;
-          }
-        }
-      }
-
       &Active {
         transform: translate(0, -58vh);
       }
@@ -1197,93 +1446,6 @@ $pending: #bcd0d7;
         }
         .shape {
           height: 66%;
-        }
-      }
-
-      .growth {
-        flex-direction: column-reverse;
-        .numberArea {
-          width: 100%;
-          transform: translate(0, -68%);
-          margin: auto;
-          #growthTitle {
-            display: none;
-          }
-          .timeline {
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: center;
-            width: 68%;
-            &Border {
-              display: none;
-            }
-            &Border2 {
-              position: absolute;
-              top: 50%;
-              left: -2rem;
-              transform: translate(0, -2rem);
-              display: block;
-              width: 0%;
-              height: 1px;
-              background: $sunderSnow;
-            }
-          }
-        }
-        .mapArea {
-          margin: auto;
-          .map {
-            width: clamp(12rem, 78%, 82rem);
-            .USA {
-              transform: translate(0, 10%);
-            }
-          }
-          .compass {
-            transform: translate(0, 1.6rem);
-          }
-          .stateCount {
-            bottom: auto;
-            top: 2.4rem;
-            right: calc(2rem + 4vw);
-            #numberContainer {
-              height: 1.6rem;
-            }
-            .number {
-              font-size: calc(1.2rem + 1.2vw);
-            }
-            .title {
-              font-size: $md-text;
-            }
-          }
-        }
-        .mobileTitle {
-          display: block;
-          position: absolute;
-          top: 2.4rem;
-          left: calc(2rem + 4vw);
-          h2 {
-            opacity: 0;
-            color: $sunderSnow;
-            font-size: $md-text;
-          }
-        }
-      }
-      .growthAnchors {
-        height: calc(100vh + 32%);
-        top: calc(35% + 24vw);
-        #anchor2019 {
-          top: 14%;
-        }
-        #anchor2020 {
-          top: 29%;
-        }
-        #anchor2021 {
-          top: 42%;
-        }
-        #anchor2022 {
-          top: 57%;
-        }
-        #anchor2023 {
-          top: 72%;
         }
       }
       .dataSections {
@@ -1424,102 +1586,6 @@ $pending: #bcd0d7;
           width: 86%;
           height: calc(12rem + 12vw);
         }
-      }
-
-      .growth {
-        position: relative;
-        height: 48rem;
-        .numberArea {
-          width: 86vw;
-          overflow: hidden;
-          transform: translate(0, -260%);
-          .timeline {
-            position: relative;
-            justify-content: space-around;
-            width: 100%;
-            transform: translate(0, 200%);
-            &::before,
-            &::after {
-              content: "";
-              position: absolute;
-              top: 50%;
-              transform: translate(0, -50%);
-              width: 42%;
-              height: 360%;
-              z-index: 2;
-            }
-            &::before {
-              background: linear-gradient(
-                90deg,
-                $sunderMidnight,
-                rgba($sunderMidnight, 0.2)
-              );
-              left: 0;
-            }
-            &::after {
-              background: linear-gradient(
-                -90deg,
-                $sunderMidnight,
-                rgba($sunderMidnight, 0.2)
-              );
-              right: 0;
-            }
-            &Border2 {
-              transform: translate(0, -2rem);
-            }
-            &Links {
-              padding: 0.2rem 0.8rem;
-              pointer-events: none;
-              transform: translate(280%, 0);
-            }
-            p.timelineLinks {
-              display: block;
-              transform: translate(280%, 0);
-            }
-          }
-        }
-        .mapArea {
-          position: relative;
-          .map {
-            width: clamp(12rem, 112%, 82rem);
-          }
-          .compass {
-            transform: translate(0, 0);
-          }
-          .stateCount {
-            display: none;
-          }
-          .stateCountMobile {
-            display: block;
-            position: absolute;
-            top: 2.4rem;
-            right: -1.2rem;
-            text-align: right;
-            line-height: 140%;
-            opacity: 0;
-            #stateNumberMobile {
-              color: $sunderSnow;
-              font-family: $font-family-heading;
-              font-size: calc(1.6rem + 1.6vw);
-            }
-            .titleMobile {
-              color: $sunderSnow;
-              font-size: $lg-text;
-              font-weight: 400;
-            }
-          }
-        }
-        .mobileTitle {
-          top: 2rem;
-          left: 1.6rem;
-          h2 {
-            font-size: $lg-text;
-          }
-        }
-      }
-
-      .growthAnchors {
-        display: none;
       }
 
       .dataSections {

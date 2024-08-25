@@ -1310,7 +1310,7 @@ h2 {
   right: 0;
   width: 100%;
   height: clamp(12rem, 38vw, 36rem);
-  border-radius: 0 calc(24px + 2vw) 0 calc(24px + 2vw);
+  border-radius: 0 calc(12px + 2vw) 0 calc(12px + 2vw);
   background: #080808;
 }
 .opportunity .mainContent .header .soloRepImg {
@@ -1362,7 +1362,7 @@ h2 {
 .opportunity .mainContent .quote-section .quote-block .image-wrapper {
   position: relative;
   display: flex;
-  border-radius: calc(24px + 2vw);
+  border-radius: calc(12px + 2vw);
   overflow: hidden;
   width: 580px;
 }
@@ -1521,7 +1521,7 @@ h2 {
 }
 .opportunity .mainContent .videoSection .videoFigure {
   position: relative;
-  border-radius: calc(24px + 2vw);
+  border-radius: calc(12px + 2vw);
   opacity: 0;
   width: 60%;
   height: calc(12rem + 24vw);
@@ -1539,7 +1539,7 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: calc(24px + 2vw);
+  border-radius: calc(12px + 2vw);
 }
 .opportunity .mainContent .videoSection .videoFigure .overlay {
   width: 100%;
@@ -1574,7 +1574,18 @@ h2 {
   height: 100vh;
   display: flex;
 }
-.opportunity .mainContent .growth .numberArea {
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .growth {
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 480px) {
+  .opportunity .mainContent .growth {
+    position: relative;
+    height: 48rem;
+  }
+}
+.opportunity .mainContent .growth .year-links {
   width: 20%;
   display: flex;
   flex-direction: column;
@@ -1583,47 +1594,157 @@ h2 {
   transform: translate(20%, 0);
   padding-bottom: calc(2rem + 4vw);
 }
-.opportunity .mainContent .growth .numberArea #growthTitle {
+@media screen and (max-width: 1512px) {
+  .opportunity .mainContent .growth .year-links {
+    width: 18%;
+    transform: translate(12%, 0);
+  }
+}
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .growth .year-links {
+    width: 100%;
+    transform: translate(0, -68%);
+    margin: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .opportunity .mainContent .growth .year-links {
+    width: 86vw;
+    overflow: hidden;
+    transform: translate(0, -260%);
+  }
+}
+.opportunity .mainContent .growth .year-links #growthTitle {
   color: #f7f7f7;
   font-size: calc(1rem + 1.2vw);
   font-weight: 450;
   opacity: 0;
 }
-.opportunity .mainContent .growth .numberArea .timeline {
-  position: relative;
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .growth .year-links #growthTitle {
+    display: none;
+  }
+}
+.opportunity .mainContent .growth .year-links .timeline {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 56%;
-  transform: translate(0, 6%);
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+  position: relative;
 }
-.opportunity .mainContent .growth .numberArea .timelineBorder {
+@media screen and (max-width: 1512px) {
+  .opportunity .mainContent .growth .year-links .timeline {
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .opportunity .mainContent .growth .year-links .timeline {
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .growth .year-links .timeline {
+    flex-direction: row;
+    gap: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .opportunity .mainContent .growth .year-links .timeline {
+    position: relative;
+    justify-content: space-around;
+    width: 100%;
+    transform: translate(0, 128%);
+  }
+  .opportunity .mainContent .growth .year-links .timeline::before, .opportunity .mainContent .growth .year-links .timeline::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    transform: translate(0, -50%);
+    width: 40%;
+    height: 120%;
+    z-index: 2;
+  }
+  .opportunity .mainContent .growth .year-links .timeline::before {
+    left: 0;
+    background: linear-gradient(90deg, #000014, rgba(0, 0, 20, 0.2));
+  }
+  .opportunity .mainContent .growth .year-links .timeline::after {
+    right: 0;
+    background: linear-gradient(-90deg, #000014, rgba(0, 0, 20, 0.2));
+  }
+}
+.opportunity .mainContent .growth .year-links .timeline__border {
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(calc(4rem + 2vw), -10%);
+  transform: translate(calc(24px + 2vw), 0);
   background: #c6d3d8;
   width: 1px;
   height: 0%;
 }
-.opportunity .mainContent .growth .numberArea .timelineBorder2 {
+@media screen and (max-width: 1512px) {
+  .opportunity .mainContent .growth .year-links .timeline__border {
+    transform: translate(calc(24px + 1vw), 0);
+  }
+}
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .growth .year-links .timeline__border {
+    display: none;
+  }
+}
+.opportunity .mainContent .growth .year-links .timeline__border-2 {
   display: none;
 }
-.opportunity .mainContent .growth .numberArea .timelineLinks {
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .growth .year-links .timeline__border-2 {
+    position: absolute;
+    top: 50%;
+    left: -2rem;
+    transform: translate(0, -2rem);
+    display: block;
+    width: 0%;
+    height: 1px;
+    background: #f7f7f7;
+  }
+}
+@media screen and (max-width: 480px) {
+  .opportunity .mainContent .growth .year-links .timeline__border-2 {
+    transform: translate(0, -2rem);
+  }
+}
+.opportunity .mainContent .growth .year-links .timelineLinks {
   color: #f7f7f7;
   font-size: calc(0.8rem + 1vw);
   text-align: center;
   opacity: 0;
   border-radius: 4rem;
-  padding: 0.4rem 1.2rem;
+  padding: 4px 18px;
   border: 2px solid transparent;
   transition: border 0.3s ease;
 }
-.opportunity .mainContent .growth .numberArea .timelineLinks:hover {
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .growth .year-links .timelineLinks {
+    font-size: calc(0.8rem + 0.4vw);
+    transform: translate(280%, 0);
+  }
+}
+@media screen and (max-width: 480px) {
+  .opportunity .mainContent .growth .year-links .timelineLinks {
+    pointer-events: none;
+  }
+}
+.opportunity .mainContent .growth .year-links .timelineLinks:hover, .opportunity .mainContent .growth .year-links .timelineLinks:focus-visible {
   border: 2px solid #0c5ff2;
 }
-.opportunity .mainContent .growth .numberArea .timeline p.timelineLinks {
+.opportunity .mainContent .growth .year-links .timeline p.timelineLinks {
   display: none;
+}
+@media screen and (max-width: 480px) {
+  .opportunity .mainContent .growth .year-links .timeline p.timelineLinks {
+    display: block;
+    transform: translate(280%, 0);
+  }
 }
 .opportunity .mainContent .growth .mapArea {
   height: 100%;
@@ -1633,14 +1754,45 @@ h2 {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .growth .mapArea {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .opportunity .mainContent .growth .mapArea {
+    position: relative;
+    pointer-events: none;
+  }
+}
 .opportunity .mainContent .growth .mapArea .map {
-  transform: translate(0, -36%);
   opacity: 0;
+  transform: translate(0, -36%);
   width: clamp(12rem, 64%, 82rem);
+}
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .growth .mapArea .map {
+    width: clamp(12rem, 78%, 82rem);
+  }
+}
+@media screen and (max-width: 480px) {
+  .opportunity .mainContent .growth .mapArea .map {
+    width: clamp(12rem, 112%, 82rem);
+  }
 }
 .opportunity .mainContent .growth .mapArea .map .USA {
   width: 100%;
   height: 100%;
+}
+@media screen and (max-width: 1512px) {
+  .opportunity .mainContent .growth .mapArea .map .USA {
+    transform: translate(-6%, 0);
+  }
+}
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .growth .mapArea .map .USA {
+    transform: translate(0, 10%);
+  }
 }
 .opportunity .mainContent .growth .mapArea .map .USA .state {
   fill: transparent;
@@ -1652,6 +1804,21 @@ h2 {
   display: flex;
   justify-content: space-between;
   opacity: 0;
+}
+@media screen and (max-width: 1512px) {
+  .opportunity .mainContent .growth .mapArea .compass {
+    transform: translate(-18%, 0);
+  }
+}
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .growth .mapArea .compass {
+    transform: translate(0, 1.6rem);
+  }
+}
+@media screen and (max-width: 480px) {
+  .opportunity .mainContent .growth .mapArea .compass {
+    transform: translate(0, 0);
+  }
 }
 .opportunity .mainContent .growth .mapArea .compass h5 {
   font-family: "satoshi", sans-serif;
@@ -1667,6 +1834,11 @@ h2 {
   border-radius: 50%;
   margin-right: 0.4rem;
 }
+@media screen and (max-width: 1512px) {
+  .opportunity .mainContent .growth .mapArea .compass h5 .circle {
+    margin-right: 0.6rem;
+  }
+}
 .opportunity .mainContent .growth .mapArea .compass .active .circle {
   background: #4693d4;
 }
@@ -1681,50 +1853,157 @@ h2 {
   color: #f7f7f7;
   opacity: 0;
 }
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .growth .mapArea .stateCount {
+    bottom: auto;
+    top: 2.4rem;
+    right: calc(2rem + 4vw);
+  }
+}
+@media screen and (max-width: 480px) {
+  .opportunity .mainContent .growth .mapArea .stateCount {
+    display: none;
+  }
+}
 .opportunity .mainContent .growth .mapArea .stateCount #numberContainer {
   overflow: hidden;
   height: 7rem;
+}
+@media screen and (max-width: 1512px) {
+  .opportunity .mainContent .growth .mapArea .stateCount #numberContainer {
+    height: 6rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .growth .mapArea .stateCount #numberContainer {
+    height: 1.6rem;
+  }
 }
 .opportunity .mainContent .growth .mapArea .stateCount .number {
   font-family: "monument", sans-serif;
   font-size: calc(2.8rem + 2.8vw);
   font-weight: 450;
 }
+@media (min-width: 2048px) {
+  .opportunity .mainContent .growth .mapArea .stateCount .number {
+    font-size: 6.4rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .growth .mapArea .stateCount .number {
+    font-size: calc(1.2rem + 1.2vw);
+  }
+}
 .opportunity .mainContent .growth .mapArea .stateCount .title {
   font-family: "satoshi", sans-serif;
   font-size: calc(1.4rem + 1.4vw);
   font-weight: 400;
 }
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .growth .mapArea .stateCount .title {
+    font-size: calc(0.8rem + 1vw);
+  }
+}
 .opportunity .mainContent .growth .mapArea .stateCountMobile {
   display: none;
+}
+@media screen and (max-width: 480px) {
+  .opportunity .mainContent .growth .mapArea .stateCountMobile {
+    display: block;
+    position: absolute;
+    top: 2.4rem;
+    right: -1.2rem;
+    text-align: right;
+    line-height: 140%;
+    opacity: 0;
+  }
+  .opportunity .mainContent .growth .mapArea .stateCountMobile #stateNumberMobile {
+    color: #f7f7f7;
+    font-family: "monument", sans-serif;
+    font-size: calc(1.6rem + 1.6vw);
+  }
+  .opportunity .mainContent .growth .mapArea .stateCountMobile .titleMobile {
+    color: #f7f7f7;
+    font-size: calc(1rem + 1.2vw);
+    font-weight: 400;
+  }
 }
 .opportunity .mainContent .growth .mobileTitle {
   display: none;
 }
-.opportunity .mainContent .growthAnchors {
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .growth .mobileTitle {
+    display: block;
+    position: absolute;
+    top: 2.4rem;
+    left: calc(2rem + 4vw);
+  }
+}
+@media screen and (max-width: 480px) {
+  .opportunity .mainContent .growth .mobileTitle {
+    top: 2rem;
+    left: 1.6rem;
+  }
+}
+.opportunity .mainContent .growth .mobileTitle h2 {
+  opacity: 0;
+  color: #f7f7f7;
+  font-size: calc(0.8rem + 1vw);
+}
+@media screen and (max-width: 480px) {
+  .opportunity .mainContent .growth .mobileTitle h2 {
+    font-size: calc(1rem + 1.2vw);
+  }
+}
+.opportunity .mainContent .growth-anchors {
   position: absolute;
   top: calc(31% + 24vw);
   width: 100%;
   height: calc(100vh + 29%);
-  z-index: -1;
   pointer-events: none;
 }
-.opportunity .mainContent .growthAnchors #anchor2019, .opportunity .mainContent .growthAnchors #anchor2023, .opportunity .mainContent .growthAnchors #anchor2022, .opportunity .mainContent .growthAnchors #anchor2021, .opportunity .mainContent .growthAnchors #anchor2020 {
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .growth-anchors {
+    height: calc(100vh + 32%);
+    top: calc(35% + 24vw);
+  }
+  .opportunity .mainContent .growth-anchors #anchor2019, .opportunity .mainContent .growth-anchors #anchor2023, .opportunity .mainContent .growth-anchors #anchor2022, .opportunity .mainContent .growth-anchors #anchor2021, .opportunity .mainContent .growth-anchors #anchor2020 {
+    top: 14%;
+  }
+  .opportunity .mainContent .growth-anchors #anchor2020 {
+    top: 29%;
+  }
+  .opportunity .mainContent .growth-anchors #anchor2021 {
+    top: 42%;
+  }
+  .opportunity .mainContent .growth-anchors #anchor2022 {
+    top: 57%;
+  }
+  .opportunity .mainContent .growth-anchors #anchor2023 {
+    top: 72%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .opportunity .mainContent .growth-anchors {
+    display: none;
+  }
+}
+.opportunity .mainContent .growth-anchors #anchor2019, .opportunity .mainContent .growth-anchors #anchor2023, .opportunity .mainContent .growth-anchors #anchor2022, .opportunity .mainContent .growth-anchors #anchor2021, .opportunity .mainContent .growth-anchors #anchor2020 {
   position: absolute;
   top: 5%;
   width: 12rem;
   height: 1rem;
 }
-.opportunity .mainContent .growthAnchors #anchor2020 {
+.opportunity .mainContent .growth-anchors #anchor2020 {
   top: 24%;
 }
-.opportunity .mainContent .growthAnchors #anchor2021 {
+.opportunity .mainContent .growth-anchors #anchor2021 {
   top: 42%;
 }
-.opportunity .mainContent .growthAnchors #anchor2022 {
+.opportunity .mainContent .growth-anchors #anchor2022 {
   top: 60%;
 }
-.opportunity .mainContent .growthAnchors #anchor2023 {
+.opportunity .mainContent .growth-anchors #anchor2023 {
   top: 80%;
 }
 .opportunity .mainContent .dataSections {
@@ -2018,9 +2297,6 @@ h2 {
   .opportunity .mainContent .header .repsImg {
     width: 56rem;
   }
-  .opportunity .mainContent .growth .mapArea .stateCount .number {
-    font-size: 6.4rem;
-  }
   .opportunity .mainContent .kwInstalled .pageFooter {
     width: 128rem;
   }
@@ -2041,25 +2317,6 @@ h2 {
   }
   .opportunity .mainContent .header .cta {
     top: -5.6rem;
-  }
-  .opportunity .mainContent .growth .numberArea {
-    width: 18%;
-    transform: translate(12%, 0);
-  }
-  .opportunity .mainContent .growth .numberArea .timelineBorder {
-    transform: translate(calc(4rem + 1vw), -6%);
-  }
-  .opportunity .mainContent .growth .mapArea .map .USA {
-    transform: translate(-6%, 0);
-  }
-  .opportunity .mainContent .growth .mapArea .compass {
-    transform: translate(-18%, 0);
-  }
-  .opportunity .mainContent .growth .mapArea .compass h5 .circle {
-    margin-right: 0.6rem;
-  }
-  .opportunity .mainContent .growth .mapArea .stateCount #numberContainer {
-    height: 6rem;
   }
   .opportunity .mainContent .kwInstalled .lineGraph .kwData .dataPiece:nth-of-type(1) {
     bottom: 16%;
@@ -2174,9 +2431,6 @@ h2 {
        object-fit: cover;
     z-index: -1;
   }
-  .opportunity .mainContent .growth .numberArea .timeline {
-    height: 48%;
-  }
   .opportunity .mainContentActive {
     transform: translate(0, -58vh);
   }
@@ -2212,92 +2466,6 @@ h2 {
   }
   .opportunity .mainContent .header .shape {
     height: 66%;
-  }
-  .opportunity .mainContent .growth {
-    flex-direction: column-reverse;
-  }
-  .opportunity .mainContent .growth .numberArea {
-    width: 100%;
-    transform: translate(0, -68%);
-    margin: auto;
-  }
-  .opportunity .mainContent .growth .numberArea #growthTitle {
-    display: none;
-  }
-  .opportunity .mainContent .growth .numberArea .timeline {
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 68%;
-  }
-  .opportunity .mainContent .growth .numberArea .timelineBorder {
-    display: none;
-  }
-  .opportunity .mainContent .growth .numberArea .timelineBorder2 {
-    position: absolute;
-    top: 50%;
-    left: -2rem;
-    transform: translate(0, -2rem);
-    display: block;
-    width: 0%;
-    height: 1px;
-    background: #f7f7f7;
-  }
-  .opportunity .mainContent .growth .mapArea {
-    margin: auto;
-  }
-  .opportunity .mainContent .growth .mapArea .map {
-    width: clamp(12rem, 78%, 82rem);
-  }
-  .opportunity .mainContent .growth .mapArea .map .USA {
-    transform: translate(0, 10%);
-  }
-  .opportunity .mainContent .growth .mapArea .compass {
-    transform: translate(0, 1.6rem);
-  }
-  .opportunity .mainContent .growth .mapArea .stateCount {
-    bottom: auto;
-    top: 2.4rem;
-    right: calc(2rem + 4vw);
-  }
-  .opportunity .mainContent .growth .mapArea .stateCount #numberContainer {
-    height: 1.6rem;
-  }
-  .opportunity .mainContent .growth .mapArea .stateCount .number {
-    font-size: calc(1.2rem + 1.2vw);
-  }
-  .opportunity .mainContent .growth .mapArea .stateCount .title {
-    font-size: calc(0.8rem + 1vw);
-  }
-  .opportunity .mainContent .growth .mobileTitle {
-    display: block;
-    position: absolute;
-    top: 2.4rem;
-    left: calc(2rem + 4vw);
-  }
-  .opportunity .mainContent .growth .mobileTitle h2 {
-    opacity: 0;
-    color: #f7f7f7;
-    font-size: calc(0.8rem + 1vw);
-  }
-  .opportunity .mainContent .growthAnchors {
-    height: calc(100vh + 32%);
-    top: calc(35% + 24vw);
-  }
-  .opportunity .mainContent .growthAnchors #anchor2019, .opportunity .mainContent .growthAnchors #anchor2020, .opportunity .mainContent .growthAnchors #anchor2021, .opportunity .mainContent .growthAnchors #anchor2022, .opportunity .mainContent .growthAnchors #anchor2023 {
-    top: 14%;
-  }
-  .opportunity .mainContent .growthAnchors #anchor2020 {
-    top: 29%;
-  }
-  .opportunity .mainContent .growthAnchors #anchor2021 {
-    top: 42%;
-  }
-  .opportunity .mainContent .growthAnchors #anchor2022 {
-    top: 57%;
-  }
-  .opportunity .mainContent .growthAnchors #anchor2023 {
-    top: 72%;
   }
   .opportunity .mainContent .dataSections {
     height: clamp(48rem, 112vh, 86rem);
@@ -2399,91 +2567,6 @@ h2 {
   .opportunity .mainContent .videoSection .videoFigure {
     width: 86%;
     height: calc(12rem + 12vw);
-  }
-  .opportunity .mainContent .growth {
-    position: relative;
-    height: 48rem;
-  }
-  .opportunity .mainContent .growth .numberArea {
-    width: 86vw;
-    overflow: hidden;
-    transform: translate(0, -260%);
-  }
-  .opportunity .mainContent .growth .numberArea .timeline {
-    position: relative;
-    justify-content: space-around;
-    width: 100%;
-    transform: translate(0, 200%);
-  }
-  .opportunity .mainContent .growth .numberArea .timeline::before, .opportunity .mainContent .growth .numberArea .timeline::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    width: 42%;
-    height: 360%;
-    z-index: 2;
-  }
-  .opportunity .mainContent .growth .numberArea .timeline::before {
-    background: linear-gradient(90deg, #000014, rgba(0, 0, 20, 0.2));
-    left: 0;
-  }
-  .opportunity .mainContent .growth .numberArea .timeline::after {
-    background: linear-gradient(-90deg, #000014, rgba(0, 0, 20, 0.2));
-    right: 0;
-  }
-  .opportunity .mainContent .growth .numberArea .timelineBorder2 {
-    transform: translate(0, -2rem);
-  }
-  .opportunity .mainContent .growth .numberArea .timelineLinks {
-    padding: 0.2rem 0.8rem;
-    pointer-events: none;
-    transform: translate(280%, 0);
-  }
-  .opportunity .mainContent .growth .numberArea .timeline p.timelineLinks {
-    display: block;
-    transform: translate(280%, 0);
-  }
-  .opportunity .mainContent .growth .mapArea {
-    position: relative;
-  }
-  .opportunity .mainContent .growth .mapArea .map {
-    width: clamp(12rem, 112%, 82rem);
-  }
-  .opportunity .mainContent .growth .mapArea .compass {
-    transform: translate(0, 0);
-  }
-  .opportunity .mainContent .growth .mapArea .stateCount {
-    display: none;
-  }
-  .opportunity .mainContent .growth .mapArea .stateCountMobile {
-    display: block;
-    position: absolute;
-    top: 2.4rem;
-    right: -1.2rem;
-    text-align: right;
-    line-height: 140%;
-    opacity: 0;
-  }
-  .opportunity .mainContent .growth .mapArea .stateCountMobile #stateNumberMobile {
-    color: #f7f7f7;
-    font-family: "monument", sans-serif;
-    font-size: calc(1.6rem + 1.6vw);
-  }
-  .opportunity .mainContent .growth .mapArea .stateCountMobile .titleMobile {
-    color: #f7f7f7;
-    font-size: calc(1rem + 1.2vw);
-    font-weight: 400;
-  }
-  .opportunity .mainContent .growth .mobileTitle {
-    top: 2rem;
-    left: 1.6rem;
-  }
-  .opportunity .mainContent .growth .mobileTitle h2 {
-    font-size: calc(1rem + 1.2vw);
-  }
-  .opportunity .mainContent .growthAnchors {
-    display: none;
   }
   .opportunity .mainContent .dataSections {
     height: clamp(36rem, 100vh, 86rem);
