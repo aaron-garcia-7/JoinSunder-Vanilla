@@ -267,7 +267,7 @@ responsiveGsap.add(
     const growthMapAnimation = (() => {
       const years = [2019, 2020, 2021, 2022, 2023, 2024];
 
-      let pinDuration = "1200%";
+      let pinDuration = "+=500%";
       let pinSection = "#growth";
 
       const countActiveStates = ((years) => {
@@ -312,7 +312,8 @@ responsiveGsap.add(
           pin: minSm ? true : false,
           scrub: minSm ? true : false,
           start: "top top",
-          end: `${pinDuration} 6%`,
+          // end: `${pinDuration} 6%`,
+          end: `${pinDuration}`,
         },
       });
 
@@ -371,25 +372,18 @@ responsiveGsap.add(
           scrollTrigger: {
             trigger: pinSection,
             scrub: minSm ? true : false,
-            start: "top top",
-            // start: "top 24%",
-            end: `${pinDuration} 6%`,
-            markers: markers,
+            start: maxMd ? "-12% top" : "-20% top", // Starting early to line up with link highlights
+            end: `${pinDuration}`,
           },
         });
 
-        const yOffset = minMd ? 100 : 112;
         const steps = totalYears; // Number of steps (years)
 
         for (let i = 1; i <= steps; i++) {
           stateCountTL.to(stateCount, {
-            y: `-${i * yOffset}%`,
+            y: `-${i * 100}%`,
             duration: 2,
           });
-          // .to(stateCount, {
-          //   y: `-${i * yOffset}%`,
-          //   duration: 1,
-          // });
         }
 
         gsap.to("#stateCountMobile", {
@@ -417,46 +411,45 @@ responsiveGsap.add(
         });
       })(years.length);
 
-      gsap.to(".timeline__border", {
-        height: "100%",
-        scrollTrigger: {
-          trigger: pinSection,
-          toggleActions: "play none none reverse",
-          start: "top top",
-        },
-      });
+      const yearLinks = ((totalYears) => {
+        gsap.to(".timeline__border", {
+          height: "100%",
+          scrollTrigger: {
+            trigger: pinSection,
+            toggleActions: "play none none reverse",
+            start: "top top",
+          },
+        });
 
-      gsap.to(".timeline__border-2", {
-        width: "calc(100% + 4rem)",
-        scrollTrigger: {
-          trigger: pinSection,
-          toggleActions: "play none none reverse",
-          start: minSm ? "top top" : "top 16%",
-        },
-      });
+        gsap.to(".timeline__border-2", {
+          width: "100%",
+          scrollTrigger: {
+            trigger: pinSection,
+            toggleActions: "play none none reverse",
+            start: minSm ? "top top" : "top 16%",
+          },
+        });
 
-      let timelineLinksAppear = gsap.utils.toArray(".timelineLinks");
-      gsap.to(timelineLinksAppear, {
-        x: "0",
-        opacity: 1,
-        stagger: minSm ? 0.1 : null,
-        duration: minSm ? 0.36 : 2.4,
-        scrollTrigger: {
-          trigger: pinSection,
-          toggleActions: "play none none reverse",
-          start: minSm ? "top top" : "top 16%",
-        },
-      });
+        let timelineLinksAppear = gsap.utils.toArray(".timelineLinks");
+        gsap.to(timelineLinksAppear, {
+          x: "0",
+          opacity: 1,
+          stagger: minSm ? 0.1 : null,
+          duration: minSm ? 0.36 : 2.4,
+          scrollTrigger: {
+            trigger: pinSection,
+            toggleActions: "play none none reverse",
+            start: minSm ? "top top" : "top 16%",
+          },
+        });
 
-      const yearLinkHighlight = ((totalYears) => {
+        // Link highlight - All sizes but mobile
         let linkHighlightTL = gsap.timeline({
           scrollTrigger: {
             trigger: pinSection,
             scrub: true,
             start: minSm ? "top top" : "top 16%",
-            // end: `${pinDuration} 6%`,
             end: `${pinDuration} 6%`,
-            markers: true,
           },
         });
 
@@ -474,13 +467,14 @@ responsiveGsap.add(
             .to(link, {
               background: "#4693D4",
               duration: 2,
+              delay: 2,
             })
             .to(link, {
               background: "transparent",
               duration: 1,
               delay: 2,
             });
-        });
+        }, "-=1"); // Supposed to make this start/overlap with the previous tween
       })(years.length);
 
       const stateHighlight = (() => {
@@ -815,6 +809,27 @@ responsiveGsap.add(
     })();
   }
 );
+
+// Growth Anchor positioning
+
+const growthAnchorPlacement = (() => {
+  // Setting the height of the .growth-anchors parent section
+  const growthSection = document.querySelector(".growth"),
+    growthAnchors = document.querySelector(".growth-anchors"),
+    salesForceSection = document.querySelector(".salesForce");
+
+  const growthRect = growthSection.getBoundingClientRect();
+  const topPosition = growthRect.top + window.scrollY;
+
+  growthAnchors.style.position = "absolute";
+  growthAnchors.style.top = `${topPosition}px`;
+
+  const distance =
+    salesForceSection.getBoundingClientRect().top -
+    growthSection.getBoundingClientRect().top;
+
+  growthAnchors.style.height = `${distance}px`;
+})();
 
 // Refresh ScrollTrigger instances on page load and resize
 window.addEventListener("load", () => {

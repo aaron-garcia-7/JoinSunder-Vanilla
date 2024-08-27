@@ -348,6 +348,7 @@ $pending: #bcd0d7;
     }
 
     .growth {
+      // border: $test;
       height: 100vh;
       display: flex;
 
@@ -379,7 +380,7 @@ $pending: #bcd0d7;
 
           @include mq-max("md") {
             width: 100%;
-            transform: translate(0, -68%);
+            transform: translate(0, -100%);
             margin: auto;
           }
 
@@ -481,8 +482,7 @@ $pending: #bcd0d7;
             @include mq-max("md") {
               position: absolute;
               top: 50%;
-              left: -2rem;
-              transform: translate(0, -2rem);
+              transform: translate(0, -36px);
               display: block;
               width: 0%;
               height: 1px;
@@ -506,10 +506,10 @@ $pending: #bcd0d7;
 
             @include mq-max("md") {
               font-size: $sm-text;
-              transform: translate(280%, 0);
             }
 
             @include mq-max("sm") {
+              transform: translate(280%, 0);
               pointer-events: none;
             }
 
@@ -755,61 +755,64 @@ $pending: #bcd0d7;
 
     .growth-anchors {
       position: absolute;
-      top: calc(31% + 24vw);
+      translate: 0 -102px; // No idea why
       width: 100%;
-      height: calc(100vh + 29%);
       pointer-events: none;
-
-      // .growth-anchor {
-      //   background-color: violet;
-      // }
-
-      @include mq-max("md") {
-        height: calc(100vh + 32%);
-        top: calc(35% + 24vw);
-
-        #anchor2019 {
-          top: 14%;
-        }
-        #anchor2020 {
-          top: 29%;
-        }
-        #anchor2021 {
-          top: 42%;
-        }
-        #anchor2022 {
-          top: 57%;
-        }
-        #anchor2023 {
-          top: 72%;
-        }
-      }
 
       @include mq-max("sm") {
         display: none;
       }
 
-      #anchor2019 {
+      // Debug
+      .growth-anchor {
+        // background-color: violet;
         position: absolute;
-        top: 5%;
-        width: 12rem;
-        height: 1rem;
+        width: 256px;
+        height: 12px;
+      }
+
+      // Find a pattern for these one day
+      #anchor2019 {
+        top: 10%;
+
+        @include mq-max("md") {
+          top: 12%;
+        }
       }
       #anchor2020 {
-        @extend #anchor2019;
-        top: 24%;
+        top: 22%;
+
+        @include mq-max("md") {
+          top: 26%;
+        }
       }
       #anchor2021 {
-        @extend #anchor2019;
-        top: 42%;
+        top: 34% + 2%;
+
+        @include mq-max("md") {
+          top: 40%;
+        }
       }
       #anchor2022 {
-        @extend #anchor2019;
-        top: 60%;
+        top: 48% + 2%;
+
+        @include mq-max("md") {
+          top: 54%;
+        }
       }
       #anchor2023 {
-        @extend #anchor2019;
-        top: 80%;
+        top: 60% + 4%;
+
+        @include mq-max("md") {
+          top: 68%;
+        }
+      }
+      #anchor2024 {
+        top: 72% + 6%;
+
+        @include mq-max("md") {
+          top: 82%;
+        }
       }
     }
 

@@ -1603,7 +1603,7 @@ h2 {
 @media screen and (max-width: 768px) {
   .opportunity .mainContent .growth .year-links {
     width: 100%;
-    transform: translate(0, -68%);
+    transform: translate(0, -100%);
     margin: auto;
   }
 }
@@ -1700,8 +1700,7 @@ h2 {
   .opportunity .mainContent .growth .year-links .timeline__border-2 {
     position: absolute;
     top: 50%;
-    left: -2rem;
-    transform: translate(0, -2rem);
+    transform: translate(0, -36px);
     display: block;
     width: 0%;
     height: 1px;
@@ -1726,11 +1725,11 @@ h2 {
 @media screen and (max-width: 768px) {
   .opportunity .mainContent .growth .year-links .timelineLinks {
     font-size: calc(0.8rem + 0.4vw);
-    transform: translate(280%, 0);
   }
 }
 @media screen and (max-width: 480px) {
   .opportunity .mainContent .growth .year-links .timelineLinks {
+    transform: translate(280%, 0);
     pointer-events: none;
   }
 }
@@ -1957,54 +1956,67 @@ h2 {
 }
 .opportunity .mainContent .growth-anchors {
   position: absolute;
-  top: calc(31% + 24vw);
+  translate: 0 -102px;
   width: 100%;
-  height: calc(100vh + 29%);
   pointer-events: none;
-}
-@media screen and (max-width: 768px) {
-  .opportunity .mainContent .growth-anchors {
-    height: calc(100vh + 32%);
-    top: calc(35% + 24vw);
-  }
-  .opportunity .mainContent .growth-anchors #anchor2019, .opportunity .mainContent .growth-anchors #anchor2023, .opportunity .mainContent .growth-anchors #anchor2022, .opportunity .mainContent .growth-anchors #anchor2021, .opportunity .mainContent .growth-anchors #anchor2020 {
-    top: 14%;
-  }
-  .opportunity .mainContent .growth-anchors #anchor2020 {
-    top: 29%;
-  }
-  .opportunity .mainContent .growth-anchors #anchor2021 {
-    top: 42%;
-  }
-  .opportunity .mainContent .growth-anchors #anchor2022 {
-    top: 57%;
-  }
-  .opportunity .mainContent .growth-anchors #anchor2023 {
-    top: 72%;
-  }
 }
 @media screen and (max-width: 480px) {
   .opportunity .mainContent .growth-anchors {
     display: none;
   }
 }
-.opportunity .mainContent .growth-anchors #anchor2019, .opportunity .mainContent .growth-anchors #anchor2023, .opportunity .mainContent .growth-anchors #anchor2022, .opportunity .mainContent .growth-anchors #anchor2021, .opportunity .mainContent .growth-anchors #anchor2020 {
+.opportunity .mainContent .growth-anchors .growth-anchor {
   position: absolute;
-  top: 5%;
-  width: 12rem;
-  height: 1rem;
+  width: 256px;
+  height: 12px;
+}
+.opportunity .mainContent .growth-anchors #anchor2019 {
+  top: 10%;
+}
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .growth-anchors #anchor2019 {
+    top: 12%;
+  }
 }
 .opportunity .mainContent .growth-anchors #anchor2020 {
-  top: 24%;
+  top: 22%;
+}
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .growth-anchors #anchor2020 {
+    top: 26%;
+  }
 }
 .opportunity .mainContent .growth-anchors #anchor2021 {
-  top: 42%;
+  top: 36%;
+}
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .growth-anchors #anchor2021 {
+    top: 40%;
+  }
 }
 .opportunity .mainContent .growth-anchors #anchor2022 {
-  top: 60%;
+  top: 50%;
+}
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .growth-anchors #anchor2022 {
+    top: 54%;
+  }
 }
 .opportunity .mainContent .growth-anchors #anchor2023 {
-  top: 80%;
+  top: 64%;
+}
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .growth-anchors #anchor2023 {
+    top: 68%;
+  }
+}
+.opportunity .mainContent .growth-anchors #anchor2024 {
+  top: 78%;
+}
+@media screen and (max-width: 768px) {
+  .opportunity .mainContent .growth-anchors #anchor2024 {
+    top: 82%;
+  }
 }
 .opportunity .mainContent .dataSections {
   position: relative;
@@ -2124,7 +2136,7 @@ h2 {
   width: 100%;
   transform: translate(0, -10%);
 }
-.opportunity .mainContent .kwInstalled .lineGraph .line .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .burgerContainer .burger .lineCross .pathActive, .burgerContainer .burger .opportunity .mainContent .kwInstalled .lineGraph .lineCross .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .burgerContainer .burger .line5 .pathActive, .burgerContainer .burger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .videoContainer .closeVideoBurger .lineCross .pathActive, .videoContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .lineCross .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .videoContainer .closeVideoBurger .burgerContainer .burger .line5 .pathActive, .videoContainer .closeVideoBurger .burgerContainer .burger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .burgerContainer .burger .videoContainer .closeVideoBurger .line5 .pathActive, .burgerContainer .burger .videoContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .videoContainer .closeVideoBurger .line5 .pathActive, .videoContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .iframeContainer .closeVideoBurger .lineCross .pathActive, .iframeContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .lineCross .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .iframeContainer .closeVideoBurger .burgerContainer .burger .line5 .pathActive, .iframeContainer .closeVideoBurger .burgerContainer .burger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .burgerContainer .burger .iframeContainer .closeVideoBurger .line5 .pathActive, .burgerContainer .burger .iframeContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .iframeContainer .videoContainer .closeVideoBurger .line5 .pathActive, .iframeContainer .videoContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .videoContainer .iframeContainer .closeVideoBurger .line5 .pathActive, .videoContainer .iframeContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .iframeContainer .closeVideoBurger .line5 .pathActive, .iframeContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive {
+.opportunity .mainContent .kwInstalled .lineGraph .line .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .burgerContainer .burger .lineCross .pathActive, .burgerContainer .burger .opportunity .mainContent .kwInstalled .lineGraph .lineCross .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .burgerContainer .burger .line5 .pathActive, .burgerContainer .burger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .videoContainer .closeVideoBurger .lineCross .pathActive, .videoContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .lineCross .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .videoContainer .closeVideoBurger .line5 .pathActive, .videoContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .iframeContainer .closeVideoBurger .lineCross .pathActive, .iframeContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .lineCross .pathActive, .opportunity .mainContent .kwInstalled .lineGraph .iframeContainer .closeVideoBurger .line5 .pathActive, .iframeContainer .closeVideoBurger .opportunity .mainContent .kwInstalled .lineGraph .line5 .pathActive {
   animation: animate-svg-stroke-1 1.4s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
 }
 @keyframes animate-svg-stroke-1 {
