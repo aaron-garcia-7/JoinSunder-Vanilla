@@ -145,6 +145,19 @@ const focusMapLinks = (() => {
           // block: "center",
         });
       });
+
+      link.addEventListener("click", (event) => {
+        event.preventDefault(); // Prevent default link behavior
+        mapAnchors[index].scrollIntoView({
+          behavior: "smooth",
+          // block: "center",
+        });
+
+        // Use a slight delay before setting focus back to the link
+        setTimeout(() => {
+          link.focus();
+        }, 300); // Adjust the delay time if necessary
+      });
     });
   } else {
     console.error("The number of mapLinks and mapAnchors do not match.");
