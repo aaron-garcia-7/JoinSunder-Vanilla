@@ -809,7 +809,7 @@ responsiveGsap.add(
   }
 );
 
-// Growth Anchor positioning
+// Growth Anchors Section positioning
 
 const growthAnchorPlacement = (() => {
   // Setting the height of the .growth-anchors parent section
