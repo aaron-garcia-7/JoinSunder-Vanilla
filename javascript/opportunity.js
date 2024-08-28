@@ -508,7 +508,7 @@ responsiveGsap.add(
         let states2019 = gsap.utils.toArray(".state2019");
         gsap.to(states2019, {
           fill: colorBlue,
-          delay: 0.12, // for mobile
+          delay: maxSm ? 0.12 : 0,
           scrollTrigger: {
             trigger: "#year-links",
             scrub: maxSm ? false : true,
@@ -521,7 +521,7 @@ responsiveGsap.add(
         // Unique Animation for pending2019
         let pending2019 = gsap.utils.toArray(".pend2019");
         let pending2019TL = gsap.timeline({
-          delay: 0.24, // for mobile
+          delay: maxSm ? 0.24 : 0,
           scrollTrigger: {
             trigger: "#year-links",
             scrub: maxSm ? false : true,
@@ -596,7 +596,7 @@ responsiveGsap.add(
         pendingAnimations.forEach((item) => {
           let elements = gsap.utils.toArray(item.selector);
           let timeline = gsap.timeline({
-            delay: item.delay, // for mobile
+            delay: maxSm ? item.delay : 0,
             scrollTrigger: {
               trigger: "#year-links",
               scrub: maxSm ? false : true,
