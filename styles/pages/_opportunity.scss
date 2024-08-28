@@ -773,42 +773,42 @@ $pending: #bcd0d7;
 
       // Find a pattern for these one day
       #anchor2019 {
-        top: 10%;
+        top: 11%; // dev(live) was showing slightly different placement than local
 
         @include mq-max("md") {
           top: 12%;
         }
       }
       #anchor2020 {
-        top: 22%;
+        top: 23%;
 
         @include mq-max("md") {
           top: 26%;
         }
       }
       #anchor2021 {
-        top: 34% + 2%;
+        top: 35% + 2%;
 
         @include mq-max("md") {
           top: 40%;
         }
       }
       #anchor2022 {
-        top: 48% + 2%;
+        top: 49% + 2%;
 
         @include mq-max("md") {
           top: 54%;
         }
       }
       #anchor2023 {
-        top: 60% + 4%;
+        top: 61% + 4%;
 
         @include mq-max("md") {
           top: 68%;
         }
       }
       #anchor2024 {
-        top: 72% + 6%;
+        top: 73% + 6%;
 
         @include mq-max("md") {
           top: 82%;
