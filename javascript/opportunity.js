@@ -178,6 +178,7 @@ let responsiveGsap = gsap.matchMedia();
 
 responsiveGsap.add(
   {
+    maxSm: "(max-width: 480px)",
     maxMd: "(max-width: 768px)",
     maxLg: "(max-width: 1024px)",
     maxXl: "(max-width: 1200px)",
@@ -186,13 +187,19 @@ responsiveGsap.add(
     betweenMdAndSm: "(max-width: 768px) and (min-width: 481px)",
   },
   (context) => {
-    let { maxMd, maxLg, maxXl, minMd, minSm, betweenMdAndSm } =
+    let { maxSm, maxMd, maxLg, maxXl, minMd, minSm, betweenMdAndSm } =
       context.conditions;
 
     let markers = {
+      startColor: "limegreen",
+      endColor: "limegreen",
+      indent: 128,
+    };
+
+    let markers2 = {
       startColor: "white",
       endColor: "white",
-      indent: 128,
+      indent: 256,
     };
 
     const backgroundFading = (() => {
@@ -221,7 +228,7 @@ responsiveGsap.add(
         scrollTrigger: {
           trigger: "#videoSection",
           pin: minSm ? true : false,
-          scrub: minSm ? true : false,
+          scrub: maxSm ? false : true,
           start: "top top",
           end: "bottom top",
         },
@@ -232,7 +239,7 @@ responsiveGsap.add(
         opacity: 0,
         scrollTrigger: {
           trigger: "#videoText1",
-          scrub: minSm ? true : false,
+          scrub: maxSm ? false : true,
           toggleActions: "play none none reverse",
           start: minSm ? "-60% top" : "center 46%",
           end: "200% top",
@@ -244,7 +251,7 @@ responsiveGsap.add(
         opacity: 0,
         scrollTrigger: {
           trigger: "#videoText1",
-          scrub: minSm ? true : false,
+          scrub: maxSm ? false : true,
           toggleActions: "play none none reverse",
           start: minSm ? "-60% top" : "center 46%",
           end: "200% top",
@@ -257,7 +264,7 @@ responsiveGsap.add(
         scrollTrigger: {
           trigger: "#videoText1",
           toggleActions: "play none none reverse",
-          scrub: minSm ? true : false,
+          scrub: maxSm ? false : true,
           start: minSm ? "-20% top" : "center 46%",
           end: "280% top",
         },
@@ -269,6 +276,11 @@ responsiveGsap.add(
 
       let pinDuration = "+=500%";
       let pinSection = "#growth";
+
+      let colorGrey = "#BCD0D7"; // Similar to Sunder Ice?
+      let colorBlue = "#4693D4"; // Similar to SunderRoyalLight?
+      // let colorGrey = "#c6d3d8"; // Sunder Ice
+      // let colorBlue = "#0c5ff2"; // SunderRoyalLight
 
       const countActiveStates = ((years) => {
         let dc = 0; // Whether or not they want to count DC as a state
@@ -310,7 +322,7 @@ responsiveGsap.add(
         scrollTrigger: {
           trigger: pinSection,
           pin: minSm ? true : false,
-          scrub: minSm ? true : false,
+          scrub: maxSm ? false : true,
           start: "top top",
           // end: `${pinDuration} 6%`,
           end: `${pinDuration}`,
@@ -347,12 +359,13 @@ responsiveGsap.add(
         },
       });
 
+      // key to the map, colors for active vs pending
       gsap.to("#compass", {
         opacity: 1,
         scrollTrigger: {
           trigger: pinSection,
           toggleActions: "play none none reverse",
-          start: minSm ? "top top" : "top 16%",
+          start: maxSm ? "top 16%" : "top top",
         },
       });
 
@@ -371,7 +384,7 @@ responsiveGsap.add(
         let stateCountTL = gsap.timeline({
           scrollTrigger: {
             trigger: pinSection,
-            scrub: minSm ? true : false,
+            scrub: maxSm ? false : true,
             start: maxMd ? "-12% top" : "-20% top", // Starting early to line up with link highlights
             end: `${pinDuration}`,
           },
@@ -396,7 +409,7 @@ responsiveGsap.add(
         });
 
         gsap.from("#stateNumberMobile", {
-          textContent: 0,
+          textContent: 0, // Starting value
           duration: 2.8,
           ease: "power1.out",
           snap: { textContent: 1 },
@@ -434,12 +447,12 @@ responsiveGsap.add(
         gsap.to(timelineLinksAppear, {
           x: "0",
           opacity: 1,
-          stagger: minSm ? 0.1 : null,
-          duration: minSm ? 0.36 : 2.4,
+          stagger: maxSm ? null : 0.1,
+          duration: maxSm ? 2.4 : 0.36,
           scrollTrigger: {
             trigger: pinSection,
             toggleActions: "play none none reverse",
-            start: minSm ? "top top" : "top 16%",
+            start: maxSm ? "top 24%" : "top top",
           },
         });
 
@@ -465,7 +478,7 @@ responsiveGsap.add(
         links.forEach((link) => {
           linkHighlightTL
             .to(link, {
-              background: "#4693D4",
+              background: colorBlue,
               duration: 2,
               delay: 2,
             })
@@ -478,130 +491,118 @@ responsiveGsap.add(
       })(years.length);
 
       const stateHighlight = (() => {
+        // Unique Animation for states2019
         let states2019 = gsap.utils.toArray(".state2019");
         gsap.to(states2019, {
-          fill: "#4693D4",
+          fill: colorBlue,
+          delay: 0.12, // for mobile
           scrollTrigger: {
             trigger: "#year-links",
-            scrub: minSm ? true : false,
-            toggleActions: "play none none reverse",
-            start: minSm ? "40% 15%" : "top 94%",
-            end: minMd ? "60% 15%" : "200% 15%",
-            // markers: markers,
+            scrub: maxSm ? false : true,
+            toggleActions: "restart none restart none",
+            start: maxSm ? "top 94%" : betweenMdAndSm ? "top 60%" : "40% 15%",
+            end: maxMd ? "20% 25%" : "60% 15%",
           },
         });
 
+        // Unique Animation for pending2019
         let pending2019 = gsap.utils.toArray(".pend2019");
         let pending2019TL = gsap.timeline({
-          // delay: 0.2,
-          delay: 0,
+          delay: 0.24, // for mobile
           scrollTrigger: {
             trigger: "#year-links",
-            scrub: minSm ? true : false,
-            toggleActions: "play none none reverse",
-            start: minSm ? "40% 15%" : "top 94%",
-            end: minMd ? "150% 15%" : "500% 15%",
-            // markers: markers,
+            scrub: maxSm ? false : true,
+            toggleActions: "restart none restart none",
+            start: maxSm ? "top 94%" : betweenMdAndSm ? "top 50%" : "40% 15%",
+            end: maxMd ? "600% 15%" : "150% 15%",
           },
         });
         pending2019TL
-          .to(pending2019, {
-            fill: "#BCD0D7",
-          })
-          .to(pending2019, {
-            fill: "#BCD0D7",
-          })
-          .to(pending2019, {
-            fill: "#BCD0D7",
-          })
-          .to(pending2019, {
-            fill: "#4693D4",
+          .to(pending2019, { fill: colorGrey })
+          .to(pending2019, { fill: colorGrey })
+          .to(pending2019, { fill: colorGrey })
+          .to(pending2019, { fill: colorBlue });
+
+        // Array to define the common animation patterns
+        const pendingAnimations = [
+          {
+            selector: ".pend2020",
+            delay: 0.36,
+            start: {
+              maxSm: "top 94%",
+              betweenMdAndSm: "700% 50%",
+              default: "120% 15%",
+            },
+            end: {
+              maxMd: "1300% 15%",
+              default: "230% 15%",
+            },
+          },
+          {
+            selector: ".pend2021",
+            delay: 0.48,
+            start: {
+              maxSm: "top 94%",
+              betweenMdAndSm: "1400% 50%",
+              default: "200% 15%",
+            },
+            end: {
+              maxMd: "2000% 15%",
+              default: "310% 15%",
+            },
+          },
+          {
+            selector: ".pend2022",
+            delay: 0.6,
+            start: {
+              maxSm: "top 94%",
+              betweenMdAndSm: "2100% 50%",
+              default: "280% 15%",
+            },
+            end: {
+              maxMd: "2700% 15%",
+              default: "390% 15%",
+            },
+          },
+          {
+            selector: ".pend2023",
+            delay: 0.72,
+            start: {
+              maxSm: "top 94%",
+              betweenMdAndSm: "2800% 50%",
+              default: "360% 15%",
+            },
+            end: {
+              maxMd: "3400% 15%",
+              default: "470% 15%",
+            },
+          },
+        ];
+
+        // Loop through the pending animations to create timelines
+        pendingAnimations.forEach((item) => {
+          let elements = gsap.utils.toArray(item.selector);
+          let timeline = gsap.timeline({
+            delay: item.delay, // for mobile
+            scrollTrigger: {
+              trigger: "#year-links",
+              scrub: maxSm ? false : true,
+              toggleActions: "restart none restart none",
+              start: maxSm
+                ? item.start.maxSm
+                : betweenMdAndSm
+                ? item.start.betweenMdAndSm
+                : item.start.default,
+              end: maxMd ? item.end.maxMd : item.end.default,
+            },
           });
 
-        let pending2020 = gsap.utils.toArray(".pend2020");
-        let pending2020TL = gsap.timeline({
-          // delay: 0.4,
-          delay: 0,
-          scrollTrigger: {
-            trigger: "#year-links",
-            scrub: minSm ? true : false,
-            toggleActions: "play none none reverse",
-            start: minMd ? "120% 15%" : betweenMdAndSm ? "500% 15%" : "top 94%",
-            end: minMd ? "230% 15%" : "900% 15%",
-            // markers: markers,
-          },
+          timeline
+            .to(elements, { fill: colorGrey })
+            .to(elements, { fill: colorGrey })
+            .to(elements, { fill: colorGrey })
+            .to(elements, { fill: colorBlue });
         });
-        pending2020TL
-          .to(pending2020, {
-            fill: "#BCD0D7",
-          })
-          .to(pending2020, {
-            fill: "#BCD0D7",
-          })
-          .to(pending2020, {
-            fill: "#BCD0D7",
-          })
-          .to(pending2020, {
-            fill: "#4693D4",
-          });
-
-        let pending2021 = gsap.utils.toArray(".pend2021");
-        let pending2021TL = gsap.timeline({
-          delay: 0.8,
-          scrollTrigger: {
-            trigger: "#year-links",
-            scrub: minSm ? true : false,
-            toggleActions: "play none none reverse",
-            start: minMd
-              ? "200% 15%"
-              : betweenMdAndSm
-              ? "1000% 15%"
-              : "top 94%",
-            end: minMd ? "310% 15%" : "1300% 15%",
-          },
-        });
-        pending2021TL
-          .to(pending2021, {
-            fill: "#BCD0D7",
-          })
-          .to(pending2021, {
-            fill: "#BCD0D7",
-          })
-          .to(pending2021, {
-            fill: "#BCD0D7",
-          })
-          .to(pending2021, {
-            fill: "#4693D4",
-          });
-
-        let pending2022 = gsap.utils.toArray(".pend2022");
-        let pending2022TL = gsap.timeline({
-          delay: 1.2,
-          scrollTrigger: {
-            trigger: "#year-links",
-            scrub: minSm ? true : false,
-            toggleActions: "play none none reverse",
-            start: minMd
-              ? "280% 15%"
-              : betweenMdAndSm
-              ? "1500% 15%"
-              : "top 94%",
-            end: minMd ? "390% 15%" : "1700% 15%",
-          },
-        });
-        pending2022TL
-          .to(pending2022, {
-            fill: "#BCD0D7",
-          })
-          .to(pending2022, {
-            fill: "#BCD0D7",
-          })
-          .to(pending2022, {
-            fill: "#BCD0D7",
-          })
-          .to(pending2022, {
-            fill: "#4693D4",
-          });
       })();
     })();
 
@@ -757,7 +758,6 @@ responsiveGsap.add(
               ? "-2920% 50%"
               : "-2920% 10%",
           end: "1200% top",
-          // markers: true,
         },
       });
       gsap.to(".point4", {
@@ -792,7 +792,6 @@ responsiveGsap.add(
               : window.innerWidth <= 520
               ? "top 28%"
               : "-12% top",
-          // markers: true,
         },
       });
 
