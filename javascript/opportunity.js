@@ -617,18 +617,6 @@ responsiveGsap.add(
             .to(elements, { fill: colorBlue });
         });
       })();
-
-      // Refresh ScrollTrigger instances on page load and resize
-      window.addEventListener("load", () => {
-        ScrollTrigger.refresh();
-      });
-
-      // Greater than 520 so it doesn't refresh on  mobile(dvh)
-      if (window.innerWidth > 520) {
-        window.addEventListener("resize", () => {
-          ScrollTrigger.refresh();
-        });
-      }
     })();
 
     const salesForceAnimation = (() => {
@@ -858,6 +846,34 @@ const growthAnchorPlacement = () => {
 
   growthAnchors.style.height = `${distance}px`;
 };
+
+//
+
+// Refresh ScrollTrigger instances on page load and resize
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
+
+// Greater than 520 so it doesn't refresh on  mobile(dvh)
+if (window.innerWidth > 520) {
+  window.addEventListener("resize", () => {
+    ScrollTrigger.refresh();
+  });
+}
+
+// Refresh on resize
+if (window.innerWidth > 520) {
+  let resizeTimeout;
+
+  const handleResize = () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      window.location.reload();
+    }, 200); // Adjust the debounce delay as needed
+  };
+
+  window.addEventListener("resize", handleResize);
+}
 
 //
 
