@@ -617,6 +617,18 @@ responsiveGsap.add(
             .to(elements, { fill: colorBlue });
         });
       })();
+
+      // Refresh ScrollTrigger instances on page load and resize
+      window.addEventListener("load", () => {
+        ScrollTrigger.refresh();
+      });
+
+      // Greater than 520 so it doesn't refresh on  mobile(dvh)
+      if (window.innerWidth > 520) {
+        window.addEventListener("resize", () => {
+          ScrollTrigger.refresh();
+        });
+      }
     })();
 
     const salesForceAnimation = (() => {
@@ -824,7 +836,11 @@ responsiveGsap.add(
 
 // Growth Anchors Section positioning
 
-const growthAnchorPlacement = (() => {
+window.onload = () => {
+  growthAnchorPlacement();
+};
+
+const growthAnchorPlacement = () => {
   // Setting the height of the .growth-anchors parent section
   const growthSection = document.querySelector(".growth"),
     growthAnchors = document.querySelector(".growth-anchors"),
@@ -841,19 +857,7 @@ const growthAnchorPlacement = (() => {
     growthSection.getBoundingClientRect().top;
 
   growthAnchors.style.height = `${distance}px`;
-})();
-
-// Refresh ScrollTrigger instances on page load and resize
-window.addEventListener("load", () => {
-  ScrollTrigger.refresh();
-});
-
-// Greater than 520 so it doesn't refresh on  mobile(dvh)
-if (window.innerWidth > 520) {
-  window.addEventListener("resize", () => {
-    ScrollTrigger.refresh();
-  });
-}
+};
 
 //
 

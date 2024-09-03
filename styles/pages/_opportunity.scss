@@ -348,9 +348,9 @@ $pending: #bcd0d7;
     }
 
     .growth {
-      // border: $test;
       height: 100vh;
       display: flex;
+      // background: navy;
 
       @media all {
         @include mq-max("md") {
@@ -754,6 +754,7 @@ $pending: #bcd0d7;
     }
 
     .growth-anchors {
+      // border: $test;
       position: absolute;
       translate: 0 -102px; // No idea why
       width: 100%;
