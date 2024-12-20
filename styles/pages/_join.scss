@@ -164,10 +164,7 @@
             }
           }
           .textarea:focus ~ .label,
-          .textarea:not(:placeholder-shown).textarea:not(focus) ~ .label,
-          &:-webkit-autofill,
-          &:-webkit-autofill:hover,
-          &:-webkit-autofill:focus {
+          .textarea:not(:placeholder-shown).textarea:not(focus) ~ .label {
             top: -34%;
 
             .nested-label {
