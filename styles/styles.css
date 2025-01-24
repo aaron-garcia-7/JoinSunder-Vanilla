@@ -323,12 +323,10 @@ h2 {
   right: 2.4rem;
   opacity: 0;
 }
-.nav .credits h6 {
-  font-size: calc(0.8rem + 0.4vw);
+.nav .credits a {
+  font-size: 14px;
   font-weight: 400;
   cursor: default;
-}
-.nav .credits h6 a {
   cursor: default;
 }
 .navActive {

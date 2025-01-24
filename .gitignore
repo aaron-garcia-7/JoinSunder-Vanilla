@@ -21,3 +21,5 @@ package-lock.json
 # Prevent outputted css files from sass (doesn't appear to be working)
 *.css.map
 *.map
+
+google*.html

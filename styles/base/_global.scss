@@ -277,13 +277,11 @@ h2 {
     bottom: 2.4rem;
     right: 2.4rem;
     opacity: 0;
-    h6 {
-      font-size: $sm-text;
+    a {
+      font-size: 14px;
       font-weight: 400;
       cursor: default;
-      a {
-        cursor: default;
-      }
+      cursor: default;
     }
   }
 
