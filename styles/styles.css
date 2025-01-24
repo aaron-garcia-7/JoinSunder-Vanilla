@@ -41,6 +41,20 @@ Monument Weights
   font-weight: 100;
   font-style: normal;
 }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+
 #boldTitle {
   font-weight: 675;
 }
@@ -319,15 +333,20 @@ h2 {
 }
 .nav .credits {
   position: absolute;
-  bottom: 2.4rem;
-  right: 2.4rem;
-  opacity: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
 }
 .nav .credits a {
   font-size: 14px;
   font-weight: 400;
-  cursor: default;
-  cursor: default;
 }
 .navActive {
   transform: translate(0, 0);
